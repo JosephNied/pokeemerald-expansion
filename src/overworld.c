@@ -1724,6 +1724,7 @@ static void OverworldBasic(void)
 // This CB2 is used when starting
 void CB2_OverworldBasic(void)
 {
+    AddBagItem(ITEM_REPEL, 10);
     OverworldBasic();
 }
 
@@ -1788,7 +1789,7 @@ void CB2_NewGame(void)
     PlayTimeCounter_Start();
     ScriptContext_Init();
     UnlockPlayerFieldControls();
-    gFieldCallback = ExecuteTruckSequence;
+    //gFieldCallback = ExecuteTruckSequence;
     gFieldCallback2 = NULL;
     DoMapLoadLoop(&gMain.state);
     SetFieldVBlankCallback();
@@ -1808,6 +1809,8 @@ void CB2_WhiteOut(void)
     {
         FieldClearVBlankHBlankCallbacks();
         StopMapMusic();
+        ClearSaveData();
+        DoSoftReset();
         ResetSafariZoneFlag_();
         DoWhiteOut();
         ResetInitialPlayerAvatarState();
