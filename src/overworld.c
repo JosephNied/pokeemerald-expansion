@@ -1724,7 +1724,6 @@ static void OverworldBasic(void)
 // This CB2 is used when starting
 void CB2_OverworldBasic(void)
 {
-    AddBagItem(ITEM_REPEL, 10);
     OverworldBasic();
 }
 
@@ -1739,6 +1738,7 @@ void CB2_Overworld(void)
         SetFieldVBlankCallback();
         return;
     }
+    //AddBagItem(ITEM_REPEL, 10);
 }
 
 void SetMainCallback1(MainCallback cb)

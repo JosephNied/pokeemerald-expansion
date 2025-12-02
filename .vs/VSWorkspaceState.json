@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\data",
+    "\\data\\maps",
+    "\\data\\maps\\BirthIsland_Exterior"
   ],
+  "SelectedNode": "\\data\\maps\\BirthIsland_Exterior\\scripts.inc",
   "PreviewInSolutionExplorer": false
 }

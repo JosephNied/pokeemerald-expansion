@@ -131,7 +131,7 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void)
 {
-    SetWarpDestination(MAP_GROUP(MAP_BIRTH_ISLAND_EXTERIOR), MAP_NUM(MAP_BIRTH_ISLAND_EXTERIOR), WARP_ID_NONE, -1, -1);
+    SetWarpDestination(MAP_GROUP(MAP_TESTING_ZONE_01), MAP_NUM(MAP_TESTING_ZONE_01), WARP_ID_NONE, -1, -1);
     WarpIntoMap();
 }
 
