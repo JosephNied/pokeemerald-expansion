@@ -1160,3 +1160,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/dexnav.inc"
 
 	.include "data/maps/Testing_Zone_01/scripts.inc"
+
+	.include "data/maps/StartingVillage/scripts.inc"

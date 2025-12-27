@@ -4420,6 +4420,16 @@
       "secondary_tileset": "gTileset_Dewford",
       "border_filepath": "data/layouts/Testing_Zone_01/border.bin",
       "blockdata_filepath": "data/layouts/Testing_Zone_01/map.bin"
+    },
+    {
+      "id": "LAYOUT_STARTING_VILLAGE",
+      "name": "StartingVillage_Layout",
+      "width": 80,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/StartingVillage/border.bin",
+      "blockdata_filepath": "data/layouts/StartingVillage/map.bin"
     }
   ]
 }
