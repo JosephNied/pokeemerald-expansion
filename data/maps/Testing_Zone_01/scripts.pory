@@ -3,6 +3,7 @@ Testing_Zone_01_MapScripts::
 	.byte 0
 `
 
+
 script Testing_Zone_01_EventScript_GiveCelebi{
 	lockall
 	givemon(SPECIES_CELEBI, 30, ITEM_MASTER_BALL)
