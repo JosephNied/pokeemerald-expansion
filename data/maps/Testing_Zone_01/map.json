@@ -196,7 +196,7 @@
       "x": 15,
       "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_STARTING_VILLAGE",
+      "dest_map": "MAP_LIMINAL_ONE",
       "dest_warp_id": "0"
     }
   ],

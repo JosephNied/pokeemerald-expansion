@@ -1,0 +1,4 @@
+raw `
+StartingVillage_MapScripts::
+	.byte 0
+`

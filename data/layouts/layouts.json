@@ -4430,6 +4430,16 @@
       "secondary_tileset": "gTileset_Mossdeep",
       "border_filepath": "data/layouts/StartingVillage/border.bin",
       "blockdata_filepath": "data/layouts/StartingVillage/map.bin"
+    },
+    {
+      "id": "LAYOUT_LIMINAL_ONE",
+      "name": "LiminalOne_Layout",
+      "width": 29,
+      "height": 31,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_EverGrande",
+      "border_filepath": "data/layouts/LiminalOne/border.bin",
+      "blockdata_filepath": "data/layouts/LiminalOne/map.bin"
     }
   ]
 }

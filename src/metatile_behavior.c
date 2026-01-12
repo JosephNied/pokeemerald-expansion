@@ -212,7 +212,8 @@ bool8 MetatileBehavior_IsReflective(u8 metatileBehavior)
      || metatileBehavior == MB_UNUSED_SOOTOPOLIS_DEEP_WATER_2
      || metatileBehavior == MB_ICE
      || metatileBehavior == MB_SOOTOPOLIS_DEEP_WATER
-     || metatileBehavior == MB_REFLECTION_UNDER_BRIDGE)
+     || metatileBehavior == MB_REFLECTION_UNDER_BRIDGE
+     || metatileBehavior == MB_OCEAN_WATER)
         return TRUE;
     else
         return FALSE;
@@ -915,7 +916,8 @@ bool8 MetatileBehavior_IsDeepOrOceanWater(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_OCEAN_WATER
      || metatileBehavior == MB_INTERIOR_DEEP_WATER
-     || metatileBehavior == MB_DEEP_WATER)
+     || metatileBehavior == MB_DEEP_WATER
+     || metatileBehavior == MB_PUDDLE)
         return TRUE;
     else
         return FALSE;
