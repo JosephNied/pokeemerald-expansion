@@ -230,7 +230,8 @@ $(FONTGFXDIR)/small.latfont: $(FONTGFXDIR)/latin_small.png
 $(FONTGFXDIR)/normal.latfont: $(FONTGFXDIR)/latin_normal.png
 	$(GFX) $< $@
 
-$(FONTGFXDIR)/short.latfont: $(FONTGFXDIR)/latin_short.png
+### $(FONTGFXDIR)/short.latfont: $(FONTGFXDIR)/latin_short.png ###
+$(FONTGFXDIR)/short.latfont: $(FONTGFXDIR)/latin_frlg_nums.png
 	$(GFX) $< $@
 
 $(FONTGFXDIR)/narrow.latfont: $(FONTGFXDIR)/latin_narrow.png
@@ -245,10 +246,12 @@ $(FONTGFXDIR)/narrower.latfont: $(FONTGFXDIR)/latin_narrower.png
 $(FONTGFXDIR)/small_narrower.latfont: $(FONTGFXDIR)/latin_small_narrower.png
 	$(GFX) $< $@
 
-$(FONTGFXDIR)/short_narrow.latfont: $(FONTGFXDIR)/latin_short_narrow.png
+### $(FONTGFXDIR)/short_narrow.latfont: $(FONTGFXDIR)/latin_short_narrow.png ###
+$(FONTGFXDIR)/short_narrow.latfont: $(FONTGFXDIR)/latin_frlg_nums_narrow.png
 	$(GFX) $< $@
 
-$(FONTGFXDIR)/short_narrower.latfont: $(FONTGFXDIR)/latin_short_narrower.png
+### $(FONTGFXDIR)/short_narrower.latfont: $(FONTGFXDIR)/latin_short_narrower.png ###
+$(FONTGFXDIR)/short_narrower.latfont: $(FONTGFXDIR)/latin_frlg_nums_narrower.png
 	$(GFX) $< $@
 
 $(FONTGFXDIR)/small.hwjpnfont: $(FONTGFXDIR)/japanese_small.png
