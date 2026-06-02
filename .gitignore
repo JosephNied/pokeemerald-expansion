@@ -57,6 +57,6 @@ tools/compresSmol/compresSmolTilemap
 *.fastSmol
 *.smolTM
 __pycache__
-poryscript.exe
+poryscript
 font_config.json
 command_config.json
