@@ -1,0 +1,4 @@
+raw `
+TestingZone_MapScripts::
+	.byte 0
+`
