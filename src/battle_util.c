@@ -5565,7 +5565,8 @@ u32 GetBattleMoveTarget(enum Move move, enum MoveTarget moveTarget)
 
 enum Obedience GetAttackerObedienceForAction(void)
 {
-    s32 rnd;
+    return OBEYS;
+    /**s32 rnd;
     s32 calc;
     u8 obedienceLevel = 0;
     u8 levelReferenced;
@@ -5663,7 +5664,7 @@ enum Obedience GetAttackerObedienceForAction(void)
             return DISOBEYS_HITS_SELF;
         else
             return DISOBEYS_LOAFS;
-    }
+    }*/
 }
 
 enum HoldEffect GetBattlerHoldEffect(enum BattlerId battler)

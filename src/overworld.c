@@ -1918,6 +1918,8 @@ void CB2_NewGame(void)
     if (IS_FRLG)
         gFieldCallback = FieldCB_WarpExitFadeFromBlack;
     else
+        FlagSet(FLAG_RECEIVED_RUNNING_SHOES);
+        FlagSet(FLAG_SYS_B_DASH);
         //gFieldCallback = ExecuteTruckSequence;
     gFieldCallback2 = NULL;
     DoMapLoadLoop(&gMain.state);
