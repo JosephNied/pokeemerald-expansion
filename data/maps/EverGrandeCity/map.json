@@ -3,7 +3,6 @@
   "name": "EverGrandeCity",
   "layout": "LAYOUT_EVER_GRANDE_CITY",
   "music": "MUS_EVER_GRANDE",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_EVER_GRANDE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -40,7 +39,7 @@
       "x": 18,
       "y": 41,
       "elevation": 0,
-      "dest_map": "MAP_VICTORY_ROAD_1F",
+      "dest_map": "MAP_TEST_ZONE_ONE",
       "dest_warp_id": "0"
     },
     {
@@ -193,5 +192,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }
