@@ -44,12 +44,54 @@ TestZone_One_EventScript_MakeThingsDisappear_3:
 	goto TestZone_One_EventScript_MakeThingsDisappear_1
 
 
-TestZone_One_EventScript_ExampleTrainer::
+TestZone_One_EventScript_DeoxysEncounter::
 # 33 "data/maps/TestZone_One/scripts.pory"
-	trainerbattle_single TRAINER_MAY_ROUTE_110_TORCHIC, May_Intro, May_Outro
-# 34 "data/maps/TestZone_One/scripts.pory"
-	msgbox PostBattle_May, MSGBOX_AUTOCLOSE
+	lock
 # 35 "data/maps/TestZone_One/scripts.pory"
+	setflag FLAG_UNUSED_0x020
+# 36 "data/maps/TestZone_One/scripts.pory"
+	setwildbattle SPECIES_DEOXYS, 10, ITEM_NONE
+# 37 "data/maps/TestZone_One/scripts.pory"
+	dowildbattle
+# 39 "data/maps/TestZone_One/scripts.pory"
+	release
+	end
+
+
+TestZone_One_EventScript_BaltoyEncounter::
+# 44 "data/maps/TestZone_One/scripts.pory"
+	lock
+# 46 "data/maps/TestZone_One/scripts.pory"
+	setflag FLAG_UNUSED_0x021
+# 47 "data/maps/TestZone_One/scripts.pory"
+	setwildbattle SPECIES_BALTOY, 10, ITEM_NONE
+# 48 "data/maps/TestZone_One/scripts.pory"
+	dowildbattle
+# 50 "data/maps/TestZone_One/scripts.pory"
+	release
+	end
+
+
+TestZone_One_EventScript_AzurillEncounter::
+# 55 "data/maps/TestZone_One/scripts.pory"
+	lock
+# 57 "data/maps/TestZone_One/scripts.pory"
+	setflag FLAG_UNUSED_0x022
+# 58 "data/maps/TestZone_One/scripts.pory"
+	setwildbattle SPECIES_AZURILL, 10, ITEM_NONE
+# 59 "data/maps/TestZone_One/scripts.pory"
+	dowildbattle
+# 61 "data/maps/TestZone_One/scripts.pory"
+	release
+	end
+
+
+TestZone_One_EventScript_ExampleTrainer::
+# 66 "data/maps/TestZone_One/scripts.pory"
+	trainerbattle_single TRAINER_MAY_ROUTE_110_TORCHIC, May_Intro, May_Outro
+# 67 "data/maps/TestZone_One/scripts.pory"
+	msgbox PostBattle_May, MSGBOX_AUTOCLOSE
+# 68 "data/maps/TestZone_One/scripts.pory"
 	waitmessage
 	end
 
@@ -59,13 +101,13 @@ TestZone_One_EventScript_MakeThingsDisappear_Text_0:
 	.string "You pressed the switch!$"
 
 May_Intro::
-# 39 "data/maps/TestZone_One/scripts.pory"
+# 72 "data/maps/TestZone_One/scripts.pory"
 	.string "im stronk$"
 
 May_Outro::
-# 43 "data/maps/TestZone_One/scripts.pory"
+# 76 "data/maps/TestZone_One/scripts.pory"
 	.string "fake news$"
 
 PostBattle_May::
-# 47 "data/maps/TestZone_One/scripts.pory"
+# 80 "data/maps/TestZone_One/scripts.pory"
 	.string "Waaaaa!!!!$"

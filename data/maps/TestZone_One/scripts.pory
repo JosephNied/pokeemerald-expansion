@@ -29,6 +29,39 @@ script TestZone_One_EventScript_MakeThingsDisappear {
     end
 }
 
+script TestZone_One_EventScript_DeoxysEncounter {
+    lock
+
+	setflag(FLAG_UNUSED_0x020)
+    setwildbattle(SPECIES_DEOXYS, 10, ITEM_NONE)
+	dowildbattle
+
+    release
+    end
+}
+
+script TestZone_One_EventScript_BaltoyEncounter {
+    lock
+
+	setflag(FLAG_UNUSED_0x021)
+    setwildbattle(SPECIES_BALTOY, 10, ITEM_NONE)
+	dowildbattle
+
+    release
+    end
+}
+
+script TestZone_One_EventScript_AzurillEncounter {
+    lock
+
+	setflag(FLAG_UNUSED_0x022)
+    setwildbattle(SPECIES_AZURILL, 10, ITEM_NONE)
+	dowildbattle
+
+    release
+    end
+}
+
 script TestZone_One_EventScript_ExampleTrainer {
 	trainerbattle_single(TRAINER_MAY_ROUTE_110_TORCHIC, May_Intro, May_Outro)
 	msgbox(PostBattle_May, MSGBOX_AUTOCLOSE)
