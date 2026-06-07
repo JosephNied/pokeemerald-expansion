@@ -1,0 +1,49 @@
+raw `
+TestZone_One_MapScripts::
+	.byte 0
+`
+
+script TestZone_One_EventScript_MakeThingsDisappear {
+	lock
+    faceplayer
+
+	clearflag(FLAG_UNUSED_0x020)
+    clearflag(FLAG_UNUSED_0x021)
+    clearflag(FLAG_UNUSED_0x022)
+
+    random(3)
+
+	if (var(VAR_RESULT) == 0) {
+    	setflag(FLAG_UNUSED_0x020)
+	}
+	elif (var(VAR_RESULT) == 1) {
+    	setflag(FLAG_UNUSED_0x021)
+	}
+	else {
+    	setflag(FLAG_UNUSED_0x022)
+	}
+
+	msgbox("You pressed the switch!")
+
+	release
+    end
+}
+
+script TestZone_One_EventScript_ExampleTrainer {
+	trainerbattle_single(TRAINER_MAY_ROUTE_110_TORCHIC, May_Intro, May_Outro)
+	msgbox(PostBattle_May, MSGBOX_AUTOCLOSE)
+	waitmessage
+	end
+}
+
+text May_Intro {
+	"im stronk"
+}
+
+text May_Outro {
+	"fake news"
+}
+
+text PostBattle_May {
+	"Waaaaa!!!!"
+}
