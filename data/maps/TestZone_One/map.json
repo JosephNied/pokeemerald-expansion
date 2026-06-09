@@ -15,7 +15,7 @@
   "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_DEOXYS",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DEOXYS)",
       "x": 15,
       "y": 7,
       "elevation": 0,
@@ -54,7 +54,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_AZURILL_DOLL",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(AZURILL)",
       "x": 16,
       "y": 14,
       "elevation": 0,
@@ -67,7 +67,7 @@
       "flag": "FLAG_UNUSED_0x022"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BALTOY_DOLL",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(BALTOY)",
       "x": 19,
       "y": 10,
       "elevation": 0,

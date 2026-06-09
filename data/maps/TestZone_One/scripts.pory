@@ -10,24 +10,22 @@ script TestZone_One_EventScript_MakeThingsDisappear {
 	clearflag(FLAG_UNUSED_0x020)
     clearflag(FLAG_UNUSED_0x021)
     clearflag(FLAG_UNUSED_0x022)
-	clearflag(FLAG_UNUSED_0x023)
-	clearflag(FLAG_UNUSED_0x024)
-	clearflag(FLAG_UNUSED_0x025)
 
     random(3)
 
 	if (var(VAR_RESULT) == 0) {
     	setflag(FLAG_UNUSED_0x020)
-		setflag(FLAG_UNUSED_0x023)
 	}
 	elif (var(VAR_RESULT) == 1) {
     	setflag(FLAG_UNUSED_0x021)
-		setflag(FLAG_UNUSED_0x024)
 	}
 	else {
     	setflag(FLAG_UNUSED_0x022)
-		setflag(FLAG_UNUSED_0x025)
 	}
+
+	clearflag(FLAG_UNUSED_0x023)
+	clearflag(FLAG_UNUSED_0x024)
+	clearflag(FLAG_UNUSED_0x025)
 
 	msgbox("You pressed the switch!")
 
@@ -72,21 +70,18 @@ script TestZone_One_EventScript_Item01 {
     lock
     faceplayer
 
-    giveitem(ITEM_MASTER_BALL, 1)
+    givemon(SPECIES_MAGNEZONE, 50, ITEM_MAGNET)
 
-    if (var(VAR_RESULT) == FALSE) {
-        msgbox("Your Bag is full.")
-        release
-        end
+    if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+        msgbox("Added Magnezone to party.")
+		setflag(FLAG_UNUSED_0x023)
+		removeobject(6)
     }
-
-    msgbox("Hot diggity!")
-
-    setflag(FLAG_UNUSED_0x023)
-
-    removeobject(6)
-
-    release
+	else {
+		msgbox("Your party is full!")
+	}
+	waitmessage
+    releaseall
     end
 }
 
@@ -109,8 +104,8 @@ script TestZone_One_EventScript_RandomItem01 {
         msgbox("You found a Revive!")
 	}
 	else {
-        giveitem(ITEM_RARE_CANDY, 1)
-        msgbox("You found a Rare Candy!")
+        giveitem(ITEM_MASTER_BALL, 1)
+        msgbox("Hot diggity!")
 	}
 
     setflag(FLAG_UNUSED_0x024)
