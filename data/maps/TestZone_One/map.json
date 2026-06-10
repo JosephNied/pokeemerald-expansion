@@ -54,29 +54,29 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(AZURILL)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(STEELIX)",
       "x": 16,
       "y": 14,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 2,
       "movement_range_y": 2,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "TestZone_One_EventScript_AzurillEncounter",
+      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
+      "trainer_sight_or_berry_tree_id": "50",
+      "script": "NULL",
       "flag": "FLAG_UNUSED_0x022"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(BALTOY)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SHUCKLE)",
       "x": 19,
       "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 2,
       "movement_range_y": 2,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "TestZone_One_EventScript_BaltoyEncounter",
+      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
+      "trainer_sight_or_berry_tree_id": "50",
+      "script": "NULL",
       "flag": "FLAG_UNUSED_0x021"
     },
     {
