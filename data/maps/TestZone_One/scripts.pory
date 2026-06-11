@@ -70,11 +70,12 @@ script TestZone_One_EventScript_Item01 {
     lock
     faceplayer
 
-    givemon(SPECIES_MAGNEZONE, 50, ITEM_MAGNET)
+    givemon(SPECIES_MAGNEZONE, 50, ITEM_MASTER_BALL)
 
     if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
         msgbox("Added Magnezone to party.")
 		setflag(FLAG_UNUSED_0x023)
+		setflag(FLAG_SYS_POKEMON_GET)
 		removeobject(6)
     }
 	else {
