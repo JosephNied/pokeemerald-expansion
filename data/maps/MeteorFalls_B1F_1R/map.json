@@ -15,9 +15,9 @@
   "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CLODSIRE)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(STARMIE)",
       "x": 17,
-      "y": 17,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 0,
@@ -41,8 +41,8 @@
       "flag": "FLAG_UNUSED_0x02A"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(HAXORUS)",
-      "x": 4,
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CLEFABLE)",
+      "x": 6,
       "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
@@ -54,8 +54,8 @@
       "flag": "FLAG_UNUSED_0x02B"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(LUNATONE)",
-      "x": 15,
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SHUCKLE)",
+      "x": 17,
       "y": 25,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
@@ -67,9 +67,9 @@
       "flag": "FLAG_UNUSED_0x02E"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GYARADOS)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(STEELIX)",
       "x": 5,
-      "y": 25,
+      "y": 23,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 0,
@@ -78,6 +78,97 @@
       "trainer_sight_or_berry_tree_id": "50",
       "script": "NULL",
       "flag": "FLAG_UNUSED_0x02D"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(URSALUNA)",
+      "x": 20,
+      "y": 36,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MeteorFalls_B1F_1R_MapScripts_UrsalunaEncounter",
+      "flag": "FLAG_UNUSED_0x034"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GLALIE)",
+      "x": 13,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
+      "trainer_sight_or_berry_tree_id": "50",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x030"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SOLROCK)",
+      "x": 16,
+      "y": 31,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
+      "trainer_sight_or_berry_tree_id": "50",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x031"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(MINIOR)",
+      "x": 4,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
+      "trainer_sight_or_berry_tree_id": "50",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x032"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(LUNATONE)",
+      "x": 9,
+      "y": 33,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
+      "trainer_sight_or_berry_tree_id": "50",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x033"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CARBINK)",
+      "x": 4,
+      "y": 30,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
+      "trainer_sight_or_berry_tree_id": "50",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x02F"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCOTT",
+      "x": 20,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MeteorFalls_B1F_1R_MakeThingsDisappear",
+      "flag": "0"
     }
   ],
   "warp_events": [

@@ -3,3 +3,70 @@ MeteorFalls_B1F_1R_MapScripts::
 	.byte 0
 
 `
+script MeteorFalls_B1F_1R_MakeThingsDisappear {
+	lock
+    faceplayer
+
+	setflag(FLAG_UNUSED_0x02A)
+    setflag(FLAG_UNUSED_0x02B)
+    setflag(FLAG_UNUSED_0x02C)
+	setflag(FLAG_UNUSED_0x02D)
+    setflag(FLAG_UNUSED_0x02E)
+    setflag(FLAG_UNUSED_0x02F)
+	setflag(FLAG_UNUSED_0x030)
+    setflag(FLAG_UNUSED_0x031)
+    setflag(FLAG_UNUSED_0x032)
+	setflag(FLAG_UNUSED_0x033)
+
+    random(3)
+	if (var(VAR_RESULT) == 0) {
+    	clearflag(FLAG_UNUSED_0x02A)
+	}
+	elif (var(VAR_RESULT) == 1) {
+    	clearflag(FLAG_UNUSED_0x02B)
+	}
+	else {
+    	clearflag(FLAG_UNUSED_0x02C)
+	}
+
+	random(4)
+	if (var(VAR_RESULT) == 0) {
+    	setflag(FLAG_UNUSED_0x02D)
+	}
+	elif (var(VAR_RESULT) == 1) {
+    	setflag(FLAG_UNUSED_0x02E)
+	}
+	elif (var(VAR_RESULT) == 2) {
+    	setflag(FLAG_UNUSED_0x02F)
+	}
+	else {
+    	setflag(FLAG_UNUSED_0x030)
+	}
+
+	random(3)
+	if (var(VAR_RESULT) == 0) {
+    	setflag(FLAG_UNUSED_0x031)
+	}
+	elif (var(VAR_RESULT) == 1) {
+    	setflag(FLAG_UNUSED_0x032)
+	}
+	else {
+    	setflag(FLAG_UNUSED_0x033)
+	}
+
+	msgbox("Pokes randomized!")
+
+	release
+    end
+}
+
+script MeteorFalls_B1F_1R_MapScripts_UrsalunaEncounter {
+    lock
+
+	setflag(FLAG_UNUSED_0x02F)
+    setwildbattle(SPECIES_URSALUNA, 60, ITEM_NONE)
+	dowildbattle
+
+    release
+    end
+}
