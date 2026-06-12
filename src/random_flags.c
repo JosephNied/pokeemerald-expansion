@@ -18,8 +18,15 @@ static const u16 sRandomFlags[] =
 
 void SetRandomFlags(void)
 {
+    
     u16 flags[ARRAY_COUNT(sRandomFlags)];
     int i;
+
+    //clear flags
+    for (i = 0; i < ARRAY_COUNT(sRandomFlags); i++) 
+    {
+        clearflag(sRandomFlags[i]);
+    }
 
     memcpy(flags, sRandomFlags, sizeof(flags));
 
