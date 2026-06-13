@@ -25,7 +25,7 @@ void SetRandomFlags(void)
     //clear flags
     for (i = 0; i < ARRAY_COUNT(sRandomFlags); i++) 
     {
-        clearflag(sRandomFlags[i]);
+        FlagClear(sRandomFlags[i]);
     }
 
     memcpy(flags, sRandomFlags, sizeof(flags));

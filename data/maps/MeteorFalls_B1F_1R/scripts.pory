@@ -1,29 +1,10 @@
-raw `
-MeteorFalls_B1F_1R_MapScripts::
-	.byte 0
+mapscripts MeteorFalls_B1F_1R_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: MeteorFalls_B1F_1R_Enter
+}
 
-`
-script MeteorFalls_B1F_1R_MakeThingsDisappear {
-	lock
-    faceplayer
-
-	clearflag(FLAG_UNUSED_0x02A)
-    clearflag(FLAG_UNUSED_0x02B)
-    clearflag(FLAG_UNUSED_0x02C)
-	clearflag(FLAG_UNUSED_0x02D)
-    clearflag(FLAG_UNUSED_0x02E)
-    clearflag(FLAG_UNUSED_0x02F)
-	clearflag(FLAG_UNUSED_0x030)
-    clearflag(FLAG_UNUSED_0x031)
-    clearflag(FLAG_UNUSED_0x032)
-	clearflag(FLAG_UNUSED_0x033)
-    special(SetRandomFlags)
-
-
-	msgbox("Pokes randomized!")
-
-	release
-    end
+script MeteorFalls_B1F_1R_Enter {
+	special(SetRandomFlags)
+	end
 }
 
 script MeteorFalls_B1F_1R_MapScripts_UrsalunaEncounter {
