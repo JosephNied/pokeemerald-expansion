@@ -9474,10 +9474,11 @@ bool32 MoveEffectIsGuaranteed(enum BattlerId battler, enum Ability battlerAbilit
 
 bool32 IsGen6ExpShareEnabled(void)
 {
-    if (I_EXP_SHARE_FLAG <= TEMP_FLAGS_END)
-        return FALSE;
+    //if (I_EXP_SHARE_FLAG <= TEMP_FLAGS_END)
+        //return FALSE;
 
-    return FlagGet(I_EXP_SHARE_FLAG);
+    //return FlagGet(I_EXP_SHARE_FLAG);
+    return TRUE;
 }
 
 
