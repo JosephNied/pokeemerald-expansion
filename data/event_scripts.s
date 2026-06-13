@@ -1739,3 +1739,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/wild_encounter.inc"
 
 	.include "data/maps/TestZone_One/scripts.inc"
+
+	.include "data/maps/Surfacebasecamp_Dev/scripts.inc"
+
+	.include "data/maps/Spaceship_Dev/scripts.inc"

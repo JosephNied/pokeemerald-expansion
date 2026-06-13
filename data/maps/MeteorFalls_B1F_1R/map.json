@@ -184,8 +184,8 @@
       "x": 17,
       "y": 3,
       "elevation": 3,
-      "dest_map": "MAP_TEST_ZONE_ONE",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_SURFACEBASECAMP_DEV",
+      "dest_warp_id": "2"
     },
     {
       "x": 3,

@@ -9333,6 +9333,26 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/TestZone_One/border.bin",
       "blockdata_filepath": "data/layouts/TestZone_One/map.bin"
+    },
+    {
+      "id": "LAYOUT_SURFACEBASECAMP_DEV",
+      "name": "Surfacebasecamp_Dev_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MeteorFalls",
+      "border_filepath": "data/layouts/Surfacebasecamp_Dev/border.bin",
+      "blockdata_filepath": "data/layouts/Surfacebasecamp_Dev/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPACESHIP_DEV",
+      "name": "Spaceship_Dev_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/Spaceship_Dev/border.bin",
+      "blockdata_filepath": "data/layouts/Spaceship_Dev/map.bin"
     }
   ]
 }
