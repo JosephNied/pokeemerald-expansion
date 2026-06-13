@@ -196,7 +196,7 @@ void BattleIntroSlide1(u8 taskId)
     case 0:
         if (gBattleTypeFlags & BATTLE_TYPE_LINK)
         {
-            gTasks[taskId].data[2] = 2;
+            gTasks[taskId].data[2] = 16;
             gTasks[taskId].tState++;
         }
         else
@@ -307,7 +307,7 @@ void BattleIntroSlide2(u8 taskId)
         gTasks[taskId].data[4] = 16;
         if (gBattleTypeFlags & BATTLE_TYPE_LINK)
         {
-            gTasks[taskId].data[2] = 2;
+            gTasks[taskId].data[2] = 16;
             gTasks[taskId].tState++;
         }
         else
