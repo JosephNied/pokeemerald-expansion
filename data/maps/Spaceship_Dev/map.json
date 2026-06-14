@@ -19,7 +19,7 @@
       "x": 12,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_SURFACEBASECAMP_DEV",
+      "dest_map": "MAP_ALT_SURFACE_DEV",
       "dest_warp_id": "0"
     }
   ],

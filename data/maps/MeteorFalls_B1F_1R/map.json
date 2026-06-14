@@ -169,12 +169,12 @@
     {
       "x": 20,
       "y": 4,
-      "elevation": 5,
-      "dest_map": "MAP_METEOR_FALLS_1F_2R",
-      "dest_warp_id": "2"
+      "elevation": 3,
+      "dest_map": "MAP_TEST_ZONE_ONE",
+      "dest_warp_id": "0"
     },
     {
-      "x": 19,
+      "x": 20,
       "y": 15,
       "elevation": 3,
       "dest_map": "MAP_METEOR_FALLS_1F_2R",
@@ -184,8 +184,8 @@
       "x": 17,
       "y": 3,
       "elevation": 3,
-      "dest_map": "MAP_SURFACEBASECAMP_DEV",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_ALT_SURFACE_DEV",
+      "dest_warp_id": "1"
     },
     {
       "x": 3,

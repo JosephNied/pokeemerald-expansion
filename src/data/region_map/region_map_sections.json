@@ -490,7 +490,7 @@
     },
     {
       "id": "MAPSEC_ABANDONED_SHIP",
-      "name": "Base Camp",
+      "name": "Ship",
       "x": 6,
       "y": 14,
       "width": 1,
@@ -506,7 +506,7 @@
     },
     {
       "id": "MAPSEC_METEOR_FALLS",
-      "name": "METEOR FALLS",
+      "name": "Cave",
       "x": 0,
       "y": 3,
       "width": 1,

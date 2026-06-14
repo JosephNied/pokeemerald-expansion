@@ -9353,6 +9353,16 @@
       "secondary_tileset": "gTileset_Lab",
       "border_filepath": "data/layouts/Spaceship_Dev/border.bin",
       "blockdata_filepath": "data/layouts/Spaceship_Dev/map.bin"
+    },
+    {
+      "id": "LAYOUT_ALT_SURFACE_DEV",
+      "name": "AltSurface_Dev_Layout",
+      "width": 30,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/AltSurface_Dev/border.bin",
+      "blockdata_filepath": "data/layouts/AltSurface_Dev/map.bin"
     }
   ]
 }
