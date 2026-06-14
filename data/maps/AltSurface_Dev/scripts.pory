@@ -1,0 +1,187 @@
+mapscripts AltSurface_Dev_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: AltSurface_Dev_Enter
+}
+
+script AltSurface_Dev_Enter {
+	special(SetRandomFlags)
+	end
+}
+
+script AltSurface_Dev_MapScripts_UrsalunaEncounter {
+    lock
+
+	setflag(FLAG_UNUSED_0x02F)
+    setwildbattle(SPECIES_URSALUNA, 60, ITEM_NONE)
+	dowildbattle
+
+    release
+    end
+}
+
+script AltSurface_Dev_EventScript_RandomItem01 {
+    lock
+    faceplayer
+
+    random(4)
+
+    if (var(VAR_RESULT) == 0) {
+        giveitem(ITEM_MAX_REVIVE, 1)
+	}
+	elif (var(VAR_RESULT) == 1) {
+        giveitem(ITEM_MAX_POTION, 1)
+	}
+	elif (var(VAR_RESULT) == 2) {
+        giveitem(ITEM_LUM_BERRY, 1)
+	}
+	else {
+        giveitem(ITEM_SITRUS_BERRY, 1)
+	}
+    setflag(FLAG_UNUSED_0x020)
+    removeobject(12)
+    release
+    end
+}
+
+script AltSurface_Dev_EventScript_RandomItem02 {
+    lock
+    faceplayer
+
+    random(4)
+
+    if (var(VAR_RESULT) == 0) {
+        giveitem(ITEM_MAX_REVIVE, 1)
+	}
+	elif (var(VAR_RESULT) == 1) {
+        giveitem(ITEM_MAX_POTION, 1)
+	}
+	elif (var(VAR_RESULT) == 2) {
+        giveitem(ITEM_LUM_BERRY, 1)
+	}
+	else {
+        giveitem(ITEM_SITRUS_BERRY, 1)
+	}
+    setflag(FLAG_UNUSED_0x021)
+    removeobject(13)
+    release
+    end
+}
+
+script AltSurface_Dev_EventScript_RandomItem03 {
+    lock
+    faceplayer
+
+    random(4)
+
+    if (var(VAR_RESULT) == 0) {
+        giveitem(ITEM_MAX_REVIVE, 1)
+	}
+	elif (var(VAR_RESULT) == 1) {
+        giveitem(ITEM_MAX_POTION, 1)
+	}
+	elif (var(VAR_RESULT) == 2) {
+        giveitem(ITEM_LUM_BERRY, 1)
+	}
+	else {
+        giveitem(ITEM_SITRUS_BERRY, 1)
+	}
+    setflag(FLAG_UNUSED_0x022)
+    removeobject(14)
+    release
+    end
+}
+
+script AltSurface_Dev_EventScript_RandomItem04 {
+    lock
+    faceplayer
+
+    random(4)
+
+    if (var(VAR_RESULT) == 0) {
+        giveitem(ITEM_MAX_REVIVE, 1)
+	}
+	elif (var(VAR_RESULT) == 1) {
+        giveitem(ITEM_MAX_POTION, 1)
+	}
+	elif (var(VAR_RESULT) == 2) {
+        giveitem(ITEM_LUM_BERRY, 1)
+	}
+	else {
+        giveitem(ITEM_SITRUS_BERRY, 1)
+	}
+    setflag(FLAG_UNUSED_0x023)
+    removeobject(15)
+    release
+    end
+}
+
+script AltSurface_Dev_EventScript_RandomItem05 {
+    lock
+    faceplayer
+
+    random(4)
+
+    if (var(VAR_RESULT) == 0) {
+        giveitem(ITEM_MAX_REVIVE, 1)
+	}
+	elif (var(VAR_RESULT) == 1) {
+        giveitem(ITEM_MAX_POTION, 1)
+	}
+	elif (var(VAR_RESULT) == 2) {
+        giveitem(ITEM_LUM_BERRY, 1)
+	}
+	else {
+        giveitem(ITEM_SITRUS_BERRY, 1)
+	}
+    setflag(FLAG_UNUSED_0x024)
+    removeobject(16)
+    release
+    end
+}
+
+script AltSurface_Dev_EventScript_RandomItem06 {
+    lock
+    faceplayer
+
+    random(4)
+
+    if (var(VAR_RESULT) == 0) {
+        giveitem(ITEM_MAX_REVIVE, 1)
+	}
+	elif (var(VAR_RESULT) == 1) {
+        giveitem(ITEM_MAX_POTION, 1)
+	}
+	elif (var(VAR_RESULT) == 2) {
+        giveitem(ITEM_LUM_BERRY, 1)
+	}
+	else {
+        giveitem(ITEM_SITRUS_BERRY, 1)
+	}
+    setflag(FLAG_UNUSED_0x025)
+    removeobject(17)
+    release
+    end
+}
+
+script AltSurface_Dev_EventScript_RandomItem07 {
+    lock
+    faceplayer
+
+    random(4)
+
+    if (var(VAR_RESULT) == 0) {
+        giveitem(ITEM_MAX_REVIVE, 1)
+	}
+	elif (var(VAR_RESULT) == 1) {
+        giveitem(ITEM_MAX_POTION, 1)
+	}
+	elif (var(VAR_RESULT) == 2) {
+        giveitem(ITEM_LUM_BERRY, 1)
+	}
+	else {
+        giveitem(ITEM_SITRUS_BERRY, 1)
+	}
+    setflag(FLAG_UNUSED_0x026)
+    removeobject(18)
+    release
+    end
+}
