@@ -9881,7 +9881,7 @@ Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MITCHELL ===
-Name: MITCHELL
+Name: ???
 Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
@@ -9889,21 +9889,35 @@ Music: Cool
 Double Battle: No
 AI: Basic Trainer
 
-Lunatone
-Level: 43
+Ditto
+Level: 52
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Explosion
-- Reflect
-- Light Screen
-- Psychic
+- Transform
 
-Solrock
-Level: 43
+Ditto
+Level: 52
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Explosion
-- Reflect
-- Light Screen
-- Shadow Ball
+- Transform
+
+Ditto @ Metal Powder
+Level: 54
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Transform
+
+Ditto @ Metal Powder
+Level: 54
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Transform
+
+Ditto @ Sitrus Berry
+Level: 56
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Transform
+
+Ditto @ Sitrus Berry
+Level: 56
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Transform
 
 === TRAINER_ISAAC_2 ===
 Name: ISAAC

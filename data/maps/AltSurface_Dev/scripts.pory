@@ -9,11 +9,12 @@ script AltSurface_Dev_Enter {
 
 script AltSurface_Dev_MapScripts_UrsalunaEncounter {
     lock
-
-	setflag(FLAG_UNUSED_0x02F)
-    setwildbattle(SPECIES_URSALUNA, 60, ITEM_NONE)
+    setwildbattle(SPECIES_URSALUNA, 70, ITEM_LUM_BERRY)
 	dowildbattle
-
+	if (var(VAR_RESULT) == 0) 
+	{
+		setflag(FLAG_UNUSED_0x034)
+	}
     release
     end
 }

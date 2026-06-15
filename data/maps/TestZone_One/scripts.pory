@@ -70,7 +70,7 @@ script TestZone_One_EventScript_Item01 {
     lock
     faceplayer
 
-    givemon(SPECIES_MAGNEZONE, 50, ITEM_MASTER_BALL)
+    givemon(SPECIES_MAGNEZONE, 50, ITEM_MAGNET)
 
     if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
         msgbox("Added Magnezone to party.")
@@ -89,28 +89,10 @@ script TestZone_One_EventScript_Item01 {
 script TestZone_One_EventScript_RandomItem01 {
     lock
     faceplayer
+    giveitem(ITEM_MASTER_BALL, 10)
 
-    random(4)
-
-    if (var(VAR_RESULT) == 0) {
-        giveitem(ITEM_POTION, 1)
-        msgbox("You found a Potion!")
-	}
-	elif (var(VAR_RESULT) == 1) {
-        giveitem(ITEM_SUPER_POTION, 1)
-        msgbox("You found a Super Potion!")
-	}
-	elif (var(VAR_RESULT) == 2) {
-        giveitem(ITEM_REVIVE, 1)
-        msgbox("You found a Revive!")
-	}
-	else {
-        giveitem(ITEM_MASTER_BALL, 1)
-        msgbox("Hot diggity!")
-	}
-
-    setflag(FLAG_UNUSED_0x024)
-    removeobject(7)
+    //setflag(FLAG_UNUSED_0x024)
+    //removeobject(7)
 
     release
     end
