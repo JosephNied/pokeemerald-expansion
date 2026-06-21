@@ -39,6 +39,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Spaceship_Dev_EventScript_Item01",
       "flag": "FLAG_UNUSED_0x028"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BRENDAN_NORMAL",
+      "x": 17,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Spaceship_Dev_EventScript_ChangePlanet",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 13,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Spaceship_Dev_EventScript_UpdateWarp",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -46,7 +72,7 @@
       "x": 12,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_ALT_SURFACE_DEV",
+      "dest_map": "MAP_SPACESHIP_DEV",
       "dest_warp_id": "0"
     }
   ],

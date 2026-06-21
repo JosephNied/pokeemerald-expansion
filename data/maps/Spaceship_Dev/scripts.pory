@@ -31,3 +31,71 @@ script Spaceship_Dev_EventScript_Item01 {
     releaseall
     end
 }
+
+script Spaceship_Dev_EventScript_ChangePlanet {
+    lock
+    faceplayer
+    msgbox("Where would you like to go?")
+    multichoice(0, 0, MULTI_PLANET_SELECT, FALSE)
+    if (var(VAR_RESULT) == 0) {
+        setvar(VAR_PLANET_DEST, 0)
+        msgbox("Traveling to Earth...")
+        waitmessage
+        closemessage
+        fadeScreen(FADE_TO_BLACK)
+        delay(40)
+        fadeScreen(FADE_FROM_BLACK)
+    }
+    elif (var(VAR_RESULT) == 1) {
+        setvar(VAR_PLANET_DEST, 1)
+        msgbox("Traveling to Mars...")
+        waitmessage
+        closemessage
+        fadeScreen(FADE_TO_BLACK)
+        delay(40)
+        fadeScreen(FADE_FROM_BLACK)
+    }
+    elif (var(VAR_RESULT) == 2) {
+        setvar(VAR_PLANET_DEST, 2)
+        msgbox("Traveling to Venus...")
+        waitmessage
+        closemessage
+        fadeScreen(FADE_TO_BLACK)
+        delay(40)
+        fadeScreen(FADE_FROM_BLACK)
+    }
+    else {
+        msgbox("Travel canceled.")
+    }
+    release
+    end
+}
+
+script Spaceship_Dev_EventScript_UpdateWarp {
+    lock
+    if (var(VAR_PLANET_DEST) == 0)
+    {
+        msgbox("Warping to Earth.")
+        warp(MAP_SURFACEBASECAMP_DEV, 0, 1, 0)
+        waitstate
+    }
+    elif (var(VAR_PLANET_DEST) == 1)
+    {
+        msgbox("Warping to Mars.")
+        warp(MAP_ALT_SURFACE_DEV, 0, 13, 9)
+        waitstate
+    }
+    elif (var(VAR_PLANET_DEST) == 2)
+    {
+        msgbox("Warping to Venus.")
+        warp(MAP_METEOR_FALLS_B1F_1R, 3, 17, 3)
+        waitstate
+    }
+    else {
+        msgbox("No valid destination set!")
+        release
+        end
+    }
+    release
+    end
+}
