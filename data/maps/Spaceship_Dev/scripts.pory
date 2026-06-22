@@ -104,7 +104,7 @@ script Spaceship_Dev_EventScript_UpdateWarp {
 script Spaceship_Dev_EventScript_VitaminVendor {
     lock
     faceplayer
-    setvar(VAR_STARDUST_COUNT, 5)
+    CountItemInBag(ITEM_STARDUST, VAR_STARDUST_COUNT)
     buffernumberstring(STR_VAR_1, VAR_STARDUST_COUNT)
     msgbox("Synthesize Vitamins using Star Dust.\n"
             "Your Start Dust: {STR_VAR_1}")

@@ -3426,3 +3426,13 @@ bool8 ScrCmd_getbraillestringwidth(struct ScriptContext * ctx)
     gSpecialVar_0x8004 = GetStringWidth(FONT_BRAILLE, msg, -1);
     return FALSE;
 }
+
+void CountItemInBag(struct ScriptContext *ctx)
+{
+    u16 itemId = ScriptReadHalfword(ctx);
+    u16 varId = ScriptReadHalfword(ctx);
+
+    u16 count = CountTotalItemQuantityInBag(itemId);
+
+    VarSet(varId, count);
+}

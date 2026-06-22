@@ -188,7 +188,7 @@ Spaceship_Dev_EventScript_VitaminVendor::
 # 106 "data/maps/Spaceship_Dev/scripts.pory"
 	faceplayer
 # 107 "data/maps/Spaceship_Dev/scripts.pory"
-	setvar VAR_STARDUST_COUNT, 5
+	CountItemInBag ITEM_STARDUST, VAR_STARDUST_COUNT
 # 108 "data/maps/Spaceship_Dev/scripts.pory"
 	buffernumberstring STR_VAR_1, VAR_STARDUST_COUNT
 # 109 "data/maps/Spaceship_Dev/scripts.pory"

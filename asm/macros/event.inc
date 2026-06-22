@@ -2949,3 +2949,13 @@
 	getbraillestringwidth \text
 	call EventScript_BrailleCursorWaitButton
 	.endm
+
+@ custom
+
+	@counts all of an item in your bag
+	.macro countiteminbag itemId:req, var:req
+	callnative CountItemInBag
+	.2byte \itemId
+	.2byte \var
+	.endm
+	
