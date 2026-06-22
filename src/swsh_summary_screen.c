@@ -4797,14 +4797,12 @@ static void PrintStats(u8 mode)
         spe = sMonSummaryScreen->summary.speed;
         break;
     case SKILL_STATE_IVS:
-        hp = sMonSummaryScreen->summary.ivHp;
-        atk = sMonSummaryScreen->summary.ivAtk;
-        def = sMonSummaryScreen->summary.ivDef;
-        spA = sMonSummaryScreen->summary.ivSpatk;
-        spD = sMonSummaryScreen->summary.ivSpdef;
-        spe = sMonSummaryScreen->summary.ivSpeed;
-        break;
-    case SKILL_STATE_EVS:
+        //hp = sMonSummaryScreen->summary.ivHp;
+        //atk = sMonSummaryScreen->summary.ivAtk;
+        //def = sMonSummaryScreen->summary.ivDef;
+        //spA = sMonSummaryScreen->summary.ivSpatk;
+        //spD = sMonSummaryScreen->summary.ivSpdef;
+        //spe = sMonSummaryScreen->summary.ivSpeed;
         hp = sMonSummaryScreen->summary.evHp;
         atk = sMonSummaryScreen->summary.evAtk;
         def = sMonSummaryScreen->summary.evDef;
@@ -4812,6 +4810,14 @@ static void PrintStats(u8 mode)
         spD = sMonSummaryScreen->summary.evSpdef;
         spe = sMonSummaryScreen->summary.evSpeed;
         break;
+    //case SKILL_STATE_EVS:
+        //hp = sMonSummaryScreen->summary.evHp;
+        //atk = sMonSummaryScreen->summary.evAtk;
+        //def = sMonSummaryScreen->summary.evDef;
+        //spA = sMonSummaryScreen->summary.evSpatk;
+        //spD = sMonSummaryScreen->summary.evSpdef;
+        //spe = sMonSummaryScreen->summary.evSpeed;
+        //break;
     }
 
     PrintStatLabels();

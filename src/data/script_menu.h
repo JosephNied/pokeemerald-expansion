@@ -1130,12 +1130,12 @@ static const struct MenuAction sMultichoiceList_Planet_Select[] = {
 };
 
 static const struct MenuAction sMultichoiceList_Vitamin_Select[] = {
-    {COMPOUND_STRING("HP UP x1")},
-    {COMPOUND_STRING("PROTEIN x1")},
-    {COMPOUND_STRING("IRON x1")},
-    {COMPOUND_STRING("CALCIUM x1")},
-    {COMPOUND_STRING("ZINC x1")},
-    {COMPOUND_STRING("CARBOS x1")},
+    {COMPOUND_STRING("HP UP+")},
+    {COMPOUND_STRING("PROTEIN+")},
+    {COMPOUND_STRING("IRON+")},
+    {COMPOUND_STRING("CALCIUM+")},
+    {COMPOUND_STRING("ZINC+")},
+    {COMPOUND_STRING("CARBOS+")},
     {gText_Exit},
 };
 

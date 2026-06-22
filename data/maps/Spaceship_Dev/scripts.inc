@@ -341,8 +341,8 @@ Spaceship_Dev_EventScript_UpdateWarp_Text_3:
 
 Spaceship_Dev_EventScript_VitaminVendor_Text_0:
 # 109 "data/maps/Spaceship_Dev/scripts.pory"
-	.string "Synthesize Vitamins using Star Dust.\n"
-	.string "Your Start Dust: {STR_VAR_1}$"
+	.string "Synthesize Vitamins using Star Dust?\n"
+	.string "Your Start Dust: {COLOR BLUE}{SHADOW LIGHT_BLUE}{STR_VAR_1}$"
 
 Spaceship_Dev_EventScript_VitaminVendor_Text_1:
 # 117 "data/maps/Spaceship_Dev/scripts.pory"

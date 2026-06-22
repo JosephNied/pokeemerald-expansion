@@ -106,8 +106,8 @@ script Spaceship_Dev_EventScript_VitaminVendor {
     faceplayer
     CountItemInBag(ITEM_STARDUST, VAR_STARDUST_COUNT)
     buffernumberstring(STR_VAR_1, VAR_STARDUST_COUNT)
-    msgbox("Synthesize Vitamins using Star Dust.\n"
-            "Your Start Dust: {STR_VAR_1}")
+    msgbox("Synthesize Vitamins using Star Dust?\n"
+            "Your Start Dust: {COLOR BLUE}{SHADOW LIGHT_BLUE}{STR_VAR_1}")
     waitmessage
     closemessage
 
