@@ -166,3 +166,11 @@ script Spaceship_Dev_EventScript_VitaminVendor {
     release
     end
 }
+
+script TestRemovePokes {
+    lock
+    msgbox("Testing releasing party...")
+    special(RemoveNativeMonsFromParty)
+    release
+    end
+}

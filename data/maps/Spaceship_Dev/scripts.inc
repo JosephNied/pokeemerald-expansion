@@ -295,6 +295,18 @@ Spaceship_Dev_EventScript_VitaminVendor_10:
 	goto Spaceship_Dev_EventScript_VitaminVendor_1
 
 
+TestRemovePokes::
+# 171 "data/maps/Spaceship_Dev/scripts.pory"
+	lock
+# 172 "data/maps/Spaceship_Dev/scripts.pory"
+	msgbox TestRemovePokes_Text_0
+# 173 "data/maps/Spaceship_Dev/scripts.pory"
+	special RemoveNativeMonsFromParty
+# 174 "data/maps/Spaceship_Dev/scripts.pory"
+	release
+	end
+
+
 Spaceship_Dev_EventScript_Item01_Text_0:
 # 23 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Added Magnezone to party.$"
@@ -355,3 +367,7 @@ Spaceship_Dev_EventScript_VitaminVendor_Text_2:
 Spaceship_Dev_EventScript_VitaminVendor_Text_3:
 # 161 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Vitamin synthesis canceled.$"
+
+TestRemovePokes_Text_0:
+# 172 "data/maps/Spaceship_Dev/scripts.pory"
+	.string "Testing releasing party...$"

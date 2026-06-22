@@ -663,3 +663,22 @@ void Script_GiveRandomBerry(struct ScriptContext *ctx)
 
     gSpecialVar_Result = BerryTypeToItemId(RandomUniform(RNG_RANDOM_BERRY, loBerry, hiBerry));
 }
+
+void RemoveNativeMonsFromParty(void)
+{
+    u8 i;
+
+    for (i = 0; i < gPartiesCount[B_TRAINER_PLAYER]; i++)
+    {
+        if (GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES) == SPECIES_MAGNEZONE)
+        {
+            gParties[B_TRAINER_PLAYER][0] = gParties[B_TRAINER_PLAYER][i];
+            break;
+        }
+    }
+
+    for (i = 1; i < PARTY_SIZE; i++)
+        ZeroMonData(&gParties[B_TRAINER_PLAYER][i]);
+
+    gPartiesCount[B_TRAINER_PLAYER] = 1;
+}
