@@ -6,6 +6,7 @@ script Spaceship_Dev_EventScript_BallItem01 {
     lock
     faceplayer
     giveitem(ITEM_MASTER_BALL, 6)
+    giveitem(ITEM_STARDUST, 5)
     setflag(FLAG_UNUSED_0x027)
     removeobject(1)
     release
@@ -95,6 +96,72 @@ script Spaceship_Dev_EventScript_UpdateWarp {
         msgbox("No valid destination set!")
         release
         end
+    }
+    release
+    end
+}
+
+script Spaceship_Dev_EventScript_VitaminVendor {
+    lock
+    faceplayer
+    setvar(VAR_STARDUST_COUNT, 5)
+    buffernumberstring(STR_VAR_1, VAR_STARDUST_COUNT)
+    msgbox("Synthesize Vitamins using Star Dust.\n"
+            "Your Start Dust: {STR_VAR_1}")
+    waitmessage
+    closemessage
+
+    checkitem(ITEM_STARDUST, 1)
+    if (var(VAR_RESULT) == FALSE)
+    {
+        msgbox("You don't have any Star Dust.")
+        release
+        end
+    }
+    else {
+        multichoice(0, 0, MULTI_VITAMIN_SELECT, FALSE)
+        if (var(VAR_RESULT) == 0)
+        {
+            removeitem(ITEM_STARDUST, 1)
+            giveitem(ITEM_HP_UP, 1)
+            msgbox("Your Star Dust has been exchanged!")
+        }
+        elif (var(VAR_RESULT) == 1)
+        {
+            removeitem(ITEM_STARDUST, 1)
+            giveitem(ITEM_PROTEIN, 1)
+            msgbox("Your Star Dust has been exchanged!")
+        }
+        elif (var(VAR_RESULT) == 2)
+        {
+            removeitem(ITEM_STARDUST, 1)
+            giveitem(ITEM_IRON, 1)
+            msgbox("Your Star Dust has been exchanged!")
+        }
+        elif (var(VAR_RESULT) == 3)
+        {
+            removeitem(ITEM_STARDUST, 1)
+            giveitem(ITEM_CALCIUM, 1)
+            msgbox("Your Star Dust has been exchanged!")
+        }
+        elif (var(VAR_RESULT) == 4)
+        {
+            removeitem(ITEM_STARDUST, 1)
+            giveitem(ITEM_ZINC, 1)
+            msgbox("Your Star Dust has been exchanged!")
+        }
+        elif (var(VAR_RESULT) == 5)
+        {
+            removeitem(ITEM_STARDUST, 1)
+            giveitem(ITEM_CARBOS, 1)
+            msgbox("Your Star Dust has been exchanged!")
+        }
+        else
+        {
+            msgbox("Vitamin synthesis canceled.")
+            release
+            end
+        }
     }
     release
     end
