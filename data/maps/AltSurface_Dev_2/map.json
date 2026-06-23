@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ALT_SURFACE_DEV",
-  "name": "AltSurface_Dev",
-  "layout": "LAYOUT_ALT_SURFACE_DEV",
+  "id": "MAP_ALT_SURFACE_DEV_2",
+  "name": "AltSurface_Dev_2",
+  "layout": "LAYOUT_ALT_SURFACE_DEV_2",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
@@ -12,7 +12,13 @@
   "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": [
+    {
+      "map": "MAP_ALT_SURFACE_DEV",
+      "offset": -15,
+      "direction": "left"
+    }
+  ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(GLIMMORA)",

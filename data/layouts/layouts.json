@@ -9363,6 +9363,16 @@
       "secondary_tileset": "gTileset_Underwater",
       "border_filepath": "data/layouts/AltSurface_Dev/border.bin",
       "blockdata_filepath": "data/layouts/AltSurface_Dev/map.bin"
+    },
+    {
+      "id": "LAYOUT_ALT_SURFACE_DEV_2",
+      "name": "AltSurface_Dev_2_Layout",
+      "width": 30,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/AltSurface_Dev_2/border.bin",
+      "blockdata_filepath": "data/layouts/AltSurface_Dev_2/map.bin"
     }
   ]
 }

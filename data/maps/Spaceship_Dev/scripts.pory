@@ -20,6 +20,14 @@ script Spaceship_Dev_EventScript_Item01 {
     givemon(SPECIES_MAGNEZONE, 50, ITEM_MAGNET)
 
     if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+        setflag(FLAG_BADGE01_GET)
+        setflag(FLAG_BADGE02_GET)
+        setflag(FLAG_BADGE03_GET)
+        setflag(FLAG_BADGE04_GET)
+        setflag(FLAG_BADGE05_GET)
+        setflag(FLAG_BADGE06_GET)
+        setflag(FLAG_BADGE07_GET)
+        setflag(FLAG_BADGE08_GET)
         msgbox("Added Magnezone to party.")
 		setflag(FLAG_UNUSED_0x028)
 		setflag(FLAG_SYS_POKEMON_GET)
