@@ -85,7 +85,7 @@ script Spaceship_Dev_EventScript_UpdateWarp {
     if (var(VAR_PLANET_DEST) == 0)
     {
         msgbox("Warping to Earth.")
-        warp(MAP_SURFACEBASECAMP_DEV, 0, 1, 0)
+        warp(MAP_PLANET01_01, 0, 18, 11)
         waitstate
     }
     elif (var(VAR_PLANET_DEST) == 1)

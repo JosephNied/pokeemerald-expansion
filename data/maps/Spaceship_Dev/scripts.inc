@@ -174,7 +174,7 @@ Spaceship_Dev_EventScript_UpdateWarp_2:
 # 87 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox Spaceship_Dev_EventScript_UpdateWarp_Text_0
 # 88 "data/maps/Spaceship_Dev/scripts.pory"
-	warp MAP_SURFACEBASECAMP_DEV, 0, 1, 0
+	warp MAP_PLANET01_01, 0, 18, 11
 # 89 "data/maps/Spaceship_Dev/scripts.pory"
 	waitstate
 	goto Spaceship_Dev_EventScript_UpdateWarp_1

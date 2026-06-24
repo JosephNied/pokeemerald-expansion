@@ -1747,3 +1747,11 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/AltSurface_Dev/scripts.inc"
 
 	.include "data/maps/AltSurface_Dev_2/scripts.inc"
+
+	.include "data/maps/Planet01_01/scripts.inc"
+
+	.include "data/maps/Planet01_04/scripts.inc"
+
+	.include "data/maps/Planet01_02/scripts.inc"
+
+	.include "data/maps/Planet01_03/scripts.inc"

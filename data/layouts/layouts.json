@@ -9373,6 +9373,46 @@
       "secondary_tileset": "gTileset_Underwater",
       "border_filepath": "data/layouts/AltSurface_Dev_2/border.bin",
       "blockdata_filepath": "data/layouts/AltSurface_Dev_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLANET01_01",
+      "name": "Planet01_01_Layout",
+      "width": 40,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Planet01_01/border.bin",
+      "blockdata_filepath": "data/layouts/Planet01_01/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLANET01_04",
+      "name": "Planet01_04_Layout",
+      "width": 30,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Planet01_04/border.bin",
+      "blockdata_filepath": "data/layouts/Planet01_04/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLANET01_03",
+      "name": "Planet01_03_Layout",
+      "width": 60,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Planet01_03/border.bin",
+      "blockdata_filepath": "data/layouts/Planet01_03/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLANET01_02",
+      "name": "Planet01_02_Layout",
+      "width": 30,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Planet01_02/border.bin",
+      "blockdata_filepath": "data/layouts/Planet01_02/map.bin"
     }
   ]
 }

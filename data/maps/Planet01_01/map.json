@@ -1,0 +1,39 @@
+{
+  "id": "MAP_PLANET01_01",
+  "name": "Planet01_01",
+  "layout": "LAYOUT_PLANET01_01",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_PLANET01_02",
+      "offset": 34,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_PLANET01_04",
+      "offset": 42,
+      "direction": "right"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 18,
+      "y": 11,
+      "elevation": 4,
+      "dest_map": "MAP_SPACESHIP_DEV",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

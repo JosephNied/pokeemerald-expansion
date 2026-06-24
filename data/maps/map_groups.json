@@ -75,7 +75,8 @@
     "gMapGroup_IndoorTwoIslandRoute_Frlg",
     "gMapGroup_IndoorSixIslandRoute_Frlg",
     "gMapGroup_IndoorSevenIslandRoute_Frlg",
-    "gMapGroup_Meteor_Dev"
+    "gMapGroup_Meteor_Dev",
+    "gMapGroup_Planet01"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1168,5 +1169,11 @@
     "Surfacebasecamp_Dev",
     "AltSurface_Dev",
     "AltSurface_Dev_2"
+  ],
+  "gMapGroup_Planet01": [
+    "Planet01_01",
+    "Planet01_02",
+    "Planet01_03",
+    "Planet01_04"
   ]
 }
