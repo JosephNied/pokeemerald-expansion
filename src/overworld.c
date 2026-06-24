@@ -740,6 +740,11 @@ void SetWarpDestinationToHealLocation(u8 healLocationId)
         SetWarpDestination(healLocation->mapGroup, healLocation->mapNum, WARP_ID_NONE, healLocation->x, healLocation->y);
 }
 
+//void SetWarpDestinationToHealLocation(u8 healLocationId)
+//{
+//   SetWarpDestination(MAP_GROUP(MAP_SPACESHIP_DEV), MAP_NUM(MAP_SPACESHIP_DEV), 0, 0, 0);
+//}
+
 static bool32 IsWhiteoutCutscene(void)
 {
     if (OW_WHITEOUT_CUTSCENE < GEN_4)
