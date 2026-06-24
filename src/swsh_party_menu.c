@@ -2997,7 +2997,8 @@ static inline u8 GetButtonPromptType(void)
         && gPartyMenu.layout == PARTY_LAYOUT_SINGLE
         && (gPartyMenu.menuType == PARTY_MENU_TYPE_FIELD
             || gPartyMenu.menuType == PARTY_MENU_TYPE_DAYCARE))
-        return BUTTON_PROMPT_BOXES;
+        //return BUTTON_PROMPT_BOXES;
+        return BUTTON_PROMPT_NONE;
 
     if (gPartyMenu.layout == PARTY_LAYOUT_MULTI_FULL)
         return BUTTON_PROMPT_VIEW_PARTNER;

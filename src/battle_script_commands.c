@@ -3905,8 +3905,9 @@ static void Cmd_getexp(void)
         }
         else
         {
-            gBattleScripting.getexpState++;
-            gBattleStruct->givenExpMons |= (1u << gBattlerPartyIndexes[gBattlerFainted]);
+            gBattleScripting.getexpState = 6; // goto last case
+            //gBattleScripting.getexpState++;
+            //gBattleStruct->givenExpMons |= (1u << gBattlerPartyIndexes[gBattlerFainted]);
         }
         break;
     case 1: // calculate experience points to redistribute
@@ -11222,7 +11223,7 @@ void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBat
 
         *expAmount = value + 1;
     }
-    *expAmount *= 2;
+    *expAmount *= 0;
 }
 
 void BS_ItemRestoreHP(void)
