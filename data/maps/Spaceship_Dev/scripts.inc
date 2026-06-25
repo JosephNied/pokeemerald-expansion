@@ -28,6 +28,8 @@ Spaceship_Dev_EventScript_Item01::
 	lock
 # 18 "data/maps/Spaceship_Dev/scripts.pory"
 	faceplayer
+# 19 "data/maps/Spaceship_Dev/scripts.pory"
+	setflag FLAG_SYS_POKEDEX_GET
 # 20 "data/maps/Spaceship_Dev/scripts.pory"
 	givemon SPECIES_MAGNEZONE, 50, ITEM_MAGNET
 # 22 "data/maps/Spaceship_Dev/scripts.pory"

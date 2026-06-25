@@ -16,7 +16,7 @@ script Spaceship_Dev_EventScript_BallItem01 {
 script Spaceship_Dev_EventScript_Item01 {
     lock
     faceplayer
-
+    setflag(FLAG_SYS_POKEDEX_GET)
     givemon(SPECIES_MAGNEZONE, 50, ITEM_MAGNET)
 
     if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
