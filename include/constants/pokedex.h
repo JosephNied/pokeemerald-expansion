@@ -1091,6 +1091,7 @@ enum NationalDexOrder
 #endif
 
 #define FOREACH_SPECIES_IN_HOENN_DEX_ORDER(F) \
+    F(MAGNEZONE) \
     F(GLIMMORA) \
     F(CLEFAIRY) \
     F(CLEFABLE) \
