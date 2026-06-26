@@ -865,7 +865,14 @@ bool8 SweetScentWildEncounter(void)
     }
     else
     {
-        if (MetatileBehavior_IsLandWildEncounter(MapGridGetMetatileBehaviorAt(x, y)) == TRUE)
+        if (MetatileBehavior_IsSweetScent(MapGridGetMetatileBehaviorAt(x, y)) == TRUE) 
+        {
+            timeOfDay = GetTimeOfDayForEncounters(headerId, WILD_AREA_LAND);
+            TryGenerateWildMon(gWildMonHeaders[headerId].encounterTypes[timeOfDay].landMonsInfo, WILD_AREA_LAND, 0);
+            BattleSetup_StartWildBattle();
+            return TRUE;
+        }
+        else if (MetatileBehavior_IsLandWildEncounter(MapGridGetMetatileBehaviorAt(x, y)) == TRUE)
         {
             timeOfDay = GetTimeOfDayForEncounters(headerId, WILD_AREA_LAND);
 

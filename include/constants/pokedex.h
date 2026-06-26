@@ -1092,14 +1092,20 @@ enum NationalDexOrder
 
 #define FOREACH_SPECIES_IN_HOENN_DEX_ORDER(F) \
     F(GLIMMORA) \
+    F(CLEFAIRY) \
     F(CLEFABLE) \
     F(SHUCKLE) \
     F(STEELIX) \
+    F(STARYU) \
     F(STARMIE) \
     F(GLALIE) \
     F(MINIOR) \
     F(CARBINK) \
     F(LUNATONE) \
+    F(SOLROCK) \
+    F(TEDDIURSA) \
+    F(URSARING) \
+    F(URSALUNA) \
     F(DEOXYS)
 
 // Hoenn Pokédex order
