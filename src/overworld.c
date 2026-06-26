@@ -740,11 +740,6 @@ void SetWarpDestinationToHealLocation(u8 healLocationId)
         SetWarpDestination(healLocation->mapGroup, healLocation->mapNum, WARP_ID_NONE, healLocation->x, healLocation->y);
 }
 
-//void SetWarpDestinationToHealLocation(u8 healLocationId)
-//{
-//   SetWarpDestination(MAP_GROUP(MAP_SPACESHIP_DEV), MAP_NUM(MAP_SPACESHIP_DEV), 0, 0, 0);
-//}
-
 static bool32 IsWhiteoutCutscene(void)
 {
     if (OW_WHITEOUT_CUTSCENE < GEN_4)
@@ -755,14 +750,17 @@ static bool32 IsWhiteoutCutscene(void)
 void SetWarpDestinationToLastHealLocation(void)
 {
     if (IsWhiteoutCutscene())
-        SetWhiteoutRespawnWarpAndHealerNPC(&sWarpDestination);
+        //SetWhiteoutRespawnWarpAndHealerNPC(&sWarpDestination);
+        SetWarpDestination(MAP_GROUP(MAP_SPACESHIP_DEV), MAP_NUM(MAP_SPACESHIP_DEV), 0, 0, 0);
     else
-        sWarpDestination = gSaveBlock1Ptr->lastHealLocation;
+        //sWarpDestination = gSaveBlock1Ptr->lastHealLocation;
+        SetWarpDestination(MAP_GROUP(MAP_SPACESHIP_DEV), MAP_NUM(MAP_SPACESHIP_DEV), 0, 0, 0);
 }
 
 void SetWarpDestinationForTeleport(void)
 {
-    sWarpDestination = gSaveBlock1Ptr->lastHealLocation;
+    SetWarpDestination(MAP_GROUP(MAP_SPACESHIP_DEV), MAP_NUM(MAP_SPACESHIP_DEV), 0, 0, 0);
+    //sWarpDestination = gSaveBlock1Ptr->lastHealLocation;
 }
 
 void SetLastHealLocationWarp(u8 healLocationId)
