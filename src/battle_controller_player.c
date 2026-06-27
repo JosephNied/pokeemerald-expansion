@@ -2019,7 +2019,16 @@ static void PlayerHandleChooseAction(enum BattlerId battler)
 
     gBattlerControllerFuncs[battler] = HandleChooseActionAfterDma3;
     BattleTv_ClearExplosionFaintCause();
-    BattlePutTextOnWindow(gText_BattleMenu, B_WIN_ACTION_MENU);
+    //BattlePutTextOnWindow(gText_BattleMenu, B_WIN_ACTION_MENU);
+
+    const u8 *menuText;
+
+    if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+        menuText = gText_TrainerBattleMenu;
+    else
+        menuText = gText_BattleMenu;
+
+    BattlePutTextOnWindow(menuText, B_WIN_ACTION_MENU);
 
     for (i = 0; i < 4; i++)
         ActionSelectionDestroyCursorAt(i);
