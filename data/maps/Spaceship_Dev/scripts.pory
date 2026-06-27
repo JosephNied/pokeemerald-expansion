@@ -7,6 +7,7 @@ script Spaceship_Dev_EventScript_BallItem01 {
     faceplayer
     giveitem(ITEM_MASTER_BALL, 6)
     giveitem(ITEM_STARDUST, 5)
+    giveitem(ITEM_SCANNER)
     setflag(FLAG_UNUSED_0x027)
     removeobject(1)
     release

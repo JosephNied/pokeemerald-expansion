@@ -629,7 +629,8 @@ bool32 TryRunFromBattle(enum BattlerId battler)
 
     if (effect)
     {
-        InspectAddToDex();
+        InspectAddToDex(battler);
+        
         gCurrentTurnActionNumber = gBattlersCount;
         gBattleOutcome = B_OUTCOME_RAN;
     }

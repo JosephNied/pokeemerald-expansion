@@ -6614,9 +6614,13 @@ static void Cmd_jumpifplayerran(void)
     CMD_ARGS(const u8 *jumpInstr);
 
     if (TryRunFromBattle(gBattlerFainted))
+    {
         gBattlescriptCurrInstr = cmd->jumpInstr;
+    }
     else
+    {
         gBattlescriptCurrInstr = cmd->nextInstr;
+    }
 }
 
 static void Cmd_hpthresholds(void)

@@ -334,6 +334,6 @@ BattleScript_ActionThrowBait::
 	end2
 
 BattleScript_Inspect::
-	printString STRINGID_INSPECT
+	printstring STRINGID_INSPECT
 	waitmessage B_WAIT_TIME_LONG
-	end2
+	return

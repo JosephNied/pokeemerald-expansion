@@ -15,377 +15,379 @@ Spaceship_Dev_EventScript_BallItem01::
 # 9 "data/maps/Spaceship_Dev/scripts.pory"
 	giveitem ITEM_STARDUST, 5
 # 10 "data/maps/Spaceship_Dev/scripts.pory"
-	setflag FLAG_UNUSED_0x027
+	giveitem ITEM_SCANNER
 # 11 "data/maps/Spaceship_Dev/scripts.pory"
-	removeobject 1
+	setflag FLAG_UNUSED_0x027
 # 12 "data/maps/Spaceship_Dev/scripts.pory"
+	removeobject 1
+# 13 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
 
 Spaceship_Dev_EventScript_Item01::
-# 17 "data/maps/Spaceship_Dev/scripts.pory"
-	lock
 # 18 "data/maps/Spaceship_Dev/scripts.pory"
-	faceplayer
+	lock
 # 19 "data/maps/Spaceship_Dev/scripts.pory"
-	setflag FLAG_SYS_POKEDEX_GET
+	faceplayer
 # 20 "data/maps/Spaceship_Dev/scripts.pory"
+	setflag FLAG_SYS_POKEDEX_GET
+# 21 "data/maps/Spaceship_Dev/scripts.pory"
 	givemon SPECIES_MAGNEZONE, 50, ITEM_MAGNET
-# 22 "data/maps/Spaceship_Dev/scripts.pory"
+# 23 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Spaceship_Dev_EventScript_Item01_2
-# 37 "data/maps/Spaceship_Dev/scripts.pory"
+# 38 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox Spaceship_Dev_EventScript_Item01_Text_1
 Spaceship_Dev_EventScript_Item01_1:
-# 39 "data/maps/Spaceship_Dev/scripts.pory"
-	waitmessage
 # 40 "data/maps/Spaceship_Dev/scripts.pory"
+	waitmessage
+# 41 "data/maps/Spaceship_Dev/scripts.pory"
 	releaseall
 	end
 
 Spaceship_Dev_EventScript_Item01_2:
-# 23 "data/maps/Spaceship_Dev/scripts.pory"
-	setflag FLAG_BADGE01_GET
 # 24 "data/maps/Spaceship_Dev/scripts.pory"
-	setflag FLAG_BADGE02_GET
+	setflag FLAG_BADGE01_GET
 # 25 "data/maps/Spaceship_Dev/scripts.pory"
-	setflag FLAG_BADGE03_GET
+	setflag FLAG_BADGE02_GET
 # 26 "data/maps/Spaceship_Dev/scripts.pory"
-	setflag FLAG_BADGE04_GET
+	setflag FLAG_BADGE03_GET
 # 27 "data/maps/Spaceship_Dev/scripts.pory"
-	setflag FLAG_BADGE05_GET
+	setflag FLAG_BADGE04_GET
 # 28 "data/maps/Spaceship_Dev/scripts.pory"
-	setflag FLAG_BADGE06_GET
+	setflag FLAG_BADGE05_GET
 # 29 "data/maps/Spaceship_Dev/scripts.pory"
-	setflag FLAG_BADGE07_GET
+	setflag FLAG_BADGE06_GET
 # 30 "data/maps/Spaceship_Dev/scripts.pory"
-	setflag FLAG_BADGE08_GET
+	setflag FLAG_BADGE07_GET
 # 31 "data/maps/Spaceship_Dev/scripts.pory"
-	msgbox Spaceship_Dev_EventScript_Item01_Text_0
+	setflag FLAG_BADGE08_GET
 # 32 "data/maps/Spaceship_Dev/scripts.pory"
-	setflag FLAG_UNUSED_0x028
+	msgbox Spaceship_Dev_EventScript_Item01_Text_0
 # 33 "data/maps/Spaceship_Dev/scripts.pory"
-	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_UNUSED_0x028
 # 34 "data/maps/Spaceship_Dev/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 35 "data/maps/Spaceship_Dev/scripts.pory"
 	removeobject 2
 	goto Spaceship_Dev_EventScript_Item01_1
 
 
 Spaceship_Dev_EventScript_ChangePlanet::
-# 45 "data/maps/Spaceship_Dev/scripts.pory"
-	lock
 # 46 "data/maps/Spaceship_Dev/scripts.pory"
-	faceplayer
+	lock
 # 47 "data/maps/Spaceship_Dev/scripts.pory"
-	msgbox Spaceship_Dev_EventScript_ChangePlanet_Text_0
+	faceplayer
 # 48 "data/maps/Spaceship_Dev/scripts.pory"
-	multichoice 0, 0, MULTI_PLANET_SELECT, FALSE
+	msgbox Spaceship_Dev_EventScript_ChangePlanet_Text_0
 # 49 "data/maps/Spaceship_Dev/scripts.pory"
+	multichoice 0, 0, MULTI_PLANET_SELECT, FALSE
+# 50 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq Spaceship_Dev_EventScript_ChangePlanet_2
-# 58 "data/maps/Spaceship_Dev/scripts.pory"
+# 59 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq Spaceship_Dev_EventScript_ChangePlanet_3
-# 67 "data/maps/Spaceship_Dev/scripts.pory"
+# 68 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_eq Spaceship_Dev_EventScript_ChangePlanet_4
-# 77 "data/maps/Spaceship_Dev/scripts.pory"
+# 78 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox Spaceship_Dev_EventScript_ChangePlanet_Text_4
 Spaceship_Dev_EventScript_ChangePlanet_1:
-# 79 "data/maps/Spaceship_Dev/scripts.pory"
+# 80 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
 Spaceship_Dev_EventScript_ChangePlanet_2:
-# 50 "data/maps/Spaceship_Dev/scripts.pory"
-	setvar VAR_PLANET_DEST, 0
 # 51 "data/maps/Spaceship_Dev/scripts.pory"
-	msgbox Spaceship_Dev_EventScript_ChangePlanet_Text_1
+	setvar VAR_PLANET_DEST, 0
 # 52 "data/maps/Spaceship_Dev/scripts.pory"
-	waitmessage
+	msgbox Spaceship_Dev_EventScript_ChangePlanet_Text_1
 # 53 "data/maps/Spaceship_Dev/scripts.pory"
-	closemessage
+	waitmessage
 # 54 "data/maps/Spaceship_Dev/scripts.pory"
-	fadeScreen FADE_TO_BLACK
+	closemessage
 # 55 "data/maps/Spaceship_Dev/scripts.pory"
-	delay 40
+	fadeScreen FADE_TO_BLACK
 # 56 "data/maps/Spaceship_Dev/scripts.pory"
+	delay 40
+# 57 "data/maps/Spaceship_Dev/scripts.pory"
 	fadeScreen FADE_FROM_BLACK
 	goto Spaceship_Dev_EventScript_ChangePlanet_1
 
 Spaceship_Dev_EventScript_ChangePlanet_3:
-# 59 "data/maps/Spaceship_Dev/scripts.pory"
-	setvar VAR_PLANET_DEST, 1
 # 60 "data/maps/Spaceship_Dev/scripts.pory"
-	msgbox Spaceship_Dev_EventScript_ChangePlanet_Text_2
+	setvar VAR_PLANET_DEST, 1
 # 61 "data/maps/Spaceship_Dev/scripts.pory"
-	waitmessage
+	msgbox Spaceship_Dev_EventScript_ChangePlanet_Text_2
 # 62 "data/maps/Spaceship_Dev/scripts.pory"
-	closemessage
+	waitmessage
 # 63 "data/maps/Spaceship_Dev/scripts.pory"
-	fadeScreen FADE_TO_BLACK
+	closemessage
 # 64 "data/maps/Spaceship_Dev/scripts.pory"
-	delay 40
+	fadeScreen FADE_TO_BLACK
 # 65 "data/maps/Spaceship_Dev/scripts.pory"
+	delay 40
+# 66 "data/maps/Spaceship_Dev/scripts.pory"
 	fadeScreen FADE_FROM_BLACK
 	goto Spaceship_Dev_EventScript_ChangePlanet_1
 
 Spaceship_Dev_EventScript_ChangePlanet_4:
-# 68 "data/maps/Spaceship_Dev/scripts.pory"
-	setvar VAR_PLANET_DEST, 2
 # 69 "data/maps/Spaceship_Dev/scripts.pory"
-	msgbox Spaceship_Dev_EventScript_ChangePlanet_Text_3
+	setvar VAR_PLANET_DEST, 2
 # 70 "data/maps/Spaceship_Dev/scripts.pory"
-	waitmessage
+	msgbox Spaceship_Dev_EventScript_ChangePlanet_Text_3
 # 71 "data/maps/Spaceship_Dev/scripts.pory"
-	closemessage
+	waitmessage
 # 72 "data/maps/Spaceship_Dev/scripts.pory"
-	fadeScreen FADE_TO_BLACK
+	closemessage
 # 73 "data/maps/Spaceship_Dev/scripts.pory"
-	delay 40
+	fadeScreen FADE_TO_BLACK
 # 74 "data/maps/Spaceship_Dev/scripts.pory"
+	delay 40
+# 75 "data/maps/Spaceship_Dev/scripts.pory"
 	fadeScreen FADE_FROM_BLACK
 	goto Spaceship_Dev_EventScript_ChangePlanet_1
 
 
 Spaceship_Dev_EventScript_UpdateWarp::
-# 84 "data/maps/Spaceship_Dev/scripts.pory"
-	lock
 # 85 "data/maps/Spaceship_Dev/scripts.pory"
+	lock
+# 86 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_PLANET_DEST, 0
 	goto_if_eq Spaceship_Dev_EventScript_UpdateWarp_2
-# 91 "data/maps/Spaceship_Dev/scripts.pory"
+# 92 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_PLANET_DEST, 1
 	goto_if_eq Spaceship_Dev_EventScript_UpdateWarp_3
-# 97 "data/maps/Spaceship_Dev/scripts.pory"
+# 98 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_PLANET_DEST, 2
 	goto_if_eq Spaceship_Dev_EventScript_UpdateWarp_4
-# 104 "data/maps/Spaceship_Dev/scripts.pory"
-	msgbox Spaceship_Dev_EventScript_UpdateWarp_Text_3
 # 105 "data/maps/Spaceship_Dev/scripts.pory"
+	msgbox Spaceship_Dev_EventScript_UpdateWarp_Text_3
+# 106 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
 Spaceship_Dev_EventScript_UpdateWarp_1:
-# 108 "data/maps/Spaceship_Dev/scripts.pory"
+# 109 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
 Spaceship_Dev_EventScript_UpdateWarp_2:
-# 87 "data/maps/Spaceship_Dev/scripts.pory"
-	msgbox Spaceship_Dev_EventScript_UpdateWarp_Text_0
 # 88 "data/maps/Spaceship_Dev/scripts.pory"
-	warp MAP_PLANET01_01, 0, 18, 11
+	msgbox Spaceship_Dev_EventScript_UpdateWarp_Text_0
 # 89 "data/maps/Spaceship_Dev/scripts.pory"
+	warp MAP_PLANET01_01, 0, 18, 11
+# 90 "data/maps/Spaceship_Dev/scripts.pory"
 	waitstate
 	goto Spaceship_Dev_EventScript_UpdateWarp_1
 
 Spaceship_Dev_EventScript_UpdateWarp_3:
-# 93 "data/maps/Spaceship_Dev/scripts.pory"
-	msgbox Spaceship_Dev_EventScript_UpdateWarp_Text_1
 # 94 "data/maps/Spaceship_Dev/scripts.pory"
-	warp MAP_ALT_SURFACE_DEV, 0, 13, 9
+	msgbox Spaceship_Dev_EventScript_UpdateWarp_Text_1
 # 95 "data/maps/Spaceship_Dev/scripts.pory"
+	warp MAP_ALT_SURFACE_DEV, 0, 13, 9
+# 96 "data/maps/Spaceship_Dev/scripts.pory"
 	waitstate
 	goto Spaceship_Dev_EventScript_UpdateWarp_1
 
 Spaceship_Dev_EventScript_UpdateWarp_4:
-# 99 "data/maps/Spaceship_Dev/scripts.pory"
-	msgbox Spaceship_Dev_EventScript_UpdateWarp_Text_2
 # 100 "data/maps/Spaceship_Dev/scripts.pory"
-	warp MAP_METEOR_FALLS_B1F_1R, 3, 17, 3
+	msgbox Spaceship_Dev_EventScript_UpdateWarp_Text_2
 # 101 "data/maps/Spaceship_Dev/scripts.pory"
+	warp MAP_METEOR_FALLS_B1F_1R, 3, 17, 3
+# 102 "data/maps/Spaceship_Dev/scripts.pory"
 	waitstate
 	goto Spaceship_Dev_EventScript_UpdateWarp_1
 
 
 Spaceship_Dev_EventScript_VitaminVendor::
-# 113 "data/maps/Spaceship_Dev/scripts.pory"
-	lock
 # 114 "data/maps/Spaceship_Dev/scripts.pory"
-	faceplayer
+	lock
 # 115 "data/maps/Spaceship_Dev/scripts.pory"
-	CountItemInBag ITEM_STARDUST, VAR_STARDUST_COUNT
+	faceplayer
 # 116 "data/maps/Spaceship_Dev/scripts.pory"
-	buffernumberstring STR_VAR_1, VAR_STARDUST_COUNT
+	CountItemInBag ITEM_STARDUST, VAR_STARDUST_COUNT
 # 117 "data/maps/Spaceship_Dev/scripts.pory"
+	buffernumberstring STR_VAR_1, VAR_STARDUST_COUNT
+# 118 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox Spaceship_Dev_EventScript_VitaminVendor_Text_0
-# 119 "data/maps/Spaceship_Dev/scripts.pory"
-	waitmessage
 # 120 "data/maps/Spaceship_Dev/scripts.pory"
+	waitmessage
+# 121 "data/maps/Spaceship_Dev/scripts.pory"
 	closemessage
-# 122 "data/maps/Spaceship_Dev/scripts.pory"
-	checkitem ITEM_STARDUST, 1
 # 123 "data/maps/Spaceship_Dev/scripts.pory"
+	checkitem ITEM_STARDUST, 1
+# 124 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq Spaceship_Dev_EventScript_VitaminVendor_2
-# 130 "data/maps/Spaceship_Dev/scripts.pory"
-	multichoice 0, 0, MULTI_VITAMIN_SELECT, FALSE
 # 131 "data/maps/Spaceship_Dev/scripts.pory"
+	multichoice 0, 0, MULTI_VITAMIN_SELECT, FALSE
+# 132 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq Spaceship_Dev_EventScript_VitaminVendor_5
-# 137 "data/maps/Spaceship_Dev/scripts.pory"
+# 138 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq Spaceship_Dev_EventScript_VitaminVendor_6
-# 143 "data/maps/Spaceship_Dev/scripts.pory"
+# 144 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_eq Spaceship_Dev_EventScript_VitaminVendor_7
-# 149 "data/maps/Spaceship_Dev/scripts.pory"
+# 150 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_eq Spaceship_Dev_EventScript_VitaminVendor_8
-# 155 "data/maps/Spaceship_Dev/scripts.pory"
+# 156 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_eq Spaceship_Dev_EventScript_VitaminVendor_9
-# 161 "data/maps/Spaceship_Dev/scripts.pory"
+# 162 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_eq Spaceship_Dev_EventScript_VitaminVendor_10
-# 169 "data/maps/Spaceship_Dev/scripts.pory"
-	msgbox Spaceship_Dev_EventScript_VitaminVendor_Text_3
 # 170 "data/maps/Spaceship_Dev/scripts.pory"
+	msgbox Spaceship_Dev_EventScript_VitaminVendor_Text_3
+# 171 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
 Spaceship_Dev_EventScript_VitaminVendor_1:
-# 174 "data/maps/Spaceship_Dev/scripts.pory"
+# 175 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
 Spaceship_Dev_EventScript_VitaminVendor_2:
-# 125 "data/maps/Spaceship_Dev/scripts.pory"
-	msgbox Spaceship_Dev_EventScript_VitaminVendor_Text_1
 # 126 "data/maps/Spaceship_Dev/scripts.pory"
+	msgbox Spaceship_Dev_EventScript_VitaminVendor_Text_1
+# 127 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
 Spaceship_Dev_EventScript_VitaminVendor_5:
-# 133 "data/maps/Spaceship_Dev/scripts.pory"
-	removeitem ITEM_STARDUST, 1
 # 134 "data/maps/Spaceship_Dev/scripts.pory"
-	giveitem ITEM_HP_UP, 1
+	removeitem ITEM_STARDUST, 1
 # 135 "data/maps/Spaceship_Dev/scripts.pory"
+	giveitem ITEM_HP_UP, 1
+# 136 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox Spaceship_Dev_EventScript_VitaminVendor_Text_2
 	goto Spaceship_Dev_EventScript_VitaminVendor_1
 
 Spaceship_Dev_EventScript_VitaminVendor_6:
-# 139 "data/maps/Spaceship_Dev/scripts.pory"
-	removeitem ITEM_STARDUST, 1
 # 140 "data/maps/Spaceship_Dev/scripts.pory"
-	giveitem ITEM_PROTEIN, 1
+	removeitem ITEM_STARDUST, 1
 # 141 "data/maps/Spaceship_Dev/scripts.pory"
+	giveitem ITEM_PROTEIN, 1
+# 142 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox Spaceship_Dev_EventScript_VitaminVendor_Text_2
 	goto Spaceship_Dev_EventScript_VitaminVendor_1
 
 Spaceship_Dev_EventScript_VitaminVendor_7:
-# 145 "data/maps/Spaceship_Dev/scripts.pory"
-	removeitem ITEM_STARDUST, 1
 # 146 "data/maps/Spaceship_Dev/scripts.pory"
-	giveitem ITEM_IRON, 1
+	removeitem ITEM_STARDUST, 1
 # 147 "data/maps/Spaceship_Dev/scripts.pory"
+	giveitem ITEM_IRON, 1
+# 148 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox Spaceship_Dev_EventScript_VitaminVendor_Text_2
 	goto Spaceship_Dev_EventScript_VitaminVendor_1
 
 Spaceship_Dev_EventScript_VitaminVendor_8:
-# 151 "data/maps/Spaceship_Dev/scripts.pory"
-	removeitem ITEM_STARDUST, 1
 # 152 "data/maps/Spaceship_Dev/scripts.pory"
-	giveitem ITEM_CALCIUM, 1
+	removeitem ITEM_STARDUST, 1
 # 153 "data/maps/Spaceship_Dev/scripts.pory"
+	giveitem ITEM_CALCIUM, 1
+# 154 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox Spaceship_Dev_EventScript_VitaminVendor_Text_2
 	goto Spaceship_Dev_EventScript_VitaminVendor_1
 
 Spaceship_Dev_EventScript_VitaminVendor_9:
-# 157 "data/maps/Spaceship_Dev/scripts.pory"
-	removeitem ITEM_STARDUST, 1
 # 158 "data/maps/Spaceship_Dev/scripts.pory"
-	giveitem ITEM_ZINC, 1
+	removeitem ITEM_STARDUST, 1
 # 159 "data/maps/Spaceship_Dev/scripts.pory"
+	giveitem ITEM_ZINC, 1
+# 160 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox Spaceship_Dev_EventScript_VitaminVendor_Text_2
 	goto Spaceship_Dev_EventScript_VitaminVendor_1
 
 Spaceship_Dev_EventScript_VitaminVendor_10:
-# 163 "data/maps/Spaceship_Dev/scripts.pory"
-	removeitem ITEM_STARDUST, 1
 # 164 "data/maps/Spaceship_Dev/scripts.pory"
-	giveitem ITEM_CARBOS, 1
+	removeitem ITEM_STARDUST, 1
 # 165 "data/maps/Spaceship_Dev/scripts.pory"
+	giveitem ITEM_CARBOS, 1
+# 166 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox Spaceship_Dev_EventScript_VitaminVendor_Text_2
 	goto Spaceship_Dev_EventScript_VitaminVendor_1
 
 
 TestRemovePokes::
-# 179 "data/maps/Spaceship_Dev/scripts.pory"
-	lock
 # 180 "data/maps/Spaceship_Dev/scripts.pory"
-	msgbox TestRemovePokes_Text_0
+	lock
 # 181 "data/maps/Spaceship_Dev/scripts.pory"
-	special RemoveNativeMonsFromParty
+	msgbox TestRemovePokes_Text_0
 # 182 "data/maps/Spaceship_Dev/scripts.pory"
+	special RemoveNativeMonsFromParty
+# 183 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
 
 Spaceship_Dev_EventScript_Item01_Text_0:
-# 31 "data/maps/Spaceship_Dev/scripts.pory"
+# 32 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Added Magnezone to party.$"
 
 Spaceship_Dev_EventScript_Item01_Text_1:
-# 37 "data/maps/Spaceship_Dev/scripts.pory"
+# 38 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Your party is full!$"
 
 Spaceship_Dev_EventScript_ChangePlanet_Text_0:
-# 47 "data/maps/Spaceship_Dev/scripts.pory"
+# 48 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Where would you like to go?$"
 
 Spaceship_Dev_EventScript_ChangePlanet_Text_1:
-# 51 "data/maps/Spaceship_Dev/scripts.pory"
+# 52 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Traveling to Earth...$"
 
 Spaceship_Dev_EventScript_ChangePlanet_Text_2:
-# 60 "data/maps/Spaceship_Dev/scripts.pory"
+# 61 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Traveling to Mars...$"
 
 Spaceship_Dev_EventScript_ChangePlanet_Text_3:
-# 69 "data/maps/Spaceship_Dev/scripts.pory"
+# 70 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Traveling to Venus...$"
 
 Spaceship_Dev_EventScript_ChangePlanet_Text_4:
-# 77 "data/maps/Spaceship_Dev/scripts.pory"
+# 78 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Travel canceled.$"
 
 Spaceship_Dev_EventScript_UpdateWarp_Text_0:
-# 87 "data/maps/Spaceship_Dev/scripts.pory"
+# 88 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Warping to Earth.$"
 
 Spaceship_Dev_EventScript_UpdateWarp_Text_1:
-# 93 "data/maps/Spaceship_Dev/scripts.pory"
+# 94 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Warping to Mars.$"
 
 Spaceship_Dev_EventScript_UpdateWarp_Text_2:
-# 99 "data/maps/Spaceship_Dev/scripts.pory"
+# 100 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Warping to Venus.$"
 
 Spaceship_Dev_EventScript_UpdateWarp_Text_3:
-# 104 "data/maps/Spaceship_Dev/scripts.pory"
+# 105 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "No valid destination set!$"
 
 Spaceship_Dev_EventScript_VitaminVendor_Text_0:
-# 117 "data/maps/Spaceship_Dev/scripts.pory"
+# 118 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Synthesize Vitamins using Star Dust?\n"
 	.string "Your Start Dust: {COLOR BLUE}{SHADOW LIGHT_BLUE}{STR_VAR_1}$"
 
 Spaceship_Dev_EventScript_VitaminVendor_Text_1:
-# 125 "data/maps/Spaceship_Dev/scripts.pory"
+# 126 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "You don't have any Star Dust.$"
 
 Spaceship_Dev_EventScript_VitaminVendor_Text_2:
-# 135 "data/maps/Spaceship_Dev/scripts.pory"
+# 136 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Your Star Dust has been exchanged!$"
 
 Spaceship_Dev_EventScript_VitaminVendor_Text_3:
-# 169 "data/maps/Spaceship_Dev/scripts.pory"
+# 170 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Vitamin synthesis canceled.$"
 
 TestRemovePokes_Text_0:
-# 180 "data/maps/Spaceship_Dev/scripts.pory"
+# 181 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Testing releasing party...$"
