@@ -2,3 +2,9 @@ raw `
 Planet01_01_MapScripts::
 	.byte 0
 `
+script Planet01_01_HintText01 {
+    lock
+    msgbox("Some text says a thing!")
+    release
+    end
+}

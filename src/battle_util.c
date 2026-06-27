@@ -54,6 +54,7 @@
 #include "constants/weather.h"
 #include "constants/pokemon.h"
 #include "test/battle.h"
+#include "battle_inspect.h"
 
 static bool32 TryRemoveScreens(enum BattlerId battler);
 static bool32 IsUnnerveAbilityOnOpposingSide(enum BattlerId battler);
@@ -628,6 +629,7 @@ bool32 TryRunFromBattle(enum BattlerId battler)
 
     if (effect)
     {
+        InspectAddToDex();
         gCurrentTurnActionNumber = gBattlersCount;
         gBattleOutcome = B_OUTCOME_RAN;
     }

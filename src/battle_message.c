@@ -887,6 +887,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_LIGHTSCREENWOREOFF]                   = COMPOUND_STRING("{B_DEF_TEAM1} team's Light Screen wore off!"),
     [STRINGID_AURORAVEILWOREOFF]                    = COMPOUND_STRING("{B_DEF_TEAM1} team's Aurora Veil wore off!"),
     [STRINGID_STICKYWEBDISAPPEAREDFROMYOU]          = COMPOUND_STRING("The sticky web has disappeared from the ground around you!"),
+    [STRINGID_INSPECT]                              = COMPOUND_STRING("{B_OPPONENT_MON1_NAME} was analyzed and recorded!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =

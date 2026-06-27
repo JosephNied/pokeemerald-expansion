@@ -332,3 +332,8 @@ BattleScript_ActionThrowBait::
 	waitmessage B_WAIT_TIME_LONG
 	playanimation BS_ATTACKER, B_ANIM_POKEBLOCK_THROW
 	end2
+
+BattleScript_Inspect::
+	printString STRINGID_INSPECT
+	waitmessage B_WAIT_TIME_LONG
+	end2
