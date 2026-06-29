@@ -1,15 +1,49 @@
 mapscripts Planet01_01_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: Planet01_01_Enter
+    //MAP_SCRIPT_ON_FRAME_TABLE: Planet01_01_FrameTable
 }
 
 script Planet01_01_Enter {
 	special(SetRandomFlags)
+    //setflag(FLAG_TEMP_1)
 	end
 }
+
+//raw `
+//Planet01_01_FrameTable::
+//	map_script FLAG_TEMP_1, Planet01_01_StartAirTimer
+//	.byte 0
+//`
+
+//script Planet01_01_StartAirTimer {
+    //clearflag(FLAG_TEMP_1)
+    //special(StartAirTimerMap)
+    //lock
+    //msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Low Oxygen detected. Supplying air.")
+    //release
+    //end
+//}
 
 script Planet01_01_HintText01 {
     lock
     msgbox("Some text says a thing!")
     release
+    end
+}
+
+script Planet01_01_EventScript_Item01 {
+    lock
+    giveitem(ITEM_REPEL, 2)
+    removeobject(12)
+    release
+    end
+}
+
+script Planet01_01_AirExpired {
+    lockall
+    msgbox("{COLOR RED}{SHADOW LIGHT_BLUE}Oxygen depleted. Teleporting back...")
+    warp(MAP_SPACESHIP_DEV, 0, 12, 7)
+    waitstate
+    releaseall
     end
 }

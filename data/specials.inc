@@ -641,3 +641,4 @@ gSpecials::
 	def_special CheckAddCoins
 	def_special SetRandomFlags
 	def_special RemoveNativeMonsFromParty
+	def_special StartAirTimerMap
