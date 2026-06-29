@@ -52,7 +52,7 @@ void SetRandomFlags(void)
     }
 
     // Set first 6
-    for (i = 0; i < 6; i++) 
+    for (i = 0; i < 4; i++) 
     {
         FlagSet(pokemonFlags[i]);
     }

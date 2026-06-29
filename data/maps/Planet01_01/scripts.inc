@@ -1,20 +1,25 @@
-# 1 "data/maps/Planet01_01/scripts.pory"
-
-# 2 "data/maps/Planet01_01/scripts.pory"
 Planet01_01_MapScripts::
-# 3 "data/maps/Planet01_01/scripts.pory"
+# 2 "data/maps/Planet01_01/scripts.pory"
+	map_script MAP_SCRIPT_ON_TRANSITION, Planet01_01_Enter
 	.byte 0
 
-Planet01_01_HintText01::
+
+Planet01_01_Enter::
 # 6 "data/maps/Planet01_01/scripts.pory"
+	special SetRandomFlags
+	end
+
+
+Planet01_01_HintText01::
+# 11 "data/maps/Planet01_01/scripts.pory"
 	lock
-# 7 "data/maps/Planet01_01/scripts.pory"
+# 12 "data/maps/Planet01_01/scripts.pory"
 	msgbox Planet01_01_HintText01_Text_0
-# 8 "data/maps/Planet01_01/scripts.pory"
+# 13 "data/maps/Planet01_01/scripts.pory"
 	release
 	end
 
 
 Planet01_01_HintText01_Text_0:
-# 7 "data/maps/Planet01_01/scripts.pory"
+# 12 "data/maps/Planet01_01/scripts.pory"
 	.string "Some text says a thing!$"

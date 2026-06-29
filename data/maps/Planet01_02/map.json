@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_PLANET01_01",
-      "offset": -34,
+      "offset": -33,
       "direction": "right"
     },
     {

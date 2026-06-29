@@ -1,7 +1,12 @@
-raw `
-Planet01_01_MapScripts::
-	.byte 0
-`
+mapscripts Planet01_01_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Planet01_01_Enter
+}
+
+script Planet01_01_Enter {
+	special(SetRandomFlags)
+	end
+}
+
 script Planet01_01_HintText01 {
     lock
     msgbox("Some text says a thing!")
