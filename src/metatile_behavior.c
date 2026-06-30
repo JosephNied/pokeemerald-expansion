@@ -138,6 +138,7 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_FAST_WATER]                         = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
     [MB_CYCLING_ROAD_WATER]                 = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
     [MB_SWEET_SCENT]                        = TILE_FLAG_UNUSED,
+    //[MB_JUMP_SOUTHWEST]                     = TILE_FLAG_UNUSED,
 };
 
 bool8 MetatileBehavior_IsATile(u8 metatileBehavior)
@@ -184,6 +185,14 @@ bool8 MetatileBehavior_IsJumpSouth(u8 metatileBehavior)
     else
         return FALSE;
 }
+
+//bool8 MetatileBehavior_IsJumpNorthSouth(u8 metatileBehavior)
+//{
+//    if (metatileBehavior == MB_JUMP_NORTHSOUTH)
+//        return TRUE;
+//    else
+//        return FALSE;
+//}
 
 bool8 MetatileBehavior_IsPokeGrass(u8 metatileBehavior)
 {
