@@ -5,7 +5,7 @@ Spaceship_Dev_MapScripts::
 script Spaceship_Dev_EventScript_BallItem01 {
     lock
     faceplayer
-    giveitem(ITEM_MASTER_BALL, 6)
+    giveitem(ITEM_BEAST_BALL, 2)
     giveitem(ITEM_STARDUST, 5)
     giveitem(ITEM_SCANNER)
     setflag(FLAG_UNUSED_0x027)

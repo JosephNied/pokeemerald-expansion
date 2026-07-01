@@ -9921,8 +9921,7 @@ static void ComputeBallData(u32 wildMonBattler, u32 playerBattler, struct BallDa
             ball->multiplier = 150;
         break;
     case BALL_BEAST:
-        ball->multiplier = 410;
-        ball->divider = 4096;
+        ball->guaranteedCapture = TRUE;
         break;
     }
 

@@ -11,7 +11,7 @@ Spaceship_Dev_EventScript_BallItem01::
 # 7 "data/maps/Spaceship_Dev/scripts.pory"
 	faceplayer
 # 8 "data/maps/Spaceship_Dev/scripts.pory"
-	giveitem ITEM_MASTER_BALL, 6
+	giveitem ITEM_BEAST_BALL, 2
 # 9 "data/maps/Spaceship_Dev/scripts.pory"
 	giveitem ITEM_STARDUST, 5
 # 10 "data/maps/Spaceship_Dev/scripts.pory"

@@ -1099,6 +1099,7 @@ enum NationalDexOrder
     F(STEELIX) \
     F(STARYU) \
     F(STARMIE) \
+    F(QUAGSIRE) \
     F(GLALIE) \
     F(MINIOR) \
     F(CARBINK) \

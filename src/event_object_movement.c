@@ -147,6 +147,7 @@ static void GetGroundEffectFlags_LongGrassOnSpawn(struct ObjectEvent *, u32 *);
 static void GetGroundEffectFlags_SandHeap(struct ObjectEvent *, u32 *);
 static void GetGroundEffectFlags_ShallowFlowingWater(struct ObjectEvent *, u32 *);
 static void GetGroundEffectFlags_ShortGrass(struct ObjectEvent *, u32 *);
+//static void GetGroundEffectFlags_SweetScentGrass(struct ObjectEvent *, u32 *);
 static void GetGroundEffectFlags_HotSprings(struct ObjectEvent *, u32 *);
 static void GetGroundEffectFlags_TallGrassOnBeginStep(struct ObjectEvent *, u32 *);
 static void GetGroundEffectFlags_LongGrassOnBeginStep(struct ObjectEvent *, u32 *);
@@ -3065,6 +3066,7 @@ static void ResetObjectEventFldEffData(struct ObjectEvent *objectEvent)
     objectEvent->noShadow = FALSE;
     objectEvent->hasReflection = FALSE;
     objectEvent->inShortGrass = FALSE;
+    //objectEvent->inSweetScentGrass = FALSE;
     objectEvent->inShallowFlowingWater = FALSE;
     objectEvent->inSandPile = FALSE;
     objectEvent->inHotSprings = FALSE;
@@ -9690,6 +9692,7 @@ static void GetAllGroundEffectFlags_OnSpawn(struct ObjectEvent *objEvent, u32 *f
     GetGroundEffectFlags_SandHeap(objEvent, flags);
     GetGroundEffectFlags_ShallowFlowingWater(objEvent, flags);
     GetGroundEffectFlags_ShortGrass(objEvent, flags);
+    //GetGroundEffectFlags_SweetScentGrass(objEvent, flags);
     GetGroundEffectFlags_HotSprings(objEvent, flags);
 }
 
@@ -9704,6 +9707,7 @@ static void GetAllGroundEffectFlags_OnBeginStep(struct ObjectEvent *objEvent, u3
     GetGroundEffectFlags_ShallowFlowingWater(objEvent, flags);
     GetGroundEffectFlags_Puddle(objEvent, flags);
     GetGroundEffectFlags_ShortGrass(objEvent, flags);
+    //GetGroundEffectFlags_SweetScentGrass(objEvent, flags);
     GetGroundEffectFlags_HotSprings(objEvent, flags);
 }
 
@@ -9715,6 +9719,7 @@ static void GetAllGroundEffectFlags_OnFinishStep(struct ObjectEvent *objEvent, u
     GetGroundEffectFlags_Puddle(objEvent, flags);
     GetGroundEffectFlags_Ripple(objEvent, flags);
     GetGroundEffectFlags_ShortGrass(objEvent, flags);
+    //GetGroundEffectFlags_SweetScentGrass(objEvent, flags);
     GetGroundEffectFlags_HotSprings(objEvent, flags);
     GetGroundEffectFlags_Seaweed(objEvent, flags);
     GetGroundEffectFlags_JumpLanding(objEvent, flags);
@@ -9852,6 +9857,24 @@ static void GetGroundEffectFlags_ShortGrass(struct ObjectEvent *objEvent, u32 *f
         objEvent->inShortGrass = FALSE;
     }
 }
+
+/*static void GetGroundEffectFlags_SweetScentGrass(struct ObjectEvent *objEvent, u32 *flags)
+{
+    if (MetatileBehavior_IsSweetScent(objEvent->currentMetatileBehavior)
+        && MetatileBehavior_IsSweetScent(objEvent->previousMetatileBehavior))
+    {
+        if (!objEvent->inSweetScentGrass)
+        {
+            objEvent->inSweetScentGrass = FALSE;
+            objEvent->inSweetScentGrass = TRUE;
+            *flags |= GROUND_EFFECT_FLAG_SHORT_GRASS;
+        }
+    }
+    else
+    {
+        objEvent->inSweetScentGrass = FALSE;
+    }
+}*/
 
 static void GetGroundEffectFlags_HotSprings(struct ObjectEvent *objEvent, u32 *flags)
 {

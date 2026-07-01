@@ -598,11 +598,12 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_BEAST_BALL] =
     {
-        .name = ITEM_NAME("Beast Ball"),
+        .name = ITEM_NAME("Meteor Ball"),
         .price = 0,
         .description = COMPOUND_STRING(
             "A Ball designed to\n"
-            "catch Ultra Beasts."),
+            "catch Pokémon in\n"
+            "outer space."),
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,

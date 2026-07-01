@@ -268,6 +268,7 @@ struct ObjectEvent
     /*0x02*/ u32 isPlayer:1;
              u32 hasReflection:1;
              u32 inShortGrass:1;
+             u32 inSweetScentGrass:1;
              u32 inShallowFlowingWater:1;
              u32 inSandPile:1;
              u32 inHotSprings:1;
