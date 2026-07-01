@@ -1,28 +1,41 @@
 Planet01_01_MapScripts::
 # 2 "data/maps/Planet01_01/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, Planet01_01_Enter
+# 3 "data/maps/Planet01_01/scripts.pory"
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, Planet01_01_FrameTable
 	.byte 0
 
 
 Planet01_01_Enter::
 # 7 "data/maps/Planet01_01/scripts.pory"
 	special SetRandomFlags
+# 8 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_AIR_TIMER_STEPS, 100
+# 9 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_AIR_TIMER_TRIGGERED, 1
 	end
 
 
+# 13 "data/maps/Planet01_01/scripts.pory"
+
+# 14 "data/maps/Planet01_01/scripts.pory"
+Planet01_01_FrameTable::
+# 15 "data/maps/Planet01_01/scripts.pory"
+	map_script_2 VAR_AIR_TIMER_TRIGGERED, 1, Planet01_01_StartAirTimer
+# 16 "data/maps/Planet01_01/scripts.pory"
+	.2byte 0
+
 Planet01_01_StartAirTimer::
-# 19 "data/maps/Planet01_01/scripts.pory"
-	clearflag FLAG_TEMP_1
 # 20 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_AIR_TIMER_STEPS, 100
+	setvar VAR_AIR_TIMER_TRIGGERED, 0
 # 21 "data/maps/Planet01_01/scripts.pory"
 	special StartAirTimerMap
 # 22 "data/maps/Planet01_01/scripts.pory"
-	lock
+	lockall
 # 23 "data/maps/Planet01_01/scripts.pory"
 	msgbox Planet01_01_StartAirTimer_Text_0
 # 24 "data/maps/Planet01_01/scripts.pory"
-	release
+	releaseall
 	end
 
 

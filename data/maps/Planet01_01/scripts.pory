@@ -1,27 +1,27 @@
 mapscripts Planet01_01_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: Planet01_01_Enter
-    //MAP_SCRIPT_ON_FRAME_TABLE: Planet01_01_FrameTable
+    MAP_SCRIPT_ON_FRAME_TABLE: Planet01_01_FrameTable
 }
 
 script Planet01_01_Enter {
 	special(SetRandomFlags)
-    //setflag(FLAG_TEMP_1)
+    setvar(VAR_AIR_TIMER_STEPS, 100)
+    setvar(VAR_AIR_TIMER_TRIGGERED, 1)
 	end
 }
 
-//raw `
-//Planet01_01_FrameTable::
-//	map_script FLAG_TEMP_1, Planet01_01_StartAirTimer
-//	.byte 0
-//`
+raw `
+Planet01_01_FrameTable::
+	map_script_2 VAR_AIR_TIMER_TRIGGERED, 1, Planet01_01_StartAirTimer
+	.2byte 0
+`
 
 script Planet01_01_StartAirTimer {
-    clearflag(FLAG_TEMP_1)
-    setvar(VAR_AIR_TIMER_STEPS, 100)
+    setvar(VAR_AIR_TIMER_TRIGGERED, 0)
     special(StartAirTimerMap)
-    lock
+    lockall
     msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Low Oxygen detected. Supplying air.")
-    release
+    releaseall
     end
 }
 
