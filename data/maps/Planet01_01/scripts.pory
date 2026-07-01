@@ -15,14 +15,15 @@ script Planet01_01_Enter {
 //	.byte 0
 //`
 
-//script Planet01_01_StartAirTimer {
-    //clearflag(FLAG_TEMP_1)
-    //special(StartAirTimerMap)
-    //lock
-    //msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Low Oxygen detected. Supplying air.")
-    //release
-    //end
-//}
+script Planet01_01_StartAirTimer {
+    clearflag(FLAG_TEMP_1)
+    setvar(VAR_AIR_TIMER_STEPS, 100)
+    special(StartAirTimerMap)
+    lock
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Low Oxygen detected. Supplying air.")
+    release
+    end
+}
 
 script Planet01_01_HintText01 {
     lock

@@ -10,46 +10,66 @@ Planet01_01_Enter::
 	end
 
 
-Planet01_01_HintText01::
-# 28 "data/maps/Planet01_01/scripts.pory"
+Planet01_01_StartAirTimer::
+# 19 "data/maps/Planet01_01/scripts.pory"
+	clearflag FLAG_TEMP_1
+# 20 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_AIR_TIMER_STEPS, 100
+# 21 "data/maps/Planet01_01/scripts.pory"
+	special StartAirTimerMap
+# 22 "data/maps/Planet01_01/scripts.pory"
 	lock
+# 23 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_StartAirTimer_Text_0
+# 24 "data/maps/Planet01_01/scripts.pory"
+	release
+	end
+
+
+Planet01_01_HintText01::
 # 29 "data/maps/Planet01_01/scripts.pory"
-	msgbox Planet01_01_HintText01_Text_0
+	lock
 # 30 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_HintText01_Text_0
+# 31 "data/maps/Planet01_01/scripts.pory"
 	release
 	end
 
 
 Planet01_01_EventScript_Item01::
-# 35 "data/maps/Planet01_01/scripts.pory"
-	lock
 # 36 "data/maps/Planet01_01/scripts.pory"
-	giveitem ITEM_REPEL, 2
+	lock
 # 37 "data/maps/Planet01_01/scripts.pory"
-	removeobject 12
+	giveitem ITEM_REPEL, 2
 # 38 "data/maps/Planet01_01/scripts.pory"
+	removeobject 12
+# 39 "data/maps/Planet01_01/scripts.pory"
 	release
 	end
 
 
 Planet01_01_AirExpired::
-# 43 "data/maps/Planet01_01/scripts.pory"
-	lockall
 # 44 "data/maps/Planet01_01/scripts.pory"
-	msgbox Planet01_01_AirExpired_Text_0
+	lockall
 # 45 "data/maps/Planet01_01/scripts.pory"
-	warp MAP_SPACESHIP_DEV, 0, 12, 7
+	msgbox Planet01_01_AirExpired_Text_0
 # 46 "data/maps/Planet01_01/scripts.pory"
-	waitstate
+	warp MAP_SPACESHIP_DEV, 0, 12, 7
 # 47 "data/maps/Planet01_01/scripts.pory"
+	waitstate
+# 48 "data/maps/Planet01_01/scripts.pory"
 	releaseall
 	end
 
 
+Planet01_01_StartAirTimer_Text_0:
+# 23 "data/maps/Planet01_01/scripts.pory"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Low Oxygen detected. Supplying air.$"
+
 Planet01_01_HintText01_Text_0:
-# 29 "data/maps/Planet01_01/scripts.pory"
+# 30 "data/maps/Planet01_01/scripts.pory"
 	.string "Some text says a thing!$"
 
 Planet01_01_AirExpired_Text_0:
-# 44 "data/maps/Planet01_01/scripts.pory"
+# 45 "data/maps/Planet01_01/scripts.pory"
 	.string "{COLOR RED}{SHADOW LIGHT_BLUE}Oxygen depleted. Teleporting back...$"

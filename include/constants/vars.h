@@ -268,7 +268,7 @@
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40F6
 #define VAR_PLANET_DEST                                  0x40F7 // Planet destination variable
 #define VAR_STARDUST_COUNT                               0x40F8 // Star Dust count variable
-#define VAR_UNUSED_0x40F9                                0x40F9 // Unused Var
+#define VAR_AIR_TIMER_STEPS                              0x40F9 // Max steps you can take on low oxygen
 #define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
 #define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
 #define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
