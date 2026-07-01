@@ -75,6 +75,18 @@ Planet01_01_AirExpired::
 	end
 
 
+Planet01_01_AddAir::
+# 53 "data/maps/Planet01_01/scripts.pory"
+	lockall
+# 54 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_AddAir_Text_0
+# 55 "data/maps/Planet01_01/scripts.pory"
+	addvar VAR_AIR_TIMER_STEPS, 100
+# 56 "data/maps/Planet01_01/scripts.pory"
+	releaseall
+	end
+
+
 Planet01_01_StartAirTimer_Text_0:
 # 23 "data/maps/Planet01_01/scripts.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Low Oxygen detected. Supplying air.$"
@@ -85,4 +97,8 @@ Planet01_01_HintText01_Text_0:
 
 Planet01_01_AirExpired_Text_0:
 # 45 "data/maps/Planet01_01/scripts.pory"
-	.string "{COLOR RED}{SHADOW LIGHT_BLUE}Oxygen depleted. Teleporting back...$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Oxygen depleted. Teleporting back...$"
+
+Planet01_01_AddAir_Text_0:
+# 54 "data/maps/Planet01_01/scripts.pory"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen added.$"

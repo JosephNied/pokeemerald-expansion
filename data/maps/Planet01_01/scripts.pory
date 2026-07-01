@@ -42,9 +42,17 @@ script Planet01_01_EventScript_Item01 {
 
 script Planet01_01_AirExpired {
     lockall
-    msgbox("{COLOR RED}{SHADOW LIGHT_BLUE}Oxygen depleted. Teleporting back...")
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}Oxygen depleted. Teleporting back...")
     warp(MAP_SPACESHIP_DEV, 0, 12, 7)
     waitstate
+    releaseall
+    end
+}
+
+script Planet01_01_AddAir {
+    lockall
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen added.")
+    addvar (VAR_AIR_TIMER_STEPS, 100)
     releaseall
     end
 }
