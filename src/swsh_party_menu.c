@@ -118,6 +118,7 @@ enum {
     MENU_CATALOG_MOWER,
     MENU_CHANGE_FORM,
     MENU_CHANGE_ABILITY,
+    MENU_RELEASE,
     MENU_FIELD_MOVES
 };
 
@@ -139,6 +140,7 @@ enum {
     ACTIONS_TAKEITEM_TOSS,
     ACTIONS_ROTOM_CATALOG,
     ACTIONS_ZYGARDE_CUBE,
+    ACTIONS_RELEASE
 };
 
 enum {
@@ -583,6 +585,7 @@ static void CursorCb_CatalogFan(u8);
 static void CursorCb_CatalogMower(u8);
 static void CursorCb_ChangeForm(u8);
 static void CursorCb_ChangeAbility(u8);
+static void CursorCb_Release(u8);
 void TryItemHoldFormChange(struct Pokemon *mon, s8 slotId, enum BattleTrainer trainer);
 static void ShowMoveSelectWindow(u8 slot);
 static void Task_HandleWhichMoveInput(u8 taskId);
@@ -3721,6 +3724,7 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
 
     sPartyMenuInternal->numActions = 0;
     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_SUMMARY);
+    AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_RELEASE);
 
     // Add field moves to action list
     for (i = 0; i < MAX_MON_MOVES; i++)
@@ -10396,6 +10400,23 @@ void CursorCb_MoveItem(u8 taskId)
         ScheduleBgCopyTilemapToVram(0);
         gTasks[taskId].func = Task_UpdateHeldItemSprite;
     }
+}
+
+static void CursorCb_Release(u8 taskId)
+{
+    CursorCb_Cancel1(taskId);
+    /*
+    struct Pokemon *mon = GetPartyMonFromSlot(gPartyMenu.slotId);
+
+    if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_MAGNEZONE)
+    {
+        PlaySE(SE_FAILURE);
+        DisplayPartyMenuStdMessage(taskId, gText_CantReleasePartner, TRUE);
+        return;
+    }
+
+    DisplayYesNoMenu(taskId, CursorCb_ConfirmRelease, CursorCb_CancelRelease);
+    */
 }
 
 static void FieldCallback_RockClimb(void)

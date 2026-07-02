@@ -50,6 +50,7 @@ static const u8 sMenuText_Boxes[]                           = _("Boxes");
 static const u8 sMenuText_ViewPartnerParty[]                = _("{STR_VAR_1}'s party");
 static const u8 sMenuText_ViewPlayerParty[]                 = _("Your party");
 static const u8 sText_SendThisMonToPC[]                     = _("Send {STR_VAR_1} to the PC?");
+static const u8 sText_Release[]                             = _("RELEASE");
 
 static const struct BgTemplate sPartyMenuBgTemplates[] =
 {
@@ -1149,10 +1150,11 @@ struct
     [MENU_CATALOG_MOWER]   = {COMPOUND_STRING("Lawn mower"),      CursorCb_CatalogMower},
     [MENU_CHANGE_FORM]     = {COMPOUND_STRING("Change form"),     CursorCb_ChangeForm},
     [MENU_CHANGE_ABILITY]  = {COMPOUND_STRING("Change Ability"),  CursorCb_ChangeAbility},
+    [MENU_RELEASE]         = {COMPOUND_STRING("Release"),         CursorCb_Release},
 };
 
-static const u8 sPartyMenuAction_SummarySwitchCancel[] = {MENU_SUMMARY, MENU_SWITCH, MENU_CANCEL1};
-static const u8 sPartyMenuAction_ShiftSummaryCancel[] = {MENU_SHIFT, MENU_SUMMARY, MENU_CANCEL1};
+static const u8 sPartyMenuAction_SummarySwitchCancel[] = {MENU_SUMMARY, MENU_SWITCH, MENU_RELEASE, MENU_CANCEL1};
+static const u8 sPartyMenuAction_ShiftSummaryCancel[] = {MENU_SHIFT, MENU_SUMMARY, MENU_RELEASE, MENU_CANCEL1};
 static const u8 sPartyMenuAction_SendOutSummaryCancel[] = {MENU_SEND_OUT, MENU_SUMMARY, MENU_CANCEL1};
 static const u8 sPartyMenuAction_SummaryCancel[] = {MENU_SUMMARY, MENU_CANCEL1};
 static const u8 sPartyMenuAction_EnterSummaryCancel[] = {MENU_ENTER, MENU_SUMMARY, MENU_CANCEL1};
@@ -1187,6 +1189,7 @@ static const u8 *const sPartyMenuActions[] =
     [ACTIONS_TAKEITEM_TOSS] = sPartyMenuAction_TakeItemTossCancel,
     [ACTIONS_ROTOM_CATALOG] = sPartyMenuAction_RotomCatalog,
     [ACTIONS_ZYGARDE_CUBE]  = sPartyMenuAction_ZygardeCube,
+    
 };
 
 static const u8 sPartyMenuActionCounts[] =
