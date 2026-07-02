@@ -4,8 +4,10 @@
 #include "global.h"
 
 void StartAirTimer(u16 steps);
-void StartAirTimerMap(void);
+void AddAirTimer(u16 steps);
 void StopAirTimer(void);
 bool8 AirTimerTakeStep(void);
+void StartAirTimerMap(void);
+void AddAirTimerMap(void);
 
 #endif

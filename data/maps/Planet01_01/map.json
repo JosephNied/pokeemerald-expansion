@@ -46,9 +46,9 @@
       "movement_type": "MOVEMENT_TYPE_FLEE_PLAYER_OWE",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
-      "trainer_sight_or_berry_tree_id": "50",
-      "script": "NULL",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Planet01_01_AddAir_Minior02",
       "flag": "FLAG_UNUSED_0x02B"
     },
     {
@@ -137,9 +137,9 @@
       "movement_type": "MOVEMENT_TYPE_FLEE_PLAYER_OWE",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
-      "trainer_sight_or_berry_tree_id": "50",
-      "script": "NULL",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Planet01_01_AddAir_Minior01",
       "flag": "FLAG_UNUSED_0x032"
     },
     {
@@ -179,19 +179,6 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Planet01_01_EventScript_Item01",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BRENDAN_NORMAL",
-      "x": 4,
-      "y": 35,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Planet01_01_AddAir",
       "flag": "0"
     }
   ],

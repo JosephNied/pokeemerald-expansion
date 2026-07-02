@@ -642,3 +642,4 @@ gSpecials::
 	def_special SetRandomFlags
 	def_special RemoveNativeMonsFromParty
 	def_special StartAirTimerMap
+	def_special AddAirTimerMap

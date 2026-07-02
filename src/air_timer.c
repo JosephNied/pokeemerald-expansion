@@ -32,7 +32,18 @@ bool8 AirTimerTakeStep(void)
     return FALSE;
 }
 
+void AddAirTimer(u16 steps)
+{
+    if(sAirTimerActive)
+        sAirTimerSteps += steps;
+}
+
 void StartAirTimerMap(void)
 {
     StartAirTimer(VarGet(VAR_AIR_TIMER_STEPS));
+}
+
+void AddAirTimerMap(void)
+{
+    AddAirTimer(VarGet(VAR_AIR_TIMER_STEPS));
 }
