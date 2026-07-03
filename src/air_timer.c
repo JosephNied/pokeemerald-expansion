@@ -1,6 +1,8 @@
 #include "global.h"
 #include "script.h"
 #include "event_data.h"
+#include "metatile_behavior.h"
+#include "fieldmap.h"
 
 static u16 sAirTimerSteps;
 static bool8 sAirTimerActive;
@@ -17,9 +19,12 @@ void StopAirTimer(void)
     sAirTimerActive = FALSE;
 }
 
-bool8 AirTimerTakeStep(void)
+bool8 AirTimerTakeStep(u16 metatileBehavior)
 {
     if (!sAirTimerActive)
+        return FALSE;
+
+    if (MetatileBehavior_IsShortGrass(metatileBehavior))
         return FALSE;
 
     if (--sAirTimerSteps == 0)
@@ -45,6 +50,5 @@ void StartAirTimerMap(struct ScriptContext *ctx)
 
 void AddAirTimerMap(struct ScriptContext *ctx)
 {
-    //AddAirTimer(VarGet(VAR_AIR_TIMER_STEPS));
-    AddAirTimer(100);
+    AddAirTimer(VarGet(VAR_AIR_TIMER_STEPS));
 }

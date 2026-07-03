@@ -816,7 +816,7 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
 
     if (SafariZoneTakeStep() == TRUE)
         return TRUE;
-    if (AirTimerTakeStep() == TRUE)
+    if (AirTimerTakeStep(metatileBehavior) == TRUE)
         return TRUE;
     if (CountSSTidalStep(1) == TRUE)
     {
