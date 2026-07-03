@@ -38,12 +38,13 @@ void AddAirTimer(u16 steps)
         sAirTimerSteps += steps;
 }
 
-void StartAirTimerMap(void)
+void StartAirTimerMap(struct ScriptContext *ctx)
 {
     StartAirTimer(VarGet(VAR_AIR_TIMER_STEPS));
 }
 
-void AddAirTimerMap(void)
+void AddAirTimerMap(struct ScriptContext *ctx)
 {
-    AddAirTimer(VarGet(VAR_AIR_TIMER_STEPS));
+    //AddAirTimer(VarGet(VAR_AIR_TIMER_STEPS));
+    AddAirTimer(100);
 }

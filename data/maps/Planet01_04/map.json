@@ -22,6 +22,11 @@
       "map": "MAP_PLANET01_01",
       "offset": -41,
       "direction": "left"
+    },
+    {
+      "map": "MAP_PLANET01_02",
+      "offset": 0,
+      "direction": "right"
     }
   ],
   "object_events": [],

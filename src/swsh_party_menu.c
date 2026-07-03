@@ -586,6 +586,8 @@ static void CursorCb_CatalogMower(u8);
 static void CursorCb_ChangeForm(u8);
 static void CursorCb_ChangeAbility(u8);
 static void CursorCb_Release(u8);
+static void CursorCb_ConfirmRelease(u8);
+static void CursorCb_CancelRelease(u8);
 void TryItemHoldFormChange(struct Pokemon *mon, s8 slotId, enum BattleTrainer trainer);
 static void ShowMoveSelectWindow(u8 slot);
 static void Task_HandleWhichMoveInput(u8 taskId);
@@ -2284,15 +2286,24 @@ static void Task_HandleCancelChooseMonYesNoInput(u8 taskId)
     switch (Menu_ProcessInputNoWrapClearOnChoose())
     {
     case 0:
-        gPartyMenuUseExitCallback = FALSE;
-        gPartyMenu.slotId = PARTY_SIZE + 1;
-        ClearSelectedPartyOrder();
-        Task_ClosePartyMenu(taskId);
+        if (gPartyMenu.action == ACTIONS_RELEASE)
+        {
+            CursorCb_ConfirmRelease(taskId);
+            break;
+        } 
+        else
+        {
+            gPartyMenuUseExitCallback = FALSE;
+            gPartyMenu.slotId = PARTY_SIZE + 1;
+            ClearSelectedPartyOrder();
+            //Task_ClosePartyMenu(taskId);
+        }
         break;
     case MENU_B_PRESSED:
         PlaySE(SE_SELECT);
         // fallthrough
     case 1:
+        gPartyMenu.action = ACTIONS_NONE;
         Task_ReturnToChooseMonAfterText(taskId);
         break;
     }
@@ -10402,21 +10413,50 @@ void CursorCb_MoveItem(u8 taskId)
     }
 }
 
+
+
 static void CursorCb_Release(u8 taskId)
 {
-    CursorCb_Cancel1(taskId);
-    /*
-    struct Pokemon *mon = GetPartyMonFromSlot(gPartyMenu.slotId);
+    u16 slot = gPartyMenu.slotId;
+    struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][slot];
 
     if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_MAGNEZONE)
     {
         PlaySE(SE_FAILURE);
-        DisplayPartyMenuStdMessage(taskId, gText_CantReleasePartner, TRUE);
         return;
     }
+    PlaySE(SE_SELECT);
+    gPartyMenu.action = ACTIONS_RELEASE;
+    PartyMenuDisplayYesNoMenu();
+}
 
-    DisplayYesNoMenu(taskId, CursorCb_ConfirmRelease, CursorCb_CancelRelease);
-    */
+static void CursorCb_ConfirmRelease(u8 taskId)
+{
+    u16 slot = gPartyMenu.slotId;
+    struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][slot];
+    enum Item item = ITEM_NONE;
+
+    if (OW_PC_RELEASE_ITEM >= GEN_8)
+        item = GetMonData(mon, MON_DATA_HELD_ITEM);
+    
+    ZeroMonData(mon);
+
+    AddBagItem(ITEM_BEAST_BALL, 1);
+
+    if (item != ITEM_NONE)
+        AddBagItem(item, 1);
+    
+    CompactPartySlots();
+    CalculatePlayerPartyCount();
+
+    PlaySE(SE_SELECT);
+    gPartyMenu.action = ACTIONS_NONE;
+    Task_ClosePartyMenu(taskId);   
+}
+
+static void CursorCb_CancelRelease(u8 taskId)
+{
+    CursorCb_Cancel1(taskId);
 }
 
 static void FieldCallback_RockClimb(void)
