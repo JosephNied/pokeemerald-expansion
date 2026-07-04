@@ -9413,6 +9413,16 @@
       "secondary_tileset": "gTileset_Underwater",
       "border_filepath": "data/layouts/Planet01_02/border.bin",
       "blockdata_filepath": "data/layouts/Planet01_02/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLANET01_05",
+      "name": "Planet01_05_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Planet01_05/border.bin",
+      "blockdata_filepath": "data/layouts/Planet01_05/map.bin"
     }
   ]
 }

@@ -5,7 +5,7 @@ mapscripts Planet01_01_MapScripts {
 
 script Planet01_01_Enter {
 	special(SetRandomFlags)
-    setvar(VAR_AIR_TIMER_STEPS, 100)
+    setvar(VAR_AIR_TIMER_STEPS, 1000)
     setvar(VAR_AIR_TIMER_TRIGGERED, 1)
 	end
 }

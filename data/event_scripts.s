@@ -1755,3 +1755,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Planet01_02/scripts.inc"
 
 	.include "data/maps/Planet01_03/scripts.inc"
+
+	.include "data/maps/Planet01_05/scripts.inc"

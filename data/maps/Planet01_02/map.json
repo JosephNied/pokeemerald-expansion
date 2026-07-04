@@ -27,6 +27,11 @@
       "map": "MAP_PLANET01_04",
       "offset": 0,
       "direction": "left"
+    },
+    {
+      "map": "MAP_PLANET01_05",
+      "offset": 22,
+      "direction": "right"
     }
   ],
   "object_events": [
@@ -58,8 +63,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(WOOPER)",
-      "x": 4,
-      "y": 29,
+      "x": 3,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 0,
@@ -85,7 +90,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MINIOR)",
       "x": 7,
-      "y": 36,
+      "y": 38,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FLEE_PLAYER_OWE",
       "movement_range_x": 0,

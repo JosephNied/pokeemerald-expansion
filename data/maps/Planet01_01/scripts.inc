@@ -10,7 +10,7 @@ Planet01_01_Enter::
 # 7 "data/maps/Planet01_01/scripts.pory"
 	special SetRandomFlags
 # 8 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_AIR_TIMER_STEPS, 100
+	setvar VAR_AIR_TIMER_STEPS, 1000
 # 9 "data/maps/Planet01_01/scripts.pory"
 	setvar VAR_AIR_TIMER_TRIGGERED, 1
 	end
