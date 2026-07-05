@@ -756,7 +756,7 @@ void ItemUseOutOfBattle_OxygenSystem(u8 taskId)
             GetAirTimer(),
             STR_CONV_MODE_LEFT_ALIGN,
             5);
-
+        
         StringCopy(gStringVar4, sText_OxygenPrefix);
         StringAppend(gStringVar4, gStringVar1);
         StringAppend(gStringVar4, sText_OxygenSuffix);

@@ -7,6 +7,7 @@
 static u16 sAirTimerSteps;
 static bool8 sAirTimerActive;
 extern const u8 Planet01_01_AirExpired[];
+extern const u8 Planet01_01_AirWarning[];
 u16 GetAirTimer(void);
 bool8 IsAirTimerActive(void);
 
@@ -28,6 +29,13 @@ bool8 AirTimerTakeStep(u16 metatileBehavior)
 
     if (MetatileBehavior_IsShortGrass(metatileBehavior))
         return FALSE;
+    
+    if (sAirTimerSteps == 30) 
+    {
+        ScriptContext_SetupScript(Planet01_01_AirWarning);
+        sAirTimerSteps--;
+        return TRUE;
+    }
 
     if (--sAirTimerSteps == 0)
     {

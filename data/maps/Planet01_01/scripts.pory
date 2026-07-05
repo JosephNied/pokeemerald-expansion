@@ -5,8 +5,15 @@ mapscripts Planet01_01_MapScripts {
 
 script Planet01_01_Enter {
 	special(SetRandomFlags)
-    setvar(VAR_AIR_TIMER_STEPS, 1000)
+
+    getplayerxy(VAR_0x8004, VAR_0x8005)
+    compare (VAR_0x8005, 10)
+    goto_if_ne(End, 0)
+
+    setvar(VAR_AIR_TIMER_STEPS, 200)
     setvar(VAR_AIR_TIMER_TRIGGERED, 1)
+
+End:
 	end
 }
 
@@ -25,18 +32,18 @@ script Planet01_01_StartAirTimer {
     end
 }
 
-script Planet01_01_HintText01 {
-    lock
-    msgbox("Some text says a thing!")
-    release
-    end
-}
-
 script Planet01_01_EventScript_Item01 {
     lock
     giveitem(ITEM_REPEL, 2)
     removeobject(12)
     release
+    end
+}
+
+script Planet01_01_AirWarning {
+    lockall
+    msgbox("Warning: Oxygen low.")
+    releaseall
     end
 }
 
@@ -56,7 +63,7 @@ script Planet01_01_AddAir_Minior01 {
     msgbox("Minior is floating in a pocket of air!\n"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
     releaseall
-    setflag(FLAG_UNUSED_0x032)
+    clearflag(FLAG_UNUSED_0x032)
     end
 }
 
@@ -67,6 +74,13 @@ script Planet01_01_AddAir_Minior02 {
     msgbox("Minior is floating in a pocket of air!\n"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
     releaseall
-    setflag(FLAG_UNUSED_0x02B)
+    clearflag(FLAG_UNUSED_0x02B)
+    end
+}
+
+script Planet01_01_HintText01 {
+    lock
+    msgbox("Some text says a thing!")
+    release
     end
 }

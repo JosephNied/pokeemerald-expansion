@@ -98,7 +98,7 @@
       "x": 12,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_SPACESHIP_DEV",
+      "dest_map": "MAP_PLANET01_01",
       "dest_warp_id": "0"
     }
   ],
