@@ -48,6 +48,8 @@
 #include "constants/item_effects.h"
 #include "constants/items.h"
 #include "constants/songs.h"
+#include "air_timer.h"
+
 
 static void SetUpItemUseCallback(u8);
 static void FieldCB_UseItemOnField(void);
@@ -96,6 +98,9 @@ static const u8 sText_UsedVar2WildRepelled[] = _("{PLAYER} used the\n{STR_VAR_2}
 static const u8 sText_PlayedPokeFluteCatchy[] = _("Played the POKé FLUTE.\pNow, that's a catchy tune!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_PlayedPokeFlute[] = _("Played the POKé FLUTE.");
 static const u8 sText_PokeFluteAwakenedMon[] = _("The POKé FLUTE awakened sleeping\nPOKéMON.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_OxygenInactive[] = _("Life support is inactive.");
+static const u8 sText_OxygenPrefix[] = _("Remaining oxygen: ");
+static const u8 sText_OxygenSuffix[] = _(" units.");
 
 // EWRAM variables
 EWRAM_DATA static TaskFunc sItemUseOnFieldCB = NULL;
@@ -728,6 +733,39 @@ void ItemUseOutOfBattle_PokeblockCase(u8 taskId)
         FadeScreen(FADE_TO_BLACK, 0);
         gTasks[taskId].func = Task_OpenRegisteredPokeblockCase;
     }
+}
+
+static void Task_WaitForAButton(u8 taskId)
+{
+    if (JOY_NEW(A_BUTTON | B_BUTTON))
+    {
+        CloseItemMessage(taskId);
+    }
+}
+
+void ItemUseOutOfBattle_OxygenSystem(u8 taskId)
+{
+    if (!IsAirTimerActive())
+    {
+        StringCopy(gStringVar4, sText_OxygenInactive);
+    }
+    else
+    {
+        ConvertIntToDecimalStringN(
+            gStringVar1,
+            GetAirTimer(),
+            STR_CONV_MODE_LEFT_ALIGN,
+            5);
+
+        StringCopy(gStringVar4, sText_OxygenPrefix);
+        StringAppend(gStringVar4, gStringVar1);
+        StringAppend(gStringVar4, sText_OxygenSuffix);
+    }
+
+    if (!gTasks[taskId].tUsingRegisteredKeyItem)
+        DisplayItemMessage(taskId, FONT_NORMAL, gStringVar4, Task_WaitForAButton);
+    else
+        DisplayItemMessageOnField(taskId, gStringVar4, Task_CloseOxygenMessage);
 }
 
 static void CB2_OpenPokeblockFromBag(void)

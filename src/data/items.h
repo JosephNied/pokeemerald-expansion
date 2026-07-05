@@ -14261,17 +14261,17 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_DEVON_PARTS] =
     {
-        .name = ITEM_NAME("Devon Parts"),
-        .pluralName = ITEM_PLURAL_NAME("Devon Parts"),
+        .name = ITEM_NAME("Oxygen System"),
+        .pluralName = ITEM_PLURAL_NAME("Oxygen Systems"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A package that\n"
-            "contains Devon's\n"
-            "machine parts."),
+            "Oxygen system.\n"
+            "Use to see Oxygen\n"
+            "levels remaining."),
         .importance = 2,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_OxygenSystem,
         .iconPic = gItemIcon_DevonParts,
         .iconPalette = gItemIconPalette_DevonParts,
     },

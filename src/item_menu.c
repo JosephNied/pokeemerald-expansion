@@ -1233,6 +1233,19 @@ void CloseItemMessage(u8 taskId)
     ReturnToItemList(taskId);
 }
 
+void Task_CloseOxygenMessage(u8 taskId)
+{
+    if (JOY_NEW(A_BUTTON | B_BUTTON))
+    {
+        ClearDialogWindowAndFrame(0, TRUE);
+
+        UnfreezeObjectEvents();
+        UnlockPlayerFieldControls();
+
+        DestroyTask(taskId);
+    }
+}
+
 static void AddItemQuantityWindow(u8 windowType)
 {
     PrintItemQuantity(BagMenu_AddWindow(windowType), 1);

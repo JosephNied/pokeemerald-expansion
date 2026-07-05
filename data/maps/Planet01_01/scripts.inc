@@ -79,30 +79,30 @@ Planet01_01_AddAir_Minior01::
 # 53 "data/maps/Planet01_01/scripts.pory"
 	lockall
 # 54 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_AIR_TIMER_STEPS, 75
+	setvar VAR_AIR_TIMER_STEPS, 100
 # 55 "data/maps/Planet01_01/scripts.pory"
 	special AddAirTimerMap
 # 56 "data/maps/Planet01_01/scripts.pory"
 	msgbox Planet01_01_AddAir_Minior01_Text_0
-# 57 "data/maps/Planet01_01/scripts.pory"
-	releaseall
 # 58 "data/maps/Planet01_01/scripts.pory"
+	releaseall
+# 59 "data/maps/Planet01_01/scripts.pory"
 	setflag FLAG_UNUSED_0x032
 	end
 
 
 Planet01_01_AddAir_Minior02::
-# 63 "data/maps/Planet01_01/scripts.pory"
-	lockall
 # 64 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_AIR_TIMER_STEPS, 75
+	lockall
 # 65 "data/maps/Planet01_01/scripts.pory"
-	special AddAirTimerMap
+	setvar VAR_AIR_TIMER_STEPS, 100
 # 66 "data/maps/Planet01_01/scripts.pory"
-	msgbox Planet01_01_AddAir_Minior01_Text_0
+	special AddAirTimerMap
 # 67 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_AddAir_Minior01_Text_0
+# 69 "data/maps/Planet01_01/scripts.pory"
 	releaseall
-# 68 "data/maps/Planet01_01/scripts.pory"
+# 70 "data/maps/Planet01_01/scripts.pory"
 	setflag FLAG_UNUSED_0x02B
 	end
 
@@ -121,4 +121,5 @@ Planet01_01_AirExpired_Text_0:
 
 Planet01_01_AddAir_Minior01_Text_0:
 # 56 "data/maps/Planet01_01/scripts.pory"
-	.string "Minior is floating in a pocket of air! {COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen added!$"
+	.string "Minior is floating in a pocket of air!\n"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!$"

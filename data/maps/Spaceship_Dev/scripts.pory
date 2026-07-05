@@ -8,6 +8,7 @@ script Spaceship_Dev_EventScript_BallItem01 {
     giveitem(ITEM_BEAST_BALL, 2)
     giveitem(ITEM_STARDUST, 5)
     giveitem(ITEM_SCANNER)
+    giveitem(ITEM_DEVON_PARTS)
     setflag(FLAG_UNUSED_0x027)
     removeobject(1)
     release

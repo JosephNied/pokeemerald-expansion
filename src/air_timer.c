@@ -7,6 +7,8 @@
 static u16 sAirTimerSteps;
 static bool8 sAirTimerActive;
 extern const u8 Planet01_01_AirExpired[];
+u16 GetAirTimer(void);
+bool8 IsAirTimerActive(void);
 
 void StartAirTimer(u16 steps)
 {
@@ -51,4 +53,14 @@ void StartAirTimerMap(struct ScriptContext *ctx)
 void AddAirTimerMap(struct ScriptContext *ctx)
 {
     AddAirTimer(VarGet(VAR_AIR_TIMER_STEPS));
+}
+
+u16 GetAirTimer(void)
+{
+    return sAirTimerSteps;
+}
+
+bool8 IsAirTimerActive(void)
+{
+    return sAirTimerActive;
 }

@@ -9,5 +9,7 @@ void StopAirTimer(void);
 bool8 AirTimerTakeStep(u16 metatileBehavior);
 void StartAirTimerMap(struct ScriptContext *ctx);
 void AddAirTimerMap(struct ScriptContext *ctx);
+u16 GetAirTimer(void);
+bool8 IsAirTimerActive(void);
 
 #endif

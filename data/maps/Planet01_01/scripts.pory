@@ -51,9 +51,10 @@ script Planet01_01_AirExpired {
 
 script Planet01_01_AddAir_Minior01 {
     lockall
-    setvar(VAR_AIR_TIMER_STEPS, 75)
+    setvar(VAR_AIR_TIMER_STEPS, 100)
     special(AddAirTimerMap)
-    msgbox("Minior is floating in a pocket of air! {COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen added!")
+    msgbox("Minior is floating in a pocket of air!\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
     releaseall
     setflag(FLAG_UNUSED_0x032)
     end
@@ -61,9 +62,10 @@ script Planet01_01_AddAir_Minior01 {
 
 script Planet01_01_AddAir_Minior02 {
     lockall
-    setvar(VAR_AIR_TIMER_STEPS, 75)
+    setvar(VAR_AIR_TIMER_STEPS, 100)
     special(AddAirTimerMap)
-    msgbox("Minior is floating in a pocket of air! {COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen added!")
+    msgbox("Minior is floating in a pocket of air!\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
     releaseall
     setflag(FLAG_UNUSED_0x02B)
     end
