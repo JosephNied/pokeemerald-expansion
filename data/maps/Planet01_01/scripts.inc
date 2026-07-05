@@ -12,136 +12,176 @@ Planet01_01_Enter::
 # 9 "data/maps/Planet01_01/scripts.pory"
 	getplayerxy VAR_0x8004, VAR_0x8005
 # 10 "data/maps/Planet01_01/scripts.pory"
-	compare VAR_0x8005, 10
+	compare VAR_0x8004, 18
 # 11 "data/maps/Planet01_01/scripts.pory"
 	goto_if_ne End, 0
+# 12 "data/maps/Planet01_01/scripts.pory"
+	compare VAR_0x8005, 10
 # 13 "data/maps/Planet01_01/scripts.pory"
+	goto_if_ne End, 0
+# 15 "data/maps/Planet01_01/scripts.pory"
 	setvar VAR_AIR_TIMER_STEPS, 200
-# 14 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_AIR_TIMER_TRIGGERED, 1
 # 16 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_AIR_TIMER_TRIGGERED, 1
+# 18 "data/maps/Planet01_01/scripts.pory"
 End:
 	end
 
 
-# 20 "data/maps/Planet01_01/scripts.pory"
-
-# 21 "data/maps/Planet01_01/scripts.pory"
-Planet01_01_FrameTable::
 # 22 "data/maps/Planet01_01/scripts.pory"
-	map_script_2 VAR_AIR_TIMER_TRIGGERED, 1, Planet01_01_StartAirTimer
+
 # 23 "data/maps/Planet01_01/scripts.pory"
+Planet01_01_FrameTable::
+# 24 "data/maps/Planet01_01/scripts.pory"
+	map_script_2 VAR_AIR_TIMER_TRIGGERED, 1, Planet01_01_StartAirTimer
+# 25 "data/maps/Planet01_01/scripts.pory"
 	.2byte 0
 
 Planet01_01_StartAirTimer::
-# 27 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_AIR_TIMER_TRIGGERED, 0
-# 28 "data/maps/Planet01_01/scripts.pory"
-	special StartAirTimerMap
 # 29 "data/maps/Planet01_01/scripts.pory"
-	lockall
+	setvar VAR_AIR_TIMER_TRIGGERED, 0
 # 30 "data/maps/Planet01_01/scripts.pory"
-	msgbox Planet01_01_StartAirTimer_Text_0
+	special StartAirTimerMap
 # 31 "data/maps/Planet01_01/scripts.pory"
+	lockall
+# 32 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_StartAirTimer_Text_0
+# 33 "data/maps/Planet01_01/scripts.pory"
 	releaseall
 	end
 
 
 Planet01_01_EventScript_Item01::
-# 36 "data/maps/Planet01_01/scripts.pory"
-	lock
-# 37 "data/maps/Planet01_01/scripts.pory"
-	giveitem ITEM_REPEL, 2
 # 38 "data/maps/Planet01_01/scripts.pory"
-	removeobject 12
+	lock
 # 39 "data/maps/Planet01_01/scripts.pory"
+	giveitem ITEM_STARDUST, 1
+# 40 "data/maps/Planet01_01/scripts.pory"
+	removeobject 12
+# 41 "data/maps/Planet01_01/scripts.pory"
+	setflag FLAG_UNUSED_0x493
+# 42 "data/maps/Planet01_01/scripts.pory"
+	release
+	end
+
+
+Planet01_01_EventScript_Item02::
+# 47 "data/maps/Planet01_01/scripts.pory"
+	lock
+# 48 "data/maps/Planet01_01/scripts.pory"
+	giveitem ITEM_STARDUST, 1
+# 49 "data/maps/Planet01_01/scripts.pory"
+	setflag FLAG_UNUSED_0x494
+# 50 "data/maps/Planet01_01/scripts.pory"
+	removeobject 11
+# 51 "data/maps/Planet01_01/scripts.pory"
 	release
 	end
 
 
 Planet01_01_AirWarning::
-# 44 "data/maps/Planet01_01/scripts.pory"
+# 56 "data/maps/Planet01_01/scripts.pory"
 	lockall
-# 45 "data/maps/Planet01_01/scripts.pory"
+# 57 "data/maps/Planet01_01/scripts.pory"
 	msgbox Planet01_01_AirWarning_Text_0
-# 46 "data/maps/Planet01_01/scripts.pory"
+# 58 "data/maps/Planet01_01/scripts.pory"
 	releaseall
 	end
 
 
 Planet01_01_AirExpired::
-# 51 "data/maps/Planet01_01/scripts.pory"
+# 63 "data/maps/Planet01_01/scripts.pory"
 	lockall
-# 52 "data/maps/Planet01_01/scripts.pory"
+# 64 "data/maps/Planet01_01/scripts.pory"
 	msgbox Planet01_01_AirExpired_Text_0
-# 53 "data/maps/Planet01_01/scripts.pory"
+# 65 "data/maps/Planet01_01/scripts.pory"
 	warp MAP_SPACESHIP_DEV, 0, 12, 7
-# 54 "data/maps/Planet01_01/scripts.pory"
+# 66 "data/maps/Planet01_01/scripts.pory"
 	waitstate
-# 55 "data/maps/Planet01_01/scripts.pory"
+# 67 "data/maps/Planet01_01/scripts.pory"
 	releaseall
 	end
 
 
 Planet01_01_AddAir_Minior01::
-# 60 "data/maps/Planet01_01/scripts.pory"
+# 72 "data/maps/Planet01_01/scripts.pory"
 	lockall
-# 61 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_AIR_TIMER_STEPS, 100
-# 62 "data/maps/Planet01_01/scripts.pory"
+# 73 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_AIR_TIMER_STEPS, 200
+# 74 "data/maps/Planet01_01/scripts.pory"
 	special AddAirTimerMap
-# 63 "data/maps/Planet01_01/scripts.pory"
+# 75 "data/maps/Planet01_01/scripts.pory"
 	msgbox Planet01_01_AddAir_Minior01_Text_0
-# 65 "data/maps/Planet01_01/scripts.pory"
+# 77 "data/maps/Planet01_01/scripts.pory"
+	setflag FLAG_UNUSED_0x032
+# 78 "data/maps/Planet01_01/scripts.pory"
+	fadeScreen FADE_TO_BLACK
+# 79 "data/maps/Planet01_01/scripts.pory"
+	removeobject 9
+# 80 "data/maps/Planet01_01/scripts.pory"
+	fadeScreen FADE_FROM_BLACK
+# 81 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_AddAir_Minior01_Text_1
+# 82 "data/maps/Planet01_01/scripts.pory"
 	releaseall
-# 66 "data/maps/Planet01_01/scripts.pory"
-	clearflag FLAG_UNUSED_0x032
 	end
 
 
 Planet01_01_AddAir_Minior02::
-# 71 "data/maps/Planet01_01/scripts.pory"
+# 87 "data/maps/Planet01_01/scripts.pory"
 	lockall
-# 72 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_AIR_TIMER_STEPS, 100
-# 73 "data/maps/Planet01_01/scripts.pory"
+# 88 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_AIR_TIMER_STEPS, 200
+# 89 "data/maps/Planet01_01/scripts.pory"
 	special AddAirTimerMap
-# 74 "data/maps/Planet01_01/scripts.pory"
+# 90 "data/maps/Planet01_01/scripts.pory"
 	msgbox Planet01_01_AddAir_Minior01_Text_0
-# 76 "data/maps/Planet01_01/scripts.pory"
+# 92 "data/maps/Planet01_01/scripts.pory"
+	setflag FLAG_UNUSED_0x02B
+# 93 "data/maps/Planet01_01/scripts.pory"
+	fadeScreen FADE_TO_BLACK
+# 94 "data/maps/Planet01_01/scripts.pory"
+	removeobject 2
+# 95 "data/maps/Planet01_01/scripts.pory"
+	fadeScreen FADE_FROM_BLACK
+# 96 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_AddAir_Minior01_Text_1
+# 97 "data/maps/Planet01_01/scripts.pory"
 	releaseall
-# 77 "data/maps/Planet01_01/scripts.pory"
-	clearflag FLAG_UNUSED_0x02B
 	end
 
 
 Planet01_01_HintText01::
-# 82 "data/maps/Planet01_01/scripts.pory"
+# 102 "data/maps/Planet01_01/scripts.pory"
 	lock
-# 83 "data/maps/Planet01_01/scripts.pory"
+# 103 "data/maps/Planet01_01/scripts.pory"
 	msgbox Planet01_01_HintText01_Text_0
-# 84 "data/maps/Planet01_01/scripts.pory"
+# 104 "data/maps/Planet01_01/scripts.pory"
 	release
 	end
 
 
 Planet01_01_StartAirTimer_Text_0:
-# 30 "data/maps/Planet01_01/scripts.pory"
+# 32 "data/maps/Planet01_01/scripts.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Low Oxygen detected. Supplying air.$"
 
 Planet01_01_AirWarning_Text_0:
-# 45 "data/maps/Planet01_01/scripts.pory"
+# 57 "data/maps/Planet01_01/scripts.pory"
 	.string "Warning: Oxygen low.$"
 
 Planet01_01_AirExpired_Text_0:
-# 52 "data/maps/Planet01_01/scripts.pory"
+# 64 "data/maps/Planet01_01/scripts.pory"
 	.string "{COLOR RED}{SHADOW LIGHT_RED}Oxygen depleted. Teleporting back...$"
 
 Planet01_01_AddAir_Minior01_Text_0:
-# 63 "data/maps/Planet01_01/scripts.pory"
+# 75 "data/maps/Planet01_01/scripts.pory"
 	.string "Minior is floating in a pocket of air!\n"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!$"
 
+Planet01_01_AddAir_Minior01_Text_1:
+# 81 "data/maps/Planet01_01/scripts.pory"
+	.string "Minior flew away...$"
+
 Planet01_01_HintText01_Text_0:
-# 83 "data/maps/Planet01_01/scripts.pory"
+# 103 "data/maps/Planet01_01/scripts.pory"
 	.string "Some text says a thing!$"

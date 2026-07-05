@@ -50,7 +50,7 @@ bool8 AirTimerTakeStep(u16 metatileBehavior)
 void AddAirTimer(u16 steps)
 {
     if(sAirTimerActive)
-        sAirTimerSteps += steps;
+        sAirTimerSteps = steps;
 }
 
 void StartAirTimerMap(struct ScriptContext *ctx)

@@ -7,6 +7,8 @@ script Planet01_01_Enter {
 	special(SetRandomFlags)
 
     getplayerxy(VAR_0x8004, VAR_0x8005)
+    compare (VAR_0x8004, 18)
+    goto_if_ne(End, 0)
     compare (VAR_0x8005, 10)
     goto_if_ne(End, 0)
 
@@ -34,8 +36,18 @@ script Planet01_01_StartAirTimer {
 
 script Planet01_01_EventScript_Item01 {
     lock
-    giveitem(ITEM_REPEL, 2)
+    giveitem(ITEM_STARDUST, 1)
     removeobject(12)
+    setflag(FLAG_UNUSED_0x493)
+    release
+    end
+}
+
+script Planet01_01_EventScript_Item02 {
+    lock
+    giveitem(ITEM_STARDUST, 1)
+    setflag(FLAG_UNUSED_0x494)
+    removeobject(11)
     release
     end
 }
@@ -58,23 +70,31 @@ script Planet01_01_AirExpired {
 
 script Planet01_01_AddAir_Minior01 {
     lockall
-    setvar(VAR_AIR_TIMER_STEPS, 100)
+    setvar(VAR_AIR_TIMER_STEPS, 200)
     special(AddAirTimerMap)
     msgbox("Minior is floating in a pocket of air!\n"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
+    setflag(FLAG_UNUSED_0x032)
+    fadeScreen(FADE_TO_BLACK)
+    removeobject(9)
+    fadeScreen(FADE_FROM_BLACK)
+    msgbox("Minior flew away...")
     releaseall
-    clearflag(FLAG_UNUSED_0x032)
     end
 }
 
 script Planet01_01_AddAir_Minior02 {
     lockall
-    setvar(VAR_AIR_TIMER_STEPS, 100)
+    setvar(VAR_AIR_TIMER_STEPS, 200)
     special(AddAirTimerMap)
     msgbox("Minior is floating in a pocket of air!\n"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
+    setflag(FLAG_UNUSED_0x02B)
+    fadeScreen(FADE_TO_BLACK)
+    removeobject(2)
+    fadeScreen(FADE_FROM_BLACK)
+    msgbox("Minior flew away...")
     releaseall
-    clearflag(FLAG_UNUSED_0x02B)
     end
 }
 
