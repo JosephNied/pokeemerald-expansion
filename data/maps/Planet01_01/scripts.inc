@@ -156,7 +156,37 @@ Planet01_01_HintText01::
 	lock
 # 103 "data/maps/Planet01_01/scripts.pory"
 	msgbox Planet01_01_HintText01_Text_0
-# 104 "data/maps/Planet01_01/scripts.pory"
+# 111 "data/maps/Planet01_01/scripts.pory"
+	release
+	end
+
+
+Planet01_01_HintText02::
+# 116 "data/maps/Planet01_01/scripts.pory"
+	lock
+# 117 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_HintText02_Text_0
+# 121 "data/maps/Planet01_01/scripts.pory"
+	release
+	end
+
+
+Planet01_01_HintText03::
+# 126 "data/maps/Planet01_01/scripts.pory"
+	lock
+# 127 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_HintText03_Text_0
+# 132 "data/maps/Planet01_01/scripts.pory"
+	release
+	end
+
+
+Planet01_01_HintText04::
+# 137 "data/maps/Planet01_01/scripts.pory"
+	lock
+# 138 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_HintText04_Text_0
+# 142 "data/maps/Planet01_01/scripts.pory"
 	release
 	end
 
@@ -184,4 +214,33 @@ Planet01_01_AddAir_Minior01_Text_1:
 
 Planet01_01_HintText01_Text_0:
 # 103 "data/maps/Planet01_01/scripts.pory"
-	.string "Some text says a thing!$"
+	.string "Captain: This is the captain of\n"
+	.string "expedition XXX. \n"
+	.string "Our team has placed notes for future \n"
+	.string "explorers in hopefully convenient \n"
+	.string "places. Our objective is to create\n"
+	.string "a base here for research.\n"
+	.string "Note: The gravity is low here. Tall \n"
+	.string "ledges can be scaled easily!$"
+
+Planet01_01_HintText02_Text_0:
+# 117 "data/maps/Planet01_01/scripts.pory"
+	.string "Biologist: The plants emit O2,\n"
+	.string "the air they generate can be captured\n"
+	.string "and used to refill the oxygen in our \n"
+	.string "life support systems. Handy!$"
+
+Planet01_01_HintText03_Text_0:
+# 127 "data/maps/Planet01_01/scripts.pory"
+	.string "Engineer: The Steelix here have been\n"
+	.string "digging deep into the planet's core;\n"
+	.string "this blue liquid they've been exposed\n"
+	.string "to has changed their type and color...\n"
+	.string "I'll collect some samples...$"
+
+Planet01_01_HintText04_Text_0:
+# 138 "data/maps/Planet01_01/scripts.pory"
+	.string "Biologist: Miniors are flying types,\n"
+	.string "the air they generate can be captured\n"
+	.string "and used to refill the oxygen in our \n"
+	.string "life support systems. Handy!$"
