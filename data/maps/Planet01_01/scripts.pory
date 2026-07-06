@@ -101,11 +101,11 @@ script Planet01_01_AddAir_Minior02 {
 script Planet01_01_HintText01 {
     lock
     msgbox("Captain: This is the captain of\n" 
-    "expedition XXX. \n"
+    "expedition XXX. \p"
     "Our team has placed notes for future \n"
-    "explorers in hopefully convenient \n"
-    "places. Our objective is to create\n"
-    "a base here for research.\n"
+    "explorers in hopefully convenient \l"
+    "places. Our objective is to create\l"
+    "a base here for research.\p"
     "Note: The gravity is low here. Tall \n"
     "ledges can be scaled easily!")
     release
@@ -114,10 +114,10 @@ script Planet01_01_HintText01 {
 
 script Planet01_01_HintText02 {
     lock
-    msgbox("Biologist: The plants emit O2,\n"
-    "the air they generate can be captured\n"
-    "and used to refill the oxygen in our \n"
-    "life support systems. Handy!")
+    msgbox("Biologist: The plants emit oxygen when\n"
+    "stepped on. We can capture the O2 they\l"
+    "generate and use it to refill the oxygen\l"
+    "in our life support systems. How lucky!")
     release
     end
 }
@@ -125,9 +125,9 @@ script Planet01_01_HintText02 {
 script Planet01_01_HintText03 {
     lock
     msgbox("Engineer: The Steelix here have been\n"
-    "digging deep into the planet's core;\n"
-    "this blue liquid they've been exposed\n"
-    "to has changed their type and color...\n"
+    "digging deep into the planet's core;\l"
+    "this blue liquid they've been exposed\l"
+    "to has changed their type and color...\p"
     "I'll collect some samples...")
     release
     end
@@ -136,8 +136,8 @@ script Planet01_01_HintText03 {
 script Planet01_01_HintText04 {
     lock
     msgbox("Biologist: Miniors are flying types,\n"
-    "the air they generate can be captured\n"
-    "and used to refill the oxygen in our \n"
+    "the air they generate can be captured\l"
+    "and used to refill the oxygen in our \l"
     "life support systems. Handy!")
     release
     end
