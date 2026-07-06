@@ -12,7 +12,7 @@ script Planet01_01_Enter {
     compare (VAR_0x8005, 10)
     goto_if_ne(End, 0)
 
-    setvar(VAR_AIR_TIMER_STEPS, 200)
+    setvar(VAR_AIR_TIMER_STEPS, 1000)
     setvar(VAR_AIR_TIMER_TRIGGERED, 1)
 
 End:

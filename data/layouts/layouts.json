@@ -9423,6 +9423,26 @@
       "secondary_tileset": "gTileset_Underwater",
       "border_filepath": "data/layouts/Planet01_05/border.bin",
       "blockdata_filepath": "data/layouts/Planet01_05/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLANET01_ICE_CAVE",
+      "name": "Planet01_ICE_CAVE_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Planet01_ICE_CAVE/border.bin",
+      "blockdata_filepath": "data/layouts/Planet01_ICE_CAVE/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLANET01_CONNECTOR_CAVE",
+      "name": "Planet01_Connector_Cave_Layout",
+      "width": 20,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Planet01_Connector_Cave/border.bin",
+      "blockdata_filepath": "data/layouts/Planet01_Connector_Cave/map.bin"
     }
   ]
 }

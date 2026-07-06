@@ -76,7 +76,8 @@
     "gMapGroup_IndoorSixIslandRoute_Frlg",
     "gMapGroup_IndoorSevenIslandRoute_Frlg",
     "gMapGroup_Meteor_Dev",
-    "gMapGroup_Planet01"
+    "gMapGroup_Planet01",
+    "gMapGroup_Planet01_Interior"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1176,5 +1177,9 @@
     "Planet01_03",
     "Planet01_04",
     "Planet01_05"
+  ],
+  "gMapGroup_Planet01_Interior": [
+    "Planet01_ICE_CAVE",
+    "Planet01_Connector_Cave"
   ]
 }

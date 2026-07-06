@@ -1,37 +1,33 @@
 {
-  "id": "MAP_PLANET01_05",
-  "name": "Planet01_05",
-  "layout": "LAYOUT_PLANET01_05",
+  "id": "MAP_PLANET01_CONNECTOR_CAVE",
+  "name": "Planet01_Connector_Cave",
+  "layout": "LAYOUT_PLANET01_CONNECTOR_CAVE",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_PLANET01_03",
-      "offset": 0,
-      "direction": "down"
-    },
-    {
-      "map": "MAP_PLANET01_02",
-      "offset": -22,
-      "direction": "left"
-    }
-  ],
+  "connections": null,
   "object_events": [],
   "warp_events": [
     {
-      "x": 8,
-      "y": 3,
+      "x": 16,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_PLANET01_03",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 4,
+      "y": 1,
       "elevation": 0,
       "dest_map": "MAP_PLANET01_ICE_CAVE",
-      "dest_warp_id": "1"
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
