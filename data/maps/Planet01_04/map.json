@@ -5,7 +5,7 @@
   "music": "MUS_ABANDONED_SHIP",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
+  "weather": "WEATHER_FOG_HORIZONTAL",
   "map_type": "MAP_TYPE_ROUTE",
   "allow_cycling": false,
   "allow_escaping": false,
@@ -29,7 +29,73 @@
       "direction": "right"
     }
   ],
-  "object_events": [],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(QUAGSIRE)",
+      "x": 26,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_APPROACH_PLAYER_OWE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
+      "trainer_sight_or_berry_tree_id": "50",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x02C"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(WOOPER)",
+      "x": 15,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
+      "trainer_sight_or_berry_tree_id": "50",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x02A"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(MINIOR)",
+      "x": 2,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "50",
+      "script": "Planet01_04_AddAir_Minior01",
+      "flag": "FLAG_UNUSED_0x032"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(WOOPER)",
+      "x": 11,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
+      "trainer_sight_or_berry_tree_id": "50",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x02B"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(MINIOR)",
+      "x": 18,
+      "y": 39,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "50",
+      "script": "Planet01_04_AddAir_Minior02",
+      "flag": "FLAG_UNUSED_0x031"
+    }
+  ],
   "warp_events": [],
   "coord_events": [],
   "bg_events": []
