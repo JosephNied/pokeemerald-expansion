@@ -1,0 +1,7 @@
+mapscripts Planet01_ICE_CAVE_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Planet01_ICE_CAVE_Enter
+}
+
+script Planet01_ICE_CAVE_Enter {
+	special(SetRandomFlags)
+}

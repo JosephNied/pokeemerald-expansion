@@ -1,16 +1,23 @@
-raw `
-Spaceship_Dev_MapScripts::
-	.byte 0
-`
+mapscripts Spaceship_Dev_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Spaceship_Dev_Enter
+    //MAP_SCRIPT_ON_FRAME_TABLE: Spaceship_Dev_FrameTable
+}
+
+script Spaceship_Dev_Enter {
+    setvar(VAR_AIR_TIMER_STEPS, 200)
+    setvar(VAR_AIR_TIMER_TRIGGERED, 1)
+	end
+}
+
 script Spaceship_Dev_EventScript_BallItem01 {
     lock
     faceplayer
     giveitem(ITEM_BEAST_BALL, 2)
-    giveitem(ITEM_STARDUST, 5)
     giveitem(ITEM_SCANNER)
     giveitem(ITEM_DEVON_PARTS)
     giveitem(ITEM_DEVON_SCOPE)
     setflag(FLAG_UNUSED_0x027)
+    clearflag(FLAG_SYS_BRAILLE_DIG)
     removeobject(1)
     release
     end

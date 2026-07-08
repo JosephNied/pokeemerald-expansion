@@ -1103,6 +1103,7 @@ enum NationalDexOrder
     F(GLALIE) \
     F(MINIOR) \
     F(CARBINK) \
+    F(SABLEYE) \
     F(LUNATONE) \
     F(SOLROCK) \
     F(TEDDIURSA) \

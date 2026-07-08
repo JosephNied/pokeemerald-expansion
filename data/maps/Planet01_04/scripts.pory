@@ -1,4 +1,7 @@
-raw `
-Planet01_04_MapScripts::
-	.byte 0
-`
+mapscripts Planet01_04_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Planet01_04_Enter
+}
+
+script Planet01_04_Enter {
+	special(SetRandomFlags)
+}

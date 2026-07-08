@@ -122,11 +122,18 @@
 #define METATILE_BuildingFrlg_PCOn   0x063
 
 // gTileset_Cave
+#define METATILE_Cave_Connector_Cave_Cover_Wall          0x2B9
 #define METATILE_Cave_CrackedFloor                       0x22F
 #define METATILE_Cave_CrackedFloor_Hole                  0x206
 #define METATILE_Cave_EntranceCover                      0x229
 #define METATILE_Cave_Floor_Ledge_Bottom                 0x2E1
 #define METATILE_Cave_Floor_Ledge_Top                    0x2D1
+#define METATILE_Cave_IceCaveEntrance_BottomLeft         0x335
+#define METATILE_Cave_IceCaveEntrance_BottomMid          0x336
+#define METATILE_Cave_IceCaveEntrance_BottomRight        0x337
+#define METATILE_Cave_IceCaveEntrance_TopLeft            0x32D
+#define METATILE_Cave_IceCaveEntrance_TopMid             0x32E
+#define METATILE_Cave_IceCaveEntrance_TopRight           0x32F
 #define METATILE_Cave_RockBarrier_Bottom                 0x317
 #define METATILE_Cave_RockBarrier_Top                    0x307
 #define METATILE_Cave_SealedChamberBraille_Mid           0x235
@@ -1012,8 +1019,10 @@
 #define METATILE_TrickHousePuzzle_Stairs_Down                 0x20B
 
 // gTileset_Underwater
-#define METATILE_Underwater_FloorShadow  0x228
-#define METATILE_Underwater_RockWall     0x21E
+#define METATILE_Underwater_CaveEntrance_Bottom  0x22E
+#define METATILE_Underwater_CaveEntrance_Top     0x226
+#define METATILE_Underwater_FloorShadow          0x228
+#define METATILE_Underwater_RockWall             0x21E
 
 // gTileset_VermilionCity
 #define METATILE_VermilionCity_Door        0x29E
@@ -1058,6 +1067,7 @@
 #define METATILE_ViridianForest_HugeTreeTopMiddle_Mowed  0x281
 
 // Other
+#define METATILE_Connector_Cave_Cover_Wall           0x2B9
 #define METATILE_GeneralFrlg_CalmWater               0x12B
 #define METATILE_GeneralFrlg_Door                    0x03D
 #define METATILE_GeneralFrlg_Plain_Grass             0x00D

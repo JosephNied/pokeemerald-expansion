@@ -1,0 +1,46 @@
+raw `
+Planet01_Connector_Cave_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, ConnectorCave_Enter
+	map_script MAP_SCRIPT_ON_RESUME, ConnectorCave_OuterRoom_OnResume
+	map_script MAP_SCRIPT_ON_LOAD, ConnectorCave_OuterRoom_OnLoad
+	.byte 0
+
+ConnectorCave_Enter:
+	special SetRandomFlags
+	end
+
+ConnectorCave_OuterRoom_OnResume:
+	setescapewarp MAP_PLANET01_03, 52, 36
+	end
+
+ConnectorCave_OuterRoom_OnLoad:
+	call_if_unset FLAG_SYS_BRAILLE_DIG, ConnectorCave_OuterRoom_EventScript_CloseInnerRoomEntrance
+	end
+
+ConnectorCave_OuterRoom_EventScript_CloseInnerRoomEntrance::
+	setmetatile 3, 0, METATILE_Connector_Cave_Cover_Wall, TRUE
+	setmetatile 4, 0, METATILE_Connector_Cave_Cover_Wall, TRUE
+	setmetatile 5, 0, METATILE_Connector_Cave_Cover_Wall, TRUE
+	setmetatile 3, 1, METATILE_Connector_Cave_Cover_Wall, TRUE
+	setmetatile 4, 1, METATILE_Connector_Cave_Cover_Wall, TRUE
+	setmetatile 5, 1, METATILE_Connector_Cave_Cover_Wall, TRUE
+	return
+
+ConnectorCave_OuterRoom_EventScript_InnerRoomEntranceWall::
+	lockall
+	goto_if_set FLAG_SYS_BRAILLE_DIG, ConnectorCave_OuterRoom_EventScript_HoleInWall
+	braillemsgbox SealedChamber_OuterRoom_Braille_DigHere
+	releaseall
+	end
+
+ConnectorCave_OuterRoom_EventScript_HoleInWall::
+	msgbox gText_BigHoleInTheWall, MSGBOX_DEFAULT
+	releaseall
+	end
+
+ConnectorCave_OuterRoom_EventScript_BrailleDigHere::
+	lockall
+	braillemsgbox SealedChamber_OuterRoom_Braille_DigHere
+	releaseall
+	end
+`
