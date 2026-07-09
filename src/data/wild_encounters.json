@@ -36522,6 +36522,40 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_PLANET01_03",
+          "base_label": "gPlanet01_03",
+          "rock_smash_mons": {
+            "encounter_rate": 50,
+            "mons": [
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_SHUCKLE"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_SHUCKLE"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_SHUCKLE"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_SHUCKLE"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_SHUCKLE"
+              }
+            ]
+          }
         }
       ]
     },

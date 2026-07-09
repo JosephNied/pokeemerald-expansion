@@ -1180,6 +1180,11 @@
   ],
   "gMapGroup_Planet01_Interior": [
     "Planet01_ICE_CAVE",
-    "Planet01_Connector_Cave"
+    "Planet01_Connector_Cave",
+    "Ditto_Cave",
+    "Ditto_Cave_2",
+    "Ditto_Cave_3",
+    "Ditto_Cave_4",
+    "Ditto_Cave_Bottom"
   ]
 }

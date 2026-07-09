@@ -9443,6 +9443,56 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Planet01_Connector_Cave/border.bin",
       "blockdata_filepath": "data/layouts/Planet01_Connector_Cave/map.bin"
+    },
+    {
+      "id": "LAYOUT_DITTO_CAVE",
+      "name": "Ditto_Cave_Layout",
+      "width": 16,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Ditto_Cave/border.bin",
+      "blockdata_filepath": "data/layouts/Ditto_Cave/map.bin"
+    },
+    {
+      "id": "LAYOUT_DITTO_CAVE_3",
+      "name": "Ditto_Cave_3_Layout",
+      "width": 16,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Ditto_Cave_3/border.bin",
+      "blockdata_filepath": "data/layouts/Ditto_Cave_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_DITTO_CAVE_2",
+      "name": "Ditto_Cave_2_Layout",
+      "width": 16,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Ditto_Cave_2/border.bin",
+      "blockdata_filepath": "data/layouts/Ditto_Cave_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_DITTO_CAVE_4",
+      "name": "Ditto_Cave_4_Layout",
+      "width": 16,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Ditto_Cave_4/border.bin",
+      "blockdata_filepath": "data/layouts/Ditto_Cave_4/map.bin"
+    },
+    {
+      "id": "LAYOUT_DITTO_CAVE_BOTTOM",
+      "name": "Ditto_Cave_Bottom_Layout",
+      "width": 17,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Ditto_Cave_Bottom/border.bin",
+      "blockdata_filepath": "data/layouts/Ditto_Cave_Bottom/map.bin"
     }
   ]
 }

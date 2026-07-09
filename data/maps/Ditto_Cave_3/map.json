@@ -1,0 +1,63 @@
+{
+  "id": "MAP_DITTO_CAVE_3",
+  "name": "Ditto_Cave_3",
+  "layout": "LAYOUT_DITTO_CAVE_3",
+  "music": "MUS_B_PYRAMID",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "requires_flash": true,
+  "weather": "WEATHER_FOG_HORIZONTAL",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(MINIOR)",
+      "x": 5,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "50",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x031"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 12,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_DITTO_CAVE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_DITTO_CAVE_4",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 12,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_DITTO_CAVE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 4,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_DITTO_CAVE",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

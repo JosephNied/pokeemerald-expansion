@@ -1761,3 +1761,13 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Planet01_ICE_CAVE/scripts.inc"
 
 	.include "data/maps/Planet01_Connector_Cave/scripts.inc"
+
+	.include "data/maps/Ditto_Cave/scripts.inc"
+
+	.include "data/maps/Ditto_Cave_4/scripts.inc"
+
+	.include "data/maps/Ditto_Cave_3/scripts.inc"
+
+	.include "data/maps/Ditto_Cave_2/scripts.inc"
+
+	.include "data/maps/Ditto_Cave_Bottom/scripts.inc"

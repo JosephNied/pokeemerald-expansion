@@ -59,7 +59,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MINIOR)",
       "x": 2,
-      "y": 19,
+      "y": 21,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -85,7 +85,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MINIOR)",
       "x": 18,
-      "y": 35,
+      "y": 32,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -96,7 +96,15 @@
       "flag": "FLAG_UNUSED_0x031"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 14,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_DITTO_CAVE",
+      "dest_warp_id": "3"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }
