@@ -1,4 +1,22 @@
-raw `
-Ditto_Cave_MapScripts::
-	.byte 0
-`
+mapscripts Ditto_Cave_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Ditto_Cave_Enter
+}
+
+script Ditto_Cave_Enter {
+	special(SetRandomFlags)
+}
+
+script Ditto_Cave_AddAir_Minior01 {
+    lockall
+    setvar(VAR_AIR_TIMER_STEPS, 200)
+    special(AddAirTimerMap)
+    msgbox("Minior is floating in a pocket of air!\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
+    setflag(FLAG_UNUSED_0x032)
+    fadeScreen(FADE_TO_BLACK)
+    removeobject(1)
+    fadeScreen(FADE_FROM_BLACK)
+    msgbox("Minior flew away...")
+    releaseall
+    end
+}

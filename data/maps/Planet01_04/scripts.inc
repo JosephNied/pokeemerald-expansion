@@ -24,7 +24,7 @@ Planet01_04_AddAir_Minior01::
 # 16 "data/maps/Planet01_04/scripts.pory"
 	fadeScreen FADE_TO_BLACK
 # 17 "data/maps/Planet01_04/scripts.pory"
-	removeobject 9
+	removeobject 3
 # 18 "data/maps/Planet01_04/scripts.pory"
 	fadeScreen FADE_FROM_BLACK
 # 19 "data/maps/Planet01_04/scripts.pory"
@@ -48,7 +48,7 @@ Planet01_04_AddAir_Minior02::
 # 31 "data/maps/Planet01_04/scripts.pory"
 	fadeScreen FADE_TO_BLACK
 # 32 "data/maps/Planet01_04/scripts.pory"
-	removeobject 9
+	removeobject 5
 # 33 "data/maps/Planet01_04/scripts.pory"
 	fadeScreen FADE_FROM_BLACK
 # 34 "data/maps/Planet01_04/scripts.pory"
