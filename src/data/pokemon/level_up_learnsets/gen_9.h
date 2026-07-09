@@ -791,14 +791,14 @@ static const struct LevelUpMove sCleffaLevelUpLearnset[] = {
 
 static const struct LevelUpMove sClefairyLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_FOLLOW_ME),
-    LEVEL_UP_MOVE( 1, MOVE_COSMIC_POWER),
+    LEVEL_UP_MOVE( 1, MOVE_METRONOME),
     LEVEL_UP_MOVE( 1, MOVE_MOONBLAST),
     LEVEL_UP_MOVE( 1, MOVE_HEALING_WISH),
     LEVEL_UP_END
 };
 
 static const struct LevelUpMove sClefableLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_METRONOME),
+    LEVEL_UP_MOVE( 1, MOVE_FLASH),
     LEVEL_UP_MOVE( 1, MOVE_ENCORE),
     LEVEL_UP_MOVE( 1, MOVE_MOONBLAST),
     LEVEL_UP_MOVE( 1, MOVE_WISH),
