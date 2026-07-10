@@ -2,3 +2,10 @@ raw `
 Ditto_Cave_Bottom_MapScripts::
 	.byte 0
 `
+
+script Ditto_Cave_Bottom_DittoTrainer {
+	trainerbattle_single(TRAINER_MITCHELL, Ditto_Intro, Ditto_Outro)
+	msgbox(PostBattle_Ditto, MSGBOX_AUTOCLOSE)
+	waitmessage
+	end
+}

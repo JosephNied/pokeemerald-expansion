@@ -9493,6 +9493,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Ditto_Cave_Bottom/border.bin",
       "blockdata_filepath": "data/layouts/Ditto_Cave_Bottom/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLANET01_FIRST_CAMP_CAVE",
+      "name": "Planet01_First_Camp_Cave_Layout",
+      "width": 21,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Planet01_First_Camp_Cave/border.bin",
+      "blockdata_filepath": "data/layouts/Planet01_First_Camp_Cave/map.bin"
     }
   ]
 }

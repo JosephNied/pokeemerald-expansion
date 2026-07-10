@@ -6091,9 +6091,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 24,
         .weight = 2900,
         .description = COMPOUND_STRING(
-            "Swampy terrain gives Ursaluna its burly\n"
-            "physique and newfound capacity to\n"
-            "manipulate peat at will."),
+            "This massive Ursaluna must have chased\n"
+            "away the previous explorers from their\n"
+            "campsite!"),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 369,
@@ -6102,7 +6102,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 3,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .frontAnimId = ANIM_GROW_IN_STAGES,
         .backPic = gMonBackPic_Ursaluna,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 9,

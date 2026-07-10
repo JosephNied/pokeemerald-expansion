@@ -6026,7 +6026,7 @@ static const struct LevelUpMove sTeddiursaLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sUrsaringLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_NIGHT_SLASH),
+    LEVEL_UP_MOVE( 1, MOVE_FAKE_TEARS),
     LEVEL_UP_MOVE( 1, MOVE_ROCK_SMASH),
     LEVEL_UP_MOVE( 1, MOVE_SCARY_FACE),
     LEVEL_UP_MOVE( 1, MOVE_DOUBLE_EDGE),
