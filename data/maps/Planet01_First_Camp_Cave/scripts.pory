@@ -1,0 +1,37 @@
+mapscripts Planet01_First_Camp_Cave_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Planet01_First_Camp_Cave_Enter
+}
+
+script Planet01_First_Camp_Cave_Enter {
+	clearflag(FLAG_UNUSED_0x02A)
+	end
+}
+
+script Planet01_First_Camp_Cave_UrsalunaEncounter {
+    lockall
+    faceplayer
+
+    msgbox("The enormous Pokémon lets out a deafening roar!")
+
+    setwildbattle(
+        SPECIES_URSALUNA,
+        75,
+        ITEM_NONE
+    )
+
+    dowildbattle
+
+    compare(VAR_RESULT, FALSE)
+    goto_if_eq(PlayerLost)
+
+    removeobject(1)
+    setflag(FLAG_UNUSED_0x02A)
+
+    msgbox("The Ursaluna disappeared into the cave.")
+    releaseall
+    end
+
+PlayerLost:
+    releaseall
+    end
+}

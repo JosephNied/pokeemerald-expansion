@@ -4,5 +4,75 @@ mapscripts Planet01_02_MapScripts {
 
 script Planet01_02_Enter {
 	special(SetRandomFlags)
+	clearflag(FLAG_TEMP_10)
+	clearflag(FLAG_TEMP_11)
+	clearflag(FLAG_TEMP_12)
+	clearflag(FLAG_TEMP_13)
+	clearflag(FLAG_TEMP_14)
+	clearflag(FLAG_TEMP_15)
+	clearflag(FLAG_TEMP_16)
 	end
+}
+
+script Planet01_02_EventScript_RockSmash01 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_10)
+    release
+    end
+}
+
+script Planet01_02_EventScript_RockSmash02 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_11)
+    release
+    end
+}
+
+script Planet01_02_EventScript_RockSmash03 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_12)
+    release
+    end
+}
+
+script Planet01_02_EventScript_RockSmash04 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_13)
+    release
+    end
+}
+
+script Planet01_02_EventScript_RockSmash05 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_14)
+    release
+    end
+}
+
+script Planet01_02_EventScript_RockSmash06 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_15)
+    release
+    end
+}
+
+script Planet01_02_EventScript_RockSmash07 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_16)
+    release
+    end
 }

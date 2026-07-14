@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_PLANET01_03",
-      "offset": -39,
+      "offset": -47,
       "direction": "down"
     },
     {
@@ -25,15 +25,15 @@
     },
     {
       "map": "MAP_PLANET01_02",
-      "offset": 0,
+      "offset": -10,
       "direction": "right"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(QUAGSIRE)",
-      "x": 26,
-      "y": 9,
+      "x": 24,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_APPROACH_PLAYER_OWE",
       "movement_range_x": 0,
@@ -94,6 +94,19 @@
       "trainer_sight_or_berry_tree_id": "50",
       "script": "Planet01_04_AddAir_Minior02",
       "flag": "FLAG_UNUSED_0x031"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(QUAGSIRE)",
+      "x": 25,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_APPROACH_PLAYER_OWE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
+      "trainer_sight_or_berry_tree_id": "50",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x02D"
     }
   ],
   "warp_events": [

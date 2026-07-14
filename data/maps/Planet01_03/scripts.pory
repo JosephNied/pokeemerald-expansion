@@ -4,4 +4,165 @@ mapscripts Planet01_03_MapScripts {
 
 script Planet01_03_Enter {
 	special(SetRandomFlags)
+	clearflag(FLAG_TEMP_10)
+	clearflag(FLAG_TEMP_11)
+	clearflag(FLAG_TEMP_12)
+	clearflag(FLAG_TEMP_13)
+	clearflag(FLAG_TEMP_14)
+	clearflag(FLAG_TEMP_15)
+	clearflag(FLAG_TEMP_16)
+    clearflag(FLAG_TEMP_17)
+    clearflag(FLAG_TEMP_18)
+    clearflag(FLAG_TEMP_19)
+    clearflag(FLAG_TEMP_1A)
+    clearflag(FLAG_TEMP_1B)
+    clearflag(FLAG_TEMP_1C)
+    clearflag(FLAG_TEMP_1D)
+    clearflag(FLAG_TEMP_1E)
+    clearflag(FLAG_TEMP_1F)
+	end
+}
+
+script Planet01_03_EventScript_RockSmash01 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_10)
+    release
+    end
+}
+
+script Planet01_03_EventScript_RockSmash02 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_11)
+    release
+    end
+}
+
+script Planet01_03_EventScript_RockSmash03 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_12)
+    release
+    end
+}
+
+script Planet01_03_EventScript_RockSmash04 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_13)
+    release
+    end
+}
+
+script Planet01_03_EventScript_RockSmash05 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_14)
+    release
+    end
+}
+
+script Planet01_03_EventScript_RockSmash06 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_15)
+    release
+    end
+}
+
+script Planet01_03_EventScript_RockSmash07 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_16)
+    release
+    end
+}
+
+script Planet01_03_EventScript_RockSmash08 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_17)
+    release
+    end
+}
+
+script Planet01_03_EventScript_RockSmash09 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_18)
+    release
+    end
+}
+
+script Planet01_03_EventScript_RockSmash10 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_19)
+    release
+    end
+}
+
+script Planet01_03_EventScript_RockSmash11 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_1A)
+    release
+    end
+}
+
+script Planet01_03_EventScript_RockSmash12 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_1B)
+    release
+    end
+}
+
+script Planet01_03_EventScript_RockSmash13 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_1C)
+    release
+    end
+}
+
+script Planet01_03_EventScript_RockSmash14 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_1D)
+    release
+    end
+}
+
+script Planet01_03_EventScript_RockSmash15 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_1E)
+    release
+    end
+}
+
+script Planet01_03_EventScript_RockSmash16 {
+    lock
+    faceplayer
+    call(EventScript_RockSmash)
+    setflag(FLAG_TEMP_1F)
+    release
+    end
 }

@@ -9397,7 +9397,7 @@
     {
       "id": "LAYOUT_PLANET01_03",
       "name": "Planet01_03_Layout",
-      "width": 60,
+      "width": 68,
       "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Underwater",
@@ -9408,7 +9408,7 @@
       "id": "LAYOUT_PLANET01_02",
       "name": "Planet01_02_Layout",
       "width": 37,
-      "height": 60,
+      "height": 70,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Underwater",
       "border_filepath": "data/layouts/Planet01_02/border.bin",
