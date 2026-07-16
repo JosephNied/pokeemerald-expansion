@@ -17,6 +17,8 @@ script Spaceship_Dev_EventScript_BallItem01 {
     giveitem(ITEM_DEVON_PARTS)
     giveitem(ITEM_DEVON_SCOPE)
     giveitem(ITEM_ITEMFINDER)
+    giveitem(ITEM_STAR_PIECE, 3)
+    giveitem(ITEM_STARDUST, 3)
     setflag(FLAG_UNUSED_0x027)
     clearflag(FLAG_SYS_BRAILLE_DIG)
     removeobject(1)
@@ -95,7 +97,7 @@ script Spaceship_Dev_EventScript_UpdateWarp {
     lock
     if (var(VAR_PLANET_DEST) == 0)
     {
-        msgbox("Warping to Earth.")
+        msgbox("Downwards to the planet.")
         warp(MAP_PLANET01_01, 0, 18, 11)
         waitstate
     }
@@ -159,10 +161,18 @@ script Spaceship_Dev_EventScript_VitaminVendor {
         }
         elif (var(VAR_RESULT) == 1)
         {
-            removeitem(ITEM_STARDUST, 1)
-            removeitem(ITEM_STAR_PIECE, 1)
-            giveitem(ITEM_REPEL, 1)
-            msgbox("Your material has been converted!")
+            CountItemInBag(ITEM_REPEL, VAR_STARDUST_COUNT) //reusing this variable
+            buffernumberstring(STR_VAR_1, VAR_STARDUST_COUNT)
+            if (var(VAR_STARDUST_COUNT) >= 2) {
+                msgbox("You can't carry any more of these.")
+                release
+                end
+            } else {
+                removeitem(ITEM_STARDUST, 1)
+                removeitem(ITEM_STAR_PIECE, 1)
+                giveitem(ITEM_REPEL, 1)
+                msgbox("Your material has been converted!")
+            }
         }
         else
         {

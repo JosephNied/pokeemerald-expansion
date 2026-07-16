@@ -92,12 +92,12 @@
       "x": 7,
       "y": 48,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "50",
-      "script": "NULL",
+      "script": "Planet01_02_AddAir_Minior01",
       "flag": "FLAG_UNUSED_0x02F"
     },
     {
