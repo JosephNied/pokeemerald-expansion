@@ -40,7 +40,7 @@ script Planet01_02_AddAir_Minior01 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
     setflag(FLAG_UNUSED_0x02F)
     fadeScreen(FADE_TO_BLACK)
-    removeobject(9)
+    removeobject(5)
     fadeScreen(FADE_FROM_BLACK)
     msgbox("Minior flew away...")
     releaseall
