@@ -28,13 +28,13 @@ Ditto_Cave_2_AddAir_Minior01::
 # 19 "data/maps/Ditto_Cave_2/scripts.pory"
 	lockall
 # 20 "data/maps/Ditto_Cave_2/scripts.pory"
-	setvar VAR_AIR_TIMER_STEPS, 200
+	setvar VAR_AIR_TIMER_STEPS, 150
 # 21 "data/maps/Ditto_Cave_2/scripts.pory"
 	special AddAirTimerMap
 # 22 "data/maps/Ditto_Cave_2/scripts.pory"
 	msgbox Ditto_Cave_2_AddAir_Minior01_Text_0
 # 24 "data/maps/Ditto_Cave_2/scripts.pory"
-	setflag FLAG_UNUSED_0x032
+	setflag FLAG_UNUSED_0x031
 # 25 "data/maps/Ditto_Cave_2/scripts.pory"
 	fadeScreen FADE_TO_BLACK
 # 26 "data/maps/Ditto_Cave_2/scripts.pory"

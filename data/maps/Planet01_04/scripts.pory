@@ -8,7 +8,7 @@ script Planet01_04_Enter {
 
 script Planet01_04_AddAir_Minior01 {
     lockall
-    setvar(VAR_AIR_TIMER_STEPS, 200)
+    setvar(VAR_AIR_TIMER_STEPS, 150)
     special(AddAirTimerMap)
     msgbox("Minior is floating in a pocket of air!\n"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
@@ -23,7 +23,7 @@ script Planet01_04_AddAir_Minior01 {
 
 script Planet01_04_AddAir_Minior02 {
     lockall
-    setvar(VAR_AIR_TIMER_STEPS, 200)
+    setvar(VAR_AIR_TIMER_STEPS, 150)
     special(AddAirTimerMap)
     msgbox("Minior is floating in a pocket of air!\n"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")

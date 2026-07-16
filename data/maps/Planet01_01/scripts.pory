@@ -12,7 +12,7 @@ script Planet01_01_Enter {
     compare (VAR_0x8005, 10)
     goto_if_ne(End, 0)
 
-    setvar(VAR_AIR_TIMER_STEPS, 200)
+    setvar(VAR_AIR_TIMER_STEPS, 150)
     setvar(VAR_AIR_TIMER_TRIGGERED, 1)
 
 End:
@@ -70,7 +70,7 @@ script Planet01_01_AirExpired {
 
 script Planet01_01_AddAir_Minior01 {
     lockall
-    setvar(VAR_AIR_TIMER_STEPS, 200)
+    setvar(VAR_AIR_TIMER_STEPS, 150)
     special(AddAirTimerMap)
     msgbox("Minior is floating in a pocket of air!\n"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
@@ -85,7 +85,7 @@ script Planet01_01_AddAir_Minior01 {
 
 script Planet01_01_AddAir_Minior02 {
     lockall
-    setvar(VAR_AIR_TIMER_STEPS, 200)
+    setvar(VAR_AIR_TIMER_STEPS, 150)
     special(AddAirTimerMap)
     msgbox("Minior is floating in a pocket of air!\n"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")

@@ -14,7 +14,7 @@ Planet01_04_AddAir_Minior01::
 # 10 "data/maps/Planet01_04/scripts.pory"
 	lockall
 # 11 "data/maps/Planet01_04/scripts.pory"
-	setvar VAR_AIR_TIMER_STEPS, 200
+	setvar VAR_AIR_TIMER_STEPS, 150
 # 12 "data/maps/Planet01_04/scripts.pory"
 	special AddAirTimerMap
 # 13 "data/maps/Planet01_04/scripts.pory"
@@ -38,7 +38,7 @@ Planet01_04_AddAir_Minior02::
 # 25 "data/maps/Planet01_04/scripts.pory"
 	lockall
 # 26 "data/maps/Planet01_04/scripts.pory"
-	setvar VAR_AIR_TIMER_STEPS, 200
+	setvar VAR_AIR_TIMER_STEPS, 150
 # 27 "data/maps/Planet01_04/scripts.pory"
 	special AddAirTimerMap
 # 28 "data/maps/Planet01_04/scripts.pory"

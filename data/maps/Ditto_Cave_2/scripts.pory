@@ -17,11 +17,11 @@ script Ditto_Cave_2_EventScript_Item01 {
 
 script Ditto_Cave_2_AddAir_Minior01 {
     lockall
-    setvar(VAR_AIR_TIMER_STEPS, 200)
+    setvar(VAR_AIR_TIMER_STEPS, 150)
     special(AddAirTimerMap)
     msgbox("Minior is floating in a pocket of air!\n"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
-    setflag(FLAG_UNUSED_0x032)
+    setflag(FLAG_UNUSED_0x031)
     fadeScreen(FADE_TO_BLACK)
     removeobject(1)
     fadeScreen(FADE_FROM_BLACK)

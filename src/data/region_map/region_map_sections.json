@@ -490,7 +490,7 @@
     },
     {
       "id": "MAPSEC_ABANDONED_SHIP",
-      "name": "First Camp Cave",
+      "name": "CAVE",
       "x": 6,
       "y": 14,
       "width": 1,
@@ -1630,6 +1630,14 @@
     {
       "id": "MAPSEC_TEST_ZONE_ONE",
       "name": "TEST ZONE ONE",
+      "x": 8,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_PLANET_SURFACE",
+      "name": "SURFACE",
       "x": 8,
       "y": 4,
       "width": 1,
