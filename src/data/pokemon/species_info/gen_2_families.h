@@ -3514,12 +3514,12 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 
     [SPECIES_QUAGSIRE] =
     {
-        .baseHP        = 115,
+        .baseHP        = 105,
         .baseAttack    = 85,
         .baseDefense   = 85,
         .baseSpeed     = 25,
-        .baseSpAttack  = 65,
-        .baseSpDefense = 65,
+        .baseSpAttack  = 85,
+        .baseSpDefense = 75,
         .types = MON_TYPES(TYPE_WATER, TYPE_GROUND),
         .catchRate = 90,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 151 : 137,
@@ -3542,8 +3542,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .description = COMPOUND_STRING(
             "A Quagsire hunts by leaving its mouth wide\n"
             "open in water and waiting for its prey to\n"
-            "blunder in. Because it doesn't move, it\n"
-            "does not get very hungry."),
+            "blunder in. It accidentally ingests a lot\n"
+            "of gemstones this way; how curious..."),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -5371,10 +5371,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 6,
         .weight = 205,
         .description = COMPOUND_STRING(
-            "A Shuckle hides under rocks, keeping its\n"
-            "body concealed inside its shell while\n"
-            "eating stored berries. The berries mix with\n"
-            "its body fluids to become a juice."),
+            "Shuckle on this planet are like those\n"
+            "from home; they store berries in their\n"
+            "shell which ferment to become delicious\n"
+            "juices and emit a sweet scent."),
         .pokemonScale = 485,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -5934,10 +5934,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 6,
         .weight = 88,
         .description = COMPOUND_STRING(
-            "It licks its palms that are sweetened by\n"
-            "being soaked in honey. A Teddiursa makes\n"
-            "its own honey by blending fruits and pollen\n"
-            "collected by Beedrill."),
+            "It likes to climb on the rocky ledges of\n"
+            "cliffs and caves, always hunting for food.\n"
+            "It particularly likes the taste and smell\n"
+            "of berries."),
         .pokemonScale = 455,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -6006,10 +6006,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 18,
         .weight = 1258,
         .description = COMPOUND_STRING(
-            "In forests, it is said that there are many\n"
-            "streams and towering trees where an\n"
-            "Ursaring gathers food. It walks through\n"
-            "its forest collecting food every day."),
+            "It hides in the cliffs and caves, waitng\n"
+            "for prey to hunt. It otherwise appears\n"
+            "to avoid confrontation. Its' powerful\n"
+            "claws can smash the toughest rocks."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,

@@ -5009,7 +5009,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseHP        = 70,
         .baseAttack    = 45,
         .baseDefense   = 48,
-        .baseSpeed     = 35,
+        .baseSpeed     = 75,
         .baseSpAttack  = 60,
         .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 65 : 60,
         .types = CLEFAIRY_FAMILY_TYPES,
@@ -5036,8 +5036,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 6,
         .weight = 75,
         .description = COMPOUND_STRING(
-            "On every night of a full moon, they come\n"
-            "out to play. When dawn arrives, the tired\n"
+            "While they may be small, they still\n"
+            "possess mysterious, magical powers.\n"
             "Clefairy go to sleep nestled up against\n"
             "each other in deep and quiet mountains."),
         .pokemonScale = 441,
@@ -5082,8 +5082,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         .baseHP        = 95,
         .baseAttack    = 70,
-        .baseDefense   = 73,
-        .baseSpeed     = 60,
+        .baseDefense   = 83,
+        .baseSpeed     = 75,
         .baseSpAttack  = P_UPDATED_STATS >= GEN_6 ? 95 : 85,
         .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 90 : 85,
         .types = CLEFAIRY_FAMILY_TYPES,
@@ -5118,10 +5118,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 13,
         .weight = 400,
         .description = COMPOUND_STRING(
-            "A Clefable uses its wings to skip lightly \n"
-            "as if it were flying. Its bouncy step\n"
-            "lets it even walk on water. On quiet,\n"
-            "moonlit nights, it strolls on lakes."),
+            "Legends said Clefable came from space.\n"
+            "Looks like they were right! They seem\n"
+            "to be stronger out here and are glowing\n"
+            "brightly, illuminating the darkness."),
         .pokemonScale = 256,
         .pokemonOffset = 5,
         .trainerScale = 256,
@@ -15680,7 +15680,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_3),
-        .abilities = { ABILITY_ILLUMINATE, ABILITY_NATURAL_CURE, ABILITY_ANALYTIC },
+        .abilities = { ABILITY_NATURAL_CURE, ABILITY_NATURAL_CURE, ABILITY_NATURAL_CURE },
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = TRUE,
         .speciesName = _("Staryu"),
@@ -15690,10 +15690,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 8,
         .weight = 345,
         .description = COMPOUND_STRING(
-            "It gathers with others in the night and\n"
-            "makes its red core glow on and off with\n"
-            "the twinkling stars. It can regenerate\n"
-            "limbs if they are severed from its body."),
+            "They gather and make their red cores\n"
+            "glow on and off with the twinkling\n"
+            "stars. They can skip across the water,\n"
+            "but they aren't big enough to ride."),
         .pokemonScale = 326,
         .pokemonOffset = 1,
         .trainerScale = 256,
@@ -15753,7 +15753,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_3),
-        .abilities = { ABILITY_ILLUMINATE, ABILITY_NATURAL_CURE, ABILITY_ANALYTIC },
+        .abilities = { ABILITY_NATURAL_CURE, ABILITY_NATURAL_CURE, ABILITY_NATURAL_CURE },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Starmie"),
         .cryId = CRY_STARMIE,
