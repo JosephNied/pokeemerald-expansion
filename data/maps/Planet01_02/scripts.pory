@@ -14,6 +14,24 @@ script Planet01_02_Enter {
 	end
 }
 
+script Planet01_02_EventScript_Item01 {
+    lock
+    giveitem(ITEM_SITRUS_BERRY, 1)
+    removeobject(24)
+    setflag(FLAG_UNUSED_0x495)
+    release
+    end
+}
+
+script Planet01_02_EventScript_Item02 {
+    lock
+    giveitem(ITEM_STARDUST, 1)
+    setflag(FLAG_UNUSED_0x496)
+    removeobject(23)
+    release
+    end
+}
+
 script Planet01_02_EventScript_RockSmash01 {
     lock
     faceplayer

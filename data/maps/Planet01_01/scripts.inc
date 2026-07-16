@@ -20,7 +20,7 @@ Planet01_01_Enter::
 # 13 "data/maps/Planet01_01/scripts.pory"
 	goto_if_ne End, 0
 # 15 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_AIR_TIMER_STEPS, 1000
+	setvar VAR_AIR_TIMER_STEPS, 200
 # 16 "data/maps/Planet01_01/scripts.pory"
 	setvar VAR_AIR_TIMER_TRIGGERED, 1
 # 18 "data/maps/Planet01_01/scripts.pory"

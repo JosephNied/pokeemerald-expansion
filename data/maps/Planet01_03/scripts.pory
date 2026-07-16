@@ -23,11 +23,30 @@ script Planet01_03_Enter {
 	end
 }
 
+script Planet01_03_EventScript_Item01 {
+    lock
+    giveitem(ITEM_STAR_PIECE, 1)
+    removeobject(32)
+    setflag(FLAG_UNUSED_0x497)
+    release
+    end
+}
+
+script Planet01_03_EventScript_Item02 {
+    lock
+    giveitem(ITEM_STARDUST, 1)
+    setflag(FLAG_UNUSED_0x498)
+    removeobject(33)
+    release
+    end
+}
+
 script Planet01_03_EventScript_RockSmash01 {
     lock
     faceplayer
     call(EventScript_RockSmash)
     setflag(FLAG_TEMP_10)
+    removeobject(29)
     release
     end
 }
@@ -37,6 +56,7 @@ script Planet01_03_EventScript_RockSmash02 {
     faceplayer
     call(EventScript_RockSmash)
     setflag(FLAG_TEMP_11)
+    removeobject(22)
     release
     end
 }
@@ -46,6 +66,7 @@ script Planet01_03_EventScript_RockSmash03 {
     faceplayer
     call(EventScript_RockSmash)
     setflag(FLAG_TEMP_12)
+    removeobject(23)
     release
     end
 }
@@ -55,6 +76,7 @@ script Planet01_03_EventScript_RockSmash04 {
     faceplayer
     call(EventScript_RockSmash)
     setflag(FLAG_TEMP_13)
+    removeobject(24)
     release
     end
 }
@@ -64,6 +86,7 @@ script Planet01_03_EventScript_RockSmash05 {
     faceplayer
     call(EventScript_RockSmash)
     setflag(FLAG_TEMP_14)
+    removeobject(28)
     release
     end
 }
@@ -73,6 +96,7 @@ script Planet01_03_EventScript_RockSmash06 {
     faceplayer
     call(EventScript_RockSmash)
     setflag(FLAG_TEMP_15)
+    removeobject(27)
     release
     end
 }
@@ -82,6 +106,7 @@ script Planet01_03_EventScript_RockSmash07 {
     faceplayer
     call(EventScript_RockSmash)
     setflag(FLAG_TEMP_16)
+    removeobject(26)
     release
     end
 }
@@ -91,6 +116,7 @@ script Planet01_03_EventScript_RockSmash08 {
     faceplayer
     call(EventScript_RockSmash)
     setflag(FLAG_TEMP_17)
+    removeobject(25)
     release
     end
 }
@@ -100,6 +126,7 @@ script Planet01_03_EventScript_RockSmash09 {
     faceplayer
     call(EventScript_RockSmash)
     setflag(FLAG_TEMP_18)
+    removeobject(17)
     release
     end
 }
@@ -109,6 +136,7 @@ script Planet01_03_EventScript_RockSmash10 {
     faceplayer
     call(EventScript_RockSmash)
     setflag(FLAG_TEMP_19)
+    removeobject(14)
     release
     end
 }
@@ -118,6 +146,7 @@ script Planet01_03_EventScript_RockSmash11 {
     faceplayer
     call(EventScript_RockSmash)
     setflag(FLAG_TEMP_1A)
+    removeobject(16)
     release
     end
 }
@@ -127,6 +156,7 @@ script Planet01_03_EventScript_RockSmash12 {
     faceplayer
     call(EventScript_RockSmash)
     setflag(FLAG_TEMP_1B)
+    removeobject(15)
     release
     end
 }
@@ -136,6 +166,7 @@ script Planet01_03_EventScript_RockSmash13 {
     faceplayer
     call(EventScript_RockSmash)
     setflag(FLAG_TEMP_1C)
+    removeobject(19)
     release
     end
 }
@@ -145,6 +176,7 @@ script Planet01_03_EventScript_RockSmash14 {
     faceplayer
     call(EventScript_RockSmash)
     setflag(FLAG_TEMP_1D)
+    removeobject(18)
     release
     end
 }
@@ -154,6 +186,7 @@ script Planet01_03_EventScript_RockSmash15 {
     faceplayer
     call(EventScript_RockSmash)
     setflag(FLAG_TEMP_1E)
+    removeobject(20)
     release
     end
 }
@@ -163,6 +196,7 @@ script Planet01_03_EventScript_RockSmash16 {
     faceplayer
     call(EventScript_RockSmash)
     setflag(FLAG_TEMP_1F)
+    removeobject(21)
     release
     end
 }

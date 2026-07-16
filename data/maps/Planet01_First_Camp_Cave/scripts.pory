@@ -11,7 +11,8 @@ script Planet01_First_Camp_Cave_UrsalunaEncounter {
     lockall
     faceplayer
 
-    msgbox("The enormous Pokémon lets out a deafening roar!")
+    msgbox("The enormous Pokémon lets out\n"
+			"a deafening roar!")
 
     setwildbattle(
         SPECIES_URSALUNA,

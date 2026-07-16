@@ -42,35 +42,35 @@ Planet01_03_Enter::
 	end
 
 
-Planet01_03_EventScript_RockSmash01::
+Planet01_03_EventScript_Item01::
 # 27 "data/maps/Planet01_03/scripts.pory"
 	lock
 # 28 "data/maps/Planet01_03/scripts.pory"
-	faceplayer
+	giveitem ITEM_STAR_PIECE, 1
 # 29 "data/maps/Planet01_03/scripts.pory"
-	call EventScript_RockSmash
+	removeobject 32
 # 30 "data/maps/Planet01_03/scripts.pory"
-	setflag FLAG_TEMP_10
+	setflag FLAG_UNUSED_0x497
 # 31 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 
-Planet01_03_EventScript_RockSmash02::
+Planet01_03_EventScript_Item02::
 # 36 "data/maps/Planet01_03/scripts.pory"
 	lock
 # 37 "data/maps/Planet01_03/scripts.pory"
-	faceplayer
+	giveitem ITEM_STARDUST, 1
 # 38 "data/maps/Planet01_03/scripts.pory"
-	call EventScript_RockSmash
+	setflag FLAG_UNUSED_0x498
 # 39 "data/maps/Planet01_03/scripts.pory"
-	setflag FLAG_TEMP_11
+	removeobject 33
 # 40 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 
-Planet01_03_EventScript_RockSmash03::
+Planet01_03_EventScript_RockSmash01::
 # 45 "data/maps/Planet01_03/scripts.pory"
 	lock
 # 46 "data/maps/Planet01_03/scripts.pory"
@@ -78,139 +78,143 @@ Planet01_03_EventScript_RockSmash03::
 # 47 "data/maps/Planet01_03/scripts.pory"
 	call EventScript_RockSmash
 # 48 "data/maps/Planet01_03/scripts.pory"
-	setflag FLAG_TEMP_12
+	setflag FLAG_TEMP_10
 # 49 "data/maps/Planet01_03/scripts.pory"
+	removeobject 29
+# 50 "data/maps/Planet01_03/scripts.pory"
+	release
+	end
+
+
+Planet01_03_EventScript_RockSmash02::
+# 55 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 56 "data/maps/Planet01_03/scripts.pory"
+	faceplayer
+# 57 "data/maps/Planet01_03/scripts.pory"
+	call EventScript_RockSmash
+# 58 "data/maps/Planet01_03/scripts.pory"
+	setflag FLAG_TEMP_11
+# 59 "data/maps/Planet01_03/scripts.pory"
+	removeobject 22
+# 60 "data/maps/Planet01_03/scripts.pory"
+	release
+	end
+
+
+Planet01_03_EventScript_RockSmash03::
+# 65 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 66 "data/maps/Planet01_03/scripts.pory"
+	faceplayer
+# 67 "data/maps/Planet01_03/scripts.pory"
+	call EventScript_RockSmash
+# 68 "data/maps/Planet01_03/scripts.pory"
+	setflag FLAG_TEMP_12
+# 69 "data/maps/Planet01_03/scripts.pory"
+	removeobject 23
+# 70 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 
 Planet01_03_EventScript_RockSmash04::
-# 54 "data/maps/Planet01_03/scripts.pory"
+# 75 "data/maps/Planet01_03/scripts.pory"
 	lock
-# 55 "data/maps/Planet01_03/scripts.pory"
+# 76 "data/maps/Planet01_03/scripts.pory"
 	faceplayer
-# 56 "data/maps/Planet01_03/scripts.pory"
+# 77 "data/maps/Planet01_03/scripts.pory"
 	call EventScript_RockSmash
-# 57 "data/maps/Planet01_03/scripts.pory"
+# 78 "data/maps/Planet01_03/scripts.pory"
 	setflag FLAG_TEMP_13
-# 58 "data/maps/Planet01_03/scripts.pory"
+# 79 "data/maps/Planet01_03/scripts.pory"
+	removeobject 24
+# 80 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 
 Planet01_03_EventScript_RockSmash05::
-# 63 "data/maps/Planet01_03/scripts.pory"
+# 85 "data/maps/Planet01_03/scripts.pory"
 	lock
-# 64 "data/maps/Planet01_03/scripts.pory"
+# 86 "data/maps/Planet01_03/scripts.pory"
 	faceplayer
-# 65 "data/maps/Planet01_03/scripts.pory"
+# 87 "data/maps/Planet01_03/scripts.pory"
 	call EventScript_RockSmash
-# 66 "data/maps/Planet01_03/scripts.pory"
+# 88 "data/maps/Planet01_03/scripts.pory"
 	setflag FLAG_TEMP_14
-# 67 "data/maps/Planet01_03/scripts.pory"
+# 89 "data/maps/Planet01_03/scripts.pory"
+	removeobject 28
+# 90 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 
 Planet01_03_EventScript_RockSmash06::
-# 72 "data/maps/Planet01_03/scripts.pory"
+# 95 "data/maps/Planet01_03/scripts.pory"
 	lock
-# 73 "data/maps/Planet01_03/scripts.pory"
+# 96 "data/maps/Planet01_03/scripts.pory"
 	faceplayer
-# 74 "data/maps/Planet01_03/scripts.pory"
+# 97 "data/maps/Planet01_03/scripts.pory"
 	call EventScript_RockSmash
-# 75 "data/maps/Planet01_03/scripts.pory"
+# 98 "data/maps/Planet01_03/scripts.pory"
 	setflag FLAG_TEMP_15
-# 76 "data/maps/Planet01_03/scripts.pory"
+# 99 "data/maps/Planet01_03/scripts.pory"
+	removeobject 27
+# 100 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 
 Planet01_03_EventScript_RockSmash07::
-# 81 "data/maps/Planet01_03/scripts.pory"
+# 105 "data/maps/Planet01_03/scripts.pory"
 	lock
-# 82 "data/maps/Planet01_03/scripts.pory"
+# 106 "data/maps/Planet01_03/scripts.pory"
 	faceplayer
-# 83 "data/maps/Planet01_03/scripts.pory"
+# 107 "data/maps/Planet01_03/scripts.pory"
 	call EventScript_RockSmash
-# 84 "data/maps/Planet01_03/scripts.pory"
+# 108 "data/maps/Planet01_03/scripts.pory"
 	setflag FLAG_TEMP_16
-# 85 "data/maps/Planet01_03/scripts.pory"
+# 109 "data/maps/Planet01_03/scripts.pory"
+	removeobject 26
+# 110 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 
 Planet01_03_EventScript_RockSmash08::
-# 90 "data/maps/Planet01_03/scripts.pory"
+# 115 "data/maps/Planet01_03/scripts.pory"
 	lock
-# 91 "data/maps/Planet01_03/scripts.pory"
+# 116 "data/maps/Planet01_03/scripts.pory"
 	faceplayer
-# 92 "data/maps/Planet01_03/scripts.pory"
+# 117 "data/maps/Planet01_03/scripts.pory"
 	call EventScript_RockSmash
-# 93 "data/maps/Planet01_03/scripts.pory"
+# 118 "data/maps/Planet01_03/scripts.pory"
 	setflag FLAG_TEMP_17
-# 94 "data/maps/Planet01_03/scripts.pory"
+# 119 "data/maps/Planet01_03/scripts.pory"
+	removeobject 25
+# 120 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 
 Planet01_03_EventScript_RockSmash09::
-# 99 "data/maps/Planet01_03/scripts.pory"
+# 125 "data/maps/Planet01_03/scripts.pory"
 	lock
-# 100 "data/maps/Planet01_03/scripts.pory"
-	faceplayer
-# 101 "data/maps/Planet01_03/scripts.pory"
-	call EventScript_RockSmash
-# 102 "data/maps/Planet01_03/scripts.pory"
-	setflag FLAG_TEMP_18
-# 103 "data/maps/Planet01_03/scripts.pory"
-	release
-	end
-
-
-Planet01_03_EventScript_RockSmash10::
-# 108 "data/maps/Planet01_03/scripts.pory"
-	lock
-# 109 "data/maps/Planet01_03/scripts.pory"
-	faceplayer
-# 110 "data/maps/Planet01_03/scripts.pory"
-	call EventScript_RockSmash
-# 111 "data/maps/Planet01_03/scripts.pory"
-	setflag FLAG_TEMP_19
-# 112 "data/maps/Planet01_03/scripts.pory"
-	release
-	end
-
-
-Planet01_03_EventScript_RockSmash11::
-# 117 "data/maps/Planet01_03/scripts.pory"
-	lock
-# 118 "data/maps/Planet01_03/scripts.pory"
-	faceplayer
-# 119 "data/maps/Planet01_03/scripts.pory"
-	call EventScript_RockSmash
-# 120 "data/maps/Planet01_03/scripts.pory"
-	setflag FLAG_TEMP_1A
-# 121 "data/maps/Planet01_03/scripts.pory"
-	release
-	end
-
-
-Planet01_03_EventScript_RockSmash12::
 # 126 "data/maps/Planet01_03/scripts.pory"
-	lock
-# 127 "data/maps/Planet01_03/scripts.pory"
 	faceplayer
-# 128 "data/maps/Planet01_03/scripts.pory"
+# 127 "data/maps/Planet01_03/scripts.pory"
 	call EventScript_RockSmash
+# 128 "data/maps/Planet01_03/scripts.pory"
+	setflag FLAG_TEMP_18
 # 129 "data/maps/Planet01_03/scripts.pory"
-	setflag FLAG_TEMP_1B
+	removeobject 17
 # 130 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 
-Planet01_03_EventScript_RockSmash13::
+Planet01_03_EventScript_RockSmash10::
 # 135 "data/maps/Planet01_03/scripts.pory"
 	lock
 # 136 "data/maps/Planet01_03/scripts.pory"
@@ -218,50 +222,106 @@ Planet01_03_EventScript_RockSmash13::
 # 137 "data/maps/Planet01_03/scripts.pory"
 	call EventScript_RockSmash
 # 138 "data/maps/Planet01_03/scripts.pory"
-	setflag FLAG_TEMP_1C
+	setflag FLAG_TEMP_19
 # 139 "data/maps/Planet01_03/scripts.pory"
+	removeobject 14
+# 140 "data/maps/Planet01_03/scripts.pory"
+	release
+	end
+
+
+Planet01_03_EventScript_RockSmash11::
+# 145 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 146 "data/maps/Planet01_03/scripts.pory"
+	faceplayer
+# 147 "data/maps/Planet01_03/scripts.pory"
+	call EventScript_RockSmash
+# 148 "data/maps/Planet01_03/scripts.pory"
+	setflag FLAG_TEMP_1A
+# 149 "data/maps/Planet01_03/scripts.pory"
+	removeobject 16
+# 150 "data/maps/Planet01_03/scripts.pory"
+	release
+	end
+
+
+Planet01_03_EventScript_RockSmash12::
+# 155 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 156 "data/maps/Planet01_03/scripts.pory"
+	faceplayer
+# 157 "data/maps/Planet01_03/scripts.pory"
+	call EventScript_RockSmash
+# 158 "data/maps/Planet01_03/scripts.pory"
+	setflag FLAG_TEMP_1B
+# 159 "data/maps/Planet01_03/scripts.pory"
+	removeobject 15
+# 160 "data/maps/Planet01_03/scripts.pory"
+	release
+	end
+
+
+Planet01_03_EventScript_RockSmash13::
+# 165 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 166 "data/maps/Planet01_03/scripts.pory"
+	faceplayer
+# 167 "data/maps/Planet01_03/scripts.pory"
+	call EventScript_RockSmash
+# 168 "data/maps/Planet01_03/scripts.pory"
+	setflag FLAG_TEMP_1C
+# 169 "data/maps/Planet01_03/scripts.pory"
+	removeobject 19
+# 170 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 
 Planet01_03_EventScript_RockSmash14::
-# 144 "data/maps/Planet01_03/scripts.pory"
+# 175 "data/maps/Planet01_03/scripts.pory"
 	lock
-# 145 "data/maps/Planet01_03/scripts.pory"
+# 176 "data/maps/Planet01_03/scripts.pory"
 	faceplayer
-# 146 "data/maps/Planet01_03/scripts.pory"
+# 177 "data/maps/Planet01_03/scripts.pory"
 	call EventScript_RockSmash
-# 147 "data/maps/Planet01_03/scripts.pory"
+# 178 "data/maps/Planet01_03/scripts.pory"
 	setflag FLAG_TEMP_1D
-# 148 "data/maps/Planet01_03/scripts.pory"
+# 179 "data/maps/Planet01_03/scripts.pory"
+	removeobject 18
+# 180 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 
 Planet01_03_EventScript_RockSmash15::
-# 153 "data/maps/Planet01_03/scripts.pory"
+# 185 "data/maps/Planet01_03/scripts.pory"
 	lock
-# 154 "data/maps/Planet01_03/scripts.pory"
+# 186 "data/maps/Planet01_03/scripts.pory"
 	faceplayer
-# 155 "data/maps/Planet01_03/scripts.pory"
+# 187 "data/maps/Planet01_03/scripts.pory"
 	call EventScript_RockSmash
-# 156 "data/maps/Planet01_03/scripts.pory"
+# 188 "data/maps/Planet01_03/scripts.pory"
 	setflag FLAG_TEMP_1E
-# 157 "data/maps/Planet01_03/scripts.pory"
+# 189 "data/maps/Planet01_03/scripts.pory"
+	removeobject 20
+# 190 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 
 Planet01_03_EventScript_RockSmash16::
-# 162 "data/maps/Planet01_03/scripts.pory"
+# 195 "data/maps/Planet01_03/scripts.pory"
 	lock
-# 163 "data/maps/Planet01_03/scripts.pory"
+# 196 "data/maps/Planet01_03/scripts.pory"
 	faceplayer
-# 164 "data/maps/Planet01_03/scripts.pory"
+# 197 "data/maps/Planet01_03/scripts.pory"
 	call EventScript_RockSmash
-# 165 "data/maps/Planet01_03/scripts.pory"
+# 198 "data/maps/Planet01_03/scripts.pory"
 	setflag FLAG_TEMP_1F
-# 166 "data/maps/Planet01_03/scripts.pory"
+# 199 "data/maps/Planet01_03/scripts.pory"
+	removeobject 21
+# 200 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 

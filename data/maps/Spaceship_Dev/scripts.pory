@@ -125,15 +125,26 @@ script Spaceship_Dev_EventScript_VitaminVendor {
     faceplayer
     CountItemInBag(ITEM_STARDUST, VAR_STARDUST_COUNT)
     buffernumberstring(STR_VAR_1, VAR_STARDUST_COUNT)
-    msgbox("Synthesize Vitamins using Star Dust?\n"
-            "Your Start Dust: {COLOR BLUE}{SHADOW LIGHT_BLUE}{STR_VAR_1}")
+    CountItemInBag(ITEM_STAR_PIECE, VAR_STAR_PIECE_COUNT)
+    buffernumberstring(STR_VAR_2, VAR_STAR_PIECE_COUNT)
+    msgbox("Craft items? Each item requires x1\n"
+            " Stardust and x1 Star Pieces.\p"
+            "Your Stardust: {COLOR BLUE}{SHADOW LIGHT_BLUE}{STR_VAR_1}\n"
+            "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Your Star Pieces: {COLOR BLUE}{SHADOW LIGHT_BLUE}{STR_VAR_2}")
     waitmessage
     closemessage
 
     checkitem(ITEM_STARDUST, 1)
     if (var(VAR_RESULT) == FALSE)
     {
-        msgbox("You don't have any Star Dust.")
+        msgbox("You don't have enough material.")
+        release
+        end
+    }
+    checkitem(ITEM_STAR_PIECE, 1)
+    if (var(VAR_RESULT) == FALSE)
+    {
+        msgbox("You don't have enough material.")
         release
         end
     }
@@ -142,42 +153,20 @@ script Spaceship_Dev_EventScript_VitaminVendor {
         if (var(VAR_RESULT) == 0)
         {
             removeitem(ITEM_STARDUST, 1)
-            giveitem(ITEM_HP_UP, 1)
-            msgbox("Your Star Dust has been exchanged!")
+            removeitem(ITEM_STAR_PIECE, 1)
+            giveitem(ITEM_BEAST_BALL, 1)
+            msgbox("Your material has been converted!")
         }
         elif (var(VAR_RESULT) == 1)
         {
             removeitem(ITEM_STARDUST, 1)
-            giveitem(ITEM_PROTEIN, 1)
-            msgbox("Your Star Dust has been exchanged!")
-        }
-        elif (var(VAR_RESULT) == 2)
-        {
-            removeitem(ITEM_STARDUST, 1)
-            giveitem(ITEM_IRON, 1)
-            msgbox("Your Star Dust has been exchanged!")
-        }
-        elif (var(VAR_RESULT) == 3)
-        {
-            removeitem(ITEM_STARDUST, 1)
-            giveitem(ITEM_CALCIUM, 1)
-            msgbox("Your Star Dust has been exchanged!")
-        }
-        elif (var(VAR_RESULT) == 4)
-        {
-            removeitem(ITEM_STARDUST, 1)
-            giveitem(ITEM_ZINC, 1)
-            msgbox("Your Star Dust has been exchanged!")
-        }
-        elif (var(VAR_RESULT) == 5)
-        {
-            removeitem(ITEM_STARDUST, 1)
-            giveitem(ITEM_CARBOS, 1)
-            msgbox("Your Star Dust has been exchanged!")
+            removeitem(ITEM_STAR_PIECE, 1)
+            giveitem(ITEM_REPEL, 1)
+            msgbox("Your material has been converted!")
         }
         else
         {
-            msgbox("Vitamin synthesis canceled.")
+            msgbox("Crafting canceled.")
             release
             end
         }
