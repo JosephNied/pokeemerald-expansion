@@ -1036,6 +1036,9 @@ static void Task_StartUseRepel(u8 taskId)
 
 static void Task_UseRepel(u8 taskId)
 {
+    //VarSet(VAR_AIR_TIMER_STEPS, 150);
+    //special(AddAirTimerMap);
+    
     if (!IsSEPlaying())
     {
         VarSet(VAR_REPEL_STEP_COUNT, GetItemHoldEffectParam(gSpecialVar_ItemId));

@@ -25,12 +25,6 @@ Spaceship_Dev_EventScript_BallItem01::
 	giveitem ITEM_DEVON_PARTS
 # 18 "data/maps/Spaceship_Dev/scripts.pory"
 	giveitem ITEM_DEVON_SCOPE
-# 19 "data/maps/Spaceship_Dev/scripts.pory"
-	giveitem ITEM_ITEMFINDER
-# 20 "data/maps/Spaceship_Dev/scripts.pory"
-	giveitem ITEM_STAR_PIECE, 3
-# 21 "data/maps/Spaceship_Dev/scripts.pory"
-	giveitem ITEM_STARDUST, 3
 # 22 "data/maps/Spaceship_Dev/scripts.pory"
 	setflag FLAG_UNUSED_0x027
 # 23 "data/maps/Spaceship_Dev/scripts.pory"
@@ -253,12 +247,12 @@ Spaceship_Dev_EventScript_VitaminVendor::
 # 155 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq Spaceship_Dev_EventScript_VitaminVendor_8
-# 162 "data/maps/Spaceship_Dev/scripts.pory"
+# 169 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq Spaceship_Dev_EventScript_VitaminVendor_9
-# 179 "data/maps/Spaceship_Dev/scripts.pory"
+# 186 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox Spaceship_Dev_EventScript_VitaminVendor_Text_4
-# 180 "data/maps/Spaceship_Dev/scripts.pory"
+# 187 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
@@ -270,7 +264,7 @@ Spaceship_Dev_EventScript_VitaminVendor_2:
 	end
 
 Spaceship_Dev_EventScript_VitaminVendor_4:
-# 184 "data/maps/Spaceship_Dev/scripts.pory"
+# 191 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
@@ -283,49 +277,61 @@ Spaceship_Dev_EventScript_VitaminVendor_5:
 
 Spaceship_Dev_EventScript_VitaminVendor_8:
 # 157 "data/maps/Spaceship_Dev/scripts.pory"
+	compare VAR_TOTAL_BALL_COUNT, 5
+	goto_if_ge Spaceship_Dev_EventScript_VitaminVendor_13
+# 162 "data/maps/Spaceship_Dev/scripts.pory"
 	removeitem ITEM_STARDUST, 1
-# 158 "data/maps/Spaceship_Dev/scripts.pory"
+# 163 "data/maps/Spaceship_Dev/scripts.pory"
 	removeitem ITEM_STAR_PIECE, 1
-# 159 "data/maps/Spaceship_Dev/scripts.pory"
+# 164 "data/maps/Spaceship_Dev/scripts.pory"
 	giveitem ITEM_BEAST_BALL, 1
-# 160 "data/maps/Spaceship_Dev/scripts.pory"
-	msgbox Spaceship_Dev_EventScript_VitaminVendor_Text_2
+# 165 "data/maps/Spaceship_Dev/scripts.pory"
+	addvar VAR_TOTAL_BALL_COUNT, 1
+# 166 "data/maps/Spaceship_Dev/scripts.pory"
+	msgbox Spaceship_Dev_EventScript_VitaminVendor_Text_3
 	goto Spaceship_Dev_EventScript_VitaminVendor_4
 
 Spaceship_Dev_EventScript_VitaminVendor_9:
-# 164 "data/maps/Spaceship_Dev/scripts.pory"
-	CountItemInBag ITEM_REPEL, VAR_STARDUST_COUNT
-# 165 "data/maps/Spaceship_Dev/scripts.pory"
-	buffernumberstring STR_VAR_1, VAR_STARDUST_COUNT
-# 166 "data/maps/Spaceship_Dev/scripts.pory"
-	compare VAR_STARDUST_COUNT, 2
-	goto_if_ge Spaceship_Dev_EventScript_VitaminVendor_13
 # 171 "data/maps/Spaceship_Dev/scripts.pory"
-	removeitem ITEM_STARDUST, 1
+	CountItemInBag ITEM_REPEL, VAR_STARDUST_COUNT
 # 172 "data/maps/Spaceship_Dev/scripts.pory"
-	removeitem ITEM_STAR_PIECE, 1
+	buffernumberstring STR_VAR_1, VAR_STARDUST_COUNT
 # 173 "data/maps/Spaceship_Dev/scripts.pory"
+	compare VAR_STARDUST_COUNT, 2
+	goto_if_ge Spaceship_Dev_EventScript_VitaminVendor_16
+# 178 "data/maps/Spaceship_Dev/scripts.pory"
+	removeitem ITEM_STARDUST, 1
+# 179 "data/maps/Spaceship_Dev/scripts.pory"
+	removeitem ITEM_STAR_PIECE, 1
+# 180 "data/maps/Spaceship_Dev/scripts.pory"
 	giveitem ITEM_REPEL, 1
-# 174 "data/maps/Spaceship_Dev/scripts.pory"
-	msgbox Spaceship_Dev_EventScript_VitaminVendor_Text_2
+# 181 "data/maps/Spaceship_Dev/scripts.pory"
+	msgbox Spaceship_Dev_EventScript_VitaminVendor_Text_3
 	goto Spaceship_Dev_EventScript_VitaminVendor_4
 
 Spaceship_Dev_EventScript_VitaminVendor_13:
-# 167 "data/maps/Spaceship_Dev/scripts.pory"
-	msgbox Spaceship_Dev_EventScript_VitaminVendor_Text_3
-# 168 "data/maps/Spaceship_Dev/scripts.pory"
+# 158 "data/maps/Spaceship_Dev/scripts.pory"
+	msgbox Spaceship_Dev_EventScript_VitaminVendor_Text_2
+# 159 "data/maps/Spaceship_Dev/scripts.pory"
+	release
+	end
+
+Spaceship_Dev_EventScript_VitaminVendor_16:
+# 174 "data/maps/Spaceship_Dev/scripts.pory"
+	msgbox Spaceship_Dev_EventScript_VitaminVendor_Text_2
+# 175 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
 
 TestRemovePokes::
-# 189 "data/maps/Spaceship_Dev/scripts.pory"
+# 196 "data/maps/Spaceship_Dev/scripts.pory"
 	lock
-# 190 "data/maps/Spaceship_Dev/scripts.pory"
+# 197 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox TestRemovePokes_Text_0
-# 191 "data/maps/Spaceship_Dev/scripts.pory"
+# 198 "data/maps/Spaceship_Dev/scripts.pory"
 	special RemoveNativeMonsFromParty
-# 192 "data/maps/Spaceship_Dev/scripts.pory"
+# 199 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
@@ -386,17 +392,17 @@ Spaceship_Dev_EventScript_VitaminVendor_Text_1:
 	.string "You don't have enough material.$"
 
 Spaceship_Dev_EventScript_VitaminVendor_Text_2:
-# 160 "data/maps/Spaceship_Dev/scripts.pory"
-	.string "Your material has been converted!$"
-
-Spaceship_Dev_EventScript_VitaminVendor_Text_3:
-# 167 "data/maps/Spaceship_Dev/scripts.pory"
+# 158 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "You can't carry any more of these.$"
 
+Spaceship_Dev_EventScript_VitaminVendor_Text_3:
+# 166 "data/maps/Spaceship_Dev/scripts.pory"
+	.string "Your material has been converted!$"
+
 Spaceship_Dev_EventScript_VitaminVendor_Text_4:
-# 179 "data/maps/Spaceship_Dev/scripts.pory"
+# 186 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Crafting canceled.$"
 
 TestRemovePokes_Text_0:
-# 190 "data/maps/Spaceship_Dev/scripts.pory"
+# 197 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Testing releasing party...$"

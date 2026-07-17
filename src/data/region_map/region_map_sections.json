@@ -1636,8 +1636,24 @@
       "height": 1
     },
     {
+      "id": "MAPSEC_SPACESHIP",
+      "name": "SHIP",
+      "x": 8,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
       "id": "MAPSEC_PLANET_SURFACE",
       "name": "SURFACE",
+      "x": 8,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_PLANET_CAVES",
+      "name": "CAVES",
       "x": 8,
       "y": 4,
       "width": 1,

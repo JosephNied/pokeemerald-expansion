@@ -36,6 +36,7 @@ script Planet01_02_AddAir_Minior01 {
     lockall
     setvar(VAR_AIR_TIMER_STEPS, 150)
     special(AddAirTimerMap)
+    //playse SE_REPEL
     msgbox("Minior is floating in a pocket of air!\n"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
     setflag(FLAG_UNUSED_0x02F)

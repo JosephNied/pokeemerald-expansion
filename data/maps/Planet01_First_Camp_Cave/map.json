@@ -3,7 +3,7 @@
   "name": "Planet01_First_Camp_Cave",
   "layout": "LAYOUT_PLANET01_FIRST_CAMP_CAVE",
   "music": "MUS_CAVE_OF_ORIGIN",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_PLANET_CAVES",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",

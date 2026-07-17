@@ -90,7 +90,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MINIOR)",
       "x": 7,
-      "y": 48,
+      "y": 44,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -103,7 +103,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(CARBINK)",
       "x": 33,
-      "y": 54,
+      "y": 63,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 0,

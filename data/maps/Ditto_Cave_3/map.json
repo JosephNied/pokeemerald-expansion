@@ -3,7 +3,7 @@
   "name": "Ditto_Cave_3",
   "layout": "LAYOUT_DITTO_CAVE_3",
   "music": "MUS_B_PYRAMID",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_PLANET_CAVES",
   "requires_flash": true,
   "weather": "WEATHER_FOG_HORIZONTAL",
   "map_type": "MAP_TYPE_UNDERGROUND",
