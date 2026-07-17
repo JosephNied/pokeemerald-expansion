@@ -3,7 +3,7 @@
   "name": "Planet01_02",
   "layout": "LAYOUT_PLANET01_02",
   "music": "MUS_ABANDONED_SHIP",
-  "region_map_section": "MAPSEC_PLANET_SURFACE",
+  "region_map_section": "MAPSEC_PLANET_SURFACE_02",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",

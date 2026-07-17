@@ -2383,11 +2383,11 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_ESCAPE_ROPE] =
     {
-        .name = ITEM_NAME("Escape Rope"),
+        .name = ITEM_NAME("Teleporter"),
         .description = COMPOUND_STRING(
-            "Use to escape\n"
-            "instantly from a\n"
-            "cave or a dungeon."),
+            "Use to teleport\n"
+            "instantly back to\n"
+            "the spaceship."),
     #if I_KEY_ESCAPE_ROPE >= GEN_8
         .price = 0,
         .importance = 1,
@@ -2400,8 +2400,8 @@ const struct ItemInfo gItemsInfo[] =
         .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_EscapeRope,
         .flingPower = 30,
-        .iconPic = gItemIcon_EscapeRope,
-        .iconPalette = gItemIconPalette_EscapeRope,
+        .iconPic = gItemIcon_DevonScope,
+        .iconPalette = gItemIconPalette_DevonScope,
     },
 
 // X Items

@@ -1146,7 +1146,7 @@ static void ItemUseOnFieldCB_EscapeRope(u8 taskId)
 {
     Overworld_ResetStateAfterDigEscRope();
     if (I_KEY_ESCAPE_ROPE < GEN_8)
-        RemoveBagItem(gSpecialVar_ItemId, 1);
+        //RemoveBagItem(gSpecialVar_ItemId, 1);
 
     CopyItemName(gSpecialVar_ItemId, gStringVar2);
     StringExpandPlaceholders(gStringVar4, gText_PlayerUsedVar2);
@@ -1167,15 +1167,8 @@ bool8 CanUseDigOrEscapeRopeOnCurMap(void)
 
 void ItemUseOutOfBattle_EscapeRope(u8 taskId)
 {
-    if (CanUseDigOrEscapeRopeOnCurMap() == TRUE)
-    {
         sItemUseOnFieldCB = ItemUseOnFieldCB_EscapeRope;
         SetUpItemUseOnFieldCallback(taskId);
-    }
-    else
-    {
-        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
-    }
 }
 
 void ItemUseOutOfBattle_EvolutionStone(u8 taskId)

@@ -24,7 +24,7 @@ Spaceship_Dev_EventScript_BallItem01::
 # 17 "data/maps/Spaceship_Dev/scripts.pory"
 	giveitem ITEM_DEVON_PARTS
 # 18 "data/maps/Spaceship_Dev/scripts.pory"
-	giveitem ITEM_DEVON_SCOPE
+	giveitem ITEM_ESCAPE_ROPE
 # 22 "data/maps/Spaceship_Dev/scripts.pory"
 	setflag FLAG_UNUSED_0x027
 # 23 "data/maps/Spaceship_Dev/scripts.pory"

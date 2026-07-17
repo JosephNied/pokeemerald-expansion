@@ -5,3 +5,33 @@ mapscripts Planet01_05_MapScripts {
 script Planet01_05_Enter {
 	special(SetRandomFlags)
 }
+
+script Planet01_05_DusknoirEncounter {
+    lockall
+    faceplayer
+
+    msgbox("The terrifying Pokémon burst out\n"
+			"of the darkness!")
+
+    setwildbattle(
+        SPECIES_DUSKNOIR,
+        75,
+        ITEM_NONE
+    )
+
+    dowildbattle
+
+    compare(VAR_RESULT, FALSE)
+    goto_if_eq(PlayerLost_Dusknoir)
+
+    removeobject(3)
+    setflag(FLAG_UNUSED_0x03A)
+
+    msgbox("Dusknoir faded into the shadows.")
+    releaseall
+    end
+
+PlayerLost_Dusknoir:
+    releaseall
+    end
+}

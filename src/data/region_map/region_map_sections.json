@@ -1644,16 +1644,64 @@
       "height": 1
     },
     {
-      "id": "MAPSEC_PLANET_SURFACE",
-      "name": "SURFACE",
+      "id": "MAPSEC_PLANET_SURFACE_01",
+      "name": "TWILIGHT PLATEAU",
       "x": 8,
       "y": 4,
       "width": 1,
       "height": 1
     },
     {
-      "id": "MAPSEC_PLANET_CAVES",
-      "name": "CAVE",
+      "id": "MAPSEC_PLANET_SURFACE_02",
+      "name": "FOREST",
+      "x": 8,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_PLANET_SURFACE_03",
+      "name": "SHORELINE CAVERNS",
+      "x": 8,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_PLANET_SURFACE_04",
+      "name": "MISTY MOUNTAIN",
+      "x": 8,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_PLANET_SURFACE_05",
+      "name": "MYSTERIOUS CREVICE",
+      "x": 8,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_PLANET_CAVES_01",
+      "name": "MYSTERIOUS CAVE",
+      "x": 8,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_PLANET_CAVES_02",
+      "name": "GEMSTONE CAVE",
+      "x": 8,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_PLANET_CAVES_03",
+      "name": "FIRST CAMP CAVE",
       "x": 8,
       "y": 4,
       "width": 1,

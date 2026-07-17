@@ -3,7 +3,7 @@
   "name": "Ditto_Cave",
   "layout": "LAYOUT_DITTO_CAVE",
   "music": "MUS_B_PYRAMID",
-  "region_map_section": "MAPSEC_PLANET_CAVES",
+  "region_map_section": "MAPSEC_PLANET_CAVES_01",
   "requires_flash": true,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
