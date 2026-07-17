@@ -39,58 +39,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Spaceship_Dev_EventScript_Item01",
       "flag": "FLAG_UNUSED_0x028"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BRENDAN_NORMAL",
-      "x": 17,
-      "y": 8,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Spaceship_Dev_EventScript_ChangePlanet",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 12,
-      "y": 7,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Spaceship_Dev_EventScript_UpdateWarp",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 8,
-      "y": 8,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Spaceship_Dev_EventScript_VitaminVendor",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BRENDAN_NORMAL",
-      "x": 7,
-      "y": 13,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "TestRemovePokes",
-      "flag": "0"
     }
   ],
   "warp_events": [
@@ -231,6 +179,62 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route119_WeatherInstitute_1F_EventScript_Bed"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Spaceship_Dev_EventScript_VitaminVendor"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Spaceship_Dev_EventScript_VitaminVendor"
+    },
+    {
+      "type": "sign",
+      "x": 12,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Spaceship_Dev_EventScript_UpdateWarp"
+    },
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Spaceship_Dev_EventScript_ChangePlanet"
+    },
+    {
+      "type": "sign",
+      "x": 16,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Spaceship_Dev_EventScript_ChangePlanet"
+    },
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "TestRemovePokes"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "TestRemovePokes"
     }
   ]
 }

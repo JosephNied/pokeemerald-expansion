@@ -7833,7 +7833,7 @@ static const struct LevelUpMove sDelcattyLevelUpLearnset[] = {
 static const struct LevelUpMove sSableyeLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1, MOVE_DISABLE),
     LEVEL_UP_MOVE(1, MOVE_NIGHT_SHADE),
-    LEVEL_UP_MOVE(1, MOVE_KNOCK_OFF),
+    LEVEL_UP_MOVE(1, MOVE_DESTINY_BOND),
     LEVEL_UP_MOVE(1, MOVE_FOUL_PLAY),
     LEVEL_UP_END
 };

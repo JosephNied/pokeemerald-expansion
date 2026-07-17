@@ -4,8 +4,29 @@ Ditto_Cave_Bottom_MapScripts::
 `
 
 script Ditto_Cave_Bottom_DittoTrainer {
-	trainerbattle_single(TRAINER_MITCHELL, Ditto_Intro, Ditto_Outro)
-	msgbox(PostBattle_Ditto, MSGBOX_AUTOCLOSE)
+	trainerbattle_single(TRAINER_MITCHELL, Ditto_Cave_Bottom_Ditto_Intro, Ditto_Cave_Bottom_Ditto_Outro)
+	msgbox(Ditto_Cave_Bottom_PostBattle_Ditto, MSGBOX_AUTOCLOSE)
 	waitmessage
+	end
+}
+
+text Ditto_Cave_Bottom_Ditto_Intro {
+	"!!!"
+}
+
+text Ditto_Cave_Bottom_Ditto_Outro {
+	"Ditto!"
+}
+
+text Ditto_Cave_Bottom_PostBattle_Ditto {
+	"Ditto..."
+}
+
+script Ditto_Cave_Bottom_EventScript_Item01 {
+	lock
+	giveitem(ITEM_SUN_STONE, 1)
+	removeobject(2)
+	setflag(FLAG_UNUSED_0x499)
+	release
 	end
 }

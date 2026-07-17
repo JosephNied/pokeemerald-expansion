@@ -4588,17 +4588,17 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 133 : 98,
         .evYield_Attack = 1,
         .evYield_Defense = 1,
-        .itemCommon = ITEM_SUN_STONE,
-        .itemRare = ITEM_SUN_STONE,
+        .itemCommon = ITEM_DUSK_STONE,
+        .itemRare = ITEM_DUSK_STONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 25,
         .friendship = 35,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_KEEN_EYE, ABILITY_STALL, ABILITY_PRANKSTER },
+        .abilities = { ABILITY_PRANKSTER, ABILITY_PRANKSTER, ABILITY_PRANKSTER },
     #else
-        .abilities = { ABILITY_KEEN_EYE, ABILITY_NONE, ABILITY_PRANKSTER },
+        .abilities = { ABILITY_PRANKSTER, ABILITY_PRANKSTER, ABILITY_PRANKSTER },
     #endif
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Sableye"),
