@@ -9,6 +9,23 @@ script Spaceship_Dev_Enter {
 	end
 }
 
+script refill_air_canister {
+    lock
+    faceplayer
+    msgbox("Refilling your empty canister...")
+    waitmessage
+    checkitem(ITEM_SUPER_REPEL, 1)
+    if (var(VAR_RESULT) == TRUE) {
+        CountItemInBag(ITEM_SUPER_REPEL, VAR_STARDUST_COUNT) //reusing this variable
+        removeitem(ITEM_SUPER_REPEL, VAR_STARDUST_COUNT)
+        giveitem(ITEM_REPEL, VAR_STARDUST_COUNT)
+    } else {
+        msgbox("You don't have any empty canisters to refill.")
+    }
+    release
+    end
+}
+
 script Spaceship_Dev_EventScript_BallItem01 {
     lock
     faceplayer
@@ -16,6 +33,7 @@ script Spaceship_Dev_EventScript_BallItem01 {
     giveitem(ITEM_SCANNER)
     giveitem(ITEM_DEVON_PARTS)
     giveitem(ITEM_ESCAPE_ROPE)
+    giveitem(ITEM_REPEL, 2)
     //giveitem(ITEM_ITEMFINDER)
     //giveitem(ITEM_STAR_PIECE, 3)
     //giveitem(ITEM_STARDUST, 3)
