@@ -20,15 +20,15 @@
     },
     {
       "map": "MAP_PLANET01_02",
-      "offset": -36,
+      "offset": -30,
       "direction": "left"
     }
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SABLEYE)",
-      "x": 11,
-      "y": 1,
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DUSKULL)",
+      "x": 19,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 0,
@@ -39,9 +39,9 @@
       "flag": "FLAG_UNUSED_0x030"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SABLEYE)",
-      "x": 3,
-      "y": 3,
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DUSKULL)",
+      "x": 9,
+      "y": 14,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 0,
@@ -53,8 +53,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(DUSKNOIR)",
-      "x": 8,
-      "y": 5,
+      "x": 16,
+      "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_CHASE_PLAYER_OWE",
       "movement_range_x": 0,
@@ -65,9 +65,9 @@
       "flag": "FLAG_UNUSED_0x03A"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SABLEYE)",
-      "x": 13,
-      "y": 9,
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DUSKULL)",
+      "x": 21,
+      "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 0,
@@ -80,8 +80,8 @@
   ],
   "warp_events": [
     {
-      "x": 8,
-      "y": 3,
+      "x": 16,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_PLANET01_ICE_CAVE",
       "dest_warp_id": "1"

@@ -1135,6 +1135,14 @@ static const struct MenuAction sMultichoiceList_Vitamin_Select[] = {
     {gText_Exit},
 };
 
+static const struct MenuAction sMultichoiceList_Tutorial_Notes[] = {
+    {COMPOUND_STRING("Oxygen")},
+    {COMPOUND_STRING("Meteor Balls")},
+    {COMPOUND_STRING("Scanner")},
+    {COMPOUND_STRING("Teleporter")},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -1309,6 +1317,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_HOF_EGGS_VICTORIES_QUIT]                    = MULTICHOICE(sMultichoiceList_HOF_Eggs_Victories_Quit),
     [MULTI_PLANET_SELECT]                              = MULTICHOICE(sMultichoiceList_Planet_Select),
     [MULTI_VITAMIN_SELECT]                             = MULTICHOICE(sMultichoiceList_Vitamin_Select),
+    [MULTI_TUTORIAL_NOTES]                             = MULTICHOICE(sMultichoiceList_Tutorial_Notes),
 };
 
 const u8 *const gStdStrings[] =

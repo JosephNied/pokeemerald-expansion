@@ -1509,7 +1509,7 @@ static void Task_NewGameBirchSpeech_WaitForPlayerFadeIn(u8 taskId)
     if (gTasks[taskId].tIsDoneFadingSprites)
     {
         gSprites[gTasks[taskId].tPlayerSpriteId].oam.objMode = ST_OAM_OBJ_NORMAL;
-        gTasks[taskId].func = Task_NewGameBirchSpeech_BoyOrGirl;
+        gTasks[taskId].func = Task_NewGameBirchSpeech_WhatsYourName;
     }
 }
 
@@ -1608,6 +1608,8 @@ static void Task_NewGameBirchSpeech_SlideInNewGenderSprite(u8 taskId)
 static void Task_NewGameBirchSpeech_WhatsYourName(u8 taskId)
 {
     NewGameBirchSpeech_ClearWindow(0);
+    //enum Gender gender = NewGameBirchSpeech_ProcessGenderMenuInput();
+    //gSaveBlock2Ptr->playerGender = gender;
     StringExpandPlaceholders(gStringVar4, gText_Birch_WhatsYourName);
     AddTextPrinterForMessage(TRUE);
     gTasks[taskId].func = Task_NewGameBirchSpeech_WaitForWhatsYourNameToPrint;

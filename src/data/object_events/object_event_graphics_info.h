@@ -2034,12 +2034,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MayUnderwater = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MovingBox = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_MOVING_BOX,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,
     .height = 16,
-    .paletteSlot = PALSLOT_NPC_SPECIAL,
+    .paletteSlot = PALSLOT_NPC_4,
     .shadowSize = SHADOW_SIZE_S,
     .inanimate = TRUE,
     .compressed = FALSE,

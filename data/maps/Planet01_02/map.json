@@ -30,7 +30,7 @@
     },
     {
       "map": "MAP_PLANET01_05",
-      "offset": 36,
+      "offset": 30,
       "direction": "right"
     }
   ],
@@ -89,8 +89,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MINIOR)",
-      "x": 7,
-      "y": 44,
+      "x": 6,
+      "y": 50,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -346,6 +346,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Planet01_02_EventScript_Item01",
       "flag": "FLAG_UNUSED_0x495"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(MINIOR)",
+      "x": 19,
+      "y": 29,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "50",
+      "script": "Planet01_02_AddAir_Minior01",
+      "flag": "FLAG_UNUSED_0x02F"
     }
   ],
   "warp_events": [],

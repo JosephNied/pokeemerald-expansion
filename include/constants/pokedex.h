@@ -1109,6 +1109,7 @@ enum NationalDexOrder
     F(TEDDIURSA) \
     F(URSARING) \
     F(URSALUNA) \
+    F(DUSKNOIR) \
     F(DEOXYS)
 
 // Hoenn Pokédex order
