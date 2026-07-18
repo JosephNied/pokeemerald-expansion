@@ -46,19 +46,35 @@ script Spaceship_Dev_EventScript_BallItem01 {
 script Spaceship_Dev_EventScript_Tutorial_Notebook {
     lock
     faceplayer
-    msgbox("Explorer's Guide: What would you like to learn about?")
+    msgbox("Explorer's Guide: What would you like to \n"
+    "learn about?")
     multichoice(0, 0, MULTI_TUTORIAL_NOTES, FALSE)
     if (var(VAR_RESULT) == 0) {
-        msgbox("Your Oxygen System reports how many units of O2 remain in your portable life support system.")
+        msgbox("Your {COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen System{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} reports how many\n"
+        "units of O2 remain in your portable life \l"
+        "support system.")
     }
     if (var(VAR_RESULT) == 1) {
-        msgbox("Meteor Balls never fail. They can be reused if the Pokemon inside is released.")
+        msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Meteor Balls{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} never fail. They can be \n"
+        "reused if the Pokemon inside is \l"
+        "released.")
     }
     if (var(VAR_RESULT) == 2) {
-        msgbox("The scanner logs useful information about wild Pokemon while allowing you to escape the confrontation unharmed. ")
+        msgbox("The {COLOR BLUE}{SHADOW LIGHT_BLUE}Scanner{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} logs useful information\n"
+        "about wild Pokemon while allowing you\l"
+        "to escape the confrontation unharmed.")
     }
     if (var(VAR_RESULT) == 3) {
-        msgbox("The Teleporter can be used to warp back to the ship, and also will automatically trigger in emergency situations.")
+        msgbox("The {COLOR BLUE}{SHADOW LIGHT_BLUE}Teleporter{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} can be used to warp\n"
+        "back to the ship, and also will \l"
+        "automatically trigger in emergency \l"
+        "situations.")
+    }
+    if (var(VAR_RESULT) == 4) {
+        msgbox("You can craft {COLOR BLUE}{SHADOW LIGHT_BLUE}Meteor Balls{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} and \n"
+        "{COLOR BLUE}{SHADOW LIGHT_BLUE}Air Canisters{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} using the ship's\l"
+        "crafting machine, provided you have\l"
+        "sufficient Star Pieces and Stardust.")
     }
     release
     end

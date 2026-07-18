@@ -1140,6 +1140,7 @@ static const struct MenuAction sMultichoiceList_Tutorial_Notes[] = {
     {COMPOUND_STRING("Meteor Balls")},
     {COMPOUND_STRING("Scanner")},
     {COMPOUND_STRING("Teleporter")},
+    {COMPOUND_STRING("Crafting")},
     {gText_Exit},
 };
 
