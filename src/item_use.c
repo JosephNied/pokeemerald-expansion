@@ -1036,20 +1036,21 @@ static void Task_StartUseRepel(u8 taskId)
 
 static void Task_UseRepel(u8 taskId)
 {
-    //VarSet(VAR_AIR_TIMER_STEPS, 150);
-    //special(AddAirTimerMap);
-    
-    if (!IsSEPlaying())
+    AddAirTimer(150),
+    AddBagItem(ITEM_SUPER_REPEL, 1);
+    /*if (!IsSEPlaying())
     {
         VarSet(VAR_REPEL_STEP_COUNT, GetItemHoldEffectParam(gSpecialVar_ItemId));
     #if VAR_LAST_REPEL_LURE_USED != 0
         VarSet(VAR_LAST_REPEL_LURE_USED, gSpecialVar_ItemId);
-    #endif
-        RemoveUsedItem();
-        if (CurrentBattlePyramidLocation() == PYRAMID_LOCATION_NONE)
-            DisplayItemMessage(taskId, FONT_NORMAL, gStringVar4, CloseItemMessage);
-        else
-            DisplayItemMessageInBattlePyramid(taskId, gStringVar4, Task_CloseBattlePyramidBagMessage);
+    #endif*/
+    RemoveUsedItem();
+    if (CurrentBattlePyramidLocation() == PYRAMID_LOCATION_NONE)
+    {
+        DisplayItemMessage(taskId, FONT_NORMAL, gStringVar4, CloseItemMessage);
+    } else 
+    {
+        DisplayItemMessageInBattlePyramid(taskId, gStringVar4, Task_CloseBattlePyramidBagMessage);
     }
 }
 void HandleUseExpiredRepel(struct ScriptContext *ctx)
@@ -1145,13 +1146,15 @@ void Task_UseDigEscapeRopeOnField(u8 taskId)
 static void ItemUseOnFieldCB_EscapeRope(u8 taskId)
 {
     Overworld_ResetStateAfterDigEscRope();
-    if (I_KEY_ESCAPE_ROPE < GEN_8)
+    //if (I_KEY_ESCAPE_ROPE < GEN_8)
         //RemoveBagItem(gSpecialVar_ItemId, 1);
-
-    CopyItemName(gSpecialVar_ItemId, gStringVar2);
-    StringExpandPlaceholders(gStringVar4, gText_PlayerUsedVar2);
+    
+    static const u8 gText_PlayerUsedTeleporter[] = _("Player used the Teleporter.");
+    //CopyItemName(gSpecialVar_ItemId, gStringVar2);
+    //StringExpandPlaceholders(gStringVar4, gText_PlayerUsedVar2);
     gTasks[taskId].data[0] = 0;
-    DisplayItemMessageOnField(taskId, gStringVar4, Task_UseDigEscapeRopeOnField);
+    //DisplayItemMessageOnField(taskId, gStringVar4, Task_UseDigEscapeRopeOnField);
+    DisplayItemMessageOnField(taskId, gText_PlayerUsedTeleporter, Task_UseDigEscapeRopeOnField);
 }
 
 bool8 CanUseDigOrEscapeRopeOnCurMap(void)
