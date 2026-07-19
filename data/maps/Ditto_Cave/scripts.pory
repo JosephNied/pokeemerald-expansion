@@ -5,11 +5,11 @@ mapscripts Ditto_Cave_MapScripts {
 script Ditto_Cave_Enter {
     setflashlevel(4)
 	special(SetRandomFlags)
-    delay(10)
 }
 
 movement Movement_DittoLeaves {
     emote_exclamation_mark
+    delay_16
     delay_16
     face_up
     walk_up
@@ -20,8 +20,9 @@ movement Movement_DittoLeaves {
 script Ditto_Test {
     lock
     faceplayer
-    applymovement(VAR_LAST_TALKED, Movement_DittoLeaves)
+    applymovement(1, Movement_DittoLeaves)
     waitmovement(0)
     removeobject(1)
-    release
+    setflag(FLAG_RECEIVED_BELDUM)
+    releaseall
 }

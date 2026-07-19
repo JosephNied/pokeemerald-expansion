@@ -9,15 +9,15 @@ Ditto_Cave_Enter::
 	setflashlevel 4
 # 7 "data/maps/Ditto_Cave/scripts.pory"
 	special SetRandomFlags
-# 8 "data/maps/Ditto_Cave/scripts.pory"
-	delay 10
 	return
 
 
-# 11 "data/maps/Ditto_Cave/scripts.pory"
+# 10 "data/maps/Ditto_Cave/scripts.pory"
 Movement_DittoLeaves:
-# 12 "data/maps/Ditto_Cave/scripts.pory"
+# 11 "data/maps/Ditto_Cave/scripts.pory"
 	emote_exclamation_mark
+# 12 "data/maps/Ditto_Cave/scripts.pory"
+	delay_16
 # 13 "data/maps/Ditto_Cave/scripts.pory"
 	delay_16
 # 14 "data/maps/Ditto_Cave/scripts.pory"
@@ -36,12 +36,14 @@ Ditto_Test::
 # 22 "data/maps/Ditto_Cave/scripts.pory"
 	faceplayer
 # 23 "data/maps/Ditto_Cave/scripts.pory"
-	applymovement VAR_LAST_TALKED, Movement_DittoLeaves
+	applymovement 1, Movement_DittoLeaves
 # 24 "data/maps/Ditto_Cave/scripts.pory"
 	waitmovement 0
 # 25 "data/maps/Ditto_Cave/scripts.pory"
 	removeobject 1
 # 26 "data/maps/Ditto_Cave/scripts.pory"
-	release
+	setflag FLAG_RECEIVED_BELDUM
+# 27 "data/maps/Ditto_Cave/scripts.pory"
+	releaseall
 	return
 
