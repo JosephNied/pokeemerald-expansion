@@ -3,6 +3,7 @@ mapscripts Ditto_Cave_MapScripts {
 }
 
 script Ditto_Cave_Enter {
+    setflashlevel(4)
 	special(SetRandomFlags)
     delay(10)
 }

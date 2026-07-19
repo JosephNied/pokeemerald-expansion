@@ -6,40 +6,42 @@ Ditto_Cave_MapScripts::
 
 Ditto_Cave_Enter::
 # 6 "data/maps/Ditto_Cave/scripts.pory"
-	special SetRandomFlags
+	setflashlevel 4
 # 7 "data/maps/Ditto_Cave/scripts.pory"
+	special SetRandomFlags
+# 8 "data/maps/Ditto_Cave/scripts.pory"
 	delay 10
 	return
 
 
-# 10 "data/maps/Ditto_Cave/scripts.pory"
-Movement_DittoLeaves:
 # 11 "data/maps/Ditto_Cave/scripts.pory"
-	emote_exclamation_mark
+Movement_DittoLeaves:
 # 12 "data/maps/Ditto_Cave/scripts.pory"
-	delay_16
+	emote_exclamation_mark
 # 13 "data/maps/Ditto_Cave/scripts.pory"
-	face_up
+	delay_16
 # 14 "data/maps/Ditto_Cave/scripts.pory"
-	walk_up
+	face_up
 # 15 "data/maps/Ditto_Cave/scripts.pory"
 	walk_up
 # 16 "data/maps/Ditto_Cave/scripts.pory"
 	walk_up
+# 17 "data/maps/Ditto_Cave/scripts.pory"
+	walk_up
 	step_end
 
 Ditto_Test::
-# 20 "data/maps/Ditto_Cave/scripts.pory"
-	lock
 # 21 "data/maps/Ditto_Cave/scripts.pory"
-	faceplayer
+	lock
 # 22 "data/maps/Ditto_Cave/scripts.pory"
-	applymovement VAR_LAST_TALKED, Movement_DittoLeaves
+	faceplayer
 # 23 "data/maps/Ditto_Cave/scripts.pory"
-	waitmovement 0
+	applymovement VAR_LAST_TALKED, Movement_DittoLeaves
 # 24 "data/maps/Ditto_Cave/scripts.pory"
-	removeobject 1
+	waitmovement 0
 # 25 "data/maps/Ditto_Cave/scripts.pory"
+	removeobject 1
+# 26 "data/maps/Ditto_Cave/scripts.pory"
 	release
 	return
 
