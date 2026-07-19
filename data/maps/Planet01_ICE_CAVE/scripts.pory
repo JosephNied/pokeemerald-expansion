@@ -5,3 +5,21 @@ mapscripts Planet01_ICE_CAVE_MapScripts {
 script Planet01_ICE_CAVE_Enter {
 	special(SetRandomFlags)
 }
+
+script Planet01_Ice_Cave_EventScript_Item01 {
+	lock
+	giveitem(ITEM_STAR_PIECE, 1)
+	removeobject(10)
+	setflag(FLAG_UNUSED_0x49D)
+	release
+	end
+}
+
+script Planet01_Ice_Cave_EventScript_Item02 {
+	lock
+	giveitem(ITEM_SITRUS_BERRY, 1)
+	removeobject(9)
+	setflag(FLAG_UNUSED_0x49E)
+	release
+	end
+}

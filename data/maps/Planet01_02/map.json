@@ -137,7 +137,7 @@
       "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
       "trainer_sight_or_berry_tree_id": "30",
       "script": "NULL",
-      "flag": "FLAG_UNUSED_0x031"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(QUAGSIRE)",
@@ -358,7 +358,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "50",
       "script": "Planet01_02_AddAir_Minior01",
-      "flag": "FLAG_UNUSED_0x02F"
+      "flag": "FLAG_UNUSED_0x031"
     }
   ],
   "warp_events": [],

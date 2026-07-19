@@ -10,16 +10,27 @@ script Planet01_05_DusknoirEncounter {
     lockall
     faceplayer
 
-    msgbox("The terrifying Pokémon burst out\n"
+    msgbox("A terrifying Pokémon bursts out\n"
 			"of the darkness!")
 
+    applymovement(VAR_LAST_TALKED, Common_Movement_FacePlayer)
+    waitmovement(0)
+    applymovement(VAR_LAST_TALKED, Movement_DusknoirAppears)
+    waitmovement(0)
+
+    waitse()
+    playmoncry(SPECIES_DUSKNOIR, CRY_MODE_ENCOUNTER)
+    delay(40)
+    waitmoncry()
+
+    special(SetBossBattle)
     setwildbattle(
         SPECIES_DUSKNOIR,
         75,
         ITEM_NONE
     )
-
     dowildbattle
+    special(BossBattleOff)
 
     compare(VAR_RESULT, FALSE)
     goto_if_eq(PlayerLost_Dusknoir)
@@ -27,11 +38,36 @@ script Planet01_05_DusknoirEncounter {
     removeobject(3)
     setflag(FLAG_UNUSED_0x03A)
 
-    msgbox("Dusknoir faded into the shadows.")
+    msgbox("Dusknoir faded into the \n"
+    "shadows.")
     releaseall
     end
 
 PlayerLost_Dusknoir:
     releaseall
     end
+}
+
+movement Movement_DusknoirAppears {
+    set_visible
+    delay_4
+    set_invisible
+    delay_4
+    set_visible
+    delay_4
+    set_invisible
+    delay_4
+    set_visible
+    delay_8
+    set_invisible
+    delay_8
+    set_visible
+    delay_8
+    set_invisible
+    delay_8
+    set_visible
+    delay_16
+    set_invisible
+    delay_16
+    set_visible
 }

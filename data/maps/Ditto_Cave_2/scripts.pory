@@ -9,23 +9,8 @@ script Ditto_Cave_2_Enter {
 script Ditto_Cave_2_EventScript_Item01 {
     lock
     giveitem(ITEM_STAR_PIECE, 1)
-    removeobject(2)
+    removeobject(1)
     setflag(FLAG_UNUSED_0x499)
     release
-    end
-}
-
-script Ditto_Cave_2_AddAir_Minior01 {
-    lockall
-    setvar(VAR_AIR_TIMER_STEPS, 150)
-    special(AddAirTimerMap)
-    msgbox("Minior is floating in a pocket of air!\n"
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
-    setflag(FLAG_UNUSED_0x031)
-    fadeScreen(FADE_TO_BLACK)
-    removeobject(1)
-    fadeScreen(FADE_FROM_BLACK)
-    msgbox("Minior flew away...")
-    releaseall
     end
 }

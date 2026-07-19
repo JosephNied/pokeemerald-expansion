@@ -28,7 +28,7 @@ Planet01_02_EventScript_Item01::
 # 18 "data/maps/Planet01_02/scripts.pory"
 	lock
 # 19 "data/maps/Planet01_02/scripts.pory"
-	giveitem ITEM_SITRUS_BERRY, 1
+	giveitem ITEM_LUM_BERRY, 1
 # 20 "data/maps/Planet01_02/scripts.pory"
 	removeobject 24
 # 21 "data/maps/Planet01_02/scripts.pory"

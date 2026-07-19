@@ -7,38 +7,39 @@ Ditto_Cave_MapScripts::
 Ditto_Cave_Enter::
 # 6 "data/maps/Ditto_Cave/scripts.pory"
 	special SetRandomFlags
+# 7 "data/maps/Ditto_Cave/scripts.pory"
+	delay 10
 	return
 
 
-Ditto_Cave_AddAir_Minior01::
 # 10 "data/maps/Ditto_Cave/scripts.pory"
-	lockall
+Movement_DittoLeaves:
 # 11 "data/maps/Ditto_Cave/scripts.pory"
-	setvar VAR_AIR_TIMER_STEPS, 200
+	emote_exclamation_mark
 # 12 "data/maps/Ditto_Cave/scripts.pory"
-	special AddAirTimerMap
+	delay_16
 # 13 "data/maps/Ditto_Cave/scripts.pory"
-	msgbox Ditto_Cave_AddAir_Minior01_Text_0
+	face_up
+# 14 "data/maps/Ditto_Cave/scripts.pory"
+	walk_up
 # 15 "data/maps/Ditto_Cave/scripts.pory"
-	setflag FLAG_UNUSED_0x032
+	walk_up
 # 16 "data/maps/Ditto_Cave/scripts.pory"
-	fadeScreen FADE_TO_BLACK
-# 17 "data/maps/Ditto_Cave/scripts.pory"
-	removeobject 1
-# 18 "data/maps/Ditto_Cave/scripts.pory"
-	fadeScreen FADE_FROM_BLACK
-# 19 "data/maps/Ditto_Cave/scripts.pory"
-	msgbox Ditto_Cave_AddAir_Minior01_Text_1
+	walk_up
+	step_end
+
+Ditto_Test::
 # 20 "data/maps/Ditto_Cave/scripts.pory"
-	releaseall
-	end
+	lock
+# 21 "data/maps/Ditto_Cave/scripts.pory"
+	faceplayer
+# 22 "data/maps/Ditto_Cave/scripts.pory"
+	applymovement VAR_LAST_TALKED, Movement_DittoLeaves
+# 23 "data/maps/Ditto_Cave/scripts.pory"
+	waitmovement 0
+# 24 "data/maps/Ditto_Cave/scripts.pory"
+	removeobject 1
+# 25 "data/maps/Ditto_Cave/scripts.pory"
+	release
+	return
 
-
-Ditto_Cave_AddAir_Minior01_Text_0:
-# 13 "data/maps/Ditto_Cave/scripts.pory"
-	.string "Minior is floating in a pocket of air!\n"
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!$"
-
-Ditto_Cave_AddAir_Minior01_Text_1:
-# 19 "data/maps/Ditto_Cave/scripts.pory"
-	.string "Minior flew away...$"

@@ -48,6 +48,8 @@ extern const struct RematchTrainer gRematchTable[REMATCH_TABLE_ENTRIES];
 extern TrainerBattleParameter gTrainerBattleParameter;
 extern u16 gPartnerTrainerId;
 
+extern bool8 gScriptedBossBattle;
+
 #define TRAINER_BATTLE_PARAM gTrainerBattleParameter.params
 
 void BattleSetup_StartWildBattle(void);

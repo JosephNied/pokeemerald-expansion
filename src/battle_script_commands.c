@@ -74,6 +74,8 @@
 #include "test/battle.h"
 #include "follower_npc.h"
 #include "load_save.h"
+#include "item.h"
+#include "item_menu.h"
 
 // Helper for accessing command arguments and advancing gBattlescriptCurrInstr.
 //
@@ -10057,11 +10059,12 @@ static void Cmd_handleballthrow(void)
         MarkBattlerForControllerExec(gBattlerAttacker);
         gBattlescriptCurrInstr = BattleScript_GhostBallDodge;
     }
-    else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+    else if (gBattleTypeFlags & (BATTLE_TYPE_TRAINER | BATTLE_TYPE_BOSS_POKE))
     {
         BtlController_EmitBallThrowAnim(gBattlerAttacker, B_COMM_TO_CONTROLLER, BALL_TRAINER_BLOCK);
         MarkBattlerForControllerExec(gBattlerAttacker);
         gBattlescriptCurrInstr = BattleScript_TrainerBallBlock;
+        AddBagItem(ITEM_BEAST_BALL, 1);
     }
     else if (gBattleTypeFlags & BATTLE_TYPE_CATCH_TUTORIAL)
     {

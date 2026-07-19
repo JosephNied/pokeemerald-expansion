@@ -16,7 +16,7 @@ script Planet01_02_Enter {
 
 script Planet01_02_EventScript_Item01 {
     lock
-    giveitem(ITEM_SITRUS_BERRY, 1)
+    giveitem(ITEM_LUM_BERRY, 1)
     removeobject(24)
     setflag(FLAG_UNUSED_0x495)
     release

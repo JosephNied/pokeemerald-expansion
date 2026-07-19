@@ -18,35 +18,102 @@ Planet01_05_DusknoirEncounter::
 # 13 "data/maps/Planet01_05/scripts.pory"
 	msgbox Planet01_05_DusknoirEncounter_Text_0
 # 16 "data/maps/Planet01_05/scripts.pory"
-	setwildbattle SPECIES_DUSKNOIR, 75, ITEM_NONE
+	applymovement VAR_LAST_TALKED, Common_Movement_FacePlayer
+# 17 "data/maps/Planet01_05/scripts.pory"
+	waitmovement 0
+# 18 "data/maps/Planet01_05/scripts.pory"
+	applymovement VAR_LAST_TALKED, Movement_DusknoirAppears
+# 19 "data/maps/Planet01_05/scripts.pory"
+	waitmovement 0
+# 21 "data/maps/Planet01_05/scripts.pory"
+	waitse
 # 22 "data/maps/Planet01_05/scripts.pory"
-	dowildbattle
+	playmoncry SPECIES_DUSKNOIR, CRY_MODE_ENCOUNTER
+# 23 "data/maps/Planet01_05/scripts.pory"
+	delay 40
 # 24 "data/maps/Planet01_05/scripts.pory"
-	compare VAR_RESULT, FALSE
-# 25 "data/maps/Planet01_05/scripts.pory"
-	goto_if_eq PlayerLost_Dusknoir
+	waitmoncry
+# 26 "data/maps/Planet01_05/scripts.pory"
+	special SetBossBattle
 # 27 "data/maps/Planet01_05/scripts.pory"
-	removeobject 3
-# 28 "data/maps/Planet01_05/scripts.pory"
-	setflag FLAG_UNUSED_0x03A
-# 30 "data/maps/Planet01_05/scripts.pory"
-	msgbox Planet01_05_DusknoirEncounter_Text_1
-# 31 "data/maps/Planet01_05/scripts.pory"
-	releaseall
+	setwildbattle SPECIES_DUSKNOIR, 75, ITEM_NONE
 # 32 "data/maps/Planet01_05/scripts.pory"
-	end
-# 34 "data/maps/Planet01_05/scripts.pory"
-PlayerLost_Dusknoir:
+	dowildbattle
+# 33 "data/maps/Planet01_05/scripts.pory"
+	special BossBattleOff
 # 35 "data/maps/Planet01_05/scripts.pory"
+	compare VAR_RESULT, FALSE
+# 36 "data/maps/Planet01_05/scripts.pory"
+	goto_if_eq PlayerLost_Dusknoir
+# 38 "data/maps/Planet01_05/scripts.pory"
+	removeobject 3
+# 39 "data/maps/Planet01_05/scripts.pory"
+	setflag FLAG_UNUSED_0x03A
+# 41 "data/maps/Planet01_05/scripts.pory"
+	msgbox Planet01_05_DusknoirEncounter_Text_1
+# 43 "data/maps/Planet01_05/scripts.pory"
+	releaseall
+# 44 "data/maps/Planet01_05/scripts.pory"
+	end
+# 46 "data/maps/Planet01_05/scripts.pory"
+PlayerLost_Dusknoir:
+# 47 "data/maps/Planet01_05/scripts.pory"
 	releaseall
 	end
 
+
+# 51 "data/maps/Planet01_05/scripts.pory"
+Movement_DusknoirAppears:
+# 52 "data/maps/Planet01_05/scripts.pory"
+	set_visible
+# 53 "data/maps/Planet01_05/scripts.pory"
+	delay_4
+# 54 "data/maps/Planet01_05/scripts.pory"
+	set_invisible
+# 55 "data/maps/Planet01_05/scripts.pory"
+	delay_4
+# 56 "data/maps/Planet01_05/scripts.pory"
+	set_visible
+# 57 "data/maps/Planet01_05/scripts.pory"
+	delay_4
+# 58 "data/maps/Planet01_05/scripts.pory"
+	set_invisible
+# 59 "data/maps/Planet01_05/scripts.pory"
+	delay_4
+# 60 "data/maps/Planet01_05/scripts.pory"
+	set_visible
+# 61 "data/maps/Planet01_05/scripts.pory"
+	delay_8
+# 62 "data/maps/Planet01_05/scripts.pory"
+	set_invisible
+# 63 "data/maps/Planet01_05/scripts.pory"
+	delay_8
+# 64 "data/maps/Planet01_05/scripts.pory"
+	set_visible
+# 65 "data/maps/Planet01_05/scripts.pory"
+	delay_8
+# 66 "data/maps/Planet01_05/scripts.pory"
+	set_invisible
+# 67 "data/maps/Planet01_05/scripts.pory"
+	delay_8
+# 68 "data/maps/Planet01_05/scripts.pory"
+	set_visible
+# 69 "data/maps/Planet01_05/scripts.pory"
+	delay_16
+# 70 "data/maps/Planet01_05/scripts.pory"
+	set_invisible
+# 71 "data/maps/Planet01_05/scripts.pory"
+	delay_16
+# 72 "data/maps/Planet01_05/scripts.pory"
+	set_visible
+	step_end
 
 Planet01_05_DusknoirEncounter_Text_0:
 # 13 "data/maps/Planet01_05/scripts.pory"
-	.string "The terrifying Pokémon burst out\n"
+	.string "A terrifying Pokémon bursts out\n"
 	.string "of the darkness!$"
 
 Planet01_05_DusknoirEncounter_Text_1:
-# 30 "data/maps/Planet01_05/scripts.pory"
-	.string "Dusknoir faded into the shadows.$"
+# 41 "data/maps/Planet01_05/scripts.pory"
+	.string "Dusknoir faded into the \n"
+	.string "shadows.$"

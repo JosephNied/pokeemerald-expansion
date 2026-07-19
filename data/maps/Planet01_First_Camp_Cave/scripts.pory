@@ -14,21 +14,23 @@ script Planet01_First_Camp_Cave_UrsalunaEncounter {
     msgbox("The enormous Pokémon lets out\n"
 			"a deafening roar!")
 
+    special(SetBossBattle)
     setwildbattle(
         SPECIES_URSALUNA,
         75,
         ITEM_NONE
     )
-
     dowildbattle
+    special(BossBattleOff)
 
     compare(VAR_RESULT, FALSE)
     goto_if_eq(PlayerLost)
 
     removeobject(1)
-    setflag(FLAG_UNUSED_0x02A)
+    setflag(FLAG_UNUSED_0x03B)
 
-    msgbox("The Ursaluna disappeared into the cave.")
+    msgbox("The Ursaluna disappeared into the\n"
+    "cave.")
     releaseall
     end
 

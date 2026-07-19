@@ -4,19 +4,23 @@ mapscripts Ditto_Cave_MapScripts {
 
 script Ditto_Cave_Enter {
 	special(SetRandomFlags)
+    delay(10)
 }
 
-script Ditto_Cave_AddAir_Minior01 {
-    lockall
-    setvar(VAR_AIR_TIMER_STEPS, 200)
-    special(AddAirTimerMap)
-    msgbox("Minior is floating in a pocket of air!\n"
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
-    setflag(FLAG_UNUSED_0x032)
-    fadeScreen(FADE_TO_BLACK)
+movement Movement_DittoLeaves {
+    emote_exclamation_mark
+    delay_16
+    face_up
+    walk_up
+    walk_up
+    walk_up
+}
+
+script Ditto_Test {
+    lock
+    faceplayer
+    applymovement(VAR_LAST_TALKED, Movement_DittoLeaves)
+    waitmovement(0)
     removeobject(1)
-    fadeScreen(FADE_FROM_BLACK)
-    msgbox("Minior flew away...")
-    releaseall
-    end
+    release
 }

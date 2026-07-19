@@ -4329,7 +4329,7 @@ static void HandleTurnActionSelectionState(void)
                     gBattleStruct->stateIdAfterSelScript[battler] = STATE_BEFORE_ACTION_CHOSEN;
                     return;
                 }
-                else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER
+                else if (gBattleTypeFlags & (BATTLE_TYPE_TRAINER | BATTLE_TYPE_BOSS_POKE)
                       && !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK))
                       && gBattleResources->bufferB[battler][1] == B_ACTION_RUN)
                 {
