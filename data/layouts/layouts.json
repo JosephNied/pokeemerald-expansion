@@ -9503,6 +9503,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Planet01_First_Camp_Cave/border.bin",
       "blockdata_filepath": "data/layouts/Planet01_First_Camp_Cave/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLANET01_06",
+      "name": "Planet01_06_Layout",
+      "width": 40,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Planet01_06/border.bin",
+      "blockdata_filepath": "data/layouts/Planet01_06/map.bin"
     }
   ]
 }
