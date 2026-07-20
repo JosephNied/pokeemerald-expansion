@@ -8,7 +8,9 @@ script Ditto_Cave_Enter {
 }
 
 movement Movement_DittoLeaves {
+    face_down
     emote_exclamation_mark
+    delay_16
     delay_16
     delay_16
     face_up

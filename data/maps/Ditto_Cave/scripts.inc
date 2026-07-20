@@ -15,35 +15,39 @@ Ditto_Cave_Enter::
 # 10 "data/maps/Ditto_Cave/scripts.pory"
 Movement_DittoLeaves:
 # 11 "data/maps/Ditto_Cave/scripts.pory"
-	emote_exclamation_mark
+	face_down
 # 12 "data/maps/Ditto_Cave/scripts.pory"
-	delay_16
+	emote_exclamation_mark
 # 13 "data/maps/Ditto_Cave/scripts.pory"
 	delay_16
 # 14 "data/maps/Ditto_Cave/scripts.pory"
-	face_up
+	delay_16
 # 15 "data/maps/Ditto_Cave/scripts.pory"
-	walk_up
+	delay_16
 # 16 "data/maps/Ditto_Cave/scripts.pory"
-	walk_up
+	face_up
 # 17 "data/maps/Ditto_Cave/scripts.pory"
+	walk_up
+# 18 "data/maps/Ditto_Cave/scripts.pory"
+	walk_up
+# 19 "data/maps/Ditto_Cave/scripts.pory"
 	walk_up
 	step_end
 
 Ditto_Test::
-# 21 "data/maps/Ditto_Cave/scripts.pory"
-	lock
-# 22 "data/maps/Ditto_Cave/scripts.pory"
-	faceplayer
 # 23 "data/maps/Ditto_Cave/scripts.pory"
-	applymovement 1, Movement_DittoLeaves
+	lock
 # 24 "data/maps/Ditto_Cave/scripts.pory"
-	waitmovement 0
+	faceplayer
 # 25 "data/maps/Ditto_Cave/scripts.pory"
-	removeobject 1
+	applymovement 1, Movement_DittoLeaves
 # 26 "data/maps/Ditto_Cave/scripts.pory"
-	setflag FLAG_RECEIVED_BELDUM
+	waitmovement 0
 # 27 "data/maps/Ditto_Cave/scripts.pory"
+	removeobject 1
+# 28 "data/maps/Ditto_Cave/scripts.pory"
+	setflag FLAG_RECEIVED_BELDUM
+# 29 "data/maps/Ditto_Cave/scripts.pory"
 	releaseall
 	return
 
