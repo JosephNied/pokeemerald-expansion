@@ -13,7 +13,8 @@ script Spaceship_Dev_Enter {
 script refill_air_canister {
     lock
     faceplayer
-    msgbox("Refilling your empty canister...")
+    msgbox("Rotom wants to refill your empty air \n"
+    "canisters!")
     waitmessage
     checkitem(ITEM_SUPER_REPEL, 1)
     if (var(VAR_RESULT) == TRUE) {
@@ -21,7 +22,8 @@ script refill_air_canister {
         removeitem(ITEM_SUPER_REPEL, VAR_STARDUST_COUNT)
         giveitem(ITEM_REPEL, VAR_STARDUST_COUNT)
     } else {
-        msgbox("You don't have any empty canisters to refill.")
+        msgbox("You don't have any empty canisters to\n"
+        "refill.")
     }
     release
     end
@@ -254,6 +256,25 @@ script TestRemovePokes {
     lock
     msgbox("Testing releasing party...")
     special(RemoveNativeMonsFromParty)
+    release
+    end
+}
+
+script Blissey_Bed {
+    lock
+    faceplayer
+    msgbox("Blissey wants to heal the team!")
+    waitmessage
+    call(Common_EventScript_OutOfCenterPartyHeal)
+    release
+    end
+}
+
+script Bellossom {
+    lock
+    faceplayer
+    msgbox("Bellossum converts your C02 into/n"
+    "Oxygen. An important team member!")
     release
     end
 }
