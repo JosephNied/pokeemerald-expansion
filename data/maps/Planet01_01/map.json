@@ -26,17 +26,17 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CLEFAIRY)",
-      "x": 12,
-      "y": 19,
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CARBINK)",
+      "x": 10,
+      "y": 18,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FLEE_PLAYER_OWE",
+      "movement_type": "MOVEMENT_TYPE_APPROACH_PLAYER_OWE",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
-      "trainer_sight_or_berry_tree_id": "30",
-      "script": "NULL",
-      "flag": "FLAG_UNUSED_0x033"
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "50",
+      "script": "Planet01_01_Carbink",
+      "flag": "FLAG_UNUSED_0x04B"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MINIOR)",
@@ -180,6 +180,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Planet01_01_EventScript_Item01",
       "flag": "FLAG_UNUSED_0x493"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CLEFAIRY)",
+      "x": 41,
+      "y": 35,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WATCH_PLAYER_OWE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
+      "trainer_sight_or_berry_tree_id": "30",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x033"
     }
   ],
   "warp_events": [

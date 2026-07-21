@@ -325,3 +325,35 @@ Planet01_03_EventScript_RockSmash16::
 	release
 	end
 
+
+Planet01_03_Carbink::
+# 205 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 206 "data/maps/Planet01_03/scripts.pory"
+	faceplayer
+# 207 "data/maps/Planet01_03/scripts.pory"
+	msgbox Planet01_03_Carbink_Text_0
+# 208 "data/maps/Planet01_03/scripts.pory"
+	setflag FLAG_UNUSED_0x04A
+# 209 "data/maps/Planet01_03/scripts.pory"
+	fadeScreen FADE_TO_BLACK
+# 210 "data/maps/Planet01_03/scripts.pory"
+	removeobject 34
+# 211 "data/maps/Planet01_03/scripts.pory"
+	fadeScreen FADE_FROM_BLACK
+# 212 "data/maps/Planet01_03/scripts.pory"
+	msgbox Planet01_03_Carbink_Text_1
+# 213 "data/maps/Planet01_03/scripts.pory"
+	giveitem ITEM_CHIPPED_POT, 1
+# 214 "data/maps/Planet01_03/scripts.pory"
+	release
+	end
+
+
+Planet01_03_Carbink_Text_0:
+# 207 "data/maps/Planet01_03/scripts.pory"
+	.string "The Carbink really seems to like you!$"
+
+Planet01_03_Carbink_Text_1:
+# 212 "data/maps/Planet01_03/scripts.pory"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Carbink climbed into your bag!$"

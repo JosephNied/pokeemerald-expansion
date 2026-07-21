@@ -153,9 +153,9 @@
       "flag": "FLAG_UNUSED_0x02E"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CARBINK)",
-      "x": 23,
-      "y": 17,
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SABLEYE)",
+      "x": 25,
+      "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 0,
@@ -166,9 +166,9 @@
       "flag": "FLAG_UNUSED_0x02D"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CARBINK)",
-      "x": 30,
-      "y": 21,
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DUSKULL)",
+      "x": 51,
+      "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 0,
@@ -179,7 +179,7 @@
       "flag": "FLAG_UNUSED_0x02C"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CARBINK)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SABLEYE)",
       "x": 48,
       "y": 14,
       "elevation": 0,
@@ -463,6 +463,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Planet01_03_EventScript_Item02",
       "flag": "FLAG_UNUSED_0x498"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CARBINK)",
+      "x": 20,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "50",
+      "script": "Planet01_03_Carbink",
+      "flag": "FLAG_UNUSED_0x04A"
     }
   ],
   "warp_events": [

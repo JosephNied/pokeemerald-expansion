@@ -47,6 +47,21 @@ script Planet01_02_AddAir_Minior01 {
     end
 }
 
+script Planet01_02_AddAir_Minior02 {
+    lockall
+    setvar(VAR_AIR_TIMER_STEPS, 150)
+    special(AddAirTimerMap)
+    msgbox("Minior is floating in a pocket of air!\n"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
+    setflag(FLAG_UNUSED_0x031)
+    fadeScreen(FADE_TO_BLACK)
+    removeobject(25)
+    fadeScreen(FADE_FROM_BLACK)
+    msgbox("Minior flew away...")
+    releaseall
+    end
+}
+
 script Planet01_02_EventScript_RockSmash01 {
     lock
     faceplayer
@@ -106,6 +121,20 @@ script Planet01_02_EventScript_RockSmash07 {
     faceplayer
     call(EventScript_RockSmash)
     setflag(FLAG_TEMP_16)
+    release
+    end
+}
+
+script Planet01_02_Carbink {
+    lock
+    faceplayer
+    msgbox("The Carbink seems lost...!")
+    setflag(FLAG_UNUSED_0x04D)
+    fadeScreen(FADE_TO_BLACK)
+    removeobject(6)
+    fadeScreen(FADE_FROM_BLACK)
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Carbink climbed into your bag!")
+    giveitem(ITEM_CHIPPED_POT, 1)
     release
     end
 }

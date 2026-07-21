@@ -6066,12 +6066,12 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 #if P_GEN_8_CROSS_EVOS
     [SPECIES_URSALUNA] =
     {
-        .baseHP        = 130,
-        .baseAttack    = 120,
+        .baseHP        = 110,
+        .baseAttack    = 100,
         .baseDefense   = 90,
         .baseSpeed     = 40,
         .baseSpAttack  = 45,
-        .baseSpDefense = 80,
+        .baseSpDefense = 85,
         .types = MON_TYPES(TYPE_GROUND, TYPE_NORMAL),
         .catchRate = 20,
         .expYield = 275,

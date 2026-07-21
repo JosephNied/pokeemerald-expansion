@@ -3,7 +3,7 @@ mapscripts Planet01_First_Camp_Cave_MapScripts {
 }
 
 script Planet01_First_Camp_Cave_Enter {
-	clearflag(FLAG_UNUSED_0x02A)
+	//clearflag(FLAG_UNUSED_0x02A)
 	end
 }
 
@@ -26,8 +26,8 @@ script Planet01_First_Camp_Cave_UrsalunaEncounter {
     compare(VAR_RESULT, FALSE)
     goto_if_eq(PlayerLost)
 
-    removeobject(1)
     setflag(FLAG_UNUSED_0x03B)
+    removeobject(1)
 
     msgbox("The Ursaluna disappeared into the\n"
     "cave.")

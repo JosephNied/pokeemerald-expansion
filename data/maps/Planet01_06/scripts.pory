@@ -1,0 +1,8 @@
+mapscripts Planet01_06_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Planet01_06_Enter
+}
+
+script Planet01_06_Enter {
+	special(SetRandomFlags)
+	end
+}

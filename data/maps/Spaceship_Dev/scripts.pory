@@ -35,11 +35,13 @@ script Spaceship_Dev_EventScript_BallItem01 {
     giveitem(ITEM_DEVON_PARTS)
     giveitem(ITEM_ESCAPE_ROPE)
     giveitem(ITEM_DOWSING_MACHINE)
-    //giveitem(ITEM_ITEMFINDER)
-    //giveitem(ITEM_STAR_PIECE, 3)
-    //giveitem(ITEM_STARDUST, 3)
     setflag(FLAG_UNUSED_0x027)
     clearflag(FLAG_SYS_BRAILLE_DIG)
+    setflag(FLAG_UNUSED_0x045)
+    setflag(FLAG_UNUSED_0x046)
+    setflag(FLAG_UNUSED_0x047)
+    setflag(FLAG_UNUSED_0x048)
+    setflag(FLAG_UNUSED_0x049)
     removeobject(1)
     release
     end

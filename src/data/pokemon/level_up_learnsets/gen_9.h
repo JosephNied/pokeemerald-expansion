@@ -6051,7 +6051,7 @@ static const struct LevelUpMove sUrsalunaLevelUpLearnset[] = {
     LEVEL_UP_MOVE(35, MOVE_SCARY_FACE),
     LEVEL_UP_MOVE(41, MOVE_REST),
     LEVEL_UP_MOVE(41, MOVE_BITE),
-    LEVEL_UP_MOVE(48, MOVE_HIGH_HORSEPOWER),
+    LEVEL_UP_MOVE(48, MOVE_BULLDOZE),
     LEVEL_UP_MOVE(56, MOVE_THRASH),
     LEVEL_UP_END
 };
@@ -9018,7 +9018,7 @@ static const struct LevelUpMove sDusclopsLevelUpLearnset[] = {
 
 #if P_GEN_4_CROSS_EVOS
 static const struct LevelUpMove sDusknoirLevelUpLearnset[] = {
-    LEVEL_UP_MOVE(1, MOVE_SHADOW_SNEAK),
+    LEVEL_UP_MOVE(1, MOVE_MEAN_LOOK),
     LEVEL_UP_MOVE(1, MOVE_SHADOW_BALL),
     LEVEL_UP_MOVE(1, MOVE_FUTURE_SIGHT),
     LEVEL_UP_MOVE(1, MOVE_DARK_PULSE),

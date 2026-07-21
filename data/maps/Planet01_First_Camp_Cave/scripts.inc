@@ -5,8 +5,6 @@ Planet01_First_Camp_Cave_MapScripts::
 
 
 Planet01_First_Camp_Cave_Enter::
-# 6 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	clearflag FLAG_UNUSED_0x02A
 	end
 
 
@@ -30,9 +28,9 @@ Planet01_First_Camp_Cave_UrsalunaEncounter::
 # 27 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	goto_if_eq PlayerLost
 # 29 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	removeobject 1
-# 30 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	setflag FLAG_UNUSED_0x03B
+# 30 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	removeobject 1
 # 32 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	msgbox Planet01_First_Camp_Cave_UrsalunaEncounter_Text_1
 # 34 "data/maps/Planet01_First_Camp_Cave/scripts.pory"

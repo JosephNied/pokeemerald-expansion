@@ -38,16 +38,14 @@ Ditto_Test::
 # 23 "data/maps/Ditto_Cave/scripts.pory"
 	lock
 # 24 "data/maps/Ditto_Cave/scripts.pory"
-	faceplayer
-# 25 "data/maps/Ditto_Cave/scripts.pory"
 	applymovement 1, Movement_DittoLeaves
-# 26 "data/maps/Ditto_Cave/scripts.pory"
+# 25 "data/maps/Ditto_Cave/scripts.pory"
 	waitmovement 0
-# 27 "data/maps/Ditto_Cave/scripts.pory"
+# 26 "data/maps/Ditto_Cave/scripts.pory"
 	removeobject 1
-# 28 "data/maps/Ditto_Cave/scripts.pory"
+# 27 "data/maps/Ditto_Cave/scripts.pory"
 	setflag FLAG_RECEIVED_BELDUM
-# 29 "data/maps/Ditto_Cave/scripts.pory"
+# 28 "data/maps/Ditto_Cave/scripts.pory"
 	releaseall
 	return
 

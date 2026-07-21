@@ -142,3 +142,17 @@ script Planet01_01_HintText04 {
     release
     end
 }
+
+script Planet01_01_Carbink {
+    lock
+    faceplayer
+    msgbox("The Carbink seems to want to play!")
+    setflag(FLAG_UNUSED_0x04B)
+    fadeScreen(FADE_TO_BLACK)
+    removeobject(1)
+    fadeScreen(FADE_FROM_BLACK)
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Carbink climbed into your bag!")
+    giveitem(ITEM_CHIPPED_POT, 1)
+    release
+    end
+}

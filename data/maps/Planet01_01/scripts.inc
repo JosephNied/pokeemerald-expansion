@@ -191,6 +191,30 @@ Planet01_01_HintText04::
 	end
 
 
+Planet01_01_Carbink::
+# 147 "data/maps/Planet01_01/scripts.pory"
+	lock
+# 148 "data/maps/Planet01_01/scripts.pory"
+	faceplayer
+# 149 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_Carbink_Text_0
+# 150 "data/maps/Planet01_01/scripts.pory"
+	setflag FLAG_UNUSED_0x04B
+# 151 "data/maps/Planet01_01/scripts.pory"
+	fadeScreen FADE_TO_BLACK
+# 152 "data/maps/Planet01_01/scripts.pory"
+	removeobject 1
+# 153 "data/maps/Planet01_01/scripts.pory"
+	fadeScreen FADE_FROM_BLACK
+# 154 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_Carbink_Text_1
+# 155 "data/maps/Planet01_01/scripts.pory"
+	giveitem ITEM_CHIPPED_POT, 1
+# 156 "data/maps/Planet01_01/scripts.pory"
+	release
+	end
+
+
 Planet01_01_StartAirTimer_Text_0:
 # 32 "data/maps/Planet01_01/scripts.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Low Oxygen detected. Supplying air.$"
@@ -244,3 +268,11 @@ Planet01_01_HintText04_Text_0:
 	.string "the air they generate can be captured\l"
 	.string "and used to refill the oxygen in our \l"
 	.string "life support systems. Handy!$"
+
+Planet01_01_Carbink_Text_0:
+# 149 "data/maps/Planet01_01/scripts.pory"
+	.string "The Carbink seems to want to play!$"
+
+Planet01_01_Carbink_Text_1:
+# 154 "data/maps/Planet01_01/scripts.pory"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Carbink climbed into your bag!$"

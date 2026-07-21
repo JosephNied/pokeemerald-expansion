@@ -103,15 +103,15 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(CARBINK)",
       "x": 33,
-      "y": 63,
+      "y": 44,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
+      "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "50",
-      "script": "NULL",
-      "flag": "FLAG_UNUSED_0x030"
+      "script": "Planet01_02_Carbink",
+      "flag": "FLAG_UNUSED_0x04D"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(CLEFFA)",
@@ -154,7 +154,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(TEDDIURSA)",
-      "x": 13,
+      "x": 14,
       "y": 43,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FLEE_PLAYER_OWE",
@@ -349,15 +349,15 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MINIOR)",
-      "x": 19,
-      "y": 29,
+      "x": 27,
+      "y": 53,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "50",
-      "script": "Planet01_02_AddAir_Minior01",
+      "script": "Planet01_02_AddAir_Minior02",
       "flag": "FLAG_UNUSED_0x031"
     }
   ],

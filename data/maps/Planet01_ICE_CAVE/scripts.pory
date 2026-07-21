@@ -23,3 +23,17 @@ script Planet01_Ice_Cave_EventScript_Item02 {
 	release
 	end
 }
+
+script Planet01_Ice_Cave_Carbink {
+    lock
+    faceplayer
+    msgbox("The Carbink is chilly...")
+    setflag(FLAG_UNUSED_0x04C)
+    fadeScreen(FADE_TO_BLACK)
+    removeobject(12)
+    fadeScreen(FADE_FROM_BLACK)
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Carbink climbed into your bag!")
+    giveitem(ITEM_CHIPPED_POT, 1)
+    release
+    end
+}

@@ -6674,10 +6674,10 @@ void ItemUseCB_Medicine(u8 taskId, TaskFunc task)
         PlaySE(SE_USE_ITEM);
         RemoveBagItem(item, 1);
 
-        if (item == ITEM_LUM_BERRY)
+        /*if (item == ITEM_LUM_BERRY)
             AddBagItem(item, 1);
         if (item == ITEM_SITRUS_BERRY)
-            AddBagItem(item, 1);
+            AddBagItem(item, 1);*/
     }
     else
     {

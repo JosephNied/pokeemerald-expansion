@@ -7,15 +7,14 @@ script Planet01_05_Enter {
 }
 
 script Planet01_05_DusknoirEncounter {
-    lockall
-    faceplayer
+    checkflag(FLAG_UNUSED_0x03A)
+    compare(VAR_RESULT, TRUE)
+    goto_if_eq(DusknoirTrigger_End)
 
+    lockall
     msgbox("A terrifying Pokémon bursts out\n"
 			"of the darkness!")
-
-    applymovement(VAR_LAST_TALKED, Common_Movement_FacePlayer)
-    waitmovement(0)
-    applymovement(VAR_LAST_TALKED, Movement_DusknoirAppears)
+    applymovement(3, Movement_DusknoirAppears)
     waitmovement(0)
 
     waitse()
@@ -46,9 +45,13 @@ script Planet01_05_DusknoirEncounter {
 PlayerLost_Dusknoir:
     releaseall
     end
+
+DusknoirTrigger_End:
+    end
 }
 
 movement Movement_DusknoirAppears {
+    face_up
     set_visible
     delay_4
     set_invisible

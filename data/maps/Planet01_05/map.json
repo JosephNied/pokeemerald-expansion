@@ -54,7 +54,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(DUSKNOIR)",
       "x": 16,
-      "y": 11,
+      "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_INVISIBLE",
       "movement_range_x": 0,
@@ -87,6 +87,16 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Planet01_05_DusknoirEncounter"
+    }
+  ],
   "bg_events": []
 }

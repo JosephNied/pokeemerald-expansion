@@ -1,0 +1,102 @@
+mapscripts Planet01_Diancie_Cave_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Planet01_Diancie_Cave_Enter
+}
+
+script Planet01_Diancie_Cave_Enter {
+	end
+}
+
+script Planet01_Diancie_Cave_Spawn_Poke {
+	lockall
+
+	checkitem(ITEM_CHIPPED_POT, 1)
+	if (var(VAR_RESULT) == FALSE)
+    {
+		release
+		end
+	} 
+	else 
+	{
+		msgbox("Oh?! The Carbink are excited!")
+		fadeScreen(FADE_TO_BLACK)
+
+		checkflag(FLAG_UNUSED_0x04B)
+		if (var(VAR_RESULT) == TRUE) 
+		{
+			clearflag(FLAG_UNUSED_0x046)
+    		removeitem(ITEM_CHIPPED_POT, 1)
+			addvar(VAR_CARBINK_COUNT, 1)
+		}
+
+		checkflag(FLAG_UNUSED_0x04A)
+		if (var(VAR_RESULT) == TRUE) 
+		{
+			clearflag(FLAG_UNUSED_0x047)
+    		removeitem(ITEM_CHIPPED_POT, 1)
+			addvar(VAR_CARBINK_COUNT, 1)
+		}
+
+		checkflag(FLAG_UNUSED_0x04C)
+		if (var(VAR_RESULT) == TRUE) 
+		{
+			clearflag(FLAG_UNUSED_0x048)
+    		removeitem(ITEM_CHIPPED_POT, 1)
+			addvar(VAR_CARBINK_COUNT, 1)
+		}
+
+		checkflag(FLAG_UNUSED_0x04D)
+		if (var(VAR_RESULT) == TRUE) 
+		{
+			clearflag(FLAG_UNUSED_0x049)
+    		removeitem(ITEM_CHIPPED_POT, 1)
+			addvar(VAR_CARBINK_COUNT, 1)
+		}
+
+		if (var(VAR_CARBINK_COUNT) <= 4) {
+			fadeScreen(FADE_FROM_BLACK)
+    		msgbox("Carbink went home!")
+		} else {
+			clearflag(FLAG_UNUSED_0x045)
+			fadeScreen(FADE_FROM_BLACK)
+    		msgbox("The Carbink- Woah! A Diancie!")
+		}
+	}
+    releaseall
+    end
+}
+
+script Planet01_Diancie_Cave_DiancieEncounter {
+    lockall
+    faceplayer
+
+    msgbox("Diancie wants to fight!")
+
+    waitse()
+    playmoncry(SPECIES_DIANCIE, CRY_MODE_ENCOUNTER)
+    waitmoncry()
+
+    special(SetBossBattle)
+    setwildbattle(
+        SPECIES_DIANCIE,
+        75,
+        ITEM_DIANCITE
+    )
+    dowildbattle
+    special(BossBattleOff)
+
+    compare(VAR_RESULT, FALSE)
+    goto_if_eq(PlayerLost_Diancie)
+
+    removeobject(5)
+    setflag(FLAG_UNUSED_0x045)
+
+    msgbox("Daincie seemd pleased with\n"
+    "the battle! It left a gift!")
+	giveitem(ITEM_DIANCITE)
+    releaseall
+    end
+
+PlayerLost_Diancie:
+    releaseall
+    end
+}

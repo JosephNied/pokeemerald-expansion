@@ -4316,18 +4316,17 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_CHIPPED_POT] =
     {
-        .name = ITEM_NAME("Chipped Pot"),
-        .price = 38000,
+        .name = ITEM_NAME("Carbink"),
+        .price = 0,
         .description = COMPOUND_STRING(
-            "A chipped teapot\n"
-            "that makes certain\n"
-            "Pokémon evolve."),
+            "Carbink apparently\n"
+            "likes being carried\n"
+            "around."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_EVOLUTION_ITEM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
-        .effect = gItemEffect_EvoItem,
-        .flingPower = 80,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 0,
         .iconPic = gItemIcon_ChippedPot,
         .iconPalette = gItemIconPalette_Pot,
     },
