@@ -92,7 +92,9 @@ script Spaceship_Dev_EventScript_Item01 {
     lock
     faceplayer
     setflag(FLAG_SYS_POKEDEX_GET)
+    msgbox("Magnezone, let's go!")
     givemon(SPECIES_MAGNEZONE, 50, ITEM_MAGNET)
+    removeobject(6)
 
     if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
         setflag(FLAG_BADGE01_GET)
