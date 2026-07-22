@@ -29,7 +29,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(GLIMMORA)",
-      "x": 14,
+      "x": 15,
       "y": 4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_CHASE_PLAYER_OWE",
@@ -55,8 +55,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(GLIMMORA)",
-      "x": 3,
-      "y": 4,
+      "x": 2,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_CHASE_PLAYER_OWE",
       "movement_range_x": 0,
@@ -64,7 +64,7 @@
       "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
       "trainer_sight_or_berry_tree_id": "50",
       "script": "NULL",
-      "flag": "FLAG_UNUSED_0x032"
+      "flag": "FLAG_UNUSED_0x88E"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(GLIMMET)",
@@ -78,19 +78,6 @@
       "trainer_sight_or_berry_tree_id": "30",
       "script": "NULL",
       "flag": "FLAG_UNUSED_0x031"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CARBINK)",
-      "x": 10,
-      "y": 7,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WATCH_PLAYER_OWE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
-      "trainer_sight_or_berry_tree_id": "50",
-      "script": "NULL",
-      "flag": "FLAG_UNUSED_0x02E"
     }
   ],
   "warp_events": [
@@ -109,6 +96,57 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
-  "bg_events": []
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "ConnectorCave_Cold_Warning"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ConnectorCave_Cold_Wall"
+    },
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ConnectorCave_Cold_Wall"
+    },
+    {
+      "type": "sign",
+      "x": 4,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ConnectorCave_Cold_Wall"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ConnectorCave_Cold_Wall"
+    },
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ConnectorCave_Cold_Wall"
+    }
+  ]
 }

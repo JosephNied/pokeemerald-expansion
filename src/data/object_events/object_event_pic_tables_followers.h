@@ -2723,6 +2723,9 @@ static const struct SpriteFrameImage sPicTable_Lunatone[] = {
 #endif //P_FAMILY_LUNATONE
 
 #if P_FAMILY_SOLROCK
+static const struct SpriteFrameImage sPicTable_Dulroc[] = {
+    overworld_ascending_frames(gObjectEventPic_Dulroc, 4, 4),
+};
 static const struct SpriteFrameImage sPicTable_Solrock[] = {
     overworld_ascending_frames(gObjectEventPic_Solrock, 4, 4),
 };

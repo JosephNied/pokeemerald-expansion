@@ -4,13 +4,14 @@ mapscripts Planet01_05_MapScripts {
 
 script Planet01_05_Enter {
 	special(SetRandomFlags)
+    if(flag(FLAG_UNUSED_0x03A) == FALSE) {
+        setvar(VAR_TEMP_0, 0)
+    } else {
+        setvar(VAR_TEMP_0, 1)
+    }
 }
 
 script Planet01_05_DusknoirEncounter {
-    checkflag(FLAG_UNUSED_0x03A)
-    compare(VAR_RESULT, TRUE)
-    goto_if_eq(DusknoirTrigger_End)
-
     lockall
     msgbox("A terrifying Pokémon bursts out\n"
 			"of the darkness!")

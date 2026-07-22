@@ -958,6 +958,7 @@ gCryTable::
 	cry Cry_Lunatone
 .endif @ P_FAMILY_LUNATONE
 .if P_FAMILY_SOLROCK == TRUE
+	cry Cry_Dulroc
 	cry Cry_Solrock
 .endif @ P_FAMILY_SOLROCK
 .if P_FAMILY_BARBOACH == TRUE
@@ -3514,6 +3515,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_Lunatone
 .endif @ P_FAMILY_LUNATONE
 .if P_FAMILY_SOLROCK == TRUE
+	cry_reverse Cry_Dulroc
 	cry_reverse Cry_Solrock
 .endif @ P_FAMILY_SOLROCK
 .if P_FAMILY_BARBOACH == TRUE

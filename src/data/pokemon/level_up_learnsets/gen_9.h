@@ -8641,6 +8641,14 @@ static const struct LevelUpMove sLunatoneLevelUpLearnset[] = {
 #endif //P_FAMILY_LUNATONE
 
 #if P_FAMILY_SOLROCK
+static const struct LevelUpMove sDulrocLevelUpLearnset[] = {
+    LEVEL_UP_MOVE(1, MOVE_ROCK_POLISH),
+    LEVEL_UP_MOVE(1, MOVE_STONE_EDGE),
+    LEVEL_UP_MOVE(1, MOVE_ZEN_HEADBUTT),
+    LEVEL_UP_MOVE(1, MOVE_EXPLOSION),
+    LEVEL_UP_END
+};
+
 static const struct LevelUpMove sSolrockLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_FLARE_BLITZ),
     LEVEL_UP_MOVE( 1, MOVE_MORNING_SUN),

@@ -2596,6 +2596,14 @@ static const struct BardSoundTemplate sBardSoundTemplates_Pokemon[NUM_SPECIES][M
         NULL_BARD_SOUND,
         NULL_BARD_SOUND,
     },
+    [SPECIES_DULROC] = {
+        { .songId = PHONEME_ID(PH_GOAT_BLEND) },
+        { .songId = PHONEME_ID(PH_THOUGHT_BLEND) },
+        PREV_BARD_SOUND,
+        NULL_BARD_SOUND,
+        NULL_BARD_SOUND,
+        NULL_BARD_SOUND,
+    },
     [SPECIES_SOLROCK] = {
         { .songId = PHONEME_ID(PH_GOAT_BLEND) },
         { .songId = PHONEME_ID(PH_THOUGHT_BLEND) },

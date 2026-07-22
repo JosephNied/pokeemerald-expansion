@@ -12517,6 +12517,33 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
 
 #if P_FAMILY_SOLROCK
 #if !P_GBA_STYLE_SPECIES_GFX
+    const u32 gMonFrontPic_Dulroc[] = INCGFX_U32("graphics/pokemon/Dulroc/anim_front.png", ".4bpp.smol");
+    const u16 gMonPalette_Dulroc[] = INCGFX_U16("graphics/pokemon/Dulroc/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Dulroc[] = INCGFX_U32("graphics/pokemon/Dulroc/back.png", ".4bpp.smol");
+    const u16 gMonShinyPalette_Dulroc[] = INCGFX_U16("graphics/pokemon/Dulroc/shiny.pal", ".gbapal");
+#else
+    const u32 gMonFrontPic_Dulroc[] = INCGFX_U32("graphics/pokemon/Dulroc/anim_front.png", ".4bpp.smol");
+    const u16 gMonPalette_Dulroc[] = INCGFX_U16("graphics/pokemon/solrock/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Dulroc[] = INCGFX_U32("graphics/pokemon/solrock/back.png", ".4bpp.smol");
+    const u16 gMonShinyPalette_Dulroc[] = INCGFX_U16("graphics/pokemon/solrock/shiny.pal", ".gbapal");
+#endif //P_GBA_STYLE_SPECIES_GFX
+#if !P_GBA_STYLE_SPECIES_ICONS
+    const u8 gMonIcon_Dulroc[] = INCGFX_U8("graphics/pokemon/Dulroc/icon.png", ".4bpp");
+#else
+    const u8 gMonIcon_Dulroc[] = INCGFX_U8("graphics/pokemon/solrock/icon.png", ".4bpp");
+#endif //P_GBA_STYLE_SPECIES_ICONS
+#if P_FOOTPRINTS
+    const u8 gMonFootprint_Dulroc[] = INCGFX_U8("graphics/pokemon/Dulroc/footprint.png", ".1bpp");
+#endif //P_FOOTPRINTS
+#if OW_POKEMON_OBJECT_EVENTS
+    const u32 gObjectEventPic_Dulroc[] = INCGFX_COMP("graphics/pokemon/Dulroc/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+#if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
+    const u16 gOverworldPalette_Dulroc[] = INCGFX_U16("graphics/pokemon/Dulroc/overworld_normal.pal", ".gbapal");
+    const u16 gShinyOverworldPalette_Dulroc[] = INCGFX_U16("graphics/pokemon/Dulroc/overworld_shiny.pal", ".gbapal");
+#endif //OW_PKMN_OBJECTS_SHARE_PALETTES
+#endif //OW_POKEMON_OBJECT_EVENTS
+
+#if !P_GBA_STYLE_SPECIES_GFX
     const u32 gMonFrontPic_Solrock[] = INCGFX_U32("graphics/pokemon/solrock/anim_front.png", ".4bpp.smol");
     const u16 gMonPalette_Solrock[] = INCGFX_U16("graphics/pokemon/solrock/normal.pal", ".gbapal");
     const u32 gMonBackPic_Solrock[] = INCGFX_U32("graphics/pokemon/solrock/back.png", ".4bpp.smol");

@@ -8172,6 +8172,84 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #endif //P_FAMILY_LUNATONE
 
 #if P_FAMILY_SOLROCK
+[SPECIES_DULROC] =
+    {
+        .baseHP        = P_UPDATED_STATS >= GEN_7 ? 90 : 70,
+        .baseAttack    = 75,
+        .baseDefense   = 85,
+        .baseSpeed     = 75,
+        .baseSpAttack  = 75,
+        .baseSpDefense = 85,
+        .types = MON_TYPES(TYPE_ROCK, TYPE_PSYCHIC),
+        .catchRate = 45,
+    #if P_UPDATED_EXP_YIELDS >= GEN_7
+        .expYield = 161,
+    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+        .expYield = 154,
+    #else
+        .expYield = 150,
+    #endif
+        .evYield_Attack = 2,
+        .itemCommon = ITEM_STAR_PIECE,
+        .genderRatio = MON_GENDERLESS,
+        .eggCycles = 25,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
+        .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
+        .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Dulroc"),
+        .cryId = CRY_DULROC,
+        .natDexNum = NATIONAL_DEX_DULROC,
+        .categoryName = _("Meteorite"),
+        .height = 12,
+        .weight = 1540,
+        .description = COMPOUND_STRING(
+            "A strange, dull pokemon. Found deep in the\n"
+            "canyons of the planet, it mimics the rock's\n"
+            "purple color. Hot to the touch, like it's\n"
+            "full of energy."),
+        .pokemonScale = 328,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Dulroc,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 1 : 0,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 15),
+            ANIMCMD_FRAME(1, 20),
+            ANIMCMD_FRAME(0, 15),
+            ANIMCMD_FRAME(1, 20),
+            ANIMCMD_FRAME(0, 15),
+        ),
+        .frontAnimId = ANIM_V_SLIDE,
+        .enemyMonElevation = 4,
+        .backPic = gMonBackPic_Dulroc,
+        .backPicSize = P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(64, 56) : MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 5 : 2,
+        .backAnimId = BACK_ANIM_CONCAVE_ARC_SMALL,
+        .palette = gMonPalette_Dulroc,
+        .shinyPalette = gMonShinyPalette_Dulroc,
+        .iconSprite = gMonIcon_Dulroc,
+        .iconPalIndex = 0,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(0, 15, SHADOW_SIZE_M)
+        FOOTPRINT(Solrock)
+        OVERWORLD(
+            sPicTable_Dulroc,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_NONE,
+            sAnimTable_Following,
+            gOverworldPalette_Dulroc,
+            gShinyOverworldPalette_Dulroc
+        )
+        .levelUpLearnset = sDulrocLevelUpLearnset,
+        .teachableLearnset = sSolrockTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SUN_STONE, SPECIES_SOLROCK}),
+    },
+
     [SPECIES_SOLROCK] =
     {
         .baseHP        = P_UPDATED_STATS >= GEN_7 ? 90 : 70,

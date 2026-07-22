@@ -346,6 +346,7 @@ enum NationalDexOrder
     NATIONAL_DEX_ZANGOOSE,
     NATIONAL_DEX_SEVIPER,
     NATIONAL_DEX_LUNATONE,
+    NATIONAL_DEX_DULROC,
     NATIONAL_DEX_SOLROCK,
     NATIONAL_DEX_BARBOACH,
     NATIONAL_DEX_WHISCASH,
@@ -1105,11 +1106,14 @@ enum NationalDexOrder
     F(CARBINK) \
     F(SABLEYE) \
     F(LUNATONE) \
+    F(DULROC) \
     F(SOLROCK) \
     F(TEDDIURSA) \
     F(URSARING) \
     F(URSALUNA) \
     F(DUSKNOIR) \
+    F(DIANCIE) \
+    F(JIRACHI) \
     F(DEOXYS)
 
 // Hoenn Pokédex order

@@ -7,6 +7,7 @@ Planet01_Connector_Cave_MapScripts::
 
 ConnectorCave_Enter:
 	special SetRandomFlags
+	setvar VAR_TEMP_0, 0
 	end
 
 ConnectorCave_OuterRoom_OnResume:
@@ -44,3 +45,24 @@ ConnectorCave_OuterRoom_EventScript_BrailleDigHere::
 	releaseall
 	end
 `
+
+script ConnectorCave_Cold_Warning {
+	lock
+    msgbox("Woah! ...It suddenly got way colder in\n"
+    "here.")
+	setvar(VAR_TEMP_0, 1)
+    release
+	end
+}
+
+script ConnectorCave_Cold_Wall {
+	lock
+	if (flag(FLAG_SYS_BRAILLE_DIG) == FALSE) {
+		msgbox("This wall is colder than the others...\n"
+		"Is there something behind it?")
+	} else {
+		msgbox("There's a frozen cavern back there!")
+	}
+	release
+	end
+}

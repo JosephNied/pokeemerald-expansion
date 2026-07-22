@@ -2048,6 +2048,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MovingBox = {
     .subspriteTables = sOamTables_16x16,
     .anims = sAnimTable_Inanimate,
     .images = sPicTable_MovingBox,
+    .affineAnims = gDummySpriteAffineAnimTable,
 };
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CableCar = {

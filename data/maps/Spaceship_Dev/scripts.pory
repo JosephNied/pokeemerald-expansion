@@ -13,7 +13,7 @@ script Spaceship_Dev_Enter {
 script refill_air_canister {
     lock
     faceplayer
-    msgbox("Rotom wants to refill your empty air \n"
+    msgbox("Rotom wants to refill my empty air \n"
     "canisters!")
     waitmessage
     checkitem(ITEM_SUPER_REPEL, 1)
@@ -22,7 +22,7 @@ script refill_air_canister {
         removeitem(ITEM_SUPER_REPEL, VAR_STARDUST_COUNT)
         giveitem(ITEM_REPEL, VAR_STARDUST_COUNT)
     } else {
-        msgbox("You don't have any empty canisters to\n"
+        msgbox("I don't have any empty canisters to\n"
         "refill.")
     }
     release
@@ -52,6 +52,7 @@ script Spaceship_Dev_EventScript_BallItem01 {
 script Spaceship_Dev_EventScript_Tutorial_Notebook {
     lock
     faceplayer
+    playse(SE_PC_LOGIN)
     msgbox("Explorer's Guide: What would you like to \n"
     "learn about?")
     multichoice(0, 0, MULTI_TUTORIAL_NOTES, FALSE)
@@ -82,6 +83,7 @@ script Spaceship_Dev_EventScript_Tutorial_Notebook {
         "crafting machine, provided you have\l"
         "sufficient Star Pieces and Stardust.")
     }
+    playse(SE_PC_OFF)
     release
     end
 }
@@ -189,6 +191,7 @@ script Spaceship_Dev_EventScript_VitaminVendor {
     buffernumberstring(STR_VAR_1, VAR_STARDUST_COUNT)
     CountItemInBag(ITEM_STAR_PIECE, VAR_STAR_PIECE_COUNT)
     buffernumberstring(STR_VAR_2, VAR_STAR_PIECE_COUNT)
+    playse(SE_PC_LOGIN)
     msgbox("Craft items? Each item requires x1\n"
             " Stardust and x1 Star Pieces.\p"
             "Your Stardust: {COLOR BLUE}{SHADOW LIGHT_BLUE}{STR_VAR_1}\n"
@@ -200,6 +203,7 @@ script Spaceship_Dev_EventScript_VitaminVendor {
     if (var(VAR_RESULT) == FALSE)
     {
         msgbox("You don't have enough material.")
+        playse(SE_PC_OFF)
         release
         end
     }
@@ -207,6 +211,7 @@ script Spaceship_Dev_EventScript_VitaminVendor {
     if (var(VAR_RESULT) == FALSE)
     {
         msgbox("You don't have enough material.")
+        playse(SE_PC_OFF)
         release
         end
     }
@@ -216,6 +221,7 @@ script Spaceship_Dev_EventScript_VitaminVendor {
         {
             if (var(VAR_TOTAL_BALL_COUNT) >= 5) {
                 msgbox("You can't carry any more of these.")
+                playse(SE_PC_OFF)
                 release
                 end
             } else {
@@ -232,6 +238,7 @@ script Spaceship_Dev_EventScript_VitaminVendor {
             buffernumberstring(STR_VAR_1, VAR_STARDUST_COUNT)
             if (var(VAR_STARDUST_COUNT) >= 2) {
                 msgbox("You can't carry any more of these.")
+                playse(SE_PC_OFF)
                 release
                 end
             } else {
@@ -244,10 +251,12 @@ script Spaceship_Dev_EventScript_VitaminVendor {
         else
         {
             msgbox("Crafting canceled.")
+            playse(SE_PC_OFF)
             release
             end
         }
     }
+    playse(SE_PC_OFF)
     release
     end
 }
@@ -265,6 +274,7 @@ script Blissey_Bed {
     faceplayer
     msgbox("Blissey wants to heal the team!")
     waitmessage
+    closemessage
     call(Common_EventScript_OutOfCenterPartyHeal)
     release
     end
@@ -273,8 +283,27 @@ script Blissey_Bed {
 script Bellossom {
     lock
     faceplayer
-    msgbox("Bellossum converts your C02 into/n"
-    "Oxygen. An important team member!")
+    msgbox("Bellossum converts my C02 into oxygen.\n"
+    "An important team member!")
+    release
+    end
+}
+
+script Boxes {
+    lock
+    faceplayer
+    msgbox("Lots of stuff I was supposed to\n"
+    "deliver... Surely they can wait...?")
+    release
+    end
+}
+
+script Machine {
+    lock
+    faceplayer
+    msgbox("This bed is designed to keep me in\n"
+    "cryosleep, which I would be, if not for\l"
+    "the circumstances.")
     release
     end
 }

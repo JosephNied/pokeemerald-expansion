@@ -3467,6 +3467,12 @@ Cry_Lunatone::
 
 .if P_FAMILY_SOLROCK == TRUE
 	.align 2
+Cry_Dulroc::
+.if TESTING == FALSE
+	.incbin "sound/direct_sound_samples/cries/solrock.bin"
+.endif
+
+	.align 2
 Cry_Solrock::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/solrock.bin"
