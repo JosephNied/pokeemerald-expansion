@@ -1,4 +1,27 @@
-raw `
-Planet01_07_MapScripts::
-	.byte 0
-`
+mapscripts Planet01_07_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Planet01_01_Enter
+}
+
+script Planet01_07_Enter {
+	special(SetRandomFlags)
+	if(flag(FLAG_UNUSED_0x88F) == FALSE) {
+        setvar(VAR_TEMP_0, 0)
+    } else {
+        setvar(VAR_TEMP_0, 1)
+    }
+	end
+}
+
+script Sun_Moon_Check {
+	special(SunMoonCheck)
+	if (var(VAR_RESULT) == TRUE) {
+		lock
+		special(ReplaceSunMoonWithTerragem)
+		msgbox("Woah! Solrock and Lunatone merged into one!")
+		givemon(SPECIES_CELEBI, 50)
+		giveitem(ITEM_BEAST_BALL, 1)
+		setflag(FLAG_UNUSED_0x88F)
+		release
+	}
+	end
+}

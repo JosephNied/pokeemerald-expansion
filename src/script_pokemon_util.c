@@ -682,3 +682,38 @@ void RemoveNativeMonsFromParty(void)
 
     gPartiesCount[B_TRAINER_PLAYER] = 1;
 }
+
+void ReplaceSunMoonWithTerragem(void)
+{
+    s32 i;
+    s32 solrockSlot = -1;
+    s32 lunatoneSlot = -1;
+
+    // Find both Pokémon
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        switch (GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES))
+        {
+        case SPECIES_SOLROCK:
+            if (solrockSlot == -1)
+                solrockSlot = i;
+            break;
+        case SPECIES_LUNATONE:
+            if (lunatoneSlot == -1)
+                lunatoneSlot = i;
+            break;
+        }
+    }
+
+    // Player doesn't have both
+    if (solrockSlot == -1 || lunatoneSlot == -1)
+    {
+        return;
+    }
+
+    // Remove them
+    ZeroMonData(&gParties[B_TRAINER_PLAYER][solrockSlot]);
+    ZeroMonData(&gParties[B_TRAINER_PLAYER][lunatoneSlot]);
+
+    CompactPartySlots();
+}

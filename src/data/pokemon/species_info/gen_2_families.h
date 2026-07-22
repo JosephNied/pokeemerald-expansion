@@ -8701,7 +8701,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 100,
         .baseSpAttack  = 100,
         .baseSpDefense = 100,
-        .types = MON_TYPES(TYPE_PSYCHIC, TYPE_GRASS),
+        .types = MON_TYPES(TYPE_WATER, TYPE_GRASS),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 300,
@@ -8711,26 +8711,24 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 64,
     #endif
         .evYield_HP = 3,
-        .itemCommon = ITEM_LUM_BERRY,
-        .itemRare = ITEM_LUM_BERRY,
         .genderRatio = MON_GENDERLESS,
         .eggCycles = 120,
         .friendship = 100,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_NATURAL_CURE, ABILITY_NONE, ABILITY_NONE },
+        .abilities = { ABILITY_SERENE_GRACE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Celebi"),
+        .speciesName = _("Terragem"),
         .cryId = CRY_CELEBI,
         .natDexNum = NATIONAL_DEX_CELEBI,
-        .categoryName = _("Time Travel"),
+        .categoryName = _("Terra"),
         .height = 6,
         .weight = 50,
         .description = COMPOUND_STRING(
-            "This Pokémon came from the future by\n"
-            "crossing over time. It is thought that so\n"
-            "long as Celebi appears, a bright and\n"
-            "shining future awaits us."),
+            "This Pokémon resembles a planet covered\n"
+            "in water, land, and life. The merging\n"
+            "of the sun, moon, and stars has brought\n"
+            "out incredible power!"),
         .pokemonScale = 393,
         .pokemonOffset = -10,
         .trainerScale = 256,

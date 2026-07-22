@@ -645,3 +645,5 @@ gSpecials::
 	def_special AddAirTimerMap
 	def_special SetBossBattle
 	def_special BossBattleOff
+	def_special SunMoonCheck
+	def_special ReplaceSunMoonWithTerragem
