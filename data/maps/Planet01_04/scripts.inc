@@ -101,7 +101,7 @@ Planet01_04_HintText03::
 	lock
 # 71 "data/maps/Planet01_04/scripts.pory"
 	msgbox Planet01_04_HintText03_Text_0
-# 74 "data/maps/Planet01_04/scripts.pory"
+# 75 "data/maps/Planet01_04/scripts.pory"
 	release
 	end
 
@@ -131,5 +131,6 @@ Planet01_04_HintText02_Text_0:
 Planet01_04_HintText03_Text_0:
 # 71 "data/maps/Planet01_04/scripts.pory"
 	.string "Captain: Looks like this planet isn't\n"
-	.string "very large. We'll have mapped it all out\l"
-	.string "in no time!$"
+	.string "very large. It actually loops around\l"
+	.string "here. We'll have mapped it all out in\l"
+	.string "no time!$"

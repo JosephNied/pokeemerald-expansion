@@ -10431,6 +10431,11 @@ static void CursorCb_Release(u8 taskId)
         return;
     }
 
+    if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_JIRACHI)
+    {
+        FlagClear(FLAG_REGISTERED_DUSTY);
+    }
+
     if (OW_PC_RELEASE_ITEM >= GEN_8)
         item = GetMonData(mon, MON_DATA_HELD_ITEM);
     

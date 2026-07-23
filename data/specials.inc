@@ -647,3 +647,6 @@ gSpecials::
 	def_special BossBattleOff
 	def_special SunMoonCheck
 	def_special ReplaceSunMoonWithTerragem
+	def_special GlimmoraCatch
+	def_special GlalieCatch
+	def_special SlugmaCatch

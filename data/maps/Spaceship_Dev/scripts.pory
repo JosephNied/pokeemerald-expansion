@@ -101,7 +101,7 @@ script Spaceship_Dev_EventScript_Item01 {
     msgbox("Magnezone, let's go!")
     waitmessage
     givemon(SPECIES_MAGNEZONE, 50, ITEM_MAGNET)
-    removeobject(6)
+    removeobject(5)
 
     if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
         setflag(FLAG_BADGE01_GET)
@@ -115,7 +115,6 @@ script Spaceship_Dev_EventScript_Item01 {
         msgbox("Added Magnezone to party.")
 		setflag(FLAG_UNUSED_0x028)
 		setflag(FLAG_SYS_POKEMON_GET)
-		removeobject(2)
     }
 	else {
 		msgbox("Your party is full!")
@@ -317,4 +316,26 @@ script Machine {
     "the circumstances.")
     release
     end
+}
+
+script JirachiOnShip {
+    lock
+    faceplayer
+    playmoncry(SPECIES_JIRACHI, CRY_MODE_ENCOUNTER)
+    msgbox("Jirachi wants to join the team!")
+    waitmessage
+    checkitem(ITEM_BEAST_BALL, 1)
+    if (var(VAR_RESULT) == TRUE)
+    {
+        givemon(SPECIES_JIRACHI, 70)
+        clearflag(FLAG_REGISTERED_DUSTY)
+        removeobject(6)
+        removeitem(ITEM_BEAST_BALL, 1)
+        release
+        end
+    } else {
+        msgbox("You don't have a spare Meteor Ball!")
+        release
+        end
+    }
 }

@@ -38,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Planet01_01_EventScript_Item01",
-      "flag": "FLAG_UNUSED_0x49A"
+      "flag": "FLAG_TEMP_1"
     }
   ],
   "warp_events": [

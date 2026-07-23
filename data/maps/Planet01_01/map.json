@@ -230,7 +230,7 @@
       "x": 11,
       "y": 45,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
+      "movement_type": "MOVEMENT_TYPE_CHASE_PLAYER_OWE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",

@@ -3,6 +3,7 @@ mapscripts Planet01_Diancie_Cave_MapScripts {
 }
 
 script Planet01_Diancie_Cave_Enter {
+	setvar(VAR_TEMP_0, 0)
 	end
 }
 
@@ -24,6 +25,7 @@ script Planet01_Diancie_Cave_Spawn_Poke {
 		if (var(VAR_RESULT) == TRUE) 
 		{
 			clearflag(FLAG_UNUSED_0x046)
+			addobject(3)
     		removeitem(ITEM_CHIPPED_POT, 1)
 			addvar(VAR_CARBINK_COUNT, 1)
 		}
@@ -32,6 +34,7 @@ script Planet01_Diancie_Cave_Spawn_Poke {
 		if (var(VAR_RESULT) == TRUE) 
 		{
 			clearflag(FLAG_UNUSED_0x047)
+			addobject(4)
     		removeitem(ITEM_CHIPPED_POT, 1)
 			addvar(VAR_CARBINK_COUNT, 1)
 		}
@@ -40,6 +43,7 @@ script Planet01_Diancie_Cave_Spawn_Poke {
 		if (var(VAR_RESULT) == TRUE) 
 		{
 			clearflag(FLAG_UNUSED_0x048)
+			addobject(1)
     		removeitem(ITEM_CHIPPED_POT, 1)
 			addvar(VAR_CARBINK_COUNT, 1)
 		}
@@ -47,14 +51,17 @@ script Planet01_Diancie_Cave_Spawn_Poke {
 		checkflag(FLAG_UNUSED_0x04D)
 		if (var(VAR_RESULT) == TRUE) 
 		{
+			addobject(2)
 			clearflag(FLAG_UNUSED_0x049)
     		removeitem(ITEM_CHIPPED_POT, 1)
 			addvar(VAR_CARBINK_COUNT, 1)
 		}
 
+		delay(30)
+
 		if (var(VAR_CARBINK_COUNT) <= 4) {
 			fadeScreen(FADE_FROM_BLACK)
-    		msgbox("Carbink went home!")
+    		msgbox("The Carbink went home!")
 		} else {
 			setvar(VAR_0x8004, 1)
 			setvar(VAR_0x8005, 1)
@@ -62,10 +69,13 @@ script Planet01_Diancie_Cave_Spawn_Poke {
 			setvar(VAR_0x8007, 5)
 			special(ShakeCamera)
 			clearflag(FLAG_UNUSED_0x045)
+			addobject(5)
 			fadeScreen(FADE_FROM_BLACK)
-    		msgbox("The Carbink- Woah! A Diancie!")
+    		msgbox("The Carbink- Woah! A Diancie!\n"
+			"I think it wants me to approach it...")
 		}
 	}
+	setvar(VAR_TEMP_0, 1)
     releaseall
     end
 }

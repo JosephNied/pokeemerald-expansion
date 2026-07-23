@@ -23,7 +23,7 @@ Ditto_Cave_Bottom_EventScript_Item01::
 # 28 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	removeobject 2
 # 29 "data/maps/Ditto_Cave_Bottom/scripts.pory"
-	setflag FLAG_UNUSED_0x499
+	setflag FLAG_TEMP_1
 # 30 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	release
 	end

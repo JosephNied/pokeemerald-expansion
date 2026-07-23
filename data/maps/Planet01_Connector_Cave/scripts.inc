@@ -121,6 +121,30 @@ ConnectorCave_Cold_Wall_2:
 	goto ConnectorCave_Cold_Wall_1
 
 
+EventScript_GlimmoraCatch::
+# 71 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	lockall
+# 72 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	fadeScreen FADE_TO_WHITE
+# 73 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	special GlimmoraCatch
+# 74 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	setflag FLAG_UNUSED_0x02C
+# 75 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	setflag FLAG_UNUSED_0x030
+# 76 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	removeobject 4
+# 77 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	removeobject 2
+# 78 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	fadeScreen FADE_FROM_WHITE
+# 79 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	msgbox EventScript_GlimmoraCatch_Text_0
+# 81 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	release
+	end
+
+
 ConnectorCave_Cold_Warning_Text_0:
 # 51 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "Woah! ...It suddenly got way colder in\n"
@@ -134,3 +158,8 @@ ConnectorCave_Cold_Wall_Text_0:
 ConnectorCave_Cold_Wall_Text_1:
 # 64 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "There's a frozen cavern back there!$"
+
+EventScript_GlimmoraCatch_Text_0:
+# 79 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	.string "Glimmora poisoned a party member!\n"
+	.string "That stings!$"

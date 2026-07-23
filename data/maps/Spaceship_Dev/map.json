@@ -28,19 +28,6 @@
       "flag": "FLAG_UNUSED_0x027"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 15,
-      "y": 18,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Spaceship_Dev_EventScript_Item01",
-      "flag": "FLAG_UNUSED_0x028"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(ROTOM_FAN)",
       "x": 12,
       "y": 12,
@@ -91,6 +78,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Spaceship_Dev_EventScript_Item01",
       "flag": "FLAG_UNUSED_0x028"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(JIRACHI)",
+      "x": 14,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WATCH_PLAYER_OWE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "JirachiOnShip",
+      "flag": "FLAG_REGISTERED_DUSTY"
     }
   ],
   "warp_events": [
@@ -151,14 +151,6 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Spaceship_Dev_EventScript_VitaminVendor"
-    },
-    {
-      "type": "sign",
-      "x": 12,
-      "y": 4,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Spaceship_Dev_EventScript_UpdateWarp"
     },
     {
       "type": "sign",

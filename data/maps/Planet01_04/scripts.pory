@@ -69,8 +69,9 @@ script Planet01_04_HintText02 {
 script Planet01_04_HintText03 {
     lock
     msgbox("Captain: Looks like this planet isn't\n"
-    "very large. We'll have mapped it all out\l"
-    "in no time!")
+    "very large. It actually loops around\l"
+    "here. We'll have mapped it all out in\l"
+    "no time!")
     release
     end
 }

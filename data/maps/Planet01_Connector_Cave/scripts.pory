@@ -66,3 +66,18 @@ script ConnectorCave_Cold_Wall {
 	release
 	end
 }
+
+script EventScript_GlimmoraCatch {
+	lockall
+	fadeScreen(FADE_TO_WHITE)
+	special(GlimmoraCatch)
+	setflag(FLAG_UNUSED_0x02C)
+	setflag(FLAG_UNUSED_0x030)
+    removeobject(4)
+	removeobject(2)
+    fadeScreen(FADE_FROM_WHITE)
+	msgbox("Glimmora poisoned a party member!\n"
+	"That stings!")
+	release
+	end
+}

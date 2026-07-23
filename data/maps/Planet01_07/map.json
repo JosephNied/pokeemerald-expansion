@@ -31,32 +31,6 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SOLROCK)",
-      "x": 18,
-      "y": 15,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
-      "trainer_sight_or_berry_tree_id": "50",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(LUNATONE)",
-      "x": 19,
-      "y": 15,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
-      "trainer_sight_or_berry_tree_id": "50",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(JIRACHI)",
       "x": 15,
       "y": 4,

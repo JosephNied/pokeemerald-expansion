@@ -35,11 +35,13 @@ script Planet01_05_DusknoirEncounter {
     compare(VAR_RESULT, FALSE)
     goto_if_eq(PlayerLost_Dusknoir)
 
-    removeobject(3)
+    fadeScreen(FADE_TO_BLACK)
     setflag(FLAG_UNUSED_0x03A)
-
-    msgbox("Dusknoir faded into the \n"
+    removeobject(3)
+    fadeScreen(FADE_FROM_BLACK)
+    msgbox("The Dusknoir faded into the\n"
     "shadows.")
+    setvar(VAR_TEMP_0, 1)
     releaseall
     end
 
@@ -74,4 +76,19 @@ movement Movement_DusknoirAppears {
     set_invisible
     delay_16
     set_visible
+}
+
+script Planet01_05_HintText01 {
+    lock
+    msgbox("Scientist: The trees here are giving off\n"
+    "a mysterious glow... The mists here\l"
+    "remind me of the anomalous cave we\l"
+    "discovered earlier.\p"
+    "We'll do what research we can here, and\n"
+    "go there at our next opportunity in\l"
+    "case there is a connection.\p"
+    "These Duskull are freaking me out\n"
+    "anyway.")
+    release
+    end
 }

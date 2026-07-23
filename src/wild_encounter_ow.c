@@ -174,6 +174,9 @@ static enum Direction CheckOWEPathToPlayerFromCollision(struct ObjectEvent *owe,
 static void Task_OWEApproachForBattle(u8 taskId);
 static bool32 CheckValidOWESpecies(enum Species speciesId);
 
+extern const u8 EventScript_GlimmoraCatch[];
+extern const u8 EventScript_GlalieCatch[];
+
 static EWRAM_DATA u8 sOWESpawnCountdown = 0;
 
 struct AgeSort
@@ -1998,7 +2001,15 @@ static void Task_OWEApproachForBattle(u8 taskId)
                 ObjectEventTurn(player, DetermineObjectEventDirectionFromObject(followerMon, player));
                 ObjectEventsTurnToEachOther(followerMon, OWE);
             }
-            ScriptContext_Enable();
+            //my attempt at adding custom chase interaction
+            if (OW_SPECIES(OWE) == SPECIES_GLIMMORA) {
+                ScriptContext_SetupScript(EventScript_GlimmoraCatch);
+            } else if (OW_SPECIES(OWE) == SPECIES_GLALIE) {
+                ScriptContext_SetupScript(EventScript_GlalieCatch);
+            } else {
+                ScriptContext_Enable();
+            }
+
             DestroyTask(taskId);
             return;
         }

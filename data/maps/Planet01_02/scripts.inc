@@ -242,52 +242,90 @@ Planet01_02_Carbink::
 	end
 
 
-Planet01_02_HintText01::
+Jirachi_goes_to_ship::
 # 155 "data/maps/Planet01_02/scripts.pory"
 	lock
 # 156 "data/maps/Planet01_02/scripts.pory"
-	msgbox Planet01_02_HintText01_Text_0
+	faceplayer
+# 157 "data/maps/Planet01_02/scripts.pory"
+	playmoncry SPECIES_JIRACHI, CRY_MODE_ENCOUNTER
+# 158 "data/maps/Planet01_02/scripts.pory"
+	msgbox Jirachi_goes_to_ship_Text_0
+# 159 "data/maps/Planet01_02/scripts.pory"
+	setflag FLAG_TEMP_1
+# 160 "data/maps/Planet01_02/scripts.pory"
+	fadeScreen FADE_TO_BLACK
 # 161 "data/maps/Planet01_02/scripts.pory"
+	setflag FLAG_REGISTERED_ANDRES
+# 162 "data/maps/Planet01_02/scripts.pory"
+	clearflag FLAG_REGISTERED_DUSTY
+# 163 "data/maps/Planet01_02/scripts.pory"
+	removeobject 27
+# 164 "data/maps/Planet01_02/scripts.pory"
+	fadeScreen FADE_FROM_BLACK
+# 165 "data/maps/Planet01_02/scripts.pory"
+	msgbox Jirachi_goes_to_ship_Text_1
+# 166 "data/maps/Planet01_02/scripts.pory"
+	release
+	end
+
+
+Planet01_02_HintText01::
+# 171 "data/maps/Planet01_02/scripts.pory"
+	lock
+# 172 "data/maps/Planet01_02/scripts.pory"
+	msgbox Planet01_02_HintText01_Text_0
+# 177 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
 
 
 Planet01_02_HintText02::
-# 166 "data/maps/Planet01_02/scripts.pory"
+# 182 "data/maps/Planet01_02/scripts.pory"
 	lock
-# 167 "data/maps/Planet01_02/scripts.pory"
+# 183 "data/maps/Planet01_02/scripts.pory"
 	msgbox Planet01_02_HintText02_Text_0
-# 171 "data/maps/Planet01_02/scripts.pory"
+# 187 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
 
 
 Planet01_02_HintText03::
-# 176 "data/maps/Planet01_02/scripts.pory"
+# 192 "data/maps/Planet01_02/scripts.pory"
 	lock
-# 177 "data/maps/Planet01_02/scripts.pory"
+# 193 "data/maps/Planet01_02/scripts.pory"
 	msgbox Planet01_02_HintText03_Text_0
-# 182 "data/maps/Planet01_02/scripts.pory"
+# 198 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
 
 
 Planet01_02_HintText04::
-# 187 "data/maps/Planet01_02/scripts.pory"
+# 203 "data/maps/Planet01_02/scripts.pory"
 	lock
-# 188 "data/maps/Planet01_02/scripts.pory"
+# 204 "data/maps/Planet01_02/scripts.pory"
 	msgbox Planet01_02_HintText04_Text_0
-# 191 "data/maps/Planet01_02/scripts.pory"
+# 207 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
 
 
 Planet01_02_HintText05::
-# 196 "data/maps/Planet01_02/scripts.pory"
+# 212 "data/maps/Planet01_02/scripts.pory"
 	lock
-# 197 "data/maps/Planet01_02/scripts.pory"
+# 213 "data/maps/Planet01_02/scripts.pory"
 	msgbox Planet01_02_HintText05_Text_0
-# 200 "data/maps/Planet01_02/scripts.pory"
+# 216 "data/maps/Planet01_02/scripts.pory"
+	release
+	end
+
+
+Planet01_02_HintText06::
+# 221 "data/maps/Planet01_02/scripts.pory"
+	lock
+# 222 "data/maps/Planet01_02/scripts.pory"
+	msgbox Planet01_02_HintText06_Text_0
+# 224 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
 
@@ -309,8 +347,16 @@ Planet01_02_Carbink_Text_1:
 # 148 "data/maps/Planet01_02/scripts.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Carbink climbed into your bag!$"
 
+Jirachi_goes_to_ship_Text_0:
+# 158 "data/maps/Planet01_02/scripts.pory"
+	.string "Jirachi wants to join your crew-!$"
+
+Jirachi_goes_to_ship_Text_1:
+# 165 "data/maps/Planet01_02/scripts.pory"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Jirachi went to your ship!$"
+
 Planet01_02_HintText01_Text_0:
-# 156 "data/maps/Planet01_02/scripts.pory"
+# 172 "data/maps/Planet01_02/scripts.pory"
 	.string "Engineer: Note to self. Do not wear\n"
 	.string "sweet smelling perfume the next time\l"
 	.string "I climb this mountain.\p"
@@ -318,14 +364,14 @@ Planet01_02_HintText01_Text_0:
 	.string "who is too much of a fan of it!$"
 
 Planet01_02_HintText02_Text_0:
-# 167 "data/maps/Planet01_02/scripts.pory"
+# 183 "data/maps/Planet01_02/scripts.pory"
 	.string "Biologist: The Quagsire seem to have\n"
 	.string "pretty stones embedded in them.\p"
 	.string "I'd be concerned, but they seem happy\n"
 	.string "enough about it!$"
 
 Planet01_02_HintText03_Text_0:
-# 177 "data/maps/Planet01_02/scripts.pory"
+# 193 "data/maps/Planet01_02/scripts.pory"
 	.string "Captain: To future explorers:\n"
 	.string "Our team has setup our primary lab in\l"
 	.string "the cave above this waterfall.\p"
@@ -333,13 +379,18 @@ Planet01_02_HintText03_Text_0:
 	.string "campsites to the south.$"
 
 Planet01_02_HintText04_Text_0:
-# 188 "data/maps/Planet01_02/scripts.pory"
+# 204 "data/maps/Planet01_02/scripts.pory"
 	.string "Engineer: We couldn't find a Pokemon\n"
 	.string "on this planet with the move {COLOR BLUE}{SHADOW LIGHT_BLUE}Waterfall;\l"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}thankfully had brought our own.$"
 
 Planet01_02_HintText05_Text_0:
-# 197 "data/maps/Planet01_02/scripts.pory"
+# 213 "data/maps/Planet01_02/scripts.pory"
 	.string "Scientist: There's a suprising amount\n"
 	.string "of greenery here for a planet with such\l"
 	.string "a light atmosphere.$"
+
+Planet01_02_HintText06_Text_0:
+# 222 "data/maps/Planet01_02/scripts.pory"
+	.string "That concludes the demo!\n"
+	.string "Thanks for playing!$"

@@ -72,6 +72,16 @@ Planet01_First_Camp_Cave_EventScript_Item02::
 	end
 
 
+Planet01_First_Camp_Cave_HintText01::
+# 61 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	lock
+# 62 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	msgbox Planet01_First_Camp_Cave_HintText01_Text_0
+# 71 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	release
+	end
+
+
 Planet01_First_Camp_Cave_UrsalunaEncounter_Text_0:
 # 14 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	.string "The enormous Pokémon lets out\n"
@@ -81,3 +91,15 @@ Planet01_First_Camp_Cave_UrsalunaEncounter_Text_1:
 # 32 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	.string "The Ursaluna disappeared into the\n"
 	.string "cave.$"
+
+Planet01_First_Camp_Cave_HintText01_Text_0:
+# 62 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	.string "Engineer: We made a base for research\n"
+	.string "here, but the local fauna has been getting\l"
+	.string "aggressive, so we better move.\p"
+	.string "There's another cave across the shore,\n"
+	.string "maybe we can check it out?\p"
+	.string "We might need to use our pokemon to dig\n"
+	.string "around and create a wall between us and\l"
+	.string "the icy caverns, though I do want to \l"
+	.string "explore those too.$"

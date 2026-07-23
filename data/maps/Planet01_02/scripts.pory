@@ -151,6 +151,22 @@ script Planet01_02_Carbink {
     end
 }
 
+script Jirachi_goes_to_ship {
+    lock
+    faceplayer
+    playmoncry(SPECIES_JIRACHI, CRY_MODE_ENCOUNTER)
+    msgbox("Jirachi wants to join your crew-!")
+    setflag(FLAG_TEMP_1)
+    fadeScreen(FADE_TO_BLACK)
+    setflag(FLAG_REGISTERED_ANDRES)
+    clearflag(FLAG_REGISTERED_DUSTY)
+    removeobject(27)
+    fadeScreen(FADE_FROM_BLACK)
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Jirachi went to your ship!")
+    release
+    end
+}
+
 script Planet01_02_HintText01 {
     lock
     msgbox("Engineer: Note to self. Do not wear\n"
@@ -197,6 +213,14 @@ script Planet01_02_HintText05 {
     msgbox("Scientist: There's a suprising amount\n"
     "of greenery here for a planet with such\l"
     "a light atmosphere.")
+    release
+    end
+}
+
+script Planet01_02_HintText06 {
+    lock
+    msgbox("That concludes the demo!\n"
+    "Thanks for playing!")
     release
     end
 }

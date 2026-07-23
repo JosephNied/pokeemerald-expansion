@@ -30,6 +30,7 @@
 #include "constants/abilities.h"
 #include "constants/items.h"
 #include "constants/battle_frontier.h"
+#include "constants/battle.h"
 
 static void CB2_ReturnFromChooseHalfParty(void);
 static void CB2_ReturnFromChooseBattleFrontierParty(void);
@@ -717,4 +718,61 @@ void ReplaceSunMoonWithTerragem(void)
     AddBagItem(ITEM_BEAST_BALL, 1);
 
     CompactPartySlots();
+}
+
+void GlimmoraCatch(void)
+{
+    u32 i;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][i];
+
+        if (GetMonData(mon, MON_DATA_SPECIES) != SPECIES_NONE
+         && GetMonData(mon, MON_DATA_HP) != 0
+         && GetMonData(mon, MON_DATA_STATUS) == STATUS1_NONE)
+        {
+            SetMonData(mon, MON_DATA_STATUS, &(u32){STATUS1_POISON});
+            CalculatePlayerPartyCount();
+            return;
+        }
+    }
+}
+
+void GlalieCatch(void)
+{
+    u32 i;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][i];
+
+        if (GetMonData(mon, MON_DATA_SPECIES) != SPECIES_NONE
+         && GetMonData(mon, MON_DATA_HP) != 0
+         && GetMonData(mon, MON_DATA_STATUS) == STATUS1_NONE)
+        {
+            SetMonData(mon, MON_DATA_STATUS, &(u32){STATUS1_FREEZE});
+            CalculatePlayerPartyCount();
+            return;
+        }
+    }
+}
+
+void SlugmaCatch(void)
+{
+    u32 i;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][i];
+
+        if (GetMonData(mon, MON_DATA_SPECIES) != SPECIES_NONE
+         && GetMonData(mon, MON_DATA_HP) != 0
+         && GetMonData(mon, MON_DATA_STATUS) == STATUS1_NONE)
+        {
+            SetMonData(mon, MON_DATA_STATUS, &(u32){STATUS1_BURN});
+            CalculatePlayerPartyCount();
+            return;
+        }
+    }
 }

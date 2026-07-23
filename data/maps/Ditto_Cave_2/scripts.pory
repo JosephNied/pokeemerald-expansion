@@ -5,3 +5,16 @@ mapscripts Ditto_Cave_2_MapScripts {
 script Ditto_Cave_2_Enter {
 	special(SetRandomFlags)
 }
+
+script EventScript_SlugmaCatch {
+	lockall
+	fadeScreen(FADE_TO_WHITE)
+	special(SlugmaCatch)
+	setflag(FLAG_TEMP_1)
+    removeobject(1)
+    fadeScreen(FADE_FROM_WHITE)
+	msgbox("Slugma burned a party member!\n"
+	"They're a bit mad!")
+	release
+	end
+}

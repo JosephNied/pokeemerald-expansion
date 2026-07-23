@@ -98,5 +98,14 @@
       "script": "Planet01_05_DusknoirEncounter"
     }
   ],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 19,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Planet01_05_HintText01"
+    }
+  ]
 }
