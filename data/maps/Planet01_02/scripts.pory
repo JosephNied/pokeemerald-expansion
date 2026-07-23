@@ -32,10 +32,20 @@ script Planet01_02_EventScript_Item02 {
     end
 }
 
+script Planet01_02_EventScript_Item03 {
+    lock
+    giveitem(ITEM_STAR_PIECE, 1)
+    setflag(FLAG_UNUSED_0x4D0)
+    removeobject(26)
+    release
+    end
+}
+
 script Planet01_02_AddAir_Minior01 {
     lockall
     setvar(VAR_AIR_TIMER_STEPS, 150)
     special(AddAirTimerMap)
+    playmoncry(SPECIES_MINIOR, CRY_MODE_ENCOUNTER)
     msgbox("Minior is floating in a pocket of air!\n"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
     setflag(FLAG_UNUSED_0x02F)
@@ -51,6 +61,7 @@ script Planet01_02_AddAir_Minior02 {
     lockall
     setvar(VAR_AIR_TIMER_STEPS, 150)
     special(AddAirTimerMap)
+    playmoncry(SPECIES_MINIOR, CRY_MODE_ENCOUNTER)
     msgbox("Minior is floating in a pocket of air!\n"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
     setflag(FLAG_UNUSED_0x031)
@@ -128,6 +139,7 @@ script Planet01_02_EventScript_RockSmash07 {
 script Planet01_02_Carbink {
     lock
     faceplayer
+    playmoncry(SPECIES_CARBINK, CRY_MODE_ENCOUNTER)
     msgbox("The Carbink seems lost...!")
     setflag(FLAG_UNUSED_0x04D)
     fadeScreen(FADE_TO_BLACK)
@@ -135,6 +147,56 @@ script Planet01_02_Carbink {
     fadeScreen(FADE_FROM_BLACK)
     msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Carbink climbed into your bag!")
     giveitem(ITEM_CHIPPED_POT, 1)
+    release
+    end
+}
+
+script Planet01_02_HintText01 {
+    lock
+    msgbox("Engineer: Note to self. Do not wear\n"
+    "sweet smelling perfume the next time\l"
+    "I climb this mountain.\p"
+    "There's a strong pokemon at the top\n"
+    "who is too much of a fan of it!")
+    release
+    end
+}
+
+script Planet01_02_HintText02 {
+    lock
+    msgbox("Biologist: The Quagsire seem to have\n"
+    "pretty stones embedded in them.\p"
+    "I'd be concerned, but they seem happy\n"
+    "enough about it!")
+    release
+    end
+}
+
+script Planet01_02_HintText03 {
+    lock
+    msgbox("Captain: To future explorers:\n"
+    "Our team has setup our primary lab in\l"
+    "the cave above this waterfall.\p"
+    "You may be able to find our previous\n"
+    "campsites to the south.")
+    release
+    end
+}
+
+script Planet01_02_HintText04 {
+    lock
+    msgbox("Engineer: We couldn't find a Pokemon\n"
+    "on this planet with the move {COLOR BLUE}{SHADOW LIGHT_BLUE}Waterfall;\l"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}thankfully had brought our own.")
+    release
+    end
+}
+
+script Planet01_02_HintText05 {
+    lock
+    msgbox("Scientist: There's a suprising amount\n"
+    "of greenery here for a planet with such\l"
+    "a light atmosphere.")
     release
     end
 }

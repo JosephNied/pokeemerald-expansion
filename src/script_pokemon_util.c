@@ -714,6 +714,7 @@ void ReplaceSunMoonWithTerragem(void)
     // Remove them
     ZeroMonData(&gParties[B_TRAINER_PLAYER][solrockSlot]);
     ZeroMonData(&gParties[B_TRAINER_PLAYER][lunatoneSlot]);
+    AddBagItem(ITEM_BEAST_BALL, 1);
 
     CompactPartySlots();
 }

@@ -13,6 +13,7 @@ script Spaceship_Dev_Enter {
 script refill_air_canister {
     lock
     faceplayer
+    playmoncry(SPECIES_ROTOM, CRY_MODE_ENCOUNTER)
     msgbox("Rotom wants to refill my empty air \n"
     "canisters!")
     waitmessage
@@ -36,7 +37,7 @@ script Spaceship_Dev_EventScript_BallItem01 {
     giveitem(ITEM_SCANNER)
     giveitem(ITEM_DEVON_PARTS)
     giveitem(ITEM_ESCAPE_ROPE)
-    giveitem(ITEM_DOWSING_MACHINE)
+    //giveitem(ITEM_DOWSING_MACHINE)
     setflag(FLAG_UNUSED_0x027)
     clearflag(FLAG_SYS_BRAILLE_DIG)
     setflag(FLAG_UNUSED_0x045)
@@ -44,6 +45,7 @@ script Spaceship_Dev_EventScript_BallItem01 {
     setflag(FLAG_UNUSED_0x047)
     setflag(FLAG_UNUSED_0x048)
     setflag(FLAG_UNUSED_0x049)
+    clearflag(FLAG_REGISTERED_ROSE)
     removeobject(1)
     release
     end
@@ -92,7 +94,12 @@ script Spaceship_Dev_EventScript_Item01 {
     lock
     faceplayer
     setflag(FLAG_SYS_POKEDEX_GET)
+    waitse()
+    playmoncry(SPECIES_MAGNEZONE, CRY_MODE_ENCOUNTER)
+    delay(40)
+    waitmoncry()
     msgbox("Magnezone, let's go!")
+    waitmessage
     givemon(SPECIES_MAGNEZONE, 50, ITEM_MAGNET)
     removeobject(6)
 
@@ -274,6 +281,7 @@ script TestRemovePokes {
 script Blissey_Bed {
     lock
     faceplayer
+    playmoncry(SPECIES_BLISSEY, CRY_MODE_ENCOUNTER)
     msgbox("Blissey wants to heal the team!")
     waitmessage
     closemessage
@@ -285,6 +293,7 @@ script Blissey_Bed {
 script Bellossom {
     lock
     faceplayer
+    playmoncry(SPECIES_BELLOSSOM, CRY_MODE_ENCOUNTER)
     msgbox("Bellossum converts my C02 into oxygen.\n"
     "An important team member!")
     release

@@ -44,28 +44,30 @@ Planet01_Ice_Cave_Carbink::
 # 29 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	faceplayer
 # 30 "data/maps/Planet01_ICE_CAVE/scripts.pory"
-	msgbox Planet01_Ice_Cave_Carbink_Text_0
+	playmoncry SPECIES_CARBINK, CRY_MODE_ENCOUNTER
 # 31 "data/maps/Planet01_ICE_CAVE/scripts.pory"
-	setflag FLAG_UNUSED_0x04C
+	msgbox Planet01_Ice_Cave_Carbink_Text_0
 # 32 "data/maps/Planet01_ICE_CAVE/scripts.pory"
-	fadeScreen FADE_TO_BLACK
+	setflag FLAG_UNUSED_0x04C
 # 33 "data/maps/Planet01_ICE_CAVE/scripts.pory"
-	removeobject 12
+	fadeScreen FADE_TO_BLACK
 # 34 "data/maps/Planet01_ICE_CAVE/scripts.pory"
-	fadeScreen FADE_FROM_BLACK
+	removeobject 12
 # 35 "data/maps/Planet01_ICE_CAVE/scripts.pory"
-	msgbox Planet01_Ice_Cave_Carbink_Text_1
+	fadeScreen FADE_FROM_BLACK
 # 36 "data/maps/Planet01_ICE_CAVE/scripts.pory"
-	giveitem ITEM_CHIPPED_POT, 1
+	msgbox Planet01_Ice_Cave_Carbink_Text_1
 # 37 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+	giveitem ITEM_CHIPPED_POT, 1
+# 38 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	release
 	end
 
 
 Planet01_Ice_Cave_Carbink_Text_0:
-# 30 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+# 31 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	.string "The Carbink is chilly...$"
 
 Planet01_Ice_Cave_Carbink_Text_1:
-# 35 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+# 36 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Carbink climbed into your bag!$"

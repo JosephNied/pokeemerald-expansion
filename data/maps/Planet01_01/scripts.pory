@@ -5,6 +5,11 @@ mapscripts Planet01_01_MapScripts {
 
 script Planet01_01_Enter {
 	special(SetRandomFlags)
+    if(flag(FLAG_REGISTERED_ROSE) == FALSE) {
+        setvar(VAR_TEMP_0, 0)
+    } else {
+        setvar(VAR_TEMP_0, 1)
+    }
 
     getplayerxy(VAR_0x8004, VAR_0x8005)
     compare (VAR_0x8004, 18)
@@ -29,6 +34,7 @@ script Planet01_01_StartAirTimer {
     setvar(VAR_AIR_TIMER_TRIGGERED, 0)
     special(StartAirTimerMap)
     lockall
+    playse(SE_REPEL)
     msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Low Oxygen detected. Supplying air.")
     releaseall
     end
@@ -72,9 +78,10 @@ script Planet01_01_AddAir_Minior01 {
     lockall
     setvar(VAR_AIR_TIMER_STEPS, 150)
     special(AddAirTimerMap)
+    playmoncry(SPECIES_MINIOR, CRY_MODE_ENCOUNTER)
     msgbox("Minior is floating in a pocket of air!\n"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
-    setflag(FLAG_UNUSED_0x032)
+    setflag(FLAG_TEMP_1)
     fadeScreen(FADE_TO_BLACK)
     removeobject(9)
     fadeScreen(FADE_FROM_BLACK)
@@ -87,6 +94,7 @@ script Planet01_01_AddAir_Minior02 {
     lockall
     setvar(VAR_AIR_TIMER_STEPS, 150)
     special(AddAirTimerMap)
+    playmoncry(SPECIES_MINIOR, CRY_MODE_ENCOUNTER)
     msgbox("Minior is floating in a pocket of air!\n"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
     setflag(FLAG_UNUSED_0x02B)
@@ -143,9 +151,20 @@ script Planet01_01_HintText04 {
     end
 }
 
+script Planet01_01_HintText05 {
+    lock
+    msgbox("Biologist: There are a lot of\n"
+    "members of the Clefairy family around\l"
+    "these rocks. They must prefer to live\l"
+    "in the mountains.")
+    release
+    end
+}
+
 script Planet01_01_Carbink {
     lock
     faceplayer
+    playmoncry(SPECIES_CARBINK, CRY_MODE_ENCOUNTER)
     msgbox("The Carbink seems to want to play!")
     setflag(FLAG_UNUSED_0x04B)
     fadeScreen(FADE_TO_BLACK)
@@ -155,4 +174,83 @@ script Planet01_01_Carbink {
     giveitem(ITEM_CHIPPED_POT, 1)
     release
     end
+}
+
+script Planet01_01_Elgyem {
+    lock
+    faceplayer
+    playmoncry(SPECIES_ELGYEM, CRY_MODE_ENCOUNTER)
+    msgbox("Elgyem seems taken off-guard!\n"
+    "My bad- Huh?! It's using Teleport-")
+    waitmessage
+    warp(MAP_PLANET01_02, 0, 21, 23)
+    waitstate
+    release
+    end
+}
+
+script Planet01_01_JirachiAppears {
+    lock
+    msgbox("So this is an alien planet, eh?\l"
+    "Well, it better watch out. I don't get\n"
+    "suprised easily.")
+    waitmessage
+    special(Script_FadeOutMapMusic)
+    applymovement(14, Movement_FirstJirachiEncounter1)
+    waitse()
+    playmoncry(SPECIES_JIRACHI, CRY_MODE_ENCOUNTER)
+    delay(40)
+    waitmoncry()
+    msgbox("...")
+    waitmessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    delay(60)
+    applymovement(14, Movement_FirstJirachiEncounter2)
+    waitmovement(0)
+    delay(30)
+    removeobject(14)
+    msgbox("...Was that a Jirachi?!\n"
+    "That's good luck- I mean, I think it's\l"
+    "good luck! Probably.")
+    waitmessage
+    special(Overworld_PlaySpecialMapMusic)
+    setvar(VAR_TEMP_0, 1)
+    setflag(FLAG_REGISTERED_ROSE)
+    release
+    end
+}
+
+movement Movement_FirstJirachiEncounter1 {
+    face_down
+    set_visible
+    delay_4
+    set_invisible
+    delay_4
+    set_visible
+    delay_4
+    set_invisible
+    delay_4
+    set_visible
+    delay_8
+    set_invisible
+    delay_8
+    set_visible
+    delay_8
+    set_invisible
+    delay_8
+    set_visible
+    delay_16
+    set_invisible
+    delay_16
+    set_visible
+}
+
+movement Movement_FirstJirachiEncounter2 {
+    face_up
+    delay_16
+    walk_up
+    walk_up
+    walk_up
+    walk_up
 }

@@ -48,13 +48,23 @@ Planet01_Diancie_Cave_Spawn_Poke_14:
 	compare VAR_CARBINK_COUNT, 4
 	goto_if_le Planet01_Diancie_Cave_Spawn_Poke_17
 # 59 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	clearflag FLAG_UNUSED_0x045
+	setvar VAR_0x8004, 1
 # 60 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	fadeScreen FADE_FROM_BLACK
+	setvar VAR_0x8005, 1
 # 61 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	setvar VAR_0x8006, 8
+# 62 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	setvar VAR_0x8007, 5
+# 63 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	special ShakeCamera
+# 64 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	clearflag FLAG_UNUSED_0x045
+# 65 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	fadeScreen FADE_FROM_BLACK
+# 66 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	msgbox Planet01_Diancie_Cave_Spawn_Poke_Text_2
 Planet01_Diancie_Cave_Spawn_Poke_1:
-# 64 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 69 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	releaseall
 	end
 
@@ -108,45 +118,45 @@ Planet01_Diancie_Cave_Spawn_Poke_17:
 
 
 Planet01_Diancie_Cave_DiancieEncounter::
-# 69 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	lockall
-# 70 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	faceplayer
-# 72 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	msgbox Planet01_Diancie_Cave_DiancieEncounter_Text_0
 # 74 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	waitse
+	lockall
 # 75 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	playmoncry SPECIES_DIANCIE, CRY_MODE_ENCOUNTER
-# 76 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	waitmoncry
-# 78 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	special SetBossBattle
+	faceplayer
+# 77 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	msgbox Planet01_Diancie_Cave_DiancieEncounter_Text_0
 # 79 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	setwildbattle SPECIES_DIANCIE, 75, ITEM_DIANCITE
+	waitse
+# 80 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	playmoncry SPECIES_DIANCIE, CRY_MODE_ENCOUNTER
+# 81 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	waitmoncry
+# 83 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	special SetBossBattle
 # 84 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	setwildbattle SPECIES_DIANCIE, 75, ITEM_DIANCITE
+# 89 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	dowildbattle
-# 85 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	special BossBattleOff
-# 87 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	compare VAR_RESULT, FALSE
-# 88 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	goto_if_eq PlayerLost_Diancie
 # 90 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	removeobject 5
-# 91 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	setflag FLAG_UNUSED_0x045
+	special BossBattleOff
+# 92 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	compare VAR_RESULT, FALSE
 # 93 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	msgbox Planet01_Diancie_Cave_DiancieEncounter_Text_1
+	goto_if_eq PlayerLost_Diancie
 # 95 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	giveitem ITEM_DIANCITE
+	removeobject 5
 # 96 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	releaseall
-# 97 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	end
-# 99 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-PlayerLost_Diancie:
+	setflag FLAG_UNUSED_0x045
+# 98 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	msgbox Planet01_Diancie_Cave_DiancieEncounter_Text_1
 # 100 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	giveitem ITEM_DIANCITE
+# 101 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	releaseall
+# 102 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	end
+# 104 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+PlayerLost_Diancie:
+# 105 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	releaseall
 	end
 
@@ -160,14 +170,14 @@ Planet01_Diancie_Cave_Spawn_Poke_Text_1:
 	.string "Carbink went home!$"
 
 Planet01_Diancie_Cave_Spawn_Poke_Text_2:
-# 61 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 66 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	.string "The Carbink- Woah! A Diancie!$"
 
 Planet01_Diancie_Cave_DiancieEncounter_Text_0:
-# 72 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 77 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	.string "Diancie wants to fight!$"
 
 Planet01_Diancie_Cave_DiancieEncounter_Text_1:
-# 93 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 98 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	.string "Daincie seemd pleased with\n"
 	.string "the battle! It left a gift!$"

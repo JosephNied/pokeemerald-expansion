@@ -27,6 +27,7 @@ script Planet01_Ice_Cave_EventScript_Item02 {
 script Planet01_Ice_Cave_Carbink {
     lock
     faceplayer
+	playmoncry(SPECIES_CARBINK, CRY_MODE_ENCOUNTER)
     msgbox("The Carbink is chilly...")
     setflag(FLAG_UNUSED_0x04C)
     fadeScreen(FADE_TO_BLACK)

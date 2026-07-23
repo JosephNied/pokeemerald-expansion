@@ -15,13 +15,93 @@ script Planet01_07_Enter {
 script Sun_Moon_Check {
 	special(SunMoonCheck)
 	if (var(VAR_RESULT) == TRUE) {
-		lock
+		lockall
+		special(Script_FadeOutMapMusic)
+		msgbox("You can see the sun and moon of the\n"
+		"planet here. What an incredible sight!\p"
+		"...Huh?")
+		applymovement(3, Movement_SunMoon_Jirachi)
+		waitmovement(0)
+		setvar(VAR_0x8004, 1)
+		setvar(VAR_0x8005, 1)
+		setvar(VAR_0x8006, 8)
+		setvar(VAR_0x8007, 5)
+		special(ShakeCamera)
+		msgbox("Lunatone and Solrock are reacting\n"
+		"to the presence of Jirachi!")
+		setvar(VAR_0x8004, 1)
+		setvar(VAR_0x8005, 1)
+		setvar(VAR_0x8006, 8)
+		setvar(VAR_0x8007, 5)
+		special(ShakeCamera)
+		delay(30)
+		fadescreen(FADE_TO_WHITE)
+		closemessage
+		delay(60)
+		fadescreen(FADE_FROM_WHITE)
 		special(ReplaceSunMoonWithTerragem)
-		msgbox("Woah! Solrock and Lunatone merged into one!")
+		msgbox("Woah! Solrock and Lunatone have\n"
+		"merged into one!\p"
+		"...\p"
+		"...Jirachi?")
+		waitmessage
+		applymovement(3, Movement_SunMoon_Jirachi2)
+		waitmovement(0)
+		fadescreen(FADE_TO_WHITE)
+		closemessage
+		delay(60)
+		removeobject(3)
+		fadescreen(FADE_FROM_WHITE)
+		special(Overworld_PlaySpecialMapMusic)
 		givemon(SPECIES_CELEBI, 50)
-		giveitem(ITEM_BEAST_BALL, 1)
 		setflag(FLAG_UNUSED_0x88F)
-		release
+		msgbox("...")
+		releaseall
 	}
 	end
+}
+
+movement Movement_SunMoon_Jirachi {
+    face_down
+    set_visible
+    delay_4
+    set_invisible
+    delay_4
+    set_visible
+    delay_4
+    set_invisible
+    delay_4
+    set_visible
+    delay_8
+    set_invisible
+    delay_8
+    set_visible
+    delay_8
+    set_invisible
+    delay_8
+    set_visible
+    delay_16
+    set_invisible
+    delay_16
+    set_visible
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	walk_down
+    walk_down
+	delay_16
+	delay_16
+}
+
+movement Movement_SunMoon_Jirachi2 {
+    face_up
+	delay_16
+	delay_16
+	walk_up
+	delay_16
+	delay_16
+	walk_up
+	delay_16
+	delay_16
 }

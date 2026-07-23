@@ -5,12 +5,3 @@ mapscripts Ditto_Cave_2_MapScripts {
 script Ditto_Cave_2_Enter {
 	special(SetRandomFlags)
 }
-
-script Ditto_Cave_2_EventScript_Item01 {
-    lock
-    giveitem(ITEM_STAR_PIECE, 1)
-    removeobject(1)
-    setflag(FLAG_UNUSED_0x499)
-    release
-    end
-}

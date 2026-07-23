@@ -56,6 +56,11 @@ script Planet01_Diancie_Cave_Spawn_Poke {
 			fadeScreen(FADE_FROM_BLACK)
     		msgbox("Carbink went home!")
 		} else {
+			setvar(VAR_0x8004, 1)
+			setvar(VAR_0x8005, 1)
+			setvar(VAR_0x8006, 8)
+			setvar(VAR_0x8007, 5)
+			special(ShakeCamera)
 			clearflag(FLAG_UNUSED_0x045)
 			fadeScreen(FADE_FROM_BLACK)
     		msgbox("The Carbink- Woah! A Diancie!")

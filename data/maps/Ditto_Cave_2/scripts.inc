@@ -9,17 +9,3 @@ Ditto_Cave_2_Enter::
 	special SetRandomFlags
 	return
 
-
-Ditto_Cave_2_EventScript_Item01::
-# 10 "data/maps/Ditto_Cave_2/scripts.pory"
-	lock
-# 11 "data/maps/Ditto_Cave_2/scripts.pory"
-	giveitem ITEM_STAR_PIECE, 1
-# 12 "data/maps/Ditto_Cave_2/scripts.pory"
-	removeobject 1
-# 13 "data/maps/Ditto_Cave_2/scripts.pory"
-	setflag FLAG_UNUSED_0x499
-# 14 "data/maps/Ditto_Cave_2/scripts.pory"
-	release
-	end
-

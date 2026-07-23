@@ -10,6 +10,7 @@ script Planet01_04_AddAir_Minior01 {
     lockall
     setvar(VAR_AIR_TIMER_STEPS, 150)
     special(AddAirTimerMap)
+    playmoncry(SPECIES_MINIOR, CRY_MODE_ENCOUNTER)
     msgbox("Minior is floating in a pocket of air!\n"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
     setflag(FLAG_UNUSED_0x032)
@@ -25,6 +26,7 @@ script Planet01_04_AddAir_Minior02 {
     lockall
     setvar(VAR_AIR_TIMER_STEPS, 150)
     special(AddAirTimerMap)
+    playmoncry(SPECIES_MINIOR, CRY_MODE_ENCOUNTER)
     msgbox("Minior is floating in a pocket of air!\n"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
     setflag(FLAG_UNUSED_0x032)
@@ -33,5 +35,42 @@ script Planet01_04_AddAir_Minior02 {
     fadeScreen(FADE_FROM_BLACK)
     msgbox("Minior flew away...")
     releaseall
+    end
+}
+
+script Planet01_04_EventScript_Item01 {
+    lock
+    giveitem(ITEM_STAR_PIECE, 1)
+    removeobject(7)
+    setflag(FLAG_UNUSED_0x499)
+    release
+    end
+}
+
+script Planet01_04_HintText01 {
+    lock
+    msgbox("Engineer: The cave above just sends us\n"
+    "in circles. How is this even possible?!\l"
+    "I will get to the bottom of this!")
+    release
+    end
+}
+
+script Planet01_04_HintText02 {
+    lock
+    msgbox("Scientist: My instruments are going\n"
+    "crazy whenever I start heading up this\l"
+    "way. There is clearly something worth\l"
+    "studying up here.")
+    release
+    end
+}
+
+script Planet01_04_HintText03 {
+    lock
+    msgbox("Captain: Looks like this planet isn't\n"
+    "very large. We'll have mapped it all out\l"
+    "in no time!")
+    release
     end
 }

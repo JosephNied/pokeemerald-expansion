@@ -52,189 +52,294 @@ Planet01_02_EventScript_Item02::
 	end
 
 
-Planet01_02_AddAir_Minior01::
+Planet01_02_EventScript_Item03::
 # 36 "data/maps/Planet01_02/scripts.pory"
-	lockall
+	lock
 # 37 "data/maps/Planet01_02/scripts.pory"
-	setvar VAR_AIR_TIMER_STEPS, 150
+	giveitem ITEM_STAR_PIECE, 1
 # 38 "data/maps/Planet01_02/scripts.pory"
-	special AddAirTimerMap
+	setflag FLAG_UNUSED_0x4D0
 # 39 "data/maps/Planet01_02/scripts.pory"
-	msgbox Planet01_02_AddAir_Minior01_Text_0
-# 41 "data/maps/Planet01_02/scripts.pory"
-	setflag FLAG_UNUSED_0x02F
-# 42 "data/maps/Planet01_02/scripts.pory"
-	fadeScreen FADE_TO_BLACK
-# 43 "data/maps/Planet01_02/scripts.pory"
-	removeobject 5
-# 44 "data/maps/Planet01_02/scripts.pory"
-	fadeScreen FADE_FROM_BLACK
+	removeobject 26
+# 40 "data/maps/Planet01_02/scripts.pory"
+	release
+	end
+
+
+Planet01_02_AddAir_Minior01::
 # 45 "data/maps/Planet01_02/scripts.pory"
-	msgbox Planet01_02_AddAir_Minior01_Text_1
+	lockall
 # 46 "data/maps/Planet01_02/scripts.pory"
+	setvar VAR_AIR_TIMER_STEPS, 150
+# 47 "data/maps/Planet01_02/scripts.pory"
+	special AddAirTimerMap
+# 48 "data/maps/Planet01_02/scripts.pory"
+	playmoncry SPECIES_MINIOR, CRY_MODE_ENCOUNTER
+# 49 "data/maps/Planet01_02/scripts.pory"
+	msgbox Planet01_02_AddAir_Minior01_Text_0
+# 51 "data/maps/Planet01_02/scripts.pory"
+	setflag FLAG_UNUSED_0x02F
+# 52 "data/maps/Planet01_02/scripts.pory"
+	fadeScreen FADE_TO_BLACK
+# 53 "data/maps/Planet01_02/scripts.pory"
+	removeobject 5
+# 54 "data/maps/Planet01_02/scripts.pory"
+	fadeScreen FADE_FROM_BLACK
+# 55 "data/maps/Planet01_02/scripts.pory"
+	msgbox Planet01_02_AddAir_Minior01_Text_1
+# 56 "data/maps/Planet01_02/scripts.pory"
 	releaseall
 	end
 
 
 Planet01_02_AddAir_Minior02::
-# 51 "data/maps/Planet01_02/scripts.pory"
-	lockall
-# 52 "data/maps/Planet01_02/scripts.pory"
-	setvar VAR_AIR_TIMER_STEPS, 150
-# 53 "data/maps/Planet01_02/scripts.pory"
-	special AddAirTimerMap
-# 54 "data/maps/Planet01_02/scripts.pory"
-	msgbox Planet01_02_AddAir_Minior01_Text_0
-# 56 "data/maps/Planet01_02/scripts.pory"
-	setflag FLAG_UNUSED_0x031
-# 57 "data/maps/Planet01_02/scripts.pory"
-	fadeScreen FADE_TO_BLACK
-# 58 "data/maps/Planet01_02/scripts.pory"
-	removeobject 25
-# 59 "data/maps/Planet01_02/scripts.pory"
-	fadeScreen FADE_FROM_BLACK
-# 60 "data/maps/Planet01_02/scripts.pory"
-	msgbox Planet01_02_AddAir_Minior01_Text_1
 # 61 "data/maps/Planet01_02/scripts.pory"
+	lockall
+# 62 "data/maps/Planet01_02/scripts.pory"
+	setvar VAR_AIR_TIMER_STEPS, 150
+# 63 "data/maps/Planet01_02/scripts.pory"
+	special AddAirTimerMap
+# 64 "data/maps/Planet01_02/scripts.pory"
+	playmoncry SPECIES_MINIOR, CRY_MODE_ENCOUNTER
+# 65 "data/maps/Planet01_02/scripts.pory"
+	msgbox Planet01_02_AddAir_Minior01_Text_0
+# 67 "data/maps/Planet01_02/scripts.pory"
+	setflag FLAG_UNUSED_0x031
+# 68 "data/maps/Planet01_02/scripts.pory"
+	fadeScreen FADE_TO_BLACK
+# 69 "data/maps/Planet01_02/scripts.pory"
+	removeobject 25
+# 70 "data/maps/Planet01_02/scripts.pory"
+	fadeScreen FADE_FROM_BLACK
+# 71 "data/maps/Planet01_02/scripts.pory"
+	msgbox Planet01_02_AddAir_Minior01_Text_1
+# 72 "data/maps/Planet01_02/scripts.pory"
 	releaseall
 	end
 
 
 Planet01_02_EventScript_RockSmash01::
-# 66 "data/maps/Planet01_02/scripts.pory"
+# 77 "data/maps/Planet01_02/scripts.pory"
 	lock
-# 67 "data/maps/Planet01_02/scripts.pory"
+# 78 "data/maps/Planet01_02/scripts.pory"
 	faceplayer
-# 68 "data/maps/Planet01_02/scripts.pory"
+# 79 "data/maps/Planet01_02/scripts.pory"
 	call EventScript_RockSmash
-# 69 "data/maps/Planet01_02/scripts.pory"
+# 80 "data/maps/Planet01_02/scripts.pory"
 	setflag FLAG_TEMP_10
-# 70 "data/maps/Planet01_02/scripts.pory"
+# 81 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
 
 
 Planet01_02_EventScript_RockSmash02::
-# 75 "data/maps/Planet01_02/scripts.pory"
+# 86 "data/maps/Planet01_02/scripts.pory"
 	lock
-# 76 "data/maps/Planet01_02/scripts.pory"
+# 87 "data/maps/Planet01_02/scripts.pory"
 	faceplayer
-# 77 "data/maps/Planet01_02/scripts.pory"
+# 88 "data/maps/Planet01_02/scripts.pory"
 	call EventScript_RockSmash
-# 78 "data/maps/Planet01_02/scripts.pory"
+# 89 "data/maps/Planet01_02/scripts.pory"
 	setflag FLAG_TEMP_11
-# 79 "data/maps/Planet01_02/scripts.pory"
+# 90 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
 
 
 Planet01_02_EventScript_RockSmash03::
-# 84 "data/maps/Planet01_02/scripts.pory"
+# 95 "data/maps/Planet01_02/scripts.pory"
 	lock
-# 85 "data/maps/Planet01_02/scripts.pory"
+# 96 "data/maps/Planet01_02/scripts.pory"
 	faceplayer
-# 86 "data/maps/Planet01_02/scripts.pory"
+# 97 "data/maps/Planet01_02/scripts.pory"
 	call EventScript_RockSmash
-# 87 "data/maps/Planet01_02/scripts.pory"
+# 98 "data/maps/Planet01_02/scripts.pory"
 	setflag FLAG_TEMP_12
-# 88 "data/maps/Planet01_02/scripts.pory"
+# 99 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
 
 
 Planet01_02_EventScript_RockSmash04::
-# 93 "data/maps/Planet01_02/scripts.pory"
+# 104 "data/maps/Planet01_02/scripts.pory"
 	lock
-# 94 "data/maps/Planet01_02/scripts.pory"
+# 105 "data/maps/Planet01_02/scripts.pory"
 	faceplayer
-# 95 "data/maps/Planet01_02/scripts.pory"
+# 106 "data/maps/Planet01_02/scripts.pory"
 	call EventScript_RockSmash
-# 96 "data/maps/Planet01_02/scripts.pory"
+# 107 "data/maps/Planet01_02/scripts.pory"
 	setflag FLAG_TEMP_13
-# 97 "data/maps/Planet01_02/scripts.pory"
+# 108 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
 
 
 Planet01_02_EventScript_RockSmash05::
-# 102 "data/maps/Planet01_02/scripts.pory"
+# 113 "data/maps/Planet01_02/scripts.pory"
 	lock
-# 103 "data/maps/Planet01_02/scripts.pory"
+# 114 "data/maps/Planet01_02/scripts.pory"
 	faceplayer
-# 104 "data/maps/Planet01_02/scripts.pory"
+# 115 "data/maps/Planet01_02/scripts.pory"
 	call EventScript_RockSmash
-# 105 "data/maps/Planet01_02/scripts.pory"
+# 116 "data/maps/Planet01_02/scripts.pory"
 	setflag FLAG_TEMP_14
-# 106 "data/maps/Planet01_02/scripts.pory"
+# 117 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
 
 
 Planet01_02_EventScript_RockSmash06::
-# 111 "data/maps/Planet01_02/scripts.pory"
+# 122 "data/maps/Planet01_02/scripts.pory"
 	lock
-# 112 "data/maps/Planet01_02/scripts.pory"
+# 123 "data/maps/Planet01_02/scripts.pory"
 	faceplayer
-# 113 "data/maps/Planet01_02/scripts.pory"
+# 124 "data/maps/Planet01_02/scripts.pory"
 	call EventScript_RockSmash
-# 114 "data/maps/Planet01_02/scripts.pory"
+# 125 "data/maps/Planet01_02/scripts.pory"
 	setflag FLAG_TEMP_15
-# 115 "data/maps/Planet01_02/scripts.pory"
+# 126 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
 
 
 Planet01_02_EventScript_RockSmash07::
-# 120 "data/maps/Planet01_02/scripts.pory"
+# 131 "data/maps/Planet01_02/scripts.pory"
 	lock
-# 121 "data/maps/Planet01_02/scripts.pory"
+# 132 "data/maps/Planet01_02/scripts.pory"
 	faceplayer
-# 122 "data/maps/Planet01_02/scripts.pory"
+# 133 "data/maps/Planet01_02/scripts.pory"
 	call EventScript_RockSmash
-# 123 "data/maps/Planet01_02/scripts.pory"
+# 134 "data/maps/Planet01_02/scripts.pory"
 	setflag FLAG_TEMP_16
-# 124 "data/maps/Planet01_02/scripts.pory"
+# 135 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
 
 
 Planet01_02_Carbink::
-# 129 "data/maps/Planet01_02/scripts.pory"
+# 140 "data/maps/Planet01_02/scripts.pory"
 	lock
-# 130 "data/maps/Planet01_02/scripts.pory"
+# 141 "data/maps/Planet01_02/scripts.pory"
 	faceplayer
-# 131 "data/maps/Planet01_02/scripts.pory"
+# 142 "data/maps/Planet01_02/scripts.pory"
+	playmoncry SPECIES_CARBINK, CRY_MODE_ENCOUNTER
+# 143 "data/maps/Planet01_02/scripts.pory"
 	msgbox Planet01_02_Carbink_Text_0
-# 132 "data/maps/Planet01_02/scripts.pory"
+# 144 "data/maps/Planet01_02/scripts.pory"
 	setflag FLAG_UNUSED_0x04D
-# 133 "data/maps/Planet01_02/scripts.pory"
+# 145 "data/maps/Planet01_02/scripts.pory"
 	fadeScreen FADE_TO_BLACK
-# 134 "data/maps/Planet01_02/scripts.pory"
+# 146 "data/maps/Planet01_02/scripts.pory"
 	removeobject 6
-# 135 "data/maps/Planet01_02/scripts.pory"
+# 147 "data/maps/Planet01_02/scripts.pory"
 	fadeScreen FADE_FROM_BLACK
-# 136 "data/maps/Planet01_02/scripts.pory"
+# 148 "data/maps/Planet01_02/scripts.pory"
 	msgbox Planet01_02_Carbink_Text_1
-# 137 "data/maps/Planet01_02/scripts.pory"
+# 149 "data/maps/Planet01_02/scripts.pory"
 	giveitem ITEM_CHIPPED_POT, 1
-# 138 "data/maps/Planet01_02/scripts.pory"
+# 150 "data/maps/Planet01_02/scripts.pory"
+	release
+	end
+
+
+Planet01_02_HintText01::
+# 155 "data/maps/Planet01_02/scripts.pory"
+	lock
+# 156 "data/maps/Planet01_02/scripts.pory"
+	msgbox Planet01_02_HintText01_Text_0
+# 161 "data/maps/Planet01_02/scripts.pory"
+	release
+	end
+
+
+Planet01_02_HintText02::
+# 166 "data/maps/Planet01_02/scripts.pory"
+	lock
+# 167 "data/maps/Planet01_02/scripts.pory"
+	msgbox Planet01_02_HintText02_Text_0
+# 171 "data/maps/Planet01_02/scripts.pory"
+	release
+	end
+
+
+Planet01_02_HintText03::
+# 176 "data/maps/Planet01_02/scripts.pory"
+	lock
+# 177 "data/maps/Planet01_02/scripts.pory"
+	msgbox Planet01_02_HintText03_Text_0
+# 182 "data/maps/Planet01_02/scripts.pory"
+	release
+	end
+
+
+Planet01_02_HintText04::
+# 187 "data/maps/Planet01_02/scripts.pory"
+	lock
+# 188 "data/maps/Planet01_02/scripts.pory"
+	msgbox Planet01_02_HintText04_Text_0
+# 191 "data/maps/Planet01_02/scripts.pory"
+	release
+	end
+
+
+Planet01_02_HintText05::
+# 196 "data/maps/Planet01_02/scripts.pory"
+	lock
+# 197 "data/maps/Planet01_02/scripts.pory"
+	msgbox Planet01_02_HintText05_Text_0
+# 200 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
 
 
 Planet01_02_AddAir_Minior01_Text_0:
-# 39 "data/maps/Planet01_02/scripts.pory"
+# 49 "data/maps/Planet01_02/scripts.pory"
 	.string "Minior is floating in a pocket of air!\n"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!$"
 
 Planet01_02_AddAir_Minior01_Text_1:
-# 45 "data/maps/Planet01_02/scripts.pory"
+# 55 "data/maps/Planet01_02/scripts.pory"
 	.string "Minior flew away...$"
 
 Planet01_02_Carbink_Text_0:
-# 131 "data/maps/Planet01_02/scripts.pory"
+# 143 "data/maps/Planet01_02/scripts.pory"
 	.string "The Carbink seems lost...!$"
 
 Planet01_02_Carbink_Text_1:
-# 136 "data/maps/Planet01_02/scripts.pory"
+# 148 "data/maps/Planet01_02/scripts.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Carbink climbed into your bag!$"
+
+Planet01_02_HintText01_Text_0:
+# 156 "data/maps/Planet01_02/scripts.pory"
+	.string "Engineer: Note to self. Do not wear\n"
+	.string "sweet smelling perfume the next time\l"
+	.string "I climb this mountain.\p"
+	.string "There's a strong pokemon at the top\n"
+	.string "who is too much of a fan of it!$"
+
+Planet01_02_HintText02_Text_0:
+# 167 "data/maps/Planet01_02/scripts.pory"
+	.string "Biologist: The Quagsire seem to have\n"
+	.string "pretty stones embedded in them.\p"
+	.string "I'd be concerned, but they seem happy\n"
+	.string "enough about it!$"
+
+Planet01_02_HintText03_Text_0:
+# 177 "data/maps/Planet01_02/scripts.pory"
+	.string "Captain: To future explorers:\n"
+	.string "Our team has setup our primary lab in\l"
+	.string "the cave above this waterfall.\p"
+	.string "You may be able to find our previous\n"
+	.string "campsites to the south.$"
+
+Planet01_02_HintText04_Text_0:
+# 188 "data/maps/Planet01_02/scripts.pory"
+	.string "Engineer: We couldn't find a Pokemon\n"
+	.string "on this planet with the move {COLOR BLUE}{SHADOW LIGHT_BLUE}Waterfall;\l"
+	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}thankfully had brought our own.$"
+
+Planet01_02_HintText05_Text_0:
+# 197 "data/maps/Planet01_02/scripts.pory"
+	.string "Scientist: There's a suprising amount\n"
+	.string "of greenery here for a planet with such\l"
+	.string "a light atmosphere.$"

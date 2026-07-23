@@ -204,6 +204,7 @@ script Planet01_03_EventScript_RockSmash16 {
 script Planet01_03_Carbink {
     lock
     faceplayer
+    playmoncry(SPECIES_CARBINK, CRY_MODE_ENCOUNTER)
     msgbox("The Carbink really seems to like you!")
     setflag(FLAG_UNUSED_0x04A)
     fadeScreen(FADE_TO_BLACK)
@@ -211,6 +212,67 @@ script Planet01_03_Carbink {
     fadeScreen(FADE_FROM_BLACK)
     msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Carbink climbed into your bag!")
     giveitem(ITEM_CHIPPED_POT, 1)
+    release
+    end
+}
+
+script Planet01_03_Elgyem {
+    lock
+    faceplayer
+    playmoncry(SPECIES_ELGYEM, CRY_MODE_ENCOUNTER)
+    msgbox("Elgyem seems taken off-guard!\n"
+    "My bad- Huh?! It's using Teleport-")
+    waitmessage
+    warp(MAP_PLANET01_04, 1, 12, 1)
+    waitstate
+    release
+    end
+}
+
+script Planet01_03_HintText01 {
+    lock
+    msgbox("Biologist: There's a small, dark rock-like\n"
+    "Pokemon lurking around this canyon; one\l"
+    "that I've never seen before.\p"
+    "I don't think it exists back home. Surely\n"
+    "it'd be well-worth studying; perhaps it\l"
+    "can even evolve.")
+    release
+    end
+}
+
+script Planet01_03_HintText02 {
+    lock
+    msgbox("Captain: Beyond here lies our tragic\n"
+    "first attempt at establishing a base.\p"
+    "Apparently it was already somebody\n"
+    "else's home.")
+    release
+    end
+}
+
+script Planet01_03_HintText03 {
+    lock
+    msgbox("Captain: We wanted this second cave to\n"
+    "be our base, but the artificial wall\l"
+    "our Engineer contructed couldn't\l"
+    "shield us from the unbearable cold.\p"
+    "The Engineer already discovered a cave\n"
+    "up on top of the waterfall to the North\l"
+    "that looks promising. Let's hope it can\l"
+    "be a more permanent home.")
+    release
+    end
+}
+
+script Planet01_03_HintText04 {
+    lock
+    msgbox("Engineer: Was it a coincidence that the\n"
+    "white trees corresponded to the path\l"
+    "through the misty cave?\p"
+    "Or could it be that something was trying\n"
+    "to communicate with us? You can never\l"
+    "tell with ghost-type Pokemon...")
     release
     end
 }

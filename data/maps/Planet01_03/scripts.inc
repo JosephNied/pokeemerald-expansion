@@ -332,28 +332,131 @@ Planet01_03_Carbink::
 # 206 "data/maps/Planet01_03/scripts.pory"
 	faceplayer
 # 207 "data/maps/Planet01_03/scripts.pory"
-	msgbox Planet01_03_Carbink_Text_0
+	playmoncry SPECIES_CARBINK, CRY_MODE_ENCOUNTER
 # 208 "data/maps/Planet01_03/scripts.pory"
-	setflag FLAG_UNUSED_0x04A
+	msgbox Planet01_03_Carbink_Text_0
 # 209 "data/maps/Planet01_03/scripts.pory"
-	fadeScreen FADE_TO_BLACK
+	setflag FLAG_UNUSED_0x04A
 # 210 "data/maps/Planet01_03/scripts.pory"
-	removeobject 34
+	fadeScreen FADE_TO_BLACK
 # 211 "data/maps/Planet01_03/scripts.pory"
-	fadeScreen FADE_FROM_BLACK
+	removeobject 34
 # 212 "data/maps/Planet01_03/scripts.pory"
-	msgbox Planet01_03_Carbink_Text_1
+	fadeScreen FADE_FROM_BLACK
 # 213 "data/maps/Planet01_03/scripts.pory"
-	giveitem ITEM_CHIPPED_POT, 1
+	msgbox Planet01_03_Carbink_Text_1
 # 214 "data/maps/Planet01_03/scripts.pory"
+	giveitem ITEM_CHIPPED_POT, 1
+# 215 "data/maps/Planet01_03/scripts.pory"
+	release
+	end
+
+
+Planet01_03_Elgyem::
+# 220 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 221 "data/maps/Planet01_03/scripts.pory"
+	faceplayer
+# 222 "data/maps/Planet01_03/scripts.pory"
+	playmoncry SPECIES_ELGYEM, CRY_MODE_ENCOUNTER
+# 223 "data/maps/Planet01_03/scripts.pory"
+	msgbox Planet01_03_Elgyem_Text_0
+# 225 "data/maps/Planet01_03/scripts.pory"
+	waitmessage
+# 226 "data/maps/Planet01_03/scripts.pory"
+	warp MAP_PLANET01_04, 1, 12, 1
+# 227 "data/maps/Planet01_03/scripts.pory"
+	waitstate
+# 228 "data/maps/Planet01_03/scripts.pory"
+	release
+	end
+
+
+Planet01_03_HintText01::
+# 233 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 234 "data/maps/Planet01_03/scripts.pory"
+	msgbox Planet01_03_HintText01_Text_0
+# 240 "data/maps/Planet01_03/scripts.pory"
+	release
+	end
+
+
+Planet01_03_HintText02::
+# 245 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 246 "data/maps/Planet01_03/scripts.pory"
+	msgbox Planet01_03_HintText02_Text_0
+# 250 "data/maps/Planet01_03/scripts.pory"
+	release
+	end
+
+
+Planet01_03_HintText03::
+# 255 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 256 "data/maps/Planet01_03/scripts.pory"
+	msgbox Planet01_03_HintText03_Text_0
+# 264 "data/maps/Planet01_03/scripts.pory"
+	release
+	end
+
+
+Planet01_03_HintText04::
+# 269 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 270 "data/maps/Planet01_03/scripts.pory"
+	msgbox Planet01_03_HintText04_Text_0
+# 276 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 
 Planet01_03_Carbink_Text_0:
-# 207 "data/maps/Planet01_03/scripts.pory"
+# 208 "data/maps/Planet01_03/scripts.pory"
 	.string "The Carbink really seems to like you!$"
 
 Planet01_03_Carbink_Text_1:
-# 212 "data/maps/Planet01_03/scripts.pory"
+# 213 "data/maps/Planet01_03/scripts.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Carbink climbed into your bag!$"
+
+Planet01_03_Elgyem_Text_0:
+# 223 "data/maps/Planet01_03/scripts.pory"
+	.string "Elgyem seems taken off-guard!\n"
+	.string "My bad- Huh?! It's using Teleport-$"
+
+Planet01_03_HintText01_Text_0:
+# 234 "data/maps/Planet01_03/scripts.pory"
+	.string "Biologist: There's a small, dark rock-like\n"
+	.string "Pokemon lurking around this canyon; one\l"
+	.string "that I've never seen before.\p"
+	.string "I don't think it exists back home. Surely\n"
+	.string "it'd be well-worth studying; perhaps it\l"
+	.string "can even evolve.$"
+
+Planet01_03_HintText02_Text_0:
+# 246 "data/maps/Planet01_03/scripts.pory"
+	.string "Captain: Beyond here lies our tragic\n"
+	.string "first attempt at establishing a base.\p"
+	.string "Apparently it was already somebody\n"
+	.string "else's home.$"
+
+Planet01_03_HintText03_Text_0:
+# 256 "data/maps/Planet01_03/scripts.pory"
+	.string "Captain: We wanted this second cave to\n"
+	.string "be our base, but the artificial wall\l"
+	.string "our Engineer contructed couldn't\l"
+	.string "shield us from the unbearable cold.\p"
+	.string "The Engineer already discovered a cave\n"
+	.string "up on top of the waterfall to the North\l"
+	.string "that looks promising. Let's hope it can\l"
+	.string "be a more permanent home.$"
+
+Planet01_03_HintText04_Text_0:
+# 270 "data/maps/Planet01_03/scripts.pory"
+	.string "Engineer: Was it a coincidence that the\n"
+	.string "white trees corresponded to the path\l"
+	.string "through the misty cave?\p"
+	.string "Or could it be that something was trying\n"
+	.string "to communicate with us? You can never\l"
+	.string "tell with ghost-type Pokemon...$"
