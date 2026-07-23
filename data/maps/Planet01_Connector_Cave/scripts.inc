@@ -17,149 +17,161 @@ ConnectorCave_Enter:
 # 9 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	special SetRandomFlags
 # 10 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	setvar VAR_TEMP_0, 0
+	checkflag FLAG_SYS_BRAILLE_DIG
 # 11 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	end
+	goto_if_set FLAG_SYS_BRAILLE_DIG, ConnectorCave_FlagSet
 # 12 "data/maps/Planet01_Connector_Cave/scripts.pory"
-
+	setvar VAR_TEMP_0, 0
 # 13 "data/maps/Planet01_Connector_Cave/scripts.pory"
-ConnectorCave_OuterRoom_OnResume:
+	end
 # 14 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	setescapewarp MAP_PLANET01_03, 52, 36
+
 # 15 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	end
+ConnectorCave_FlagSet:
 # 16 "data/maps/Planet01_Connector_Cave/scripts.pory"
-
+	setvar VAR_TEMP_0, 1
 # 17 "data/maps/Planet01_Connector_Cave/scripts.pory"
-ConnectorCave_OuterRoom_OnLoad:
+	end
 # 18 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	call_if_unset FLAG_SYS_BRAILLE_DIG, ConnectorCave_OuterRoom_EventScript_CloseInnerRoomEntrance
+
 # 19 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	end
+ConnectorCave_OuterRoom_OnResume:
 # 20 "data/maps/Planet01_Connector_Cave/scripts.pory"
-
+	setescapewarp MAP_PLANET01_03, 52, 36
 # 21 "data/maps/Planet01_Connector_Cave/scripts.pory"
-ConnectorCave_OuterRoom_EventScript_CloseInnerRoomEntrance::
+	end
 # 22 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	setmetatile 3, 0, METATILE_Connector_Cave_Cover_Wall, TRUE
+
 # 23 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	setmetatile 4, 0, METATILE_Connector_Cave_Cover_Wall, TRUE
+ConnectorCave_OuterRoom_OnLoad:
 # 24 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	setmetatile 5, 0, METATILE_Connector_Cave_Cover_Wall, TRUE
+	call_if_unset FLAG_SYS_BRAILLE_DIG, ConnectorCave_OuterRoom_EventScript_CloseInnerRoomEntrance
 # 25 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	setmetatile 3, 1, METATILE_Connector_Cave_Cover_Wall, TRUE
+	end
 # 26 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	setmetatile 4, 1, METATILE_Connector_Cave_Cover_Wall, TRUE
+
 # 27 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	setmetatile 5, 1, METATILE_Connector_Cave_Cover_Wall, TRUE
+ConnectorCave_OuterRoom_EventScript_CloseInnerRoomEntrance::
 # 28 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	return
+	setmetatile 3, 0, METATILE_Connector_Cave_Cover_Wall, TRUE
 # 29 "data/maps/Planet01_Connector_Cave/scripts.pory"
-
+	setmetatile 4, 0, METATILE_Connector_Cave_Cover_Wall, TRUE
 # 30 "data/maps/Planet01_Connector_Cave/scripts.pory"
-ConnectorCave_OuterRoom_EventScript_InnerRoomEntranceWall::
+	setmetatile 5, 0, METATILE_Connector_Cave_Cover_Wall, TRUE
 # 31 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	lockall
+	setmetatile 3, 1, METATILE_Connector_Cave_Cover_Wall, TRUE
 # 32 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	goto_if_set FLAG_SYS_BRAILLE_DIG, ConnectorCave_OuterRoom_EventScript_HoleInWall
+	setmetatile 4, 1, METATILE_Connector_Cave_Cover_Wall, TRUE
 # 33 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	braillemsgbox SealedChamber_OuterRoom_Braille_DigHere
+	setmetatile 5, 1, METATILE_Connector_Cave_Cover_Wall, TRUE
 # 34 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	releaseall
+	return
 # 35 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	end
+
 # 36 "data/maps/Planet01_Connector_Cave/scripts.pory"
-
+ConnectorCave_OuterRoom_EventScript_InnerRoomEntranceWall::
 # 37 "data/maps/Planet01_Connector_Cave/scripts.pory"
-ConnectorCave_OuterRoom_EventScript_HoleInWall::
-# 38 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	msgbox gText_BigHoleInTheWall, MSGBOX_DEFAULT
-# 39 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	releaseall
-# 40 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	end
-# 41 "data/maps/Planet01_Connector_Cave/scripts.pory"
-
-# 42 "data/maps/Planet01_Connector_Cave/scripts.pory"
-ConnectorCave_OuterRoom_EventScript_BrailleDigHere::
-# 43 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	lockall
-# 44 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 38 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	goto_if_set FLAG_SYS_BRAILLE_DIG, ConnectorCave_OuterRoom_EventScript_HoleInWall
+# 39 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	braillemsgbox SealedChamber_OuterRoom_Braille_DigHere
+# 40 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	releaseall
+# 41 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	end
+# 42 "data/maps/Planet01_Connector_Cave/scripts.pory"
+
+# 43 "data/maps/Planet01_Connector_Cave/scripts.pory"
+ConnectorCave_OuterRoom_EventScript_HoleInWall::
+# 44 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	msgbox gText_BigHoleInTheWall, MSGBOX_DEFAULT
 # 45 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	releaseall
 # 46 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	end
+# 47 "data/maps/Planet01_Connector_Cave/scripts.pory"
+
+# 48 "data/maps/Planet01_Connector_Cave/scripts.pory"
+ConnectorCave_OuterRoom_EventScript_BrailleDigHere::
+# 49 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	lockall
+# 50 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	braillemsgbox SealedChamber_OuterRoom_Braille_DigHere
+# 51 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	releaseall
+# 52 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	end
 
 ConnectorCave_Cold_Warning::
-# 50 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 56 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	lock
-# 51 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 57 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	msgbox ConnectorCave_Cold_Warning_Text_0
-# 53 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 59 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	setvar VAR_TEMP_0, 1
-# 54 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 60 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	release
 	end
 
 
 ConnectorCave_Cold_Wall::
-# 59 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 65 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	lock
-# 60 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 66 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	goto_if_unset FLAG_SYS_BRAILLE_DIG, ConnectorCave_Cold_Wall_2
-# 64 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 70 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	msgbox ConnectorCave_Cold_Wall_Text_1
 ConnectorCave_Cold_Wall_1:
-# 66 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 72 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	release
 	end
 
 ConnectorCave_Cold_Wall_2:
-# 61 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 67 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	msgbox ConnectorCave_Cold_Wall_Text_0
 	goto ConnectorCave_Cold_Wall_1
 
 
 EventScript_GlimmoraCatch::
-# 71 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	lockall
-# 72 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	fadeScreen FADE_TO_WHITE
-# 73 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	special GlimmoraCatch
-# 74 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	setflag FLAG_UNUSED_0x02C
-# 75 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	setflag FLAG_UNUSED_0x030
-# 76 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	removeobject 4
 # 77 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	removeobject 2
+	lockall
 # 78 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	fadeScreen FADE_FROM_WHITE
+	fadeScreen FADE_TO_WHITE
 # 79 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	msgbox EventScript_GlimmoraCatch_Text_0
+	special GlimmoraCatch
+# 80 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	setflag FLAG_UNUSED_0x02C
 # 81 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	setflag FLAG_UNUSED_0x030
+# 82 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	removeobject 4
+# 83 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	removeobject 2
+# 84 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	fadeScreen FADE_FROM_WHITE
+# 85 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	msgbox EventScript_GlimmoraCatch_Text_0
+# 87 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	release
 	end
 
 
 ConnectorCave_Cold_Warning_Text_0:
-# 51 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 57 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "Woah! ...It suddenly got way colder in\n"
 	.string "here.$"
 
 ConnectorCave_Cold_Wall_Text_0:
-# 61 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 67 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "This wall is colder than the others...\n"
 	.string "Is there something behind it?$"
 
 ConnectorCave_Cold_Wall_Text_1:
-# 64 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 70 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "There's a frozen cavern back there!$"
 
 EventScript_GlimmoraCatch_Text_0:
-# 79 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 85 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "Glimmora poisoned a party member!\n"
 	.string "That stings!$"

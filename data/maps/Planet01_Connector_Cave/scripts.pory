@@ -7,7 +7,13 @@ Planet01_Connector_Cave_MapScripts::
 
 ConnectorCave_Enter:
 	special SetRandomFlags
+	checkflag FLAG_SYS_BRAILLE_DIG
+	goto_if_set FLAG_SYS_BRAILLE_DIG, ConnectorCave_FlagSet
 	setvar VAR_TEMP_0, 0
+	end
+
+ConnectorCave_FlagSet:
+	setvar VAR_TEMP_0, 1
 	end
 
 ConnectorCave_OuterRoom_OnResume:
