@@ -7,6 +7,11 @@ script Spaceship_Dev_Enter {
     setvar(VAR_AIR_TIMER_STEPS, 200)
     setvar(VAR_AIR_TIMER_TRIGGERED, 1)
     clearflag(FLAG_RECEIVED_BELDUM)
+    if (var(VAR_PLAYER_READY) == 0) {
+        setvar(VAR_TEMP_0, 0)
+    } else {
+        setvar(VAR_TEMP_0, 1)
+    }
 	end
 }
 
@@ -85,6 +90,7 @@ script Spaceship_Dev_EventScript_Tutorial_Notebook {
         "crafting machine, provided you have\l"
         "sufficient Star Pieces and Stardust.")
     }
+    setflag(FLAG_UNUSED_0x029)
     playse(SE_PC_OFF)
     release
     end
@@ -338,4 +344,20 @@ script JirachiOnShip {
         release
         end
     }
+}
+
+script IsPlayerReadyToGo {
+    if(flag(FLAG_UNUSED_0x027) == true && flag(FLAG_UNUSED_0x028) == true && flag(FLAG_UNUSED_0x029)) {
+        setvar(VAR_TEMP_0, 1)
+        setvar(VAR_PLAYER_READY, 1)
+    } else {
+        lockall
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
+        waitmovement(OBJ_EVENT_ID_PLAYER)
+        msgbox("I'm not ready yet!\n"
+        "I need Magnezone, and my equipment!\p"
+        "I should check the Explorer's Guide too.")
+        releaseall
+    }
+    end
 }
