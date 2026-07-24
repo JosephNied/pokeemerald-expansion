@@ -17,9 +17,13 @@ script Sun_Moon_Check {
 	if (var(VAR_RESULT) == TRUE) {
 		lockall
 		special(Script_FadeOutMapMusic)
+		setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    	callnative(DrawMugshot)
 		msgbox("You can see the sun and moon of the\n"
 		"planet here. What an incredible sight!\p"
 		"...Huh?")
+		waitmessage
+		callnative(ClearMugshot)
 		applymovement(1, Movement_SunMoon_Jirachi)
 		waitmovement(0)
 		setvar(VAR_0x8004, 1)
@@ -27,8 +31,12 @@ script Sun_Moon_Check {
 		setvar(VAR_0x8006, 8)
 		setvar(VAR_0x8007, 5)
 		special(ShakeCamera)
+		setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    	callnative(DrawMugshot)
 		msgbox("Lunatone and Solrock are reacting\n"
 		"to the presence of Jirachi!")
+		waitmessage
+		callnative(ClearMugshot)
 		setvar(VAR_0x8004, 1)
 		setvar(VAR_0x8005, 1)
 		setvar(VAR_0x8006, 8)
@@ -40,11 +48,14 @@ script Sun_Moon_Check {
 		delay(60)
 		fadescreen(FADE_FROM_WHITE)
 		special(ReplaceSunMoonWithTerragem)
+		setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    	callnative(DrawMugshot)
 		msgbox("Woah! Solrock and Lunatone have\n"
 		"merged into one!\p"
 		"...\p"
 		"...Jirachi?")
 		waitmessage
+		callnative(ClearMugshot)
 		applymovement(1, Movement_SunMoon_Jirachi2)
 		waitmovement(0)
 		fadescreen(FADE_TO_WHITE)
@@ -55,7 +66,11 @@ script Sun_Moon_Check {
 		special(Overworld_PlaySpecialMapMusic)
 		givemon(SPECIES_CELEBI, 50)
 		setflag(FLAG_UNUSED_0x88F)
+		setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+    	callnative(DrawMugshot)
 		msgbox("...")
+		waitmessage
+		callnative(ClearMugshot)
 		releaseall
 	}
 	end
