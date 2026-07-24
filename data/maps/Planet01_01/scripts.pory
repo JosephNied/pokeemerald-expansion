@@ -191,18 +191,24 @@ script Planet01_01_Elgyem {
 
 script Planet01_01_JirachiAppears {
     lock
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
     msgbox("So this is an alien planet, eh?\l"
     "Well, it better watch out. I don't get\n"
     "suprised easily.")
     waitmessage
+    callnative(ClearMugshot)
     special(Script_FadeOutMapMusic)
     applymovement(14, Movement_FirstJirachiEncounter1)
     waitse()
     playmoncry(SPECIES_JIRACHI, CRY_MODE_ENCOUNTER)
     delay(40)
     waitmoncry()
+    setvar(VAR_0x8000, MUGSHOT_JIRACHI_WORRIED)
+    callnative(DrawMugshot)
     msgbox("...")
     waitmessage
+    callnative(ClearMugshot)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     waitmovement(OBJ_EVENT_ID_PLAYER)
     delay(60)
@@ -210,10 +216,13 @@ script Planet01_01_JirachiAppears {
     waitmovement(0)
     delay(30)
     removeobject(14)
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    callnative(DrawMugshot)
     msgbox("...Was that a Jirachi?!\n"
     "That's good luck- I mean, I think it's\l"
     "good luck! Probably.")
     waitmessage
+    callnative(ClearMugshot)
     special(Overworld_PlaySpecialMapMusic)
     setvar(VAR_TEMP_0, 1)
     setflag(FLAG_REGISTERED_ROSE)

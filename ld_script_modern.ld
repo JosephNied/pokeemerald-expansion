@@ -57,6 +57,7 @@ SECTIONS {
         KEEP(*.o(.text.header_gf));
         KEEP(*.o(.text.header_rhh));
         src/crt0.o(.text);
+		src/mugshot.o(.text);
         *libagbsyscall.a:*.o(.text*);
         *libgcc.a:*.o(.text*);
         *libc.a:*.o(.text*);
@@ -87,6 +88,7 @@ SECTIONS {
         *libc.a:*.o(.rodata*);
         *libc.a:*.o(.data*);
         sound/songs/*.o(.rodata);
+		src/mugshot.o(.rodata);
     } > ROM =0
 
     .data.iwram :

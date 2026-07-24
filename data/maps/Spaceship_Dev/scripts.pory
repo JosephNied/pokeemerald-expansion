@@ -18,10 +18,13 @@ script Spaceship_Dev_Enter {
 script refill_air_canister {
     lock
     faceplayer
+    setvar(VAR_0x8000, MUGSHOT_ROTOM)
+    callnative(DrawMugshot)
     playmoncry(SPECIES_ROTOM, CRY_MODE_ENCOUNTER)
     msgbox("Rotom wants to refill my empty air \n"
     "canisters!")
     waitmessage
+    callnative(ClearMugshot)
     checkitem(ITEM_SUPER_REPEL, 1)
     if (var(VAR_RESULT) == TRUE) {
         CountItemInBag(ITEM_SUPER_REPEL, VAR_STARDUST_COUNT) //reusing this variable
@@ -100,12 +103,12 @@ script Spaceship_Dev_EventScript_Item01 {
     lock
     faceplayer
     setflag(FLAG_SYS_POKEDEX_GET)
-    waitse()
+    setvar(VAR_0x8000, MUGSHOT_MAGNEZONE)
+    callnative(DrawMugshot)
     playmoncry(SPECIES_MAGNEZONE, CRY_MODE_ENCOUNTER)
-    delay(40)
-    waitmoncry()
     msgbox("Magnezone, let's go!")
     waitmessage
+    callnative(ClearMugshot)
     givemon(SPECIES_MAGNEZONE, 50, ITEM_MAGNET)
     removeobject(5)
 
@@ -286,9 +289,12 @@ script TestRemovePokes {
 script Blissey_Bed {
     lock
     faceplayer
+    setvar(VAR_0x8000, MUGSHOT_BLISSEY)
+    callnative(DrawMugshot)
     playmoncry(SPECIES_BLISSEY, CRY_MODE_ENCOUNTER)
     msgbox("Blissey wants to heal the team!")
     waitmessage
+    callnative(ClearMugshot)
     closemessage
     call(Common_EventScript_OutOfCenterPartyHeal)
     release
@@ -298,9 +304,13 @@ script Blissey_Bed {
 script Bellossom {
     lock
     faceplayer
+    setvar(VAR_0x8000, MUGSHOT_BELLOSSUM)
+    callnative(DrawMugshot)
     playmoncry(SPECIES_BELLOSSOM, CRY_MODE_ENCOUNTER)
     msgbox("Bellossum converts my C02 into oxygen.\n"
     "An important team member!")
+    waitmessage
+    callnative(ClearMugshot)
     release
     end
 }
@@ -308,8 +318,11 @@ script Bellossom {
 script Boxes {
     lock
     faceplayer
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+    callnative(DrawMugshot)
     msgbox("Lots of stuff I was supposed to\n"
     "deliver... Surely they can wait...?")
+    callnative(ClearMugshot)
     release
     end
 }
@@ -317,9 +330,12 @@ script Boxes {
 script Machine {
     lock
     faceplayer
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
     msgbox("This bed is designed to keep me in\n"
     "cryosleep, which I would be, if not for\l"
     "the circumstances.")
+    callnative(ClearMugshot)
     release
     end
 }
@@ -328,8 +344,11 @@ script JirachiOnShip {
     lock
     faceplayer
     playmoncry(SPECIES_JIRACHI, CRY_MODE_ENCOUNTER)
+    setvar(VAR_0x8000, MUGSHOT_JIRACHI_HAPPY)
+    callnative(DrawMugshot)
     msgbox("Jirachi wants to join the team!")
     waitmessage
+    callnative(ClearMugshot)
     checkitem(ITEM_BEAST_BALL, 1)
     if (var(VAR_RESULT) == TRUE)
     {
@@ -354,9 +373,12 @@ script IsPlayerReadyToGo {
         lockall
         applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
         waitmovement(OBJ_EVENT_ID_PLAYER)
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+        callnative(DrawMugshot)
         msgbox("I'm not ready yet!\n"
         "I need Magnezone, and my equipment!\p"
         "I should check the Explorer's Guide too.")
+        callnative(ClearMugshot)
         releaseall
     }
     end
