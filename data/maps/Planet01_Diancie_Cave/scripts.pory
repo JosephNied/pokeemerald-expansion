@@ -18,7 +18,11 @@ script Planet01_Diancie_Cave_Spawn_Poke {
 	} 
 	else 
 	{
+		setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    	callnative(DrawMugshot)
 		msgbox("Oh?! The Carbink are excited!")
+		waitmessage
+		callnative(ClearMugshot)
 		fadeScreen(FADE_TO_BLACK)
 
 		checkflag(FLAG_UNUSED_0x04B)

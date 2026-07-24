@@ -56,15 +56,21 @@ Ditto_Test::
 # 32 "data/maps/Ditto_Cave/scripts.pory"
 	setvar VAR_TEMP_0, 1
 # 33 "data/maps/Ditto_Cave/scripts.pory"
-	msgbox Ditto_Test_Text_0
+	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
+# 34 "data/maps/Ditto_Cave/scripts.pory"
+	callnative DrawMugshot
 # 35 "data/maps/Ditto_Cave/scripts.pory"
+	msgbox Ditto_Test_Text_0
+# 37 "data/maps/Ditto_Cave/scripts.pory"
+	callnative ClearMugshot
+# 38 "data/maps/Ditto_Cave/scripts.pory"
 	setflag FLAG_RECEIVED_BELDUM
-# 36 "data/maps/Ditto_Cave/scripts.pory"
+# 39 "data/maps/Ditto_Cave/scripts.pory"
 	releaseall
 	return
 
 
 Ditto_Test_Text_0:
-# 33 "data/maps/Ditto_Cave/scripts.pory"
+# 35 "data/maps/Ditto_Cave/scripts.pory"
 	.string "!!!\l"
 	.string "Who was that?!$"

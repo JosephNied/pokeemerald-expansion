@@ -1,5 +1,5 @@
 mapscripts Planet01_07_MapScripts {
-    MAP_SCRIPT_ON_TRANSITION: Planet01_01_Enter
+    MAP_SCRIPT_ON_TRANSITION: Planet01_07_Enter
 }
 
 script Planet01_07_Enter {
@@ -20,7 +20,7 @@ script Sun_Moon_Check {
 		msgbox("You can see the sun and moon of the\n"
 		"planet here. What an incredible sight!\p"
 		"...Huh?")
-		applymovement(3, Movement_SunMoon_Jirachi)
+		applymovement(1, Movement_SunMoon_Jirachi)
 		waitmovement(0)
 		setvar(VAR_0x8004, 1)
 		setvar(VAR_0x8005, 1)
@@ -45,12 +45,12 @@ script Sun_Moon_Check {
 		"...\p"
 		"...Jirachi?")
 		waitmessage
-		applymovement(3, Movement_SunMoon_Jirachi2)
+		applymovement(1, Movement_SunMoon_Jirachi2)
 		waitmovement(0)
 		fadescreen(FADE_TO_WHITE)
 		closemessage
 		delay(60)
-		removeobject(3)
+		removeobject(1)
 		fadescreen(FADE_FROM_WHITE)
 		special(Overworld_PlaySpecialMapMusic)
 		givemon(SPECIES_CELEBI, 50)

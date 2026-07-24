@@ -30,8 +30,11 @@ script Ditto_Test {
     waitmovement(0)
     removeobject(1)
     setvar(VAR_TEMP_0, 1)
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    callnative(DrawMugshot)
     msgbox("!!!\l"
     "Who was that?!")
+    callnative(ClearMugshot)
     setflag(FLAG_RECEIVED_BELDUM)
     releaseall
 }

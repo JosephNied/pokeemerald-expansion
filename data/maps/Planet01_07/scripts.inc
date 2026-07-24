@@ -1,6 +1,6 @@
 Planet01_07_MapScripts::
 # 2 "data/maps/Planet01_07/scripts.pory"
-	map_script MAP_SCRIPT_ON_TRANSITION, Planet01_01_Enter
+	map_script MAP_SCRIPT_ON_TRANSITION, Planet01_07_Enter
 	.byte 0
 
 
@@ -37,7 +37,7 @@ Sun_Moon_Check_2:
 # 20 "data/maps/Planet01_07/scripts.pory"
 	msgbox Sun_Moon_Check_Text_0
 # 23 "data/maps/Planet01_07/scripts.pory"
-	applymovement 3, Movement_SunMoon_Jirachi
+	applymovement 1, Movement_SunMoon_Jirachi
 # 24 "data/maps/Planet01_07/scripts.pory"
 	waitmovement 0
 # 25 "data/maps/Planet01_07/scripts.pory"
@@ -79,7 +79,7 @@ Sun_Moon_Check_2:
 # 47 "data/maps/Planet01_07/scripts.pory"
 	waitmessage
 # 48 "data/maps/Planet01_07/scripts.pory"
-	applymovement 3, Movement_SunMoon_Jirachi2
+	applymovement 1, Movement_SunMoon_Jirachi2
 # 49 "data/maps/Planet01_07/scripts.pory"
 	waitmovement 0
 # 50 "data/maps/Planet01_07/scripts.pory"
@@ -89,7 +89,7 @@ Sun_Moon_Check_2:
 # 52 "data/maps/Planet01_07/scripts.pory"
 	delay 60
 # 53 "data/maps/Planet01_07/scripts.pory"
-	removeobject 3
+	removeobject 1
 # 54 "data/maps/Planet01_07/scripts.pory"
 	fadescreen FADE_FROM_WHITE
 # 55 "data/maps/Planet01_07/scripts.pory"
