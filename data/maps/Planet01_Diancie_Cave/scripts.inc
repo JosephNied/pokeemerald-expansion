@@ -151,7 +151,7 @@ Planet01_Diancie_Cave_DiancieEncounter::
 # 93 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	waitse
 # 94 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	playmoncry SPECIES_DIANCIE, CRY_MODE_ENCOUNTER
+	playmoncry SPECIES_DIANCIE_MEGA, CRY_MODE_ENCOUNTER
 # 95 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	waitmoncry
 # 97 "data/maps/Planet01_Diancie_Cave/scripts.pory"

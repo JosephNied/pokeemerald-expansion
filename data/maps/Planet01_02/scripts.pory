@@ -180,10 +180,10 @@ script Planet01_02_HintText01 {
 
 script Planet01_02_HintText02 {
     lock
-    msgbox("Biologist: The Quagsire seem to have\n"
-    "pretty stones embedded in them.\p"
-    "I'd be concerned, but they seem happy\n"
-    "enough about it!")
+    msgbox("Biologist: I've occasionally observed a\n"
+    "Quagsire that seems to enjoy collecting\l"
+    "pretty blue stones near the waterfall.\p"
+    "How cute!")
     release
     end
 }

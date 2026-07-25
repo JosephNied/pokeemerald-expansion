@@ -79,7 +79,9 @@ script Spaceship_Dev_EventScript_Tutorial_Notebook {
     if (var(VAR_RESULT) == 2) {
         msgbox("The {COLOR BLUE}{SHADOW LIGHT_BLUE}Scanner{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} logs useful information\n"
         "about wild Pokemon while allowing you\l"
-        "to escape the confrontation unharmed.")
+        "to escape the confrontation unharmed.\p"
+        "Faster pokemon are harder to scan.\n"
+        "Paralyzing them can make it easier.")
     }
     if (var(VAR_RESULT) == 3) {
         msgbox("The {COLOR BLUE}{SHADOW LIGHT_BLUE}Teleporter{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} can be used to warp\n"

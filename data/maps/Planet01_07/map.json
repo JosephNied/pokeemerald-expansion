@@ -56,5 +56,14 @@
       "script": "Sun_Moon_Check"
     }
   ],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 16,
+      "y": 22,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Planet01_07_HintText01"
+    }
+  ]
 }

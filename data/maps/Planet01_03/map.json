@@ -553,6 +553,22 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Planet01_03_HintText04"
+    },
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 23,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Planet01_03_HintText06"
+    },
+    {
+      "type": "sign",
+      "x": 49,
+      "y": 20,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Planet01_03_HintText05"
     }
   ]
 }

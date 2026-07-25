@@ -276,3 +276,24 @@ script Planet01_03_HintText04 {
     release
     end
 }
+
+script Planet01_03_HintText05 {
+    lock
+    msgbox("Biologist: The pokemon on this planet\n"
+    "have achieved perfect mutualism, and\l"
+    "thus have no need to level up.\p"
+    "But I can't help but wonder whether it's\n"
+    "still possible whether the Staryu can\l"
+    "still evolve using water stones.")
+    release
+    end
+}
+
+script Planet01_03_HintText06 {
+    lock
+    msgbox("Biologist: The Staryu love to skip across\n"
+    "the water; though, they aren't large\l"
+    "enough for us to {COLOR BLUE}{SHADOW LIGHT_BLUE}Surf{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} on them.")
+    release
+    end
+}

@@ -412,6 +412,26 @@ Planet01_03_HintText04::
 	end
 
 
+Planet01_03_HintText05::
+# 281 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 282 "data/maps/Planet01_03/scripts.pory"
+	msgbox Planet01_03_HintText05_Text_0
+# 288 "data/maps/Planet01_03/scripts.pory"
+	release
+	end
+
+
+Planet01_03_HintText06::
+# 293 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 294 "data/maps/Planet01_03/scripts.pory"
+	msgbox Planet01_03_HintText06_Text_0
+# 297 "data/maps/Planet01_03/scripts.pory"
+	release
+	end
+
+
 Planet01_03_Carbink_Text_0:
 # 208 "data/maps/Planet01_03/scripts.pory"
 	.string "The Carbink really seems to like you!$"
@@ -460,3 +480,18 @@ Planet01_03_HintText04_Text_0:
 	.string "Or could it be that something was trying\n"
 	.string "to communicate with us? You can never\l"
 	.string "tell with ghost-type Pokemon...$"
+
+Planet01_03_HintText05_Text_0:
+# 282 "data/maps/Planet01_03/scripts.pory"
+	.string "Biologist: The pokemon on this planet\n"
+	.string "have achieved perfect mutualism, and\l"
+	.string "thus have no need to level up.\p"
+	.string "But I can't help but wonder whether it's\n"
+	.string "still possible whether the Staryu can\l"
+	.string "still evolve using water stones.$"
+
+Planet01_03_HintText06_Text_0:
+# 294 "data/maps/Planet01_03/scripts.pory"
+	.string "Biologist: The Staryu love to skip across\n"
+	.string "the water; though, they aren't large\l"
+	.string "enough for us to {COLOR BLUE}{SHADOW LIGHT_BLUE}Surf{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} on them.$"

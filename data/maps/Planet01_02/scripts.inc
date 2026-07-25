@@ -365,10 +365,10 @@ Planet01_02_HintText01_Text_0:
 
 Planet01_02_HintText02_Text_0:
 # 183 "data/maps/Planet01_02/scripts.pory"
-	.string "Biologist: The Quagsire seem to have\n"
-	.string "pretty stones embedded in them.\p"
-	.string "I'd be concerned, but they seem happy\n"
-	.string "enough about it!$"
+	.string "Biologist: I've occasionally observed a\n"
+	.string "Quagsire that seems to enjoy collecting\l"
+	.string "pretty blue stones near the waterfall.\p"
+	.string "How cute!$"
 
 Planet01_02_HintText03_Text_0:
 # 193 "data/maps/Planet01_02/scripts.pory"
