@@ -26,47 +26,53 @@ Sun_Moon_Check::
 # 17 "data/maps/Planet01_07/scripts.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq Sun_Moon_Check_2
-# 78 "data/maps/Planet01_07/scripts.pory"
-	lockall
-# 79 "data/maps/Planet01_07/scripts.pory"
-	special Script_FadeOutMapMusic
-# 80 "data/maps/Planet01_07/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
-# 81 "data/maps/Planet01_07/scripts.pory"
-	callnative DrawMugshot
 # 82 "data/maps/Planet01_07/scripts.pory"
-	msgbox Sun_Moon_Check_Text_4
+	lockall
+# 83 "data/maps/Planet01_07/scripts.pory"
+	special Script_FadeOutMapMusic
 # 84 "data/maps/Planet01_07/scripts.pory"
-	waitmessage
+	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
 # 85 "data/maps/Planet01_07/scripts.pory"
-	callnative ClearMugshot
+	callnative DrawMugshot
 # 86 "data/maps/Planet01_07/scripts.pory"
-	delay 60
-# 87 "data/maps/Planet01_07/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
+	msgbox Sun_Moon_Check_Text_4
 # 88 "data/maps/Planet01_07/scripts.pory"
-	callnative DrawMugshot
+	waitmessage
 # 89 "data/maps/Planet01_07/scripts.pory"
-	msgbox Sun_Moon_Check_Text_5
-# 92 "data/maps/Planet01_07/scripts.pory"
-	waitmessage
-# 93 "data/maps/Planet01_07/scripts.pory"
+	closemessage
+# 90 "data/maps/Planet01_07/scripts.pory"
 	callnative ClearMugshot
-# 94 "data/maps/Planet01_07/scripts.pory"
+# 91 "data/maps/Planet01_07/scripts.pory"
 	delay 60
-# 95 "data/maps/Planet01_07/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_CONFUSED
-# 96 "data/maps/Planet01_07/scripts.pory"
+# 92 "data/maps/Planet01_07/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
+# 93 "data/maps/Planet01_07/scripts.pory"
 	callnative DrawMugshot
+# 94 "data/maps/Planet01_07/scripts.pory"
+	msgbox Sun_Moon_Check_Text_5
 # 97 "data/maps/Planet01_07/scripts.pory"
-	msgbox Sun_Moon_Check_Text_6
-# 99 "data/maps/Planet01_07/scripts.pory"
 	waitmessage
-# 100 "data/maps/Planet01_07/scripts.pory"
+# 98 "data/maps/Planet01_07/scripts.pory"
+	closemessage
+# 99 "data/maps/Planet01_07/scripts.pory"
 	callnative ClearMugshot
+# 100 "data/maps/Planet01_07/scripts.pory"
+	delay 60
 # 101 "data/maps/Planet01_07/scripts.pory"
-	special Overworld_PlaySpecialMapMusic
+	setvar VAR_0x8000, MUGSHOT_PLAYER_CONFUSED
 # 102 "data/maps/Planet01_07/scripts.pory"
+	callnative DrawMugshot
+# 103 "data/maps/Planet01_07/scripts.pory"
+	msgbox Sun_Moon_Check_Text_6
+# 105 "data/maps/Planet01_07/scripts.pory"
+	waitmessage
+# 106 "data/maps/Planet01_07/scripts.pory"
+	closemessage
+# 107 "data/maps/Planet01_07/scripts.pory"
+	callnative ClearMugshot
+# 108 "data/maps/Planet01_07/scripts.pory"
+	special Overworld_PlaySpecialMapMusic
+# 109 "data/maps/Planet01_07/scripts.pory"
 	releaseall
 Sun_Moon_Check_1:
 	end
@@ -85,194 +91,202 @@ Sun_Moon_Check_2:
 # 25 "data/maps/Planet01_07/scripts.pory"
 	waitmessage
 # 26 "data/maps/Planet01_07/scripts.pory"
-	callnative ClearMugshot
+	closemessage
 # 27 "data/maps/Planet01_07/scripts.pory"
-	playmoncry SPECIES_JIRACHI, CRY_MODE_ENCOUNTER
+	callnative ClearMugshot
 # 28 "data/maps/Planet01_07/scripts.pory"
-	applymovement 1, Movement_SunMoon_Jirachi
+	playmoncry SPECIES_JIRACHI, CRY_MODE_ENCOUNTER
 # 29 "data/maps/Planet01_07/scripts.pory"
-	waitmovement 0
+	applymovement 1, Movement_SunMoon_Jirachi
 # 30 "data/maps/Planet01_07/scripts.pory"
-	setvar VAR_0x8004, 1
-# 31 "data/maps/Planet01_07/scripts.pory"
-	setvar VAR_0x8005, 1
-# 32 "data/maps/Planet01_07/scripts.pory"
-	setvar VAR_0x8006, 8
-# 33 "data/maps/Planet01_07/scripts.pory"
-	setvar VAR_0x8007, 5
-# 34 "data/maps/Planet01_07/scripts.pory"
-	special ShakeCamera
-# 35 "data/maps/Planet01_07/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
-# 36 "data/maps/Planet01_07/scripts.pory"
-	callnative DrawMugshot
-# 37 "data/maps/Planet01_07/scripts.pory"
-	msgbox Sun_Moon_Check_Text_1
-# 39 "data/maps/Planet01_07/scripts.pory"
-	waitmessage
-# 40 "data/maps/Planet01_07/scripts.pory"
-	callnative ClearMugshot
-# 41 "data/maps/Planet01_07/scripts.pory"
-	setvar VAR_0x8004, 1
-# 42 "data/maps/Planet01_07/scripts.pory"
-	setvar VAR_0x8005, 1
-# 43 "data/maps/Planet01_07/scripts.pory"
-	setvar VAR_0x8006, 8
-# 44 "data/maps/Planet01_07/scripts.pory"
-	setvar VAR_0x8007, 5
-# 45 "data/maps/Planet01_07/scripts.pory"
-	special ShakeCamera
-# 46 "data/maps/Planet01_07/scripts.pory"
-	delay 30
-# 47 "data/maps/Planet01_07/scripts.pory"
-	fadescreen FADE_TO_WHITE
-# 48 "data/maps/Planet01_07/scripts.pory"
-	closemessage
-# 49 "data/maps/Planet01_07/scripts.pory"
-	delay 60
-# 50 "data/maps/Planet01_07/scripts.pory"
-	fadescreen FADE_FROM_WHITE
-# 51 "data/maps/Planet01_07/scripts.pory"
-	special ReplaceSunMoonWithTerragem
-# 52 "data/maps/Planet01_07/scripts.pory"
-	playmoncry SPECIES_CELEBI, CRY_MODE_ENCOUNTER
-# 53 "data/maps/Planet01_07/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
-# 54 "data/maps/Planet01_07/scripts.pory"
-	callnative DrawMugshot
-# 55 "data/maps/Planet01_07/scripts.pory"
-	msgbox Sun_Moon_Check_Text_2
-# 59 "data/maps/Planet01_07/scripts.pory"
-	waitmessage
-# 60 "data/maps/Planet01_07/scripts.pory"
-	callnative ClearMugshot
-# 61 "data/maps/Planet01_07/scripts.pory"
-	applymovement 1, Movement_SunMoon_Jirachi2
-# 62 "data/maps/Planet01_07/scripts.pory"
 	waitmovement 0
-# 63 "data/maps/Planet01_07/scripts.pory"
-	fadescreen FADE_TO_WHITE
-# 64 "data/maps/Planet01_07/scripts.pory"
-	closemessage
-# 65 "data/maps/Planet01_07/scripts.pory"
-	delay 60
-# 66 "data/maps/Planet01_07/scripts.pory"
-	removeobject 1
-# 67 "data/maps/Planet01_07/scripts.pory"
-	fadescreen FADE_FROM_WHITE
-# 68 "data/maps/Planet01_07/scripts.pory"
-	special Overworld_PlaySpecialMapMusic
-# 69 "data/maps/Planet01_07/scripts.pory"
-	givemon SPECIES_CELEBI, 50
-# 70 "data/maps/Planet01_07/scripts.pory"
-	setflag FLAG_UNUSED_0x88F
-# 71 "data/maps/Planet01_07/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_CONFUSED
-# 72 "data/maps/Planet01_07/scripts.pory"
+# 31 "data/maps/Planet01_07/scripts.pory"
+	setvar VAR_0x8004, 1
+# 32 "data/maps/Planet01_07/scripts.pory"
+	setvar VAR_0x8005, 1
+# 33 "data/maps/Planet01_07/scripts.pory"
+	setvar VAR_0x8006, 8
+# 34 "data/maps/Planet01_07/scripts.pory"
+	setvar VAR_0x8007, 5
+# 35 "data/maps/Planet01_07/scripts.pory"
+	special ShakeCamera
+# 36 "data/maps/Planet01_07/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
+# 37 "data/maps/Planet01_07/scripts.pory"
 	callnative DrawMugshot
-# 73 "data/maps/Planet01_07/scripts.pory"
-	msgbox Sun_Moon_Check_Text_3
-# 74 "data/maps/Planet01_07/scripts.pory"
+# 38 "data/maps/Planet01_07/scripts.pory"
+	msgbox Sun_Moon_Check_Text_1
+# 40 "data/maps/Planet01_07/scripts.pory"
 	waitmessage
-# 75 "data/maps/Planet01_07/scripts.pory"
+# 41 "data/maps/Planet01_07/scripts.pory"
+	closemessage
+# 42 "data/maps/Planet01_07/scripts.pory"
 	callnative ClearMugshot
+# 43 "data/maps/Planet01_07/scripts.pory"
+	setvar VAR_0x8004, 1
+# 44 "data/maps/Planet01_07/scripts.pory"
+	setvar VAR_0x8005, 1
+# 45 "data/maps/Planet01_07/scripts.pory"
+	setvar VAR_0x8006, 8
+# 46 "data/maps/Planet01_07/scripts.pory"
+	setvar VAR_0x8007, 5
+# 47 "data/maps/Planet01_07/scripts.pory"
+	special ShakeCamera
+# 48 "data/maps/Planet01_07/scripts.pory"
+	delay 30
+# 49 "data/maps/Planet01_07/scripts.pory"
+	fadescreen FADE_TO_WHITE
+# 50 "data/maps/Planet01_07/scripts.pory"
+	closemessage
+# 51 "data/maps/Planet01_07/scripts.pory"
+	delay 60
+# 52 "data/maps/Planet01_07/scripts.pory"
+	fadescreen FADE_FROM_WHITE
+# 53 "data/maps/Planet01_07/scripts.pory"
+	special ReplaceSunMoonWithTerragem
+# 54 "data/maps/Planet01_07/scripts.pory"
+	playmoncry SPECIES_CELEBI, CRY_MODE_ENCOUNTER
+# 55 "data/maps/Planet01_07/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
+# 56 "data/maps/Planet01_07/scripts.pory"
+	callnative DrawMugshot
+# 57 "data/maps/Planet01_07/scripts.pory"
+	msgbox Sun_Moon_Check_Text_2
+# 61 "data/maps/Planet01_07/scripts.pory"
+	waitmessage
+# 62 "data/maps/Planet01_07/scripts.pory"
+	closemessage
+# 63 "data/maps/Planet01_07/scripts.pory"
+	callnative ClearMugshot
+# 64 "data/maps/Planet01_07/scripts.pory"
+	applymovement 1, Movement_SunMoon_Jirachi2
+# 65 "data/maps/Planet01_07/scripts.pory"
+	waitmovement 0
+# 66 "data/maps/Planet01_07/scripts.pory"
+	fadescreen FADE_TO_WHITE
+# 67 "data/maps/Planet01_07/scripts.pory"
+	closemessage
+# 68 "data/maps/Planet01_07/scripts.pory"
+	delay 60
+# 69 "data/maps/Planet01_07/scripts.pory"
+	removeobject 1
+# 70 "data/maps/Planet01_07/scripts.pory"
+	fadescreen FADE_FROM_WHITE
+# 71 "data/maps/Planet01_07/scripts.pory"
+	special Overworld_PlaySpecialMapMusic
+# 72 "data/maps/Planet01_07/scripts.pory"
+	givemon SPECIES_CELEBI, 50
+# 73 "data/maps/Planet01_07/scripts.pory"
+	setflag FLAG_UNUSED_0x88F
+# 74 "data/maps/Planet01_07/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_CONFUSED
+# 75 "data/maps/Planet01_07/scripts.pory"
+	callnative DrawMugshot
 # 76 "data/maps/Planet01_07/scripts.pory"
+	msgbox Sun_Moon_Check_Text_3
+# 77 "data/maps/Planet01_07/scripts.pory"
+	waitmessage
+# 78 "data/maps/Planet01_07/scripts.pory"
+	closemessage
+# 79 "data/maps/Planet01_07/scripts.pory"
+	callnative ClearMugshot
+# 80 "data/maps/Planet01_07/scripts.pory"
 	releaseall
 	goto Sun_Moon_Check_1
 
 
-# 107 "data/maps/Planet01_07/scripts.pory"
-Movement_SunMoon_Jirachi:
-# 108 "data/maps/Planet01_07/scripts.pory"
-	face_down
-# 109 "data/maps/Planet01_07/scripts.pory"
-	set_visible
-# 110 "data/maps/Planet01_07/scripts.pory"
-	delay_4
-# 111 "data/maps/Planet01_07/scripts.pory"
-	set_invisible
-# 112 "data/maps/Planet01_07/scripts.pory"
-	delay_4
-# 113 "data/maps/Planet01_07/scripts.pory"
-	set_visible
 # 114 "data/maps/Planet01_07/scripts.pory"
-	delay_4
+Movement_SunMoon_Jirachi:
 # 115 "data/maps/Planet01_07/scripts.pory"
-	set_invisible
+	face_down
 # 116 "data/maps/Planet01_07/scripts.pory"
-	delay_4
+	set_visible
 # 117 "data/maps/Planet01_07/scripts.pory"
-	set_visible
+	delay_4
 # 118 "data/maps/Planet01_07/scripts.pory"
-	delay_8
+	set_invisible
 # 119 "data/maps/Planet01_07/scripts.pory"
-	set_invisible
+	delay_4
 # 120 "data/maps/Planet01_07/scripts.pory"
-	delay_8
+	set_visible
 # 121 "data/maps/Planet01_07/scripts.pory"
-	set_visible
+	delay_4
 # 122 "data/maps/Planet01_07/scripts.pory"
-	delay_8
+	set_invisible
 # 123 "data/maps/Planet01_07/scripts.pory"
-	set_invisible
+	delay_4
 # 124 "data/maps/Planet01_07/scripts.pory"
-	delay_8
+	set_visible
 # 125 "data/maps/Planet01_07/scripts.pory"
-	set_visible
+	delay_8
 # 126 "data/maps/Planet01_07/scripts.pory"
-	delay_16
-# 127 "data/maps/Planet01_07/scripts.pory"
 	set_invisible
+# 127 "data/maps/Planet01_07/scripts.pory"
+	delay_8
 # 128 "data/maps/Planet01_07/scripts.pory"
-	delay_16
-# 129 "data/maps/Planet01_07/scripts.pory"
 	set_visible
+# 129 "data/maps/Planet01_07/scripts.pory"
+	delay_8
 # 130 "data/maps/Planet01_07/scripts.pory"
-	delay_16
+	set_invisible
 # 131 "data/maps/Planet01_07/scripts.pory"
-	delay_16
+	delay_8
 # 132 "data/maps/Planet01_07/scripts.pory"
-	delay_16
+	set_visible
 # 133 "data/maps/Planet01_07/scripts.pory"
 	delay_16
 # 134 "data/maps/Planet01_07/scripts.pory"
-	walk_down
+	set_invisible
 # 135 "data/maps/Planet01_07/scripts.pory"
-	walk_down
-# 136 "data/maps/Planet01_07/scripts.pory"
 	delay_16
+# 136 "data/maps/Planet01_07/scripts.pory"
+	set_visible
 # 137 "data/maps/Planet01_07/scripts.pory"
 	delay_16
-	step_end
-
-# 140 "data/maps/Planet01_07/scripts.pory"
-Movement_SunMoon_Jirachi2:
-# 141 "data/maps/Planet01_07/scripts.pory"
-	face_up
-# 142 "data/maps/Planet01_07/scripts.pory"
+# 138 "data/maps/Planet01_07/scripts.pory"
 	delay_16
+# 139 "data/maps/Planet01_07/scripts.pory"
+	delay_16
+# 140 "data/maps/Planet01_07/scripts.pory"
+	delay_16
+# 141 "data/maps/Planet01_07/scripts.pory"
+	walk_down
+# 142 "data/maps/Planet01_07/scripts.pory"
+	walk_down
 # 143 "data/maps/Planet01_07/scripts.pory"
 	delay_16
 # 144 "data/maps/Planet01_07/scripts.pory"
-	walk_up
-# 145 "data/maps/Planet01_07/scripts.pory"
 	delay_16
-# 146 "data/maps/Planet01_07/scripts.pory"
-	delay_16
+	step_end
+
 # 147 "data/maps/Planet01_07/scripts.pory"
-	walk_up
+Movement_SunMoon_Jirachi2:
 # 148 "data/maps/Planet01_07/scripts.pory"
-	delay_16
+	face_up
 # 149 "data/maps/Planet01_07/scripts.pory"
+	delay_16
+# 150 "data/maps/Planet01_07/scripts.pory"
+	delay_16
+# 151 "data/maps/Planet01_07/scripts.pory"
+	walk_up
+# 152 "data/maps/Planet01_07/scripts.pory"
+	delay_16
+# 153 "data/maps/Planet01_07/scripts.pory"
+	delay_16
+# 154 "data/maps/Planet01_07/scripts.pory"
+	walk_up
+# 155 "data/maps/Planet01_07/scripts.pory"
+	delay_16
+# 156 "data/maps/Planet01_07/scripts.pory"
 	delay_16
 	step_end
 
 Planet01_07_HintText01::
-# 153 "data/maps/Planet01_07/scripts.pory"
+# 160 "data/maps/Planet01_07/scripts.pory"
 	lock
-# 154 "data/maps/Planet01_07/scripts.pory"
-	msgbox Planet01_07_HintText01_Text_0
 # 161 "data/maps/Planet01_07/scripts.pory"
+	msgbox Planet01_07_HintText01_Text_0
+# 168 "data/maps/Planet01_07/scripts.pory"
 	release
 	end
 
@@ -284,39 +298,39 @@ Sun_Moon_Check_Text_0:
 	.string "...Huh?$"
 
 Sun_Moon_Check_Text_1:
-# 37 "data/maps/Planet01_07/scripts.pory"
+# 38 "data/maps/Planet01_07/scripts.pory"
 	.string "Lunatone and Solrock are reacting\n"
 	.string "to the presence of Jirachi!$"
 
 Sun_Moon_Check_Text_2:
-# 55 "data/maps/Planet01_07/scripts.pory"
+# 57 "data/maps/Planet01_07/scripts.pory"
 	.string "Woah! Solrock and Lunatone have\n"
 	.string "merged into one!\p"
 	.string "...\p"
 	.string "...Jirachi?$"
 
 Sun_Moon_Check_Text_3:
-# 73 "data/maps/Planet01_07/scripts.pory"
+# 76 "data/maps/Planet01_07/scripts.pory"
 	.string "...It looked reluctant to leave.$"
 
 Sun_Moon_Check_Text_4:
-# 82 "data/maps/Planet01_07/scripts.pory"
+# 86 "data/maps/Planet01_07/scripts.pory"
 	.string "You can see the sun and moon of the\n"
 	.string "planet here. What an incredible sight!$"
 
 Sun_Moon_Check_Text_5:
-# 89 "data/maps/Planet01_07/scripts.pory"
+# 94 "data/maps/Planet01_07/scripts.pory"
 	.string "...\n"
 	.string "...\l"
 	.string "...$"
 
 Sun_Moon_Check_Text_6:
-# 97 "data/maps/Planet01_07/scripts.pory"
+# 103 "data/maps/Planet01_07/scripts.pory"
 	.string "Why do I feel like something\n"
 	.string "was supposed to happen...$"
 
 Planet01_07_HintText01_Text_0:
-# 154 "data/maps/Planet01_07/scripts.pory"
+# 161 "data/maps/Planet01_07/scripts.pory"
 	.string "Captain: We were able to witness the sun\n"
 	.string "and moon of this planet from the peak.\p"
 	.string "The Lunatone we caught began to faintly\n"

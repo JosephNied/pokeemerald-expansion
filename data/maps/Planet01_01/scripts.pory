@@ -197,6 +197,7 @@ script Planet01_01_JirachiAppears {
     "Well, it better watch out. I don't get\n"
     "suprised easily.")
     waitmessage
+    closemessage
     callnative(ClearMugshot)
     special(Script_FadeOutMapMusic)
     applymovement(14, Movement_FirstJirachiEncounter1)
@@ -208,6 +209,7 @@ script Planet01_01_JirachiAppears {
     callnative(DrawMugshot)
     msgbox("...")
     waitmessage
+    closemessage
     callnative(ClearMugshot)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     waitmovement(OBJ_EVENT_ID_PLAYER)

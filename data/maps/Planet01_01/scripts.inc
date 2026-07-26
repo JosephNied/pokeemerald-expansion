@@ -275,131 +275,135 @@ Planet01_01_JirachiAppears::
 # 199 "data/maps/Planet01_01/scripts.pory"
 	waitmessage
 # 200 "data/maps/Planet01_01/scripts.pory"
-	callnative ClearMugshot
+	closemessage
 # 201 "data/maps/Planet01_01/scripts.pory"
-	special Script_FadeOutMapMusic
+	callnative ClearMugshot
 # 202 "data/maps/Planet01_01/scripts.pory"
-	applymovement 14, Movement_FirstJirachiEncounter1
+	special Script_FadeOutMapMusic
 # 203 "data/maps/Planet01_01/scripts.pory"
-	waitse
+	applymovement 14, Movement_FirstJirachiEncounter1
 # 204 "data/maps/Planet01_01/scripts.pory"
-	playmoncry SPECIES_JIRACHI, CRY_MODE_ENCOUNTER
+	waitse
 # 205 "data/maps/Planet01_01/scripts.pory"
-	delay 40
+	playmoncry SPECIES_JIRACHI, CRY_MODE_ENCOUNTER
 # 206 "data/maps/Planet01_01/scripts.pory"
-	waitmoncry
+	delay 40
 # 207 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_JIRACHI_WORRIED
+	waitmoncry
 # 208 "data/maps/Planet01_01/scripts.pory"
-	callnative DrawMugshot
+	setvar VAR_0x8000, MUGSHOT_JIRACHI_WORRIED
 # 209 "data/maps/Planet01_01/scripts.pory"
-	msgbox Planet01_01_JirachiAppears_Text_1
-# 210 "data/maps/Planet01_01/scripts.pory"
-	waitmessage
-# 211 "data/maps/Planet01_01/scripts.pory"
-	callnative ClearMugshot
-# 212 "data/maps/Planet01_01/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Planet01_01_JirachiAppears_Movement_0
-# 213 "data/maps/Planet01_01/scripts.pory"
-	waitmovement OBJ_EVENT_ID_PLAYER
-# 214 "data/maps/Planet01_01/scripts.pory"
-	delay 60
-# 215 "data/maps/Planet01_01/scripts.pory"
-	applymovement 14, Movement_FirstJirachiEncounter2
-# 216 "data/maps/Planet01_01/scripts.pory"
-	waitmovement 0
-# 217 "data/maps/Planet01_01/scripts.pory"
-	delay 30
-# 218 "data/maps/Planet01_01/scripts.pory"
-	removeobject 14
-# 219 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
-# 220 "data/maps/Planet01_01/scripts.pory"
 	callnative DrawMugshot
-# 221 "data/maps/Planet01_01/scripts.pory"
-	msgbox Planet01_01_JirachiAppears_Text_2
-# 224 "data/maps/Planet01_01/scripts.pory"
+# 210 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_JirachiAppears_Text_1
+# 211 "data/maps/Planet01_01/scripts.pory"
 	waitmessage
-# 225 "data/maps/Planet01_01/scripts.pory"
+# 212 "data/maps/Planet01_01/scripts.pory"
+	closemessage
+# 213 "data/maps/Planet01_01/scripts.pory"
 	callnative ClearMugshot
+# 214 "data/maps/Planet01_01/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Planet01_01_JirachiAppears_Movement_0
+# 215 "data/maps/Planet01_01/scripts.pory"
+	waitmovement OBJ_EVENT_ID_PLAYER
+# 216 "data/maps/Planet01_01/scripts.pory"
+	delay 60
+# 217 "data/maps/Planet01_01/scripts.pory"
+	applymovement 14, Movement_FirstJirachiEncounter2
+# 218 "data/maps/Planet01_01/scripts.pory"
+	waitmovement 0
+# 219 "data/maps/Planet01_01/scripts.pory"
+	delay 30
+# 220 "data/maps/Planet01_01/scripts.pory"
+	removeobject 14
+# 221 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
+# 222 "data/maps/Planet01_01/scripts.pory"
+	callnative DrawMugshot
+# 223 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_JirachiAppears_Text_2
 # 226 "data/maps/Planet01_01/scripts.pory"
-	special Overworld_PlaySpecialMapMusic
+	waitmessage
 # 227 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_TEMP_0, 1
+	callnative ClearMugshot
 # 228 "data/maps/Planet01_01/scripts.pory"
-	setflag FLAG_REGISTERED_ROSE
+	special Overworld_PlaySpecialMapMusic
 # 229 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_TEMP_0, 1
+# 230 "data/maps/Planet01_01/scripts.pory"
+	setflag FLAG_REGISTERED_ROSE
+# 231 "data/maps/Planet01_01/scripts.pory"
 	release
 	end
 
 
-# 233 "data/maps/Planet01_01/scripts.pory"
-Movement_FirstJirachiEncounter1:
-# 234 "data/maps/Planet01_01/scripts.pory"
-	face_down
 # 235 "data/maps/Planet01_01/scripts.pory"
-	set_visible
+Movement_FirstJirachiEncounter1:
 # 236 "data/maps/Planet01_01/scripts.pory"
-	delay_4
+	face_down
 # 237 "data/maps/Planet01_01/scripts.pory"
-	set_invisible
+	set_visible
 # 238 "data/maps/Planet01_01/scripts.pory"
 	delay_4
 # 239 "data/maps/Planet01_01/scripts.pory"
-	set_visible
+	set_invisible
 # 240 "data/maps/Planet01_01/scripts.pory"
 	delay_4
 # 241 "data/maps/Planet01_01/scripts.pory"
-	set_invisible
+	set_visible
 # 242 "data/maps/Planet01_01/scripts.pory"
 	delay_4
 # 243 "data/maps/Planet01_01/scripts.pory"
-	set_visible
-# 244 "data/maps/Planet01_01/scripts.pory"
-	delay_8
-# 245 "data/maps/Planet01_01/scripts.pory"
 	set_invisible
+# 244 "data/maps/Planet01_01/scripts.pory"
+	delay_4
+# 245 "data/maps/Planet01_01/scripts.pory"
+	set_visible
 # 246 "data/maps/Planet01_01/scripts.pory"
 	delay_8
 # 247 "data/maps/Planet01_01/scripts.pory"
-	set_visible
+	set_invisible
 # 248 "data/maps/Planet01_01/scripts.pory"
 	delay_8
 # 249 "data/maps/Planet01_01/scripts.pory"
-	set_invisible
+	set_visible
 # 250 "data/maps/Planet01_01/scripts.pory"
 	delay_8
 # 251 "data/maps/Planet01_01/scripts.pory"
-	set_visible
-# 252 "data/maps/Planet01_01/scripts.pory"
-	delay_16
-# 253 "data/maps/Planet01_01/scripts.pory"
 	set_invisible
+# 252 "data/maps/Planet01_01/scripts.pory"
+	delay_8
+# 253 "data/maps/Planet01_01/scripts.pory"
+	set_visible
 # 254 "data/maps/Planet01_01/scripts.pory"
 	delay_16
 # 255 "data/maps/Planet01_01/scripts.pory"
+	set_invisible
+# 256 "data/maps/Planet01_01/scripts.pory"
+	delay_16
+# 257 "data/maps/Planet01_01/scripts.pory"
 	set_visible
 	step_end
 
-# 258 "data/maps/Planet01_01/scripts.pory"
-Movement_FirstJirachiEncounter2:
-# 259 "data/maps/Planet01_01/scripts.pory"
-	face_up
 # 260 "data/maps/Planet01_01/scripts.pory"
-	delay_16
+Movement_FirstJirachiEncounter2:
 # 261 "data/maps/Planet01_01/scripts.pory"
-	walk_up
+	face_up
 # 262 "data/maps/Planet01_01/scripts.pory"
-	walk_up
+	delay_16
 # 263 "data/maps/Planet01_01/scripts.pory"
 	walk_up
 # 264 "data/maps/Planet01_01/scripts.pory"
 	walk_up
+# 265 "data/maps/Planet01_01/scripts.pory"
+	walk_up
+# 266 "data/maps/Planet01_01/scripts.pory"
+	walk_up
 	step_end
 
-# 212 "data/maps/Planet01_01/scripts.pory"
+# 214 "data/maps/Planet01_01/scripts.pory"
 Planet01_01_JirachiAppears_Movement_0:
-# 212 "data/maps/Planet01_01/scripts.pory"
+# 214 "data/maps/Planet01_01/scripts.pory"
 	face_up
 	step_end
 
@@ -484,11 +488,11 @@ Planet01_01_JirachiAppears_Text_0:
 	.string "suprised easily.$"
 
 Planet01_01_JirachiAppears_Text_1:
-# 209 "data/maps/Planet01_01/scripts.pory"
+# 210 "data/maps/Planet01_01/scripts.pory"
 	.string "...$"
 
 Planet01_01_JirachiAppears_Text_2:
-# 221 "data/maps/Planet01_01/scripts.pory"
+# 223 "data/maps/Planet01_01/scripts.pory"
 	.string "...Was that a Jirachi?!\n"
 	.string "That's good luck- I mean, I think it's\l"
 	.string "good luck! Probably.$"

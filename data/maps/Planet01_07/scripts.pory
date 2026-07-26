@@ -23,6 +23,7 @@ script Sun_Moon_Check {
 		"planet here. What an incredible sight!\p"
 		"...Huh?")
 		waitmessage
+		closemessage
 		callnative(ClearMugshot)
 		playmoncry(SPECIES_JIRACHI, CRY_MODE_ENCOUNTER)
 		applymovement(1, Movement_SunMoon_Jirachi)
@@ -37,6 +38,7 @@ script Sun_Moon_Check {
 		msgbox("Lunatone and Solrock are reacting\n"
 		"to the presence of Jirachi!")
 		waitmessage
+		closemessage
 		callnative(ClearMugshot)
 		setvar(VAR_0x8004, 1)
 		setvar(VAR_0x8005, 1)
@@ -57,6 +59,7 @@ script Sun_Moon_Check {
 		"...\p"
 		"...Jirachi?")
 		waitmessage
+		closemessage
 		callnative(ClearMugshot)
 		applymovement(1, Movement_SunMoon_Jirachi2)
 		waitmovement(0)
@@ -72,6 +75,7 @@ script Sun_Moon_Check {
     	callnative(DrawMugshot)
 		msgbox("...It looked reluctant to leave.")
 		waitmessage
+		closemessage
 		callnative(ClearMugshot)
 		releaseall
 	} else {
@@ -82,6 +86,7 @@ script Sun_Moon_Check {
 		msgbox("You can see the sun and moon of the\n"
 		"planet here. What an incredible sight!")
 		waitmessage
+		closemessage
 		callnative(ClearMugshot)
 		delay(60)
 		setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
@@ -90,6 +95,7 @@ script Sun_Moon_Check {
 		"...\l"
 		"...")
 		waitmessage
+		closemessage
 		callnative(ClearMugshot)
 		delay(60)
 		setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
@@ -97,6 +103,7 @@ script Sun_Moon_Check {
 		msgbox("Why do I feel like something\n"
 		"was supposed to happen...")
 		waitmessage
+		closemessage
 		callnative(ClearMugshot)
 		special(Overworld_PlaySpecialMapMusic)
 		releaseall
