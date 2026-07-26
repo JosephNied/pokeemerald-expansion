@@ -265,4 +265,5 @@ static void setCustomFlagsAtStart(void)
 {
     FlagSet(FLAG_REGISTERED_DUSTY);
     VarSet(VAR_PLAYER_READY, 0);
+    VarSet(VAR_CARBINK_COUNT, 0);
 }

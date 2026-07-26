@@ -22,6 +22,7 @@ script Planet01_Diancie_Cave_Spawn_Poke {
     	callnative(DrawMugshot)
 		msgbox("Oh?! The Carbink are excited!")
 		waitmessage
+		closemessage
 		callnative(ClearMugshot)
 		fadeScreen(FADE_TO_BLACK)
 
@@ -63,7 +64,7 @@ script Planet01_Diancie_Cave_Spawn_Poke {
 
 		delay(30)
 
-		if (var(VAR_CARBINK_COUNT) <= 4) {
+		if (var(VAR_CARBINK_COUNT) < 4) {
 			fadeScreen(FADE_FROM_BLACK)
     		msgbox("The Carbink went home!")
 		} else {
@@ -75,8 +76,13 @@ script Planet01_Diancie_Cave_Spawn_Poke {
 			clearflag(FLAG_UNUSED_0x045)
 			addobject(5)
 			fadeScreen(FADE_FROM_BLACK)
+			setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    		callnative(DrawMugshot)
     		msgbox("The Carbink- Woah! A Diancie!\n"
 			"I think it wants me to approach it...")
+			waitmessage
+			closemessage
+			callnative(ClearMugshot)
 		}
 	}
 	setvar(VAR_TEMP_0, 1)
@@ -96,7 +102,7 @@ script Planet01_Diancie_Cave_DiancieEncounter {
 
     special(SetBossBattle)
     setwildbattle(
-        SPECIES_DIANCIE,
+        SPECIES_DIANCIE_MEGA,
         75,
         ITEM_DIANCITE
     )

@@ -27,60 +27,72 @@ Planet01_Diancie_Cave_Spawn_Poke::
 # 24 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	waitmessage
 # 25 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	callnative ClearMugshot
+	closemessage
 # 26 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	callnative ClearMugshot
+# 27 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	fadeScreen FADE_TO_BLACK
-# 28 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	checkflag FLAG_UNUSED_0x04B
 # 29 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	checkflag FLAG_UNUSED_0x04B
+# 30 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq Planet01_Diancie_Cave_Spawn_Poke_6
 Planet01_Diancie_Cave_Spawn_Poke_5:
-# 37 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	checkflag FLAG_UNUSED_0x04A
 # 38 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	checkflag FLAG_UNUSED_0x04A
+# 39 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq Planet01_Diancie_Cave_Spawn_Poke_9
 Planet01_Diancie_Cave_Spawn_Poke_8:
-# 46 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	checkflag FLAG_UNUSED_0x04C
 # 47 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	checkflag FLAG_UNUSED_0x04C
+# 48 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq Planet01_Diancie_Cave_Spawn_Poke_12
 Planet01_Diancie_Cave_Spawn_Poke_11:
-# 55 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	checkflag FLAG_UNUSED_0x04D
 # 56 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	checkflag FLAG_UNUSED_0x04D
+# 57 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq Planet01_Diancie_Cave_Spawn_Poke_15
 Planet01_Diancie_Cave_Spawn_Poke_14:
-# 64 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 65 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	delay 30
-# 66 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 67 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	compare VAR_CARBINK_COUNT, 4
-	goto_if_le Planet01_Diancie_Cave_Spawn_Poke_17
-# 70 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	setvar VAR_0x8004, 1
+	goto_if_lt Planet01_Diancie_Cave_Spawn_Poke_17
 # 71 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	setvar VAR_0x8005, 1
+	setvar VAR_0x8004, 1
 # 72 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	setvar VAR_0x8006, 8
+	setvar VAR_0x8005, 1
 # 73 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	setvar VAR_0x8007, 5
+	setvar VAR_0x8006, 8
 # 74 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	special ShakeCamera
+	setvar VAR_0x8007, 5
 # 75 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	clearflag FLAG_UNUSED_0x045
+	special ShakeCamera
 # 76 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	addobject 5
+	clearflag FLAG_UNUSED_0x045
 # 77 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	fadeScreen FADE_FROM_BLACK
+	addobject 5
 # 78 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	fadeScreen FADE_FROM_BLACK
+# 79 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
+# 80 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	callnative DrawMugshot
+# 81 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	msgbox Planet01_Diancie_Cave_Spawn_Poke_Text_2
-Planet01_Diancie_Cave_Spawn_Poke_1:
-# 82 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	setvar VAR_TEMP_0, 1
 # 83 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	waitmessage
+# 84 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	closemessage
+# 85 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	callnative ClearMugshot
+Planet01_Diancie_Cave_Spawn_Poke_1:
+# 88 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	setvar VAR_TEMP_0, 1
+# 89 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	releaseall
 	end
 
@@ -90,97 +102,97 @@ Planet01_Diancie_Cave_Spawn_Poke_2:
 	end
 
 Planet01_Diancie_Cave_Spawn_Poke_6:
-# 31 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	clearflag FLAG_UNUSED_0x046
 # 32 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	addobject 3
+	clearflag FLAG_UNUSED_0x046
 # 33 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	removeitem ITEM_CHIPPED_POT, 1
+	addobject 3
 # 34 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	removeitem ITEM_CHIPPED_POT, 1
+# 35 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	addvar VAR_CARBINK_COUNT, 1
 	goto Planet01_Diancie_Cave_Spawn_Poke_5
 
 Planet01_Diancie_Cave_Spawn_Poke_9:
-# 40 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	clearflag FLAG_UNUSED_0x047
 # 41 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	addobject 4
+	clearflag FLAG_UNUSED_0x047
 # 42 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	removeitem ITEM_CHIPPED_POT, 1
+	addobject 4
 # 43 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	removeitem ITEM_CHIPPED_POT, 1
+# 44 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	addvar VAR_CARBINK_COUNT, 1
 	goto Planet01_Diancie_Cave_Spawn_Poke_8
 
 Planet01_Diancie_Cave_Spawn_Poke_12:
-# 49 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	clearflag FLAG_UNUSED_0x048
 # 50 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	addobject 1
+	clearflag FLAG_UNUSED_0x048
 # 51 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	removeitem ITEM_CHIPPED_POT, 1
+	addobject 1
 # 52 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	removeitem ITEM_CHIPPED_POT, 1
+# 53 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	addvar VAR_CARBINK_COUNT, 1
 	goto Planet01_Diancie_Cave_Spawn_Poke_11
 
 Planet01_Diancie_Cave_Spawn_Poke_15:
-# 58 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	addobject 2
 # 59 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	clearflag FLAG_UNUSED_0x049
+	addobject 2
 # 60 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	removeitem ITEM_CHIPPED_POT, 1
+	clearflag FLAG_UNUSED_0x049
 # 61 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	removeitem ITEM_CHIPPED_POT, 1
+# 62 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	addvar VAR_CARBINK_COUNT, 1
 	goto Planet01_Diancie_Cave_Spawn_Poke_14
 
 Planet01_Diancie_Cave_Spawn_Poke_17:
-# 67 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	fadeScreen FADE_FROM_BLACK
 # 68 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	fadeScreen FADE_FROM_BLACK
+# 69 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	msgbox Planet01_Diancie_Cave_Spawn_Poke_Text_1
 	goto Planet01_Diancie_Cave_Spawn_Poke_1
 
 
 Planet01_Diancie_Cave_DiancieEncounter::
-# 88 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	lockall
-# 89 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	faceplayer
-# 91 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	msgbox Planet01_Diancie_Cave_DiancieEncounter_Text_0
-# 93 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	waitse
 # 94 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	playmoncry SPECIES_DIANCIE_MEGA, CRY_MODE_ENCOUNTER
+	lockall
 # 95 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	waitmoncry
+	faceplayer
 # 97 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	special SetBossBattle
-# 98 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	setwildbattle SPECIES_DIANCIE, 75, ITEM_DIANCITE
+	msgbox Planet01_Diancie_Cave_DiancieEncounter_Text_0
+# 99 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	waitse
+# 100 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	playmoncry SPECIES_DIANCIE_MEGA, CRY_MODE_ENCOUNTER
+# 101 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	waitmoncry
 # 103 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	dowildbattle
+	special SetBossBattle
 # 104 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	special BossBattleOff
-# 106 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	compare VAR_RESULT, FALSE
-# 107 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	goto_if_eq PlayerLost_Diancie
+	setwildbattle SPECIES_DIANCIE_MEGA, 75, ITEM_DIANCITE
 # 109 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	removeobject 5
+	dowildbattle
 # 110 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	setflag FLAG_UNUSED_0x045
+	special BossBattleOff
 # 112 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	msgbox Planet01_Diancie_Cave_DiancieEncounter_Text_1
-# 114 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	giveitem ITEM_DIANCITE
+	compare VAR_RESULT, FALSE
+# 113 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	goto_if_eq PlayerLost_Diancie
 # 115 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	releaseall
+	removeobject 5
 # 116 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	end
+	setflag FLAG_UNUSED_0x045
 # 118 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	msgbox Planet01_Diancie_Cave_DiancieEncounter_Text_1
+# 120 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	giveitem ITEM_DIANCITE
+# 121 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	releaseall
+# 122 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	end
+# 124 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 PlayerLost_Diancie:
-# 119 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 125 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	releaseall
 	end
 
@@ -190,19 +202,19 @@ Planet01_Diancie_Cave_Spawn_Poke_Text_0:
 	.string "Oh?! The Carbink are excited!$"
 
 Planet01_Diancie_Cave_Spawn_Poke_Text_1:
-# 68 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 69 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	.string "The Carbink went home!$"
 
 Planet01_Diancie_Cave_Spawn_Poke_Text_2:
-# 78 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 81 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	.string "The Carbink- Woah! A Diancie!\n"
 	.string "I think it wants me to approach it...$"
 
 Planet01_Diancie_Cave_DiancieEncounter_Text_0:
-# 91 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 97 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	.string "Diancie wants to fight!$"
 
 Planet01_Diancie_Cave_DiancieEncounter_Text_1:
-# 112 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 118 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	.string "Daincie seemd pleased with\n"
 	.string "the battle! It left a gift!$"
