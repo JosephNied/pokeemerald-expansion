@@ -1110,7 +1110,8 @@ static u8 SetUpCopyrightScreen(void)
         CreateTask(Task_HandleExpansionIntro, 0);
 #else
         CreateTask(Task_Scene1_Load, 0);
-        SetMainCallback2(MainCB2_Intro);
+        //SetMainCallback2(MainCB2_Intro);
+        SetMainCallback2(MainCB2_EndIntro);
 #endif
         if (gMultibootProgramStruct.gcmb_field_2 != 0)
         {
@@ -1160,6 +1161,7 @@ void CB2_InitCopyrightScreenAfterTitleScreen(void)
 
 void Task_Scene1_Load(u8 taskId)
 {
+    SetMainCallback2(MainCB2_EndIntro);
     SetVBlankCallback(NULL);
     sIntroCharacterGender = MOD(Random(), GENDER_COUNT);
     IntroResetGpuRegs();

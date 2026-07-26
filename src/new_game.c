@@ -139,7 +139,7 @@ static void WarpToTruck(void)
     if (IS_FRLG)
         SetWarpDestination(MAP_GROUP(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), MAP_NUM(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), WARP_ID_NONE, 6, 6);
     else
-        SetWarpDestination(MAP_GROUP(MAP_SPACESHIP_DEV), MAP_NUM(MAP_SPACESHIP_DEV), WARP_ID_NONE, -1, -1);
+        SetWarpDestination(MAP_GROUP(MAP_SPACESHIP_DEV), MAP_NUM(MAP_SPACESHIP_DEV), WARP_ID_NONE, 18, 10);
     WarpIntoMap();
 }
 

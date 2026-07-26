@@ -1,44 +1,48 @@
 gText_Birch_Welcome::
-	.string "Hi! intro blurb!\p"
-	.string "New paragraph!\p"
-	.string "New paragraph with\n"
-	.string "new line!\p"
+	.string "I guess I better start recording that\n"
+	.string "intro for new employees.\p"
+	.string "Let's see... Uh, greetings! Being a\n"
+	.string "space-trucker may not seem like a\l"
+	.string "glamrous job, but it's important and\l"
+	.string "can even be fun!\p"
+	.string "You may ask, isn't lonely?\p"
 	.string "$"
 
 gText_Birch_Pokemon::
-	.string "This is what we call a “POKéMON.”\p"
-	.string "\n"
+	.string "Of course not!\p" 
 	.string "$"
 
 gText_Birch_MainSpeech::
-	.string "1st line\n"
-	.string "2nd line.\p"
-	.string "Another 1st line,\n"
-	.string "another 2nd line, but shift\l"
-	.string "to 3rd line.\p"
+	.string "My trusty Magnezone certainly helps me\n"
+	.string "with my job, but is also my friend, along\l"
+	.string "along with the rest of my POKéMON crew.\p"
 	.string "$"
 
 gText_Birch_AndYouAre::
-	.string "And you are?$"
+	.string "Oh, I forgot to say my name!$"
 
 gText_Birch_BoyOrGirl::
 	.string "Are you a boy?\n"
 	.string "Or are you a girl?$"
 
 gText_Birch_WhatsYourName::
-	.string "All right.\n"
-	.string "What's your name?$"
+	.string "My name is...$"
 
 gText_Birch_SoItsPlayer::
-	.string "So it's {PLAYER}{KUN}?$"
+	.string "Yeah, I'm {PLAYER}{KUN}!$"
 
 gText_Birch_YourePlayer::
-	.string "Ah, okay!\p"
-	.string "You're {PLAYER}{KUN} who's moving to my\n"
-	.string "hometown of LITTLEROOT.\l"
-	.string "I get it now!\p"
+	.string "Anyway, let's talk about the job.\n"
+	.string "The most important thing you need to-\p"
+	.string "...\p"
+	.string "Huh?!\p"
+	.string "!!!\p"
+	.string "My ship- Something is dragging us\n"
+	.string "towards that nearby planet. What the\l"
+	.string "heck is going on?!\l"
+	.string "Guess I'm recording this later!\p"
 	.string "$"
 
 gText_Birch_AreYouReady::
-	.string "All right, are you ready?\p"
+	.string "Emergency landing protocol initiated!\p"
 	.string "$"

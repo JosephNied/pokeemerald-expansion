@@ -1,6 +1,6 @@
 mapscripts Spaceship_Dev_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: Spaceship_Dev_Enter
-    //MAP_SCRIPT_ON_FRAME_TABLE: Spaceship_Dev_FrameTable
+    MAP_SCRIPT_ON_FRAME_TABLE: Spaceship_Dev_FrameTable
 }
 
 script Spaceship_Dev_Enter {
@@ -9,10 +9,62 @@ script Spaceship_Dev_Enter {
     clearflag(FLAG_RECEIVED_BELDUM)
     if (var(VAR_PLAYER_READY) == 0) {
         setvar(VAR_TEMP_0, 0)
+        setvar(VAR_TEMP_1, 1)
     } else {
         setvar(VAR_TEMP_0, 1)
     }
 	end
+}
+
+raw `
+Spaceship_Dev_FrameTable::
+	map_script_2 VAR_TEMP_1, 1, start_ship_intro
+	.2byte 0
+`
+
+script start_ship_intro {
+    setvar(VAR_TEMP_1, 0)
+    lockall
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    setvar(VAR_0x8004, 1)
+	setvar(VAR_0x8005, 1)
+	setvar(VAR_0x8006, 8)
+	setvar(VAR_0x8007, 5)
+	special(ShakeCamera)
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    callnative(DrawMugshot)
+    msgbox("Woah! Rough landing!")
+    setvar(VAR_0x8004, 1)
+	setvar(VAR_0x8005, 1)
+	setvar(VAR_0x8006, 8)
+	setvar(VAR_0x8007, 5)
+	special(ShakeCamera)
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+    delay(30)
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+    callnative(DrawMugshot)
+    msgbox("What the heck?! I can't get off the\n"
+    "ground! Something's keeping us down!")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+    delay(10)
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+    callnative(DrawMugshot)
+    msgbox("I guess I have to go check it out...\n"
+    "I've never had to go outside the ship\l"
+    "like this before. I guess I better\p"
+    "prepare. I should take Magnezone and\n"
+    "my equipment with me. Who knows what\l"
+    "could be out there?")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+    releaseall
+    end
 }
 
 script refill_air_canister {
