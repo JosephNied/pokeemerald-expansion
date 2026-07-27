@@ -13,6 +13,11 @@
 #define MUGSHOT_JIRACHI_WORRIED 8
 #define MUGSHOT_JIRACHI_OK 9
 #define MUGSHOT_JIRACHI_HAPPY 10
-
+#define METER_O2_1 11
+#define METER_O2_2 12
+#define METER_O2_3 13
+#define METER_O2_4 14
+#define METER_O2_5 15
+#define METER_O2_6 16
 
 #endif

@@ -7,8 +7,18 @@
 #include "constants/mugshots.h"
 
 #define MUGSHOT_PALETTE_NUM 13
+#define METER_PALETTE_NUM 13
 
 struct Mugshot{
+    u8 x;
+    u8 y;
+    u8 width;
+    u8 height;
+    const u32* image;
+    const u16* palette;
+};
+
+struct Meter{
     u8 x;
     u8 y;
     u8 width;
@@ -20,6 +30,16 @@ struct Mugshot{
 void DrawMugshot(void); //VAR_0x8000 = mugshot id
 void DrawMugshotAtPos(void); //VAR_0x8000 = mugshot id, VAR_0x8001 = x, VAR_0x8002 = y
 void ClearMugshot(void);
+
+void DrawO2Meter(void); //VAR_0x8003 = meter id
+void ClearO2Meter(void);
+void EnableO2Meter(void);
+void DisableO2Meter(void);
+void RefreshO2Meter(void);
+
+bool8 sO2MeterEnabled = FALSE;
+
+u16 GetAirTimer(void);
 
 static const u32 sMugshotImg_PLAYER_OK[] = INCBIN_U32("graphics/mugshots/player_ok.4bpp.lz");
 static const u16 sMugshotPal_PLAYER_OK[] = INCBIN_U16("graphics/mugshots/player_pal.gbapal");
@@ -51,6 +71,13 @@ static const u16 sMugshotPal_JIRACHI_OK[] = INCBIN_U16("graphics/mugshots/Jirach
 static const u32 sMugshotImg_JIRACHI_HAPPY[] = INCBIN_U32("graphics/mugshots/Jirachi_happy.4bpp.lz");
 static const u16 sMugshotPal_JIRACHI_HAPPY[] = INCBIN_U16("graphics/mugshots/Jirachi_happy.gbapal");
 
+static const u32 sMeterImg_METER_O2_1[] = INCBIN_U32("graphics/mugshots/O2_1.4bpp.lz");
+static const u32 sMeterImg_METER_O2_2[] = INCBIN_U32("graphics/mugshots/O2_2.4bpp.lz");
+static const u32 sMeterImg_METER_O2_3[] = INCBIN_U32("graphics/mugshots/O2_3.4bpp.lz");
+static const u32 sMeterImg_METER_O2_4[] = INCBIN_U32("graphics/mugshots/O2_4.4bpp.lz");
+static const u32 sMeterImg_METER_O2_5[] = INCBIN_U32("graphics/mugshots/O2_5.4bpp.lz");
+static const u32 sMeterImg_METER_O2_6[] = INCBIN_U32("graphics/mugshots/O2_6.4bpp.lz");
+static const u16 sMeterPal_METER_O2[] = INCBIN_U16("graphics/mugshots/health.gbapal");
 
 static const struct Mugshot sMugshots[] = {
     //ADD YOUR MUGSHOTS HERE
@@ -67,9 +94,102 @@ static const struct Mugshot sMugshots[] = {
     [MUGSHOT_JIRACHI_HAPPY] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_JIRACHI_HAPPY, .palette = sMugshotPal_JIRACHI_HAPPY},
 };
 
+static const struct Meter sMeters[] = {
+    [METER_O2_1] = {.x = 1, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_1, .palette = sMeterPal_METER_O2},
+    [METER_O2_2] = {.x = 1, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_2, .palette = sMeterPal_METER_O2},
+    [METER_O2_3] = {.x = 1, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_3, .palette = sMeterPal_METER_O2},
+    [METER_O2_4] = {.x = 1, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_4, .palette = sMeterPal_METER_O2},
+    [METER_O2_5] = {.x = 1, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_5, .palette = sMeterPal_METER_O2},
+    [METER_O2_6] = {.x = 1, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_6, .palette = sMeterPal_METER_O2},
+};
 
 //WindowId + 1, 0 if window is not open
 static EWRAM_DATA u8 sMugshotWindow = 0;
+static EWRAM_DATA u8 sMeterWindow = 0;
+static EWRAM_DATA u8 sCurrentO2Meter = 0;
+
+//meters
+
+static void DrawO2MeterCore(const struct Meter* const meter, int x, int y){
+    struct WindowTemplate t;
+    u16 windowId;
+    
+    if(sMeterWindow != 0){
+        ClearO2Meter();
+    }
+    
+    #if GAME_VERSION==VERSION_EMERALD
+    SetWindowTemplateFields(&t, 0, x, y, meter->width/8, meter->height/8, METER_PALETTE_NUM, 0x40);
+    #else
+    t = SetWindowTemplateFields(0, x, y, meter->width/8, meter->height/8, METER_PALETTE_NUM, 0x40);
+    #endif
+    windowId = AddWindow(&t);
+    sMeterWindow = windowId + 1;
+    
+    LoadPalette(meter->palette, 16 * METER_PALETTE_NUM, 32);
+    CopyToWindowPixelBuffer(windowId, (const void*)meter->image, 0, 0);
+    PutWindowRectTilemap(windowId, 0, 0, meter->width/8, meter->height/8);
+    CopyWindowToVram(windowId, 3);
+}
+
+void DrawO2Meter(void){
+    //sCurrentO2Meter = VarGet(VAR_0x8003);
+    //const struct Meter* const meter = sMeters + sCurrentO2Meter;
+    //DrawO2MeterCore(meter, meter->x, meter->y);
+    RefreshO2Meter();
+}
+
+void ClearO2Meter(void){
+    if(sMeterWindow != 0){
+        ClearStdWindowAndFrameToTransparent(sMeterWindow - 1, 0);
+        CopyWindowToVram(sMeterWindow - 1, 3);
+        RemoveWindow(sMeterWindow - 1);
+        sMeterWindow = 0;
+    }
+}
+
+void EnableO2Meter(void)
+{
+    sO2MeterEnabled = TRUE;
+    DrawO2Meter();
+}
+
+void DisableO2Meter(void)
+{
+    sO2MeterEnabled = FALSE;
+    ClearO2Meter();
+}
+
+bool8 IsO2MeterEnabled(void)
+{
+    return sO2MeterEnabled;
+}
+
+void RefreshO2Meter(void)
+{
+    if (!sO2MeterEnabled)
+        return;
+
+    u16 steps = GetAirTimer();
+
+    if (steps >= 126)
+        sCurrentO2Meter = METER_O2_1;
+    else if (steps >= 101)
+        sCurrentO2Meter = METER_O2_2;
+    else if (steps >= 76)
+        sCurrentO2Meter = METER_O2_3;
+    else if (steps >= 51)
+        sCurrentO2Meter = METER_O2_4;
+    else if (steps >= 26)
+        sCurrentO2Meter = METER_O2_5;
+    else
+        sCurrentO2Meter = METER_O2_6;
+
+    const struct Meter* const meter = sMeters + sCurrentO2Meter;
+    DrawO2MeterCore(meter, meter->x, meter->y);
+}
+
+//mugshots
 
 void ClearMugshot(void){
     if(sMugshotWindow != 0){
@@ -77,6 +197,9 @@ void ClearMugshot(void){
         CopyWindowToVram(sMugshotWindow - 1, 3);
         RemoveWindow(sMugshotWindow - 1);
         sMugshotWindow = 0;
+    }
+    if (sO2MeterEnabled == TRUE) {
+        DrawO2Meter();
     }
 }
 
@@ -104,6 +227,9 @@ static void DrawMugshotCore(const struct Mugshot* const mugshot, int x, int y){
 
 void DrawMugshot(void){
     const struct Mugshot* const mugshot = sMugshots + VarGet(VAR_0x8000);
+    if (sO2MeterEnabled == TRUE) {
+        ClearO2Meter();
+    }
     DrawMugshotCore(mugshot, mugshot->x, mugshot->y);
 }
 

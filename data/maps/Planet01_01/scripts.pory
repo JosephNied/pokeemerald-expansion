@@ -36,6 +36,7 @@ script Planet01_01_StartAirTimer {
     lockall
     playse(SE_REPEL)
     msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Low Oxygen detected. Supplying air.")
+    callnative(EnableO2Meter)
     releaseall
     end
 }

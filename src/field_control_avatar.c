@@ -45,6 +45,7 @@
 #include "constants/songs.h"
 #include "constants/trainer_hill.h"
 #include "air_timer.h"
+#include "mugshot.h"
 
 static EWRAM_DATA u8 sWildEncounterImmunitySteps = 0;
 static EWRAM_DATA u16 sPrevMetatileBehavior = 0;
@@ -814,10 +815,17 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
         }
     }
 
-    if (SafariZoneTakeStep() == TRUE)
+    if (SafariZoneTakeStep() == TRUE) {
         return TRUE;
-    if (AirTimerTakeStep(metatileBehavior) == TRUE)
+    }
+    
+    if (AirTimerTakeStep(metatileBehavior) == TRUE) {
         return TRUE;
+    }
+    if (IsO2MeterEnabled()) {
+        RefreshO2Meter();
+    }
+
     if (CountSSTidalStep(1) == TRUE)
     {
         ScriptContext_SetupScript(SSTidalCorridor_EventScript_ReachedStepCount);

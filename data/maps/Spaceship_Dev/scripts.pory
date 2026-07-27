@@ -13,6 +13,8 @@ script Spaceship_Dev_Enter {
     } else {
         setvar(VAR_TEMP_0, 1)
     }
+    callnative(StopAirTimer)
+    callnative(DisableO2Meter)
 	end
 }
 
