@@ -4645,9 +4645,9 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .weight = 450,
         .description = COMPOUND_STRING(
             "Glimmora's petals are made of\n"
-            "crystallized poison energy. It has\n"
-            "recently become evident that these\n"
-            "petals resemble Tera Jewels."),
+            "crystallized poison energy. Avoid\n"
+            "them (though, Pokémon with the 'Guts'\n"
+            "ability could actually benefit...)!"),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,

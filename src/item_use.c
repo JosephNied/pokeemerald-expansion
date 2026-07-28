@@ -1149,6 +1149,17 @@ static void ItemUseOnFieldCB_EscapeRope(u8 taskId)
     //if (I_KEY_ESCAPE_ROPE < GEN_8)
         //RemoveBagItem(gSpecialVar_ItemId, 1);
     
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SPACESHIP_DEV)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SPACESHIP_DEV))
+    {
+        static const u8 gText_CantUseTeleporter[] = _(
+            "The Teleporter can't be used here."
+        );
+
+        DisplayItemMessageOnField(taskId, gText_CantUseTeleporter, Task_UseDigEscapeRopeOnField);
+        return;
+    }
+
     static const u8 gText_PlayerUsedTeleporter[] = _("Player used the Teleporter.");
     //CopyItemName(gSpecialVar_ItemId, gStringVar2);
     //StringExpandPlaceholders(gStringVar4, gText_PlayerUsedVar2);

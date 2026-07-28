@@ -83,7 +83,7 @@ Planet01_01_EventScript_Item02::
 # 54 "data/maps/Planet01_01/scripts.pory"
 	lock
 # 55 "data/maps/Planet01_01/scripts.pory"
-	giveitem ITEM_STARDUST, 1
+	giveitem ITEM_STAR_PIECE, 1
 # 56 "data/maps/Planet01_01/scripts.pory"
 	setflag FLAG_UNUSED_0x494
 # 57 "data/maps/Planet01_01/scripts.pory"
@@ -139,287 +139,303 @@ Planet01_01_AddAir_Minior01::
 # 89 "data/maps/Planet01_01/scripts.pory"
 	msgbox Planet01_01_AddAir_Minior01_Text_1
 # 90 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_0x8000, SPECIES_MINIOR
+# 91 "data/maps/Planet01_01/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 92 "data/maps/Planet01_01/scripts.pory"
 	releaseall
 	end
 
 
 Planet01_01_AddAir_Minior02::
-# 95 "data/maps/Planet01_01/scripts.pory"
-	lockall
-# 96 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_AIR_TIMER_STEPS, 250
 # 97 "data/maps/Planet01_01/scripts.pory"
-	special AddAirTimerMap
+	lockall
 # 98 "data/maps/Planet01_01/scripts.pory"
-	playmoncry SPECIES_MINIOR, CRY_MODE_ENCOUNTER
+	setvar VAR_AIR_TIMER_STEPS, 250
 # 99 "data/maps/Planet01_01/scripts.pory"
-	msgbox Planet01_01_AddAir_Minior01_Text_0
+	special AddAirTimerMap
+# 100 "data/maps/Planet01_01/scripts.pory"
+	playmoncry SPECIES_MINIOR, CRY_MODE_ENCOUNTER
 # 101 "data/maps/Planet01_01/scripts.pory"
-	setflag FLAG_UNUSED_0x02B
-# 102 "data/maps/Planet01_01/scripts.pory"
-	fadeScreen FADE_TO_BLACK
+	msgbox Planet01_01_AddAir_Minior01_Text_0
 # 103 "data/maps/Planet01_01/scripts.pory"
-	removeobject 2
+	setflag FLAG_UNUSED_0x02B
 # 104 "data/maps/Planet01_01/scripts.pory"
-	fadeScreen FADE_FROM_BLACK
+	fadeScreen FADE_TO_BLACK
 # 105 "data/maps/Planet01_01/scripts.pory"
-	msgbox Planet01_01_AddAir_Minior01_Text_1
+	removeobject 2
 # 106 "data/maps/Planet01_01/scripts.pory"
+	fadeScreen FADE_FROM_BLACK
+# 107 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_AddAir_Minior01_Text_1
+# 108 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_0x8000, SPECIES_MINIOR
+# 109 "data/maps/Planet01_01/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 110 "data/maps/Planet01_01/scripts.pory"
 	releaseall
 	end
 
 
 Planet01_01_HintText01::
-# 111 "data/maps/Planet01_01/scripts.pory"
+# 115 "data/maps/Planet01_01/scripts.pory"
 	lock
-# 112 "data/maps/Planet01_01/scripts.pory"
+# 116 "data/maps/Planet01_01/scripts.pory"
 	msgbox Planet01_01_HintText01_Text_0
-# 120 "data/maps/Planet01_01/scripts.pory"
+# 124 "data/maps/Planet01_01/scripts.pory"
 	release
 	end
 
 
 Planet01_01_HintText02::
-# 125 "data/maps/Planet01_01/scripts.pory"
+# 129 "data/maps/Planet01_01/scripts.pory"
 	lock
-# 126 "data/maps/Planet01_01/scripts.pory"
-	msgbox Planet01_01_HintText02_Text_0
 # 130 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_HintText02_Text_0
+# 134 "data/maps/Planet01_01/scripts.pory"
 	release
 	end
 
 
 Planet01_01_HintText03::
-# 135 "data/maps/Planet01_01/scripts.pory"
+# 139 "data/maps/Planet01_01/scripts.pory"
 	lock
-# 136 "data/maps/Planet01_01/scripts.pory"
+# 140 "data/maps/Planet01_01/scripts.pory"
 	msgbox Planet01_01_HintText03_Text_0
-# 141 "data/maps/Planet01_01/scripts.pory"
+# 145 "data/maps/Planet01_01/scripts.pory"
 	release
 	end
 
 
 Planet01_01_HintText04::
-# 146 "data/maps/Planet01_01/scripts.pory"
+# 150 "data/maps/Planet01_01/scripts.pory"
 	lock
-# 147 "data/maps/Planet01_01/scripts.pory"
-	msgbox Planet01_01_HintText04_Text_0
 # 151 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_HintText04_Text_0
+# 155 "data/maps/Planet01_01/scripts.pory"
 	release
 	end
 
 
 Planet01_01_HintText05::
-# 156 "data/maps/Planet01_01/scripts.pory"
+# 160 "data/maps/Planet01_01/scripts.pory"
 	lock
-# 157 "data/maps/Planet01_01/scripts.pory"
-	msgbox Planet01_01_HintText05_Text_0
 # 161 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_HintText05_Text_0
+# 165 "data/maps/Planet01_01/scripts.pory"
 	release
 	end
 
 
 Planet01_01_Carbink::
-# 166 "data/maps/Planet01_01/scripts.pory"
-	lock
-# 167 "data/maps/Planet01_01/scripts.pory"
-	faceplayer
-# 168 "data/maps/Planet01_01/scripts.pory"
-	playmoncry SPECIES_CARBINK, CRY_MODE_ENCOUNTER
-# 169 "data/maps/Planet01_01/scripts.pory"
-	msgbox Planet01_01_Carbink_Text_0
 # 170 "data/maps/Planet01_01/scripts.pory"
-	setflag FLAG_UNUSED_0x04B
+	lock
 # 171 "data/maps/Planet01_01/scripts.pory"
-	fadeScreen FADE_TO_BLACK
+	faceplayer
 # 172 "data/maps/Planet01_01/scripts.pory"
-	removeobject 1
+	playmoncry SPECIES_CARBINK, CRY_MODE_ENCOUNTER
 # 173 "data/maps/Planet01_01/scripts.pory"
-	fadeScreen FADE_FROM_BLACK
+	setvar VAR_0x8000, SPECIES_CARBINK
 # 174 "data/maps/Planet01_01/scripts.pory"
-	msgbox Planet01_01_Carbink_Text_1
+	callnative RegisterSpeciesInDex
 # 175 "data/maps/Planet01_01/scripts.pory"
-	giveitem ITEM_CHIPPED_POT, 1
+	msgbox Planet01_01_Carbink_Text_0
 # 176 "data/maps/Planet01_01/scripts.pory"
+	setflag FLAG_UNUSED_0x04B
+# 177 "data/maps/Planet01_01/scripts.pory"
+	fadeScreen FADE_TO_BLACK
+# 178 "data/maps/Planet01_01/scripts.pory"
+	removeobject 1
+# 179 "data/maps/Planet01_01/scripts.pory"
+	fadeScreen FADE_FROM_BLACK
+# 180 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_Carbink_Text_1
+# 181 "data/maps/Planet01_01/scripts.pory"
+	giveitem ITEM_CHIPPED_POT, 1
+# 182 "data/maps/Planet01_01/scripts.pory"
 	release
 	end
 
 
 Planet01_01_Elgyem::
-# 181 "data/maps/Planet01_01/scripts.pory"
-	lock
-# 182 "data/maps/Planet01_01/scripts.pory"
-	faceplayer
-# 183 "data/maps/Planet01_01/scripts.pory"
-	playmoncry SPECIES_ELGYEM, CRY_MODE_ENCOUNTER
-# 184 "data/maps/Planet01_01/scripts.pory"
-	msgbox Planet01_01_Elgyem_Text_0
-# 186 "data/maps/Planet01_01/scripts.pory"
-	waitmessage
 # 187 "data/maps/Planet01_01/scripts.pory"
-	warp MAP_PLANET01_02, 0, 21, 23
+	lock
 # 188 "data/maps/Planet01_01/scripts.pory"
-	waitstate
+	faceplayer
 # 189 "data/maps/Planet01_01/scripts.pory"
+	playmoncry SPECIES_ELGYEM, CRY_MODE_ENCOUNTER
+# 190 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_0x8000, SPECIES_ELGYEM
+# 191 "data/maps/Planet01_01/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 192 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_Elgyem_Text_0
+# 194 "data/maps/Planet01_01/scripts.pory"
+	waitmessage
+# 195 "data/maps/Planet01_01/scripts.pory"
+	warp MAP_PLANET01_02, 0, 21, 23
+# 196 "data/maps/Planet01_01/scripts.pory"
+	waitstate
+# 197 "data/maps/Planet01_01/scripts.pory"
 	release
 	end
 
 
 Planet01_01_JirachiAppears::
-# 194 "data/maps/Planet01_01/scripts.pory"
-	lock
-# 195 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_DETERMINED
-# 196 "data/maps/Planet01_01/scripts.pory"
-	callnative DrawMugshot
-# 197 "data/maps/Planet01_01/scripts.pory"
-	msgbox Planet01_01_JirachiAppears_Text_0
-# 200 "data/maps/Planet01_01/scripts.pory"
-	waitmessage
-# 201 "data/maps/Planet01_01/scripts.pory"
-	closemessage
 # 202 "data/maps/Planet01_01/scripts.pory"
-	callnative ClearMugshot
+	lock
 # 203 "data/maps/Planet01_01/scripts.pory"
-	special Script_FadeOutMapMusic
+	setvar VAR_0x8000, MUGSHOT_PLAYER_DETERMINED
 # 204 "data/maps/Planet01_01/scripts.pory"
-	applymovement 14, Movement_FirstJirachiEncounter1
+	callnative DrawMugshot
 # 205 "data/maps/Planet01_01/scripts.pory"
-	waitse
-# 206 "data/maps/Planet01_01/scripts.pory"
-	playmoncry SPECIES_JIRACHI, CRY_MODE_ENCOUNTER
-# 207 "data/maps/Planet01_01/scripts.pory"
-	delay 40
+	msgbox Planet01_01_JirachiAppears_Text_0
 # 208 "data/maps/Planet01_01/scripts.pory"
-	waitmoncry
+	waitmessage
 # 209 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_JIRACHI_WORRIED
+	closemessage
 # 210 "data/maps/Planet01_01/scripts.pory"
-	callnative DrawMugshot
+	callnative ClearMugshot
 # 211 "data/maps/Planet01_01/scripts.pory"
-	msgbox Planet01_01_JirachiAppears_Text_1
+	special Script_FadeOutMapMusic
+# 212 "data/maps/Planet01_01/scripts.pory"
+	applymovement 14, Movement_FirstJirachiEncounter1
+# 213 "data/maps/Planet01_01/scripts.pory"
+	waitse
+# 214 "data/maps/Planet01_01/scripts.pory"
+	playmoncry SPECIES_JIRACHI, CRY_MODE_ENCOUNTER
 # 215 "data/maps/Planet01_01/scripts.pory"
-	waitmessage
+	delay 40
 # 216 "data/maps/Planet01_01/scripts.pory"
-	closemessage
+	waitmoncry
 # 217 "data/maps/Planet01_01/scripts.pory"
-	callnative ClearMugshot
+	setvar VAR_0x8000, MUGSHOT_JIRACHI_WORRIED
 # 218 "data/maps/Planet01_01/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Planet01_01_JirachiAppears_Movement_0
+	callnative DrawMugshot
 # 219 "data/maps/Planet01_01/scripts.pory"
-	waitmovement OBJ_EVENT_ID_PLAYER
-# 220 "data/maps/Planet01_01/scripts.pory"
-	delay 60
-# 221 "data/maps/Planet01_01/scripts.pory"
-	applymovement 14, Movement_FirstJirachiEncounter2
-# 222 "data/maps/Planet01_01/scripts.pory"
-	waitmovement 0
+	msgbox Planet01_01_JirachiAppears_Text_1
 # 223 "data/maps/Planet01_01/scripts.pory"
-	delay 30
+	waitmessage
 # 224 "data/maps/Planet01_01/scripts.pory"
-	removeobject 14
-# 225 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
-# 226 "data/maps/Planet01_01/scripts.pory"
-	callnative DrawMugshot
-# 227 "data/maps/Planet01_01/scripts.pory"
-	msgbox Planet01_01_JirachiAppears_Text_2
-# 232 "data/maps/Planet01_01/scripts.pory"
-	waitmessage
-# 233 "data/maps/Planet01_01/scripts.pory"
 	closemessage
-# 234 "data/maps/Planet01_01/scripts.pory"
+# 225 "data/maps/Planet01_01/scripts.pory"
 	callnative ClearMugshot
-# 235 "data/maps/Planet01_01/scripts.pory"
+# 226 "data/maps/Planet01_01/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Planet01_01_JirachiAppears_Movement_0
+# 227 "data/maps/Planet01_01/scripts.pory"
+	waitmovement OBJ_EVENT_ID_PLAYER
+# 228 "data/maps/Planet01_01/scripts.pory"
 	delay 60
-# 236 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
-# 237 "data/maps/Planet01_01/scripts.pory"
+# 229 "data/maps/Planet01_01/scripts.pory"
+	applymovement 14, Movement_FirstJirachiEncounter2
+# 230 "data/maps/Planet01_01/scripts.pory"
+	waitmovement 0
+# 231 "data/maps/Planet01_01/scripts.pory"
+	delay 30
+# 232 "data/maps/Planet01_01/scripts.pory"
+	removeobject 14
+# 233 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
+# 234 "data/maps/Planet01_01/scripts.pory"
 	callnative DrawMugshot
-# 238 "data/maps/Planet01_01/scripts.pory"
-	msgbox Planet01_01_JirachiAppears_Text_3
-# 242 "data/maps/Planet01_01/scripts.pory"
+# 235 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_JirachiAppears_Text_2
+# 240 "data/maps/Planet01_01/scripts.pory"
 	waitmessage
-# 243 "data/maps/Planet01_01/scripts.pory"
+# 241 "data/maps/Planet01_01/scripts.pory"
+	closemessage
+# 242 "data/maps/Planet01_01/scripts.pory"
 	callnative ClearMugshot
+# 243 "data/maps/Planet01_01/scripts.pory"
+	delay 60
 # 244 "data/maps/Planet01_01/scripts.pory"
-	special Overworld_PlaySpecialMapMusic
+	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
 # 245 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_TEMP_0, 1
+	callnative DrawMugshot
 # 246 "data/maps/Planet01_01/scripts.pory"
+	msgbox Planet01_01_JirachiAppears_Text_3
+# 250 "data/maps/Planet01_01/scripts.pory"
+	waitmessage
+# 251 "data/maps/Planet01_01/scripts.pory"
+	callnative ClearMugshot
+# 252 "data/maps/Planet01_01/scripts.pory"
+	special Overworld_PlaySpecialMapMusic
+# 253 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_TEMP_0, 1
+# 254 "data/maps/Planet01_01/scripts.pory"
 	setflag FLAG_REGISTERED_ROSE
-# 247 "data/maps/Planet01_01/scripts.pory"
+# 255 "data/maps/Planet01_01/scripts.pory"
 	release
 	end
 
 
-# 251 "data/maps/Planet01_01/scripts.pory"
-Movement_FirstJirachiEncounter1:
-# 252 "data/maps/Planet01_01/scripts.pory"
-	face_down
-# 253 "data/maps/Planet01_01/scripts.pory"
-	set_visible
-# 254 "data/maps/Planet01_01/scripts.pory"
-	delay_4
-# 255 "data/maps/Planet01_01/scripts.pory"
-	set_invisible
-# 256 "data/maps/Planet01_01/scripts.pory"
-	delay_4
-# 257 "data/maps/Planet01_01/scripts.pory"
-	set_visible
-# 258 "data/maps/Planet01_01/scripts.pory"
-	delay_4
 # 259 "data/maps/Planet01_01/scripts.pory"
-	set_invisible
+Movement_FirstJirachiEncounter1:
 # 260 "data/maps/Planet01_01/scripts.pory"
-	delay_4
+	face_down
 # 261 "data/maps/Planet01_01/scripts.pory"
 	set_visible
 # 262 "data/maps/Planet01_01/scripts.pory"
-	delay_8
+	delay_4
 # 263 "data/maps/Planet01_01/scripts.pory"
 	set_invisible
 # 264 "data/maps/Planet01_01/scripts.pory"
-	delay_8
+	delay_4
 # 265 "data/maps/Planet01_01/scripts.pory"
 	set_visible
 # 266 "data/maps/Planet01_01/scripts.pory"
-	delay_8
+	delay_4
 # 267 "data/maps/Planet01_01/scripts.pory"
 	set_invisible
 # 268 "data/maps/Planet01_01/scripts.pory"
-	delay_8
+	delay_4
 # 269 "data/maps/Planet01_01/scripts.pory"
 	set_visible
 # 270 "data/maps/Planet01_01/scripts.pory"
-	delay_16
+	delay_8
 # 271 "data/maps/Planet01_01/scripts.pory"
 	set_invisible
 # 272 "data/maps/Planet01_01/scripts.pory"
-	delay_16
+	delay_8
 # 273 "data/maps/Planet01_01/scripts.pory"
 	set_visible
-	step_end
-
+# 274 "data/maps/Planet01_01/scripts.pory"
+	delay_8
+# 275 "data/maps/Planet01_01/scripts.pory"
+	set_invisible
 # 276 "data/maps/Planet01_01/scripts.pory"
-Movement_FirstJirachiEncounter2:
+	delay_8
 # 277 "data/maps/Planet01_01/scripts.pory"
-	face_up
+	set_visible
 # 278 "data/maps/Planet01_01/scripts.pory"
 	delay_16
 # 279 "data/maps/Planet01_01/scripts.pory"
-	walk_up
+	set_invisible
 # 280 "data/maps/Planet01_01/scripts.pory"
-	walk_up
+	delay_16
 # 281 "data/maps/Planet01_01/scripts.pory"
+	set_visible
+	step_end
+
+# 284 "data/maps/Planet01_01/scripts.pory"
+Movement_FirstJirachiEncounter2:
+# 285 "data/maps/Planet01_01/scripts.pory"
+	face_up
+# 286 "data/maps/Planet01_01/scripts.pory"
+	delay_16
+# 287 "data/maps/Planet01_01/scripts.pory"
 	walk_up
-# 282 "data/maps/Planet01_01/scripts.pory"
+# 288 "data/maps/Planet01_01/scripts.pory"
+	walk_up
+# 289 "data/maps/Planet01_01/scripts.pory"
+	walk_up
+# 290 "data/maps/Planet01_01/scripts.pory"
 	walk_up
 	step_end
 
-# 218 "data/maps/Planet01_01/scripts.pory"
+# 226 "data/maps/Planet01_01/scripts.pory"
 Planet01_01_JirachiAppears_Movement_0:
-# 218 "data/maps/Planet01_01/scripts.pory"
+# 226 "data/maps/Planet01_01/scripts.pory"
 	face_up
 	step_end
 
@@ -445,7 +461,7 @@ Planet01_01_AddAir_Minior01_Text_1:
 	.string "Minior flew away...$"
 
 Planet01_01_HintText01_Text_0:
-# 112 "data/maps/Planet01_01/scripts.pory"
+# 116 "data/maps/Planet01_01/scripts.pory"
 	.string "Captain: This is the captain of\n"
 	.string "expedition 001. \p"
 	.string "Our team has placed notes for future \n"
@@ -456,14 +472,14 @@ Planet01_01_HintText01_Text_0:
 	.string "ledges can be scaled easily!$"
 
 Planet01_01_HintText02_Text_0:
-# 126 "data/maps/Planet01_01/scripts.pory"
+# 130 "data/maps/Planet01_01/scripts.pory"
 	.string "Biologist: The plants emit oxygen when\n"
 	.string "stepped on. We can capture the O2 they\l"
 	.string "generate and use it to refill the oxygen\l"
 	.string "in our life support systems. How lucky!$"
 
 Planet01_01_HintText03_Text_0:
-# 136 "data/maps/Planet01_01/scripts.pory"
+# 140 "data/maps/Planet01_01/scripts.pory"
 	.string "Engineer: The Steelix here have been\n"
 	.string "digging deep into the planet's core;\l"
 	.string "this blue liquid they've been exposed\l"
@@ -471,47 +487,47 @@ Planet01_01_HintText03_Text_0:
 	.string "I'll collect some samples...$"
 
 Planet01_01_HintText04_Text_0:
-# 147 "data/maps/Planet01_01/scripts.pory"
+# 151 "data/maps/Planet01_01/scripts.pory"
 	.string "Biologist: Miniors are flying types,\n"
 	.string "the air they generate can be captured\l"
 	.string "and used to refill the oxygen in our \l"
 	.string "life support systems. Handy!$"
 
 Planet01_01_HintText05_Text_0:
-# 157 "data/maps/Planet01_01/scripts.pory"
+# 161 "data/maps/Planet01_01/scripts.pory"
 	.string "Biologist: There are a lot of\n"
 	.string "members of the Clefairy family around\l"
 	.string "these rocks. They must prefer to live\l"
 	.string "in the mountains.$"
 
 Planet01_01_Carbink_Text_0:
-# 169 "data/maps/Planet01_01/scripts.pory"
+# 175 "data/maps/Planet01_01/scripts.pory"
 	.string "The Carbink seems to want to play!$"
 
 Planet01_01_Carbink_Text_1:
-# 174 "data/maps/Planet01_01/scripts.pory"
+# 180 "data/maps/Planet01_01/scripts.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Carbink climbed into your bag!$"
 
 Planet01_01_Elgyem_Text_0:
-# 184 "data/maps/Planet01_01/scripts.pory"
+# 192 "data/maps/Planet01_01/scripts.pory"
 	.string "Elgyem seems taken off-guard!\n"
 	.string "My bad- Huh?! It's using Teleport-$"
 
 Planet01_01_JirachiAppears_Text_0:
-# 197 "data/maps/Planet01_01/scripts.pory"
+# 205 "data/maps/Planet01_01/scripts.pory"
 	.string "So this is an alien planet, eh?\l"
 	.string "Well, it better watch out. I don't get\n"
 	.string "suprised easily.$"
 
 Planet01_01_JirachiAppears_Text_1:
-# 211 "data/maps/Planet01_01/scripts.pory"
+# 219 "data/maps/Planet01_01/scripts.pory"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}...\p"
 	.string "<More humans? Again, to cause more\n"
 	.string "trouble?>\p"
 	.string "...$"
 
 Planet01_01_JirachiAppears_Text_2:
-# 227 "data/maps/Planet01_01/scripts.pory"
+# 235 "data/maps/Planet01_01/scripts.pory"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}...Was that a Jirachi?!\n"
 	.string "I think I could hear its thoughts... Are\l"
 	.string "there other humans here somewhere?!\l"
@@ -519,7 +535,7 @@ Planet01_01_JirachiAppears_Text_2:
 	.string "dragged here. I need to look for them!$"
 
 Planet01_01_JirachiAppears_Text_3:
-# 238 "data/maps/Planet01_01/scripts.pory"
+# 246 "data/maps/Planet01_01/scripts.pory"
 	.string "...Seeing a Jirachi is supposed\n"
 	.string "to be good luck. It didn't seem too\l"
 	.string "happy with me being here, though...\p"

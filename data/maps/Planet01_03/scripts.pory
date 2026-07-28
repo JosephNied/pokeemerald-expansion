@@ -205,6 +205,8 @@ script Planet01_03_Carbink {
     lock
     faceplayer
     playmoncry(SPECIES_CARBINK, CRY_MODE_ENCOUNTER)
+    setvar(VAR_0x8000, SPECIES_CARBINK)
+    callnative(RegisterSpeciesInDex)
     msgbox("The Carbink really seems to like you!")
     setflag(FLAG_UNUSED_0x04A)
     fadeScreen(FADE_TO_BLACK)
@@ -220,6 +222,8 @@ script Planet01_03_Elgyem {
     lock
     faceplayer
     playmoncry(SPECIES_ELGYEM, CRY_MODE_ENCOUNTER)
+    setvar(VAR_0x8000, SPECIES_ELGYEM)
+    callnative(RegisterSpeciesInDex)
     msgbox("Elgyem seems taken off-guard!\n"
     "My bad- Huh?! It's using Teleport-")
     waitmessage

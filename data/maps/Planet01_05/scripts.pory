@@ -41,6 +41,8 @@ script Planet01_05_DusknoirEncounter {
     fadeScreen(FADE_FROM_BLACK)
     msgbox("The Dusknoir faded into the\n"
     "shadows.")
+    setvar(VAR_0x8000, SPECIES_DUSKNOIR)
+    callnative(RegisterSpeciesInDex)
     setvar(VAR_TEMP_0, 1)
     releaseall
     end

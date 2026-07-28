@@ -11,6 +11,8 @@ script Planet01_04_AddAir_Minior01 {
     setvar(VAR_AIR_TIMER_STEPS, 250)
     special(AddAirTimerMap)
     playmoncry(SPECIES_MINIOR, CRY_MODE_ENCOUNTER)
+    setvar(VAR_0x8000, SPECIES_MINIOR)
+    callnative(RegisterSpeciesInDex)
     msgbox("Minior is floating in a pocket of air!\n"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
     setflag(FLAG_UNUSED_0x032)
@@ -27,6 +29,8 @@ script Planet01_04_AddAir_Minior02 {
     setvar(VAR_AIR_TIMER_STEPS, 250)
     special(AddAirTimerMap)
     playmoncry(SPECIES_MINIOR, CRY_MODE_ENCOUNTER)
+    setvar(VAR_0x8000, SPECIES_MINIOR)
+    callnative(RegisterSpeciesInDex)
     msgbox("Minior is floating in a pocket of air!\n"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
     setflag(FLAG_UNUSED_0x032)
@@ -41,8 +45,17 @@ script Planet01_04_AddAir_Minior02 {
 script Planet01_04_EventScript_Item01 {
     lock
     giveitem(ITEM_STAR_PIECE, 1)
-    removeobject(7)
+    removeobject(6)
     setflag(FLAG_UNUSED_0x499)
+    release
+    end
+}
+
+script Planet01_04_EventScript_Item02 {
+    lock
+    giveitem(ITEM_SITRUS_BERRY, 1)
+    removeobject(7)
+    setflag(FLAG_UNUSED_0x49F)
     release
     end
 }

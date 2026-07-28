@@ -4580,16 +4580,16 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseHP        = 50,
         .baseAttack    = 75,
         .baseDefense   = 75,
-        .baseSpeed     = 50,
+        .baseSpeed     = 60,
         .baseSpAttack  = 65,
-        .baseSpDefense = 65,
+        .baseSpDefense = 75,
         .types = MON_TYPES(TYPE_DARK, TYPE_GHOST),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 133 : 98,
         .evYield_Attack = 1,
         .evYield_Defense = 1,
-        .itemCommon = ITEM_DUSK_STONE,
-        .itemRare = ITEM_DUSK_STONE,
+        .itemCommon = ITEM_BRIGHT_POWDER,
+        .itemRare = ITEM_BRIGHT_POWDER,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 25,
         .friendship = 35,
@@ -8110,6 +8110,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .expYield = 150,
     #endif
         .evYield_SpAttack = 2,
+        .itemCommon = ITEM_NEVERMELTICE,
+        .itemRare = ITEM_HARD_STONE,
         .genderRatio = MON_GENDERLESS,
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
@@ -8173,11 +8175,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 [SPECIES_DULROC] =
     {
         .baseHP        = P_UPDATED_STATS >= GEN_7 ? 90 : 70,
-        .baseAttack    = 75,
-        .baseDefense   = 85,
-        .baseSpeed     = 75,
+        .baseAttack    = 100,
+        .baseDefense   = 65,
+        .baseSpeed     = 95,
         .baseSpAttack  = 75,
-        .baseSpDefense = 85,
+        .baseSpDefense = 65,
         .types = MON_TYPES(TYPE_ROCK, TYPE_PSYCHIC),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_7
@@ -8188,7 +8190,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .expYield = 150,
     #endif
         .evYield_Attack = 2,
-        .itemCommon = ITEM_STAR_PIECE,
+        .itemCommon = ITEM_CHARCOAL,
+        .itemRare = ITEM_EVIOLITE,
         .genderRatio = MON_GENDERLESS,
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
@@ -8206,7 +8209,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "A strange, dull pokemon. Found deep in the\n"
             "canyons of the planet, it mimics the rock's\n"
             "purple color. Hot to the touch, like it's\n"
-            "full of energy."),
+            "full of energy. Can it evolve?"),
         .pokemonScale = 328,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -8251,11 +8254,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     [SPECIES_SOLROCK] =
     {
         .baseHP        = P_UPDATED_STATS >= GEN_7 ? 90 : 70,
-        .baseAttack    = 95,
+        .baseAttack    = 110,
         .baseDefense   = 85,
         .baseSpeed     = 70,
         .baseSpAttack  = 55,
-        .baseSpDefense = 65,
+        .baseSpDefense = 85,
         .types = MON_TYPES(TYPE_ROCK, TYPE_PSYCHIC),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_7
@@ -8273,7 +8276,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
-        .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
+        .abilities = { ABILITY_DROUGHT, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Solrock"),
         .cryId = CRY_SOLROCK,
@@ -10073,7 +10076,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseAttack    = 65,
         .baseDefense   = 105,
         .baseSpeed     = 55,
-        .baseSpAttack  = 85,
+        .baseSpAttack  = 95,
         .baseSpDefense = 105,
         .types = MON_TYPES(TYPE_GHOST),
         .catchRate = 45,
@@ -10796,8 +10799,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .description = COMPOUND_STRING(
             "A Glalie has the power to instantaneously\n"
             "freeze moisture in the atmosphere.\n"
-            "A dazzling cloud of diamondlike ice\n"
-            "crystals forms around its body."),
+            "It's pretty aggressive; I'd definitely\n"
+            "avoid contact!"),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 344,
@@ -13322,9 +13325,9 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .weight = 11,
         .description = COMPOUND_STRING(
             "Jirachi is said to make wishes come true.\n"
-            "While it sleeps, a tough crystalline shell\n"
-            "envelops the body to protect it from\n"
-            "enemies."),
+            "It seems like it needed a friend; it\n"
+            "didn't feel safe here after Deoxys was\n"
+            "unleashed."),
         .pokemonScale = 608,
         .pokemonOffset = -8,
         .trainerScale = 256,
@@ -13411,10 +13414,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .height = 17,
         .weight = 608,
         .description = COMPOUND_STRING(
-            "Deoxys emerged from a virus that came\n"
-            "from space. It is highly intelligent and\n"
-            "can shoot lasers from the crystalline\n"
-            "organ on its chest."),
+            "Deoxys emerged from a virus the scientists\n"
+            "discovered. It is highly intelligent, and\n"
+            "utterly hostile to all forms of life.\n"
+            "It must be stopped wherever it's found."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -13491,9 +13494,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .height = 17,
         .weight = 608,
         .description = COMPOUND_STRING(
-            "This Deoxys has transformed into its\n"
-            "aggressive guise. It can fool enemies\n"
-            "by altering its appearance."),
+            "Deoxys emerged from a virus the scientists\n"
+            "discovered. It is highly intelligent, and\n"
+            "utterly hostile to all forms of life.\n"
+            "It must be stopped wherever it's found."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -13569,9 +13573,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .height = 17,
         .weight = 608,
         .description = COMPOUND_STRING(
-            "When it changes form, an aurora\n"
-            "appears. It absorbs attacks by\n"
-            "altering its cellular structure."),
+            "Deoxys emerged from a virus the scientists\n"
+            "discovered. It is highly intelligent, and\n"
+            "utterly hostile to all forms of life.\n"
+            "It must be stopped wherever it's found."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -13648,10 +13653,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .height = 17,
         .weight = 608,
         .description = COMPOUND_STRING(
-            "A Pokémon that mutated from an\n"
-            "extraterrestrial virus exposed to a laser\n"
-            "beam. Its body is configured for superior \n"
-            "agility and speed."),
+            "Deoxys emerged from a virus the scientists\n"
+            "discovered. It is highly intelligent, and\n"
+            "utterly hostile to all forms of life.\n"
+            "It must be stopped wherever it's found."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,

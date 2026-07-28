@@ -118,6 +118,8 @@ script Planet01_Diancie_Cave_DiancieEncounter {
     msgbox("Daincie seemd pleased with\n"
     "the battle! It left a gift!")
 	giveitem(ITEM_DIANCITE)
+	setvar(VAR_0x8000, SPECIES_DIANCIE)
+    callnative(RegisterSpeciesInDex)
     releaseall
     end
 

@@ -5389,8 +5389,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .description = COMPOUND_STRING(
             "A Quagsire hunts by leaving its mouth wide\n"
             "open in water and waiting for its prey to\n"
-            "blunder in. It accidentally ingests a lot\n"
-            "of gemstones this way; how curious..."),
+            "blunder in. Some apparently have penchant\n"
+            "for collecting pretty stones and crystals."),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 256,

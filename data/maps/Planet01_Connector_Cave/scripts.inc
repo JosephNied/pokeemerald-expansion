@@ -159,8 +159,12 @@ EventScript_GlimmoraCatch::
 # 88 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	fadeScreen FADE_FROM_WHITE
 # 89 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	msgbox EventScript_GlimmoraCatch_Text_0
+	setvar VAR_0x8000, SPECIES_GLIMMORA
+# 90 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	callnative RegisterSpeciesInDex
 # 91 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	msgbox EventScript_GlimmoraCatch_Text_0
+# 93 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	release
 	end
 
@@ -180,6 +184,6 @@ ConnectorCave_Cold_Wall_Text_1:
 	.string "There's a frozen cavern back there!$"
 
 EventScript_GlimmoraCatch_Text_0:
-# 89 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 91 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "Glimmora poisoned a party member!\n"
 	.string "That stings!$"

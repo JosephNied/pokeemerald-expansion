@@ -61,6 +61,8 @@ script Sun_Moon_Check {
 		waitmessage
 		closemessage
 		callnative(ClearMugshot)
+		setvar(VAR_0x8000, SPECIES_CELEBI)
+    	callnative(RegisterSpeciesInDex)
 		applymovement(1, Movement_SunMoon_Jirachi2)
 		waitmovement(0)
 		fadescreen(FADE_TO_WHITE)
@@ -169,4 +171,11 @@ script Planet01_07_HintText01 {
     end
 }
 
-  
+  script Planet01_07_EventScript_Item01 {
+	lock
+	giveitem(ITEM_SITRUS_BERRY, 1)
+	removeobject(2)
+	setflag(FLAG_UNUSED_0x4A0)
+	release
+	end
+}

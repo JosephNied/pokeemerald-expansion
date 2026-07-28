@@ -60,10 +60,9 @@ script start_ship_intro {
     callnative(DrawMugshot)
     msgbox("I guess I have to go check it out...\n"
     "I've never had to go outside the ship\l"
-    "like this before. I guess I better\p"
-    "prepare. I should take Magnezone and\n"
-    "my equipment with me. Who knows what\l"
-    "could be out there?")
+    "like this before. I better prepare.\p"
+    "I should take Magnezone and my tools;\n"
+    "who knows what could be out there?")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -125,12 +124,16 @@ script Spaceship_Dev_EventScript_Tutorial_Notebook {
     if (var(VAR_RESULT) == 0) {
         msgbox("Your {COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen System{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} reports how many\n"
         "units of O2 remain in your portable life \l"
-        "support system.")
+        "support system.\p"
+        "You can craft {COLOR BLUE}{SHADOW LIGHT_BLUE}Air Canisters{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} that can\n"
+        "refill your Oxygen System at any time.")
+        call(Spaceship_Dev_EventScript_Tutorial_Notebook)
     }
     if (var(VAR_RESULT) == 1) {
         msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Meteor Balls{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} never fail. They can be \n"
         "reused if the Pokemon inside is \l"
         "released.")
+        call(Spaceship_Dev_EventScript_Tutorial_Notebook)
     }
     if (var(VAR_RESULT) == 2) {
         msgbox("The {COLOR BLUE}{SHADOW LIGHT_BLUE}Scanner{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} logs useful information\n"
@@ -138,18 +141,21 @@ script Spaceship_Dev_EventScript_Tutorial_Notebook {
         "to escape the confrontation unharmed.\p"
         "Faster pokemon are harder to scan.\n"
         "Paralyzing them can make it easier.")
+        call(Spaceship_Dev_EventScript_Tutorial_Notebook)
     }
     if (var(VAR_RESULT) == 3) {
         msgbox("The {COLOR BLUE}{SHADOW LIGHT_BLUE}Teleporter{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} can be used to warp\n"
         "back to the ship, and also will \l"
         "automatically trigger in emergency \l"
         "situations.")
+        call(Spaceship_Dev_EventScript_Tutorial_Notebook)
     }
     if (var(VAR_RESULT) == 4) {
         msgbox("You can craft {COLOR BLUE}{SHADOW LIGHT_BLUE}Meteor Balls{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} and \n"
         "{COLOR BLUE}{SHADOW LIGHT_BLUE}Air Canisters{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} using the ship's\l"
         "crafting machine, provided you have\l"
         "sufficient Star Pieces and Stardust.")
+        call(Spaceship_Dev_EventScript_Tutorial_Notebook)
     }
     setflag(FLAG_UNUSED_0x029)
     playse(SE_PC_OFF)
@@ -368,7 +374,39 @@ script Bellossom {
     msgbox("Bellossum converts my C02 into oxygen.\n"
     "An important team member!")
     waitmessage
+    closemessage
     callnative(ClearMugshot)
+    if (flag(FLAG_TEMP_6) == FALSE) {
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+        callnative(DrawMugshot)
+        playmoncry(SPECIES_BELLOSSOM, CRY_MODE_ENCOUNTER)
+        msgbox("Oh? Bellossum has a gift for me!")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+        randomelement(ITEM_ADAMANT_MINT,
+        ITEM_BOLD_MINT,
+        ITEM_BRAVE_MINT,
+        ITEM_CALM_MINT,
+        ITEM_CAREFUL_MINT,
+        ITEM_HASTY_MINT,
+        ITEM_IMPISH_MINT,
+        ITEM_JOLLY_MINT,
+        ITEM_LAX_MINT,
+        ITEM_MODEST_MINT,
+        ITEM_NAIVE_MINT,
+        ITEM_NAUGHTY_MINT,
+        ITEM_QUIET_MINT,
+        ITEM_RASH_MINT,
+        ITEM_RELAXED_MINT,
+        ITEM_SASSY_MINT,
+        ITEM_SERIOUS_MINT,
+        ITEM_TIMID_MINT,
+        ITEM_LUM_BERRY,
+        ITEM_SITRUS_BERRY)
+        giveitem(VAR_RESULT)
+        setflag(FLAG_TEMP_6)
+    }
     release
     end
 }

@@ -52,7 +52,7 @@ script Planet01_01_EventScript_Item01 {
 
 script Planet01_01_EventScript_Item02 {
     lock
-    giveitem(ITEM_STARDUST, 1)
+    giveitem(ITEM_STAR_PIECE, 1)
     setflag(FLAG_UNUSED_0x494)
     removeobject(11)
     release
@@ -87,6 +87,8 @@ script Planet01_01_AddAir_Minior01 {
     removeobject(9)
     fadeScreen(FADE_FROM_BLACK)
     msgbox("Minior flew away...")
+    setvar(VAR_0x8000, SPECIES_MINIOR)
+    callnative(RegisterSpeciesInDex)
     releaseall
     end
 }
@@ -103,6 +105,8 @@ script Planet01_01_AddAir_Minior02 {
     removeobject(2)
     fadeScreen(FADE_FROM_BLACK)
     msgbox("Minior flew away...")
+    setvar(VAR_0x8000, SPECIES_MINIOR)
+    callnative(RegisterSpeciesInDex)
     releaseall
     end
 }
@@ -166,6 +170,8 @@ script Planet01_01_Carbink {
     lock
     faceplayer
     playmoncry(SPECIES_CARBINK, CRY_MODE_ENCOUNTER)
+    setvar(VAR_0x8000, SPECIES_CARBINK)
+    callnative(RegisterSpeciesInDex)
     msgbox("The Carbink seems to want to play!")
     setflag(FLAG_UNUSED_0x04B)
     fadeScreen(FADE_TO_BLACK)
@@ -181,6 +187,8 @@ script Planet01_01_Elgyem {
     lock
     faceplayer
     playmoncry(SPECIES_ELGYEM, CRY_MODE_ENCOUNTER)
+    setvar(VAR_0x8000, SPECIES_ELGYEM)
+    callnative(RegisterSpeciesInDex)
     msgbox("Elgyem seems taken off-guard!\n"
     "My bad- Huh?! It's using Teleport-")
     waitmessage

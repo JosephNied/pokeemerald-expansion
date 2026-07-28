@@ -12441,23 +12441,24 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #if P_GEN_2_CROSS_EVOS
     [SPECIES_STEELIX] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 95,
-        .baseDefense   = 150,
+        .baseHP        = 65,
+        .baseAttack    = 110,
+        .baseDefense   = 180,
         .baseSpeed     = 70,
-        .baseSpAttack  = 55,
-        .baseSpDefense = 65,
-        .types = MON_TYPES(TYPE_DRAGON, TYPE_GROUND),
+        .baseSpAttack  = 45,
+        .baseSpDefense = 70,
+        .types = MON_TYPES(TYPE_DRAGON),
         .catchRate = 25,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 179 : 196,
         .evYield_Defense = 2,
+        .itemCommon = ITEM_DRAGON_FANG,
         .itemRare = ITEM_SOFT_SAND,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
-        .abilities = { ABILITY_STURDY, ABILITY_STURDY, ABILITY_SHEER_FORCE },
+        .abilities = { ABILITY_MULTISCALE, ABILITY_MULTISCALE, ABILITY_MULTISCALE },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Steelix"),
         .cryId = CRY_STEELIX,
@@ -17937,9 +17938,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 40,
         .description = COMPOUND_STRING(
             "A Ditto rearranges its cell structure to\n"
-            "transform itself. However, if it tries to\n"
-            "change based on its memory, it will get\n"
-            "details wrong."),
+            "transform itself. They can glob together\n"
+            "at times, making it hard to tell just how\n"
+            "many Ditto are present."),
         .pokemonScale = 633,
         .pokemonOffset = 23,
         .trainerScale = 256,

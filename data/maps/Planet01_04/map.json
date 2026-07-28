@@ -46,7 +46,7 @@
       "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
       "trainer_sight_or_berry_tree_id": "50",
       "script": "NULL",
-      "flag": "FLAG_UNUSED_0x02C"
+      "flag": "FLAG_UNUSED_0x0x02C"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(CLEFFA)",
@@ -76,7 +76,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(WOOPER)",
-      "x": 29,
+      "x": 30,
       "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
@@ -101,19 +101,6 @@
       "flag": "FLAG_UNUSED_0x031"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(QUAGSIRE)",
-      "x": 23,
-      "y": 8,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_APPROACH_PLAYER_OWE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
-      "trainer_sight_or_berry_tree_id": "50",
-      "script": "NULL",
-      "flag": "FLAG_UNUSED_0x02D"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
       "x": 11,
       "y": 3,
@@ -125,6 +112,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Planet01_04_EventScript_Item01",
       "flag": "FLAG_UNUSED_0x499"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 32,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Planet01_04_EventScript_Item02",
+      "flag": "FLAG_UNUSED_0x49F"
     }
   ],
   "warp_events": [

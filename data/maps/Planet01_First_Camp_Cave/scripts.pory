@@ -31,6 +31,8 @@ script Planet01_First_Camp_Cave_UrsalunaEncounter {
 
     msgbox("The Ursaluna disappeared into the\n"
     "cave.")
+    setvar(VAR_0x8000, SPECIES_URSALUNA)
+    callnative(RegisterSpeciesInDex)
     releaseall
     end
 

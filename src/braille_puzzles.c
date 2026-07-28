@@ -65,17 +65,61 @@ bool8 ShouldDoBrailleDigEffect(void)
      && (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_PLANET01_CONNECTOR_CAVE)
      && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_PLANET01_CONNECTOR_CAVE)))
     {
+        if (gSaveBlock1Ptr->pos.x == 2 && gSaveBlock1Ptr->pos.y == 2)
+            return TRUE;
         if (gSaveBlock1Ptr->pos.x == 3 && gSaveBlock1Ptr->pos.y == 2)
             return TRUE;
         if (gSaveBlock1Ptr->pos.x == 4 && gSaveBlock1Ptr->pos.y == 2)
             return TRUE;
         if (gSaveBlock1Ptr->pos.x == 5 && gSaveBlock1Ptr->pos.y == 2)
             return TRUE;
+        if (gSaveBlock1Ptr->pos.x == 6 && gSaveBlock1Ptr->pos.y == 2)
+            return TRUE;
+
+        if (gSaveBlock1Ptr->pos.x == 2 && gSaveBlock1Ptr->pos.y == 3)
+            return TRUE;
         if (gSaveBlock1Ptr->pos.x == 3 && gSaveBlock1Ptr->pos.y == 3)
             return TRUE;
         if (gSaveBlock1Ptr->pos.x == 4 && gSaveBlock1Ptr->pos.y == 3)
             return TRUE;
         if (gSaveBlock1Ptr->pos.x == 5 && gSaveBlock1Ptr->pos.y == 3)
+            return TRUE;
+        if (gSaveBlock1Ptr->pos.x == 6 && gSaveBlock1Ptr->pos.y == 3)
+            return TRUE;
+        
+        if (gSaveBlock1Ptr->pos.x == 2 && gSaveBlock1Ptr->pos.y == 4)
+            return TRUE;
+        if (gSaveBlock1Ptr->pos.x == 3 && gSaveBlock1Ptr->pos.y == 4)
+            return TRUE;
+        if (gSaveBlock1Ptr->pos.x == 4 && gSaveBlock1Ptr->pos.y == 4)
+            return TRUE;
+        if (gSaveBlock1Ptr->pos.x == 5 && gSaveBlock1Ptr->pos.y == 4)
+            return TRUE;
+        if (gSaveBlock1Ptr->pos.x == 6 && gSaveBlock1Ptr->pos.y == 4)
+            return TRUE;
+        
+        if (gSaveBlock1Ptr->pos.x == 2 && gSaveBlock1Ptr->pos.y == 5)
+            return TRUE;
+        if (gSaveBlock1Ptr->pos.x == 3 && gSaveBlock1Ptr->pos.y == 5)
+            return TRUE;
+        if (gSaveBlock1Ptr->pos.x == 4 && gSaveBlock1Ptr->pos.y == 5)
+            return TRUE;
+        if (gSaveBlock1Ptr->pos.x == 5 && gSaveBlock1Ptr->pos.y == 5)
+            return TRUE;
+        if (gSaveBlock1Ptr->pos.x == 6 && gSaveBlock1Ptr->pos.y == 5)
+            return TRUE;
+
+        if (gSaveBlock1Ptr->pos.x == 2 && gSaveBlock1Ptr->pos.y == 6)
+            return TRUE;
+        if (gSaveBlock1Ptr->pos.x == 3 && gSaveBlock1Ptr->pos.y == 6)
+            return TRUE;
+
+        if (gSaveBlock1Ptr->pos.x == 2 && gSaveBlock1Ptr->pos.y == 7)
+            return TRUE;
+        if (gSaveBlock1Ptr->pos.x == 3 && gSaveBlock1Ptr->pos.y == 7)
+            return TRUE;
+        
+        if (gSaveBlock1Ptr->pos.x == 3 && gSaveBlock1Ptr->pos.y == 8)
             return TRUE;
     }
 

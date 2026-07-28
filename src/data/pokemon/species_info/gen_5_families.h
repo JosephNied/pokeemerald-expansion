@@ -9894,9 +9894,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 5,
         .weight = 90,
         .description = COMPOUND_STRING(
-            "It psychically squeezes the brain of\n"
-            "its foe, causing unendurable headaches.\n"
-            "Rumors of its origin are linked to a UFO\n"
+            "It will teleport me if it touches me!\n"
+            "Back home, there were rumors that this\n"
+            "Pokémon's arrival was linked to a UFO\n"
             "crash site in the desert 50 years ago."),
         .pokemonScale = 432,
         .pokemonOffset = 13,

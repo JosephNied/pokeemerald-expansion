@@ -34,66 +34,70 @@ Planet01_First_Camp_Cave_UrsalunaEncounter::
 # 32 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	msgbox Planet01_First_Camp_Cave_UrsalunaEncounter_Text_1
 # 34 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	releaseall
+	setvar VAR_0x8000, SPECIES_URSALUNA
 # 35 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	end
+	callnative RegisterSpeciesInDex
+# 36 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	releaseall
 # 37 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	end
+# 39 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 PlayerLost:
-# 38 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+# 40 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	releaseall
 	end
 
 
 Planet01_First_Camp_Cave_EventScript_Item01::
-# 43 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	lock
-# 44 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	giveitem ITEM_STAR_PIECE, 1
 # 45 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	removeobject 3
+	lock
 # 46 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	setflag FLAG_UNUSED_0x49B
+	giveitem ITEM_STAR_PIECE, 1
 # 47 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	removeobject 3
+# 48 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	setflag FLAG_UNUSED_0x49B
+# 49 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	release
 	end
 
 
 Planet01_First_Camp_Cave_EventScript_Item02::
-# 52 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	lock
-# 53 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	giveitem ITEM_STARDUST, 1
 # 54 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	removeobject 2
+	lock
 # 55 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	setflag FLAG_UNUSED_0x49C
+	giveitem ITEM_STARDUST, 1
 # 56 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	removeobject 2
+# 57 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	setflag FLAG_UNUSED_0x49C
+# 58 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	release
 	end
 
 
 Planet01_First_Camp_Cave_HintText01::
-# 61 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+# 63 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	lock
-# 62 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+# 64 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	msgbox Planet01_First_Camp_Cave_HintText01_Text_0
-# 71 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	waitmessage
-# 72 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	closemessage
 # 73 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	delay 60
-# 74 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_CONFUSED
-# 75 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	callnative DrawMugshot
-# 76 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	msgbox Planet01_First_Camp_Cave_HintText01_Text_1
-# 80 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	waitmessage
-# 81 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	callnative ClearMugshot
+# 74 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	closemessage
+# 75 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	delay 60
+# 76 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_CONFUSED
+# 77 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative DrawMugshot
+# 78 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	msgbox Planet01_First_Camp_Cave_HintText01_Text_1
 # 82 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	waitmessage
+# 83 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative ClearMugshot
+# 84 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	release
 	end
 
@@ -109,7 +113,7 @@ Planet01_First_Camp_Cave_UrsalunaEncounter_Text_1:
 	.string "cave.$"
 
 Planet01_First_Camp_Cave_HintText01_Text_0:
-# 62 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+# 64 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	.string "Engineer: We made a research base\n"
 	.string "here, but the local fauna discovered it\l"
 	.string "and got aggressive, so we better move.\p"
@@ -121,7 +125,7 @@ Planet01_First_Camp_Cave_HintText01_Text_0:
 	.string "explore those too.$"
 
 Planet01_First_Camp_Cave_HintText01_Text_1:
-# 76 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+# 78 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	.string "I was hoping to find these guys\n"
 	.string "by now. It seems like it's been a while\l"
 	.string "since they've been here. How long ago\l"

@@ -187,12 +187,16 @@ Planet01_Diancie_Cave_DiancieEncounter::
 # 120 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	giveitem ITEM_DIANCITE
 # 121 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	releaseall
+	setvar VAR_0x8000, SPECIES_DIANCIE
 # 122 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	end
+	callnative RegisterSpeciesInDex
+# 123 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	releaseall
 # 124 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	end
+# 126 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 PlayerLost_Diancie:
-# 125 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 127 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	releaseall
 	end
 

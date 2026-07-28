@@ -5,7 +5,7 @@ gText_Birch_Welcome::
 	.string "space-trucker may not seem like a\l"
 	.string "glamrous job, but it's important and\l"
 	.string "can even be fun!\p"
-	.string "You may ask, isn't lonely?\p"
+	.string "You may ask, isn't it lonely?\p"
 	.string "$"
 
 gText_Birch_Pokemon::
@@ -15,7 +15,7 @@ gText_Birch_Pokemon::
 gText_Birch_MainSpeech::
 	.string "My trusty Magnezone certainly helps me\n"
 	.string "with my job, but is also my friend, along\l"
-	.string "along with the rest of my POKéMON crew.\p"
+	.string "with the rest of my POKéMON crew.\p"
 	.string "$"
 
 gText_Birch_AndYouAre::
@@ -40,7 +40,7 @@ gText_Birch_YourePlayer::
 	.string "My ship- Something is dragging us\n"
 	.string "towards that nearby planet. What the\l"
 	.string "heck is going on?!\l"
-	.string "Guess I'm recording this later!\p"
+	.string "I'll have to record this later!\p"
 	.string "$"
 
 gText_Birch_AreYouReady::

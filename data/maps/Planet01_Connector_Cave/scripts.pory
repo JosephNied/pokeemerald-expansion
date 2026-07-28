@@ -86,6 +86,8 @@ script EventScript_GlimmoraCatch {
     removeobject(4)
 	removeobject(2)
     fadeScreen(FADE_FROM_WHITE)
+	setvar(VAR_0x8000, SPECIES_GLIMMORA)
+    callnative(RegisterSpeciesInDex)
 	msgbox("Glimmora poisoned a party member!\n"
 	"That stings!")
 	release

@@ -5030,9 +5030,9 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .weight = 57,
         .description = COMPOUND_STRING(
             "Born from the high temperatures and\n"
-            "pressures deep underground, it defends\n"
-            "itself by firing beams from the jewel part\n"
-            "of its body."),
+            "pressures deep underground. It seems\n"
+            "to like snug places; does it want me\n"
+            "to take it somewhere?"),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,

@@ -14,6 +14,8 @@ script Ditto_Cave_Bottom_DittoTrainer {
 	msgbox("It was just a ditto...")
 	closemessage
 	callnative(ClearMugshot)
+	setvar(VAR_0x8000, SPECIES_DITTO)
+    callnative(RegisterSpeciesInDex)
 	end
 }
 

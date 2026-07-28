@@ -59,76 +59,80 @@ Planet01_05_DusknoirEncounter::
 # 42 "data/maps/Planet01_05/scripts.pory"
 	msgbox Planet01_05_DusknoirEncounter_Text_1
 # 44 "data/maps/Planet01_05/scripts.pory"
-	setvar VAR_TEMP_0, 1
+	setvar VAR_0x8000, SPECIES_DUSKNOIR
 # 45 "data/maps/Planet01_05/scripts.pory"
-	releaseall
+	callnative RegisterSpeciesInDex
 # 46 "data/maps/Planet01_05/scripts.pory"
-	end
-# 48 "data/maps/Planet01_05/scripts.pory"
-PlayerLost_Dusknoir:
-# 49 "data/maps/Planet01_05/scripts.pory"
+	setvar VAR_TEMP_0, 1
+# 47 "data/maps/Planet01_05/scripts.pory"
 	releaseall
-# 50 "data/maps/Planet01_05/scripts.pory"
+# 48 "data/maps/Planet01_05/scripts.pory"
 	end
+# 50 "data/maps/Planet01_05/scripts.pory"
+PlayerLost_Dusknoir:
+# 51 "data/maps/Planet01_05/scripts.pory"
+	releaseall
 # 52 "data/maps/Planet01_05/scripts.pory"
+	end
+# 54 "data/maps/Planet01_05/scripts.pory"
 DusknoirTrigger_End:
 	end
 
 
-# 56 "data/maps/Planet01_05/scripts.pory"
-Movement_DusknoirAppears:
-# 57 "data/maps/Planet01_05/scripts.pory"
-	face_up
 # 58 "data/maps/Planet01_05/scripts.pory"
-	set_visible
+Movement_DusknoirAppears:
 # 59 "data/maps/Planet01_05/scripts.pory"
-	delay_4
+	face_up
 # 60 "data/maps/Planet01_05/scripts.pory"
-	set_invisible
+	set_visible
 # 61 "data/maps/Planet01_05/scripts.pory"
 	delay_4
 # 62 "data/maps/Planet01_05/scripts.pory"
-	set_visible
+	set_invisible
 # 63 "data/maps/Planet01_05/scripts.pory"
 	delay_4
 # 64 "data/maps/Planet01_05/scripts.pory"
-	set_invisible
+	set_visible
 # 65 "data/maps/Planet01_05/scripts.pory"
 	delay_4
 # 66 "data/maps/Planet01_05/scripts.pory"
-	set_visible
-# 67 "data/maps/Planet01_05/scripts.pory"
-	delay_8
-# 68 "data/maps/Planet01_05/scripts.pory"
 	set_invisible
+# 67 "data/maps/Planet01_05/scripts.pory"
+	delay_4
+# 68 "data/maps/Planet01_05/scripts.pory"
+	set_visible
 # 69 "data/maps/Planet01_05/scripts.pory"
 	delay_8
 # 70 "data/maps/Planet01_05/scripts.pory"
-	set_visible
+	set_invisible
 # 71 "data/maps/Planet01_05/scripts.pory"
 	delay_8
 # 72 "data/maps/Planet01_05/scripts.pory"
-	set_invisible
+	set_visible
 # 73 "data/maps/Planet01_05/scripts.pory"
 	delay_8
 # 74 "data/maps/Planet01_05/scripts.pory"
-	set_visible
-# 75 "data/maps/Planet01_05/scripts.pory"
-	delay_16
-# 76 "data/maps/Planet01_05/scripts.pory"
 	set_invisible
+# 75 "data/maps/Planet01_05/scripts.pory"
+	delay_8
+# 76 "data/maps/Planet01_05/scripts.pory"
+	set_visible
 # 77 "data/maps/Planet01_05/scripts.pory"
 	delay_16
 # 78 "data/maps/Planet01_05/scripts.pory"
+	set_invisible
+# 79 "data/maps/Planet01_05/scripts.pory"
+	delay_16
+# 80 "data/maps/Planet01_05/scripts.pory"
 	set_visible
 	step_end
 
 Planet01_05_HintText01::
-# 82 "data/maps/Planet01_05/scripts.pory"
+# 84 "data/maps/Planet01_05/scripts.pory"
 	lock
-# 83 "data/maps/Planet01_05/scripts.pory"
+# 85 "data/maps/Planet01_05/scripts.pory"
 	msgbox Planet01_05_HintText01_Text_0
-# 92 "data/maps/Planet01_05/scripts.pory"
+# 94 "data/maps/Planet01_05/scripts.pory"
 	release
 	end
 
@@ -144,7 +148,7 @@ Planet01_05_DusknoirEncounter_Text_1:
 	.string "shadows.$"
 
 Planet01_05_HintText01_Text_0:
-# 83 "data/maps/Planet01_05/scripts.pory"
+# 85 "data/maps/Planet01_05/scripts.pory"
 	.string "Scientist: The trees here are giving off\n"
 	.string "a mysterious glow... The mists here\l"
 	.string "remind me of the anomalous cave we\l"

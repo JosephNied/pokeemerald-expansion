@@ -26,29 +26,33 @@ Ditto_Cave_Bottom_DittoTrainer::
 	closemessage
 # 16 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	callnative ClearMugshot
+# 17 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	setvar VAR_0x8000, SPECIES_DITTO
+# 18 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	callnative RegisterSpeciesInDex
 	end
 
 
 Ditto_Cave_Bottom_EventScript_Item01::
-# 29 "data/maps/Ditto_Cave_Bottom/scripts.pory"
-	lock
-# 30 "data/maps/Ditto_Cave_Bottom/scripts.pory"
-	giveitem ITEM_SUN_STONE, 1
 # 31 "data/maps/Ditto_Cave_Bottom/scripts.pory"
-	removeobject 2
+	lock
 # 32 "data/maps/Ditto_Cave_Bottom/scripts.pory"
-	setflag FLAG_TEMP_1
+	giveitem ITEM_SUN_STONE, 1
 # 33 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	removeobject 2
+# 34 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	setflag FLAG_TEMP_1
+# 35 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	release
 	end
 
 
 Ditto_Cave_Bottom_HintText01::
-# 38 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 40 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	lock
-# 39 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 41 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	msgbox Ditto_Cave_Bottom_HintText01_Text_0
-# 44 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 46 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	release
 	end
 
@@ -58,7 +62,7 @@ Ditto_Cave_Bottom_DittoTrainer_Text_0:
 	.string "It was just a ditto...$"
 
 Ditto_Cave_Bottom_HintText01_Text_0:
-# 39 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 41 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	.string "Biologist: We discovered a strange\n"
 	.string "kind of life down here, with the ditto.\l"
 	.string "It has a strange power to it. We need to\l"
@@ -66,9 +70,9 @@ Ditto_Cave_Bottom_HintText01_Text_0:
 	.string "and study it, immediately.$"
 
 Ditto_Cave_Bottom_Ditto_Intro::
-# 20 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 22 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	.string "!!!$"
 
 Ditto_Cave_Bottom_Ditto_Outro::
-# 24 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 26 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	.string "Ditto!$"
