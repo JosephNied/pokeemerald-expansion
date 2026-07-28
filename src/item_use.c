@@ -84,6 +84,9 @@ static void CB2_OpenPokeblockFromBag(void);
 static void ItemUseOnFieldCB_Honey(u8 taskId);
 static bool32 IsValidLocationForVsSeeker(void);
 
+extern const u8 EventScript_MapsItem[];
+static void ItemUseOnFieldCB_MapsItem(u8 taskId);
+
 static const u8 sText_CantDismountBike[] = _("You can't dismount your BIKE here.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_ItemFinderNearby[] = _("Huh?\nThe ITEMFINDER's responding!\pThere's an item buried around here!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_ItemFinderOnTop[] = _("Oh!\nThe ITEMFINDER's shaking wildly!{PAUSE_UNTIL_PRESS}");
@@ -1687,6 +1690,19 @@ void ItemUseOutOfBattle_TownMap(u8 taskId)
     {
         gTasks[taskId].func = ItemUseOnFieldCB_TownMap;
     }
+}
+
+void ItemUseOutOfBattle_MapsItem(u8 taskId)
+{
+    sItemUseOnFieldCB = ItemUseOnFieldCB_MapsItem;
+    SetUpItemUseOnFieldCallback(taskId);
+}
+
+static void ItemUseOnFieldCB_MapsItem(u8 taskId)
+{
+    ScriptContext_SetupScript(EventScript_MapsItem);
+    LockPlayerFieldControls();
+    DestroyTask(taskId);
 }
 
 #undef tUsingRegisteredKeyItem

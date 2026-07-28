@@ -19,5 +19,9 @@
 #define METER_O2_4 14
 #define METER_O2_5 15
 #define METER_O2_6 16
+#define MUGSHOT_MAP_01 16
+#define MUGSHOT_MAP_02 17
+#define MUGSHOT_MAP_03 18
+#define MUGSHOT_MAP_04 19
 
 #endif

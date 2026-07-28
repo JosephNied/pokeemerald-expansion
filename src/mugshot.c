@@ -71,6 +71,12 @@ static const u16 sMugshotPal_JIRACHI_OK[] = INCBIN_U16("graphics/mugshots/Jirach
 static const u32 sMugshotImg_JIRACHI_HAPPY[] = INCBIN_U32("graphics/mugshots/Jirachi_happy.4bpp.lz");
 static const u16 sMugshotPal_JIRACHI_HAPPY[] = INCBIN_U16("graphics/mugshots/Jirachi_happy.gbapal");
 
+static const u32 sMugshotImg_MAP_01[] = INCBIN_U32("graphics/mugshots/map01.4bpp.lz");
+static const u32 sMugshotImg_MAP_02[] = INCBIN_U32("graphics/mugshots/map02.4bpp.lz");
+static const u32 sMugshotImg_MAP_03[] = INCBIN_U32("graphics/mugshots/map03.4bpp.lz");
+static const u32 sMugshotImg_MAP_04[] = INCBIN_U32("graphics/mugshots/map04.4bpp.lz");
+static const u16 sMugshotPal_MAPS[] = INCBIN_U16("graphics/mugshots/maps.gbapal");
+
 static const u32 sMeterImg_METER_O2_1[] = INCBIN_U32("graphics/mugshots/O2_1.4bpp.lz");
 static const u32 sMeterImg_METER_O2_2[] = INCBIN_U32("graphics/mugshots/O2_2.4bpp.lz");
 static const u32 sMeterImg_METER_O2_3[] = INCBIN_U32("graphics/mugshots/O2_3.4bpp.lz");
@@ -92,6 +98,12 @@ static const struct Mugshot sMugshots[] = {
     [MUGSHOT_JIRACHI_WORRIED] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_JIRACHI_WORRIED, .palette = sMugshotPal_JIRACHI_WORRIED},
     [MUGSHOT_JIRACHI_OK] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_JIRACHI_OK, .palette = sMugshotPal_JIRACHI_OK},
     [MUGSHOT_JIRACHI_HAPPY] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_JIRACHI_HAPPY, .palette = sMugshotPal_JIRACHI_HAPPY},
+
+    [MUGSHOT_MAP_01] = {.x = 9, .y = 2, .width = 96, .height = 96, .image = sMugshotImg_MAP_01, .palette = sMugshotPal_MAPS},
+    [MUGSHOT_MAP_02] = {.x = 9, .y = 2, .width = 96, .height = 96, .image = sMugshotImg_MAP_02, .palette = sMugshotPal_MAPS},
+    [MUGSHOT_MAP_03] = {.x = 9, .y = 2, .width = 96, .height = 96, .image = sMugshotImg_MAP_03, .palette = sMugshotPal_MAPS},
+    [MUGSHOT_MAP_04] = {.x = 9, .y = 2, .width = 96, .height = 96, .image = sMugshotImg_MAP_04, .palette = sMugshotPal_MAPS},
+
 };
 
 static const struct Meter sMeters[] = {

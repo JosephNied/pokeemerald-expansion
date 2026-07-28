@@ -158,6 +158,7 @@ static const u8 sTeraShardDesc[]      = _("These shards may\n"
 static const u8 sGenericMulchDesc[]   = _("A fertilizer that\n"
                                           "is unsuitable for\n"
                                           "local soil.");
+void ItemUseOutOfBattle_MapsItem(u8 taskId);
 
 const struct ItemInfo gItemsInfo[] =
 {
@@ -14048,16 +14049,17 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_WAILMER_PAIL] =
     {
-        .name = ITEM_NAME("Wailmer Pail"),
+        .name = ITEM_NAME("Map Sheets"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A tool used for\n"
-            "watering Berries\n"
-            "and plants."),
+            "Crudely scribbled\n"
+            "maps of the planet\n"
+            "surface."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
-        .fieldUseFunc = ItemUseOutOfBattle_WailmerPail,
+        //.fieldUseFunc = ItemUseOutOfBattle_WailmerPail,
+        .fieldUseFunc = ItemUseOutOfBattle_MapsItem,
         .iconPic = gItemIcon_WailmerPail,
         .iconPalette = gItemIconPalette_WailmerPail,
     },

@@ -101,6 +101,7 @@ script Spaceship_Dev_EventScript_BallItem01 {
     giveitem(ITEM_DEVON_PARTS)
     giveitem(ITEM_ESCAPE_ROPE)
     //giveitem(ITEM_DOWSING_MACHINE)
+    giveitem(ITEM_WAILMER_PAIL)
     setflag(FLAG_UNUSED_0x027)
     clearflag(FLAG_SYS_BRAILLE_DIG)
     setflag(FLAG_UNUSED_0x045)
@@ -477,5 +478,45 @@ script IsPlayerReadyToGo {
         callnative(ClearMugshot)
         releaseall
     }
+    end
+}
+
+script EventScript_MapsItem {
+    lock
+
+    setvar(VAR_0x8000, MUGSHOT_MAP_01)
+    callnative(DrawMugshot)
+    msgbox("Map for the Twilight Plateau.\pView the next map?", MSGBOX_YESNO)
+    callnative(ClearMugshot)
+    if (var(VAR_RESULT) == NO) {
+        release
+        end
+    }
+
+    setvar(VAR_0x8000, MUGSHOT_MAP_02)
+    callnative(DrawMugshot)
+    msgbox("Map for the Forest.\pView the next map?", MSGBOX_YESNO)
+    callnative(ClearMugshot)
+    if (var(VAR_RESULT) == NO) {
+        release
+        end
+    }
+
+    setvar(VAR_0x8000, MUGSHOT_MAP_03)
+    callnative(DrawMugshot)
+    msgbox("Map for the Shoreline.\pView the next map?", MSGBOX_YESNO)
+    callnative(ClearMugshot)
+    if (var(VAR_RESULT) == NO) {
+        release
+        end
+    }
+
+    setvar(VAR_0x8000, MUGSHOT_MAP_04)
+    callnative(DrawMugshot)
+    msgbox("Map for the Misty Mountains.")
+    callnative(ClearMugshot)
+    closemessage
+
+    release
     end
 }
