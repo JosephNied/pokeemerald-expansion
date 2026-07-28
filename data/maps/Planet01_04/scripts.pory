@@ -58,10 +58,11 @@ script Planet01_04_HintText01 {
 
 script Planet01_04_HintText02 {
     lock
-    msgbox("Scientist: My instruments are going\n"
-    "crazy whenever I start heading up this\l"
-    "way. There is clearly something worth\l"
-    "studying up here.")
+    msgbox("Scientist: The watery path ahead\n"
+    "will reveal an incredible view of the\l"
+    "planet's celestial bodies. There's\l"
+    "something important going on up there,\l"
+    "I can feel it!")
     release
     end
 }

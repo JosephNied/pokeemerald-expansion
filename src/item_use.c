@@ -1036,7 +1036,7 @@ static void Task_StartUseRepel(u8 taskId)
 
 static void Task_UseRepel(u8 taskId)
 {
-    AddAirTimer(150),
+    AddAirTimer(250),
     AddBagItem(ITEM_SUPER_REPEL, 1);
     /*if (!IsSEPlaying())
     {

@@ -82,16 +82,18 @@ Planet01_First_Camp_Cave_HintText01::
 # 72 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	closemessage
 # 73 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_CONFUSED
+	delay 60
 # 74 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	callnative DrawMugshot
+	setvar VAR_0x8000, MUGSHOT_PLAYER_CONFUSED
 # 75 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative DrawMugshot
+# 76 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	msgbox Planet01_First_Camp_Cave_HintText01_Text_1
-# 79 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	waitmessage
 # 80 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	callnative ClearMugshot
+	waitmessage
 # 81 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative ClearMugshot
+# 82 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	release
 	end
 
@@ -108,9 +110,9 @@ Planet01_First_Camp_Cave_UrsalunaEncounter_Text_1:
 
 Planet01_First_Camp_Cave_HintText01_Text_0:
 # 62 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	.string "Engineer: We made a base for research\n"
-	.string "here, but the local fauna has been getting\l"
-	.string "aggressive, so we better move.\p"
+	.string "Engineer: We made a research base\n"
+	.string "here, but the local fauna discovered it\l"
+	.string "and got aggressive, so we better move.\p"
 	.string "There's another cave across the shore,\n"
 	.string "maybe we can check it out?\p"
 	.string "We might need to use our pokemon to dig\n"
@@ -119,7 +121,7 @@ Planet01_First_Camp_Cave_HintText01_Text_0:
 	.string "explore those too.$"
 
 Planet01_First_Camp_Cave_HintText01_Text_1:
-# 75 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+# 76 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	.string "I was hoping to find these guys\n"
 	.string "by now. It seems like it's been a while\l"
 	.string "since they've been here. How long ago\l"

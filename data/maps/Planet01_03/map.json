@@ -128,8 +128,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SABLEYE)",
-      "x": 35,
-      "y": 10,
+      "x": 40,
+      "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WATCH_PLAYER_OWE",
       "movement_range_x": 0,
@@ -140,8 +140,8 @@
       "flag": "FLAG_UNUSED_0x02F"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SABLEYE)",
-      "x": 42,
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DULROC)",
+      "x": 45,
       "y": 14,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
@@ -180,7 +180,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SABLEYE)",
-      "x": 49,
+      "x": 35,
       "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
@@ -466,8 +466,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(CARBINK)",
-      "x": 20,
-      "y": 8,
+      "x": 18,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 0,
@@ -479,8 +479,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(DULROC)",
-      "x": 32,
-      "y": 5,
+      "x": 33,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 0,
@@ -524,8 +524,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 18,
-      "y": 1,
+      "x": 21,
+      "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Planet01_03_HintText01"
@@ -569,6 +569,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Planet01_03_HintText05"
+    },
+    {
+      "type": "sign",
+      "x": 66,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Planet01_03_HintText07"
     }
   ]
 }

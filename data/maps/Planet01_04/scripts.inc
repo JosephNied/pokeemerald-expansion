@@ -91,17 +91,17 @@ Planet01_04_HintText02::
 	lock
 # 61 "data/maps/Planet01_04/scripts.pory"
 	msgbox Planet01_04_HintText02_Text_0
-# 65 "data/maps/Planet01_04/scripts.pory"
+# 66 "data/maps/Planet01_04/scripts.pory"
 	release
 	end
 
 
 Planet01_04_HintText03::
-# 70 "data/maps/Planet01_04/scripts.pory"
-	lock
 # 71 "data/maps/Planet01_04/scripts.pory"
+	lock
+# 72 "data/maps/Planet01_04/scripts.pory"
 	msgbox Planet01_04_HintText03_Text_0
-# 75 "data/maps/Planet01_04/scripts.pory"
+# 76 "data/maps/Planet01_04/scripts.pory"
 	release
 	end
 
@@ -123,13 +123,14 @@ Planet01_04_HintText01_Text_0:
 
 Planet01_04_HintText02_Text_0:
 # 61 "data/maps/Planet01_04/scripts.pory"
-	.string "Scientist: My instruments are going\n"
-	.string "crazy whenever I start heading up this\l"
-	.string "way. There is clearly something worth\l"
-	.string "studying up here.$"
+	.string "Scientist: The watery path ahead\n"
+	.string "will reveal an incredible view of the\l"
+	.string "planet's celestial bodies. There's\l"
+	.string "something important going on up there,\l"
+	.string "I can feel it!$"
 
 Planet01_04_HintText03_Text_0:
-# 71 "data/maps/Planet01_04/scripts.pory"
+# 72 "data/maps/Planet01_04/scripts.pory"
 	.string "Captain: Looks like this planet isn't\n"
 	.string "very large. It actually loops around\l"
 	.string "here. We'll have mapped it all out in\l"

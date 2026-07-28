@@ -300,3 +300,13 @@ script Planet01_03_HintText06 {
     release
     end
 }
+
+script Planet01_03_HintText07 {
+    lock
+    msgbox("Biologist: We saw a lot of smashed rocks\n"
+    "around the mountain covered in blue\l"
+    "plants; I would bet that a Pokémon with\l"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Rock Smash{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} is likely up there, hiding.")
+    release
+    end
+}

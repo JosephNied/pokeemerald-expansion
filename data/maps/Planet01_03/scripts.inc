@@ -432,6 +432,16 @@ Planet01_03_HintText06::
 	end
 
 
+Planet01_03_HintText07::
+# 305 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 306 "data/maps/Planet01_03/scripts.pory"
+	msgbox Planet01_03_HintText07_Text_0
+# 310 "data/maps/Planet01_03/scripts.pory"
+	release
+	end
+
+
 Planet01_03_Carbink_Text_0:
 # 208 "data/maps/Planet01_03/scripts.pory"
 	.string "The Carbink really seems to like you!$"
@@ -498,3 +508,10 @@ Planet01_03_HintText06_Text_0:
 	.string "Fortunately, we brought our own\n"
 	.string "Surfing Pokémon, so we were able to\l"
 	.string "setup camps across the water.$"
+
+Planet01_03_HintText07_Text_0:
+# 306 "data/maps/Planet01_03/scripts.pory"
+	.string "Biologist: We saw a lot of smashed rocks\n"
+	.string "around the mountain covered in blue\l"
+	.string "plants; I would bet that a Pokémon with\l"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Rock Smash{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} is likely up there, hiding.$"

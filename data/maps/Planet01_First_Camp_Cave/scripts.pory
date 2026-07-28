@@ -59,9 +59,9 @@ script Planet01_First_Camp_Cave_EventScript_Item02 {
 
 script Planet01_First_Camp_Cave_HintText01 {
     lock
-    msgbox("Engineer: We made a base for research\n"
-    "here, but the local fauna has been getting\l"
-    "aggressive, so we better move.\p"
+    msgbox("Engineer: We made a research base\n"
+    "here, but the local fauna discovered it\l"
+    "and got aggressive, so we better move.\p"
     "There's another cave across the shore,\n"
     "maybe we can check it out?\p"
     "We might need to use our pokemon to dig\n"
@@ -70,6 +70,7 @@ script Planet01_First_Camp_Cave_HintText01 {
     "explore those too.")
     waitmessage
     closemessage
+    delay(60)
     setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
     callnative(DrawMugshot)
     msgbox("I was hoping to find these guys\n"
