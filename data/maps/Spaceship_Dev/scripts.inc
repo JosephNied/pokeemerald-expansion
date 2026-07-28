@@ -172,8 +172,6 @@ Spaceship_Dev_EventScript_BallItem01::
 	giveitem ITEM_DEVON_PARTS
 # 102 "data/maps/Spaceship_Dev/scripts.pory"
 	giveitem ITEM_ESCAPE_ROPE
-# 104 "data/maps/Spaceship_Dev/scripts.pory"
-	giveitem ITEM_WAILMER_PAIL
 # 105 "data/maps/Spaceship_Dev/scripts.pory"
 	setflag FLAG_UNUSED_0x027
 # 106 "data/maps/Spaceship_Dev/scripts.pory"
