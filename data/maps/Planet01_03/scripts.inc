@@ -427,7 +427,7 @@ Planet01_03_HintText06::
 	lock
 # 294 "data/maps/Planet01_03/scripts.pory"
 	msgbox Planet01_03_HintText06_Text_0
-# 297 "data/maps/Planet01_03/scripts.pory"
+# 300 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
@@ -448,7 +448,7 @@ Planet01_03_Elgyem_Text_0:
 Planet01_03_HintText01_Text_0:
 # 234 "data/maps/Planet01_03/scripts.pory"
 	.string "Biologist: There's a small, dark rock-like\n"
-	.string "Pokemon lurking around this canyon; one\l"
+	.string "Pokémon lurking around this canyon; one\l"
 	.string "that I've never seen before.\p"
 	.string "I don't think it exists back home. Surely\n"
 	.string "it'd be well-worth studying; perhaps it\l"
@@ -479,11 +479,11 @@ Planet01_03_HintText04_Text_0:
 	.string "through the misty cave?\p"
 	.string "Or could it be that something was trying\n"
 	.string "to communicate with us? You can never\l"
-	.string "tell with ghost-type Pokemon...$"
+	.string "tell with ghost-type Pokémon...$"
 
 Planet01_03_HintText05_Text_0:
 # 282 "data/maps/Planet01_03/scripts.pory"
-	.string "Biologist: The pokemon on this planet\n"
+	.string "Biologist: The Pokémon on this planet\n"
 	.string "have achieved perfect mutualism, and\l"
 	.string "thus have no need to level up.\p"
 	.string "But I can't help but wonder whether it's\n"
@@ -494,4 +494,7 @@ Planet01_03_HintText06_Text_0:
 # 294 "data/maps/Planet01_03/scripts.pory"
 	.string "Biologist: The Staryu love to skip across\n"
 	.string "the water; though, they aren't large\l"
-	.string "enough for us to {COLOR BLUE}{SHADOW LIGHT_BLUE}Surf{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} on them.$"
+	.string "enough for us to {COLOR BLUE}{SHADOW LIGHT_BLUE}Surf{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} on them.\p"
+	.string "Fortunately, we brought our own\n"
+	.string "Surfing Pokémon, so we were able to\l"
+	.string "setup camps across the water.$"

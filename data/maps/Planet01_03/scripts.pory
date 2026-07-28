@@ -232,7 +232,7 @@ script Planet01_03_Elgyem {
 script Planet01_03_HintText01 {
     lock
     msgbox("Biologist: There's a small, dark rock-like\n"
-    "Pokemon lurking around this canyon; one\l"
+    "Pokémon lurking around this canyon; one\l"
     "that I've never seen before.\p"
     "I don't think it exists back home. Surely\n"
     "it'd be well-worth studying; perhaps it\l"
@@ -272,14 +272,14 @@ script Planet01_03_HintText04 {
     "through the misty cave?\p"
     "Or could it be that something was trying\n"
     "to communicate with us? You can never\l"
-    "tell with ghost-type Pokemon...")
+    "tell with ghost-type Pokémon...")
     release
     end
 }
 
 script Planet01_03_HintText05 {
     lock
-    msgbox("Biologist: The pokemon on this planet\n"
+    msgbox("Biologist: The Pokémon on this planet\n"
     "have achieved perfect mutualism, and\l"
     "thus have no need to level up.\p"
     "But I can't help but wonder whether it's\n"
@@ -293,7 +293,10 @@ script Planet01_03_HintText06 {
     lock
     msgbox("Biologist: The Staryu love to skip across\n"
     "the water; though, they aren't large\l"
-    "enough for us to {COLOR BLUE}{SHADOW LIGHT_BLUE}Surf{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} on them.")
+    "enough for us to {COLOR BLUE}{SHADOW LIGHT_BLUE}Surf{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} on them.\p"
+    "Fortunately, we brought our own\n"
+    "Surfing Pokémon, so we were able to\l"
+    "setup camps across the water.")
     release
     end
 }

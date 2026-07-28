@@ -4,9 +4,11 @@ mapscripts Spaceship_Dev_MapScripts {
 }
 
 script Spaceship_Dev_Enter {
-    setvar(VAR_AIR_TIMER_STEPS, 200)
+    //setvar(VAR_AIR_TIMER_STEPS, 200)
     setvar(VAR_AIR_TIMER_TRIGGERED, 1)
-    clearflag(FLAG_RECEIVED_BELDUM)
+    if (flag(FLAG_UNUSED_0x03C) == FALSE) {
+        clearflag(FLAG_RECEIVED_BELDUM)
+    }
     if (var(VAR_PLAYER_READY) == 0) {
         setvar(VAR_TEMP_0, 0)
         setvar(VAR_TEMP_1, 1)

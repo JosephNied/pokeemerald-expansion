@@ -9881,36 +9881,26 @@ Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MITCHELL ===
-Name: ???
-Class: Cooltrainer
-Pic: Cooltrainer M
+Name: Me?
+Class: Rival
+Pic: Brendan
 Gender: Male
 Music: Cool
 Double Battle: Yes
 AI: Basic Trainer
 
 Ditto
-Level: 51
+Level: 50
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Transform
 
 Ditto
-Level: 52
+Level: 50
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Transform
 
 Ditto
-Level: 53
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Transform
-
-Ditto
-Level: 54
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Transform
-
-Ditto
-Level: 55
+Level: 50
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Transform
 

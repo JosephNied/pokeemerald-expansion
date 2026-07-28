@@ -43,7 +43,7 @@ script Planet01_02_EventScript_Item03 {
 
 script Planet01_02_AddAir_Minior01 {
     lockall
-    setvar(VAR_AIR_TIMER_STEPS, 150)
+    setvar(VAR_AIR_TIMER_STEPS, 250)
     special(AddAirTimerMap)
     playmoncry(SPECIES_MINIOR, CRY_MODE_ENCOUNTER)
     msgbox("Minior is floating in a pocket of air!\n"

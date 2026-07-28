@@ -8,7 +8,8 @@ Ditto_Cave_Enter::
 # 6 "data/maps/Ditto_Cave/scripts.pory"
 	setflashlevel 4
 # 7 "data/maps/Ditto_Cave/scripts.pory"
-	goto_if_unset FLAG_RECEIVED_BELDUM, Ditto_Cave_Enter_2
+	goto_if_unset FLAG_RECEIVED_BELDUM, Ditto_Cave_Enter_4
+Ditto_Cave_Enter_3:
 # 10 "data/maps/Ditto_Cave/scripts.pory"
 	setvar VAR_TEMP_0, 1
 Ditto_Cave_Enter_1:
@@ -20,6 +21,11 @@ Ditto_Cave_Enter_2:
 # 8 "data/maps/Ditto_Cave/scripts.pory"
 	setvar VAR_TEMP_0, 0
 	goto Ditto_Cave_Enter_1
+
+Ditto_Cave_Enter_4:
+# 7 "data/maps/Ditto_Cave/scripts.pory"
+	goto_if_unset FLAG_UNUSED_0x03C, Ditto_Cave_Enter_2
+	goto Ditto_Cave_Enter_3
 
 
 # 15 "data/maps/Ditto_Cave/scripts.pory"
@@ -61,11 +67,11 @@ Ditto_Test::
 	callnative DrawMugshot
 # 35 "data/maps/Ditto_Cave/scripts.pory"
 	msgbox Ditto_Test_Text_0
-# 37 "data/maps/Ditto_Cave/scripts.pory"
-	callnative ClearMugshot
 # 38 "data/maps/Ditto_Cave/scripts.pory"
-	setflag FLAG_RECEIVED_BELDUM
+	callnative ClearMugshot
 # 39 "data/maps/Ditto_Cave/scripts.pory"
+	setflag FLAG_RECEIVED_BELDUM
+# 40 "data/maps/Ditto_Cave/scripts.pory"
 	releaseall
 	return
 
@@ -73,4 +79,5 @@ Ditto_Test::
 Ditto_Test_Text_0:
 # 35 "data/maps/Ditto_Cave/scripts.pory"
 	.string "!!!\l"
-	.string "Who was that?!$"
+	.string "Who was that?!\p"
+	.string "And why did they look like me?!$"

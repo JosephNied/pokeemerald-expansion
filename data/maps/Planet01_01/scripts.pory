@@ -17,7 +17,7 @@ script Planet01_01_Enter {
     compare (VAR_0x8005, 10)
     goto_if_ne(End, 0)
 
-    setvar(VAR_AIR_TIMER_STEPS, 150)
+    setvar(VAR_AIR_TIMER_STEPS, 250)
     setvar(VAR_AIR_TIMER_TRIGGERED, 1)
 
 End:
@@ -77,7 +77,7 @@ script Planet01_01_AirExpired {
 
 script Planet01_01_AddAir_Minior01 {
     lockall
-    setvar(VAR_AIR_TIMER_STEPS, 150)
+    setvar(VAR_AIR_TIMER_STEPS, 250)
     special(AddAirTimerMap)
     playmoncry(SPECIES_MINIOR, CRY_MODE_ENCOUNTER)
     msgbox("Minior is floating in a pocket of air!\n"
@@ -93,7 +93,7 @@ script Planet01_01_AddAir_Minior01 {
 
 script Planet01_01_AddAir_Minior02 {
     lockall
-    setvar(VAR_AIR_TIMER_STEPS, 150)
+    setvar(VAR_AIR_TIMER_STEPS, 250)
     special(AddAirTimerMap)
     playmoncry(SPECIES_MINIOR, CRY_MODE_ENCOUNTER)
     msgbox("Minior is floating in a pocket of air!\n"
@@ -110,11 +110,11 @@ script Planet01_01_AddAir_Minior02 {
 script Planet01_01_HintText01 {
     lock
     msgbox("Captain: This is the captain of\n" 
-    "expedition XXX. \p"
+    "expedition 001. \p"
     "Our team has placed notes for future \n"
     "explorers in hopefully convenient \l"
     "places. Our objective is to create\l"
-    "a base here for research.\p"
+    "a lab here for biological research.\p"
     "Note: The gravity is low here. Tall \n"
     "ledges can be scaled easily!")
     release
@@ -208,7 +208,10 @@ script Planet01_01_JirachiAppears {
     waitmoncry()
     setvar(VAR_0x8000, MUGSHOT_JIRACHI_WORRIED)
     callnative(DrawMugshot)
-    msgbox("...")
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}...\p"
+    "<More humans? Again, to cause more\n"
+    "trouble?>\p"
+    "...")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -221,9 +224,21 @@ script Planet01_01_JirachiAppears {
     removeobject(14)
     setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
-    msgbox("...Was that a Jirachi?!\n"
-    "That's good luck- I mean, I think it's\l"
-    "good luck! Probably.")
+    msgbox("{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}...Was that a Jirachi?!\n"
+    "I think I could hear its thoughts... Are\l"
+    "there other humans here somewhere?!\l"
+    "I bet they would know why my ship was\l"
+    "dragged here. I need to look for them!")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+    delay(60)
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+    callnative(DrawMugshot)
+    msgbox("...Seeing a Jirachi is supposed\n"
+    "to be good luck. It didn't seem too\l"
+    "happy with me being here, though...\p"
+    "I don't have a good feeling about this.")
     waitmessage
     callnative(ClearMugshot)
     special(Overworld_PlaySpecialMapMusic)

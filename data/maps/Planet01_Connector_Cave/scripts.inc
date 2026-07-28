@@ -107,71 +107,79 @@ ConnectorCave_Cold_Warning::
 # 56 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	lock
 # 57 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	msgbox ConnectorCave_Cold_Warning_Text_0
+	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
+# 58 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	callnative DrawMugshot
 # 59 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	msgbox ConnectorCave_Cold_Warning_Text_0
+# 61 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	waitmessage
+# 62 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	callnative ClearMugshot
+# 63 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	setvar VAR_TEMP_0, 1
-# 60 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 64 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	release
 	end
 
 
 ConnectorCave_Cold_Wall::
-# 65 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 69 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	lock
-# 66 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	goto_if_unset FLAG_SYS_BRAILLE_DIG, ConnectorCave_Cold_Wall_2
 # 70 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	goto_if_unset FLAG_SYS_BRAILLE_DIG, ConnectorCave_Cold_Wall_2
+# 74 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	msgbox ConnectorCave_Cold_Wall_Text_1
 ConnectorCave_Cold_Wall_1:
-# 72 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 76 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	release
 	end
 
 ConnectorCave_Cold_Wall_2:
-# 67 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 71 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	msgbox ConnectorCave_Cold_Wall_Text_0
 	goto ConnectorCave_Cold_Wall_1
 
 
 EventScript_GlimmoraCatch::
-# 77 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	lockall
-# 78 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	fadeScreen FADE_TO_WHITE
-# 79 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	special GlimmoraCatch
-# 80 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	setflag FLAG_UNUSED_0x02C
 # 81 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	setflag FLAG_UNUSED_0x030
+	lockall
 # 82 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	removeobject 4
+	fadeScreen FADE_TO_WHITE
 # 83 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	removeobject 2
+	special GlimmoraCatch
 # 84 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	fadeScreen FADE_FROM_WHITE
+	setflag FLAG_UNUSED_0x02C
 # 85 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	msgbox EventScript_GlimmoraCatch_Text_0
+	setflag FLAG_UNUSED_0x030
+# 86 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	removeobject 4
 # 87 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	removeobject 2
+# 88 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	fadeScreen FADE_FROM_WHITE
+# 89 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	msgbox EventScript_GlimmoraCatch_Text_0
+# 91 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	release
 	end
 
 
 ConnectorCave_Cold_Warning_Text_0:
-# 57 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 59 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "Woah! ...It suddenly got way colder in\n"
 	.string "here.$"
 
 ConnectorCave_Cold_Wall_Text_0:
-# 67 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 71 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "This wall is colder than the others...\n"
 	.string "Is there something behind it?$"
 
 ConnectorCave_Cold_Wall_Text_1:
-# 70 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 74 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "There's a frozen cavern back there!$"
 
 EventScript_GlimmoraCatch_Text_0:
-# 85 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 89 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "Glimmora poisoned a party member!\n"
 	.string "That stings!$"

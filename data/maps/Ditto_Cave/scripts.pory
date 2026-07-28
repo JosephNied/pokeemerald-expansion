@@ -4,7 +4,7 @@ mapscripts Ditto_Cave_MapScripts {
 
 script Ditto_Cave_Enter {
     setflashlevel(4)
-    if(flag(FLAG_RECEIVED_BELDUM) == FALSE) {
+    if(flag(FLAG_RECEIVED_BELDUM) == FALSE && flag(FLAG_UNUSED_0x03C) == FALSE) {
         setvar(VAR_TEMP_0, 0)
     } else {
         setvar(VAR_TEMP_0, 1)
@@ -33,7 +33,8 @@ script Ditto_Test {
     setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
     msgbox("!!!\l"
-    "Who was that?!")
+    "Who was that?!\p"
+    "And why did they look like me?!")
     callnative(ClearMugshot)
     setflag(FLAG_RECEIVED_BELDUM)
     releaseall

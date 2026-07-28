@@ -5,8 +5,15 @@ Ditto_Cave_Bottom_MapScripts::
 
 script Ditto_Cave_Bottom_DittoTrainer {
 	trainerbattle_single(TRAINER_MITCHELL, Ditto_Cave_Bottom_Ditto_Intro, Ditto_Cave_Bottom_Ditto_Outro)
-	msgbox(Ditto_Cave_Bottom_PostBattle_Ditto, MSGBOX_AUTOCLOSE)
-	waitmessage
+	fadeScreen(FADE_TO_BLACK)
+	setflag(FLAG_UNUSED_0x03C)
+	removeobject(1)
+	fadeScreen(FADE_FROM_BLACK)
+	setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+    callnative(DrawMugshot)
+	msgbox("It was just a ditto...")
+	closemessage
+	callnative(ClearMugshot)
 	end
 }
 
@@ -18,15 +25,22 @@ text Ditto_Cave_Bottom_Ditto_Outro {
 	"Ditto!"
 }
 
-text Ditto_Cave_Bottom_PostBattle_Ditto {
-	"Ditto..."
-}
-
 script Ditto_Cave_Bottom_EventScript_Item01 {
 	lock
 	giveitem(ITEM_SUN_STONE, 1)
 	removeobject(2)
 	setflag(FLAG_TEMP_1)
+	release
+	end
+}
+
+script Ditto_Cave_Bottom_HintText01 {
+	lock
+	msgbox("Biologist: We discovered a strange\n"
+    "kind of life down here, with the ditto.\l"
+    "It has a strange power to it. We need to\l"
+	"take it to our lab above the waterfall\l"
+	"and study it, immediately.")
 	release
 	end
 }

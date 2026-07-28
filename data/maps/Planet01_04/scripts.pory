@@ -8,7 +8,7 @@ script Planet01_04_Enter {
 
 script Planet01_04_AddAir_Minior01 {
     lockall
-    setvar(VAR_AIR_TIMER_STEPS, 150)
+    setvar(VAR_AIR_TIMER_STEPS, 250)
     special(AddAirTimerMap)
     playmoncry(SPECIES_MINIOR, CRY_MODE_ENCOUNTER)
     msgbox("Minior is floating in a pocket of air!\n"
@@ -24,7 +24,7 @@ script Planet01_04_AddAir_Minior01 {
 
 script Planet01_04_AddAir_Minior02 {
     lockall
-    setvar(VAR_AIR_TIMER_STEPS, 150)
+    setvar(VAR_AIR_TIMER_STEPS, 250)
     special(AddAirTimerMap)
     playmoncry(SPECIES_MINIOR, CRY_MODE_ENCOUNTER)
     msgbox("Minior is floating in a pocket of air!\n"

@@ -88,7 +88,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
-      "trainer_sight_or_berry_tree_id": "30",
+      "trainer_sight_or_berry_tree_id": "50",
       "script": "NULL",
       "flag": "FLAG_UNUSED_0x02E"
     },
@@ -166,7 +166,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
-      "trainer_sight_or_berry_tree_id": "30",
+      "trainer_sight_or_berry_tree_id": "50",
       "script": "NULL",
       "flag": "FLAG_UNUSED_0x02D"
     },

@@ -1092,27 +1092,18 @@ enum NationalDexOrder
 #endif
 
 #define FOREACH_SPECIES_IN_HOENN_DEX_ORDER(F) \
-    F(MAGNEZONE) \
-    F(GLIMMORA) \
-    F(CLEFAIRY) \
     F(CLEFABLE) \
     F(SHUCKLE) \
     F(STEELIX) \
     F(STARYU) \
     F(STARMIE) \
     F(QUAGSIRE) \
-    F(GLALIE) \
-    F(MINIOR) \
-    F(CARBINK) \
     F(SABLEYE) \
     F(LUNATONE) \
     F(DULROC) \
     F(SOLROCK) \
     F(TEDDIURSA) \
     F(URSARING) \
-    F(URSALUNA) \
-    F(DUSKNOIR) \
-    F(DIANCIE) \
     F(JIRACHI) \
     F(DEOXYS)
 

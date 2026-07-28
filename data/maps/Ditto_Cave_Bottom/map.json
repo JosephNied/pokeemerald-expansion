@@ -25,11 +25,11 @@
       "trainer_type": "TRAINER_TYPE_SEE_ALL_DIRECTIONS",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Ditto_Cave_Bottom_DittoTrainer",
-      "flag": "0"
+      "flag": "FLAG_UNUSED_0x03C"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 8,
+      "x": 7,
       "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Planet01_01_EventScript_Item01",
+      "script": "Ditto_Cave_Bottom_EventScript_Item01",
       "flag": "FLAG_TEMP_1"
     }
   ],
@@ -51,5 +51,14 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Ditto_Cave_Bottom_HintText01"
+    }
+  ]
 }

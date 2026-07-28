@@ -68,6 +68,16 @@ script Planet01_First_Camp_Cave_HintText01 {
     "around and create a wall between us and\l"
     "the icy caverns, though I do want to \l"
     "explore those too.")
+    waitmessage
+    closemessage
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+    callnative(DrawMugshot)
+    msgbox("I was hoping to find these guys\n"
+    "by now. It seems like it's been a while\l"
+    "since they've been here. How long ago\l"
+    "was this expedition?")
+    waitmessage
+    callnative(ClearMugshot)
     release
     end
 }

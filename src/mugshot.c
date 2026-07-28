@@ -95,12 +95,12 @@ static const struct Mugshot sMugshots[] = {
 };
 
 static const struct Meter sMeters[] = {
-    [METER_O2_1] = {.x = 1, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_1, .palette = sMeterPal_METER_O2},
-    [METER_O2_2] = {.x = 1, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_2, .palette = sMeterPal_METER_O2},
-    [METER_O2_3] = {.x = 1, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_3, .palette = sMeterPal_METER_O2},
-    [METER_O2_4] = {.x = 1, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_4, .palette = sMeterPal_METER_O2},
-    [METER_O2_5] = {.x = 1, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_5, .palette = sMeterPal_METER_O2},
-    [METER_O2_6] = {.x = 1, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_6, .palette = sMeterPal_METER_O2},
+    [METER_O2_1] = {.x = 21, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_1, .palette = sMeterPal_METER_O2},
+    [METER_O2_2] = {.x = 21, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_2, .palette = sMeterPal_METER_O2},
+    [METER_O2_3] = {.x = 21, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_3, .palette = sMeterPal_METER_O2},
+    [METER_O2_4] = {.x = 21, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_4, .palette = sMeterPal_METER_O2},
+    [METER_O2_5] = {.x = 21, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_5, .palette = sMeterPal_METER_O2},
+    [METER_O2_6] = {.x = 21, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_6, .palette = sMeterPal_METER_O2},
 };
 
 //WindowId + 1, 0 if window is not open
@@ -172,15 +172,15 @@ void RefreshO2Meter(void)
 
     u16 steps = GetAirTimer();
 
-    if (steps >= 126)
+    if (steps >= 210)
         sCurrentO2Meter = METER_O2_1;
-    else if (steps >= 101)
+    else if (steps >= 169)
         sCurrentO2Meter = METER_O2_2;
-    else if (steps >= 76)
+    else if (steps >= 127)
         sCurrentO2Meter = METER_O2_3;
-    else if (steps >= 51)
+    else if (steps >= 86)
         sCurrentO2Meter = METER_O2_4;
-    else if (steps >= 26)
+    else if (steps >= 45)
         sCurrentO2Meter = METER_O2_5;
     else
         sCurrentO2Meter = METER_O2_6;

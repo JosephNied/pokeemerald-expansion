@@ -78,6 +78,20 @@ Planet01_First_Camp_Cave_HintText01::
 # 62 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	msgbox Planet01_First_Camp_Cave_HintText01_Text_0
 # 71 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	waitmessage
+# 72 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	closemessage
+# 73 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_CONFUSED
+# 74 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative DrawMugshot
+# 75 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	msgbox Planet01_First_Camp_Cave_HintText01_Text_1
+# 79 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	waitmessage
+# 80 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative ClearMugshot
+# 81 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	release
 	end
 
@@ -103,3 +117,10 @@ Planet01_First_Camp_Cave_HintText01_Text_0:
 	.string "around and create a wall between us and\l"
 	.string "the icy caverns, though I do want to \l"
 	.string "explore those too.$"
+
+Planet01_First_Camp_Cave_HintText01_Text_1:
+# 75 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	.string "I was hoping to find these guys\n"
+	.string "by now. It seems like it's been a while\l"
+	.string "since they've been here. How long ago\l"
+	.string "was this expedition?$"
