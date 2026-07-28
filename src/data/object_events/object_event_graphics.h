@@ -58,6 +58,7 @@ const u32 gObjectEventPic_MaySurfing[] = INCGFX_U32("graphics/object_events/pics
 const u32 gObjectEventPic_MayFieldMove[] = INCGFX_U32("graphics/object_events/pics/people/may/field_move.png", ".4bpp", "-mwidth 4 -mheight 4");
 const u32 gObjectEventPic_MayFishing[] = INCGFX_U32("graphics/object_events/pics/people/may/fishing.png", ".4bpp", "-mwidth 4 -mheight 4");
 const u32 gObjectEventPic_MayWatering[] = INCGFX_U32("graphics/object_events/pics/people/may/watering.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u16 gObjectEventPal_CaptainRobot[] = INCGFX_U16("graphics/object_events/palettes/captain_robot.pal", ".gbapal");
 const u16 gObjectEventPal_Npc1[] = INCGFX_U16("graphics/object_events/palettes/npc_1.pal", ".gbapal");
 const u16 gObjectEventPal_Npc2[] = INCGFX_U16("graphics/object_events/palettes/npc_2.pal", ".gbapal");
 const u16 gObjectEventPal_Npc3[] = INCGFX_U16("graphics/object_events/palettes/npc_3.pal", ".gbapal");

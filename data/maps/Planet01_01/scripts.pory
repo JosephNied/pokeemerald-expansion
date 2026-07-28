@@ -121,6 +121,10 @@ script Planet01_01_HintText01 {
     "a lab here for biological research.\p"
     "Note: The gravity is low here. Tall \n"
     "ledges can be scaled easily!")
+    setflag(FLAG_TEMP_9)
+    if (var(VAR_CAPTAIN_DIALOGUE) == 1) {
+        setvar(VAR_CAPTAIN_DIALOGUE, 2)
+    }
     release
     end
 }
@@ -233,14 +237,14 @@ script Planet01_01_JirachiAppears {
     setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
     msgbox("{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}...Was that a Jirachi?!\n"
-    "I think I could hear its thoughts... Are\l"
+    "I think I could hear it somehow... Are\l"
     "there other humans here somewhere?!\l"
     "I bet they would know why my ship was\l"
     "dragged here. I need to look for them!")
     waitmessage
     closemessage
     callnative(ClearMugshot)
-    delay(60)
+    delay(30)
     setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
     callnative(DrawMugshot)
     msgbox("...Seeing a Jirachi is supposed\n"
@@ -248,6 +252,26 @@ script Planet01_01_JirachiAppears {
     "happy with me being here, though...\p"
     "I don't have a good feeling about this.")
     waitmessage
+    closemessage
+    callnative(ClearMugshot)
+    special(Overworld_PlaySpecialMapMusic)
+    delay(30)
+    special(Script_FadeOutMapMusic)
+    setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    callnative(DrawMugshot)
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}H-H-HEY!\n"
+    "D-D-DOWN H-H-HERE!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark, face_down))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    callnative(DrawMugshot)
+    msgbox("What was that? A person?!\n"
+    "...Hello?")
+    waitmessage
+    closemessage
     callnative(ClearMugshot)
     special(Overworld_PlaySpecialMapMusic)
     setvar(VAR_TEMP_0, 1)
@@ -288,4 +312,150 @@ movement Movement_FirstJirachiEncounter2 {
     walk_up
     walk_up
     walk_up
+}
+
+script EventScript_TheCaptain {
+    lock
+
+    if (var(VAR_CAPTAIN_DIALOGUE) == 0) 
+    {
+        setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+        callnative(DrawMugshot)
+        msgbox ("I N-N-NEED P-POWER\n"
+        "P-PLEASE H-H-HELP ME.\l"
+        "AM-A-AMETHYST- CR-CRYSTAL-\l"
+        "BRIN-N-NG I-IT TO ME.")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+        callnative(DrawMugshot)
+        msgbox ("Uh, an Amethyst crystal will power you\n"
+        "up? Where can I find one?")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+        callnative(DrawMugshot)
+        msgbox ("...\n"
+        "...\l"
+        "O-ONE SE-SECOND...\n")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        applymovement(17, moves(face_up))
+        waitmovement(OBJ_EVENT_ID_PLAYER)
+
+        delay(60)
+
+        applymovement(17, moves(face_down))
+        waitmovement(OBJ_EVENT_ID_PLAYER)
+
+        setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+        callnative(DrawMugshot)
+        msgbox ("U-U-UP T-THE WATERFALL.\n"
+        "O-OUR OLD LAB.")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        giveitem(ITEM_WAILMER_PAIL)
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+        callnative(DrawMugshot)
+        msgbox ("Awesome, a map!\n"
+        "...\l"
+        "You're, uh, quite the artist!")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+        callnative(DrawMugshot)
+        msgbox("TH-THANKS.")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+        setvar(VAR_CAPTAIN_DIALOGUE, 1)
+    }
+    elif (var(VAR_CAPTAIN_DIALOGUE) == 1) 
+    {
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+        callnative(DrawMugshot)
+        msgbox ("Your map is great, but I'm a bit\n"
+        "confused. Where are we now?")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+        callnative(DrawMugshot)
+        msgbox("TW-TWILIGHT PLATEAU.")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+        callnative(DrawMugshot)
+        msgbox ("Ok, and your crystal is up the\n"
+        "waterfall in the forest?")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+        callnative(DrawMugshot)
+        msgbox("P-P-P-PRECISTELY-Y-Y.")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        if (flag(FLAG_TEMP_9) == TRUE) {
+            setvar(VAR_CAPTAIN_DIALOGUE, 2)
+        }
+    }
+    elif (var(VAR_CAPTAIN_DIALOGUE) == 2) 
+    {
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+        callnative(DrawMugshot)
+        msgbox ("So, were you a part of this team of\n"
+        "researchers?")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+        callnative(DrawMugshot)
+        msgbox("Y-YES...")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+        callnative(DrawMugshot)
+        msgbox ("Wow, that's cool!")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+        callnative(DrawMugshot)
+        msgbox ("...Uh, what happened?")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+        callnative(DrawMugshot)
+        msgbox("T-TALKING H-H-HURTS...\n"
+        "C-CRYSTAL FIRS-ST-ST-ST...")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+    }
+    release
+    end
 }

@@ -274,7 +274,7 @@
 #define VAR_TOTAL_BALL_COUNT                             0x40FC // Total meteor ball count variable
 #define VAR_CARBINK_COUNT                                0x40FD // Number of Carbink you have
 #define VAR_PLAYER_READY                                 0x40FE // Checks if player is ready to leave the ship for the first time
-#define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
+#define VAR_CAPTAIN_DIALOGUE                             0x40FF // Captain dialogue
 
 #define VARS_END                                         0x40FF
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)

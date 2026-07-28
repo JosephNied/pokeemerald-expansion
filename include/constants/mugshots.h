@@ -23,5 +23,7 @@
 #define MUGSHOT_MAP_02 17
 #define MUGSHOT_MAP_03 18
 #define MUGSHOT_MAP_04 19
+#define MUGSHOT_UNKNOWN 20
+#define MUGSHOT_CAPTAIN_SAD 21
 
 #endif
