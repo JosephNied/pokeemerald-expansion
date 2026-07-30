@@ -36,6 +36,7 @@ void ClearO2Meter(void);
 void EnableO2Meter(void);
 void DisableO2Meter(void);
 void RefreshO2Meter(void);
+void RefreshO2MeterGrass(void);
 
 bool8 sO2MeterEnabled = FALSE;
 
@@ -90,6 +91,14 @@ static const u32 sMeterImg_METER_O2_5[] = INCBIN_U32("graphics/mugshots/O2_5.4bp
 static const u32 sMeterImg_METER_O2_6[] = INCBIN_U32("graphics/mugshots/O2_6.4bpp.lz");
 static const u16 sMeterPal_METER_O2[] = INCBIN_U16("graphics/mugshots/health.gbapal");
 
+static const u32 sMeterImg_METER_O2_GRASS1[] = INCBIN_U32("graphics/mugshots/O2_grass1.4bpp.lz");
+static const u32 sMeterImg_METER_O2_GRASS2[] = INCBIN_U32("graphics/mugshots/O2_grass2.4bpp.lz");
+static const u32 sMeterImg_METER_O2_GRASS3[] = INCBIN_U32("graphics/mugshots/O2_grass3.4bpp.lz");
+static const u32 sMeterImg_METER_O2_GRASS4[] = INCBIN_U32("graphics/mugshots/O2_grass4.4bpp.lz");
+static const u32 sMeterImg_METER_O2_GRASS5[] = INCBIN_U32("graphics/mugshots/O2_grass5.4bpp.lz");
+static const u32 sMeterImg_METER_O2_GRASS6[] = INCBIN_U32("graphics/mugshots/O2_grass6.4bpp.lz");
+static const u16 sMeterPal_METER_O2_GRASS[] = INCBIN_U16("graphics/mugshots/healthgrass.gbapal");
+
 static const struct Mugshot sMugshots[] = {
     //ADD YOUR MUGSHOTS HERE
     [MUGSHOT_PLAYER_OK] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_PLAYER_OK, .palette = sMugshotPal_PLAYER_OK},
@@ -120,6 +129,13 @@ static const struct Meter sMeters[] = {
     [METER_O2_4] = {.x = 21, .y = 2, .width = 64, .height = 16, .image = sMeterImg_METER_O2_4, .palette = sMeterPal_METER_O2},
     [METER_O2_5] = {.x = 21, .y = 2, .width = 64, .height = 16, .image = sMeterImg_METER_O2_5, .palette = sMeterPal_METER_O2},
     [METER_O2_6] = {.x = 21, .y = 2, .width = 64, .height = 16, .image = sMeterImg_METER_O2_6, .palette = sMeterPal_METER_O2},
+
+    [METER_O2_GRASS1] = {.x = 21, .y = 2, .width = 64, .height = 16, .image = sMeterImg_METER_O2_GRASS1, .palette = sMeterPal_METER_O2_GRASS},
+    [METER_O2_GRASS2] = {.x = 21, .y = 2, .width = 64, .height = 16, .image = sMeterImg_METER_O2_GRASS2, .palette = sMeterPal_METER_O2_GRASS},
+    [METER_O2_GRASS3] = {.x = 21, .y = 2, .width = 64, .height = 16, .image = sMeterImg_METER_O2_GRASS3, .palette = sMeterPal_METER_O2_GRASS},
+    [METER_O2_GRASS4] = {.x = 21, .y = 2, .width = 64, .height = 16, .image = sMeterImg_METER_O2_GRASS4, .palette = sMeterPal_METER_O2_GRASS},
+    [METER_O2_GRASS5] = {.x = 21, .y = 2, .width = 64, .height = 16, .image = sMeterImg_METER_O2_GRASS5, .palette = sMeterPal_METER_O2_GRASS},
+    [METER_O2_GRASS6] = {.x = 21, .y = 2, .width = 64, .height = 16, .image = sMeterImg_METER_O2_GRASS6, .palette = sMeterPal_METER_O2_GRASS},
 };
 
 //WindowId + 1, 0 if window is not open
@@ -203,6 +219,30 @@ void RefreshO2Meter(void)
         sCurrentO2Meter = METER_O2_5;
     else
         sCurrentO2Meter = METER_O2_6;
+
+    const struct Meter* const meter = sMeters + sCurrentO2Meter;
+    DrawO2MeterCore(meter, meter->x, meter->y);
+}
+
+void RefreshO2MeterGrass(void)
+{
+    if (!sO2MeterEnabled)
+        return;
+
+    u16 steps = GetAirTimer();
+
+    if (steps >= 210)
+        sCurrentO2Meter = METER_O2_GRASS1;
+    else if (steps >= 169)
+        sCurrentO2Meter = METER_O2_GRASS2;
+    else if (steps >= 127)
+        sCurrentO2Meter = METER_O2_GRASS3;
+    else if (steps >= 86)
+        sCurrentO2Meter = METER_O2_GRASS4;
+    else if (steps >= 45)
+        sCurrentO2Meter = METER_O2_GRASS5;
+    else
+        sCurrentO2Meter = METER_O2_GRASS6;
 
     const struct Meter* const meter = sMeters + sCurrentO2Meter;
     DrawO2MeterCore(meter, meter->x, meter->y);

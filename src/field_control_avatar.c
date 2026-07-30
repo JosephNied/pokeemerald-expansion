@@ -818,11 +818,14 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
     if (SafariZoneTakeStep() == TRUE) {
         return TRUE;
     }
-    
+
     if (AirTimerTakeStep(metatileBehavior) == TRUE) {
         return TRUE;
     }
-    if (IsO2MeterEnabled()) {
+
+    if (MetatileBehavior_IsShortGrass(metatileBehavior) == TRUE) {
+        RefreshO2MeterGrass();
+    } else {
         RefreshO2Meter();
     }
 

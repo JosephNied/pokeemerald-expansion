@@ -10,6 +10,7 @@ void ClearO2Meter(void);
 void EnableO2Meter(void);
 void DisableO2Meter(void);
 void RefreshO2Meter(void);
+void RefreshO2MeterGrass(void);
 bool8 IsO2MeterEnabled(void);
 
 #endif
