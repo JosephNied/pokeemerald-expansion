@@ -3866,7 +3866,7 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
     const u8 gMonFootprint_Steelix[] = INCGFX_U8("graphics/pokemon/steelix/footprint.png", ".1bpp");
 #endif //P_FOOTPRINTS
 #if OW_POKEMON_OBJECT_EVENTS
-    const u32 gObjectEventPic_Steelix[] = INCGFX_COMP("graphics/pokemon/steelix/overworld.png", ".4bpp", "-mwidth 8 -mheight 8");
+    const u32 gObjectEventPic_Steelix[] = INCGFX_COMP("graphics/pokemon/steelix/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
 #if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
     const u16 gOverworldPalette_Steelix[] = INCGFX_U16("graphics/pokemon/steelix/overworld_normal.pal", ".gbapal");
     const u16 gShinyOverworldPalette_Steelix[] = INCGFX_U16("graphics/pokemon/steelix/overworld_shiny.pal", ".gbapal");
@@ -3877,7 +3877,7 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
     const u32 gMonFrontPic_SteelixF[] = INCGFX_U32("graphics/pokemon/steelix/anim_frontf.png", ".4bpp.smol");
     const u32 gMonBackPic_SteelixF[] = INCGFX_U32("graphics/pokemon/steelix/backf.png", ".4bpp.smol");
 #if OW_POKEMON_OBJECT_EVENTS
-    const u32 gObjectEventPic_SteelixF[] = INCGFX_COMP("graphics/pokemon/steelix/overworldf.png", ".4bpp", "-mwidth 8 -mheight 8");
+    const u32 gObjectEventPic_SteelixF[] = INCGFX_COMP("graphics/pokemon/steelix/overworldf.png", ".4bpp", "-mwidth 4 -mheight 4");
 #endif //OW_POKEMON_OBJECT_EVENTS
 #endif //P_GENDER_DIFFERENCES
 
@@ -12530,7 +12530,7 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
 #if !P_GBA_STYLE_SPECIES_ICONS
     const u8 gMonIcon_Dulroc[] = INCGFX_U8("graphics/pokemon/Dulroc/icon.png", ".4bpp");
 #else
-    const u8 gMonIcon_Dulroc[] = INCGFX_U8("graphics/pokemon/solrock/icon.png", ".4bpp");
+    const u8 gMonIcon_Dulroc[] = INCGFX_U8("graphics/pokemon/Dulroc/icon.png", ".4bpp");
 #endif //P_GBA_STYLE_SPECIES_ICONS
 #if P_FOOTPRINTS
     const u8 gMonFootprint_Dulroc[] = INCGFX_U8("graphics/pokemon/Dulroc/footprint.png", ".1bpp");

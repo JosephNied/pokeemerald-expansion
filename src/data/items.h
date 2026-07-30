@@ -2401,8 +2401,10 @@ const struct ItemInfo gItemsInfo[] =
         .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_EscapeRope,
         .flingPower = 30,
-        .iconPic = gItemIcon_DevonScope,
-        .iconPalette = gItemIconPalette_DevonScope,
+        //.iconPic = gItemIcon_DevonScope,
+        //.iconPalette = gItemIconPalette_DevonScope,
+        .iconPic = gItemIcon_EjectButton,
+        .iconPalette = gItemIconPalette_EjectButton,
     },
 
 // X Items
@@ -14060,8 +14062,10 @@ const struct ItemInfo gItemsInfo[] =
         .type = ITEM_USE_FIELD,
         //.fieldUseFunc = ItemUseOutOfBattle_WailmerPail,
         .fieldUseFunc = ItemUseOutOfBattle_MapsItem,
-        .iconPic = gItemIcon_WailmerPail,
-        .iconPalette = gItemIconPalette_WailmerPail,
+        //.iconPic = gItemIcon_WailmerPail,
+        //.iconPalette = gItemIconPalette_WailmerPail,
+        .iconPic = gItemIcon_OldSeaMap,
+        .iconPalette = gItemIconPalette_OldSeaMap,
     },
 
     [ITEM_POKE_RADAR] =

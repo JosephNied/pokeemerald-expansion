@@ -114,12 +114,12 @@ static const struct Mugshot sMugshots[] = {
 };
 
 static const struct Meter sMeters[] = {
-    [METER_O2_1] = {.x = 21, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_1, .palette = sMeterPal_METER_O2},
-    [METER_O2_2] = {.x = 21, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_2, .palette = sMeterPal_METER_O2},
-    [METER_O2_3] = {.x = 21, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_3, .palette = sMeterPal_METER_O2},
-    [METER_O2_4] = {.x = 21, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_4, .palette = sMeterPal_METER_O2},
-    [METER_O2_5] = {.x = 21, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_5, .palette = sMeterPal_METER_O2},
-    [METER_O2_6] = {.x = 21, .y = 1, .width = 64, .height = 8, .image = sMeterImg_METER_O2_6, .palette = sMeterPal_METER_O2},
+    [METER_O2_1] = {.x = 21, .y = 2, .width = 64, .height = 16, .image = sMeterImg_METER_O2_1, .palette = sMeterPal_METER_O2},
+    [METER_O2_2] = {.x = 21, .y = 2, .width = 64, .height = 16, .image = sMeterImg_METER_O2_2, .palette = sMeterPal_METER_O2},
+    [METER_O2_3] = {.x = 21, .y = 2, .width = 64, .height = 16, .image = sMeterImg_METER_O2_3, .palette = sMeterPal_METER_O2},
+    [METER_O2_4] = {.x = 21, .y = 2, .width = 64, .height = 16, .image = sMeterImg_METER_O2_4, .palette = sMeterPal_METER_O2},
+    [METER_O2_5] = {.x = 21, .y = 2, .width = 64, .height = 16, .image = sMeterImg_METER_O2_5, .palette = sMeterPal_METER_O2},
+    [METER_O2_6] = {.x = 21, .y = 2, .width = 64, .height = 16, .image = sMeterImg_METER_O2_6, .palette = sMeterPal_METER_O2},
 };
 
 //WindowId + 1, 0 if window is not open

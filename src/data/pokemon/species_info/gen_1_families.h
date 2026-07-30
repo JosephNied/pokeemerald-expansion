@@ -12453,7 +12453,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evYield_Defense = 2,
         .itemCommon = ITEM_DRAGON_FANG,
         .itemRare = ITEM_SOFT_SAND,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(0),
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -12506,7 +12506,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         FOOTPRINT(Steelix)
         OVERWORLD(
             sPicTable_Steelix,
-            SIZE_64x64,
+            SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_SLITHER,
             sAnimTable_Following,
@@ -12515,7 +12515,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         )
         OVERWORLD_FEMALE(
             sPicTable_SteelixF,
-            SIZE_64x64,
+            SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_SLITHER,
             sAnimTable_Following
