@@ -134,8 +134,9 @@ script Planet01_01_HintText01 {
 script Planet01_01_HintText02 {
     lock
     msgbox("Biologist: The plants emit oxygen when\n"
-    "stepped on. Our Oxygen System can capture\l"
-    "it and prevent our O2 levels from lowering!")
+    "stepped on. Our Oxygen Systems can\l"
+    "capture it, preventing our O2 levels\l"
+    "from lowering while we're on the grass!")
     release
     end
 }
