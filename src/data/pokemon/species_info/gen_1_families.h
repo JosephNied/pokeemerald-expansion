@@ -6331,10 +6331,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 4,
         .weight = 58,
         .description = COMPOUND_STRING(
-            "Its flower petals deepen in color through\n"
-            "exposure to sunlight. When cloudy weather\n"
-            "persists, it does a dance that is thought\n"
-            "to be a ritual for summoning the sun."),
+            "Helps generate Oxygen and occassionally\n"
+            "produces helpful mints and berries. More\n"
+            "importantly, keeps things upbeat and adds\n"
+            "color to my otherwise grey environment."),
         .pokemonScale = 472,
         .pokemonOffset = 21,
         .trainerScale = 256,
@@ -10960,10 +10960,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 12,
         .weight = 1800,
         .description = COMPOUND_STRING(
-            "As it zooms through the sky, this\n"
-            "Pokémon seems to be receiving signals\n"
-            "of unknown origin, while transmitting its\n"
-            "own signals of unknown purpose."),
+            "Often mistaken as a UFO, Magnezone\n"
+            "found a niche in the space delivery\n"
+            "trade due to its ability to use\n"
+            "magnetism to lift pallets of boxes."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -12520,6 +12520,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_SLITHER,
             sAnimTable_Following
         )
+        .overworldEncounterBehavior = OWE_CHASE_PLAYER_FAST,
         .levelUpLearnset = sSteelixLevelUpLearnset,
         .teachableLearnset = sSteelixTeachableLearnset,
         .formSpeciesIdTable = sSteelixFormSpeciesIdTable,
@@ -14894,10 +14895,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 15,
         .weight = 468,
         .description = COMPOUND_STRING(
-            "If it senses sadness with its fluffy fur,\n"
-            "a Blissey will rush over to the sad person,\n"
-            "however far away, to share an egg of\n"
-            "happiness that brings a smile to any face."),
+            "My bed is perfectly capable of healing\n"
+            "me and the team, but it can't provide\n"
+            "the loving emotional support Blissey does!\n"
+            "She's kinda a lackluster therapist though."),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 310,

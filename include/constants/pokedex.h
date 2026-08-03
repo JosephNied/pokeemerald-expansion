@@ -1092,6 +1092,10 @@ enum NationalDexOrder
 #endif
 
 #define FOREACH_SPECIES_IN_HOENN_DEX_ORDER(F) \
+    F(MAGNEZONE) \
+    F(BLISSEY) \
+    F(ROTOM) \
+    F(BELLOSSOM) \
     F(CLEFABLE) \
     F(MINIOR) \
     F(CARBINK) \
@@ -1113,6 +1117,7 @@ enum NationalDexOrder
     F(URSARING) \
     F(DUSKNOIR) \
     F(DITTO) \
+    F(ZEKROM) \
     F(DIANCIE) \
     F(JIRACHI) \
     F(DEOXYS)
