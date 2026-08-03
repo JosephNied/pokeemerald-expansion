@@ -58,6 +58,7 @@ enum __attribute__((packed)) OverworldWildEncounterBehaviors
 {
     OWE_IGNORE_PLAYER,
     OWE_CHASE_PLAYER_SLOW,
+    OWE_CHASE_PLAYER_FAST,
     OWE_FLEE_PLAYER_NORMAL,
     OWE_WATCH_PLAYER_NORMAL,
     OWE_APPROACH_PLAYER_SLOW,
