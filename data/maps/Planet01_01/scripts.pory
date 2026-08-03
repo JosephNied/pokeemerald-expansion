@@ -325,7 +325,7 @@ script EventScript_TheCaptain {
         callnative(DrawMugshot)
         msgbox ("I N-N-NEED P-POWER\n"
         "P-PLEASE H-H-HELP ME.\l"
-        "AM-A-AMETHYST- CR-CRYSTAL-\l"
+        "RU-RUBY- GEMSTONE-\l"
         "BRIN-N-NG I-IT TO ME.")
         waitmessage
         closemessage
@@ -333,8 +333,8 @@ script EventScript_TheCaptain {
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
         callnative(DrawMugshot)
-        msgbox ("Uh, an Amethyst crystal will power you\n"
-        "up? Where can I find one?")
+        msgbox ("Uh, a Ruby will power you\n"
+        "up? Ok... Where can I find one?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -353,13 +353,23 @@ script EventScript_TheCaptain {
 
         delay(60)
 
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+        callnative(DrawMugshot)
+        msgbox ("<Its drawing something? Where\n"
+        "did it get that paper and pencil?>")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        delay(60)
+
         applymovement(17, moves(face_down))
         waitmovement(OBJ_EVENT_ID_PLAYER)
 
         setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
         callnative(DrawMugshot)
-        msgbox ("U-U-UP T-THE WATERFALL.\n"
-        "O-OUR OLD LAB.")
+        msgbox ("I-I-IN THE FOREST.\n"
+        "N-NEAR T-T-THE SH-SHORELINE.")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -370,7 +380,7 @@ script EventScript_TheCaptain {
         callnative(DrawMugshot)
         msgbox ("Awesome, a map!\n"
         "...\l"
-        "You're, uh, quite the artist!")
+        "...You're quite the artist!")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -402,15 +412,16 @@ script EventScript_TheCaptain {
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
         callnative(DrawMugshot)
-        msgbox ("Ok, and your crystal is up the\n"
-        "waterfall in the forest?")
+        msgbox ("Ok, and your crystal is down\n"
+        "in the forest somewhere?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
         setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
         callnative(DrawMugshot)
-        msgbox("P-P-P-PRECISTELY-Y-Y.")
+        msgbox("S-SOUTH, N-NEAR THE SH-SH-\n"
+        "SHORELINE.")
         waitmessage
         closemessage
         callnative(ClearMugshot)
