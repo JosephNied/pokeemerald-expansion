@@ -4,6 +4,7 @@ mapscripts Planet01_02_MapScripts {
 
 script Planet01_02_Enter {
 	special(SetRandomFlags)
+    setvar(VAR_TEMP_1, 0)
 	clearflag(FLAG_TEMP_10)
 	clearflag(FLAG_TEMP_11)
 	clearflag(FLAG_TEMP_12)
@@ -249,4 +250,42 @@ script Planet01_02_HintText06 {
     "Thanks for playing!")
     release
     end
+}
+
+script Planet01_02_QuagsireTrigger {
+    lockall
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    callnative(DrawMugshot)
+    msgbox("Huh? In the waterfall-")
+    waitmessage
+    callnative(ClearMugshot)
+    closemessage
+    waitse()
+    playmoncry(SPECIES_QUAGSIRE, CRY_MODE_ENCOUNTER)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark, face_right))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(26, Movement_QuagsireWaterstone1)
+    waitmovement(0)
+    setwildbattle(
+        SPECIES_CARNIVINE,
+        50,
+        ITEM_WATER_STONE
+    )
+    dowildbattle
+    setflag(FLAG_TEMP_4)
+    removeobject(26)
+    setvar(VAR_TEMP_0, 1)
+    releaseall
+    end
+}
+
+movement Movement_QuagsireWaterstone1 {
+    face_left
+    walk_left
+    walk_left
+    delay_16
+    delay_16
+    jump_left
+    jump_down
+    face_left
 }

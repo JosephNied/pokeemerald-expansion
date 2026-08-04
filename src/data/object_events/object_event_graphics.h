@@ -361,6 +361,8 @@ const u32 gObjectEventPic_Noland[] = INCGFX_U32("graphics/object_events/pics/peo
 const u32 gObjectEventPic_Lucy[] = INCGFX_U32("graphics/object_events/pics/people/frontier_brains/lucy.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gObjectEventPic_Brandon[] = INCGFX_U32("graphics/object_events/pics/people/frontier_brains/brandon.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gObjectEventPic_PokeBall[] = INCGFX_U32("graphics/object_events/pics/misc/ball_poke.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u16 gObjectEventPal_Seagallop[] = INCGFX_U16("graphics/object_events/palettes/seagallop.pal", ".gbapal");
+const u16 gObjectEventPic_Seagallop[] = INCGFX_U16("graphics/object_events/pics/misc/seagallop.png", ".4bpp");
 
 const u32 gObjectEventPic_DeoxysOld[] = INCGFX_U32("graphics/object_events/pics/pokemon_old/deoxys.png", ".4bpp", "-mwidth 4 -mheight 4");
 const u32 gObjectEventPic_MewOld[] = INCGFX_U32("graphics/object_events/pics/pokemon_old/mew.png", ".4bpp", "-mwidth 2 -mheight 4");
@@ -591,8 +593,6 @@ const u16 gObjectEventPic_Clipboard[] = INCGFX_U16("graphics/object_events/pics/
 const u16 gObjectEventPal_Meteorite[] = INCGFX_U16("graphics/object_events/palettes/meteorite.pal", ".gbapal");
 const u16 gObjectEventPic_BirthIslandStoneFrlg[] = INCGFX_U16("graphics/object_events/pics/misc/birth_island_stone_frlg.png", ".4bpp");
 const u16 gObjectEventPic_LaprasDoll[] = INCGFX_U16("graphics/object_events/pics/misc/lapras_doll.png", ".4bpp");
-const u16 gObjectEventPal_Seagallop[] = INCGFX_U16("graphics/object_events/palettes/seagallop.pal", ".gbapal");
-const u16 gObjectEventPic_Seagallop[] = INCGFX_U16("graphics/object_events/pics/misc/seagallop.png", ".4bpp");
 const u16 gObjectEventPal_SSAnne[] = INCGFX_U16("graphics/object_events/palettes/ss_anne.pal", ".gbapal");
 const u16 gObjectEventPic_SSAnne[] = INCGFX_U16("graphics/object_events/pics/misc/ss_anne.png", ".4bpp", "-mwidth 8 -mheight 4");
 const u16 gObjectEventPic_SurfBlob[] = INCGFX_U16("graphics/object_events/pics/misc/surf_blob.png", ".4bpp", "-mwidth 4 -mheight 4");

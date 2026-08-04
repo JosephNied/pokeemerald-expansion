@@ -1361,6 +1361,18 @@ static const struct SpriteFrameImage sPicTable_ApricornTree[] = {
     overworld_frame(gObjectEventPic_ApricornTree, 2, 2, 0),
 };
 
+static const struct SpriteFrameImage sPicTable_Seagallop[] = {
+    overworld_frame(gObjectEventPic_Seagallop, 4, 16, 0),
+    overworld_frame(gObjectEventPic_Seagallop, 4, 16, 0),
+    overworld_frame(gObjectEventPic_Seagallop, 4, 16, 0),
+    overworld_frame(gObjectEventPic_Seagallop, 4, 16, 0),
+    overworld_frame(gObjectEventPic_Seagallop, 4, 16, 0),
+    overworld_frame(gObjectEventPic_Seagallop, 4, 16, 0),
+    overworld_frame(gObjectEventPic_Seagallop, 4, 16, 0),
+    overworld_frame(gObjectEventPic_Seagallop, 4, 16, 0),
+    overworld_frame(gObjectEventPic_Seagallop, 4, 16, 0),
+};
+
 #if IS_FRLG
 
 static const struct SpriteFrameImage sPicTable_RedNormal[] = {
@@ -2522,18 +2534,6 @@ static const struct SpriteFrameImage sPicTable_BirthIslandStoneFrlg[] = {
 
 static const struct SpriteFrameImage sPicTable_LaprasDoll[] = {
     overworld_frame(gObjectEventPic_LaprasDoll, 4, 4, 0),
-};
-
-static const struct SpriteFrameImage sPicTable_Seagallop[] = {
-    overworld_frame(gObjectEventPic_Seagallop, 4, 16, 0),
-    overworld_frame(gObjectEventPic_Seagallop, 4, 16, 0),
-    overworld_frame(gObjectEventPic_Seagallop, 4, 16, 0),
-    overworld_frame(gObjectEventPic_Seagallop, 4, 16, 0),
-    overworld_frame(gObjectEventPic_Seagallop, 4, 16, 0),
-    overworld_frame(gObjectEventPic_Seagallop, 4, 16, 0),
-    overworld_frame(gObjectEventPic_Seagallop, 4, 16, 0),
-    overworld_frame(gObjectEventPic_Seagallop, 4, 16, 0),
-    overworld_frame(gObjectEventPic_Seagallop, 4, 16, 0),
 };
 
 static const struct SpriteFrameImage sPicTable_SSAnne[] = {

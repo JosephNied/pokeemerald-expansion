@@ -13358,7 +13358,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .iconSprite = gMonIcon_Jirachi,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
-        SHADOW(0, 12, SHADOW_SIZE_S)
+        SHADOW(0, 12, SHADOW_SIZE_NONE)
         FOOTPRINT(Jirachi)
         OVERWORLD(
             sPicTable_Jirachi,

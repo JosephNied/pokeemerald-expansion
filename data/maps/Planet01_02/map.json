@@ -32,11 +32,6 @@
       "map": "MAP_PLANET01_05",
       "offset": 30,
       "direction": "right"
-    },
-    {
-      "map": "MAP_PLANET01_07",
-      "offset": -32,
-      "direction": "left"
     }
   ],
   "object_events": [
@@ -276,8 +271,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(WOOPER)",
-      "x": 2,
-      "y": 24,
+      "x": 17,
+      "y": 28,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 0,
@@ -354,8 +349,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(JIRACHI)",
-      "x": 11,
-      "y": 9,
+      "x": 17,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WATCH_PLAYER_OWE",
       "movement_range_x": 0,
@@ -367,16 +362,16 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(CARNIVINE)",
-      "x": 4,
-      "y": 18,
+      "x": 9,
+      "y": 15,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FLEE_PLAYER_OWE",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
-      "trainer_sight_or_berry_tree_id": "50",
-      "script": "NULL",
-      "flag": "FLAG_UNUSED_0x02E"
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Planet01_02_QuagsireTrigger",
+      "flag": "FLAG_TEMP_4"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ZIGZAG_CUSHION",
@@ -427,7 +422,17 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Planet01_02_QuagsireTrigger"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",
