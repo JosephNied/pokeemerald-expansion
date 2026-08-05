@@ -177,6 +177,7 @@ static bool32 CheckValidOWESpecies(enum Species speciesId);
 extern const u8 EventScript_GlimmoraCatch[];
 extern const u8 EventScript_GlalieCatch[];
 extern const u8 EventScript_SlugmaCatch[];
+extern const u8 EventScript_SharpedoCatch[];
 
 static EWRAM_DATA u8 sOWESpawnCountdown = 0;
 
@@ -2009,6 +2010,8 @@ static void Task_OWEApproachForBattle(u8 taskId)
                 ScriptContext_SetupScript(EventScript_GlalieCatch);
             } else if (OW_SPECIES(OWE) == SPECIES_SLUGMA) {
                 ScriptContext_SetupScript(EventScript_SlugmaCatch);
+            } else if (OW_SPECIES(OWE) == SPECIES_SHARPEDO) {
+                ScriptContext_SetupScript(EventScript_SharpedoCatch);
             } else {
                 ScriptContext_Enable();
             }

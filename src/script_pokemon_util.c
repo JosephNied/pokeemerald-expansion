@@ -684,6 +684,27 @@ void RemoveNativeMonsFromParty(void)
     gPartiesCount[B_TRAINER_PLAYER] = 1;
 }
 
+void RemoveMagnezoneForMagnezoneM(void)
+{
+    u8 i, j;
+
+    for (i = 0; i < gPartiesCount[B_TRAINER_PLAYER]; i++)
+    {
+        if (GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES) == SPECIES_MAGNEZONE)
+        {
+            // Shift all Pokémon after Magnezone forward one slot.
+            for (j = i; j < gPartiesCount[B_TRAINER_PLAYER] - 1; j++)
+                gParties[B_TRAINER_PLAYER][j] = gParties[B_TRAINER_PLAYER][j + 1];
+
+            // Clear the now-unused last slot.
+            ZeroMonData(&gParties[B_TRAINER_PLAYER][gPartiesCount[B_TRAINER_PLAYER] - 1]);
+
+            gPartiesCount[B_TRAINER_PLAYER]--;
+            break; // Only remove the first Magnezone found.
+        }
+    }
+}
+
 void ReplaceSunMoonWithTerragem(void)
 {
     s32 i;

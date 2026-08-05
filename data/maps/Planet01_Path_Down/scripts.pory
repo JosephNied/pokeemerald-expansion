@@ -1,0 +1,38 @@
+mapscripts Planet01_Path_Down_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Planet01_Path_Down_Enter
+}
+
+script Planet01_Path_Down_Enter {
+    setflashlevel(4)
+	if (flag(FLAG_REGISTERED_RICKY) == FALSE) {
+		setvar(VAR_TEMP_0, 0)
+	} else {
+		setvar(VAR_TEMP_0, 1)
+	}
+}
+
+script Path_Down_Remark01 {
+	lock
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+    callnative(DrawMugshot)
+    msgbox("This doesn't look like a campsite!")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+	setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+    callnative(DrawMugshot)
+    msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}<Not much further... Proceed...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+	setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+    callnative(DrawMugshot)
+    msgbox("Ok... (creepy...)")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+	setvar(VAR_TEMP_0, 1)
+	setflag(FLAG_REGISTERED_RICKY)
+	release
+	end
+}

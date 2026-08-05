@@ -1780,3 +1780,11 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Planet01_Diancie_Cave/scripts.inc"
 
 	.include "data/maps/Planet01_07/scripts.inc"
+
+	.include "data/maps/Planet01_Final_Lab/scripts.inc"
+
+	.include "data/maps/Planet01_Path_Down/scripts.inc"
+
+	.include "data/maps/Planet01_Final_Lab_Interior/scripts.inc"
+
+	.include "data/maps/Planet01_Final_Lab_Core/scripts.inc"

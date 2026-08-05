@@ -12520,7 +12520,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_SLITHER,
             sAnimTable_Following
         )
-        .overworldEncounterBehavior = OWE_CHASE_PLAYER_FAST,
         .levelUpLearnset = sSteelixLevelUpLearnset,
         .teachableLearnset = sSteelixTeachableLearnset,
         .formSpeciesIdTable = sSteelixFormSpeciesIdTable,

@@ -493,14 +493,17 @@ static u8 BattleStyle_ProcessInput(u8 selection)
 
 static void BattleStyle_DrawChoices(u8 selection)
 {
-    u8 styles[2];
+    //u8 styles[2];
+    u8 styles[1];
 
     styles[0] = 0;
-    styles[1] = 0;
+    //styles[1] = 0;
+    
+    //styles[selection] = 1;
     styles[selection] = 1;
 
-    DrawOptionMenuChoice(gText_BattleStyleShift, 104, YPOS_BATTLESTYLE, styles[0]);
-    DrawOptionMenuChoice(gText_BattleStyleSet, GetStringRightAlignXOffset(FONT_NORMAL, gText_BattleStyleSet, 198), YPOS_BATTLESTYLE, styles[1]);
+    DrawOptionMenuChoice(gText_BattleStyleSet, 104, YPOS_BATTLESTYLE, styles[0]);
+    //DrawOptionMenuChoice(gText_BattleStyleShift, GetStringRightAlignXOffset(FONT_NORMAL, gText_BattleStyleShift, 198), YPOS_BATTLESTYLE, styles[1]);
 }
 
 static u8 Sound_ProcessInput(u8 selection)

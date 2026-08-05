@@ -641,6 +641,7 @@ gSpecials::
 	def_special CheckAddCoins
 	def_special SetRandomFlags
 	def_special RemoveNativeMonsFromParty
+	def_special RemoveMagnezoneForMagnezoneM
 	def_special StartAirTimerMap
 	def_special AddAirTimerMap
 	def_special SetBossBattle

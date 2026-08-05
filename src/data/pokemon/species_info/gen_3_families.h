@@ -6489,10 +6489,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .height = 18,
         .weight = 888,
         .description = COMPOUND_STRING(
-            "The vicious and sly gangster of the sea.\n"
-            "Its skin is specially textured to minimize\n"
-            "drag in water. Its speed tops out at over\n"
-            "75 miles per hour."),
+            "Some alien relative of Sharpedo. Swimming\n"
+            "deep in this planet's liquid has made it\n"
+            "strange and powerful. I would catch one,\n"
+            "but they're too fast and aggressive."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 317,
@@ -6532,6 +6532,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gOverworldPalette_Sharpedo,
             gShinyOverworldPalette_Sharpedo
         )
+        .overworldEncounterBehavior = OWE_CHASE_PLAYER_FAST,
         .levelUpLearnset = sSharpedoLevelUpLearnset,
         .teachableLearnset = sSharpedoTeachableLearnset,
         .formSpeciesIdTable = sSharpedoFormSpeciesIdTable,

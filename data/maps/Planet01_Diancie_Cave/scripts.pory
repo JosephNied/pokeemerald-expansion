@@ -26,8 +26,7 @@ script Planet01_Diancie_Cave_Spawn_Poke {
 		callnative(ClearMugshot)
 		fadeScreen(FADE_TO_BLACK)
 
-		checkflag(FLAG_UNUSED_0x04B)
-		if (var(VAR_RESULT) == TRUE) 
+		if (flag(FLAG_UNUSED_0x04B) == TRUE) 
 		{
 			clearflag(FLAG_UNUSED_0x046)
 			addobject(3)
@@ -35,8 +34,7 @@ script Planet01_Diancie_Cave_Spawn_Poke {
 			addvar(VAR_CARBINK_COUNT, 1)
 		}
 
-		checkflag(FLAG_UNUSED_0x04A)
-		if (var(VAR_RESULT) == TRUE) 
+		if (flag(FLAG_UNUSED_0x04A) == TRUE) 
 		{
 			clearflag(FLAG_UNUSED_0x047)
 			addobject(4)
@@ -44,8 +42,7 @@ script Planet01_Diancie_Cave_Spawn_Poke {
 			addvar(VAR_CARBINK_COUNT, 1)
 		}
 
-		checkflag(FLAG_UNUSED_0x04C)
-		if (var(VAR_RESULT) == TRUE) 
+		if (flag(FLAG_UNUSED_0x04C) == TRUE) 
 		{
 			clearflag(FLAG_UNUSED_0x048)
 			addobject(1)
@@ -53,8 +50,7 @@ script Planet01_Diancie_Cave_Spawn_Poke {
 			addvar(VAR_CARBINK_COUNT, 1)
 		}
 
-		checkflag(FLAG_UNUSED_0x04D)
-		if (var(VAR_RESULT) == TRUE) 
+		if (flag(FLAG_UNUSED_0x04D) == TRUE) 
 		{
 			addobject(2)
 			clearflag(FLAG_UNUSED_0x049)
@@ -115,9 +111,40 @@ script Planet01_Diancie_Cave_DiancieEncounter {
     removeobject(5)
     setflag(FLAG_UNUSED_0x045)
 
-    msgbox("Daincie seemd pleased with\n"
-    "the battle! It left a gift!")
-	giveitem(ITEM_DIANCITE)
+    msgbox("Daincie seemed pleased with the battle.\n"
+    "It left a gift!\p"
+	"...Some kind of crystal? It looks almost\n"
+	"like...!")
+	waitmessage
+	closemessage
+
+	waitse()
+    playmoncry(SPECIES_MAGNEZONE, CRY_MODE_ENCOUNTER)
+    waitmoncry()
+
+	setvar(VAR_0x8004, 1)
+	setvar(VAR_0x8005, 1)
+	setvar(VAR_0x8006, 8)
+	setvar(VAR_0x8007, 5)
+	special(ShakeCamera)
+
+	special(RemoveMagnezoneForMagnezoneM)
+	givemon(SPECIES_ZEKROM, 50, ITEM_MAGNET)
+
+	setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    callnative(DrawMugshot)
+
+	msgbox("Magnezone! You, you-\p"
+    "You evolved?!?!?!?!\p"
+	"This is incredible! This must be\n"
+	"something like Mega Evolution!\p"
+	"You always were something special, pal!\n"
+	"We definitely wont fail now!")
+
+	waitmessage
+	callnative(ClearMugshot)
+	closemessage
+
 	setvar(VAR_0x8000, SPECIES_DIANCIE)
     callnative(RegisterSpeciesInDex)
     releaseall

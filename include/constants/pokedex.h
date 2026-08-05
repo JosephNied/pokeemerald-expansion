@@ -1100,11 +1100,12 @@ enum NationalDexOrder
     F(MINIOR) \
     F(CARBINK) \
     F(ELGYEM) \
-    F(SHUCKLE) \
     F(STEELIX) \
+    F(SHUCKLE) \
+    F(QUAGSIRE) \
     F(STARYU) \
     F(STARMIE) \
-    F(QUAGSIRE) \
+    F(SHARPEDO) \
     F(SABLEYE) \
     F(LUNATONE) \
     F(DULROC) \

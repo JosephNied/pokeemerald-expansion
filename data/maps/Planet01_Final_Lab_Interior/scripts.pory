@@ -1,0 +1,38 @@
+mapscripts Planet01_Final_Lab_Interior_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Planet01_Final_Lab_Interior_Enter
+}
+
+script Planet01_Final_Lab_Interior_Enter {
+    setflashlevel(4)
+	if (flag(FLAG_REGISTERED_LOLA) == FALSE) {
+		setvar(VAR_TEMP_0, 0)
+	} else {
+		setvar(VAR_TEMP_0, 1)
+	}
+}
+
+script Final_Lab_Interior_Remark01 {
+	lock
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+    callnative(DrawMugshot)
+    msgbox("Anybody home...?")
+	waitmessage
+	closemessage
+	callnative(ClearMugshot)
+	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    callnative(DrawMugshot)
+	msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}<Finally, you are here! Come forward!>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+	setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+    callnative(DrawMugshot)
+    msgbox("This is crazy! But, I'm coming...")
+	waitmessage
+	closemessage
+	callnative(ClearMugshot)
+	setvar(VAR_TEMP_0, 1)
+	setflag(FLAG_REGISTERED_LOLA)
+	release
+	end
+}

@@ -9533,6 +9533,46 @@
       "secondary_tileset": "gTileset_Underwater",
       "border_filepath": "data/layouts/Planet01_07/border.bin",
       "blockdata_filepath": "data/layouts/Planet01_07/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLANET01_FINAL_LAB",
+      "name": "Planet01_Final_Lab_Layout",
+      "width": 60,
+      "height": 74,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/Planet01_Final_Lab/border.bin",
+      "blockdata_filepath": "data/layouts/Planet01_Final_Lab/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLANET01_PATH_DOWN",
+      "name": "Planet01_Path_Down_Layout",
+      "width": 15,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MeteorFalls",
+      "border_filepath": "data/layouts/Planet01_Path_Down/border.bin",
+      "blockdata_filepath": "data/layouts/Planet01_Path_Down/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLANET01_FINAL_LAB_INTERIOR",
+      "name": "Planet01_Final_Lab_Interior_Layout",
+      "width": 20,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/Planet01_Final_Lab_Interior/border.bin",
+      "blockdata_filepath": "data/layouts/Planet01_Final_Lab_Interior/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLANET01_FINAL_LAB_CORE",
+      "name": "Planet01_Final_Lab_Core_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/Planet01_Final_Lab_Core/border.bin",
+      "blockdata_filepath": "data/layouts/Planet01_Final_Lab_Core/map.bin"
     }
   ]
 }

@@ -6,3 +6,19 @@ script Planet01_06_Enter {
 	special(SetRandomFlags)
 	end
 }
+
+script EventScript_SharpedoCatch {
+	lockall
+	setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    callnative(DrawMugshot)
+	msgbox("Aaah! Quick, retreat!")
+	waitmessage
+	closemessage
+	callnative(ClearMugshot)
+	setvar(VAR_0x8000, SPECIES_SHARPEDO)
+    callnative(RegisterSpeciesInDex)
+	warp(MAP_SPACESHIP_DEV, 0, 12, 7) 
+	waitstate
+	release
+	end
+}

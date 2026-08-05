@@ -42,6 +42,15 @@ script Planet01_02_EventScript_Item03 {
     end
 }
 
+script Planet01_02_EventScript_Item04 {
+    lock
+    giveitem(ITEM_KINGS_ROCK, 1)
+    setflag(FLAG_UNUSED_0x4A1)
+    removeobject(30)
+    release
+    end
+}
+
 script Planet01_02_AddAir_Minior01 {
     lockall
     setvar(VAR_AIR_TIMER_STEPS, 250)
@@ -207,9 +216,9 @@ script Planet01_02_HintText01 {
 
 script Planet01_02_HintText02 {
     lock
-    msgbox("Biologist: I've occasionally observed a\n"
-    "Quagsire that seems to enjoy collecting\l"
-    "pretty blue stones near the waterfall.\p"
+    msgbox("Biologist: I've occasionally observed\n"
+    "Quagsires bringing blue stones they've\l"
+    "found to a nest behind the waterfall.\p"
     "How cute! Could they be Water Stones?")
     release
     end
@@ -274,7 +283,7 @@ script Planet01_02_QuagsireTrigger {
     dowildbattle
     setflag(FLAG_TEMP_4)
     removeobject(26)
-    setvar(VAR_TEMP_0, 1)
+    setvar(VAR_TEMP_1, 1)
     releaseall
     end
 }
@@ -288,4 +297,5 @@ movement Movement_QuagsireWaterstone1 {
     jump_left
     jump_down
     face_left
+    walk_left
 }
