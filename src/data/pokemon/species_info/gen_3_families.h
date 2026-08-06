@@ -12143,9 +12143,9 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .weight = 5500,
         .description = COMPOUND_STRING(
             "Metagross has four brains that are joined\n"
-            "by a complex neural network. As a result of\n"
-            "integration, this Pokémon is smarter than\n"
-            "a supercomputer."),
+            "by a complex neural network; because of this,\n"
+            "Metagross is smarter than a supercomputer.\n"
+            "Not suprised they brought one."),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 447,
@@ -12181,6 +12181,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gOverworldPalette_Metagross,
             gShinyOverworldPalette_Metagross
         )
+        .overworldEncounterBehavior = OWE_CHASE_PLAYER_MEDIUM,
         .levelUpLearnset = sMetagrossLevelUpLearnset,
         .teachableLearnset = sMetagrossTeachableLearnset,
         .formSpeciesIdTable = sMetagrossFormSpeciesIdTable,

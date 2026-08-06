@@ -3,6 +3,9 @@ mapscripts Planet01_Final_Lab_MapScripts {
 }
 
 script Planet01_Final_Lab_Enter {
+	setvar(VAR_AIR_TIMER_TRIGGERED, 1)
+    callnative(StopAirTimer)
+    callnative(DisableO2Meter)
 	if (flag(FLAG_REGISTERED_LILA_AND_ROY) == FALSE) {
 		setvar(VAR_TEMP_0, 0)
 	} else {
@@ -39,7 +42,8 @@ script Final_Lab_Remark01 {
     callnative(DrawMugshot)
     msgbox("Alright, I got this...\p"
 	"My instruments say the gravity is\n"
-	"higher down here.")
+	"higher down here. Also... The air\l"
+	"is breathable!")
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
@@ -58,7 +62,8 @@ script Final_Lab_Remark01 {
 	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
 	msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}<Some Pokemon... Aren't fully in control...\n"
-	"Of themselves anymore...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	"Of themselves anymore...>\p"
+	"<Move slowly, if you have to...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)

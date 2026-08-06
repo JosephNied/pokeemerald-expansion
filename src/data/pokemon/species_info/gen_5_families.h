@@ -2769,10 +2769,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
     {
         .baseHP        = 110,
         .baseAttack    = 135,
-        .baseDefense   = 60,
-        .baseSpeed     = 88,
+        .baseDefense   = 70,
+        .baseSpeed     = 90,
         .baseSpAttack  = 50,
-        .baseSpDefense = 65,
+        .baseSpDefense = 75,
         .types = MON_TYPES(TYPE_GROUND, TYPE_STEEL),
         .catchRate = 60,
         .expYield = 178,
@@ -2782,7 +2782,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_SAND_RUSH, ABILITY_SAND_FORCE, ABILITY_MOLD_BREAKER },
+        .abilities = { ABILITY_MOLD_BREAKER, ABILITY_MOLD_BREAKER, ABILITY_MOLD_BREAKER },
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = TRUE,
         .speciesName = _("Excadrill"),
@@ -2792,10 +2792,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 7,
         .weight = 404,
         .description = COMPOUND_STRING(
-            "More than 300 feet below the surface,\n"
-            "they build mazelike nests. Their activity\n"
-            "can be destructive to subway tunnels,\n"
-            "but it can also help with construction."),
+            "The previous explorers definitely were\n"
+            "building and transforming this space if\n"
+            "they brough an Excadrill. What happened\n"
+            "to drive these Pokemon crazy?"),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -2830,6 +2830,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_Excadrill,
             gShinyOverworldPalette_Excadrill
         )
+        .overworldEncounterBehavior = OWE_CHASE_PLAYER_MEDIUM,
         .levelUpLearnset = sExcadrillLevelUpLearnset,
         .teachableLearnset = sExcadrillTeachableLearnset,
         .formSpeciesIdTable = sExcadrillFormSpeciesIdTable,
@@ -10457,10 +10458,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 18,
         .weight = 1055,
         .description = COMPOUND_STRING(
-            "They are kind but can be relentless\n"
-            "when defending territory. Their sturdy\n"
-            "tusks will stay sharp even if used to cut\n"
-            "steel beams."),
+            "Again with the red and blue tentacles.\n"
+            "Maybe the previous explorers brought\n"
+            "this guy to help cut through metal, or\n"
+            "even trees?"),
         .pokemonScale = 267,
         .pokemonOffset = 2,
         .trainerScale = 286,
@@ -10495,6 +10496,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_Haxorus,
             gShinyOverworldPalette_Haxorus
         )
+        .overworldEncounterBehavior = OWE_CHASE_PLAYER_MEDIUM,
         .levelUpLearnset = sHaxorusLevelUpLearnset,
         .teachableLearnset = sHaxorusTeachableLearnset,
     },

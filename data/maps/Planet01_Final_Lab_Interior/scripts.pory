@@ -76,9 +76,9 @@ script Final_Lab_Interior_FlavorText_Books {
 script Final_Lab_Interior_FlavorText_Board {
     lock
     msgbox("Notes and calendars... Dating back 30\n"
-	"years ago?! There are plans and maps for what\l"
-	"I can only assume are a rapid terraforming\l"
-	"project.")
+	"years ago?! There are plans and maps for\l"
+	"what I can only assume are a rapid\l"
+	"terraforming project using Pokemon.")
     release
     end
 }

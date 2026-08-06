@@ -235,9 +235,9 @@ Final_Lab_Interior_FlavorText_Books_Text_0:
 Final_Lab_Interior_FlavorText_Board_Text_0:
 # 78 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	.string "Notes and calendars... Dating back 30\n"
-	.string "years ago?! There are plans and maps for what\l"
-	.string "I can only assume are a rapid terraforming\l"
-	.string "project.$"
+	.string "years ago?! There are plans and maps for\l"
+	.string "what I can only assume are a rapid\l"
+	.string "terraforming project using Pokemon.$"
 
 Final_Lab_Interior_FlavorText_Computer_Text_0:
 # 88 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
