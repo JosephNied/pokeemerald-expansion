@@ -35,7 +35,7 @@ Path_Down_Remark01::
 # 21 "data/maps/Planet01_Path_Down/scripts.pory"
 	callnative ClearMugshot
 # 22 "data/maps/Planet01_Path_Down/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_CONFUSED
+	setvar VAR_0x8000, MUGSHOT_UNKNOWN
 # 23 "data/maps/Planet01_Path_Down/scripts.pory"
 	callnative DrawMugshot
 # 24 "data/maps/Planet01_Path_Down/scripts.pory"

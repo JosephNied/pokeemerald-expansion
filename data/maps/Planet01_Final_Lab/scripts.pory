@@ -12,13 +12,15 @@ script Planet01_Final_Lab_Enter {
 
 script Final_Lab_Remark01 {
 	lock
+	applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark, face_left, delay_16))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
     setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
     msgbox("WOW!\p"
 	"This place is huge!!!\n"
 	"How is this even possible?\l"
 	"Was this place just like this, or were\l"
-	"the scientists respondible?\p"
+	"the scientists involved somehow?\p"
 	"Where is this light coming from? I\n"
 	"think I see the lab, in the distance...\p"
 	"But how did they build it? I have so many\n"
@@ -28,13 +30,14 @@ script Final_Lab_Remark01 {
 	callnative(ClearMugshot)
 	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
-	msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}<I will explain... When you arrive.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}<I will explain everything... \n"
+	"When you arrive.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
 	setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
     callnative(DrawMugshot)
-    msgbox("Ok, ok.\p"
+    msgbox("Alright, I got this...\p"
 	"My instruments say the gravity is\n"
 	"higher down here.")
 	waitmessage
@@ -48,10 +51,23 @@ script Final_Lab_Remark01 {
     callnative(ClearMugshot)
 	setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
     callnative(DrawMugshot)
-    msgbox("Welp.")
+    msgbox("Hostiles? What does that mean?!")
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
+	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    callnative(DrawMugshot)
+	msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}<Some Pokemon... Aren't fully in control...\n"
+	"Of themselves anymore...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+	setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
+	msgbox("Awesome. Vague.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
 	setvar(VAR_TEMP_0, 1)
 	setflag(FLAG_REGISTERED_LILA_AND_ROY)
 	release

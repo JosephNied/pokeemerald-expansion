@@ -3,11 +3,18 @@ mapscripts Planet01_Final_Lab_Interior_MapScripts {
 }
 
 script Planet01_Final_Lab_Interior_Enter {
-    setflashlevel(4)
+    setflashlevel(5)
+
 	if (flag(FLAG_REGISTERED_LOLA) == FALSE) {
 		setvar(VAR_TEMP_0, 0)
 	} else {
 		setvar(VAR_TEMP_0, 1)
+	}
+
+	if (flag(FLAG_REGISTERED_CRISTIN) == FALSE) {
+		setvar(VAR_TEMP_1, 0)
+	} else {
+		setvar(VAR_TEMP_1, 1)
 	}
 }
 
@@ -33,6 +40,131 @@ script Final_Lab_Interior_Remark01 {
 	callnative(ClearMugshot)
 	setvar(VAR_TEMP_0, 1)
 	setflag(FLAG_REGISTERED_LOLA)
+	release
+	end
+}
+
+script Final_Lab_Interior_FlavorText_Trash1 {
+    lock
+    msgbox("It's a pile of trash.")
+    release
+    end
+}
+
+script Final_Lab_Interior_FlavorText_Trash2 {
+    lock
+    msgbox("The doorway is blocked by a pile of\n"
+	"trash.")
+    release
+    end
+}
+
+script Final_Lab_Interior_FlavorText_Plant {
+    lock
+    msgbox("It's a long dead plant.")
+    release
+    end
+}
+
+script Final_Lab_Interior_FlavorText_Books {
+    lock
+    msgbox("Old textbooks on biology and chemistry.")
+    release
+    end
+}
+
+script Final_Lab_Interior_FlavorText_Board {
+    lock
+    msgbox("Notes and calendars... Dating back 30\n"
+	"years ago?! There are plans and maps for what\l"
+	"I can only assume are a rapid terraforming\l"
+	"project.")
+    release
+    end
+}
+
+script Final_Lab_Interior_FlavorText_Computer {
+    lock
+    msgbox("An old computer. It's not running.")
+    release
+    end
+}
+
+script Final_Lab_Interior_FlavorText_CraftingMachine {
+    lock
+    msgbox("A dusty, old crafting machine. Doesn't\n"
+	"seem to work.")
+    release
+    end
+}
+
+script Final_Lab_Interior_FlavorText_Pod {
+    lock
+    msgbox("Some kind of science machine?")
+    release
+    end
+}
+
+script Final_Lab_Interior_FlavorText_Pokeball {
+    lock
+    msgbox("A Pokeball!\p"
+	"...It's empty.")
+    release
+    end
+}
+
+script Final_Lab_Interior_BiologistEncounter {
+	lock
+
+	setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    callnative(DrawMugshot)
+    msgbox("!!!\n"
+	"You-!")
+	waitmessage
+	closemessage
+	callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    callnative(DrawMugshot)
+    msgbox("You're here...\n"
+	"I'm so happy...\l"
+	"...\p"
+	"Let me explain.\p"
+	"I was the biologist on the team of \n"
+	"scientists whose notes you've been \l"
+	"reading. \p"
+	"At the bottom of a cave full of Dittos, \n"
+	"we discovered the cell of a being we \l"
+	"soon learned was the terrifying \l"
+	"Deoxys, the space virus Pokemon. \p"
+	"We tried to control it. We tried to \n"
+	"change it. We tried to... Master it.\p"
+	"We failed. And it infected and \n"
+	"transformed my body. \p"
+	"The others abandoned me. They stole \n"
+	"the ship, and erased the Captain's \l"
+	"memories to avoid being held \l"
+	"accountable for their mutiny and \l"
+	"leaving me to succumb to the virus.\p"
+	"...You've seen those creatures running \n"
+	"around, the ones that appear \l"
+	"aggressive and corrupted? Yes, those \l"
+	"creatures were infected by Deoxys, and \l"
+	"will infect others as well. \p"
+	"When you're infected, your body may die \n"
+	"but the virus inside will not. It will \l"
+	"continue to use you to seek out new \l"
+	"hosts to infect. That's all Deoxys \l"
+	"wants. All infected beings share a part \l"
+	"in the mind and will of Deoxys.")
+	waitmessage
+	closemessage
+	callnative(ClearMugshot)
+
+	
+	
+	setvar(VAR_TEMP_1, 1)
+	setflag(FLAG_REGISTERED_CRISTIN)
 	release
 	end
 }
