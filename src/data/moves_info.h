@@ -3452,7 +3452,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Charges with speed to climb\n"
             "waterfalls. May flinch."),
         .effect = EFFECT_HIT,
-        .power = 80,
+        .power = 200,
         .type = TYPE_WATER,
         .accuracy = 100,
         .pp = 15,
