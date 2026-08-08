@@ -862,13 +862,13 @@ EventScript_TheCaptain_Text_0:
 # 326 "data/maps/Planet01_01/scripts.pory"
 	.string "I N-N-NEED P-POWER\n"
 	.string "P-PLEASE H-H-HELP ME.\l"
-	.string "RU-RUBY- GEMSTONE-\l"
+	.string "A-A-AMETHYST- CRYSTAL-\l"
 	.string "BRIN-N-NG I-IT TO ME.$"
 
 EventScript_TheCaptain_Text_1:
 # 336 "data/maps/Planet01_01/scripts.pory"
-	.string "Uh, a Ruby will power you\n"
-	.string "up? Ok... Where can I find one?$"
+	.string "Uh, an Amethyst will power you up?\n"
+	.string "Ok... Where can I find one?$"
 
 EventScript_TheCaptain_Text_2:
 # 344 "data/maps/Planet01_01/scripts.pory"
@@ -883,8 +883,8 @@ EventScript_TheCaptain_Text_3:
 
 EventScript_TheCaptain_Text_4:
 # 371 "data/maps/Planet01_01/scripts.pory"
-	.string "I-I-IN THE FOREST.\n"
-	.string "N-NEAR T-T-THE SH-SHORELINE.$"
+	.string "U-UP THE W-W-WATERFALL IN THE FOREST.\n"
+	.string "O-O-OUR OLD L-L-LAB. GO WEST.$"
 
 EventScript_TheCaptain_Text_5:
 # 381 "data/maps/Planet01_01/scripts.pory"
@@ -907,13 +907,13 @@ EventScript_TheCaptain_Text_8:
 
 EventScript_TheCaptain_Text_9:
 # 415 "data/maps/Planet01_01/scripts.pory"
-	.string "Ok, and your crystal is down\n"
-	.string "in the forest somewhere?$"
+	.string "Ok, and your crystal is in the\n"
+	.string "forest somewhere?$"
 
 EventScript_TheCaptain_Text_10:
 # 423 "data/maps/Planet01_01/scripts.pory"
-	.string "S-SOUTH, N-NEAR THE SH-SH-\n"
-	.string "SHORELINE.$"
+	.string "U-UP IN THE LAB, A-A-ABOVE THE\n"
+	.string "WATERFALL.$"
 
 EventScript_TheCaptain_Text_11:
 # 437 "data/maps/Planet01_01/scripts.pory"

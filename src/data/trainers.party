@@ -4559,32 +4559,40 @@ Class: Gentleman
 Pic: Gentleman
 Gender: Male
 Music: Rich
-Double Battle: No
-AI: Check Bad Move
+Double Battle: Yes
+AI: Check Bad Move / Force Setup First Turn
 
-Linoone
-Level: 41
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Headbutt
-- Sand Attack
-- Odor Sleuth
-- Fury Swipes
+Deoxys Attack
+Level: 75
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+- Psycho Boost
+- Fire Punch
+- Pursuit
+- Superpower
 
-Golduck
-Level: 41
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Fury Swipes
-- Disable
-- Confusion
-- Psych Up
+Deoxys Defense
+Level: 75
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+- Stored Power
+- Spikes
+- Cosmic Power
+- Torment
 
-Manectric
-Level: 41
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Quick Attack
-- Spark
-- Odor Sleuth
-- Roar
+Deoxys Speed
+Level: 75
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+- Extreme Speed
+- Overheat
+- Poison Jab
+- Substitute
+
+Deoxys
+Level: 75
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+- Ice Beam
+- Thunderbolt
+- Psychic
+- Taunt
 
 === TRAINER_SIDNEY ===
 Name: SIDNEY
@@ -4593,49 +4601,49 @@ Pic: Elite Four Sidney
 Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
-Double Battle: No
+Double Battle: Yes
 AI: Basic Trainer / Force Setup First Turn
 Mugshot: Purple
 
-Mightyena
-Level: 46
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Roar
-- Double Edge
-- Sand Attack
-- Crunch
-
-Shiftry
+Dusclops
 Level: 48
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Torment
-- Double Team
-- Swagger
-- Extrasensory
+- Shadow Punch
+- Confuse Ray
+- Curse
+- Protect
 
-Cacturne
-Level: 46
+Banette
+Level: 49
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Leech Seed
+- Shadow Ball
+- Grudge
+- Will O Wisp
 - Feint Attack
-- Needle Arm
-- Cotton Spore
 
-Crawdaunt
-Level: 48
+Sableye
+Level: 50
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Surf
-- Swords Dance
-- Strength
+- Shadow Ball
+- Double Team
+- Night Shade
+- Feint Attack
+
+Banette
+Level: 49
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- Shadow Ball
+- Psychic
+- Thunderbolt
 - Facade
 
-Absol @ Sitrus Berry
-Level: 49
+Dusclops @ Sitrus Berry
+Level: 51
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Aerial Ace
+- Shadow Ball
+- Ice Beam
 - Rock Slide
-- Swords Dance
-- Slash
+- Earthquake
 
 === TRAINER_PHOEBE ===
 Name: PHOEBE

@@ -325,7 +325,7 @@ script EventScript_TheCaptain {
         callnative(DrawMugshot)
         msgbox ("I N-N-NEED P-POWER\n"
         "P-PLEASE H-H-HELP ME.\l"
-        "RU-RUBY- GEMSTONE-\l"
+        "A-A-AMETHYST- CRYSTAL-\l"
         "BRIN-N-NG I-IT TO ME.")
         waitmessage
         closemessage
@@ -333,8 +333,8 @@ script EventScript_TheCaptain {
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
         callnative(DrawMugshot)
-        msgbox ("Uh, a Ruby will power you\n"
-        "up? Ok... Where can I find one?")
+        msgbox ("Uh, an Amethyst will power you up?\n"
+        "Ok... Where can I find one?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -368,8 +368,8 @@ script EventScript_TheCaptain {
 
         setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
         callnative(DrawMugshot)
-        msgbox ("I-I-IN THE FOREST.\n"
-        "N-NEAR T-T-THE SH-SHORELINE.")
+        msgbox ("U-UP THE W-W-WATERFALL IN THE FOREST.\n"
+        "O-O-OUR OLD L-L-LAB. GO WEST.")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -412,16 +412,16 @@ script EventScript_TheCaptain {
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
         callnative(DrawMugshot)
-        msgbox ("Ok, and your crystal is down\n"
-        "in the forest somewhere?")
+        msgbox ("Ok, and your crystal is in the\n"
+        "forest somewhere?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
         setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
         callnative(DrawMugshot)
-        msgbox("S-SOUTH, N-NEAR THE SH-SH-\n"
-        "SHORELINE.")
+        msgbox("U-UP IN THE LAB, A-A-ABOVE THE\n"
+        "WATERFALL.")
         waitmessage
         closemessage
         callnative(ClearMugshot)

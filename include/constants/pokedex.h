@@ -1118,6 +1118,12 @@ enum NationalDexOrder
     F(URSARING) \
     F(DUSKNOIR) \
     F(DITTO) \
+    F(VENUSAUR) \
+    F(HAXORUS) \
+    F(CHARIZARD) \
+    F(EXCADRILL) \
+    F(KINGDRA) \
+    F(METAGROSS) \
     F(ZEKROM) \
     F(DIANCIE) \
     F(JIRACHI) \

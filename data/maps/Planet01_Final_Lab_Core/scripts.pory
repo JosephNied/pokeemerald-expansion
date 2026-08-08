@@ -2,3 +2,21 @@ raw `
 Planet01_Final_Lab_Core_MapScripts::
 	.byte 0
 `
+script DoDeoxysBattle{
+	trainerbattle_single(TRAINER_WALTER_5, DeoxysBattle_Intro, DeoxysBattle_Outro)
+	fadeScreen(FADE_TO_BLACK)
+	setflag(FLAG_UNUSED_0x054)
+	removeobject(1)
+	fadeScreen(FADE_FROM_BLACK)
+	setvar(VAR_0x8000, SPECIES_DEOXYS_NORMAL)
+    callnative(RegisterSpeciesInDex)
+	end
+}
+
+text DeoxysBattle_Intro {
+	"Here it comes!"
+}
+
+text DeoxysBattle_Outro {
+	"You win the game!"
+}

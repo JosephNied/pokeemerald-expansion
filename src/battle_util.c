@@ -3292,6 +3292,11 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                 BattleScriptCall(BattleScript_GrassySurgeActivates);
                 effect++;
             }
+            if (TryChangeBattleWeather(battler, BATTLE_WEATHER_SUN, gLastUsedAbility))
+            {
+                BattleScriptCall(BattleScript_WeatherAbilityActivates);
+                effect++;
+            }
             break;
         case ABILITY_MISTY_SURGE:
             if (!shouldAbilityTrigger)

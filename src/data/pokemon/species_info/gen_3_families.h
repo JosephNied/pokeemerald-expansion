@@ -10073,12 +10073,12 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #if P_GEN_4_CROSS_EVOS
     [SPECIES_DUSKNOIR] =
     {
-        .baseHP        = 50,
+        .baseHP        = 70,
         .baseAttack    = 65,
-        .baseDefense   = 105,
+        .baseDefense   = 100,
         .baseSpeed     = 55,
         .baseSpAttack  = 95,
-        .baseSpDefense = 105,
+        .baseSpDefense = 100,
         .types = MON_TYPES(TYPE_GHOST),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
@@ -13390,12 +13390,12 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 
     [SPECIES_DEOXYS_NORMAL] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 150,
-        .baseDefense   = 50,
-        .baseSpeed     = 150,
-        .baseSpAttack  = 150,
-        .baseSpDefense = 50,
+        .baseHP        = 60,
+        .baseAttack    = 130,
+        .baseDefense   = 60,
+        .baseSpeed     = 130,
+        .baseSpAttack  = 130,
+        .baseSpDefense = 60,
         .types = MON_TYPES(TYPE_PSYCHIC),
         .catchRate = 3,
         .expYield = DEOXYS_EXP_YIELD,

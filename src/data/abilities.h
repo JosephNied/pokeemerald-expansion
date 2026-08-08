@@ -1758,7 +1758,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_GRASSY_SURGE] =
     {
         .name = _("Grassy Surge"),
-        .description = COMPOUND_STRING("Field becomes grassy."),
+        .description = COMPOUND_STRING("Field becomes grassy and sunny."),
         .aiRating = 8,
     },
 

@@ -78,3 +78,99 @@ script Final_Lab_Remark01 {
 	release
 	end
 }
+
+script EventScript_CorruptCatch_V {
+	lockall
+	special(SetBossBattle)
+    setwildbattle(
+        SPECIES_VENUSAUR,
+        65,
+        ITEM_NONE
+    )
+    dowildbattle
+    special(BossBattleOff)
+	setflag(FLAG_TEMP_4)
+	removeobject(1)
+	releaseall
+	end
+}
+
+script EventScript_CorruptCatch_H {
+	lockall
+	special(SetBossBattle)
+    setwildbattle(
+        SPECIES_HAXORUS,
+        65,
+        ITEM_NONE
+    )
+    dowildbattle
+    special(BossBattleOff)
+	setflag(FLAG_TEMP_5)
+	removeobject(3)
+	releaseall
+	end
+}
+
+script EventScript_CorruptCatch_C {
+	lockall
+	special(SetBossBattle)
+    setwildbattle(
+        SPECIES_CHARIZARD,
+        65,
+        ITEM_NONE
+    )
+    dowildbattle
+    special(BossBattleOff)
+	setflag(FLAG_TEMP_6)
+	removeobject(6)
+	releaseall
+	end
+}
+
+script EventScript_CorruptCatch_E {
+	lockall
+	special(SetBossBattle)
+    setwildbattle(
+        SPECIES_EXCADRILL,
+        65,
+        ITEM_NONE
+    )
+    dowildbattle
+    special(BossBattleOff)
+	setflag(FLAG_TEMP_7)
+	removeobject(2)
+	releaseall
+	end
+}
+
+script EventScript_CorruptCatch_K {
+	lockall
+	special(SetBossBattle)
+    setwildbattle(
+        SPECIES_KINGDRA,
+        65,
+        ITEM_NONE
+    )
+    dowildbattle
+    special(BossBattleOff)
+	setflag(FLAG_TEMP_8)
+	removeobject(5)
+	releaseall
+	end
+}
+
+script EventScript_CorruptCatch_M {
+	lockall
+	special(SetBossBattle)
+    setwildbattle(
+        SPECIES_METAGROSS,
+        65,
+        ITEM_NONE
+    )
+    dowildbattle
+    special(BossBattleOff)
+	setflag(FLAG_TEMP_9)
+	removeobject(4)
+	releaseall
+	end
+}

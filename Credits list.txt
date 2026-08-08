@@ -1,0 +1,20 @@
+Credits:
+
+Developers:
+Rita - Art, writing
+Joseph - Programming, Art, writing
+Gamefreak - Pokemon Emerald
+
+Playtesters:
+Catherine
+XXXplaytester
+
+Other:
+PRET team - For Pokeemerald-Expanded
+Team Aqua Rom Hack discord - All those who helped with ROM hacking advice
+Archie - For hosting the contest
+Montblanc for the SWSH party menu and summary screen
+Spike Chunsoft & XXXcreator of Pokemon mugshots
+CFRU folks for battle background:
+https://github.com/Skeli789/Complete-Fire-Red-Upgrade
+https://github.com/Shiny-Miner/CFRU-expansion/tree/Experiments

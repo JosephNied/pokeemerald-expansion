@@ -6015,7 +6015,7 @@ static const struct LevelUpMove sUrsalunaLevelUpLearnset[] = {
     LEVEL_UP_MOVE(35, MOVE_SCARY_FACE),
     LEVEL_UP_MOVE(41, MOVE_REST),
     LEVEL_UP_MOVE(41, MOVE_BITE),
-    LEVEL_UP_MOVE(48, MOVE_BULLDOZE),
+    LEVEL_UP_MOVE(48, MOVE_EARTHQUAKE),
     LEVEL_UP_MOVE(56, MOVE_THRASH),
     LEVEL_UP_END
 };
@@ -6656,7 +6656,7 @@ static const struct LevelUpMove sHoOhLevelUpLearnset[] = {
 #if P_FAMILY_CELEBI
 static const struct LevelUpMove sCelebiLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_SOLAR_BEAM),
-    LEVEL_UP_MOVE( 1, MOVE_EARTHQUAKE),
+    LEVEL_UP_MOVE( 1, MOVE_EARTH_POWER),
     LEVEL_UP_MOVE( 1, MOVE_WATERFALL),
     LEVEL_UP_MOVE( 1, MOVE_OVERHEAT),
     LEVEL_UP_END

@@ -231,6 +231,19 @@ script Planet01_02_HintText03 {
     "the cave above this waterfall.\p"
     "You may be able to find our previous\n"
     "campsites to the south.")
+    waitmessage
+    closemessage
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+    callnative(DrawMugshot)
+    msgbox ("Welp. I don't have any way to get\n"
+    "up there right now. Guess I'll have\l"
+    "to start searching the old campsites.\l"
+    "This is the only lead I've got.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
     release
     end
 }
