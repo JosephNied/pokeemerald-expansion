@@ -89,6 +89,8 @@ script EventScript_CorruptCatch_V {
     )
     dowildbattle
     special(BossBattleOff)
+	setvar(VAR_0x8000, SPECIES_VENUSAUR)
+    callnative(RegisterSpeciesInDex)
 	setflag(FLAG_TEMP_4)
 	removeobject(1)
 	releaseall
@@ -105,6 +107,8 @@ script EventScript_CorruptCatch_H {
     )
     dowildbattle
     special(BossBattleOff)
+	setvar(VAR_0x8000, SPECIES_HAXORUS)
+    callnative(RegisterSpeciesInDex)
 	setflag(FLAG_TEMP_5)
 	removeobject(3)
 	releaseall
@@ -121,6 +125,8 @@ script EventScript_CorruptCatch_C {
     )
     dowildbattle
     special(BossBattleOff)
+	setvar(VAR_0x8000, SPECIES_CHARIZARD)
+    callnative(RegisterSpeciesInDex)
 	setflag(FLAG_TEMP_6)
 	removeobject(6)
 	releaseall
@@ -137,6 +143,8 @@ script EventScript_CorruptCatch_E {
     )
     dowildbattle
     special(BossBattleOff)
+	setvar(VAR_0x8000, SPECIES_EXCADRILL)
+    callnative(RegisterSpeciesInDex)
 	setflag(FLAG_TEMP_7)
 	removeobject(2)
 	releaseall
@@ -153,6 +161,8 @@ script EventScript_CorruptCatch_K {
     )
     dowildbattle
     special(BossBattleOff)
+	setvar(VAR_0x8000, SPECIES_KINGDRA)
+    callnative(RegisterSpeciesInDex)
 	setflag(FLAG_TEMP_8)
 	removeobject(5)
 	releaseall
@@ -169,6 +179,8 @@ script EventScript_CorruptCatch_M {
     )
     dowildbattle
     special(BossBattleOff)
+	setvar(VAR_0x8000, SPECIES_METAGROSS)
+    callnative(RegisterSpeciesInDex)
 	setflag(FLAG_TEMP_9)
 	removeobject(4)
 	releaseall

@@ -135,110 +135,134 @@ EventScript_CorruptCatch_V::
 # 91 "data/maps/Planet01_Final_Lab/scripts.pory"
 	special BossBattleOff
 # 92 "data/maps/Planet01_Final_Lab/scripts.pory"
-	setflag FLAG_TEMP_4
+	setvar VAR_0x8000, SPECIES_VENUSAUR
 # 93 "data/maps/Planet01_Final_Lab/scripts.pory"
-	removeobject 1
+	callnative RegisterSpeciesInDex
 # 94 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setflag FLAG_TEMP_4
+# 95 "data/maps/Planet01_Final_Lab/scripts.pory"
+	removeobject 1
+# 96 "data/maps/Planet01_Final_Lab/scripts.pory"
 	releaseall
 	end
 
 
 EventScript_CorruptCatch_H::
-# 99 "data/maps/Planet01_Final_Lab/scripts.pory"
-	lockall
-# 100 "data/maps/Planet01_Final_Lab/scripts.pory"
-	special SetBossBattle
 # 101 "data/maps/Planet01_Final_Lab/scripts.pory"
+	lockall
+# 102 "data/maps/Planet01_Final_Lab/scripts.pory"
+	special SetBossBattle
+# 103 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setwildbattle SPECIES_HAXORUS, 65, ITEM_NONE
-# 106 "data/maps/Planet01_Final_Lab/scripts.pory"
-	dowildbattle
-# 107 "data/maps/Planet01_Final_Lab/scripts.pory"
-	special BossBattleOff
 # 108 "data/maps/Planet01_Final_Lab/scripts.pory"
-	setflag FLAG_TEMP_5
+	dowildbattle
 # 109 "data/maps/Planet01_Final_Lab/scripts.pory"
-	removeobject 3
+	special BossBattleOff
 # 110 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setvar VAR_0x8000, SPECIES_HAXORUS
+# 111 "data/maps/Planet01_Final_Lab/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 112 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setflag FLAG_TEMP_5
+# 113 "data/maps/Planet01_Final_Lab/scripts.pory"
+	removeobject 3
+# 114 "data/maps/Planet01_Final_Lab/scripts.pory"
 	releaseall
 	end
 
 
 EventScript_CorruptCatch_C::
-# 115 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 119 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lockall
-# 116 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 120 "data/maps/Planet01_Final_Lab/scripts.pory"
 	special SetBossBattle
-# 117 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 121 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setwildbattle SPECIES_CHARIZARD, 65, ITEM_NONE
-# 122 "data/maps/Planet01_Final_Lab/scripts.pory"
-	dowildbattle
-# 123 "data/maps/Planet01_Final_Lab/scripts.pory"
-	special BossBattleOff
-# 124 "data/maps/Planet01_Final_Lab/scripts.pory"
-	setflag FLAG_TEMP_6
-# 125 "data/maps/Planet01_Final_Lab/scripts.pory"
-	removeobject 6
 # 126 "data/maps/Planet01_Final_Lab/scripts.pory"
+	dowildbattle
+# 127 "data/maps/Planet01_Final_Lab/scripts.pory"
+	special BossBattleOff
+# 128 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setvar VAR_0x8000, SPECIES_CHARIZARD
+# 129 "data/maps/Planet01_Final_Lab/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 130 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setflag FLAG_TEMP_6
+# 131 "data/maps/Planet01_Final_Lab/scripts.pory"
+	removeobject 6
+# 132 "data/maps/Planet01_Final_Lab/scripts.pory"
 	releaseall
 	end
 
 
 EventScript_CorruptCatch_E::
-# 131 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 137 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lockall
-# 132 "data/maps/Planet01_Final_Lab/scripts.pory"
-	special SetBossBattle
-# 133 "data/maps/Planet01_Final_Lab/scripts.pory"
-	setwildbattle SPECIES_EXCADRILL, 65, ITEM_NONE
 # 138 "data/maps/Planet01_Final_Lab/scripts.pory"
-	dowildbattle
+	special SetBossBattle
 # 139 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setwildbattle SPECIES_EXCADRILL, 65, ITEM_NONE
+# 144 "data/maps/Planet01_Final_Lab/scripts.pory"
+	dowildbattle
+# 145 "data/maps/Planet01_Final_Lab/scripts.pory"
 	special BossBattleOff
-# 140 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 146 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setvar VAR_0x8000, SPECIES_EXCADRILL
+# 147 "data/maps/Planet01_Final_Lab/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 148 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setflag FLAG_TEMP_7
-# 141 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 149 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 2
-# 142 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 150 "data/maps/Planet01_Final_Lab/scripts.pory"
 	releaseall
 	end
 
 
 EventScript_CorruptCatch_K::
-# 147 "data/maps/Planet01_Final_Lab/scripts.pory"
-	lockall
-# 148 "data/maps/Planet01_Final_Lab/scripts.pory"
-	special SetBossBattle
-# 149 "data/maps/Planet01_Final_Lab/scripts.pory"
-	setwildbattle SPECIES_KINGDRA, 65, ITEM_NONE
-# 154 "data/maps/Planet01_Final_Lab/scripts.pory"
-	dowildbattle
 # 155 "data/maps/Planet01_Final_Lab/scripts.pory"
-	special BossBattleOff
+	lockall
 # 156 "data/maps/Planet01_Final_Lab/scripts.pory"
-	setflag FLAG_TEMP_8
+	special SetBossBattle
 # 157 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setwildbattle SPECIES_KINGDRA, 65, ITEM_NONE
+# 162 "data/maps/Planet01_Final_Lab/scripts.pory"
+	dowildbattle
+# 163 "data/maps/Planet01_Final_Lab/scripts.pory"
+	special BossBattleOff
+# 164 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setvar VAR_0x8000, SPECIES_KINGDRA
+# 165 "data/maps/Planet01_Final_Lab/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 166 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setflag FLAG_TEMP_8
+# 167 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 5
-# 158 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 168 "data/maps/Planet01_Final_Lab/scripts.pory"
 	releaseall
 	end
 
 
 EventScript_CorruptCatch_M::
-# 163 "data/maps/Planet01_Final_Lab/scripts.pory"
-	lockall
-# 164 "data/maps/Planet01_Final_Lab/scripts.pory"
-	special SetBossBattle
-# 165 "data/maps/Planet01_Final_Lab/scripts.pory"
-	setwildbattle SPECIES_METAGROSS, 65, ITEM_NONE
-# 170 "data/maps/Planet01_Final_Lab/scripts.pory"
-	dowildbattle
-# 171 "data/maps/Planet01_Final_Lab/scripts.pory"
-	special BossBattleOff
-# 172 "data/maps/Planet01_Final_Lab/scripts.pory"
-	setflag FLAG_TEMP_9
 # 173 "data/maps/Planet01_Final_Lab/scripts.pory"
-	removeobject 4
+	lockall
 # 174 "data/maps/Planet01_Final_Lab/scripts.pory"
+	special SetBossBattle
+# 175 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setwildbattle SPECIES_METAGROSS, 65, ITEM_NONE
+# 180 "data/maps/Planet01_Final_Lab/scripts.pory"
+	dowildbattle
+# 181 "data/maps/Planet01_Final_Lab/scripts.pory"
+	special BossBattleOff
+# 182 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setvar VAR_0x8000, SPECIES_METAGROSS
+# 183 "data/maps/Planet01_Final_Lab/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 184 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setflag FLAG_TEMP_9
+# 185 "data/maps/Planet01_Final_Lab/scripts.pory"
+	removeobject 4
+# 186 "data/maps/Planet01_Final_Lab/scripts.pory"
 	releaseall
 	end
 
