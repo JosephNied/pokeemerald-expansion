@@ -267,6 +267,44 @@ EventScript_CorruptCatch_M::
 	end
 
 
+EventScript_DragoniteEncounter::
+# 192 "data/maps/Planet01_Final_Lab/scripts.pory"
+	lockall
+# 194 "data/maps/Planet01_Final_Lab/scripts.pory"
+	getpartysize
+# 195 "data/maps/Planet01_Final_Lab/scripts.pory"
+	compare VAR_RESULT, 6
+	goto_if_ge EventScript_DragoniteEncounter_2
+# 201 "data/maps/Planet01_Final_Lab/scripts.pory"
+	checkitem ITEM_BEAST_BALL, 1
+# 202 "data/maps/Planet01_Final_Lab/scripts.pory"
+	compare VAR_RESULT, FALSE
+	goto_if_eq EventScript_DragoniteEncounter_5
+# 208 "data/maps/Planet01_Final_Lab/scripts.pory"
+	givemon SPECIES_DRAGONITE, 50
+# 210 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setflag FLAG_TEMP_9
+# 211 "data/maps/Planet01_Final_Lab/scripts.pory"
+	removeobject 4
+# 213 "data/maps/Planet01_Final_Lab/scripts.pory"
+	releaseall
+	end
+
+EventScript_DragoniteEncounter_2:
+# 196 "data/maps/Planet01_Final_Lab/scripts.pory"
+	msgbox EventScript_DragoniteEncounter_Text_0
+# 197 "data/maps/Planet01_Final_Lab/scripts.pory"
+	releaseall
+	end
+
+EventScript_DragoniteEncounter_5:
+# 203 "data/maps/Planet01_Final_Lab/scripts.pory"
+	msgbox EventScript_DragoniteEncounter_Text_1
+# 204 "data/maps/Planet01_Final_Lab/scripts.pory"
+	releaseall
+	end
+
+
 # 18 "data/maps/Planet01_Final_Lab/scripts.pory"
 Final_Lab_Remark01_Movement_0:
 # 18 "data/maps/Planet01_Final_Lab/scripts.pory"
@@ -318,3 +356,11 @@ Final_Lab_Remark01_Text_5:
 Final_Lab_Remark01_Text_6:
 # 72 "data/maps/Planet01_Final_Lab/scripts.pory"
 	.string "Awesome. Vague.$"
+
+EventScript_DragoniteEncounter_Text_0:
+# 196 "data/maps/Planet01_Final_Lab/scripts.pory"
+	.string "You have too many Pokemon in your party!$"
+
+EventScript_DragoniteEncounter_Text_1:
+# 203 "data/maps/Planet01_Final_Lab/scripts.pory"
+	.string "You need a Beast Ball to catch this Pokemon!$"

@@ -186,3 +186,30 @@ script EventScript_CorruptCatch_M {
 	releaseall
 	end
 }
+
+
+script EventScript_DragoniteEncounter {
+    lockall
+
+    getpartysize
+    if (var(VAR_RESULT) >= 6) {
+		msgbox("You have too many Pokemon in your party!")
+        releaseall
+        end
+    }
+
+    checkitem(ITEM_BEAST_BALL, 1)
+    if (var(VAR_RESULT) == FALSE) {
+		msgbox("You need a Beast Ball to catch this Pokemon!")
+        releaseall
+        end
+    }
+
+	givemon(SPECIES_DRAGONITE, 50)
+
+    setflag(FLAG_TEMP_9)
+    removeobject(4)
+
+    releaseall
+    end
+}

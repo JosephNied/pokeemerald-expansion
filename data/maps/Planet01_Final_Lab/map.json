@@ -54,16 +54,16 @@
       "flag": "FLAG_TEMP_5"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(METAGROSS)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DRAGONITE)",
       "x": 7,
-      "y": 49,
+      "y": 44,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_CHASE_PLAYER_OWE",
+      "movement_type": "MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
-      "trainer_sight_or_berry_tree_id": "65",
-      "script": "NULL",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_DragoniteEncounter",
       "flag": "FLAG_TEMP_9"
     },
     {

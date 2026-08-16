@@ -5,6 +5,7 @@ mapscripts Planet01_01_MapScripts {
 
 script Planet01_01_Enter {
 	special(SetRandomFlags)
+    special(BossBattleOff)
     if(flag(FLAG_REGISTERED_ROSE) == FALSE) {
         setvar(VAR_TEMP_0, 0)
     } else {
