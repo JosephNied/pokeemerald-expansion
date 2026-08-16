@@ -765,7 +765,7 @@ enum BattleEnvironments BattleSetup_GetEnvironmentId(void)
     {
         // Is BRIDGE_TYPE_POND_*?
         if (MetatileBehavior_GetBridgeType(tileBehavior) != BRIDGE_TYPE_OCEAN)
-            return BATTLE_ENVIRONMENT_POND;
+            return BATTLE_ENVIRONMENT_WATER;
 
         if (MetatileBehavior_IsBridgeOverWater(tileBehavior) == TRUE)
             return BATTLE_ENVIRONMENT_WATER;
@@ -793,6 +793,21 @@ enum BattleEnvironments BattleSetup_GetEnvironmentId(void)
 
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_PLANET01_07) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_PLANET01_07))
         return BATTLE_ENVIRONMENT_MOUNTAIN;
+    
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_PLANET01_07) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_PLANET01_07))
+        return BATTLE_ENVIRONMENT_MOUNTAIN;
+
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_PLANET01_FIRST_CAMP_CAVE) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_PLANET01_FIRST_CAMP_CAVE))
+        return BATTLE_ENVIRONMENT_GRASS;
+    
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_PLANET01_DIANCIE_CAVE) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_PLANET01_DIANCIE_CAVE))
+        return BATTLE_ENVIRONMENT_GRASS;
+    
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_PLANET01_ICE_CAVE) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_PLANET01_ICE_CAVE))
+        return BATTLE_ENVIRONMENT_POND;
+    
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_PLANET01_FINAL_LAB) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_PLANET01_FINAL_LAB))
+        return BATTLE_ENVIRONMENT_LONG_GRASS;
         
     if (GetSavedWeather() == WEATHER_SANDSTORM)
         return BATTLE_ENVIRONMENT_SAND;

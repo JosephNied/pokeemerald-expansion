@@ -581,7 +581,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Charizard,
             gShinyOverworldPalette_Charizard
         )
-        .overworldEncounterBehavior = OWE_CHASE_PLAYER_MEDIUM,
+        .overworldEncounterBehavior = OWE_CHASE_PLAYER_FAST,
         .levelUpLearnset = sCharizardLevelUpLearnset,
         .teachableLearnset = sCharizardTeachableLearnset,
         .formSpeciesIdTable = sCharizardFormSpeciesIdTable,
@@ -15482,7 +15482,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Kingdra,
             gShinyOverworldPalette_Kingdra
         )
-        .overworldEncounterBehavior = OWE_CHASE_PLAYER_MEDIUM,
+        .overworldEncounterBehavior = OWE_CHASE_PLAYER_FAST,
         .levelUpLearnset = sKingdraLevelUpLearnset,
         .teachableLearnset = sKingdraTeachableLearnset,
     },

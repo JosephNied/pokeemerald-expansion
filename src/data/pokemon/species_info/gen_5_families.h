@@ -2830,7 +2830,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_Excadrill,
             gShinyOverworldPalette_Excadrill
         )
-        .overworldEncounterBehavior = OWE_CHASE_PLAYER_MEDIUM,
+        .overworldEncounterBehavior = OWE_CHASE_PLAYER_FAST,
         .levelUpLearnset = sExcadrillLevelUpLearnset,
         .teachableLearnset = sExcadrillTeachableLearnset,
         .formSpeciesIdTable = sExcadrillFormSpeciesIdTable,
