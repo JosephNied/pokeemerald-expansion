@@ -758,18 +758,10 @@ enum BattleEnvironments BattleSetup_GetEnvironmentId(void)
     if (MetatileBehavior_IsDeepOrOceanWater(tileBehavior))
         return BATTLE_ENVIRONMENT_WATER;
     if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
-        return BATTLE_ENVIRONMENT_POND;
+        return BATTLE_ENVIRONMENT_WATER;
     if (MetatileBehavior_IsMountain(tileBehavior))
         return BATTLE_ENVIRONMENT_MOUNTAIN;
-    if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
-    {
-        // Is BRIDGE_TYPE_POND_*?
-        if (MetatileBehavior_GetBridgeType(tileBehavior) != BRIDGE_TYPE_OCEAN)
-            return BATTLE_ENVIRONMENT_WATER;
 
-        if (MetatileBehavior_IsBridgeOverWater(tileBehavior) == TRUE)
-            return BATTLE_ENVIRONMENT_WATER;
-    }
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_ROUTE113) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_ROUTE113))
         return BATTLE_ENVIRONMENT_SAND;
 
@@ -808,6 +800,17 @@ enum BattleEnvironments BattleSetup_GetEnvironmentId(void)
     
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_PLANET01_FINAL_LAB) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_PLANET01_FINAL_LAB))
         return BATTLE_ENVIRONMENT_LONG_GRASS;
+    
+    if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
+    {
+        return BATTLE_ENVIRONMENT_WATER;
+        // Is BRIDGE_TYPE_POND_*?
+        /*if (MetatileBehavior_GetBridgeType(tileBehavior) != BRIDGE_TYPE_OCEAN)
+            return BATTLE_ENVIRONMENT_WATER;
+
+        if (MetatileBehavior_IsBridgeOverWater(tileBehavior) == TRUE)
+            return BATTLE_ENVIRONMENT_WATER;*/
+    }
         
     if (GetSavedWeather() == WEATHER_SANDSTORM)
         return BATTLE_ENVIRONMENT_SAND;
