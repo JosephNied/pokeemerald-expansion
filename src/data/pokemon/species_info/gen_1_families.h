@@ -155,7 +155,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_VENUSAUR] =
     {
         .baseHP        = 80,
-        .baseAttack    = 95,
+        .baseAttack    = 80,
         .baseDefense   = 85,
         .baseSpeed     = 80,
         .baseSpAttack  = 80,
@@ -15482,7 +15482,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Kingdra,
             gShinyOverworldPalette_Kingdra
         )
-        .overworldEncounterBehavior = OWE_CHASE_PLAYER_FAST,
+        .overworldEncounterBehavior = OWE_CHASE_PLAYER_MEDIUM,
         .levelUpLearnset = sKingdraLevelUpLearnset,
         .teachableLearnset = sKingdraTeachableLearnset,
     },

@@ -305,6 +305,90 @@ EventScript_DragoniteEncounter_5:
 	end
 
 
+Planet01_Final_Lab_EventScript_Item01::
+# 218 "data/maps/Planet01_Final_Lab/scripts.pory"
+	lock
+# 219 "data/maps/Planet01_Final_Lab/scripts.pory"
+	giveitem ITEM_ROCKY_HELMET, 1
+# 220 "data/maps/Planet01_Final_Lab/scripts.pory"
+	removeobject 11
+# 221 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setflag FLAG_UNUSED_0x4A2
+# 222 "data/maps/Planet01_Final_Lab/scripts.pory"
+	release
+	end
+
+
+Planet01_Final_Lab_EventScript_Item02::
+# 227 "data/maps/Planet01_Final_Lab/scripts.pory"
+	lock
+# 228 "data/maps/Planet01_Final_Lab/scripts.pory"
+	giveitem ITEM_LIFE_ORB, 1
+# 229 "data/maps/Planet01_Final_Lab/scripts.pory"
+	removeobject 12
+# 230 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setflag FLAG_UNUSED_0x4A7
+# 231 "data/maps/Planet01_Final_Lab/scripts.pory"
+	release
+	end
+
+
+Planet01_Final_Lab_EventScript_Item03::
+# 236 "data/maps/Planet01_Final_Lab/scripts.pory"
+	lock
+# 237 "data/maps/Planet01_Final_Lab/scripts.pory"
+	giveitem ITEM_RARE_CANDY, 5
+# 238 "data/maps/Planet01_Final_Lab/scripts.pory"
+	removeobject 7
+# 239 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setflag FLAG_UNUSED_0x4A3
+# 240 "data/maps/Planet01_Final_Lab/scripts.pory"
+	release
+	end
+
+
+Planet01_Final_Lab_EventScript_Item04::
+# 245 "data/maps/Planet01_Final_Lab/scripts.pory"
+	lock
+# 246 "data/maps/Planet01_Final_Lab/scripts.pory"
+	giveitem ITEM_RARE_CANDY, 5
+# 247 "data/maps/Planet01_Final_Lab/scripts.pory"
+	removeobject 9
+# 248 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setflag FLAG_UNUSED_0x4A4
+# 249 "data/maps/Planet01_Final_Lab/scripts.pory"
+	release
+	end
+
+
+Planet01_Final_Lab_EventScript_Item05::
+# 254 "data/maps/Planet01_Final_Lab/scripts.pory"
+	lock
+# 255 "data/maps/Planet01_Final_Lab/scripts.pory"
+	giveitem ITEM_CHOICE_SCARF, 1
+# 256 "data/maps/Planet01_Final_Lab/scripts.pory"
+	removeobject 10
+# 257 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setflag FLAG_UNUSED_0x4A5
+# 258 "data/maps/Planet01_Final_Lab/scripts.pory"
+	release
+	end
+
+
+Planet01_Final_Lab_EventScript_Item06::
+# 263 "data/maps/Planet01_Final_Lab/scripts.pory"
+	lock
+# 264 "data/maps/Planet01_Final_Lab/scripts.pory"
+	giveitem ITEM_LEFTOVERS, 1
+# 265 "data/maps/Planet01_Final_Lab/scripts.pory"
+	removeobject 8
+# 266 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setflag FLAG_UNUSED_0x4A6
+# 267 "data/maps/Planet01_Final_Lab/scripts.pory"
+	release
+	end
+
+
 # 18 "data/maps/Planet01_Final_Lab/scripts.pory"
 Final_Lab_Remark01_Movement_0:
 # 18 "data/maps/Planet01_Final_Lab/scripts.pory"

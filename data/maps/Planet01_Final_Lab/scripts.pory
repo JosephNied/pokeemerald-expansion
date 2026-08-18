@@ -155,7 +155,7 @@ script EventScript_CorruptCatch_K {
 	lockall
 	special(SetBossBattle)
     setwildbattle(
-        SPECIES_KINGDRA,
+        SPECIES_KINGDRA, 
         65,
         ITEM_NONE
     )
@@ -212,4 +212,58 @@ script EventScript_DragoniteEncounter {
 
     releaseall
     end
+}
+
+script Planet01_Final_Lab_EventScript_Item01 {
+	lock
+	giveitem(ITEM_ROCKY_HELMET, 1)
+	removeobject(11)
+	setflag(FLAG_UNUSED_0x4A2)
+	release
+	end
+}
+
+script Planet01_Final_Lab_EventScript_Item02 {
+	lock
+	giveitem(ITEM_LIFE_ORB, 1)
+	removeobject(12)
+	setflag(FLAG_UNUSED_0x4A7)
+	release
+	end
+}
+
+script Planet01_Final_Lab_EventScript_Item03 {
+	lock
+	giveitem(ITEM_RARE_CANDY, 5)
+	removeobject(7)
+	setflag(FLAG_UNUSED_0x4A3)
+	release
+	end
+}
+
+script Planet01_Final_Lab_EventScript_Item04 {
+	lock
+	giveitem(ITEM_RARE_CANDY, 5)
+	removeobject(9)
+	setflag(FLAG_UNUSED_0x4A4)
+	release
+	end
+}
+
+script Planet01_Final_Lab_EventScript_Item05 {
+	lock
+	giveitem(ITEM_CHOICE_SCARF, 1)
+	removeobject(10)
+	setflag(FLAG_UNUSED_0x4A5)
+	release
+	end
+}
+
+script Planet01_Final_Lab_EventScript_Item06 {
+	lock
+	giveitem(ITEM_LEFTOVERS, 1)
+	removeobject(8)
+	setflag(FLAG_UNUSED_0x4A6)
+	release
+	end
 }
