@@ -37,8 +37,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(QUAGSIRE)",
-      "x": 26,
-      "y": 11,
+      "x": 24,
+      "y": 9,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_APPROACH_PLAYER_OWE",
       "movement_range_x": 0,
@@ -63,8 +63,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MINIOR)",
-      "x": 4,
-      "y": 19,
+      "x": 9,
+      "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -89,8 +89,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MINIOR)",
-      "x": 18,
-      "y": 30,
+      "x": 17,
+      "y": 29,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -125,6 +125,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Planet01_04_EventScript_Item02",
       "flag": "FLAG_UNUSED_0x49F"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(ELGYEM)",
+      "x": 4,
+      "y": 25,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Planet01_03_Elgyem",
+      "flag": "0"
     }
   ],
   "warp_events": [
