@@ -290,7 +290,7 @@ Planet01_01_Elgyem::
 # 201 "data/maps/Planet01_01/scripts.pory"
 	waitmessage
 # 202 "data/maps/Planet01_01/scripts.pory"
-	warp MAP_PLANET01_02, 0, 21, 23
+	warp MAP_PLANET01_04, 1, 12, 1
 # 203 "data/maps/Planet01_01/scripts.pory"
 	waitstate
 # 204 "data/maps/Planet01_01/scripts.pory"
@@ -820,7 +820,7 @@ Planet01_01_Carbink_Text_1:
 Planet01_01_Elgyem_Text_0:
 # 199 "data/maps/Planet01_01/scripts.pory"
 	.string "Elgyem seems taken off-guard!\n"
-	.string "My bad- Huh?! It's using Teleport-$"
+	.string "My bad- Huh?! It's flashing red-$"
 
 Planet01_01_JirachiAppears_Text_0:
 # 212 "data/maps/Planet01_01/scripts.pory"

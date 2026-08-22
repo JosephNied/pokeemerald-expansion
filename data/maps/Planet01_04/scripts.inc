@@ -132,6 +132,30 @@ Planet01_04_HintText03::
 	end
 
 
+Planet01_04_Elgyem::
+# 96 "data/maps/Planet01_04/scripts.pory"
+	lock
+# 97 "data/maps/Planet01_04/scripts.pory"
+	faceplayer
+# 98 "data/maps/Planet01_04/scripts.pory"
+	playmoncry SPECIES_ELGYEM, CRY_MODE_ENCOUNTER
+# 99 "data/maps/Planet01_04/scripts.pory"
+	setvar VAR_0x8000, SPECIES_ELGYEM
+# 100 "data/maps/Planet01_04/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 101 "data/maps/Planet01_04/scripts.pory"
+	msgbox Planet01_04_Elgyem_Text_0
+# 103 "data/maps/Planet01_04/scripts.pory"
+	waitmessage
+# 104 "data/maps/Planet01_04/scripts.pory"
+	warp MAP_PLANET01_02, 0, 21, 23
+# 105 "data/maps/Planet01_04/scripts.pory"
+	waitstate
+# 106 "data/maps/Planet01_04/scripts.pory"
+	release
+	end
+
+
 Planet01_04_AddAir_Minior01_Text_0:
 # 16 "data/maps/Planet01_04/scripts.pory"
 	.string "Minior is floating in a pocket of air!\n"
@@ -161,3 +185,8 @@ Planet01_04_HintText03_Text_0:
 	.string "very large. It actually loops around\l"
 	.string "here. We'll have mapped it all out in\l"
 	.string "no time!$"
+
+Planet01_04_Elgyem_Text_0:
+# 101 "data/maps/Planet01_04/scripts.pory"
+	.string "Elgyem seems taken off-guard!\n"
+	.string "My bad- Huh?! It's flashing green-$"

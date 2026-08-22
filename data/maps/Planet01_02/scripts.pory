@@ -312,3 +312,18 @@ movement Movement_QuagsireWaterstone1 {
     face_left
     walk_left
 }
+
+script Planet01_02_Elgyem {
+    lock
+    faceplayer
+    playmoncry(SPECIES_ELGYEM, CRY_MODE_ENCOUNTER)
+    setvar(VAR_0x8000, SPECIES_ELGYEM)
+    callnative(RegisterSpeciesInDex)
+    msgbox("Elgyem seems taken off-guard!\n"
+    "My bad- Huh?! It's flashing blue-")
+    waitmessage
+    warp(MAP_PLANET01_03, 2, 11, 2)
+    waitstate
+    release
+    end
+}

@@ -225,9 +225,9 @@ script Planet01_03_Elgyem {
     setvar(VAR_0x8000, SPECIES_ELGYEM)
     callnative(RegisterSpeciesInDex)
     msgbox("Elgyem seems taken off-guard!\n"
-    "My bad- Huh?! It's using Teleport-")
+    "My bad- Huh?! It's flashing yellow-")
     waitmessage
-    warp(MAP_PLANET01_04, 1, 12, 1)
+    warp(MAP_PLANET01_05, 1, 32, 1)
     waitstate
     release
     end

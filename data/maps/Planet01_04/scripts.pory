@@ -91,3 +91,18 @@ script Planet01_04_HintText03 {
     release
     end
 }
+
+script Planet01_04_Elgyem {
+    lock
+    faceplayer
+    playmoncry(SPECIES_ELGYEM, CRY_MODE_ENCOUNTER)
+    setvar(VAR_0x8000, SPECIES_ELGYEM)
+    callnative(RegisterSpeciesInDex)
+    msgbox("Elgyem seems taken off-guard!\n"
+    "My bad- Huh?! It's flashing green-")
+    waitmessage
+    warp(MAP_PLANET01_02, 0, 21, 23)
+    waitstate
+    release
+    end
+}

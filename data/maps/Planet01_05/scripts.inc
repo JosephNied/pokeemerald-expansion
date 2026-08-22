@@ -137,6 +137,84 @@ Planet01_05_HintText01::
 	end
 
 
+Color_Puzzle::
+# 99 "data/maps/Planet01_05/scripts.pory"
+	lock
+# 100 "data/maps/Planet01_05/scripts.pory"
+	msgbox Color_Puzzle_Text_0
+# 101 "data/maps/Planet01_05/scripts.pory"
+	setvar VAR_DAILY_ROULETTE, 0
+# 102 "data/maps/Planet01_05/scripts.pory"
+	msgbox Color_Puzzle_Text_1
+# 103 "data/maps/Planet01_05/scripts.pory"
+	multichoice 0, 0, MULTI_COLOR_PUZZLE, FALSE
+# 104 "data/maps/Planet01_05/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq Color_Puzzle_2
+Color_Puzzle_1:
+# 107 "data/maps/Planet01_05/scripts.pory"
+	msgbox Color_Puzzle_Text_2
+# 108 "data/maps/Planet01_05/scripts.pory"
+	multichoice 0, 0, MULTI_COLOR_PUZZLE, FALSE
+# 109 "data/maps/Planet01_05/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_eq Color_Puzzle_5
+Color_Puzzle_4:
+# 112 "data/maps/Planet01_05/scripts.pory"
+	msgbox Color_Puzzle_Text_3
+# 113 "data/maps/Planet01_05/scripts.pory"
+	multichoice 0, 0, MULTI_COLOR_PUZZLE, FALSE
+# 114 "data/maps/Planet01_05/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_eq Color_Puzzle_8
+Color_Puzzle_7:
+# 117 "data/maps/Planet01_05/scripts.pory"
+	msgbox Color_Puzzle_Text_4
+# 118 "data/maps/Planet01_05/scripts.pory"
+	multichoice 0, 0, MULTI_COLOR_PUZZLE, FALSE
+# 119 "data/maps/Planet01_05/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq Color_Puzzle_11
+Color_Puzzle_10:
+# 123 "data/maps/Planet01_05/scripts.pory"
+	compare VAR_DAILY_ROULETTE, 4
+	goto_if_eq Color_Puzzle_13
+# 130 "data/maps/Planet01_05/scripts.pory"
+	msgbox Color_Puzzle_Text_5
+# 131 "data/maps/Planet01_05/scripts.pory"
+	release
+	end
+
+Color_Puzzle_2:
+# 105 "data/maps/Planet01_05/scripts.pory"
+	addvar VAR_DAILY_ROULETTE, 1
+	goto Color_Puzzle_1
+
+Color_Puzzle_5:
+# 110 "data/maps/Planet01_05/scripts.pory"
+	addvar VAR_DAILY_ROULETTE, 1
+	goto Color_Puzzle_4
+
+Color_Puzzle_8:
+# 115 "data/maps/Planet01_05/scripts.pory"
+	addvar VAR_DAILY_ROULETTE, 1
+	goto Color_Puzzle_7
+
+Color_Puzzle_11:
+# 120 "data/maps/Planet01_05/scripts.pory"
+	addvar VAR_DAILY_ROULETTE, 1
+	goto Color_Puzzle_10
+
+Color_Puzzle_13:
+# 124 "data/maps/Planet01_05/scripts.pory"
+	warp MAP_PLANET01_FINAL_LAB_CORE, 1, 0, 0
+# 125 "data/maps/Planet01_05/scripts.pory"
+	waitstate
+# 126 "data/maps/Planet01_05/scripts.pory"
+	release
+	end
+
+
 Planet01_05_DusknoirEncounter_Text_0:
 # 16 "data/maps/Planet01_05/scripts.pory"
 	.string "A terrifying Pokémon bursts out\n"
@@ -158,3 +236,27 @@ Planet01_05_HintText01_Text_0:
 	.string "case there is a connection.\p"
 	.string "These Duskull are freaking me out\n"
 	.string "anyway.$"
+
+Color_Puzzle_Text_0:
+# 100 "data/maps/Planet01_05/scripts.pory"
+	.string "A strange, colorful rock...$"
+
+Color_Puzzle_Text_1:
+# 102 "data/maps/Planet01_05/scripts.pory"
+	.string "Touch a color?$"
+
+Color_Puzzle_Text_2:
+# 107 "data/maps/Planet01_05/scripts.pory"
+	.string "...Touch another color?$"
+
+Color_Puzzle_Text_3:
+# 112 "data/maps/Planet01_05/scripts.pory"
+	.string "Touch yet another color?$"
+
+Color_Puzzle_Text_4:
+# 117 "data/maps/Planet01_05/scripts.pory"
+	.string "Touch a final color?$"
+
+Color_Puzzle_Text_5:
+# 130 "data/maps/Planet01_05/scripts.pory"
+	.string "you lose!$"

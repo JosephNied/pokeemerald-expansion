@@ -472,6 +472,30 @@ Movement_QuagsireWaterstone1:
 	walk_left
 	step_end
 
+Planet01_02_Elgyem::
+# 317 "data/maps/Planet01_02/scripts.pory"
+	lock
+# 318 "data/maps/Planet01_02/scripts.pory"
+	faceplayer
+# 319 "data/maps/Planet01_02/scripts.pory"
+	playmoncry SPECIES_ELGYEM, CRY_MODE_ENCOUNTER
+# 320 "data/maps/Planet01_02/scripts.pory"
+	setvar VAR_0x8000, SPECIES_ELGYEM
+# 321 "data/maps/Planet01_02/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 322 "data/maps/Planet01_02/scripts.pory"
+	msgbox Planet01_02_Elgyem_Text_0
+# 324 "data/maps/Planet01_02/scripts.pory"
+	waitmessage
+# 325 "data/maps/Planet01_02/scripts.pory"
+	warp MAP_PLANET01_03, 2, 11, 2
+# 326 "data/maps/Planet01_02/scripts.pory"
+	waitstate
+# 327 "data/maps/Planet01_02/scripts.pory"
+	release
+	end
+
+
 # 287 "data/maps/Planet01_02/scripts.pory"
 Planet01_02_QuagsireTrigger_Movement_0:
 # 287 "data/maps/Planet01_02/scripts.pory"
@@ -560,3 +584,8 @@ Planet01_02_HintText06_Text_0:
 Planet01_02_QuagsireTrigger_Text_0:
 # 281 "data/maps/Planet01_02/scripts.pory"
 	.string "Huh? In the waterfall-$"
+
+Planet01_02_Elgyem_Text_0:
+# 322 "data/maps/Planet01_02/scripts.pory"
+	.string "Elgyem seems taken off-guard!\n"
+	.string "My bad- Huh?! It's flashing blue-$"

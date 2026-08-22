@@ -518,6 +518,13 @@
       "elevation": 0,
       "dest_map": "MAP_PLANET01_FIRST_CAMP_CAVE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_PLANET01_03",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

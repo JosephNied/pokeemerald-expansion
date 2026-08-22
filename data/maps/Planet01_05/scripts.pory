@@ -94,3 +94,41 @@ script Planet01_05_HintText01 {
     release
     end
 }
+
+script Color_Puzzle {
+    lock
+    msgbox ("A strange, colorful rock...")
+    setvar(VAR_DAILY_ROULETTE, 0)
+    msgbox ("Touch a color?")
+    multichoice(0, 0, MULTI_COLOR_PUZZLE, FALSE)
+    if (var(VAR_RESULT) == 0) {
+        addvar(VAR_DAILY_ROULETTE, 1)
+    }
+    msgbox ("...Touch another color?")
+    multichoice(0, 0, MULTI_COLOR_PUZZLE, FALSE)
+    if (var(VAR_RESULT) == 2) {
+        addvar(VAR_DAILY_ROULETTE, 1)
+    }
+    msgbox ("Touch yet another color?")
+    multichoice(0, 0, MULTI_COLOR_PUZZLE, FALSE)
+    if (var(VAR_RESULT) == 3) {
+        addvar(VAR_DAILY_ROULETTE, 1)
+    }
+    msgbox ("Touch a final color?")
+    multichoice(0, 0, MULTI_COLOR_PUZZLE, FALSE)
+    if (var(VAR_RESULT) == 1) {
+        addvar(VAR_DAILY_ROULETTE, 1)
+    }
+    
+    if (var(VAR_DAILY_ROULETTE) == 4) {
+    warp(MAP_PLANET01_FINAL_LAB_CORE, 1, 0, 0)
+    waitstate
+    release
+    end
+    }
+    else {
+        msgbox("you lose!")
+    release
+    end
+    }
+}

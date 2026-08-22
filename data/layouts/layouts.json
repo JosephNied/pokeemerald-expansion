@@ -9417,7 +9417,7 @@
     {
       "id": "LAYOUT_PLANET01_05",
       "name": "Planet01_05_Layout",
-      "width": 28,
+      "width": 35,
       "height": 26,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Underwater",
