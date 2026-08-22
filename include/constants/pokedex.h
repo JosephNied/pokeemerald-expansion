@@ -1100,6 +1100,7 @@ enum NationalDexOrder
     F(MINIOR) \
     F(CARBINK) \
     F(ELGYEM) \
+    F(BEHEEYEM) \
     F(STEELIX) \
     F(SHUCKLE) \
     F(QUAGSIRE) \

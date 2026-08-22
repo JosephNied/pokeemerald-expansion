@@ -97,24 +97,24 @@ script Planet01_05_HintText01 {
 
 script Color_Puzzle {
     lock
-    msgbox ("A strange, colorful rock...")
+    msgbox ("A mesmerizing, iridescent rock...")
     setvar(VAR_DAILY_ROULETTE, 0)
-    msgbox ("Touch a color?")
+    msgbox ("You begin to focus on a color...")
     multichoice(0, 0, MULTI_COLOR_PUZZLE, FALSE)
     if (var(VAR_RESULT) == 0) {
         addvar(VAR_DAILY_ROULETTE, 1)
     }
-    msgbox ("...Touch another color?")
+    msgbox ("...And another...")
     multichoice(0, 0, MULTI_COLOR_PUZZLE, FALSE)
     if (var(VAR_RESULT) == 2) {
         addvar(VAR_DAILY_ROULETTE, 1)
     }
-    msgbox ("Touch yet another color?")
+    msgbox ("Hypnotized, by another...")
     multichoice(0, 0, MULTI_COLOR_PUZZLE, FALSE)
     if (var(VAR_RESULT) == 3) {
         addvar(VAR_DAILY_ROULETTE, 1)
     }
-    msgbox ("Touch a final color?")
+    msgbox ("Drawn into another color...")
     multichoice(0, 0, MULTI_COLOR_PUZZLE, FALSE)
     if (var(VAR_RESULT) == 1) {
         addvar(VAR_DAILY_ROULETTE, 1)

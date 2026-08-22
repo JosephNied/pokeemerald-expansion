@@ -244,6 +244,8 @@ script Planet01_02_HintText03 {
     closemessage
     callnative(ClearMugshot)
 
+    setvar (VAR_CAPTAIN_DIALOGUE, 3)
+
     release
     end
 }

@@ -28,6 +28,7 @@ End:
 raw `
 Planet01_01_FrameTable::
 	map_script_2 VAR_AIR_TIMER_TRIGGERED, 1, Planet01_01_StartAirTimer
+    map_script_2 VAR_TEMP_0, 0, Planet01_01_JirachiAppears
 	.2byte 0
 `
 
@@ -56,6 +57,15 @@ script Planet01_01_EventScript_Item02 {
     giveitem(ITEM_STAR_PIECE, 1)
     setflag(FLAG_UNUSED_0x494)
     removeobject(11)
+    release
+    end
+}
+
+script Planet01_01_EventScript_Item03 {
+    lock
+    giveitem(ITEM_COMET_SHARD, 1)
+    setflag(FLAG_UNUSED_0x4A8)
+    removeobject(18)
     release
     end
 }
@@ -124,10 +134,6 @@ script Planet01_01_HintText01 {
     "a lab here for biological research.\p"
     "Note: The gravity is low here. Tall \n"
     "ledges can be scaled easily!")
-    setflag(FLAG_TEMP_9)
-    if (var(VAR_CAPTAIN_DIALOGUE) == 1) {
-        setvar(VAR_CAPTAIN_DIALOGUE, 2)
-    }
     release
     end
 }
@@ -207,63 +213,23 @@ script Planet01_01_Elgyem {
 
 script Planet01_01_JirachiAppears {
     lock
-    setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
-    callnative(DrawMugshot)
-    msgbox("So this is an alien planet, eh?\l"
-    "Well, it better watch out. I don't get\n"
-    "suprised easily.")
-    waitmessage
-    closemessage
-    callnative(ClearMugshot)
-    special(Script_FadeOutMapMusic)
-    applymovement(14, Movement_FirstJirachiEncounter1)
-    waitse()
-    playmoncry(SPECIES_JIRACHI, CRY_MODE_ENCOUNTER)
-    delay(40)
-    waitmoncry()
-    setvar(VAR_0x8000, MUGSHOT_JIRACHI_WORRIED)
-    callnative(DrawMugshot)
-    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}...\p"
-    "<More humans? Again, to cause more\n"
-    "trouble?>\p"
-    "...")
-    waitmessage
-    closemessage
-    callnative(ClearMugshot)
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
-    waitmovement(OBJ_EVENT_ID_PLAYER)
-    delay(60)
-    applymovement(14, Movement_FirstJirachiEncounter2)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player0)
     waitmovement(0)
-    delay(30)
-    removeobject(14)
-    setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
-    callnative(DrawMugshot)
-    msgbox("{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}...Was that a Jirachi?!\n"
-    "I think I could hear it somehow... Are\l"
-    "there other humans here somewhere?!\l"
-    "I bet they would know why my ship was\l"
-    "dragged here. I need to look for them!")
-    waitmessage
-    closemessage
-    callnative(ClearMugshot)
-    delay(30)
-    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
-    callnative(DrawMugshot)
-    msgbox("...Seeing a Jirachi is supposed\n"
-    "to be good luck. It didn't seem too\l"
-    "happy with me being here, though...\p"
-    "I don't have a good feeling about this.")
-    waitmessage
-    closemessage
-    callnative(ClearMugshot)
-    special(Overworld_PlaySpecialMapMusic)
-    delay(30)
     special(Script_FadeOutMapMusic)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_question_mark, face_up))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+    callnative(DrawMugshot)
+    msgbox("...I see can't anything wrong with my\n"
+    "ship.\p"
+    "No hull damage, fuel is good. What-")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
     setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
-    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}H-H-HEY!\n"
-    "D-D-DOWN H-H-HERE!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Hey!\n"
+    "Down herrre, pal!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -271,50 +237,302 @@ script Planet01_01_JirachiAppears {
     waitmovement(OBJ_EVENT_ID_PLAYER)
     setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
-    msgbox("What was that? A person?!\n"
-    "...Hello?")
+    msgbox("What was that? A person?!")
     waitmessage
     closemessage
     callnative(ClearMugshot)
+    delay(30)
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+    callnative(DrawMugshot)
+    msgbox("...Hello? How do I get down?")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+    setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    callnative(DrawMugshot)
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Just jump, it's safe!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player1)
+    waitmovement(0)
+
+    setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+    callnative(DrawMugshot)
+    msgbox("Hello, frrreind.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+    callnative(DrawMugshot)
+    msgbox("Uh, hello. Who are you?")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+    callnative(DrawMugshot)
+    msgbox("Why, I'm the captain of the \n" 
+    "experrrdition LYDIAN. Yep, I'm the\l" 
+    "captain. Never let a human do something\l" 
+    "important, that's my motto. It was also\l"
+    "my company's slogan.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+    callnative(DrawMugshot)
+    msgbox("...Really. Uh, if that's so, is your\n"
+    "human crew somewhere around here?")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+    callnative(DrawMugshot)
+    msgbox("Noooope. They'rrrre long gone, kiddo.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+    callnative(DrawMugshot)
+    msgbox("...Oh. Where'd they go?")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+    callnative(DrawMugshot)
+    msgbox("I don't know. I don't really know much\n" 
+    "to be honest, on account of my memories\l" 
+    "missing; orrr, perrrhaps errrased.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+    callnative(DrawMugshot)
+    msgbox("...Ok. Well, any chance you know why I\n"
+    "can't lift my ship off the ground?")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+    callnative(DrawMugshot)
+    msgbox("Well sirrr/ma'am/sirrr'am, it's all\n" 
+    "account of the absurd levels of purrrre\l" 
+    "psychic energy layerrred on top of it.\l"
+    "Yep.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    callnative(DrawMugshot)
+    msgbox("...WHAT? So you're saying something is\n"
+    "trapping me here?!")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+    callnative(DrawMugshot)
+    msgbox("I suppose. Sorrry kiddo.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+    callnative(DrawMugshot)
+    msgbox("...Well this is unsettling. I have more\n"
+    "questions. A lot more questions.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+    callnative(DrawMugshot)
+    msgbox("Well kiddo, you'rrre in luck. See these\n
+    here wall scribbles?")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_question_mark, face_up))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    
+    setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+    callnative(DrawMugshot)
+    msgbox("My team was kind enough to leave\n"
+    "some notes for futurre explorrrerrrs.\p"
+    "In fact, I've been rrreading them too.\n" 
+    "I've learrrned that our primary\l"
+    "rrresearrrch facility was up the\l"
+    "waterrrfall in the forrrest just\l"
+    "overrr to the west.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark, face_left))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    delay(60)
+
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
+    msgbox("Oh? That sounds like a promising place\n
+    to investigate. Do you have, like a map?")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+    callnative(DrawMugshot)
+    msgbox ("Yes in fact I do! Let me load it up for\n
+    you!")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    applymovement(17, moves(face_up))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+
+    delay(60)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+    callnative(DrawMugshot)
+    msgbox ("<Its... drawing something? Where\n"
+    "did it get that paper and pencil?>")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    delay(60)
+
+    applymovement(17, moves(face_down))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+
+    setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+    callnative(DrawMugshot)
+    msgbox ("Here you arrre!\n"
+    "Our old lab is to the left.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    giveitem(ITEM_WAILMER_PAIL)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
+    msgbox ("Awesome, a map!\n"
+    "...\l"
+    "...You're quite the artist!")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+    callnative(DrawMugshot)
+    msgbox("Thank you, kiddo.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+    callnative(DrawMugshot)
+    msgbox("I'm like, almost 30.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+    callnative(DrawMugshot)
+    msgbox("Well happy early birthday, kiddo.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+    callnative(DrawMugshot)
+    msgbox("...")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
+    msgbox("Guess I'll start reading these notes!")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+
+    delay(30)
+
     special(Overworld_PlaySpecialMapMusic)
     setvar(VAR_TEMP_0, 1)
     setflag(FLAG_REGISTERED_ROSE)
+
+    msgbox("Captain: This is the captain of\n" 
+    "expedition 001. \p"
+    "Our team has placed notes for future \n"
+    "explorers in hopefully convenient \l"
+    "places. Our objective is to create\l"
+    "a lab here for biological research.\p"
+    "Note: The gravity is low here. Tall \n"
+    "ledges can be scaled easily!")
+    setflag(FLAG_TEMP_9)
+    setvar(VAR_CAPTAIN_DIALOGUE, 1)
     release
     end
-}
+    }
 
-movement Movement_FirstJirachiEncounter1 {
-    face_down
-    set_visible
-    delay_4
-    set_invisible
-    delay_4
-    set_visible
-    delay_4
-    set_invisible
-    delay_4
-    set_visible
-    delay_8
-    set_invisible
-    delay_8
-    set_visible
-    delay_8
-    set_invisible
-    delay_8
-    set_visible
-    delay_16
-    set_invisible
-    delay_16
-    set_visible
-}
-
-movement Movement_FirstJirachiEncounter2 {
+movement Movement_Player0 {
+    walk_left
     face_up
     delay_16
-    walk_up
-    walk_up
-    walk_up
-    walk_up
+    delay_16
+    delay_16
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    face_up
+    delay_16
+    delay_16
+    delay_16
+    walk_left
+    walk_left
+    walk_left
+    face_up
+}
+
+movement Movement_Player1 {
+    delay_16
+    delay_16
+    face_right
+    walk_right
+    walk_right
+    delay_8
+    walk_down
+    delay_16
+    delay_16
+    walk_down
+    delay_16
+    delay_16
+    delay_16
+    jump_down
+    jump_down
+    face_right
 }
 
 script EventScript_TheCaptain {
@@ -406,14 +624,14 @@ script EventScript_TheCaptain {
 
         setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
         callnative(DrawMugshot)
-        msgbox("TW-TWILIGHT PLATEAU.")
+        msgbox("The Twilight Plateau.")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
         callnative(DrawMugshot)
-        msgbox ("Ok, and your crystal is in the\n"
+        msgbox ("Ok, and your lab was is in the\n"
         "forest somewhere?")
         waitmessage
         closemessage
@@ -421,54 +639,65 @@ script EventScript_TheCaptain {
 
         setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
         callnative(DrawMugshot)
-        msgbox("U-UP IN THE LAB, A-A-ABOVE THE\n"
-        "WATERFALL.")
+        msgbox("Up the waterrrfall, yep.")
         waitmessage
         closemessage
         callnative(ClearMugshot)
-
-        if (flag(FLAG_TEMP_9) == TRUE) {
-            setvar(VAR_CAPTAIN_DIALOGUE, 2)
-        }
+        setvar(VAR_CAPTAIN_DIALOGUE, 2)
     }
     elif (var(VAR_CAPTAIN_DIALOGUE) == 2) 
     {
-        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
-        callnative(DrawMugshot)
-        msgbox ("So, were you a part of this team of\n"
-        "researchers?")
-        waitmessage
-        closemessage
-        callnative(ClearMugshot)
-
-        setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
-        callnative(DrawMugshot)
-        msgbox("Y-YES...")
-        waitmessage
-        closemessage
-        callnative(ClearMugshot)
-
-        setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
-        callnative(DrawMugshot)
-        msgbox ("Wow, that's cool!")
-        waitmessage
-        closemessage
-        callnative(ClearMugshot)
-
         setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
         callnative(DrawMugshot)
-        msgbox ("...Uh, what happened?")
+        msgbox ("So, were you a part of this team of\n"
+        "researchers? Are you sure you were the\l"
+        "captain?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
         setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
         callnative(DrawMugshot)
-        msgbox("T-TALKING H-H-HURTS...\n"
-        "C-CRYSTAL FIRS-ST-ST-ST...")
+        msgbox("Of courrrse! Have you seen my hat?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+        callnative(DrawMugshot)
+        msgbox ("...I don't know if that's especially\n"
+        "great evidence.")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+        callnative(DrawMugshot)
+        msgbox("Don't take this from me, kiddo.")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+        setvar (VAR_CAPTAIN_DIALOGUE, 1)
+    }
+    elif (var(VAR_CAPTAIN_DIALOGUE) == 3) 
+    {
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+        callnative(DrawMugshot)
+        msgbox ("Hey Cap', I can't get up the waterfall.\n"
+        "What do I do now?")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+        callnative(DrawMugshot)
+        msgbox("There's gotta be a pokerrrmon with\n"
+        "waterrrfall somewhere, kiddo. Don't give\l"
+        "up.")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+        setvar (VAR_CAPTAIN_DIALOGUE, 3)
     }
     release
     end

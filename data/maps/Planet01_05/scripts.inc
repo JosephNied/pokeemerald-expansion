@@ -239,23 +239,23 @@ Planet01_05_HintText01_Text_0:
 
 Color_Puzzle_Text_0:
 # 100 "data/maps/Planet01_05/scripts.pory"
-	.string "A strange, colorful rock...$"
+	.string "A mesmerizing, iridescent rock...$"
 
 Color_Puzzle_Text_1:
 # 102 "data/maps/Planet01_05/scripts.pory"
-	.string "Touch a color?$"
+	.string "You begin to focus on a color...$"
 
 Color_Puzzle_Text_2:
 # 107 "data/maps/Planet01_05/scripts.pory"
-	.string "...Touch another color?$"
+	.string "...And another...$"
 
 Color_Puzzle_Text_3:
 # 112 "data/maps/Planet01_05/scripts.pory"
-	.string "Touch yet another color?$"
+	.string "Hypnotized, by another...$"
 
 Color_Puzzle_Text_4:
 # 117 "data/maps/Planet01_05/scripts.pory"
-	.string "Touch a final color?$"
+	.string "Drawn into another color...$"
 
 Color_Puzzle_Text_5:
 # 130 "data/maps/Planet01_05/scripts.pory"

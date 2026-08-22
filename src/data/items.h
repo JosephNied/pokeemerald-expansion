@@ -2909,8 +2909,8 @@ const struct ItemInfo gItemsInfo[] =
     #endif
         .description = COMPOUND_STRING(
             "A comet's shard.\n"
-            "It would sell for a\n"
-            "high price."),
+            "Not sure if it can\n"
+            "be used somehow."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_SELLABLE,
         .type = ITEM_USE_BAG_MENU,

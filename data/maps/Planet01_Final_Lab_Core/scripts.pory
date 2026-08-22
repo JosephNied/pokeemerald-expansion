@@ -1,7 +1,11 @@
-raw `
-Planet01_Final_Lab_Core_MapScripts::
-	.byte 0
-`
+mapscripts Planet01_Final_Lab_Core_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Planet01_Final_Lab_Core_Enter
+}
+
+script Planet01_Final_Lab_Core_Enter {
+	setflashlevel(4)
+}
+
 script DoDeoxysBattle{
 	trainerbattle_single(TRAINER_WALTER_5, DeoxysBattle_Intro, DeoxysBattle_Outro)
 	fadeScreen(FADE_TO_BLACK)
@@ -14,9 +18,19 @@ script DoDeoxysBattle{
 }
 
 text DeoxysBattle_Intro {
-	"Here it comes!"
+	"Here it comes! Brace yourself!"
 }
 
 text DeoxysBattle_Outro {
-	"You win the game!"
+	"...It's over."
+}
+
+script Beheeyem {
+	msgbox("...Time to wake up...")
+	setvar(VAR_0x8000, SPECIES_BEHEEYEM)
+    callnative(RegisterSpeciesInDex)
+	warp(MAP_PLANET01_01, 1, 31, 11)
+    waitstate
+    release
+    end
 }
