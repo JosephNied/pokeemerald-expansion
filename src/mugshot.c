@@ -77,6 +77,9 @@ static const u16 sMugshotPal_JIRACHI_OK[] = INCBIN_U16("graphics/mugshots/Jirach
 static const u32 sMugshotImg_JIRACHI_HAPPY[] = INCBIN_U32("graphics/mugshots/Jirachi_happy.4bpp.lz");
 static const u16 sMugshotPal_JIRACHI_HAPPY[] = INCBIN_U16("graphics/mugshots/Jirachi_happy.gbapal");
 
+static const u32 sMugshotImg_DITTO[] = INCBIN_U32("graphics/mugshots/Ditto.4bpp.lz");
+static const u16 sMugshotPal_DITTO[] = INCBIN_U16("graphics/mugshots/Ditto.gbapal");
+
 static const u32 sMugshotImg_MAP_01[] = INCBIN_U32("graphics/mugshots/map01.4bpp.lz");
 static const u32 sMugshotImg_MAP_02[] = INCBIN_U32("graphics/mugshots/map02.4bpp.lz");
 static const u32 sMugshotImg_MAP_03[] = INCBIN_U32("graphics/mugshots/map03.4bpp.lz");
@@ -114,6 +117,7 @@ static const struct Mugshot sMugshots[] = {
     [MUGSHOT_JIRACHI_WORRIED] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_JIRACHI_WORRIED, .palette = sMugshotPal_JIRACHI_WORRIED},
     [MUGSHOT_JIRACHI_OK] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_JIRACHI_OK, .palette = sMugshotPal_JIRACHI_OK},
     [MUGSHOT_JIRACHI_HAPPY] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_JIRACHI_HAPPY, .palette = sMugshotPal_JIRACHI_HAPPY},
+    [MUGSHOT_DITTO] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_DITTO, .palette = sMugshotPal_DITTO},
 
     [MUGSHOT_MAP_01] = {.x = 9, .y = 2, .width = 96, .height = 96, .image = sMugshotImg_MAP_01, .palette = sMugshotPal_MAPS},
     [MUGSHOT_MAP_02] = {.x = 9, .y = 2, .width = 96, .height = 96, .image = sMugshotImg_MAP_02, .palette = sMugshotPal_MAPS},

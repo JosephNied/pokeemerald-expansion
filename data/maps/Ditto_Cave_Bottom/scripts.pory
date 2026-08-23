@@ -1,13 +1,21 @@
-raw `
-Ditto_Cave_Bottom_MapScripts::
-	.byte 0
-`
+mapscripts Ditto_Cave_Bottom_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Ditto_Cave_Bottom_Enter
+}
+
+script Ditto_Cave_Bottom_Enter {
+}
 
 script Ditto_Cave_Bottom_DittoTrainer {
 	trainerbattle_single(TRAINER_MITCHELL, Ditto_Cave_Bottom_Ditto_Intro, Ditto_Cave_Bottom_Ditto_Outro)
 	fadeScreen(FADE_TO_BLACK)
 	setflag(FLAG_UNUSED_0x03C)
 	removeobject(1)
+	clearflag(FLAG_HIDE_ROUTE_111_GABBY_AND_TY_3)
+	clearflag(FLAG_HIDE_ROUTE_118_GABBY_AND_TY_2)
+	clearflag(FLAG_HIDE_ROUTE_120_GABBY_AND_TY_2)
+	addobject(3)
+	addobject(4)
+	addobject(5)
 	fadeScreen(FADE_FROM_BLACK)
 	setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
     callnative(DrawMugshot)
@@ -36,6 +44,15 @@ script Ditto_Cave_Bottom_EventScript_Item01 {
 	end
 }
 
+script Ditto_Cave_Bottom_EventScript_Item02 {
+	lock
+	giveitem(ITEM_SUN_STONE, 1)
+	removeobject(6)
+	setflag(FLAG_TEMP_2)
+	release
+	end
+}
+
 script Ditto_Cave_Bottom_HintText01 {
 	lock
 	msgbox("Biologist: We discovered a strange\n"
@@ -43,6 +60,24 @@ script Ditto_Cave_Bottom_HintText01 {
     "It has a strange power to it. We need to\l"
 	"take it to our lab above the waterfall\l"
 	"and study it, immediately.")
+	release
+	end
+}
+
+script Ditto_Boi {
+	lockall
+	faceplayer
+	setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+    callnative(DrawMugshot)
+    msgbox("You put up a good fight, buddy.")
+    waitmessage
+    callnative(ClearMugshot)
+    release
+	setvar(VAR_0x8000, MUGSHOT_DITTO)
+    callnative(DrawMugshot)
+	msgbox("DITTO!")
+	waitmessage
+    callnative(ClearMugshot)
 	release
 	end
 }

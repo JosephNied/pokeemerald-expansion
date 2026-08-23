@@ -87,17 +87,65 @@ Planet01_First_Camp_Cave_HintText01::
 	closemessage
 # 75 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	delay 60
-# 76 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_CONFUSED
 # 77 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	callnative DrawMugshot
+	setvar VAR_0x8000, MUGSHOT_PLAYER_CONFUSED
 # 78 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative DrawMugshot
+# 79 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	msgbox Planet01_First_Camp_Cave_HintText01_Text_1
-# 82 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+# 81 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	waitmessage
-# 83 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+# 82 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	callnative ClearMugshot
-# 84 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+# 83 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	release
+# 85 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+# 86 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative DrawMugshot
+# 87 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	msgbox Planet01_First_Camp_Cave_HintText01_Text_2
+# 89 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	waitmessage
+# 90 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative ClearMugshot
+# 91 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	release
+# 93 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
+# 94 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative DrawMugshot
+# 95 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	msgbox Planet01_First_Camp_Cave_HintText01_Text_3
+# 97 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	waitmessage
+# 98 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative ClearMugshot
+# 99 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	release
+# 101 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+# 102 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative DrawMugshot
+# 103 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	msgbox Planet01_First_Camp_Cave_HintText01_Text_4
+# 113 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	waitmessage
+# 114 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative ClearMugshot
+# 115 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	release
+# 117 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
+# 118 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative DrawMugshot
+# 119 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	msgbox Planet01_First_Camp_Cave_HintText01_Text_5
+# 124 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	waitmessage
+# 125 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative ClearMugshot
+# 126 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	release
 	end
 
@@ -125,8 +173,37 @@ Planet01_First_Camp_Cave_HintText01_Text_0:
 	.string "explore those too.$"
 
 Planet01_First_Camp_Cave_HintText01_Text_1:
-# 78 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+# 79 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	.string "I was hoping to find these guys\n"
-	.string "by now. It seems like it's been a while\l"
-	.string "since they've been here. How long ago\l"
-	.string "was this expedition?$"
+	.string "by now...$"
+
+Planet01_First_Camp_Cave_HintText01_Text_2:
+# 87 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<A fly, caught in a web. I'm surprised\n"
+	.string "you're still whole, to be honest.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+
+Planet01_First_Camp_Cave_HintText01_Text_3:
+# 95 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	.string "Enough with the games! Just tell me who\n"
+	.string "you are!$"
+
+Planet01_First_Camp_Cave_HintText01_Text_4:
+# 103 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<Who am I... Good question... Nothing\n"
+	.string "important. In truth, I was going to tell\l"
+	.string "you how you might escape by getting to\l"
+	.string "the research facility at the top of the\l"
+	.string "waterfall. But, I guess I still don't\l"
+	.string "know if that's what I want... I don't\l"
+	.string "mean you any harm. But it's probably\l"
+	.string "better you don't listen to me; a lost\l"
+	.string "soul in the dark. However you choose to\l"
+	.string "end this... I'm sorry.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+
+Planet01_First_Camp_Cave_HintText01_Text_5:
+# 119 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	.string "Look, you're clearly going through a\n"
+	.string "time, but I don't want to be here. Just\l"
+	.string "tell me what I need to do to get my ship\l"
+	.string "off the ground.\p"
+	.string "Hello? Hello?!?! ...Gone again? Damn.$"

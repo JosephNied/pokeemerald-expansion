@@ -1549,8 +1549,8 @@ Planet01_01_AddAir_Minior01_Text_1:
 Planet01_01_HintText01_Text_0:
 # 134 "data/maps/Planet01_01/scripts.pory"
 	.string "Captain: This is the captain of\n"
-	.string "expedition 001. \p"
-	.string "Our team has placed notes for future \n"
+	.string "expedition 'WILD INDIGO'. \p"
+	.string "Our team has recorded notes for future\n"
 	.string "explorers in hopefully convenient \l"
 	.string "places. Our objective is to create\l"
 	.string "a lab here for biological research.\p"
@@ -1654,7 +1654,7 @@ Planet01_01_RobotGreeting_Text_10:
 
 Planet01_01_RobotGreeting_Text_11:
 # 315 "data/maps/Planet01_01/scripts.pory"
-	.string "I don't know. I don't really know much\n"
+	.string "I don't know. I don't rrreally know much\n"
 	.string "to be honest, on account of my memories\l"
 	.string "missing; orrr, perrrhaps errrased.$"
 

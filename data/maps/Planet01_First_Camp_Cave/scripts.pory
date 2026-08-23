@@ -73,14 +73,57 @@ script Planet01_First_Camp_Cave_HintText01 {
     waitmessage
     closemessage
     delay(60)
+
     setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
     callnative(DrawMugshot)
     msgbox("I was hoping to find these guys\n"
-    "by now. It seems like it's been a while\l"
-    "since they've been here. How long ago\l"
-    "was this expedition?")
+    "by now...")
     waitmessage
     callnative(ClearMugshot)
     release
+
+    setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    callnative(DrawMugshot)
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<A fly, caught in a web. I'm surprised\n" 
+    "you're still whole, to be honest.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    waitmessage
+    callnative(ClearMugshot)
+    release
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    callnative(DrawMugshot)
+    msgbox("Enough with the games! Just tell me who\n" 
+    "you are!")
+    waitmessage
+    callnative(ClearMugshot)
+    release
+
+    setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    callnative(DrawMugshot)
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Who am I... Good question... Nothing\n"
+    "important. In truth, I was going to tell\l" 
+    "you how you might escape by getting to\l"
+    "the research facility at the top of the\l"
+    "waterfall. But, I guess I still don't\l"
+    "know if that's what I want... I don't\l"
+    "mean you any harm. But it's probably\l"
+    "better you don't listen to me; a lost\l"
+    "soul in the dark. However you choose to\l"
+    "end this... I'm sorry.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    waitmessage
+    callnative(ClearMugshot)
+    release
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+    callnative(DrawMugshot)
+    msgbox("Look, you're clearly going through a\n" 
+    "time, but I don't want to be here. Just\l"
+    "tell me what I need to do to get my ship\l"
+    "off the ground.\p"
+    "Hello? Hello?!?! ...Gone again? Damn.")
+    waitmessage
+    callnative(ClearMugshot)
+    release
+
     end
 }

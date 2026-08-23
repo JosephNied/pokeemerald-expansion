@@ -31,5 +31,6 @@
 #define MUGSHOT_MAP_04 26
 #define MUGSHOT_UNKNOWN 27
 #define MUGSHOT_CAPTAIN_SAD 28
+#define MUGSHOT_DITTO 29
 
 #endif

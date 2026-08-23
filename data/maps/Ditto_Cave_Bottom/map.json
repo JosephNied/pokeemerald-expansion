@@ -28,7 +28,7 @@
       "flag": "FLAG_UNUSED_0x03C"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_ZIGZAG_CUSHION",
       "x": 7,
       "y": 11,
       "elevation": 0,
@@ -39,6 +39,58 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Ditto_Cave_Bottom_EventScript_Item01",
       "flag": "FLAG_TEMP_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DITTO)",
+      "x": 7,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Ditto_Boi",
+      "flag": "FLAG_HIDE_ROUTE_120_GABBY_AND_TY_2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DITTO)",
+      "x": 10,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Ditto_Boi",
+      "flag": "FLAG_HIDE_ROUTE_118_GABBY_AND_TY_2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DITTO)",
+      "x": 6,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Ditto_Boi",
+      "flag": "FLAG_HIDE_ROUTE_111_GABBY_AND_TY_3"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ZIGZAG_CUSHION",
+      "x": 10,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Ditto_Cave_Bottom_EventScript_Item02",
+      "flag": "FLAG_TEMP_2"
     }
   ],
   "warp_events": [
@@ -54,8 +106,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 10,
-      "y": 10,
+      "x": 8,
+      "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Ditto_Cave_Bottom_HintText01"
