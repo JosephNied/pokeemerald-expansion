@@ -1152,6 +1152,14 @@ static const struct MenuAction sMultichoiceList_Color_Puzzle[] = {
     {gText_Exit},
 };
 
+static const struct MenuAction sMultichoiceList_Explorers_Facts[] = {
+    {COMPOUND_STRING("Captain")},
+    {COMPOUND_STRING("Biologist")},
+    {COMPOUND_STRING("Engineer")},
+    {COMPOUND_STRING("Operations")},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -1328,6 +1336,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_VITAMIN_SELECT]                             = MULTICHOICE(sMultichoiceList_Vitamin_Select),
     [MULTI_TUTORIAL_NOTES]                             = MULTICHOICE(sMultichoiceList_Tutorial_Notes),
     [MULTI_COLOR_PUZZLE]                               = MULTICHOICE(sMultichoiceList_Color_Puzzle),
+    [MULTI_EXPLORERS_FACTS]                            = MULTICHOICE(sMultichoiceList_Explorers_Facts),
 };
 
 const u8 *const gStdStrings[] =

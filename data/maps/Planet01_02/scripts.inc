@@ -338,171 +338,285 @@ Planet01_02_HintText01::
 # 208 "data/maps/Planet01_02/scripts.pory"
 	msgbox Planet01_02_HintText01_Text_0
 # 213 "data/maps/Planet01_02/scripts.pory"
+	compare VAR_CAPTAIN_DIALOGUE, 1
+	goto_if_eq Planet01_02_HintText01_2
+# 215 "data/maps/Planet01_02/scripts.pory"
+	compare VAR_CAPTAIN_DIALOGUE, 2
+	goto_if_eq Planet01_02_HintText01_3
+# 218 "data/maps/Planet01_02/scripts.pory"
+	setflag FLAG_REGISTERED_CRISTIN
+Planet01_02_HintText01_1:
+# 220 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
+
+Planet01_02_HintText01_2:
+# 214 "data/maps/Planet01_02/scripts.pory"
+	clearflag FLAG_REGISTERED_CRISTIN
+	goto Planet01_02_HintText01_1
+
+Planet01_02_HintText01_3:
+# 216 "data/maps/Planet01_02/scripts.pory"
+	clearflag FLAG_REGISTERED_CRISTIN
+	goto Planet01_02_HintText01_1
 
 
 Planet01_02_HintText02::
-# 218 "data/maps/Planet01_02/scripts.pory"
+# 225 "data/maps/Planet01_02/scripts.pory"
 	lock
-# 219 "data/maps/Planet01_02/scripts.pory"
+# 226 "data/maps/Planet01_02/scripts.pory"
 	msgbox Planet01_02_HintText02_Text_0
-# 223 "data/maps/Planet01_02/scripts.pory"
+# 230 "data/maps/Planet01_02/scripts.pory"
+	compare VAR_CAPTAIN_DIALOGUE, 1
+	goto_if_eq Planet01_02_HintText02_2
+# 232 "data/maps/Planet01_02/scripts.pory"
+	compare VAR_CAPTAIN_DIALOGUE, 2
+	goto_if_eq Planet01_02_HintText02_3
+# 235 "data/maps/Planet01_02/scripts.pory"
+	setflag FLAG_REGISTERED_CRISTIN
+Planet01_02_HintText02_1:
+# 237 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
+
+Planet01_02_HintText02_2:
+# 231 "data/maps/Planet01_02/scripts.pory"
+	clearflag FLAG_REGISTERED_CRISTIN
+	goto Planet01_02_HintText02_1
+
+Planet01_02_HintText02_3:
+# 233 "data/maps/Planet01_02/scripts.pory"
+	clearflag FLAG_REGISTERED_CRISTIN
+	goto Planet01_02_HintText02_1
 
 
 Planet01_02_HintText03::
-# 228 "data/maps/Planet01_02/scripts.pory"
+# 242 "data/maps/Planet01_02/scripts.pory"
 	lock
-# 229 "data/maps/Planet01_02/scripts.pory"
-	msgbox Planet01_02_HintText03_Text_0
-# 234 "data/maps/Planet01_02/scripts.pory"
-	waitmessage
-# 235 "data/maps/Planet01_02/scripts.pory"
-	closemessage
-# 237 "data/maps/Planet01_02/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
-# 238 "data/maps/Planet01_02/scripts.pory"
-	callnative DrawMugshot
-# 239 "data/maps/Planet01_02/scripts.pory"
-	msgbox Planet01_02_HintText03_Text_1
 # 243 "data/maps/Planet01_02/scripts.pory"
+	msgbox Planet01_02_HintText03_Text_0
+# 248 "data/maps/Planet01_02/scripts.pory"
+	compare VAR_CAPTAIN_DIALOGUE, 1
+	goto_if_eq Planet01_02_HintText03_2
+# 250 "data/maps/Planet01_02/scripts.pory"
+	compare VAR_CAPTAIN_DIALOGUE, 2
+	goto_if_eq Planet01_02_HintText03_3
+# 253 "data/maps/Planet01_02/scripts.pory"
+	setflag FLAG_REGISTERED_CRISTIN
+Planet01_02_HintText03_1:
+# 255 "data/maps/Planet01_02/scripts.pory"
 	waitmessage
-# 244 "data/maps/Planet01_02/scripts.pory"
+# 256 "data/maps/Planet01_02/scripts.pory"
 	closemessage
-# 245 "data/maps/Planet01_02/scripts.pory"
+# 258 "data/maps/Planet01_02/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
+# 259 "data/maps/Planet01_02/scripts.pory"
+	callnative DrawMugshot
+# 260 "data/maps/Planet01_02/scripts.pory"
+	msgbox Planet01_02_HintText03_Text_1
+# 264 "data/maps/Planet01_02/scripts.pory"
+	waitmessage
+# 265 "data/maps/Planet01_02/scripts.pory"
+	closemessage
+# 266 "data/maps/Planet01_02/scripts.pory"
 	callnative ClearMugshot
-# 247 "data/maps/Planet01_02/scripts.pory"
+# 268 "data/maps/Planet01_02/scripts.pory"
 	setvar VAR_CAPTAIN_DIALOGUE, 3
-# 249 "data/maps/Planet01_02/scripts.pory"
+# 270 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
+
+Planet01_02_HintText03_2:
+# 249 "data/maps/Planet01_02/scripts.pory"
+	clearflag FLAG_REGISTERED_CRISTIN
+	goto Planet01_02_HintText03_1
+
+Planet01_02_HintText03_3:
+# 251 "data/maps/Planet01_02/scripts.pory"
+	clearflag FLAG_REGISTERED_CRISTIN
+	goto Planet01_02_HintText03_1
 
 
 Planet01_02_HintText04::
-# 254 "data/maps/Planet01_02/scripts.pory"
+# 275 "data/maps/Planet01_02/scripts.pory"
 	lock
-# 255 "data/maps/Planet01_02/scripts.pory"
+# 276 "data/maps/Planet01_02/scripts.pory"
 	msgbox Planet01_02_HintText04_Text_0
-# 258 "data/maps/Planet01_02/scripts.pory"
+# 279 "data/maps/Planet01_02/scripts.pory"
+	compare VAR_CAPTAIN_DIALOGUE, 1
+	goto_if_eq Planet01_02_HintText04_2
+# 281 "data/maps/Planet01_02/scripts.pory"
+	compare VAR_CAPTAIN_DIALOGUE, 2
+	goto_if_eq Planet01_02_HintText04_3
+# 284 "data/maps/Planet01_02/scripts.pory"
+	setflag FLAG_REGISTERED_CRISTIN
+Planet01_02_HintText04_1:
+# 286 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
+
+Planet01_02_HintText04_2:
+# 280 "data/maps/Planet01_02/scripts.pory"
+	clearflag FLAG_REGISTERED_CRISTIN
+	goto Planet01_02_HintText04_1
+
+Planet01_02_HintText04_3:
+# 282 "data/maps/Planet01_02/scripts.pory"
+	clearflag FLAG_REGISTERED_CRISTIN
+	goto Planet01_02_HintText04_1
 
 
 Planet01_02_HintText05::
-# 263 "data/maps/Planet01_02/scripts.pory"
+# 291 "data/maps/Planet01_02/scripts.pory"
 	lock
-# 264 "data/maps/Planet01_02/scripts.pory"
+# 292 "data/maps/Planet01_02/scripts.pory"
 	msgbox Planet01_02_HintText05_Text_0
-# 267 "data/maps/Planet01_02/scripts.pory"
+# 295 "data/maps/Planet01_02/scripts.pory"
+	compare VAR_CAPTAIN_DIALOGUE, 1
+	goto_if_eq Planet01_02_HintText05_2
+# 297 "data/maps/Planet01_02/scripts.pory"
+	compare VAR_CAPTAIN_DIALOGUE, 2
+	goto_if_eq Planet01_02_HintText05_3
+# 300 "data/maps/Planet01_02/scripts.pory"
+	setflag FLAG_REGISTERED_CRISTIN
+Planet01_02_HintText05_1:
+# 302 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
+
+Planet01_02_HintText05_2:
+# 296 "data/maps/Planet01_02/scripts.pory"
+	clearflag FLAG_REGISTERED_CRISTIN
+	goto Planet01_02_HintText05_1
+
+Planet01_02_HintText05_3:
+# 298 "data/maps/Planet01_02/scripts.pory"
+	clearflag FLAG_REGISTERED_CRISTIN
+	goto Planet01_02_HintText05_1
 
 
 Planet01_02_HintText06::
-# 272 "data/maps/Planet01_02/scripts.pory"
+# 307 "data/maps/Planet01_02/scripts.pory"
 	lock
-# 273 "data/maps/Planet01_02/scripts.pory"
+# 308 "data/maps/Planet01_02/scripts.pory"
 	msgbox Planet01_02_HintText06_Text_0
-# 275 "data/maps/Planet01_02/scripts.pory"
+# 310 "data/maps/Planet01_02/scripts.pory"
+	compare VAR_CAPTAIN_DIALOGUE, 1
+	goto_if_eq Planet01_02_HintText06_2
+# 312 "data/maps/Planet01_02/scripts.pory"
+	compare VAR_CAPTAIN_DIALOGUE, 2
+	goto_if_eq Planet01_02_HintText06_3
+# 315 "data/maps/Planet01_02/scripts.pory"
+	setflag FLAG_REGISTERED_CRISTIN
+Planet01_02_HintText06_1:
+# 317 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
 
+Planet01_02_HintText06_2:
+# 311 "data/maps/Planet01_02/scripts.pory"
+	clearflag FLAG_REGISTERED_CRISTIN
+	goto Planet01_02_HintText06_1
+
+Planet01_02_HintText06_3:
+# 313 "data/maps/Planet01_02/scripts.pory"
+	clearflag FLAG_REGISTERED_CRISTIN
+	goto Planet01_02_HintText06_1
+
 
 Planet01_02_QuagsireTrigger::
-# 280 "data/maps/Planet01_02/scripts.pory"
+# 322 "data/maps/Planet01_02/scripts.pory"
 	lockall
-# 281 "data/maps/Planet01_02/scripts.pory"
+# 323 "data/maps/Planet01_02/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
-# 282 "data/maps/Planet01_02/scripts.pory"
+# 324 "data/maps/Planet01_02/scripts.pory"
 	callnative DrawMugshot
-# 283 "data/maps/Planet01_02/scripts.pory"
+# 325 "data/maps/Planet01_02/scripts.pory"
 	msgbox Planet01_02_QuagsireTrigger_Text_0
-# 284 "data/maps/Planet01_02/scripts.pory"
+# 326 "data/maps/Planet01_02/scripts.pory"
 	waitmessage
-# 285 "data/maps/Planet01_02/scripts.pory"
+# 327 "data/maps/Planet01_02/scripts.pory"
 	callnative ClearMugshot
-# 286 "data/maps/Planet01_02/scripts.pory"
+# 328 "data/maps/Planet01_02/scripts.pory"
 	closemessage
-# 287 "data/maps/Planet01_02/scripts.pory"
+# 329 "data/maps/Planet01_02/scripts.pory"
 	waitse
-# 288 "data/maps/Planet01_02/scripts.pory"
+# 330 "data/maps/Planet01_02/scripts.pory"
 	playmoncry SPECIES_QUAGSIRE, CRY_MODE_ENCOUNTER
-# 289 "data/maps/Planet01_02/scripts.pory"
+# 331 "data/maps/Planet01_02/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Planet01_02_QuagsireTrigger_Movement_0
-# 290 "data/maps/Planet01_02/scripts.pory"
+# 332 "data/maps/Planet01_02/scripts.pory"
 	waitmovement OBJ_EVENT_ID_PLAYER
-# 291 "data/maps/Planet01_02/scripts.pory"
+# 333 "data/maps/Planet01_02/scripts.pory"
 	applymovement 26, Movement_QuagsireWaterstone1
-# 292 "data/maps/Planet01_02/scripts.pory"
+# 334 "data/maps/Planet01_02/scripts.pory"
 	waitmovement 0
-# 293 "data/maps/Planet01_02/scripts.pory"
+# 335 "data/maps/Planet01_02/scripts.pory"
 	setwildbattle SPECIES_CARNIVINE, 50, ITEM_WATER_STONE
-# 298 "data/maps/Planet01_02/scripts.pory"
+# 340 "data/maps/Planet01_02/scripts.pory"
 	dowildbattle
-# 299 "data/maps/Planet01_02/scripts.pory"
+# 341 "data/maps/Planet01_02/scripts.pory"
 	setflag FLAG_TEMP_4
-# 300 "data/maps/Planet01_02/scripts.pory"
+# 342 "data/maps/Planet01_02/scripts.pory"
 	removeobject 26
-# 301 "data/maps/Planet01_02/scripts.pory"
+# 343 "data/maps/Planet01_02/scripts.pory"
 	setvar VAR_TEMP_1, 1
-# 302 "data/maps/Planet01_02/scripts.pory"
+# 344 "data/maps/Planet01_02/scripts.pory"
 	releaseall
 	end
 
 
-# 306 "data/maps/Planet01_02/scripts.pory"
+# 348 "data/maps/Planet01_02/scripts.pory"
 Movement_QuagsireWaterstone1:
-# 307 "data/maps/Planet01_02/scripts.pory"
+# 349 "data/maps/Planet01_02/scripts.pory"
 	face_left
-# 308 "data/maps/Planet01_02/scripts.pory"
+# 350 "data/maps/Planet01_02/scripts.pory"
 	walk_left
-# 309 "data/maps/Planet01_02/scripts.pory"
+# 351 "data/maps/Planet01_02/scripts.pory"
 	walk_left
-# 310 "data/maps/Planet01_02/scripts.pory"
+# 352 "data/maps/Planet01_02/scripts.pory"
 	delay_16
-# 311 "data/maps/Planet01_02/scripts.pory"
+# 353 "data/maps/Planet01_02/scripts.pory"
 	delay_16
-# 312 "data/maps/Planet01_02/scripts.pory"
+# 354 "data/maps/Planet01_02/scripts.pory"
 	jump_left
-# 313 "data/maps/Planet01_02/scripts.pory"
+# 355 "data/maps/Planet01_02/scripts.pory"
 	jump_down
-# 314 "data/maps/Planet01_02/scripts.pory"
+# 356 "data/maps/Planet01_02/scripts.pory"
 	face_left
-# 315 "data/maps/Planet01_02/scripts.pory"
+# 357 "data/maps/Planet01_02/scripts.pory"
 	walk_left
 	step_end
 
 Planet01_02_Elgyem::
-# 319 "data/maps/Planet01_02/scripts.pory"
+# 361 "data/maps/Planet01_02/scripts.pory"
 	lock
-# 320 "data/maps/Planet01_02/scripts.pory"
+# 362 "data/maps/Planet01_02/scripts.pory"
 	faceplayer
-# 321 "data/maps/Planet01_02/scripts.pory"
+# 363 "data/maps/Planet01_02/scripts.pory"
 	playmoncry SPECIES_ELGYEM, CRY_MODE_ENCOUNTER
-# 322 "data/maps/Planet01_02/scripts.pory"
+# 364 "data/maps/Planet01_02/scripts.pory"
 	setvar VAR_0x8000, SPECIES_ELGYEM
-# 323 "data/maps/Planet01_02/scripts.pory"
+# 365 "data/maps/Planet01_02/scripts.pory"
 	callnative RegisterSpeciesInDex
-# 324 "data/maps/Planet01_02/scripts.pory"
+# 366 "data/maps/Planet01_02/scripts.pory"
 	msgbox Planet01_02_Elgyem_Text_0
-# 326 "data/maps/Planet01_02/scripts.pory"
+# 368 "data/maps/Planet01_02/scripts.pory"
 	waitmessage
-# 327 "data/maps/Planet01_02/scripts.pory"
+# 369 "data/maps/Planet01_02/scripts.pory"
 	warp MAP_PLANET01_03, 2, 11, 2
-# 328 "data/maps/Planet01_02/scripts.pory"
+# 370 "data/maps/Planet01_02/scripts.pory"
 	waitstate
-# 329 "data/maps/Planet01_02/scripts.pory"
+# 371 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
 
 
-# 289 "data/maps/Planet01_02/scripts.pory"
+# 331 "data/maps/Planet01_02/scripts.pory"
 Planet01_02_QuagsireTrigger_Movement_0:
-# 289 "data/maps/Planet01_02/scripts.pory"
+# 331 "data/maps/Planet01_02/scripts.pory"
 	emote_exclamation_mark
-# 289 "data/maps/Planet01_02/scripts.pory"
+# 331 "data/maps/Planet01_02/scripts.pory"
 	face_right
 	step_end
 
@@ -545,14 +659,14 @@ Planet01_02_HintText01_Text_0:
 	.string "who is too much of a fan of it!$"
 
 Planet01_02_HintText02_Text_0:
-# 219 "data/maps/Planet01_02/scripts.pory"
+# 226 "data/maps/Planet01_02/scripts.pory"
 	.string "Biologist: I've occasionally observed\n"
 	.string "Quagsires bringing blue stones they've\l"
 	.string "found to a nest behind the waterfall.\p"
 	.string "How cute! Could they be Water Stones?$"
 
 Planet01_02_HintText03_Text_0:
-# 229 "data/maps/Planet01_02/scripts.pory"
+# 243 "data/maps/Planet01_02/scripts.pory"
 	.string "Captain: To future explorers:\n"
 	.string "Our team has setup our primary lab in\l"
 	.string "the cave above this waterfall.\p"
@@ -560,34 +674,34 @@ Planet01_02_HintText03_Text_0:
 	.string "campsites to the south.$"
 
 Planet01_02_HintText03_Text_1:
-# 239 "data/maps/Planet01_02/scripts.pory"
+# 260 "data/maps/Planet01_02/scripts.pory"
 	.string "Welp. I don't have any way to get\n"
 	.string "up there right now. Guess I'll have\l"
 	.string "to start searching the old campsites.\l"
 	.string "This is the only lead I've got.$"
 
 Planet01_02_HintText04_Text_0:
-# 255 "data/maps/Planet01_02/scripts.pory"
+# 276 "data/maps/Planet01_02/scripts.pory"
 	.string "Engineer: We couldn't find a Pokemon\n"
 	.string "on this planet with the move {COLOR BLUE}{SHADOW LIGHT_BLUE}Waterfall;\l"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}thankfully had brought our own.$"
 
 Planet01_02_HintText05_Text_0:
-# 264 "data/maps/Planet01_02/scripts.pory"
+# 292 "data/maps/Planet01_02/scripts.pory"
 	.string "Scientist: There's a suprising amount\n"
 	.string "of greenery here for a planet with such\l"
 	.string "a light atmosphere.$"
 
 Planet01_02_HintText06_Text_0:
-# 273 "data/maps/Planet01_02/scripts.pory"
+# 308 "data/maps/Planet01_02/scripts.pory"
 	.string "That concludes the demo!\n"
 	.string "Thanks for playing!$"
 
 Planet01_02_QuagsireTrigger_Text_0:
-# 283 "data/maps/Planet01_02/scripts.pory"
+# 325 "data/maps/Planet01_02/scripts.pory"
 	.string "Huh? In the waterfall-$"
 
 Planet01_02_Elgyem_Text_0:
-# 324 "data/maps/Planet01_02/scripts.pory"
+# 366 "data/maps/Planet01_02/scripts.pory"
 	.string "Elgyem seems taken off-guard!\n"
 	.string "My bad- Huh?! It's flashing blue-$"

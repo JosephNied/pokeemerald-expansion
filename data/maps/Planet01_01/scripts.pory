@@ -6,12 +6,7 @@ mapscripts Planet01_01_MapScripts {
 script Planet01_01_Enter {
 	special(SetRandomFlags)
     special(BossBattleOff)
-    if(flag(FLAG_REGISTERED_ROSE) == FALSE) {
-        setvar(VAR_TEMP_0, 0)
-    } else {
-        setvar(VAR_TEMP_0, 1)
-    }
-
+    setvar(VAR_TEMP_0, 5)
     getplayerxy(VAR_0x8004, VAR_0x8005)
     compare (VAR_0x8004, 18)
     goto_if_ne(End, 0)
@@ -20,6 +15,15 @@ script Planet01_01_Enter {
 
     setvar(VAR_AIR_TIMER_STEPS, 250)
     setvar(VAR_AIR_TIMER_TRIGGERED, 1)
+    if(flag(FLAG_REGISTERED_ROSE) == FALSE) {
+        setvar(VAR_TEMP_0, 0)
+    } else {
+        if(flag(FLAG_REGISTERED_CRISTIN) == FALSE) {
+        setvar(VAR_TEMP_0, 2)
+        } else {
+            setvar(VAR_TEMP_0, 1)
+        }
+    }
 
 End:
 	end
@@ -28,7 +32,8 @@ End:
 raw `
 Planet01_01_FrameTable::
 	map_script_2 VAR_AIR_TIMER_TRIGGERED, 1, Planet01_01_StartAirTimer
-    map_script_2 VAR_TEMP_0, 0, Planet01_01_JirachiAppears
+    map_script_2 VAR_TEMP_0, 0, Planet01_01_RobotGreeting
+    map_script_2 VAR_TEMP_0, 2, Planet01_01_JirachiAppears
 	.2byte 0
 `
 
@@ -211,7 +216,7 @@ script Planet01_01_Elgyem {
     end
 }
 
-script Planet01_01_JirachiAppears {
+script Planet01_01_RobotGreeting {
     lock
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player0)
     waitmovement(0)
@@ -356,8 +361,8 @@ script Planet01_01_JirachiAppears {
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox("Well kiddo, you'rrre in luck. See these\n
-    here wall scribbles?")
+    msgbox("Well kiddo, you'rrre in luck. See these\n"
+    "here wall scribbles?")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -387,16 +392,16 @@ script Planet01_01_JirachiAppears {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
     callnative(DrawMugshot)
-    msgbox("Oh? That sounds like a promising place\n
-    to investigate. Do you have, like a map?")
+    msgbox("Oh? That sounds like a promising place\n"
+    "to investigate. Do you have, like a map?")
     waitmessage
     closemessage
     callnative(ClearMugshot)
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox ("Yes in fact I do! Let me load it up for\n
-    you!")
+    msgbox ("Yes in fact I do! Let me load it up for\n"
+    "you!")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -535,82 +540,294 @@ movement Movement_Player1 {
     face_right
 }
 
+script Planet01_01_JirachiAppears {
+    lockall
+    special(Script_FadeOutMapMusic)
+
+    applymovement(19, Movement_Deoxo1_1)
+    applymovement(20, Movement_Deoxo2_1)
+    waitmovement(0)
+
+    delay(30)
+
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player2)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    
+    delay(30)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    callnative(DrawMugshot)
+    msgbox("Uh oh.\n"
+    "I really don't like this.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    callnative(DrawMugshot)
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Hey, you. See these monsters? They're\n" 
+    "corrupted by a powerful space virus.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    applymovement(19, Movement_Deoxo1_12)
+    applymovement(20, Movement_Deoxo2_12)
+    waitmovement(0)
+
+    setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    callnative(DrawMugshot)
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}They will never stop pursuing you. They\n" 
+    "want to infect you and steal your ship.\l" 
+    "Your team... Magnezone... Hm. I guess\l" 
+    "this is the end.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    callnative(DrawMugshot)
+    msgbox("Who are you?\n"
+    "What do you mean by that?!")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    applymovement(19, Movement_Deoxo1_2)
+    applymovement(20, Movement_Deoxo2_2)
+    waitmovement(0)
+
+    delay(30)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    callnative(DrawMugshot)
+    msgbox("H-HELP!")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    fadescreen(FADE_TO_WHITE)
+	closemessage
+	delay(30)
+	fadescreen(FADE_FROM_WHITE)
+
+    applymovement(14, Movement_Jirachi1)
+    waitmovement(0)
+    
+    fadescreen(FADE_TO_WHITE)
+	closemessage
+	delay(10)
+	fadescreen(FADE_FROM_WHITE)
+    setvar(VAR_0x8004, 1)
+	setvar(VAR_0x8005, 1)
+	setvar(VAR_0x8006, 8)
+	setvar(VAR_0x8007, 5)
+	special(ShakeCamera)
+    applymovement(19, Movement_Deoxo1_3)
+    applymovement(20, Movement_Deoxo2_3)
+    fadescreen(FADE_TO_WHITE)
+	closemessage
+	delay(10)
+	fadescreen(FADE_FROM_WHITE)
+    waitmovement(0)
+
+    delay(60)
+
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    callnative(DrawMugshot)
+    msgbox("...Jirachi?")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_JIRACHI_WORRIED)
+    callnative(DrawMugshot)
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    applymovement(14, Movement_Jirachi2)
+    waitmovement(0)
+
+    setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    callnative(DrawMugshot)
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Oh, wow. Lucky. Very lucky...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_question_mark, face_down))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    callnative(DrawMugshot)
+    msgbox("Who the hell are you? I demand you tell\n"
+    "me! Hello?\l"
+    "...Hello?!\p"
+    "...")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+    callnative(DrawMugshot)
+    msgbox("Great. Amnesiac robots, space viruses,\n" 
+    "and psychic assholes. All in the middle\l"
+    "of nowhere. Serves me right, in a way.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+
+    setflag(FLAG_REGISTERED_CRISTIN)
+    setvar(VAR_TEMP_0, 1)
+    setvar(VAR_CAPTAIN_DIALOGUE, 0)
+    release
+    end
+}
+
+movement Movement_Player2 {
+    emote_question_mark
+    face_right
+    delay_16
+    delay_16
+    emote_exclamation_mark
+    face_left
+    delay_16
+    delay_16
+    face_down
+}
+
+movement Movement_Deoxo1_1 {
+    face_up
+    set_visible
+    jump_up
+}
+
+movement Movement_Deoxo2_1 {
+    face_up
+    set_visible
+    jump_up
+}
+
+movement Movement_Deoxo1_12 {
+    walk_up
+    walk_up
+    face_right
+}
+
+movement Movement_Deoxo2_12 {
+    walk_up
+    walk_up
+    face_left
+}
+
+movement Movement_Deoxo1_2 {
+    walk_right
+}
+
+movement Movement_Deoxo2_2 {
+    walk_left
+}
+
+movement Movement_Deoxo1_3 {
+    jump_left
+    set_invisible
+}
+
+movement Movement_Deoxo2_3 {
+    jump_right
+    set_invisible
+}
+
+movement Movement_Jirachi1 {
+    face_down
+    set_visible
+    delay_4
+    set_invisible
+    delay_4
+    set_visible
+    delay_4
+    set_invisible
+    delay_4
+    set_visible
+    delay_8
+    set_invisible
+    delay_8
+    set_visible
+    delay_8
+    set_invisible
+    delay_8
+    set_visible
+}
+
+movement Movement_Jirachi2 {
+    face_up
+    delay_16
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+}
+
 script EventScript_TheCaptain {
     lock
 
     if (var(VAR_CAPTAIN_DIALOGUE) == 0) 
     {
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+        callnative(DrawMugshot)
+        msgbox ("Did you see those monsters? I almost\n"
+        "died! You didn't warn me about those!")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
         setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
         callnative(DrawMugshot)
-        msgbox ("I N-N-NEED P-POWER\n"
-        "P-PLEASE H-H-HELP ME.\l"
-        "A-A-AMETHYST- CRYSTAL-\l"
-        "BRIN-N-NG I-IT TO ME.")
+        msgbox ("Ah, yeah, those guys.\n"
+        "They neverrr botherrred me before.")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+        callnative(DrawMugshot)
+        msgbox ("...Sure. But what are they?")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+        callnative(DrawMugshot)
+        msgbox ("I have memorrries of our team, when\n"
+        "we firrrst arrrived. These things werrre\l"
+        "not herrre.")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
         callnative(DrawMugshot)
-        msgbox ("Uh, an Amethyst will power you up?\n"
-        "Ok... Where can I find one?")
+        msgbox ("How long ago was the expedition?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
         setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
         callnative(DrawMugshot)
-        msgbox ("...\n"
-        "...\l"
-        "O-ONE SE-SECOND...\n")
+        msgbox("Memorrry gap ends a while back...\n"
+        "I'd estimate five yearrrs? But I don't\l"
+        "know how long we werrre herrre, or\l"
+        "how long ago we arrrived.")
         waitmessage
         closemessage
         callnative(ClearMugshot)
-
-        applymovement(17, moves(face_up))
-        waitmovement(OBJ_EVENT_ID_PLAYER)
-
-        delay(60)
-
-        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
-        callnative(DrawMugshot)
-        msgbox ("<Its drawing something? Where\n"
-        "did it get that paper and pencil?>")
-        waitmessage
-        closemessage
-        callnative(ClearMugshot)
-
-        delay(60)
-
-        applymovement(17, moves(face_down))
-        waitmovement(OBJ_EVENT_ID_PLAYER)
-
-        setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
-        callnative(DrawMugshot)
-        msgbox ("U-UP THE W-W-WATERFALL IN THE FOREST.\n"
-        "O-O-OUR OLD L-L-LAB. GO WEST.")
-        waitmessage
-        closemessage
-        callnative(ClearMugshot)
-
-        giveitem(ITEM_WAILMER_PAIL)
-
-        setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
-        callnative(DrawMugshot)
-        msgbox ("Awesome, a map!\n"
-        "...\l"
-        "...You're quite the artist!")
-        waitmessage
-        closemessage
-        callnative(ClearMugshot)
-
-        setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
-        callnative(DrawMugshot)
-        msgbox("TH-THANKS.")
-        waitmessage
-        closemessage
-        callnative(ClearMugshot)
-        setvar(VAR_CAPTAIN_DIALOGUE, 1)
+        setvar(VAR_CAPTAIN_DIALOGUE, 4)
     }
     elif (var(VAR_CAPTAIN_DIALOGUE) == 1) 
     {
@@ -698,6 +915,55 @@ script EventScript_TheCaptain {
         closemessage
         callnative(ClearMugshot)
         setvar (VAR_CAPTAIN_DIALOGUE, 3)
+    }
+    elif (var(VAR_CAPTAIN_DIALOGUE) == 4) 
+    {
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+        callnative(DrawMugshot)
+        msgbox ("I want to ask some questions about the\n"
+        "previous explorers.")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+        callnative(DrawMugshot)
+        msgbox("Firrre away.")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        multichoice(0, 0, MULTI_EXPLORERS_FACTS, FALSE)
+        if (var(VAR_RESULT) == 0) {
+            msgbox("Me? State-of-the-art Captobot by\n"
+            "BOTech Enterprrrises. I was the latest\l" 
+            "model when we set out into space.\l" 
+            "Designed to keep up morrrale, maintain\l" 
+            "focus on our objectives, and give full,\l" 
+            "detailed rrreporrrts on all of our\l" 
+            "activities.")
+        } elif (var(VAR_RESULT) == 1) {
+            msgbox("Expert in rrresearching alien PKMN.\n"
+            "Quiet.\l"
+            "Didn't like to be the centerrr of\l" 
+            "attention, and often would get lost\l" 
+            "wanderrring off on their own. Made\l" 
+            "excellent notes on this rrregion's\l" 
+            "biological life.")
+        } elif (var(VAR_RESULT) == 2) {
+            msgbox("A genius with an interrrest in building\n"
+            "structurrres in challenging locations.\l" 
+            "Had their eyes on transforming hostile\l" 
+            "environments into life-sustaining ones\l" 
+            "forrr humans.")
+        } elif (var(VAR_RESULT) == 3) {
+            msgbox("PKMN experrrt and project organizerrr.\n"
+            "Always ready to help, and easy to talk\l" 
+            "to about anything. Optimistic, harrrd\l" 
+            "worker. Some records suggest they had \l" 
+            "a history with the Biologist, but that's\l"
+            "just my intuition.")
+        }
     }
     release
     end

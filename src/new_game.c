@@ -267,5 +267,5 @@ static void setCustomFlagsAtStart(void)
     VarSet(VAR_PLAYER_READY, 0);
     VarSet(VAR_CARBINK_COUNT, 0);
     VarSet(VAR_CAPTAIN_DIALOGUE, 0);
-    VarSet(VAR_HAS_ENTERED_BATTLE_FRONTIER, 0);
+    FlagSet(FLAG_REGISTERED_CRISTIN);
 }

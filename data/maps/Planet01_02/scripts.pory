@@ -210,6 +210,13 @@ script Planet01_02_HintText01 {
     "I climb this mountain.\p"
     "There's a strong pokemon at the top\n"
     "who is too much of a fan of it!")
+    if (var(VAR_CAPTAIN_DIALOGUE) == 1) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } elif (var(VAR_CAPTAIN_DIALOGUE) == 2) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } else  {
+        setflag(FLAG_REGISTERED_CRISTIN)
+    }
     release
     end
 }
@@ -220,6 +227,13 @@ script Planet01_02_HintText02 {
     "Quagsires bringing blue stones they've\l"
     "found to a nest behind the waterfall.\p"
     "How cute! Could they be Water Stones?")
+    if (var(VAR_CAPTAIN_DIALOGUE) == 1) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } elif (var(VAR_CAPTAIN_DIALOGUE) == 2) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } else  {
+        setflag(FLAG_REGISTERED_CRISTIN)
+    }
     release
     end
 }
@@ -231,6 +245,13 @@ script Planet01_02_HintText03 {
     "the cave above this waterfall.\p"
     "You may be able to find our previous\n"
     "campsites to the south.")
+    if (var(VAR_CAPTAIN_DIALOGUE) == 1) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } elif (var(VAR_CAPTAIN_DIALOGUE) == 2) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } else  {
+        setflag(FLAG_REGISTERED_CRISTIN)
+    }
     waitmessage
     closemessage
 
@@ -255,6 +276,13 @@ script Planet01_02_HintText04 {
     msgbox("Engineer: We couldn't find a Pokemon\n"
     "on this planet with the move {COLOR BLUE}{SHADOW LIGHT_BLUE}Waterfall;\l"
     "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}thankfully had brought our own.")
+    if (var(VAR_CAPTAIN_DIALOGUE) == 1) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } elif (var(VAR_CAPTAIN_DIALOGUE) == 2) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } else  {
+        setflag(FLAG_REGISTERED_CRISTIN)
+    }
     release
     end
 }
@@ -264,6 +292,13 @@ script Planet01_02_HintText05 {
     msgbox("Scientist: There's a suprising amount\n"
     "of greenery here for a planet with such\l"
     "a light atmosphere.")
+    if (var(VAR_CAPTAIN_DIALOGUE) == 1) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } elif (var(VAR_CAPTAIN_DIALOGUE) == 2) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } else  {
+        setflag(FLAG_REGISTERED_CRISTIN)
+    }
     release
     end
 }
@@ -272,6 +307,13 @@ script Planet01_02_HintText06 {
     lock
     msgbox("That concludes the demo!\n"
     "Thanks for playing!")
+    if (var(VAR_CAPTAIN_DIALOGUE) == 1) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } elif (var(VAR_CAPTAIN_DIALOGUE) == 2) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } else  {
+        setflag(FLAG_REGISTERED_CRISTIN)
+    }
     release
     end
 }
