@@ -132,8 +132,8 @@ script Planet01_01_AddAir_Minior02 {
 script Planet01_01_HintText01 {
     lock
     msgbox("Captain: This is the captain of\n" 
-    "expedition 001. \p"
-    "Our team has placed notes for future \n"
+    "expedition 'WILD INDIGO'. \p"
+    "Our team has recorded notes for future\n"
     "explorers in hopefully convenient \l"
     "places. Our objective is to create\l"
     "a lab here for biological research.\p"
@@ -278,8 +278,8 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox("Why, I'm the captain of the \n" 
-    "experrrdition LYDIAN. Yep, I'm the\l" 
+    msgbox("Why, I'm the rrrenown Captain of the\n" 
+    "experrrdition WILD INDIGO. Yep, I'm the\l" 
     "captain. Never let a human do something\l" 
     "important, that's my motto. It was also\l"
     "my company's slogan.")
@@ -289,8 +289,9 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
     callnative(DrawMugshot)
-    msgbox("...Really. Uh, if that's so, is your\n"
-    "human crew somewhere around here?")
+    msgbox("...Really. You're looking a bit rough...\n"
+    "But uh, if that's true, is your human\l"
+    "crew somewhere around here?")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -311,7 +312,7 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox("I don't know. I don't really know much\n" 
+    msgbox("I don't know. I don't rrreally know much\n" 
     "to be honest, on account of my memories\l" 
     "missing; orrr, perrrhaps errrased.")
     waitmessage
@@ -362,7 +363,7 @@ script Planet01_01_RobotGreeting {
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
     msgbox("Well kiddo, you'rrre in luck. See these\n"
-    "here wall scribbles?")
+    "here wall scrrribbles?")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -375,7 +376,7 @@ script Planet01_01_RobotGreeting {
     msgbox("My team was kind enough to leave\n"
     "some notes for futurre explorrrerrrs.\p"
     "In fact, I've been rrreading them too.\n" 
-    "I've learrrned that our primary\l"
+    "I've learrrned that our primarrry\l"
     "rrresearrrch facility was up the\l"
     "waterrrfall in the forrrest just\l"
     "overrr to the west.")
@@ -400,7 +401,7 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox ("Yes in fact I do! Let me load it up for\n"
+    msgbox ("Yes in fact I do! Let me load it up forrr\n"
     "you!")
     waitmessage
     closemessage
@@ -459,7 +460,7 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox("Well happy early birthday, kiddo.")
+    msgbox("Well happy earrrly birrrrthday, kiddo.")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -488,11 +489,11 @@ script Planet01_01_RobotGreeting {
     setflag(FLAG_REGISTERED_ROSE)
 
     msgbox("Captain: This is the captain of\n" 
-    "expedition 001. \p"
-    "Our team has placed notes for future \n"
-    "explorers in hopefully convenient \l"
+    "expedition 'WILD INDIGO'. \p"
+    "Our team has recorded notes for future\n"
+    "explorers in hopefully convenient\l"
     "places. Our objective is to create\l"
-    "a lab here for biological research.\p"
+    "a lab here for scientific research.\p"
     "Note: The gravity is low here. Tall \n"
     "ledges can be scaled easily!")
     setflag(FLAG_TEMP_9)
