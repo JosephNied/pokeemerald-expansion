@@ -426,28 +426,85 @@ Planet01_03_HintText05::
 # 286 "data/maps/Planet01_03/scripts.pory"
 	msgbox Planet01_03_HintText05_Text_0
 # 292 "data/maps/Planet01_03/scripts.pory"
+	compare VAR_CAPTAIN_DIALOGUE, 1
+	goto_if_eq Planet01_03_HintText05_2
+# 294 "data/maps/Planet01_03/scripts.pory"
+	compare VAR_CAPTAIN_DIALOGUE, 2
+	goto_if_eq Planet01_03_HintText05_3
+# 297 "data/maps/Planet01_03/scripts.pory"
+	setflag FLAG_REGISTERED_CRISTIN
+Planet01_03_HintText05_1:
+# 299 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
+
+Planet01_03_HintText05_2:
+# 293 "data/maps/Planet01_03/scripts.pory"
+	clearflag FLAG_REGISTERED_CRISTIN
+	goto Planet01_03_HintText05_1
+
+Planet01_03_HintText05_3:
+# 295 "data/maps/Planet01_03/scripts.pory"
+	clearflag FLAG_REGISTERED_CRISTIN
+	goto Planet01_03_HintText05_1
 
 
 Planet01_03_HintText06::
-# 297 "data/maps/Planet01_03/scripts.pory"
-	lock
-# 298 "data/maps/Planet01_03/scripts.pory"
-	msgbox Planet01_03_HintText06_Text_0
 # 304 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 305 "data/maps/Planet01_03/scripts.pory"
+	msgbox Planet01_03_HintText06_Text_0
+# 311 "data/maps/Planet01_03/scripts.pory"
+	compare VAR_CAPTAIN_DIALOGUE, 1
+	goto_if_eq Planet01_03_HintText06_2
+# 313 "data/maps/Planet01_03/scripts.pory"
+	compare VAR_CAPTAIN_DIALOGUE, 2
+	goto_if_eq Planet01_03_HintText06_3
+# 316 "data/maps/Planet01_03/scripts.pory"
+	setflag FLAG_REGISTERED_CRISTIN
+Planet01_03_HintText06_1:
+# 318 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
+
+Planet01_03_HintText06_2:
+# 312 "data/maps/Planet01_03/scripts.pory"
+	clearflag FLAG_REGISTERED_CRISTIN
+	goto Planet01_03_HintText06_1
+
+Planet01_03_HintText06_3:
+# 314 "data/maps/Planet01_03/scripts.pory"
+	clearflag FLAG_REGISTERED_CRISTIN
+	goto Planet01_03_HintText06_1
 
 
 Planet01_03_HintText07::
-# 309 "data/maps/Planet01_03/scripts.pory"
+# 323 "data/maps/Planet01_03/scripts.pory"
 	lock
-# 310 "data/maps/Planet01_03/scripts.pory"
+# 324 "data/maps/Planet01_03/scripts.pory"
 	msgbox Planet01_03_HintText07_Text_0
-# 314 "data/maps/Planet01_03/scripts.pory"
+# 328 "data/maps/Planet01_03/scripts.pory"
+	compare VAR_CAPTAIN_DIALOGUE, 1
+	goto_if_eq Planet01_03_HintText07_2
+# 330 "data/maps/Planet01_03/scripts.pory"
+	compare VAR_CAPTAIN_DIALOGUE, 2
+	goto_if_eq Planet01_03_HintText07_3
+# 333 "data/maps/Planet01_03/scripts.pory"
+	setflag FLAG_REGISTERED_CRISTIN
+Planet01_03_HintText07_1:
+# 335 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
+
+Planet01_03_HintText07_2:
+# 329 "data/maps/Planet01_03/scripts.pory"
+	clearflag FLAG_REGISTERED_CRISTIN
+	goto Planet01_03_HintText07_1
+
+Planet01_03_HintText07_3:
+# 331 "data/maps/Planet01_03/scripts.pory"
+	clearflag FLAG_REGISTERED_CRISTIN
+	goto Planet01_03_HintText07_1
 
 
 Planet01_03_Carbink_Text_0:
@@ -509,7 +566,7 @@ Planet01_03_HintText05_Text_0:
 	.string "still evolve using water stones.$"
 
 Planet01_03_HintText06_Text_0:
-# 298 "data/maps/Planet01_03/scripts.pory"
+# 305 "data/maps/Planet01_03/scripts.pory"
 	.string "Biologist: The Staryu love to skip across\n"
 	.string "the water; though, they aren't large\l"
 	.string "enough for us to {COLOR BLUE}{SHADOW LIGHT_BLUE}Surf{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} on them.\p"
@@ -518,7 +575,7 @@ Planet01_03_HintText06_Text_0:
 	.string "setup camps across the water.$"
 
 Planet01_03_HintText07_Text_0:
-# 310 "data/maps/Planet01_03/scripts.pory"
+# 324 "data/maps/Planet01_03/scripts.pory"
 	.string "Biologist: We saw a lot of smashed rocks\n"
 	.string "around the mountain covered in blue\l"
 	.string "plants; I would bet that a Pokémon with\l"

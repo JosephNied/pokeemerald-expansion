@@ -276,13 +276,6 @@ script Planet01_02_HintText04 {
     msgbox("Engineer: We couldn't find a Pokemon\n"
     "on this planet with the move {COLOR BLUE}{SHADOW LIGHT_BLUE}Waterfall;\l"
     "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}thankfully had brought our own.")
-    if (var(VAR_CAPTAIN_DIALOGUE) == 1) {
-        clearflag(FLAG_REGISTERED_CRISTIN)
-    } elif (var(VAR_CAPTAIN_DIALOGUE) == 2) {
-        clearflag(FLAG_REGISTERED_CRISTIN)
-    } else  {
-        setflag(FLAG_REGISTERED_CRISTIN)
-    }
     release
     end
 }
@@ -292,28 +285,13 @@ script Planet01_02_HintText05 {
     msgbox("Scientist: There's a suprising amount\n"
     "of greenery here for a planet with such\l"
     "a light atmosphere.")
-    if (var(VAR_CAPTAIN_DIALOGUE) == 1) {
-        clearflag(FLAG_REGISTERED_CRISTIN)
-    } elif (var(VAR_CAPTAIN_DIALOGUE) == 2) {
-        clearflag(FLAG_REGISTERED_CRISTIN)
-    } else  {
-        setflag(FLAG_REGISTERED_CRISTIN)
-    }
     release
     end
 }
 
 script Planet01_02_HintText06 {
     lock
-    msgbox("That concludes the demo!\n"
-    "Thanks for playing!")
-    if (var(VAR_CAPTAIN_DIALOGUE) == 1) {
-        clearflag(FLAG_REGISTERED_CRISTIN)
-    } elif (var(VAR_CAPTAIN_DIALOGUE) == 2) {
-        clearflag(FLAG_REGISTERED_CRISTIN)
-    } else  {
-        setflag(FLAG_REGISTERED_CRISTIN)
-    }
+    msgbox("WILD INDIGO LAB Ahead")
     release
     end
 }

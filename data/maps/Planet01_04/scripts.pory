@@ -67,6 +67,13 @@ script Planet01_04_HintText01 {
     msgbox("Engineer: The cave above just sends us\n"
     "in circles. How is this even possible?!\l"
     "I will get to the bottom of this!")
+    if (var(VAR_CAPTAIN_DIALOGUE) == 1) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } elif (var(VAR_CAPTAIN_DIALOGUE) == 2) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } else  {
+        setflag(FLAG_REGISTERED_CRISTIN)
+    }
     release
     end
 }
@@ -88,6 +95,13 @@ script Planet01_04_HintText03 {
     "very large. It actually loops around\l"
     "here. We'll have mapped it all out in\l"
     "no time!")
+    if (var(VAR_CAPTAIN_DIALOGUE) == 1) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } elif (var(VAR_CAPTAIN_DIALOGUE) == 2) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } else  {
+        setflag(FLAG_REGISTERED_CRISTIN)
+    }
     release
     end
 }

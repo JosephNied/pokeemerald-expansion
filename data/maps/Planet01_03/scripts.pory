@@ -289,6 +289,13 @@ script Planet01_03_HintText05 {
     "But I can't help but wonder whether it's\n"
     "still possible whether the Staryu can\l"
     "still evolve using water stones.")
+    if (var(VAR_CAPTAIN_DIALOGUE) == 1) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } elif (var(VAR_CAPTAIN_DIALOGUE) == 2) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } else  {
+        setflag(FLAG_REGISTERED_CRISTIN)
+    }
     release
     end
 }
@@ -301,6 +308,13 @@ script Planet01_03_HintText06 {
     "Fortunately, we brought our own\n"
     "Surfing Pokémon, so we were able to\l"
     "setup camps across the water.")
+    if (var(VAR_CAPTAIN_DIALOGUE) == 1) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } elif (var(VAR_CAPTAIN_DIALOGUE) == 2) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } else  {
+        setflag(FLAG_REGISTERED_CRISTIN)
+    }
     release
     end
 }
@@ -311,6 +325,13 @@ script Planet01_03_HintText07 {
     "around the mountain covered in blue\l"
     "plants; I would bet that a Pokémon with\l"
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Rock Smash{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} is likely up there, hiding.")
+    if (var(VAR_CAPTAIN_DIALOGUE) == 1) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } elif (var(VAR_CAPTAIN_DIALOGUE) == 2) {
+        clearflag(FLAG_REGISTERED_CRISTIN)
+    } else  {
+        setflag(FLAG_REGISTERED_CRISTIN)
+    }
     release
     end
 }
