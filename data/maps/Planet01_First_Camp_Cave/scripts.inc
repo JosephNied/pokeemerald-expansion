@@ -232,8 +232,8 @@ voicedialogueABC_Text_0:
 
 voicedialogueABC_Text_1:
 # 125 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	.string "Enough with the games! Just tell me who\n"
-	.string "you are!$"
+	.string "You again! Enough with the games! Just tell\n"
+	.string "me who you are!$"
 
 voicedialogueABC_Text_2:
 # 133 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
