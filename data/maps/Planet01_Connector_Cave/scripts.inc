@@ -169,6 +169,26 @@ EventScript_GlimmoraCatch::
 	end
 
 
+groundjournal_2::
+# 98 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	lock
+# 100 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_DETERMINED
+# 101 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	callnative DrawMugshot
+# 102 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	msgbox groundjournal_2_Text_0
+# 103 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	waitmessage
+# 104 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	callnative ClearMugshot
+# 106 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	msgbox groundjournal_2_Text_1
+# 114 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	release
+	end
+
+
 ConnectorCave_Cold_Warning_Text_0:
 # 59 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "Woah! ...It suddenly got way colder in\n"
@@ -187,3 +207,18 @@ EventScript_GlimmoraCatch_Text_0:
 # 91 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "Glimmora poisoned a party member!\n"
 	.string "That stings!$"
+
+groundjournal_2_Text_0:
+# 102 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	.string "Oh wow, a journal!$"
+
+groundjournal_2_Text_1:
+# 106 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	.string "Ops: This cave was another bust. But, \n"
+	.string "the cave above the waterfall leads to a\l"
+	.string "promising cavern below. I discussed\l"
+	.string "making some dramatic changes to the\l"
+	.string "environment with the Engineer; and, I'll\l"
+	.string "prepare a surprise for the Biologist I\l"
+	.string "really think will cheer them up, if we\l"
+	.string "can pull it off!$"

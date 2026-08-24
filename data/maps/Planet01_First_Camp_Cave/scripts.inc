@@ -100,54 +100,86 @@ Planet01_First_Camp_Cave_HintText01::
 # 83 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	release
 # 85 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_UNKNOWN
-# 86 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	callnative DrawMugshot
+	call voicedialogueABC
 # 87 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	msgbox Planet01_First_Camp_Cave_HintText01_Text_2
-# 89 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	waitmessage
-# 90 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	callnative ClearMugshot
-# 91 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	release
-# 93 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
+	end
+
+
+groundjournal_1::
+# 92 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	lock
 # 94 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	callnative DrawMugshot
+	setvar VAR_0x8000, MUGSHOT_PLAYER_DETERMINED
 # 95 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	msgbox Planet01_First_Camp_Cave_HintText01_Text_3
+	callnative DrawMugshot
+# 96 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	msgbox groundjournal_1_Text_0
 # 97 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	waitmessage
 # 98 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	callnative ClearMugshot
-# 99 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	release
-# 101 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_UNKNOWN
-# 102 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	callnative DrawMugshot
-# 103 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	msgbox Planet01_First_Camp_Cave_HintText01_Text_4
-# 113 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	waitmessage
-# 114 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	callnative ClearMugshot
-# 115 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	release
-# 117 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
-# 118 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	callnative DrawMugshot
-# 119 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	msgbox Planet01_First_Camp_Cave_HintText01_Text_5
-# 124 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	waitmessage
-# 125 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	callnative ClearMugshot
-# 126 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+# 100 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	msgbox groundjournal_1_Text_1
+# 109 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	release
 	end
+
+
+voicedialogueABC::
+# 114 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	compare VAR_DAILY_SLOTS, 1
+	goto_if_eq voicedialogueABC_1
+	return
+
+voicedialogueABC_1:
+# 115 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+# 116 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative DrawMugshot
+# 117 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	msgbox voicedialogueABC_Text_0
+# 119 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	waitmessage
+# 120 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative ClearMugshot
+# 121 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	release
+# 123 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
+# 124 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative DrawMugshot
+# 125 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	msgbox voicedialogueABC_Text_1
+# 127 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	waitmessage
+# 128 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative ClearMugshot
+# 129 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	release
+# 131 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+# 132 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative DrawMugshot
+# 133 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	msgbox voicedialogueABC_Text_2
+# 143 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	waitmessage
+# 144 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative ClearMugshot
+# 145 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	release
+# 147 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
+# 148 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative DrawMugshot
+# 149 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	msgbox voicedialogueABC_Text_3
+# 154 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	waitmessage
+# 155 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	callnative ClearMugshot
+	return
 
 
 Planet01_First_Camp_Cave_UrsalunaEncounter_Text_0:
@@ -177,18 +209,34 @@ Planet01_First_Camp_Cave_HintText01_Text_1:
 	.string "I was hoping to find these guys\n"
 	.string "by now...$"
 
-Planet01_First_Camp_Cave_HintText01_Text_2:
-# 87 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+groundjournal_1_Text_0:
+# 96 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	.string "Oh wow, a journal!$"
+
+groundjournal_1_Text_1:
+# 100 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+	.string "Biologist: Though the water here is\n"
+	.string "safe for our Pokémon to drink, it\l"
+	.string "transformed them in an unexpected way. \l"
+	.string "They changed colors: The Engineer's \l"
+	.string "Excadrill and Kingdra, my Venusaur and \l"
+	.string "Charizard, and Ops' Haxorus. Ops' \l"
+	.string "Dragonite, however, was fine; I really \l"
+	.string "want to figure out why Dragonite in \l"
+	.string "particular is so resilient to change.$"
+
+voicedialogueABC_Text_0:
+# 117 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	.string "{COLOR RED}{SHADOW LIGHT_RED}<A fly, caught in a web. I'm surprised\n"
 	.string "you're still whole, to be honest.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
-Planet01_First_Camp_Cave_HintText01_Text_3:
-# 95 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+voicedialogueABC_Text_1:
+# 125 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	.string "Enough with the games! Just tell me who\n"
 	.string "you are!$"
 
-Planet01_First_Camp_Cave_HintText01_Text_4:
-# 103 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+voicedialogueABC_Text_2:
+# 133 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	.string "{COLOR RED}{SHADOW LIGHT_RED}<Who am I... Good question... Nothing\n"
 	.string "important. In truth, I was going to tell\l"
 	.string "you how you might escape by getting to\l"
@@ -200,8 +248,8 @@ Planet01_First_Camp_Cave_HintText01_Text_4:
 	.string "soul in the dark. However you choose to\l"
 	.string "end this... I'm sorry.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
-Planet01_First_Camp_Cave_HintText01_Text_5:
-# 119 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
+voicedialogueABC_Text_3:
+# 149 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
 	.string "Look, you're clearly going through a\n"
 	.string "time, but I don't want to be here. Just\l"
 	.string "tell me what I need to do to get my ship\l"

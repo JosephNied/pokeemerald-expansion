@@ -271,4 +271,5 @@ static void setCustomFlagsAtStart(void)
     FlagSet(FLAG_HIDE_ROUTE_111_GABBY_AND_TY_3);
 	FlagSet(FLAG_HIDE_ROUTE_118_GABBY_AND_TY_2);
 	FlagSet(FLAG_HIDE_ROUTE_120_GABBY_AND_TY_2);
+    VarSet(VAR_DAILY_SLOTS, 1);
 }

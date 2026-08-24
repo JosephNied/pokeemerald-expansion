@@ -93,3 +93,24 @@ script EventScript_GlimmoraCatch {
 	release
 	end
 }
+
+script groundjournal_2 {
+    lock
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
+    msgbox("Oh wow, a journal!")
+    waitmessage
+    callnative(ClearMugshot)
+
+    msgbox("Ops: This cave was another bust. But, \n" 
+    "the cave above the waterfall leads to a\l"
+    "promising cavern below. I discussed\l"
+    "making some dramatic changes to the\l"
+    "environment with the Engineer; and, I'll\l"
+    "prepare a surprise for the Biologist I\l"
+    "really think will cheer them up, if we\l"
+    "can pull it off!")
+    release
+    end
+}

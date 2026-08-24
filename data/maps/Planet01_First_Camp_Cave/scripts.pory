@@ -82,48 +82,76 @@ script Planet01_First_Camp_Cave_HintText01 {
     callnative(ClearMugshot)
     release
 
-    setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
-    callnative(DrawMugshot)
-    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<A fly, caught in a web. I'm surprised\n" 
-    "you're still whole, to be honest.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-    waitmessage
-    callnative(ClearMugshot)
-    release
+    call(voicedialogueABC)
 
-    setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
-    callnative(DrawMugshot)
-    msgbox("Enough with the games! Just tell me who\n" 
-    "you are!")
-    waitmessage
-    callnative(ClearMugshot)
     release
-
-    setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
-    callnative(DrawMugshot)
-    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Who am I... Good question... Nothing\n"
-    "important. In truth, I was going to tell\l" 
-    "you how you might escape by getting to\l"
-    "the research facility at the top of the\l"
-    "waterfall. But, I guess I still don't\l"
-    "know if that's what I want... I don't\l"
-    "mean you any harm. But it's probably\l"
-    "better you don't listen to me; a lost\l"
-    "soul in the dark. However you choose to\l"
-    "end this... I'm sorry.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-    waitmessage
-    callnative(ClearMugshot)
-    release
-
-    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
-    callnative(DrawMugshot)
-    msgbox("Look, you're clearly going through a\n" 
-    "time, but I don't want to be here. Just\l"
-    "tell me what I need to do to get my ship\l"
-    "off the ground.\p"
-    "Hello? Hello?!?! ...Gone again? Damn.")
-    waitmessage
-    callnative(ClearMugshot)
-    release
-
     end
+}
+
+script groundjournal_1 {
+    lock
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
+    msgbox("Oh wow, a journal!")
+    waitmessage
+    callnative(ClearMugshot)
+
+    msgbox("Biologist: Though the water here is\n" 
+    "safe for our Pokémon to drink, it\l"
+    "transformed them in an unexpected way. \l"
+    "They changed colors: The Engineer's \l"
+    "Excadrill and Kingdra, my Venusaur and \l"
+    "Charizard, and Ops' Haxorus. Ops' \l"
+    "Dragonite, however, was fine; I really \l"
+    "want to figure out why Dragonite in \l"
+    "particular is so resilient to change.")
+    release
+    end
+}
+
+script voicedialogueABC {
+    if(var(VAR_DAILY_SLOTS) == 1) {
+        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+        callnative(DrawMugshot)
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<A fly, caught in a web. I'm surprised\n" 
+        "you're still whole, to be honest.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        waitmessage
+        callnative(ClearMugshot)
+        release
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+        callnative(DrawMugshot)
+        msgbox("You again! Enough with the games! Just tell\n" 
+        "me who you are!")
+        waitmessage
+        callnative(ClearMugshot)
+        release
+
+        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+        callnative(DrawMugshot)
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Who am I... Good question... Nothing\n"
+        "important. In truth, I was going to tell\l" 
+        "you how you might escape by getting to\l"
+        "the research facility at the top of the\l"
+        "waterfall. But, I guess I still don't\l"
+        "know if that's what I want... I don't\l"
+        "mean you any harm. But it's probably\l"
+        "better you don't listen to me; a lost\l"
+        "soul in the dark. However you choose to\l"
+        "end this... I'm sorry.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        waitmessage
+        callnative(ClearMugshot)
+        release
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+        callnative(DrawMugshot)
+        msgbox("Look, you're clearly going through a\n" 
+        "time, but I don't want to be here. Just\l"
+        "tell me what I need to do to get my ship\l"
+        "off the ground.\p"
+        "Hello? Hello?!?! ...Gone again? Damn.")
+        waitmessage
+        callnative(ClearMugshot)
+    }
 }
