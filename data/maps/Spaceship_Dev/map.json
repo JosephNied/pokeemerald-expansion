@@ -15,7 +15,7 @@
   "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
       "x": 5,
       "y": 8,
       "elevation": 0,
@@ -91,6 +91,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "JirachiOnShip",
       "flag": "FLAG_REGISTERED_DUSTY"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CAMERAMAN",
+      "x": 6,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Spaceship_Dev_EventScript_OxygenGet",
+      "flag": "FLAG_MET_PROF_COZMO"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MUDKIP_DOLL",
+      "x": 14,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Spaceship_Dev_EventScript_BallGet",
+      "flag": "FLAG_RECEIVED_WAILMER_DOLL"
     }
   ],
   "warp_events": [

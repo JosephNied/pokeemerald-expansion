@@ -98,9 +98,7 @@ script refill_air_canister {
 script Spaceship_Dev_EventScript_BallItem01 {
     lock
     faceplayer
-    giveitem(ITEM_BEAST_BALL, 2)
     giveitem(ITEM_SCANNER)
-    giveitem(ITEM_DEVON_PARTS)
     giveitem(ITEM_ESCAPE_ROPE)
     //giveitem(ITEM_DOWSING_MACHINE)
     //giveitem(ITEM_WAILMER_PAIL)
@@ -116,6 +114,26 @@ script Spaceship_Dev_EventScript_BallItem01 {
     release
     end
 }
+
+script Spaceship_Dev_EventScript_OxygenGet {
+    lock
+    giveitem(ITEM_DEVON_PARTS)
+    setflag(FLAG_MET_PROF_COZMO)
+    removeobject(7)
+    release
+    end
+}
+
+script Spaceship_Dev_EventScript_BallGet {
+    lock
+    giveitem(ITEM_BEAST_BALL, 2)
+    setflag(FLAG_RECEIVED_WAILMER_DOLL)
+    removeobject(8)
+    release
+    end
+}
+
+
 
 script Spaceship_Dev_EventScript_Tutorial_Notebook {
     lock
