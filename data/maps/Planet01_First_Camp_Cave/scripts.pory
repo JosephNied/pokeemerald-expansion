@@ -4,6 +4,7 @@ mapscripts Planet01_First_Camp_Cave_MapScripts {
 
 script Planet01_First_Camp_Cave_Enter {
 	//clearflag(FLAG_UNUSED_0x02A)
+    setvar(VAR_TEMP_2, 0)
 	end
 }
 
@@ -82,7 +83,10 @@ script Planet01_First_Camp_Cave_HintText01 {
     callnative(ClearMugshot)
     release
 
-    call(voicedialogueABC)
+    if (var(VAR_TEMP_2) == 0) {
+        call(voicedialogueABC)
+        setvar(VAR_TEMP_2, 1)
+    }
 
     release
     end
@@ -150,8 +154,163 @@ script voicedialogueABC {
         "time, but I don't want to be here. Just\l"
         "tell me what I need to do to get my ship\l"
         "off the ground.\p"
-        "Hello? Hello?!?! ...Gone again? Damn.")
+        "Hello? Hello?!?!\p"
+        "...Gone again? Damn.")
+        waitmessage
+        callnative(ClearMugshot)
+        addvar(VAR_DAILY_SLOTS, 1)
+    }
+    elif(var(VAR_DAILY_SLOTS) == 2) {
+        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+        callnative(DrawMugshot)
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I see you're persevering.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        waitmessage
+        callnative(ClearMugshot)
+        release
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+        callnative(DrawMugshot)
+        msgbox("You again? Got anything meaningful to\n"
+        "say?")
+        waitmessage
+        callnative(ClearMugshot)
+        release
+
+        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+        callnative(DrawMugshot)
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<...>\n"
+        "<I decided. You need to come to the \l"
+        "primary facility. I don't know how to \l"
+        "get you up the waterfall, but when you\l"
+        "get up it, I can help you from there. I \l"
+        "regret being a coward about this. \l"
+        "Please don't give up.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        waitmessage
+        callnative(ClearMugshot)
+        release
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+        callnative(DrawMugshot)
+        msgbox("Wow, that's a change in tune. Are you\n
+        ready then to tell me who you are?")
+        waitmessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+        callnative(DrawMugshot)
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<...I would be, the one you've read\n"
+        "about, the Biologist...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        waitmessage
+        callnative(ClearMugshot)
+        release
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+        callnative(DrawMugshot)
+        msgbox("Ok. Interesting. Got a name?")
+        waitmessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+        callnative(DrawMugshot)
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<...>\p"
+        "<We-, I-, ...a miscalculation was made.\n"
+        "If it wasn't obvious, the space virus is\l"
+        "some form of Deoxys. Its' psychic power\l"
+        "is holding down your ship. Defeat Deoxys,\l"
+        "and you might be able to escape.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        waitmessage
+        callnative(ClearMugshot)
+        release
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+        callnative(DrawMugshot)
+        msgbox("Yeah? And what are you up to then?")
+        waitmessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+        callnative(DrawMugshot)
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<You'll see. Just know, I am helping.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        waitmessage
+        callnative(ClearMugshot)
+        release
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+        callnative(DrawMugshot)
+        msgbox("...How, exactly?")
+        waitmessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+        callnative(DrawMugshot)
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I'll explain later... my only advice...\n"
+        "The north and south of this planet, we\l"
+        "never fully explored. Look there.\l"
+        "Good luck.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        waitmessage
+        callnative(ClearMugshot)
+        release
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+        callnative(DrawMugshot)
+        msgbox("Ok. Well, I guess this is progress.")
+        waitmessage
+        callnative(ClearMugshot)
+        addvar(VAR_DAILY_SLOTS, 1)
+    }
+    elif(var(VAR_DAILY_SLOTS) == 4) {
+        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+        callnative(DrawMugshot)
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Hey... Those infected monsters are\n"
+        "coming back. You can't understand now,\l"
+        "but I've been trying to hold them back.\l"
+        "Sorry I'm not stronger. I recommend\l"
+        "you walk slowly, running with likely\l"
+        "alert them.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        waitmessage
+        callnative(ClearMugshot)
+        release
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+        callnative(DrawMugshot)
+        msgbox("Wow, really? Are you, like ok?")
+        waitmessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+        callnative(DrawMugshot)
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Am I... Ok?\n"
+        "Haven't heard anybody say that in\l"
+        "quite a while...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        waitmessage
+        callnative(ClearMugshot)
+        release
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+        callnative(DrawMugshot)
+        msgbox("Hello?\p"
+        "...Yeah, they are not ok.")
+        waitmessage
+        addvar(VAR_DAILY_SLOTS, 1)
+        callnative(ClearMugshot)
+        setvar(VAR_DAILY_SLOTS, 6)
+    }
+    elif(var(VAR_DAILY_SLOTS) == 5) { 
+
+        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+        callnative(DrawMugshot)
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Well, then. You're quite the scientist\n"
+        "yourself. I'll be waiting at the top.\l"
+        "I recommend you prepare your team.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        waitmessage
+        callnative(ClearMugshot)
+        release
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+        callnative(DrawMugshot)
+        msgbox("...Yeah. Got it.")
         waitmessage
         callnative(ClearMugshot)
     }
+
 }

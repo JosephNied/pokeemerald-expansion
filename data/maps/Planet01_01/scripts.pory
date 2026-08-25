@@ -21,7 +21,12 @@ script Planet01_01_Enter {
         if(flag(FLAG_REGISTERED_CRISTIN) == FALSE) {
         setvar(VAR_TEMP_0, 2)
         } else {
-            setvar(VAR_TEMP_0, 1)
+            if (var(VAR_DAILY_SLOTS) == 3) 
+            {
+                setvar(VAR_TEMP_0, 3)
+            } else {
+                setvar(VAR_TEMP_0, 1)
+            }
         }
     }
 
@@ -34,6 +39,7 @@ Planet01_01_FrameTable::
 	map_script_2 VAR_AIR_TIMER_TRIGGERED, 1, Planet01_01_StartAirTimer
     map_script_2 VAR_TEMP_0, 0, Planet01_01_RobotGreeting
     map_script_2 VAR_TEMP_0, 2, Planet01_01_JirachiAppears
+    map_script_2 VAR_TEMP_0, 3, Planet01_01_MonstersRegular
 	.2byte 0
 `
 
@@ -966,6 +972,15 @@ script EventScript_TheCaptain {
             "just my intuition.")
         }
     }
+    release
+    end
+}
+
+script Planet01_01_MonstersRegular {
+    lock
+    setvar(VAR_DAILY_SLOTS, 4)
+    call(voicedialogueABC)
+    clearflag(FLAG_REGISTERED_BROOKE)
     release
     end
 }

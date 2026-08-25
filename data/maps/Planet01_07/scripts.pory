@@ -79,6 +79,9 @@ script Sun_Moon_Check {
 		waitmessage
 		closemessage
 		callnative(ClearMugshot)
+		setvar(VAR_DAILY_SLOTS, 5)
+		call(voicedialogueABC)
+		setvar(VAR_DAILY_SLOTS, 6)
 		releaseall
 	} else {
 		lockall

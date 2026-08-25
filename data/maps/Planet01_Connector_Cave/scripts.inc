@@ -189,6 +189,16 @@ groundjournal_2::
 	end
 
 
+connector_cave_remains::
+# 119 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	lock
+# 120 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	msgbox connector_cave_remains_Text_0
+# 127 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	release
+	end
+
+
 ConnectorCave_Cold_Warning_Text_0:
 # 59 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "Woah! ...It suddenly got way colder in\n"
@@ -222,3 +232,13 @@ groundjournal_2_Text_1:
 	.string "prepare a surprise for the Biologist I\l"
 	.string "really think will cheer them up, if we\l"
 	.string "can pull it off!$"
+
+connector_cave_remains_Text_0:
+# 120 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	.string "Engineer: Despite my Excadrill's\n"
+	.string "efforts in putting up a barrier,\l"
+	.string "the cold of the icy cavern still\l"
+	.string "bleeds through. Our time here was\l"
+	.string "not wasted, however; the discovery\l"
+	.string "we made beyond the cavern seems\l"
+	.string "very interesting...$"

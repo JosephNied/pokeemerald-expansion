@@ -778,9 +778,9 @@ IsPlayerReadyToGo_3:
 	callnative DrawMugshot
 # 481 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox IsPlayerReadyToGo_Text_0
-# 484 "data/maps/Spaceship_Dev/scripts.pory"
-	callnative ClearMugshot
 # 485 "data/maps/Spaceship_Dev/scripts.pory"
+	callnative ClearMugshot
+# 486 "data/maps/Spaceship_Dev/scripts.pory"
 	releaseall
 IsPlayerReadyToGo_1:
 	end
@@ -804,67 +804,67 @@ IsPlayerReadyToGo_5:
 
 
 EventScript_MapsItem::
-# 491 "data/maps/Spaceship_Dev/scripts.pory"
+# 492 "data/maps/Spaceship_Dev/scripts.pory"
 	lock
-# 493 "data/maps/Spaceship_Dev/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_MAP_01
 # 494 "data/maps/Spaceship_Dev/scripts.pory"
-	callnative DrawMugshot
+	setvar VAR_0x8000, MUGSHOT_MAP_01
 # 495 "data/maps/Spaceship_Dev/scripts.pory"
-	msgbox EventScript_MapsItem_Text_0, MSGBOX_YESNO
+	callnative DrawMugshot
 # 496 "data/maps/Spaceship_Dev/scripts.pory"
-	callnative ClearMugshot
+	msgbox EventScript_MapsItem_Text_0, MSGBOX_YESNO
 # 497 "data/maps/Spaceship_Dev/scripts.pory"
+	callnative ClearMugshot
+# 498 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_MapsItem_2
-# 502 "data/maps/Spaceship_Dev/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_MAP_02
 # 503 "data/maps/Spaceship_Dev/scripts.pory"
-	callnative DrawMugshot
+	setvar VAR_0x8000, MUGSHOT_MAP_02
 # 504 "data/maps/Spaceship_Dev/scripts.pory"
-	msgbox EventScript_MapsItem_Text_1, MSGBOX_YESNO
+	callnative DrawMugshot
 # 505 "data/maps/Spaceship_Dev/scripts.pory"
-	callnative ClearMugshot
+	msgbox EventScript_MapsItem_Text_1, MSGBOX_YESNO
 # 506 "data/maps/Spaceship_Dev/scripts.pory"
+	callnative ClearMugshot
+# 507 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_MapsItem_5
-# 511 "data/maps/Spaceship_Dev/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_MAP_03
 # 512 "data/maps/Spaceship_Dev/scripts.pory"
-	callnative DrawMugshot
+	setvar VAR_0x8000, MUGSHOT_MAP_03
 # 513 "data/maps/Spaceship_Dev/scripts.pory"
-	msgbox EventScript_MapsItem_Text_2, MSGBOX_YESNO
+	callnative DrawMugshot
 # 514 "data/maps/Spaceship_Dev/scripts.pory"
-	callnative ClearMugshot
+	msgbox EventScript_MapsItem_Text_2, MSGBOX_YESNO
 # 515 "data/maps/Spaceship_Dev/scripts.pory"
+	callnative ClearMugshot
+# 516 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_MapsItem_8
-# 520 "data/maps/Spaceship_Dev/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_MAP_04
 # 521 "data/maps/Spaceship_Dev/scripts.pory"
-	callnative DrawMugshot
+	setvar VAR_0x8000, MUGSHOT_MAP_04
 # 522 "data/maps/Spaceship_Dev/scripts.pory"
-	msgbox EventScript_MapsItem_Text_3
+	callnative DrawMugshot
 # 523 "data/maps/Spaceship_Dev/scripts.pory"
-	callnative ClearMugshot
+	msgbox EventScript_MapsItem_Text_3
 # 524 "data/maps/Spaceship_Dev/scripts.pory"
+	callnative ClearMugshot
+# 525 "data/maps/Spaceship_Dev/scripts.pory"
 	closemessage
-# 526 "data/maps/Spaceship_Dev/scripts.pory"
+# 527 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
 EventScript_MapsItem_2:
-# 498 "data/maps/Spaceship_Dev/scripts.pory"
+# 499 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
 EventScript_MapsItem_5:
-# 507 "data/maps/Spaceship_Dev/scripts.pory"
+# 508 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
 EventScript_MapsItem_8:
-# 516 "data/maps/Spaceship_Dev/scripts.pory"
+# 517 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
@@ -910,8 +910,8 @@ refill_air_canister_Text_1:
 
 Spaceship_Dev_EventScript_Tutorial_Notebook_Text_0:
 # 124 "data/maps/Spaceship_Dev/scripts.pory"
-	.string "Explorer's Guide: What would you like to \n"
-	.string "learn about?$"
+	.string "Operations Manual: What would you like\n"
+	.string "to learn about?$"
 
 Spaceship_Dev_EventScript_Tutorial_Notebook_Text_1:
 # 128 "data/maps/Spaceship_Dev/scripts.pory"
@@ -1060,20 +1060,21 @@ IsPlayerReadyToGo_Text_0:
 # 481 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "I'm not ready yet!\n"
 	.string "I need Magnezone, and my equipment!\p"
-	.string "I should check the Explorer's Guide too.$"
+	.string "I need to review the Operations Manual\n"
+	.string "too.$"
 
 EventScript_MapsItem_Text_0:
-# 495 "data/maps/Spaceship_Dev/scripts.pory"
+# 496 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Map for the Twilight Plateau.\pView the next map?$"
 
 EventScript_MapsItem_Text_1:
-# 504 "data/maps/Spaceship_Dev/scripts.pory"
+# 505 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Map for the Forest.\pView the next map?$"
 
 EventScript_MapsItem_Text_2:
-# 513 "data/maps/Spaceship_Dev/scripts.pory"
+# 514 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Map for the Shoreline.\pView the next map?$"
 
 EventScript_MapsItem_Text_3:
-# 522 "data/maps/Spaceship_Dev/scripts.pory"
+# 523 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Map for the Misty Mountains.$"

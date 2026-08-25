@@ -20,6 +20,11 @@ script Planet01_03_Enter {
     clearflag(FLAG_TEMP_1D)
     clearflag(FLAG_TEMP_1E)
     clearflag(FLAG_TEMP_1F)
+    if((var(VAR_DAILY_SLOTS) == 1) || (var(VAR_DAILY_SLOTS) == 2)) {
+        setvar(VAR_TEMP_1, 0)
+    } else {
+		setvar(VAR_TEMP_1, 1)
+	}
 	end
 }
 
@@ -334,4 +339,12 @@ script Planet01_03_HintText07 {
     }
     release
     end
+}
+
+script voicetrigger_shoreline {
+	lock
+    call(voicedialogueABC)
+    setvar(VAR_TEMP_1, 1)
+	release
+	end
 }

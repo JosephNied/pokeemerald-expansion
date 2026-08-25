@@ -121,8 +121,8 @@ script Spaceship_Dev_EventScript_Tutorial_Notebook {
     lock
     faceplayer
     playse(SE_PC_LOGIN)
-    msgbox("Explorer's Guide: What would you like to \n"
-    "learn about?")
+    msgbox("Operations Manual: What would you like\n"
+    "to learn about?")
     multichoice(0, 0, MULTI_TUTORIAL_NOTES, FALSE)
     if (var(VAR_RESULT) == 0) {
         msgbox("Your {COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen System{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} reports how many\n"
@@ -480,7 +480,8 @@ script IsPlayerReadyToGo {
         callnative(DrawMugshot)
         msgbox("I'm not ready yet!\n"
         "I need Magnezone, and my equipment!\p"
-        "I should check the Explorer's Guide too.")
+        "I need to review the Operations Manual\n"
+        "too.")
         callnative(ClearMugshot)
         releaseall
     }

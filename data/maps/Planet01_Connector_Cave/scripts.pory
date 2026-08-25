@@ -114,3 +114,16 @@ script groundjournal_2 {
     release
     end
 }
+
+script connector_cave_remains {
+    lock
+    msgbox("Engineer: Despite my Excadrill's\n" 
+    "efforts in putting up a barrier,\l"
+    "the cold of the icy cavern still\l"
+    "bleeds through. Our time here was\l"
+    "not wasted, however; the discovery\l"
+    "we made beyond the cavern seems\l"
+    "very interesting...")
+    release
+    end
+}
