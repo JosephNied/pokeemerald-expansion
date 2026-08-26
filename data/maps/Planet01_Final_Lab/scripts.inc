@@ -405,7 +405,7 @@ Final_Lab_Remark01_Text_0:
 
 Final_Lab_Remark01_Text_1:
 # 36 "data/maps/Planet01_Final_Lab/scripts.pory"
-	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}<I will explain everything... \n"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<I will explain everything... \n"
 	.string "When you arrive at the lab.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Final_Lab_Remark01_Text_2:
@@ -417,7 +417,7 @@ Final_Lab_Remark01_Text_2:
 
 Final_Lab_Remark01_Text_3:
 # 52 "data/maps/Planet01_Final_Lab/scripts.pory"
-	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}<Oh, and look out... For hostiles...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<Oh, and look out... For hostiles...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Final_Lab_Remark01_Text_4:
 # 58 "data/maps/Planet01_Final_Lab/scripts.pory"
@@ -427,7 +427,7 @@ Final_Lab_Remark01_Text_4:
 
 Final_Lab_Remark01_Text_5:
 # 66 "data/maps/Planet01_Final_Lab/scripts.pory"
-	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}<The same as before...\n"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<The same as before...\n"
 	.string "Move slowly, if you have to...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 EventScript_DragoniteEncounter_Text_0:

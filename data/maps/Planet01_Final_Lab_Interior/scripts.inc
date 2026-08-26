@@ -13,7 +13,7 @@ Planet01_Final_Lab_Interior_Enter::
 	setvar VAR_TEMP_0, 1
 Planet01_Final_Lab_Interior_Enter_1:
 # 14 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	goto_if_unset FLAG_REGISTERED_CRISTIN, Planet01_Final_Lab_Interior_Enter_5
+	goto_if_unset FLAG_REGISTERED_VALERIE, Planet01_Final_Lab_Interior_Enter_5
 # 17 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	setvar VAR_TEMP_1, 1
 	return
@@ -257,7 +257,7 @@ Final_Lab_Interior_BiologistEncounter::
 # 196 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	setvar VAR_TEMP_1, 1
 # 197 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setflag FLAG_REGISTERED_CRISTIN
+	setflag FLAG_REGISTERED_VALERIE
 # 198 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	release
 	end
