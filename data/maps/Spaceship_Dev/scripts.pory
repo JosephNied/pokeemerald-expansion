@@ -487,7 +487,7 @@ script JirachiOnShip {
 }
 
 script IsPlayerReadyToGo {
-    if(flag(FLAG_UNUSED_0x027) == true && flag(FLAG_UNUSED_0x028) == true && flag(FLAG_UNUSED_0x029)) {
+    if(flag(FLAG_UNUSED_0x027) == true && flag(FLAG_UNUSED_0x028) == true && flag(FLAG_UNUSED_0x029) == true && flag(FLAG_RECEIVED_WAILMER_DOLL) == true && flag(FLAG_MET_PROF_COZMO) == true) {
         setvar(VAR_TEMP_0, 1)
         setvar(VAR_PLAYER_READY, 1)
     } else {

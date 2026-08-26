@@ -74,6 +74,9 @@ script Planet01_04_HintText01 {
     } else  {
         setflag(FLAG_REGISTERED_CRISTIN)
     }
+    if (var(VAR_DAILY_SLOTS) == 0) {
+        setvar(VAR_DAILY_SLOTS, 1)
+    }
     release
     end
 }
@@ -101,6 +104,9 @@ script Planet01_04_HintText03 {
         clearflag(FLAG_REGISTERED_CRISTIN)
     } else  {
         setflag(FLAG_REGISTERED_CRISTIN)
+    }
+    if (var(VAR_DAILY_SLOTS) == 0) {
+        setvar(VAR_DAILY_SLOTS, 1)
     }
     release
     end

@@ -11,7 +11,7 @@ script Planet01_Final_Lab_Interior_Enter {
 		setvar(VAR_TEMP_0, 1)
 	}
 
-	if (flag(FLAG_REGISTERED_CRISTIN) == FALSE) {
+	if (flag(FLAG_REGISTERED_VALERIE) == FALSE) {
 		setvar(VAR_TEMP_1, 0)
 	} else {
 		setvar(VAR_TEMP_1, 1)
@@ -28,13 +28,13 @@ script Final_Lab_Interior_Remark01 {
 	callnative(ClearMugshot)
 	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
-	msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}<Finally, you are here! Come forward!>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<You're here. I can't believe it.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
 	setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
     callnative(DrawMugshot)
-    msgbox("This is crazy! But, I'm coming...")
+    msgbox("I'm kinda scared, but I'm coming...")
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
@@ -126,45 +126,75 @@ script Final_Lab_Interior_BiologistEncounter {
 
     setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
-    msgbox("You're here...\n"
-	"I'm so happy...\l"
-	"...\p"
-	"Let me explain.\p"
-	"I was the biologist on the team of \n"
-	"scientists whose notes you've been \l"
-	"reading. \p"
-	"At the bottom of a cave full of Dittos, \n"
-	"we discovered the cell of a being we \l"
-	"soon learned was the terrifying \l"
-	"Deoxys, the space virus Pokemon. \p"
-	"We tried to control it. We tried to \n"
-	"change it. We tried to... Master it.\p"
-	"We failed. And it infected and \n"
-	"transformed my body. \p"
-	"The others abandoned me. They stole \n"
-	"the ship, and erased the Captain's \l"
-	"memories to avoid being held \l"
-	"accountable for their mutiny and \l"
-	"leaving me to succumb to the virus.\p"
-	"...You've seen those creatures running \n"
-	"around, the ones that appear \l"
-	"aggressive and corrupted? Yes, those \l"
-	"creatures were infected by Deoxys, and \l"
-	"will infect others as well. \p"
-	"When you're infected, your body may die \n"
-	"but the virus inside will not. It will \l"
-	"continue to use you to seek out new \l"
-	"hosts to infect. That's all Deoxys \l"
-	"wants. All infected beings share a part \l"
-	"in the mind and will of Deoxys.")
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Well, here I am. You want to know how \n"
+	"I've been helping. You see, Deoxys and\l"
+	"I are one. It wants to spread. I do not.\l"
+	"Without my concentration, the entire\l"
+	"planet would be overrun by now. Don't\l"
+	"give me credit, though. This is my fault\l"
+	"in the first place, you see.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
 
+	setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+    callnative(DrawMugshot)
+    msgbox("...")
+	waitmessage
+	closemessage
+	callnative(ClearMugshot)
+
+	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    callnative(DrawMugshot)
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<There isn't much more to say, really. \n"
+	"But I do want to confess one thing.\l"
+	"I could never let myself be happy. I\l"
+	"could never allow myself to be a part of\l"
+	"this world, with these people. I could\l"
+	"never accept myself. So, I abandoned my\l"
+	"team and they abandoned me in turn.\p"
+	"Even the memory of me was erased!...\p"
+	"Who would I have been if I allowed\n"
+	"myself to love others? If I loved\l"
+	"myself? These are questions I carry\l"
+	"with me to the end, unanswered.\p"
+	"You're wondering why I'm telling you\n"
+	"this. It's because I've been reading \l"
+	"your mind and seeing into your heart.\p"
+	"You're much like me. You self-sabotage,\n"
+	"like me. You hate yourself, just like \l"
+	"me... Please...\p"
+	"Don't do what I did and throw it all\n"
+	"away.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	waitmessage
+	closemessage
+	callnative(ClearMugshot)
+
+	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    callnative(DrawMugshot)
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Very well... Go down into the basement.\n"
+	"You'll find the source. Defeat it.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	waitmessage
+	closemessage
+	callnative(ClearMugshot)
+
+	setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+    callnative(DrawMugshot)
+    msgbox("What will happen to you?")
+	waitmessage
+	closemessage
+	callnative(ClearMugshot)
+
+	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    callnative(DrawMugshot)
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<...I wouldn't worry about that. Go.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	waitmessage
+	closemessage
+	callnative(ClearMugshot)
 	
 	
 	setvar(VAR_TEMP_1, 1)
-	setflag(FLAG_REGISTERED_CRISTIN)
+	setflag(FLAG_REGISTERED_VALERIE)
 	release
 	end
 }

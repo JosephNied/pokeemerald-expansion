@@ -33,14 +33,14 @@ script Final_Lab_Remark01 {
 	callnative(ClearMugshot)
 	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
-	msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}<I will explain everything... \n"
-	"When you arrive.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I will explain everything... \n"
+	"When you arrive at the lab.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
 	setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
     callnative(DrawMugshot)
-    msgbox("Alright, I got this...\p"
+    msgbox("Ok, I guess you're there?\p"
 	"My instruments say the gravity is\n"
 	"higher down here. Also... The air\l"
 	"is breathable!")
@@ -49,30 +49,24 @@ script Final_Lab_Remark01 {
 	callnative(ClearMugshot)
 	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
-	msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}<Oh, and look out... For hostiles...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Oh, and look out... For hostiles...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
 	setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
     callnative(DrawMugshot)
-    msgbox("Hostiles? What does that mean?!")
+    msgbox("Hostiles? More infected Pokemon? They\n"
+    "don't seem to be native to this\l"
+    "place. Nothing down here does.")
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
 	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
-	msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}<Some Pokemon... Aren't fully in control...\n"
-	"Of themselves anymore...>\p"
-	"<Move slowly, if you have to...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<The same as before...\n"
+	"Move slowly, if you have to...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
-    callnative(ClearMugshot)
-	setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
-    callnative(DrawMugshot)
-	msgbox("Awesome. Vague.")
-    waitmessage
-    closemessage
-    callnative(ClearMugshot)
 	setvar(VAR_TEMP_0, 1)
 	setflag(FLAG_REGISTERED_LILA_AND_ROY)
 	release
@@ -191,24 +185,30 @@ script EventScript_CorruptCatch_M {
 script EventScript_DragoniteEncounter {
     lockall
 
+    msgbox("A Mega Dragonite! You... aren't\n" 
+    "infected?")
+
     getpartysize
     if (var(VAR_RESULT) >= 6) {
-		msgbox("You have too many Pokemon in your party!")
+		msgbox("You want to join my team?")
         releaseall
         end
     }
 
     checkitem(ITEM_BEAST_BALL, 1)
     if (var(VAR_RESULT) == FALSE) {
-		msgbox("You need a Beast Ball to catch this Pokemon!")
+		msgbox("I'd let you join my team,\n
+        if I had an extra Meteor Ball.")
         releaseall
         end
     }
 
-	givemon(SPECIES_DRAGONITE, 50)
 
+	givemon(SPECIES_DRAGONITE, 50)
+    fadeScreen(FADE_TO_BLACK)
     setflag(FLAG_TEMP_9)
     removeobject(4)
+    fadeScreen(FADE_FROM_BLACK)
 
     releaseall
     end

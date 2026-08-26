@@ -301,6 +301,9 @@ script Planet01_03_HintText05 {
     } else  {
         setflag(FLAG_REGISTERED_CRISTIN)
     }
+    if (var(VAR_DAILY_SLOTS) == 0) {
+        setvar(VAR_DAILY_SLOTS, 1)
+    }
     release
     end
 }
@@ -320,6 +323,9 @@ script Planet01_03_HintText06 {
     } else  {
         setflag(FLAG_REGISTERED_CRISTIN)
     }
+    if (var(VAR_DAILY_SLOTS) == 0) {
+        setvar(VAR_DAILY_SLOTS, 1)
+    }
     release
     end
 }
@@ -337,14 +343,17 @@ script Planet01_03_HintText07 {
     } else  {
         setflag(FLAG_REGISTERED_CRISTIN)
     }
+    if (var(VAR_DAILY_SLOTS) == 0) {
+        setvar(VAR_DAILY_SLOTS, 1)
+    }
     release
     end
 }
 
 script voicetrigger_shoreline {
-	lock
+	lockall
     call(voicedialogueABC)
     setvar(VAR_TEMP_1, 1)
-	release
+	releaseall
 	end
 }

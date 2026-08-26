@@ -818,12 +818,22 @@ IsPlayerReadyToGo_2:
 
 IsPlayerReadyToGo_4:
 # 490 "data/maps/Spaceship_Dev/scripts.pory"
-	goto_if_set FLAG_UNUSED_0x029, IsPlayerReadyToGo_2
+	goto_if_set FLAG_UNUSED_0x029, IsPlayerReadyToGo_9
 	goto IsPlayerReadyToGo_3
 
 IsPlayerReadyToGo_5:
 # 490 "data/maps/Spaceship_Dev/scripts.pory"
 	goto_if_set FLAG_UNUSED_0x028, IsPlayerReadyToGo_4
+	goto IsPlayerReadyToGo_3
+
+IsPlayerReadyToGo_8:
+# 490 "data/maps/Spaceship_Dev/scripts.pory"
+	goto_if_set FLAG_MET_PROF_COZMO, IsPlayerReadyToGo_2
+	goto IsPlayerReadyToGo_3
+
+IsPlayerReadyToGo_9:
+# 490 "data/maps/Spaceship_Dev/scripts.pory"
+	goto_if_set FLAG_RECEIVED_WAILMER_DOLL, IsPlayerReadyToGo_8
 	goto IsPlayerReadyToGo_3
 
 

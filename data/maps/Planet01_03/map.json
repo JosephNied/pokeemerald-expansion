@@ -193,7 +193,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(STARYU)",
-      "x": 36,
+      "x": 33,
       "y": 28,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
@@ -258,8 +258,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "x": 29,
-      "y": 16,
+      "x": 33,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -388,7 +388,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "x": 66,
+      "x": 38,
       "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -502,6 +502,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Planet01_03_Elgyem",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(HAXORUS)",
+      "x": 37,
+      "y": 25,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_CHASE_PLAYER_OWE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
+      "trainer_sight_or_berry_tree_id": "65",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x020"
     }
   ],
   "warp_events": [

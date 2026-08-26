@@ -1038,464 +1038,475 @@ Planet01_01_JirachiAppears::
 # 695 "data/maps/Planet01_01/scripts.pory"
 	setvar VAR_CAPTAIN_DIALOGUE, 0
 # 696 "data/maps/Planet01_01/scripts.pory"
+	compare VAR_DAILY_SLOTS, 0
+	goto_if_eq Planet01_01_JirachiAppears_2
+Planet01_01_JirachiAppears_1:
+# 699 "data/maps/Planet01_01/scripts.pory"
 	release
 	end
 
+Planet01_01_JirachiAppears_2:
+# 697 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_DAILY_SLOTS, 1
+	goto Planet01_01_JirachiAppears_1
 
-# 700 "data/maps/Planet01_01/scripts.pory"
-Movement_Player2:
-# 701 "data/maps/Planet01_01/scripts.pory"
-	emote_question_mark
-# 702 "data/maps/Planet01_01/scripts.pory"
-	face_right
+
 # 703 "data/maps/Planet01_01/scripts.pory"
-	delay_16
+Movement_Player2:
 # 704 "data/maps/Planet01_01/scripts.pory"
-	delay_16
+	emote_question_mark
 # 705 "data/maps/Planet01_01/scripts.pory"
-	emote_exclamation_mark
+	face_right
 # 706 "data/maps/Planet01_01/scripts.pory"
-	face_left
+	delay_16
 # 707 "data/maps/Planet01_01/scripts.pory"
 	delay_16
 # 708 "data/maps/Planet01_01/scripts.pory"
-	delay_16
+	emote_exclamation_mark
 # 709 "data/maps/Planet01_01/scripts.pory"
+	face_left
+# 710 "data/maps/Planet01_01/scripts.pory"
+	delay_16
+# 711 "data/maps/Planet01_01/scripts.pory"
+	delay_16
+# 712 "data/maps/Planet01_01/scripts.pory"
 	face_down
 	step_end
 
-# 712 "data/maps/Planet01_01/scripts.pory"
-Movement_Deoxo1_1:
-# 713 "data/maps/Planet01_01/scripts.pory"
-	face_up
-# 714 "data/maps/Planet01_01/scripts.pory"
-	set_visible
 # 715 "data/maps/Planet01_01/scripts.pory"
-	jump_up
-	step_end
-
-# 718 "data/maps/Planet01_01/scripts.pory"
-Movement_Deoxo2_1:
-# 719 "data/maps/Planet01_01/scripts.pory"
+Movement_Deoxo1_1:
+# 716 "data/maps/Planet01_01/scripts.pory"
 	face_up
-# 720 "data/maps/Planet01_01/scripts.pory"
+# 717 "data/maps/Planet01_01/scripts.pory"
 	set_visible
-# 721 "data/maps/Planet01_01/scripts.pory"
+# 718 "data/maps/Planet01_01/scripts.pory"
 	jump_up
 	step_end
 
+# 721 "data/maps/Planet01_01/scripts.pory"
+Movement_Deoxo2_1:
+# 722 "data/maps/Planet01_01/scripts.pory"
+	face_up
+# 723 "data/maps/Planet01_01/scripts.pory"
+	set_visible
 # 724 "data/maps/Planet01_01/scripts.pory"
-Movement_Deoxo1_12:
-# 725 "data/maps/Planet01_01/scripts.pory"
-	walk_up
-# 726 "data/maps/Planet01_01/scripts.pory"
-	walk_up
+	jump_up
+	step_end
+
 # 727 "data/maps/Planet01_01/scripts.pory"
+Movement_Deoxo1_12:
+# 728 "data/maps/Planet01_01/scripts.pory"
+	walk_up
+# 729 "data/maps/Planet01_01/scripts.pory"
+	walk_up
+# 730 "data/maps/Planet01_01/scripts.pory"
 	face_right
 	step_end
 
-# 730 "data/maps/Planet01_01/scripts.pory"
-Movement_Deoxo2_12:
-# 731 "data/maps/Planet01_01/scripts.pory"
-	walk_up
-# 732 "data/maps/Planet01_01/scripts.pory"
-	walk_up
 # 733 "data/maps/Planet01_01/scripts.pory"
+Movement_Deoxo2_12:
+# 734 "data/maps/Planet01_01/scripts.pory"
+	walk_up
+# 735 "data/maps/Planet01_01/scripts.pory"
+	walk_up
+# 736 "data/maps/Planet01_01/scripts.pory"
 	face_left
 	step_end
 
-# 736 "data/maps/Planet01_01/scripts.pory"
+# 739 "data/maps/Planet01_01/scripts.pory"
 Movement_Deoxo1_2:
-# 737 "data/maps/Planet01_01/scripts.pory"
+# 740 "data/maps/Planet01_01/scripts.pory"
 	walk_right
 	step_end
 
-# 740 "data/maps/Planet01_01/scripts.pory"
+# 743 "data/maps/Planet01_01/scripts.pory"
 Movement_Deoxo2_2:
-# 741 "data/maps/Planet01_01/scripts.pory"
+# 744 "data/maps/Planet01_01/scripts.pory"
 	walk_left
 	step_end
 
-# 744 "data/maps/Planet01_01/scripts.pory"
+# 747 "data/maps/Planet01_01/scripts.pory"
 Movement_Deoxo1_3:
-# 745 "data/maps/Planet01_01/scripts.pory"
+# 748 "data/maps/Planet01_01/scripts.pory"
 	jump_left
-# 746 "data/maps/Planet01_01/scripts.pory"
-	set_invisible
-	step_end
-
 # 749 "data/maps/Planet01_01/scripts.pory"
+	set_invisible
+	step_end
+
+# 752 "data/maps/Planet01_01/scripts.pory"
 Movement_Deoxo2_3:
-# 750 "data/maps/Planet01_01/scripts.pory"
+# 753 "data/maps/Planet01_01/scripts.pory"
 	jump_right
-# 751 "data/maps/Planet01_01/scripts.pory"
-	set_invisible
-	step_end
-
 # 754 "data/maps/Planet01_01/scripts.pory"
-Movement_Jirachi1:
-# 755 "data/maps/Planet01_01/scripts.pory"
-	face_down
-# 756 "data/maps/Planet01_01/scripts.pory"
-	set_visible
+	set_invisible
+	step_end
+
 # 757 "data/maps/Planet01_01/scripts.pory"
-	delay_4
+Movement_Jirachi1:
 # 758 "data/maps/Planet01_01/scripts.pory"
-	set_invisible
+	face_down
 # 759 "data/maps/Planet01_01/scripts.pory"
-	delay_4
+	set_visible
 # 760 "data/maps/Planet01_01/scripts.pory"
-	set_visible
+	delay_4
 # 761 "data/maps/Planet01_01/scripts.pory"
-	delay_4
+	set_invisible
 # 762 "data/maps/Planet01_01/scripts.pory"
-	set_invisible
-# 763 "data/maps/Planet01_01/scripts.pory"
 	delay_4
+# 763 "data/maps/Planet01_01/scripts.pory"
+	set_visible
 # 764 "data/maps/Planet01_01/scripts.pory"
-	set_visible
+	delay_4
 # 765 "data/maps/Planet01_01/scripts.pory"
-	delay_8
+	set_invisible
 # 766 "data/maps/Planet01_01/scripts.pory"
-	set_invisible
+	delay_4
 # 767 "data/maps/Planet01_01/scripts.pory"
-	delay_8
-# 768 "data/maps/Planet01_01/scripts.pory"
 	set_visible
+# 768 "data/maps/Planet01_01/scripts.pory"
+	delay_8
 # 769 "data/maps/Planet01_01/scripts.pory"
-	delay_8
-# 770 "data/maps/Planet01_01/scripts.pory"
 	set_invisible
-# 771 "data/maps/Planet01_01/scripts.pory"
+# 770 "data/maps/Planet01_01/scripts.pory"
 	delay_8
+# 771 "data/maps/Planet01_01/scripts.pory"
+	set_visible
 # 772 "data/maps/Planet01_01/scripts.pory"
+	delay_8
+# 773 "data/maps/Planet01_01/scripts.pory"
+	set_invisible
+# 774 "data/maps/Planet01_01/scripts.pory"
+	delay_8
+# 775 "data/maps/Planet01_01/scripts.pory"
 	set_visible
 	step_end
 
-# 775 "data/maps/Planet01_01/scripts.pory"
-Movement_Jirachi2:
-# 776 "data/maps/Planet01_01/scripts.pory"
-	face_up
-# 777 "data/maps/Planet01_01/scripts.pory"
-	delay_16
 # 778 "data/maps/Planet01_01/scripts.pory"
-	walk_up
+Movement_Jirachi2:
 # 779 "data/maps/Planet01_01/scripts.pory"
-	walk_up
+	face_up
 # 780 "data/maps/Planet01_01/scripts.pory"
-	walk_up
+	delay_16
 # 781 "data/maps/Planet01_01/scripts.pory"
+	walk_up
+# 782 "data/maps/Planet01_01/scripts.pory"
+	walk_up
+# 783 "data/maps/Planet01_01/scripts.pory"
+	walk_up
+# 784 "data/maps/Planet01_01/scripts.pory"
 	walk_up
 	step_end
 
 EventScript_TheCaptain::
-# 785 "data/maps/Planet01_01/scripts.pory"
+# 788 "data/maps/Planet01_01/scripts.pory"
 	lock
-# 787 "data/maps/Planet01_01/scripts.pory"
+# 790 "data/maps/Planet01_01/scripts.pory"
 	compare VAR_CAPTAIN_DIALOGUE, 0
 	goto_if_eq EventScript_TheCaptain_2
-# 839 "data/maps/Planet01_01/scripts.pory"
+# 842 "data/maps/Planet01_01/scripts.pory"
 	compare VAR_CAPTAIN_DIALOGUE, 1
 	goto_if_eq EventScript_TheCaptain_3
-# 872 "data/maps/Planet01_01/scripts.pory"
+# 875 "data/maps/Planet01_01/scripts.pory"
 	compare VAR_CAPTAIN_DIALOGUE, 2
 	goto_if_eq EventScript_TheCaptain_4
-# 906 "data/maps/Planet01_01/scripts.pory"
+# 909 "data/maps/Planet01_01/scripts.pory"
 	compare VAR_CAPTAIN_DIALOGUE, 3
 	goto_if_eq EventScript_TheCaptain_5
-# 926 "data/maps/Planet01_01/scripts.pory"
+# 929 "data/maps/Planet01_01/scripts.pory"
 	compare VAR_CAPTAIN_DIALOGUE, 4
 	goto_if_eq EventScript_TheCaptain_6
 EventScript_TheCaptain_1:
-# 975 "data/maps/Planet01_01/scripts.pory"
+# 979 "data/maps/Planet01_01/scripts.pory"
 	release
 	end
 
 EventScript_TheCaptain_2:
-# 789 "data/maps/Planet01_01/scripts.pory"
+# 792 "data/maps/Planet01_01/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
-# 790 "data/maps/Planet01_01/scripts.pory"
-	callnative DrawMugshot
-# 791 "data/maps/Planet01_01/scripts.pory"
-	msgbox EventScript_TheCaptain_Text_0
 # 793 "data/maps/Planet01_01/scripts.pory"
-	waitmessage
+	callnative DrawMugshot
 # 794 "data/maps/Planet01_01/scripts.pory"
-	closemessage
-# 795 "data/maps/Planet01_01/scripts.pory"
-	callnative ClearMugshot
+	msgbox EventScript_TheCaptain_Text_0
+# 796 "data/maps/Planet01_01/scripts.pory"
+	waitmessage
 # 797 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_CAPTAIN_SAD
+	closemessage
 # 798 "data/maps/Planet01_01/scripts.pory"
-	callnative DrawMugshot
-# 799 "data/maps/Planet01_01/scripts.pory"
-	msgbox EventScript_TheCaptain_Text_1
+	callnative ClearMugshot
+# 800 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_CAPTAIN_SAD
 # 801 "data/maps/Planet01_01/scripts.pory"
-	waitmessage
+	callnative DrawMugshot
 # 802 "data/maps/Planet01_01/scripts.pory"
-	closemessage
-# 803 "data/maps/Planet01_01/scripts.pory"
-	callnative ClearMugshot
+	msgbox EventScript_TheCaptain_Text_1
+# 804 "data/maps/Planet01_01/scripts.pory"
+	waitmessage
 # 805 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
+	closemessage
 # 806 "data/maps/Planet01_01/scripts.pory"
-	callnative DrawMugshot
-# 807 "data/maps/Planet01_01/scripts.pory"
-	msgbox EventScript_TheCaptain_Text_2
+	callnative ClearMugshot
 # 808 "data/maps/Planet01_01/scripts.pory"
-	waitmessage
+	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
 # 809 "data/maps/Planet01_01/scripts.pory"
-	closemessage
+	callnative DrawMugshot
 # 810 "data/maps/Planet01_01/scripts.pory"
-	callnative ClearMugshot
+	msgbox EventScript_TheCaptain_Text_2
+# 811 "data/maps/Planet01_01/scripts.pory"
+	waitmessage
 # 812 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_CAPTAIN_SAD
+	closemessage
 # 813 "data/maps/Planet01_01/scripts.pory"
-	callnative DrawMugshot
-# 814 "data/maps/Planet01_01/scripts.pory"
-	msgbox EventScript_TheCaptain_Text_3
-# 817 "data/maps/Planet01_01/scripts.pory"
-	waitmessage
-# 818 "data/maps/Planet01_01/scripts.pory"
-	closemessage
-# 819 "data/maps/Planet01_01/scripts.pory"
 	callnative ClearMugshot
-# 821 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_CONFUSED
-# 822 "data/maps/Planet01_01/scripts.pory"
-	callnative DrawMugshot
-# 823 "data/maps/Planet01_01/scripts.pory"
-	msgbox EventScript_TheCaptain_Text_4
-# 824 "data/maps/Planet01_01/scripts.pory"
-	waitmessage
-# 825 "data/maps/Planet01_01/scripts.pory"
-	closemessage
-# 826 "data/maps/Planet01_01/scripts.pory"
-	callnative ClearMugshot
-# 828 "data/maps/Planet01_01/scripts.pory"
+# 815 "data/maps/Planet01_01/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_CAPTAIN_SAD
-# 829 "data/maps/Planet01_01/scripts.pory"
+# 816 "data/maps/Planet01_01/scripts.pory"
 	callnative DrawMugshot
-# 830 "data/maps/Planet01_01/scripts.pory"
-	msgbox EventScript_TheCaptain_Text_5
-# 834 "data/maps/Planet01_01/scripts.pory"
+# 817 "data/maps/Planet01_01/scripts.pory"
+	msgbox EventScript_TheCaptain_Text_3
+# 820 "data/maps/Planet01_01/scripts.pory"
 	waitmessage
-# 835 "data/maps/Planet01_01/scripts.pory"
+# 821 "data/maps/Planet01_01/scripts.pory"
 	closemessage
-# 836 "data/maps/Planet01_01/scripts.pory"
+# 822 "data/maps/Planet01_01/scripts.pory"
 	callnative ClearMugshot
+# 824 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_CONFUSED
+# 825 "data/maps/Planet01_01/scripts.pory"
+	callnative DrawMugshot
+# 826 "data/maps/Planet01_01/scripts.pory"
+	msgbox EventScript_TheCaptain_Text_4
+# 827 "data/maps/Planet01_01/scripts.pory"
+	waitmessage
+# 828 "data/maps/Planet01_01/scripts.pory"
+	closemessage
+# 829 "data/maps/Planet01_01/scripts.pory"
+	callnative ClearMugshot
+# 831 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_CAPTAIN_SAD
+# 832 "data/maps/Planet01_01/scripts.pory"
+	callnative DrawMugshot
+# 833 "data/maps/Planet01_01/scripts.pory"
+	msgbox EventScript_TheCaptain_Text_5
 # 837 "data/maps/Planet01_01/scripts.pory"
+	waitmessage
+# 838 "data/maps/Planet01_01/scripts.pory"
+	closemessage
+# 839 "data/maps/Planet01_01/scripts.pory"
+	callnative ClearMugshot
+# 840 "data/maps/Planet01_01/scripts.pory"
 	setvar VAR_CAPTAIN_DIALOGUE, 4
 	goto EventScript_TheCaptain_1
 
 EventScript_TheCaptain_3:
-# 841 "data/maps/Planet01_01/scripts.pory"
+# 844 "data/maps/Planet01_01/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
-# 842 "data/maps/Planet01_01/scripts.pory"
-	callnative DrawMugshot
-# 843 "data/maps/Planet01_01/scripts.pory"
-	msgbox EventScript_TheCaptain_Text_6
 # 845 "data/maps/Planet01_01/scripts.pory"
-	waitmessage
+	callnative DrawMugshot
 # 846 "data/maps/Planet01_01/scripts.pory"
-	closemessage
-# 847 "data/maps/Planet01_01/scripts.pory"
-	callnative ClearMugshot
+	msgbox EventScript_TheCaptain_Text_6
+# 848 "data/maps/Planet01_01/scripts.pory"
+	waitmessage
 # 849 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_CAPTAIN_SAD
+	closemessage
 # 850 "data/maps/Planet01_01/scripts.pory"
-	callnative DrawMugshot
-# 851 "data/maps/Planet01_01/scripts.pory"
-	msgbox EventScript_TheCaptain_Text_7
+	callnative ClearMugshot
 # 852 "data/maps/Planet01_01/scripts.pory"
-	waitmessage
-# 853 "data/maps/Planet01_01/scripts.pory"
-	closemessage
-# 854 "data/maps/Planet01_01/scripts.pory"
-	callnative ClearMugshot
-# 856 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
-# 857 "data/maps/Planet01_01/scripts.pory"
-	callnative DrawMugshot
-# 858 "data/maps/Planet01_01/scripts.pory"
-	msgbox EventScript_TheCaptain_Text_8
-# 860 "data/maps/Planet01_01/scripts.pory"
-	waitmessage
-# 861 "data/maps/Planet01_01/scripts.pory"
-	closemessage
-# 862 "data/maps/Planet01_01/scripts.pory"
-	callnative ClearMugshot
-# 864 "data/maps/Planet01_01/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_CAPTAIN_SAD
-# 865 "data/maps/Planet01_01/scripts.pory"
+# 853 "data/maps/Planet01_01/scripts.pory"
 	callnative DrawMugshot
-# 866 "data/maps/Planet01_01/scripts.pory"
-	msgbox EventScript_TheCaptain_Text_9
-# 867 "data/maps/Planet01_01/scripts.pory"
+# 854 "data/maps/Planet01_01/scripts.pory"
+	msgbox EventScript_TheCaptain_Text_7
+# 855 "data/maps/Planet01_01/scripts.pory"
 	waitmessage
-# 868 "data/maps/Planet01_01/scripts.pory"
+# 856 "data/maps/Planet01_01/scripts.pory"
 	closemessage
-# 869 "data/maps/Planet01_01/scripts.pory"
+# 857 "data/maps/Planet01_01/scripts.pory"
 	callnative ClearMugshot
+# 859 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
+# 860 "data/maps/Planet01_01/scripts.pory"
+	callnative DrawMugshot
+# 861 "data/maps/Planet01_01/scripts.pory"
+	msgbox EventScript_TheCaptain_Text_8
+# 863 "data/maps/Planet01_01/scripts.pory"
+	waitmessage
+# 864 "data/maps/Planet01_01/scripts.pory"
+	closemessage
+# 865 "data/maps/Planet01_01/scripts.pory"
+	callnative ClearMugshot
+# 867 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_CAPTAIN_SAD
+# 868 "data/maps/Planet01_01/scripts.pory"
+	callnative DrawMugshot
+# 869 "data/maps/Planet01_01/scripts.pory"
+	msgbox EventScript_TheCaptain_Text_9
 # 870 "data/maps/Planet01_01/scripts.pory"
+	waitmessage
+# 871 "data/maps/Planet01_01/scripts.pory"
+	closemessage
+# 872 "data/maps/Planet01_01/scripts.pory"
+	callnative ClearMugshot
+# 873 "data/maps/Planet01_01/scripts.pory"
 	setvar VAR_CAPTAIN_DIALOGUE, 2
 	goto EventScript_TheCaptain_1
 
 EventScript_TheCaptain_4:
-# 874 "data/maps/Planet01_01/scripts.pory"
+# 877 "data/maps/Planet01_01/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_PLAYER_CONFUSED
-# 875 "data/maps/Planet01_01/scripts.pory"
+# 878 "data/maps/Planet01_01/scripts.pory"
 	callnative DrawMugshot
-# 876 "data/maps/Planet01_01/scripts.pory"
-	msgbox EventScript_TheCaptain_Text_10
 # 879 "data/maps/Planet01_01/scripts.pory"
+	msgbox EventScript_TheCaptain_Text_10
+# 882 "data/maps/Planet01_01/scripts.pory"
 	waitmessage
-# 880 "data/maps/Planet01_01/scripts.pory"
-	closemessage
-# 881 "data/maps/Planet01_01/scripts.pory"
-	callnative ClearMugshot
 # 883 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_CAPTAIN_SAD
+	closemessage
 # 884 "data/maps/Planet01_01/scripts.pory"
-	callnative DrawMugshot
-# 885 "data/maps/Planet01_01/scripts.pory"
-	msgbox EventScript_TheCaptain_Text_11
+	callnative ClearMugshot
 # 886 "data/maps/Planet01_01/scripts.pory"
-	waitmessage
-# 887 "data/maps/Planet01_01/scripts.pory"
-	closemessage
-# 888 "data/maps/Planet01_01/scripts.pory"
-	callnative ClearMugshot
-# 890 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
-# 891 "data/maps/Planet01_01/scripts.pory"
-	callnative DrawMugshot
-# 892 "data/maps/Planet01_01/scripts.pory"
-	msgbox EventScript_TheCaptain_Text_12
-# 894 "data/maps/Planet01_01/scripts.pory"
-	waitmessage
-# 895 "data/maps/Planet01_01/scripts.pory"
-	closemessage
-# 896 "data/maps/Planet01_01/scripts.pory"
-	callnative ClearMugshot
-# 898 "data/maps/Planet01_01/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_CAPTAIN_SAD
-# 899 "data/maps/Planet01_01/scripts.pory"
+# 887 "data/maps/Planet01_01/scripts.pory"
 	callnative DrawMugshot
-# 900 "data/maps/Planet01_01/scripts.pory"
-	msgbox EventScript_TheCaptain_Text_13
-# 901 "data/maps/Planet01_01/scripts.pory"
+# 888 "data/maps/Planet01_01/scripts.pory"
+	msgbox EventScript_TheCaptain_Text_11
+# 889 "data/maps/Planet01_01/scripts.pory"
 	waitmessage
-# 902 "data/maps/Planet01_01/scripts.pory"
+# 890 "data/maps/Planet01_01/scripts.pory"
 	closemessage
-# 903 "data/maps/Planet01_01/scripts.pory"
+# 891 "data/maps/Planet01_01/scripts.pory"
 	callnative ClearMugshot
+# 893 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
+# 894 "data/maps/Planet01_01/scripts.pory"
+	callnative DrawMugshot
+# 895 "data/maps/Planet01_01/scripts.pory"
+	msgbox EventScript_TheCaptain_Text_12
+# 897 "data/maps/Planet01_01/scripts.pory"
+	waitmessage
+# 898 "data/maps/Planet01_01/scripts.pory"
+	closemessage
+# 899 "data/maps/Planet01_01/scripts.pory"
+	callnative ClearMugshot
+# 901 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_CAPTAIN_SAD
+# 902 "data/maps/Planet01_01/scripts.pory"
+	callnative DrawMugshot
+# 903 "data/maps/Planet01_01/scripts.pory"
+	msgbox EventScript_TheCaptain_Text_13
 # 904 "data/maps/Planet01_01/scripts.pory"
+	waitmessage
+# 905 "data/maps/Planet01_01/scripts.pory"
+	closemessage
+# 906 "data/maps/Planet01_01/scripts.pory"
+	callnative ClearMugshot
+# 907 "data/maps/Planet01_01/scripts.pory"
 	setvar VAR_CAPTAIN_DIALOGUE, 1
 	goto EventScript_TheCaptain_1
 
 EventScript_TheCaptain_5:
-# 908 "data/maps/Planet01_01/scripts.pory"
+# 911 "data/maps/Planet01_01/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
-# 909 "data/maps/Planet01_01/scripts.pory"
-	callnative DrawMugshot
-# 910 "data/maps/Planet01_01/scripts.pory"
-	msgbox EventScript_TheCaptain_Text_14
 # 912 "data/maps/Planet01_01/scripts.pory"
-	waitmessage
-# 913 "data/maps/Planet01_01/scripts.pory"
-	closemessage
-# 914 "data/maps/Planet01_01/scripts.pory"
-	callnative ClearMugshot
-# 916 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_CAPTAIN_SAD
-# 917 "data/maps/Planet01_01/scripts.pory"
 	callnative DrawMugshot
-# 918 "data/maps/Planet01_01/scripts.pory"
-	msgbox EventScript_TheCaptain_Text_15
-# 921 "data/maps/Planet01_01/scripts.pory"
+# 913 "data/maps/Planet01_01/scripts.pory"
+	msgbox EventScript_TheCaptain_Text_14
+# 915 "data/maps/Planet01_01/scripts.pory"
 	waitmessage
-# 922 "data/maps/Planet01_01/scripts.pory"
+# 916 "data/maps/Planet01_01/scripts.pory"
 	closemessage
-# 923 "data/maps/Planet01_01/scripts.pory"
+# 917 "data/maps/Planet01_01/scripts.pory"
 	callnative ClearMugshot
+# 919 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_CAPTAIN_SAD
+# 920 "data/maps/Planet01_01/scripts.pory"
+	callnative DrawMugshot
+# 921 "data/maps/Planet01_01/scripts.pory"
+	msgbox EventScript_TheCaptain_Text_15
 # 924 "data/maps/Planet01_01/scripts.pory"
+	waitmessage
+# 925 "data/maps/Planet01_01/scripts.pory"
+	closemessage
+# 926 "data/maps/Planet01_01/scripts.pory"
+	callnative ClearMugshot
+# 927 "data/maps/Planet01_01/scripts.pory"
 	setvar VAR_CAPTAIN_DIALOGUE, 3
 	goto EventScript_TheCaptain_1
 
 EventScript_TheCaptain_6:
-# 928 "data/maps/Planet01_01/scripts.pory"
+# 931 "data/maps/Planet01_01/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
-# 929 "data/maps/Planet01_01/scripts.pory"
-	callnative DrawMugshot
-# 930 "data/maps/Planet01_01/scripts.pory"
-	msgbox EventScript_TheCaptain_Text_16
 # 932 "data/maps/Planet01_01/scripts.pory"
-	waitmessage
-# 933 "data/maps/Planet01_01/scripts.pory"
-	closemessage
-# 934 "data/maps/Planet01_01/scripts.pory"
-	callnative ClearMugshot
-# 936 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_CAPTAIN_SAD
-# 937 "data/maps/Planet01_01/scripts.pory"
 	callnative DrawMugshot
-# 938 "data/maps/Planet01_01/scripts.pory"
-	msgbox EventScript_TheCaptain_Text_17
-# 939 "data/maps/Planet01_01/scripts.pory"
+# 933 "data/maps/Planet01_01/scripts.pory"
+	msgbox EventScript_TheCaptain_Text_16
+# 935 "data/maps/Planet01_01/scripts.pory"
 	waitmessage
-# 940 "data/maps/Planet01_01/scripts.pory"
+# 936 "data/maps/Planet01_01/scripts.pory"
 	closemessage
-# 941 "data/maps/Planet01_01/scripts.pory"
+# 937 "data/maps/Planet01_01/scripts.pory"
 	callnative ClearMugshot
+# 939 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_CAPTAIN_SAD
+# 940 "data/maps/Planet01_01/scripts.pory"
+	callnative DrawMugshot
+# 941 "data/maps/Planet01_01/scripts.pory"
+	msgbox EventScript_TheCaptain_Text_17
+# 942 "data/maps/Planet01_01/scripts.pory"
+	waitmessage
 # 943 "data/maps/Planet01_01/scripts.pory"
-	multichoice 0, 0, MULTI_EXPLORERS_FACTS, FALSE
+	closemessage
 # 944 "data/maps/Planet01_01/scripts.pory"
+	callnative ClearMugshot
+# 946 "data/maps/Planet01_01/scripts.pory"
+	multichoice 0, 0, MULTI_EXPLORERS_FACTS, FALSE
+# 947 "data/maps/Planet01_01/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq EventScript_TheCaptain_12
-# 952 "data/maps/Planet01_01/scripts.pory"
+# 955 "data/maps/Planet01_01/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq EventScript_TheCaptain_13
-# 960 "data/maps/Planet01_01/scripts.pory"
+# 963 "data/maps/Planet01_01/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_eq EventScript_TheCaptain_14
-# 966 "data/maps/Planet01_01/scripts.pory"
+# 969 "data/maps/Planet01_01/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_eq EventScript_TheCaptain_15
 	goto EventScript_TheCaptain_1
 
 EventScript_TheCaptain_12:
-# 945 "data/maps/Planet01_01/scripts.pory"
+# 948 "data/maps/Planet01_01/scripts.pory"
 	msgbox EventScript_TheCaptain_Text_18
 	goto EventScript_TheCaptain_1
 
 EventScript_TheCaptain_13:
-# 953 "data/maps/Planet01_01/scripts.pory"
+# 956 "data/maps/Planet01_01/scripts.pory"
 	msgbox EventScript_TheCaptain_Text_19
 	goto EventScript_TheCaptain_1
 
 EventScript_TheCaptain_14:
-# 961 "data/maps/Planet01_01/scripts.pory"
+# 964 "data/maps/Planet01_01/scripts.pory"
 	msgbox EventScript_TheCaptain_Text_20
 	goto EventScript_TheCaptain_1
 
 EventScript_TheCaptain_15:
-# 967 "data/maps/Planet01_01/scripts.pory"
+# 970 "data/maps/Planet01_01/scripts.pory"
 	msgbox EventScript_TheCaptain_Text_21
 	goto EventScript_TheCaptain_1
 
 
 Planet01_01_MonstersRegular::
-# 980 "data/maps/Planet01_01/scripts.pory"
-	lock
-# 981 "data/maps/Planet01_01/scripts.pory"
-	setvar VAR_DAILY_SLOTS, 4
-# 982 "data/maps/Planet01_01/scripts.pory"
-	call voicedialogueABC
-# 983 "data/maps/Planet01_01/scripts.pory"
-	clearflag FLAG_REGISTERED_BROOKE
 # 984 "data/maps/Planet01_01/scripts.pory"
-	release
+	lockall
+# 985 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_DAILY_SLOTS, 4
+# 986 "data/maps/Planet01_01/scripts.pory"
+	call voicedialogueABC
+# 987 "data/maps/Planet01_01/scripts.pory"
+	clearflag FLAG_REGISTERED_BROOKE
+# 988 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_TEMP_0, 1
+# 989 "data/maps/Planet01_01/scripts.pory"
+	releaseall
 	end
 
 
@@ -1832,95 +1843,95 @@ Planet01_01_JirachiAppears_Text_9:
 	.string "of nowhere. Serves me right, in a way.$"
 
 EventScript_TheCaptain_Text_0:
-# 791 "data/maps/Planet01_01/scripts.pory"
+# 794 "data/maps/Planet01_01/scripts.pory"
 	.string "Did you see those monsters? I almost\n"
 	.string "died! You didn't warn me about those!$"
 
 EventScript_TheCaptain_Text_1:
-# 799 "data/maps/Planet01_01/scripts.pory"
+# 802 "data/maps/Planet01_01/scripts.pory"
 	.string "Ah, yeah, those guys.\n"
 	.string "They neverrr botherrred me before.$"
 
 EventScript_TheCaptain_Text_2:
-# 807 "data/maps/Planet01_01/scripts.pory"
+# 810 "data/maps/Planet01_01/scripts.pory"
 	.string "...Sure. But what are they?$"
 
 EventScript_TheCaptain_Text_3:
-# 814 "data/maps/Planet01_01/scripts.pory"
+# 817 "data/maps/Planet01_01/scripts.pory"
 	.string "I have memorrries of our team, when\n"
 	.string "we firrrst arrrived. These things werrre\l"
 	.string "not herrre.$"
 
 EventScript_TheCaptain_Text_4:
-# 823 "data/maps/Planet01_01/scripts.pory"
+# 826 "data/maps/Planet01_01/scripts.pory"
 	.string "How long ago was the expedition?$"
 
 EventScript_TheCaptain_Text_5:
-# 830 "data/maps/Planet01_01/scripts.pory"
+# 833 "data/maps/Planet01_01/scripts.pory"
 	.string "Memorrry gap ends a while back...\n"
 	.string "I'd estimate five yearrrs? But I don't\l"
 	.string "know how long we werrre herrre, or\l"
 	.string "how long ago we arrrived.$"
 
 EventScript_TheCaptain_Text_6:
-# 843 "data/maps/Planet01_01/scripts.pory"
+# 846 "data/maps/Planet01_01/scripts.pory"
 	.string "Your map is great, but I'm a bit\n"
 	.string "confused. Where are we now?$"
 
 EventScript_TheCaptain_Text_7:
-# 851 "data/maps/Planet01_01/scripts.pory"
+# 854 "data/maps/Planet01_01/scripts.pory"
 	.string "The Twilight Plateau.$"
 
 EventScript_TheCaptain_Text_8:
-# 858 "data/maps/Planet01_01/scripts.pory"
+# 861 "data/maps/Planet01_01/scripts.pory"
 	.string "Ok, and your lab was is in the\n"
 	.string "forest somewhere?$"
 
 EventScript_TheCaptain_Text_9:
-# 866 "data/maps/Planet01_01/scripts.pory"
+# 869 "data/maps/Planet01_01/scripts.pory"
 	.string "Up the waterrrfall, yep.$"
 
 EventScript_TheCaptain_Text_10:
-# 876 "data/maps/Planet01_01/scripts.pory"
+# 879 "data/maps/Planet01_01/scripts.pory"
 	.string "So, were you a part of this team of\n"
 	.string "researchers? Are you sure you were the\l"
 	.string "captain?$"
 
 EventScript_TheCaptain_Text_11:
-# 885 "data/maps/Planet01_01/scripts.pory"
+# 888 "data/maps/Planet01_01/scripts.pory"
 	.string "Of courrrse! Have you seen my hat?$"
 
 EventScript_TheCaptain_Text_12:
-# 892 "data/maps/Planet01_01/scripts.pory"
+# 895 "data/maps/Planet01_01/scripts.pory"
 	.string "...I don't know if that's especially\n"
 	.string "great evidence.$"
 
 EventScript_TheCaptain_Text_13:
-# 900 "data/maps/Planet01_01/scripts.pory"
+# 903 "data/maps/Planet01_01/scripts.pory"
 	.string "Don't take this from me, kiddo.$"
 
 EventScript_TheCaptain_Text_14:
-# 910 "data/maps/Planet01_01/scripts.pory"
+# 913 "data/maps/Planet01_01/scripts.pory"
 	.string "Hey Cap', I can't get up the waterfall.\n"
 	.string "What do I do now?$"
 
 EventScript_TheCaptain_Text_15:
-# 918 "data/maps/Planet01_01/scripts.pory"
+# 921 "data/maps/Planet01_01/scripts.pory"
 	.string "There's gotta be a pokerrrmon with\n"
 	.string "waterrrfall somewhere, kiddo. Don't give\l"
 	.string "up.$"
 
 EventScript_TheCaptain_Text_16:
-# 930 "data/maps/Planet01_01/scripts.pory"
+# 933 "data/maps/Planet01_01/scripts.pory"
 	.string "I want to ask some questions about the\n"
 	.string "previous explorers.$"
 
 EventScript_TheCaptain_Text_17:
-# 938 "data/maps/Planet01_01/scripts.pory"
+# 941 "data/maps/Planet01_01/scripts.pory"
 	.string "Firrre away.$"
 
 EventScript_TheCaptain_Text_18:
-# 945 "data/maps/Planet01_01/scripts.pory"
+# 948 "data/maps/Planet01_01/scripts.pory"
 	.string "Me? State-of-the-art Captobot by\n"
 	.string "BOTech Enterprrrises. I was the latest\l"
 	.string "model when we set out into space.\l"
@@ -1930,7 +1941,7 @@ EventScript_TheCaptain_Text_18:
 	.string "activities.$"
 
 EventScript_TheCaptain_Text_19:
-# 953 "data/maps/Planet01_01/scripts.pory"
+# 956 "data/maps/Planet01_01/scripts.pory"
 	.string "Expert in rrresearching alien PKMN.\n"
 	.string "Quiet.\l"
 	.string "Didn't like to be the centerrr of\l"
@@ -1940,7 +1951,7 @@ EventScript_TheCaptain_Text_19:
 	.string "biological life.$"
 
 EventScript_TheCaptain_Text_20:
-# 961 "data/maps/Planet01_01/scripts.pory"
+# 964 "data/maps/Planet01_01/scripts.pory"
 	.string "A genius with an interrrest in building\n"
 	.string "structurrres in challenging locations.\l"
 	.string "Had their eyes on transforming hostile\l"
@@ -1948,10 +1959,11 @@ EventScript_TheCaptain_Text_20:
 	.string "forrr humans.$"
 
 EventScript_TheCaptain_Text_21:
-# 967 "data/maps/Planet01_01/scripts.pory"
+# 970 "data/maps/Planet01_01/scripts.pory"
 	.string "PKMN experrrt and project organizerrr.\n"
 	.string "Always ready to help, and easy to talk\l"
 	.string "to about anything. Optimistic, harrrd\l"
-	.string "worker. Some records suggest they had \l"
+	.string "worker. Loves giving people and things\l"
+	.string "nicknames. Some records suggest they had \l"
 	.string "a history with the Biologist, but that's\l"
-	.string "just my intuition.$"
+	.string "just my opinion.$"

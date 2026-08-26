@@ -84,223 +84,215 @@ Final_Lab_Remark01::
 	callnative DrawMugshot
 # 58 "data/maps/Planet01_Final_Lab/scripts.pory"
 	msgbox Final_Lab_Remark01_Text_4
-# 59 "data/maps/Planet01_Final_Lab/scripts.pory"
-	waitmessage
-# 60 "data/maps/Planet01_Final_Lab/scripts.pory"
-	closemessage
 # 61 "data/maps/Planet01_Final_Lab/scripts.pory"
-	callnative ClearMugshot
+	waitmessage
 # 62 "data/maps/Planet01_Final_Lab/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+	closemessage
 # 63 "data/maps/Planet01_Final_Lab/scripts.pory"
-	callnative DrawMugshot
+	callnative ClearMugshot
 # 64 "data/maps/Planet01_Final_Lab/scripts.pory"
-	msgbox Final_Lab_Remark01_Text_5
-# 67 "data/maps/Planet01_Final_Lab/scripts.pory"
-	waitmessage
-# 68 "data/maps/Planet01_Final_Lab/scripts.pory"
-	closemessage
-# 69 "data/maps/Planet01_Final_Lab/scripts.pory"
-	callnative ClearMugshot
-# 70 "data/maps/Planet01_Final_Lab/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_DETERMINED
-# 71 "data/maps/Planet01_Final_Lab/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+# 65 "data/maps/Planet01_Final_Lab/scripts.pory"
 	callnative DrawMugshot
-# 72 "data/maps/Planet01_Final_Lab/scripts.pory"
-	msgbox Final_Lab_Remark01_Text_6
-# 73 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 66 "data/maps/Planet01_Final_Lab/scripts.pory"
+	msgbox Final_Lab_Remark01_Text_5
+# 68 "data/maps/Planet01_Final_Lab/scripts.pory"
 	waitmessage
-# 74 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 69 "data/maps/Planet01_Final_Lab/scripts.pory"
 	closemessage
-# 75 "data/maps/Planet01_Final_Lab/scripts.pory"
-	callnative ClearMugshot
-# 76 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 70 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setvar VAR_TEMP_0, 1
-# 77 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 71 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setflag FLAG_REGISTERED_LILA_AND_ROY
-# 78 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 72 "data/maps/Planet01_Final_Lab/scripts.pory"
 	release
 	end
 
 
 EventScript_CorruptCatch_V::
-# 83 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 77 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lockall
-# 84 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 78 "data/maps/Planet01_Final_Lab/scripts.pory"
 	special SetBossBattle
-# 85 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 79 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setwildbattle SPECIES_VENUSAUR, 65, ITEM_NONE
-# 90 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 84 "data/maps/Planet01_Final_Lab/scripts.pory"
 	dowildbattle
-# 91 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 85 "data/maps/Planet01_Final_Lab/scripts.pory"
 	special BossBattleOff
-# 92 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 86 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setvar VAR_0x8000, SPECIES_VENUSAUR
-# 93 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 87 "data/maps/Planet01_Final_Lab/scripts.pory"
 	callnative RegisterSpeciesInDex
-# 94 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 88 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setflag FLAG_TEMP_4
-# 95 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 89 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 1
-# 96 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 90 "data/maps/Planet01_Final_Lab/scripts.pory"
 	releaseall
 	end
 
 
 EventScript_CorruptCatch_H::
-# 101 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 95 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lockall
-# 102 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 96 "data/maps/Planet01_Final_Lab/scripts.pory"
 	special SetBossBattle
-# 103 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 97 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setwildbattle SPECIES_HAXORUS, 65, ITEM_NONE
-# 108 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 102 "data/maps/Planet01_Final_Lab/scripts.pory"
 	dowildbattle
-# 109 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 103 "data/maps/Planet01_Final_Lab/scripts.pory"
 	special BossBattleOff
-# 110 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 104 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setvar VAR_0x8000, SPECIES_HAXORUS
-# 111 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 105 "data/maps/Planet01_Final_Lab/scripts.pory"
 	callnative RegisterSpeciesInDex
-# 112 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 106 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setflag FLAG_TEMP_5
-# 113 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 107 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 3
-# 114 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 108 "data/maps/Planet01_Final_Lab/scripts.pory"
 	releaseall
 	end
 
 
 EventScript_CorruptCatch_C::
-# 119 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 113 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lockall
-# 120 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 114 "data/maps/Planet01_Final_Lab/scripts.pory"
 	special SetBossBattle
-# 121 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 115 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setwildbattle SPECIES_CHARIZARD, 65, ITEM_NONE
-# 126 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 120 "data/maps/Planet01_Final_Lab/scripts.pory"
 	dowildbattle
-# 127 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 121 "data/maps/Planet01_Final_Lab/scripts.pory"
 	special BossBattleOff
-# 128 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 122 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setvar VAR_0x8000, SPECIES_CHARIZARD
-# 129 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 123 "data/maps/Planet01_Final_Lab/scripts.pory"
 	callnative RegisterSpeciesInDex
-# 130 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 124 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setflag FLAG_TEMP_6
-# 131 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 125 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 6
-# 132 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 126 "data/maps/Planet01_Final_Lab/scripts.pory"
 	releaseall
 	end
 
 
 EventScript_CorruptCatch_E::
-# 137 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 131 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lockall
-# 138 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 132 "data/maps/Planet01_Final_Lab/scripts.pory"
 	special SetBossBattle
-# 139 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 133 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setwildbattle SPECIES_EXCADRILL, 65, ITEM_NONE
-# 144 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 138 "data/maps/Planet01_Final_Lab/scripts.pory"
 	dowildbattle
-# 145 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 139 "data/maps/Planet01_Final_Lab/scripts.pory"
 	special BossBattleOff
-# 146 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 140 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setvar VAR_0x8000, SPECIES_EXCADRILL
-# 147 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 141 "data/maps/Planet01_Final_Lab/scripts.pory"
 	callnative RegisterSpeciesInDex
-# 148 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 142 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setflag FLAG_TEMP_7
-# 149 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 143 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 2
-# 150 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 144 "data/maps/Planet01_Final_Lab/scripts.pory"
 	releaseall
 	end
 
 
 EventScript_CorruptCatch_K::
-# 155 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 149 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lockall
-# 156 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 150 "data/maps/Planet01_Final_Lab/scripts.pory"
 	special SetBossBattle
-# 157 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 151 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setwildbattle SPECIES_KINGDRA, 65, ITEM_NONE
-# 162 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 156 "data/maps/Planet01_Final_Lab/scripts.pory"
 	dowildbattle
-# 163 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 157 "data/maps/Planet01_Final_Lab/scripts.pory"
 	special BossBattleOff
-# 164 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 158 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setvar VAR_0x8000, SPECIES_KINGDRA
-# 165 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 159 "data/maps/Planet01_Final_Lab/scripts.pory"
 	callnative RegisterSpeciesInDex
-# 166 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 160 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setflag FLAG_TEMP_8
-# 167 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 161 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 5
-# 168 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 162 "data/maps/Planet01_Final_Lab/scripts.pory"
 	releaseall
 	end
 
 
 EventScript_CorruptCatch_M::
-# 173 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 167 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lockall
-# 174 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 168 "data/maps/Planet01_Final_Lab/scripts.pory"
 	special SetBossBattle
-# 175 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 169 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setwildbattle SPECIES_METAGROSS, 65, ITEM_NONE
-# 180 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 174 "data/maps/Planet01_Final_Lab/scripts.pory"
 	dowildbattle
-# 181 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 175 "data/maps/Planet01_Final_Lab/scripts.pory"
 	special BossBattleOff
-# 182 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 176 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setvar VAR_0x8000, SPECIES_METAGROSS
-# 183 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 177 "data/maps/Planet01_Final_Lab/scripts.pory"
 	callnative RegisterSpeciesInDex
-# 184 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 178 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setflag FLAG_TEMP_9
-# 185 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 179 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 4
-# 186 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 180 "data/maps/Planet01_Final_Lab/scripts.pory"
 	releaseall
 	end
 
 
 EventScript_DragoniteEncounter::
-# 192 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 186 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lockall
-# 194 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 188 "data/maps/Planet01_Final_Lab/scripts.pory"
+	msgbox EventScript_DragoniteEncounter_Text_0
+# 191 "data/maps/Planet01_Final_Lab/scripts.pory"
 	getpartysize
-# 195 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 192 "data/maps/Planet01_Final_Lab/scripts.pory"
 	compare VAR_RESULT, 6
 	goto_if_ge EventScript_DragoniteEncounter_2
-# 201 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 198 "data/maps/Planet01_Final_Lab/scripts.pory"
 	checkitem ITEM_BEAST_BALL, 1
-# 202 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 199 "data/maps/Planet01_Final_Lab/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_DragoniteEncounter_5
-# 208 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 207 "data/maps/Planet01_Final_Lab/scripts.pory"
 	givemon SPECIES_DRAGONITE, 50
-# 210 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 208 "data/maps/Planet01_Final_Lab/scripts.pory"
+	fadeScreen FADE_TO_BLACK
+# 209 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setflag FLAG_TEMP_9
-# 211 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 210 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 4
+# 211 "data/maps/Planet01_Final_Lab/scripts.pory"
+	fadeScreen FADE_FROM_BLACK
 # 213 "data/maps/Planet01_Final_Lab/scripts.pory"
 	releaseall
 	end
 
 EventScript_DragoniteEncounter_2:
-# 196 "data/maps/Planet01_Final_Lab/scripts.pory"
-	msgbox EventScript_DragoniteEncounter_Text_0
-# 197 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 193 "data/maps/Planet01_Final_Lab/scripts.pory"
+	msgbox EventScript_DragoniteEncounter_Text_1
+# 194 "data/maps/Planet01_Final_Lab/scripts.pory"
 	releaseall
 	end
 
 EventScript_DragoniteEncounter_5:
-# 203 "data/maps/Planet01_Final_Lab/scripts.pory"
-	msgbox EventScript_DragoniteEncounter_Text_1
-# 204 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 200 "data/maps/Planet01_Final_Lab/scripts.pory"
+	msgbox EventScript_DragoniteEncounter_Text_2
+# 202 "data/maps/Planet01_Final_Lab/scripts.pory"
 	releaseall
 	end
 
@@ -414,11 +406,11 @@ Final_Lab_Remark01_Text_0:
 Final_Lab_Remark01_Text_1:
 # 36 "data/maps/Planet01_Final_Lab/scripts.pory"
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}<I will explain everything... \n"
-	.string "When you arrive.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+	.string "When you arrive at the lab.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Final_Lab_Remark01_Text_2:
 # 43 "data/maps/Planet01_Final_Lab/scripts.pory"
-	.string "Alright, I got this...\p"
+	.string "Ok, I guess you're there?\p"
 	.string "My instruments say the gravity is\n"
 	.string "higher down here. Also... The air\l"
 	.string "is breathable!$"
@@ -429,22 +421,24 @@ Final_Lab_Remark01_Text_3:
 
 Final_Lab_Remark01_Text_4:
 # 58 "data/maps/Planet01_Final_Lab/scripts.pory"
-	.string "Hostiles? What does that mean?!$"
+	.string "Hostiles? More infected Pokemon? They\n"
+	.string "don't seem to be native to this\l"
+	.string "place. Nothing down here does.$"
 
 Final_Lab_Remark01_Text_5:
-# 64 "data/maps/Planet01_Final_Lab/scripts.pory"
-	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}<Some Pokemon... Aren't fully in control...\n"
-	.string "Of themselves anymore...>\p"
-	.string "<Move slowly, if you have to...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
-
-Final_Lab_Remark01_Text_6:
-# 72 "data/maps/Planet01_Final_Lab/scripts.pory"
-	.string "Awesome. Vague.$"
+# 66 "data/maps/Planet01_Final_Lab/scripts.pory"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}<The same as before...\n"
+	.string "Move slowly, if you have to...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 EventScript_DragoniteEncounter_Text_0:
-# 196 "data/maps/Planet01_Final_Lab/scripts.pory"
-	.string "You have too many Pokemon in your party!$"
+# 188 "data/maps/Planet01_Final_Lab/scripts.pory"
+	.string "A Mega Dragonite! You... aren't\n"
+	.string "infected?$"
 
 EventScript_DragoniteEncounter_Text_1:
-# 203 "data/maps/Planet01_Final_Lab/scripts.pory"
-	.string "You need a Beast Ball to catch this Pokemon!$"
+# 193 "data/maps/Planet01_Final_Lab/scripts.pory"
+	.string "You want to join my team?$"
+
+EventScript_DragoniteEncounter_Text_2:
+# 200 "data/maps/Planet01_Final_Lab/scripts.pory"
+	.string "I'd let you join my team,\n if I had an extra Meteor Ball.$"

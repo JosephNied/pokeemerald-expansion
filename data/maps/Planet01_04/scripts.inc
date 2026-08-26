@@ -117,6 +117,10 @@ Planet01_04_HintText01::
 	setflag FLAG_REGISTERED_CRISTIN
 Planet01_04_HintText01_1:
 # 77 "data/maps/Planet01_04/scripts.pory"
+	compare VAR_DAILY_SLOTS, 0
+	goto_if_eq Planet01_04_HintText01_8
+Planet01_04_HintText01_7:
+# 80 "data/maps/Planet01_04/scripts.pory"
 	release
 	end
 
@@ -130,66 +134,80 @@ Planet01_04_HintText01_3:
 	clearflag FLAG_REGISTERED_CRISTIN
 	goto Planet01_04_HintText01_1
 
+Planet01_04_HintText01_8:
+# 78 "data/maps/Planet01_04/scripts.pory"
+	setvar VAR_DAILY_SLOTS, 1
+	goto Planet01_04_HintText01_7
+
 
 Planet01_04_HintText02::
-# 82 "data/maps/Planet01_04/scripts.pory"
+# 85 "data/maps/Planet01_04/scripts.pory"
 	lock
-# 83 "data/maps/Planet01_04/scripts.pory"
+# 86 "data/maps/Planet01_04/scripts.pory"
 	msgbox Planet01_04_HintText02_Text_0
-# 88 "data/maps/Planet01_04/scripts.pory"
+# 91 "data/maps/Planet01_04/scripts.pory"
 	release
 	end
 
 
 Planet01_04_HintText03::
-# 93 "data/maps/Planet01_04/scripts.pory"
+# 96 "data/maps/Planet01_04/scripts.pory"
 	lock
-# 94 "data/maps/Planet01_04/scripts.pory"
+# 97 "data/maps/Planet01_04/scripts.pory"
 	msgbox Planet01_04_HintText03_Text_0
-# 98 "data/maps/Planet01_04/scripts.pory"
+# 101 "data/maps/Planet01_04/scripts.pory"
 	compare VAR_CAPTAIN_DIALOGUE, 1
 	goto_if_eq Planet01_04_HintText03_2
-# 100 "data/maps/Planet01_04/scripts.pory"
+# 103 "data/maps/Planet01_04/scripts.pory"
 	compare VAR_CAPTAIN_DIALOGUE, 2
 	goto_if_eq Planet01_04_HintText03_3
-# 103 "data/maps/Planet01_04/scripts.pory"
+# 106 "data/maps/Planet01_04/scripts.pory"
 	setflag FLAG_REGISTERED_CRISTIN
 Planet01_04_HintText03_1:
-# 105 "data/maps/Planet01_04/scripts.pory"
+# 108 "data/maps/Planet01_04/scripts.pory"
+	compare VAR_DAILY_SLOTS, 0
+	goto_if_eq Planet01_04_HintText03_8
+Planet01_04_HintText03_7:
+# 111 "data/maps/Planet01_04/scripts.pory"
 	release
 	end
 
 Planet01_04_HintText03_2:
-# 99 "data/maps/Planet01_04/scripts.pory"
+# 102 "data/maps/Planet01_04/scripts.pory"
 	clearflag FLAG_REGISTERED_CRISTIN
 	goto Planet01_04_HintText03_1
 
 Planet01_04_HintText03_3:
-# 101 "data/maps/Planet01_04/scripts.pory"
+# 104 "data/maps/Planet01_04/scripts.pory"
 	clearflag FLAG_REGISTERED_CRISTIN
 	goto Planet01_04_HintText03_1
 
+Planet01_04_HintText03_8:
+# 109 "data/maps/Planet01_04/scripts.pory"
+	setvar VAR_DAILY_SLOTS, 1
+	goto Planet01_04_HintText03_7
+
 
 Planet01_04_Elgyem::
-# 110 "data/maps/Planet01_04/scripts.pory"
+# 116 "data/maps/Planet01_04/scripts.pory"
 	lock
-# 111 "data/maps/Planet01_04/scripts.pory"
-	faceplayer
-# 112 "data/maps/Planet01_04/scripts.pory"
-	playmoncry SPECIES_ELGYEM, CRY_MODE_ENCOUNTER
-# 113 "data/maps/Planet01_04/scripts.pory"
-	setvar VAR_0x8000, SPECIES_ELGYEM
-# 114 "data/maps/Planet01_04/scripts.pory"
-	callnative RegisterSpeciesInDex
-# 115 "data/maps/Planet01_04/scripts.pory"
-	msgbox Planet01_04_Elgyem_Text_0
 # 117 "data/maps/Planet01_04/scripts.pory"
-	waitmessage
+	faceplayer
 # 118 "data/maps/Planet01_04/scripts.pory"
-	warp MAP_PLANET01_02, 0, 21, 23
+	playmoncry SPECIES_ELGYEM, CRY_MODE_ENCOUNTER
 # 119 "data/maps/Planet01_04/scripts.pory"
-	waitstate
+	setvar VAR_0x8000, SPECIES_ELGYEM
 # 120 "data/maps/Planet01_04/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 121 "data/maps/Planet01_04/scripts.pory"
+	msgbox Planet01_04_Elgyem_Text_0
+# 123 "data/maps/Planet01_04/scripts.pory"
+	waitmessage
+# 124 "data/maps/Planet01_04/scripts.pory"
+	warp MAP_PLANET01_02, 0, 21, 23
+# 125 "data/maps/Planet01_04/scripts.pory"
+	waitstate
+# 126 "data/maps/Planet01_04/scripts.pory"
 	release
 	end
 
@@ -210,7 +228,7 @@ Planet01_04_HintText01_Text_0:
 	.string "I will get to the bottom of this!$"
 
 Planet01_04_HintText02_Text_0:
-# 83 "data/maps/Planet01_04/scripts.pory"
+# 86 "data/maps/Planet01_04/scripts.pory"
 	.string "Scientist: The watery path ahead\n"
 	.string "will reveal an incredible view of the\l"
 	.string "planet's celestial bodies. There's\l"
@@ -218,13 +236,13 @@ Planet01_04_HintText02_Text_0:
 	.string "I can feel it!$"
 
 Planet01_04_HintText03_Text_0:
-# 94 "data/maps/Planet01_04/scripts.pory"
+# 97 "data/maps/Planet01_04/scripts.pory"
 	.string "Captain: Looks like this planet isn't\n"
 	.string "very large. It actually loops around\l"
 	.string "here. We'll have mapped it all out in\l"
 	.string "no time!$"
 
 Planet01_04_Elgyem_Text_0:
-# 115 "data/maps/Planet01_04/scripts.pory"
+# 121 "data/maps/Planet01_04/scripts.pory"
 	.string "Elgyem seems taken off-guard!\n"
 	.string "My bad- Huh?! It's flashing green-$"

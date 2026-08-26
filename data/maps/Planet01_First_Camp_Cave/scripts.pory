@@ -115,7 +115,26 @@ script groundjournal_1 {
 }
 
 script voicedialogueABC {
-    if(var(VAR_DAILY_SLOTS) == 1) {
+    if (var(VAR_DAILY_SLOTS) == 0) {
+        setvar(VAR_0x8004, 1)
+        setvar(VAR_0x8005, 1)
+        setvar(VAR_0x8006, 8)
+        setvar(VAR_0x8007, 5)
+        special(ShakeCamera)
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+        callnative(DrawMugshot)
+        msgbox("Woah, what's going on?\n"
+        "...I want to go check on my ship.")
+        waitmessage
+        callnative(ClearMugshot)
+        warp(MAP_SPACESHIP_DEV, 0, 12, 7)
+        clearflag(FLAG_REGISTERED_CRISTIN)
+        waitstate
+        releaseall
+        end
+    }
+    elif(var(VAR_DAILY_SLOTS) == 1) {
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
         msgbox("{COLOR RED}{SHADOW LIGHT_RED}<A fly, caught in a web. I'm surprised\n" 
@@ -126,8 +145,8 @@ script voicedialogueABC {
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
         callnative(DrawMugshot)
-        msgbox("You again! Enough with the games! Just tell\n" 
-        "me who you are!")
+        msgbox("You again! Enough with the games! Just\n" 
+        "tell me who you are!")
         waitmessage
         callnative(ClearMugshot)
         release
@@ -215,8 +234,8 @@ script voicedialogueABC {
         msgbox("{COLOR RED}{SHADOW LIGHT_RED}<...>\p"
         "<We-, I-, ...a miscalculation was made.\n"
         "If it wasn't obvious, the space virus is\l"
-        "some form of Deoxys. Its' psychic power\l"
-        "is holding down your ship. Defeat Deoxys,\l"
+        "some form of Deoxys. Its psychic power\l"
+        "is holding your ship. Defeat Deoxys,\l"
         "and you might be able to escape.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         callnative(ClearMugshot)
@@ -291,7 +310,7 @@ script voicedialogueABC {
         msgbox("Hello?\p"
         "...Yeah, they are not ok.")
         waitmessage
-        addvar(VAR_DAILY_SLOTS, 1)
+
         callnative(ClearMugshot)
         setvar(VAR_DAILY_SLOTS, 6)
     }
@@ -312,5 +331,4 @@ script voicedialogueABC {
         waitmessage
         callnative(ClearMugshot)
     }
-
 }

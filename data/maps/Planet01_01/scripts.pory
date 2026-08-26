@@ -693,6 +693,9 @@ script Planet01_01_JirachiAppears {
     setflag(FLAG_REGISTERED_CRISTIN)
     setvar(VAR_TEMP_0, 1)
     setvar(VAR_CAPTAIN_DIALOGUE, 0)
+    if (var(VAR_DAILY_SLOTS) == 0) {
+        setvar(VAR_DAILY_SLOTS, 1)
+    }
     release
     end
 }
@@ -967,9 +970,10 @@ script EventScript_TheCaptain {
             msgbox("PKMN experrrt and project organizerrr.\n"
             "Always ready to help, and easy to talk\l" 
             "to about anything. Optimistic, harrrd\l" 
-            "worker. Some records suggest they had \l" 
+            "worker. Loves giving people and things\l"
+            "nicknames. Some records suggest they had \l" 
             "a history with the Biologist, but that's\l"
-            "just my intuition.")
+            "just my opinion.")
         }
     }
     release
@@ -977,10 +981,11 @@ script EventScript_TheCaptain {
 }
 
 script Planet01_01_MonstersRegular {
-    lock
+    lockall
     setvar(VAR_DAILY_SLOTS, 4)
     call(voicedialogueABC)
     clearflag(FLAG_REGISTERED_BROOKE)
-    release
+    setvar(VAR_TEMP_0, 1)
+    releaseall
     end
 }

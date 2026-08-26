@@ -188,17 +188,77 @@ Final_Lab_Interior_BiologistEncounter::
 	callnative DrawMugshot
 # 129 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	msgbox Final_Lab_Interior_BiologistEncounter_Text_1
-# 160 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 136 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	waitmessage
-# 161 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 137 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	closemessage
-# 162 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 138 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative ClearMugshot
-# 166 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 140 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
+# 141 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative DrawMugshot
+# 142 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	msgbox Final_Lab_Interior_BiologistEncounter_Text_2
+# 143 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	waitmessage
+# 144 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	closemessage
+# 145 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative ClearMugshot
+# 147 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+# 148 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative DrawMugshot
+# 149 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	msgbox Final_Lab_Interior_BiologistEncounter_Text_3
+# 169 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	waitmessage
+# 170 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	closemessage
+# 171 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative ClearMugshot
+# 173 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+# 174 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative DrawMugshot
+# 175 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	msgbox Final_Lab_Interior_BiologistEncounter_Text_4
+# 177 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	waitmessage
+# 178 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	closemessage
+# 179 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative ClearMugshot
+# 181 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
+# 182 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative DrawMugshot
+# 183 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	msgbox Final_Lab_Interior_BiologistEncounter_Text_5
+# 184 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	waitmessage
+# 185 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	closemessage
+# 186 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative ClearMugshot
+# 188 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+# 189 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative DrawMugshot
+# 190 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	msgbox Final_Lab_Interior_BiologistEncounter_Text_6
+# 191 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	waitmessage
+# 192 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	closemessage
+# 193 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative ClearMugshot
+# 196 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	setvar VAR_TEMP_1, 1
-# 167 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 197 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	setflag FLAG_REGISTERED_CRISTIN
-# 168 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 198 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	release
 	end
 
@@ -209,11 +269,11 @@ Final_Lab_Interior_Remark01_Text_0:
 
 Final_Lab_Interior_Remark01_Text_1:
 # 31 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}<Finally, you are here! Come forward!>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<You're here. I can't believe it.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Final_Lab_Interior_Remark01_Text_2:
 # 37 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	.string "This is crazy! But, I'm coming...$"
+	.string "I'm kinda scared, but I'm coming...$"
 
 Final_Lab_Interior_FlavorText_Trash1_Text_0:
 # 49 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
@@ -264,34 +324,50 @@ Final_Lab_Interior_BiologistEncounter_Text_0:
 
 Final_Lab_Interior_BiologistEncounter_Text_1:
 # 129 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	.string "You're here...\n"
-	.string "I'm so happy...\l"
-	.string "...\p"
-	.string "Let me explain.\p"
-	.string "I was the biologist on the team of \n"
-	.string "scientists whose notes you've been \l"
-	.string "reading. \p"
-	.string "At the bottom of a cave full of Dittos, \n"
-	.string "we discovered the cell of a being we \l"
-	.string "soon learned was the terrifying \l"
-	.string "Deoxys, the space virus Pokemon. \p"
-	.string "We tried to control it. We tried to \n"
-	.string "change it. We tried to... Master it.\p"
-	.string "We failed. And it infected and \n"
-	.string "transformed my body. \p"
-	.string "The others abandoned me. They stole \n"
-	.string "the ship, and erased the Captain's \l"
-	.string "memories to avoid being held \l"
-	.string "accountable for their mutiny and \l"
-	.string "leaving me to succumb to the virus.\p"
-	.string "...You've seen those creatures running \n"
-	.string "around, the ones that appear \l"
-	.string "aggressive and corrupted? Yes, those \l"
-	.string "creatures were infected by Deoxys, and \l"
-	.string "will infect others as well. \p"
-	.string "When you're infected, your body may die \n"
-	.string "but the virus inside will not. It will \l"
-	.string "continue to use you to seek out new \l"
-	.string "hosts to infect. That's all Deoxys \l"
-	.string "wants. All infected beings share a part \l"
-	.string "in the mind and will of Deoxys.$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<Well, here I am. You want to know how \n"
+	.string "I've been helping. You see, Deoxys and\l"
+	.string "I are one. It wants to spread. I do not.\l"
+	.string "Without my concentration, the entire\l"
+	.string "planet would be overrun by now. Don't\l"
+	.string "give me credit, though. This is my fault\l"
+	.string "in the first place, you see.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+
+Final_Lab_Interior_BiologistEncounter_Text_2:
+# 142 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	.string "...$"
+
+Final_Lab_Interior_BiologistEncounter_Text_3:
+# 149 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<There isn't much more to say, really. \n"
+	.string "But I do want to confess one thing.\l"
+	.string "I could never let myself be happy. I\l"
+	.string "could never allow myself to be a part of\l"
+	.string "this world, with these people. I could\l"
+	.string "never accept myself. So, I abandoned my\l"
+	.string "team and they abandoned me in turn.\p"
+	.string "Even the memory of me was erased!...\p"
+	.string "Who would I have been if I allowed\n"
+	.string "myself to love others? If I loved\l"
+	.string "myself? These are questions I carry\l"
+	.string "with me to the end, unanswered.\p"
+	.string "You're wondering why I'm telling you\n"
+	.string "this. It's because I've been reading \l"
+	.string "your mind and seeing into your heart.\p"
+	.string "You're much like me. You self-sabotage,\n"
+	.string "like me. You hate yourself, just like \l"
+	.string "me... Please...\p"
+	.string "Don't do what I did and throw it all\n"
+	.string "away.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+
+Final_Lab_Interior_BiologistEncounter_Text_4:
+# 175 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<Very well... Go down into the basement.\n"
+	.string "You'll find the source. Defeat it.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+
+Final_Lab_Interior_BiologistEncounter_Text_5:
+# 183 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	.string "What will happen to you?$"
+
+Final_Lab_Interior_BiologistEncounter_Text_6:
+# 190 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<...I wouldn't worry about that. Go.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"

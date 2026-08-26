@@ -3,6 +3,7 @@ mapscripts Ditto_Cave_Bottom_MapScripts {
 }
 
 script Ditto_Cave_Bottom_Enter {
+	setvar(VAR_TEMP_2, 0)
 }
 
 script Ditto_Cave_Bottom_DittoTrainer {
@@ -60,6 +61,12 @@ script Ditto_Cave_Bottom_HintText01 {
     "It has a strange power to it. We need to\l"
 	"take it to our lab above the waterfall\l"
 	"and study it, immediately.")
+
+	if (var(VAR_TEMP_2) == 0) {
+        call(voicedialogueABC)
+        setvar(VAR_TEMP_2, 1)
+    }
+
 	release
 	end
 }

@@ -59,30 +59,34 @@ void SetRandomFlags(void)
 
     //***
     //randomize items
-    u16 itemFlags[ARRAY_COUNT(sRandomItemFlags)];
-    int x;
+    if (VarGet(VAR_DAILY_SLOTS) == 6) {
+        u16 itemFlags[ARRAY_COUNT(sRandomItemFlags)];
+        int x;
 
-    //clear flags
-    for (x = 0; x < ARRAY_COUNT(sRandomItemFlags); x++) 
-    {
-        FlagClear(sRandomItemFlags[x]);
-    }
+        //clear flags
+        for (x = 0; x < ARRAY_COUNT(sRandomItemFlags); x++) 
+        {
+            FlagClear(sRandomItemFlags[x]);
+        }
 
-    memcpy(itemFlags, sRandomItemFlags, sizeof(itemFlags));
+        memcpy(itemFlags, sRandomItemFlags, sizeof(itemFlags));
 
-    // Fisher-Yates shuffle
-    for (x = ARRAY_COUNT(itemFlags) - 1; x > 0; x--)
-    {
-        int y = Random() % (x + 1);
+        // Fisher-Yates shuffle
+        for (x = ARRAY_COUNT(itemFlags) - 1; x > 0; x--)
+        {
+            int y = Random() % (x + 1);
 
-        u16 temp1 = itemFlags[x];
-        itemFlags[x] = itemFlags[y];
-        itemFlags[y] = temp1;
-    }
+            u16 temp1 = itemFlags[x];
+            itemFlags[x] = itemFlags[y];
+            itemFlags[y] = temp1;
+        }
 
-    // Set first 3
-    for (x = 0; x < 3; x++)
-    {
-        FlagSet(itemFlags[x]);
+        // Set first 3
+        for (x = 0; x < 4; x++)
+        {
+            FlagSet(itemFlags[x]);
+        }
+    } else {
+        FlagSet(FLAG_UNUSED_0x020);
     }
 }

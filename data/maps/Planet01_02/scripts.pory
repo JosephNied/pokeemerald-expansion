@@ -217,6 +217,9 @@ script Planet01_02_HintText01 {
     } else  {
         setflag(FLAG_REGISTERED_CRISTIN)
     }
+    if (var(VAR_DAILY_SLOTS) == 0) {
+        setvar(VAR_DAILY_SLOTS, 1)
+    }
     release
     end
 }
@@ -233,6 +236,9 @@ script Planet01_02_HintText02 {
         clearflag(FLAG_REGISTERED_CRISTIN)
     } else  {
         setflag(FLAG_REGISTERED_CRISTIN)
+    }
+    if (var(VAR_DAILY_SLOTS) == 0) {
+        setvar(VAR_DAILY_SLOTS, 1)
     }
     release
     end
@@ -251,6 +257,9 @@ script Planet01_02_HintText03 {
         clearflag(FLAG_REGISTERED_CRISTIN)
     } else  {
         setflag(FLAG_REGISTERED_CRISTIN)
+    }
+    if (var(VAR_DAILY_SLOTS) == 0) {
+        setvar(VAR_DAILY_SLOTS, 1)
     }
     waitmessage
     closemessage
