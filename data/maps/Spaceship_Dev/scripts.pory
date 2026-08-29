@@ -51,7 +51,9 @@ script start_ship_intro {
     setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
     callnative(DrawMugshot)
     msgbox("What the heck?! I can't get off the\n"
-    "ground! Something's keeping us down!")
+    "ground! It's as if something is literally\l"
+    "holding us down, I've never seen anything\l"
+    "like this before.")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -59,8 +61,8 @@ script start_ship_intro {
     setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
     callnative(DrawMugshot)
     msgbox("I guess I have to go check it out...\n"
-    "I've never had to go outside the ship\l"
-    "like this before. I better prepare.\p"
+    "This is a totally unknown planet. I\l"
+    "better prepare.\p"
     "I should take Magnezone and my tools;\n"
     "who knows what could be out there?")
     waitmessage
@@ -152,15 +154,17 @@ script Spaceship_Dev_EventScript_Tutorial_Notebook {
     }
     if (var(VAR_RESULT) == 1) {
         msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Meteor Balls{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} never fail. They can be \n"
-        "reused if the Pokemon inside is \l"
-        "released.")
+        "reused if the Pokémon inside is \l"
+        "released.\p"
+        "Tip: You can even release Pokémon\n"
+        "during a battle to fee up a ball!")
         call(Spaceship_Dev_EventScript_Tutorial_Notebook)
     }
     if (var(VAR_RESULT) == 2) {
         msgbox("The {COLOR BLUE}{SHADOW LIGHT_BLUE}Scanner{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} logs useful information\n"
-        "about wild Pokemon while allowing you\l"
+        "about wild Pokémon while allowing you\l"
         "to escape the confrontation unharmed.\p"
-        "Faster pokemon are harder to scan.\n"
+        "Faster Pokémon are harder to scan.\n"
         "Paralyzing them can make it easier.")
         call(Spaceship_Dev_EventScript_Tutorial_Notebook)
     }
@@ -191,7 +195,7 @@ script Spaceship_Dev_EventScript_Item01 {
     setvar(VAR_0x8000, MUGSHOT_MAGNEZONE)
     callnative(DrawMugshot)
     playmoncry(SPECIES_MAGNEZONE, CRY_MODE_ENCOUNTER)
-    msgbox("Magnezone, let's go!")
+    msgbox("Let's go, buddy!")
     waitmessage
     callnative(ClearMugshot)
     givemon(SPECIES_MAGNEZONE, 50, ITEM_MAGNET)
@@ -394,8 +398,8 @@ script Bellossom {
     setvar(VAR_0x8000, MUGSHOT_BELLOSSUM)
     callnative(DrawMugshot)
     playmoncry(SPECIES_BELLOSSOM, CRY_MODE_ENCOUNTER)
-    msgbox("Bellossom converts my C02 into oxygen.\n"
-    "An important team member!")
+    msgbox("Bellossom, thanks for convering my\n"
+    "C02 in oxygen. You're a real champ.")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -405,7 +409,7 @@ script Bellossom {
         setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
         callnative(DrawMugshot)
         playmoncry(SPECIES_BELLOSSOM, CRY_MODE_ENCOUNTER)
-        msgbox("Oh? Bellossom has a gift for me!")
+        msgbox("Oh? You have a gift for me!")
         waitmessage
         closemessage
         callnative(ClearMugshot)

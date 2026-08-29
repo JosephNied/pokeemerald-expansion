@@ -40,6 +40,7 @@
 #include "title_screen.h"
 #include "window.h"
 #include "mystery_gift_menu.h"
+#include "field_specials.h"
 
 /*
  * Main menu state machine
@@ -1428,7 +1429,8 @@ static void Task_NewGameBirchSpeech_AndYouAre(u8 taskId)
         sStartedPokeBallTask = FALSE;
         StringExpandPlaceholders(gStringVar4, gText_Birch_AndYouAre);
         AddTextPrinterForMessage(TRUE);
-        gTasks[taskId].func = Task_NewGameBirchSpeech_StartBirchLotadPlatformFade;
+        //gTasks[taskId].func = Task_NewGameBirchSpeech_StartBirchLotadPlatformFade;
+        gTasks[taskId].func = Task_NewGameBirchSpeech_ReshowBirchLotad;
     }
 }
 
@@ -1481,7 +1483,7 @@ static void Task_NewGameBirchSpeech_StartPlayerFadeIn(u8 taskId)
             gTasks[taskId].tPlayerGender = MALE;
             NewGameBirchSpeech_StartFadeInTarget1OutTarget2(taskId, 2);
             NewGameBirchSpeech_StartFadePlatformOut(taskId, 1);
-            gTasks[taskId].func = Task_NewGameBirchSpeech_WaitForPlayerFadeIn;
+            gTasks[taskId].func = Task_NewGameBirchSpeech_WaitForPlayerFadeIn; 
         }
     }
 }
@@ -1690,8 +1692,9 @@ static void Task_NewGameBirchSpeech_ReshowBirchLotad(u8 taskId)
         gSprites[spriteId].y = 75;
         gSprites[spriteId].invisible = FALSE;
         gSprites[spriteId].oam.objMode = ST_OAM_OBJ_BLEND;
-        NewGameBirchSpeech_StartFadeInTarget1OutTarget2(taskId, 2);
-        NewGameBirchSpeech_StartFadePlatformOut(taskId, 1);
+        //NewGameBirchSpeech_StartFadeInTarget1OutTarget2(taskId, 2);
+        //NewGameBirchSpeech_StartFadePlatformOut(taskId, 1);
+
         NewGameBirchSpeech_ClearWindow(0);
         StringExpandPlaceholders(gStringVar4, gText_Birch_YourePlayer);
         AddTextPrinterForMessage(TRUE);
