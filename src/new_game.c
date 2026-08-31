@@ -263,6 +263,7 @@ static void ResetDexNav(void)
 
 static void setCustomFlagsAtStart(void)
 {
+    FlagClear(FLAG_SYS_FRONTIER_PASS);
     FlagSet(FLAG_REGISTERED_DUSTY);
     VarSet(VAR_PLAYER_READY, 0);
     VarSet(VAR_CARBINK_COUNT, 0);

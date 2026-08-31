@@ -357,3 +357,40 @@ script voicetrigger_shoreline {
 	releaseall
 	end
 }
+
+script sableye_03 {
+	lock
+	msgbox("Sableye's eyes flash...")
+    waitmessage
+    closemessage
+    setflag(FLAG_SYS_TOWER_GOLD)
+	fadeScreen(FADE_TO_BLACK)
+	removeobject(8)
+	addvar(VAR_DAILY_BLENDER, 1)
+    if (var(VAR_DAILY_BLENDER) == 5) {
+		msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}The gate is open.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	} else {
+	buffernumberstring(STR_VAR_1, VAR_DAILY_BLENDER)
+	msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}{STR_VAR_1}...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	}
+    waitmessage
+    closemessage
+	fadeScreen(FADE_FROM_BLACK)
+    setvar(VAR_0x8000, SPECIES_SABLEYE)
+    callnative(RegisterSpeciesInDex)
+	release
+	end
+}
+
+script Planet01_03_HintTextLowerCaves {
+    lock
+    msgbox("Captain: There is a cave and a strange\n"
+    "shoreline below. We can't reach them,\l"
+    "however, because the Sharpedo are too\l" 
+    "aggressive and the floating stones\l"
+    "move in strage ways; sometimes, if we\l"
+    "aren't lucky, we're not able to get to\l"
+    "the far west shore at all!")
+    release
+    end
+}

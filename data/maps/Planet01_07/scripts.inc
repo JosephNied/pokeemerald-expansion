@@ -315,6 +315,43 @@ Planet01_07_EventScript_Item01::
 	end
 
 
+sableye_07::
+# 187 "data/maps/Planet01_07/scripts.pory"
+	lock
+# 188 "data/maps/Planet01_07/scripts.pory"
+	msgbox sableye_07_Text_0
+# 189 "data/maps/Planet01_07/scripts.pory"
+	fadeScreen FADE_TO_BLACK
+# 190 "data/maps/Planet01_07/scripts.pory"
+	setflag FLAG_SYS_DOME_GOLD
+# 191 "data/maps/Planet01_07/scripts.pory"
+	removeobject 11
+# 192 "data/maps/Planet01_07/scripts.pory"
+	addvar VAR_DAILY_BLENDER, 1
+# 193 "data/maps/Planet01_07/scripts.pory"
+	compare VAR_DAILY_BLENDER, 5
+	goto_if_eq sableye_07_2
+# 196 "data/maps/Planet01_07/scripts.pory"
+	buffernumberstring STR_VAR_1, VAR_DAILY_BLENDER
+# 197 "data/maps/Planet01_07/scripts.pory"
+	msgbox sableye_07_Text_2
+sableye_07_1:
+# 199 "data/maps/Planet01_07/scripts.pory"
+	fadeScreen FADE_FROM_BLACK
+# 200 "data/maps/Planet01_07/scripts.pory"
+	setvar VAR_0x8000, SPECIES_SABLEYE
+# 201 "data/maps/Planet01_07/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 202 "data/maps/Planet01_07/scripts.pory"
+	release
+	end
+
+sableye_07_2:
+# 194 "data/maps/Planet01_07/scripts.pory"
+	msgbox sableye_07_Text_1
+	goto sableye_07_1
+
+
 Sun_Moon_Check_Text_0:
 # 22 "data/maps/Planet01_07/scripts.pory"
 	.string "You can see the sun and moon of the\n"
@@ -362,3 +399,15 @@ Planet01_07_HintText01_Text_0:
 	.string "something amazing would happen if we\l"
 	.string "brought a Solrock here as well, but we\l"
 	.string "haven't been able to find one.$"
+
+sableye_07_Text_0:
+# 188 "data/maps/Planet01_07/scripts.pory"
+	.string "Sableye's eyes flash...$"
+
+sableye_07_Text_1:
+# 194 "data/maps/Planet01_07/scripts.pory"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}The gate is open.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+
+sableye_07_Text_2:
+# 197 "data/maps/Planet01_07/scripts.pory"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}{STR_VAR_1}...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"

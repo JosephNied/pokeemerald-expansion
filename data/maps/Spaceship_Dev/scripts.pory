@@ -17,6 +17,14 @@ script Spaceship_Dev_Enter {
     }
     callnative(StopAirTimer)
     callnative(DisableO2Meter)
+
+    //sableye puzzle, turn on sableyes, reset value
+    setvar(VAR_DAILY_BLENDER, 0)
+    clearflag(FLAG_SYS_TOWER_GOLD) //03
+    clearflag(FLAG_SYS_DOME_SILVER) //04
+    clearflag(FLAG_SYS_DOME_GOLD) //07
+    clearflag(FLAG_SYS_PALACE_SILVER) //connecter
+    clearflag(FLAG_SYS_PALACE_GOLD) //07_E
 	end
 }
 
@@ -29,45 +37,48 @@ Spaceship_Dev_FrameTable::
 script start_ship_intro {
     setvar(VAR_TEMP_1, 0)
     lockall
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
-    waitmovement(OBJ_EVENT_ID_PLAYER)
-    setvar(VAR_0x8004, 1)
-	setvar(VAR_0x8005, 1)
-	setvar(VAR_0x8006, 8)
-	setvar(VAR_0x8007, 5)
-	special(ShakeCamera)
-    setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
-    callnative(DrawMugshot)
-    msgbox("Woah! Rough landing!")
-    setvar(VAR_0x8004, 1)
-	setvar(VAR_0x8005, 1)
-	setvar(VAR_0x8006, 8)
-	setvar(VAR_0x8007, 5)
-	special(ShakeCamera)
-    waitmessage
-    closemessage
-    callnative(ClearMugshot)
-    delay(30)
-    setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
-    callnative(DrawMugshot)
-    msgbox("What the heck?! I can't get off the\n"
-    "ground! It's as if something is literally\l"
-    "holding us down, I've never seen anything\l"
-    "like this before.")
-    waitmessage
-    closemessage
-    callnative(ClearMugshot)
-    delay(10)
-    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
-    callnative(DrawMugshot)
-    msgbox("I guess I have to go check it out...\n"
-    "This is a totally unknown planet. I\l"
-    "better prepare.\p"
-    "I should take Magnezone and my tools;\n"
-    "who knows what could be out there?")
-    waitmessage
-    closemessage
-    callnative(ClearMugshot)
+    if (flag(FLAG_SYS_FRONTIER_PASS) == FALSE) {
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+        waitmovement(OBJ_EVENT_ID_PLAYER)
+        setvar(VAR_0x8004, 1)
+        setvar(VAR_0x8005, 1)
+        setvar(VAR_0x8006, 8)
+        setvar(VAR_0x8007, 5)
+        special(ShakeCamera)
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+        callnative(DrawMugshot)
+        msgbox("Woah! Rough landing!")
+        setvar(VAR_0x8004, 1)
+        setvar(VAR_0x8005, 1)
+        setvar(VAR_0x8006, 8)
+        setvar(VAR_0x8007, 5)
+        special(ShakeCamera)
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+        delay(30)
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+        callnative(DrawMugshot)
+        msgbox("What the heck?! I can't get off the\n"
+        "ground! It's as if something is holding\l"
+        "us down, I've never seen anything like\l"
+        "this before.")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+        delay(10)
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+        callnative(DrawMugshot)
+        msgbox("I guess I have to go check it out...\n"
+        "This is a totally unknown planet.\l"
+        "I better prepare.\p"
+        "I should take Magnezone and my tools;\n"
+        "who knows what could be out there?")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+        setflag(FLAG_SYS_FRONTIER_PASS)
+    }
     releaseall
     end
 }
@@ -90,8 +101,12 @@ script refill_air_canister {
         removeitem(ITEM_SUPER_REPEL, VAR_STARDUST_COUNT)
         giveitem(ITEM_REPEL, VAR_STARDUST_COUNT)
     } else {
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+        callnative(DrawMugshot)
         msgbox("I don't have any empty canisters to\n"
         "refill.")
+        waitmessage
+        callnative(ClearMugshot)
     }
     release
     end
@@ -398,8 +413,7 @@ script Bellossom {
     setvar(VAR_0x8000, MUGSHOT_BELLOSSUM)
     callnative(DrawMugshot)
     playmoncry(SPECIES_BELLOSSOM, CRY_MODE_ENCOUNTER)
-    msgbox("Bellossom, thanks for convering my\n"
-    "C02 in oxygen. You're a real champ.")
+    msgbox("How's it going, Bellossom?")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -458,8 +472,31 @@ script Machine {
     setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
     callnative(DrawMugshot)
     msgbox("This bed is designed to keep me in\n"
-    "cryosleep, which I would be, if not for\l"
-    "the circumstances.")
+    "cryosleep, for especially long trips.")
+    callnative(ClearMugshot)
+    release
+    end
+}
+
+script Electronics {
+    lock
+    faceplayer
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
+    msgbox("Just a bunch of electronics. I barely\n"
+    "know what any of them actually do.")
+    callnative(ClearMugshot)
+    release
+    end
+}
+
+script Suit {
+    lock
+    faceplayer
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
+    msgbox("A spare company spacesuit. Let's hope \n"
+    "it wont be necessary...")
     callnative(ClearMugshot)
     release
     end
@@ -502,8 +539,8 @@ script IsPlayerReadyToGo {
         callnative(DrawMugshot)
         msgbox("I'm not ready yet!\n"
         "I need Magnezone, and my equipment!\p"
-        "I need to review the Operations Manual\n"
-        "too.")
+        "I really should review the Operations\n"
+        "Manual too.")
         callnative(ClearMugshot)
         releaseall
     }

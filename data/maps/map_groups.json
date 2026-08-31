@@ -136,7 +136,8 @@
     "Underwater_Route128",
     "Underwater_Route129",
     "Underwater_Route105",
-    "Underwater_Route125"
+    "Underwater_Route125",
+    "Planet_08"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1178,7 +1179,8 @@
     "Planet01_04",
     "Planet01_05",
     "Planet01_06",
-    "Planet01_07"
+    "Planet01_07",
+    "Planet_07_E"
   ],
   "gMapGroup_Planet01_Interior": [
     "Planet01_ICE_CAVE",
@@ -1193,6 +1195,7 @@
     "Planet01_Final_Lab",
     "Planet01_Path_Down",
     "Planet01_Final_Lab_Interior",
-    "Planet01_Final_Lab_Core"
+    "Planet01_Final_Lab_Core",
+    "Planet01_RegiDarkness"
   ]
 }

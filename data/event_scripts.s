@@ -1788,3 +1788,9 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Planet01_Final_Lab_Interior/scripts.inc"
 
 	.include "data/maps/Planet01_Final_Lab_Core/scripts.inc"
+
+	.include "data/maps/Planet_07_E/scripts.inc"
+
+	.include "data/maps/Planet01_RegiDarkness/scripts.inc"
+
+	.include "data/maps/Planet_08/scripts.inc"

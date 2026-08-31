@@ -199,6 +199,43 @@ connector_cave_remains::
 	end
 
 
+sableye_connect::
+# 132 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	lock
+# 133 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	msgbox sableye_connect_Text_0
+# 134 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	fadeScreen FADE_TO_BLACK
+# 135 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	setflag FLAG_SYS_PALACE_SILVER
+# 136 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	removeobject 7
+# 137 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	addvar VAR_DAILY_BLENDER, 1
+# 138 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	compare VAR_DAILY_BLENDER, 5
+	goto_if_eq sableye_connect_2
+# 141 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	buffernumberstring STR_VAR_1, VAR_DAILY_BLENDER
+# 142 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	msgbox sableye_connect_Text_2
+sableye_connect_1:
+# 144 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	fadeScreen FADE_FROM_BLACK
+# 145 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	setvar VAR_0x8000, SPECIES_SABLEYE
+# 146 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 147 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	release
+	end
+
+sableye_connect_2:
+# 139 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	msgbox sableye_connect_Text_1
+	goto sableye_connect_1
+
+
 ConnectorCave_Cold_Warning_Text_0:
 # 59 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "Woah! ...It suddenly got way colder in\n"
@@ -242,3 +279,15 @@ connector_cave_remains_Text_0:
 	.string "not wasted, however; the discovery\l"
 	.string "we made beyond the cavern seems\l"
 	.string "very interesting...$"
+
+sableye_connect_Text_0:
+# 133 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	.string "Sableye's eyes flash...$"
+
+sableye_connect_Text_1:
+# 139 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}The gate is open.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+
+sableye_connect_Text_2:
+# 142 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}{STR_VAR_1}...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"

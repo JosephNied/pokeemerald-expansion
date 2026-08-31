@@ -212,6 +212,43 @@ Planet01_04_Elgyem::
 	end
 
 
+sableye_04::
+# 131 "data/maps/Planet01_04/scripts.pory"
+	lock
+# 132 "data/maps/Planet01_04/scripts.pory"
+	msgbox sableye_04_Text_0
+# 133 "data/maps/Planet01_04/scripts.pory"
+	fadeScreen FADE_TO_BLACK
+# 134 "data/maps/Planet01_04/scripts.pory"
+	setflag FLAG_SYS_DOME_SILVER
+# 135 "data/maps/Planet01_04/scripts.pory"
+	removeobject 10
+# 136 "data/maps/Planet01_04/scripts.pory"
+	addvar VAR_DAILY_BLENDER, 1
+# 137 "data/maps/Planet01_04/scripts.pory"
+	compare VAR_DAILY_BLENDER, 5
+	goto_if_eq sableye_04_2
+# 140 "data/maps/Planet01_04/scripts.pory"
+	buffernumberstring STR_VAR_1, VAR_DAILY_BLENDER
+# 141 "data/maps/Planet01_04/scripts.pory"
+	msgbox sableye_04_Text_2
+sableye_04_1:
+# 143 "data/maps/Planet01_04/scripts.pory"
+	fadeScreen FADE_FROM_BLACK
+# 144 "data/maps/Planet01_04/scripts.pory"
+	setvar VAR_0x8000, SPECIES_SABLEYE
+# 145 "data/maps/Planet01_04/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 146 "data/maps/Planet01_04/scripts.pory"
+	release
+	end
+
+sableye_04_2:
+# 138 "data/maps/Planet01_04/scripts.pory"
+	msgbox sableye_04_Text_1
+	goto sableye_04_1
+
+
 Planet01_04_AddAir_Minior01_Text_0:
 # 16 "data/maps/Planet01_04/scripts.pory"
 	.string "Minior is floating in a pocket of air!\n"
@@ -246,3 +283,15 @@ Planet01_04_Elgyem_Text_0:
 # 121 "data/maps/Planet01_04/scripts.pory"
 	.string "Elgyem seems taken off-guard!\n"
 	.string "My bad- Huh?! It's flashing green-$"
+
+sableye_04_Text_0:
+# 132 "data/maps/Planet01_04/scripts.pory"
+	.string "Sableye's eyes flash...$"
+
+sableye_04_Text_1:
+# 138 "data/maps/Planet01_04/scripts.pory"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}The gate is open.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+
+sableye_04_Text_2:
+# 141 "data/maps/Planet01_04/scripts.pory"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}{STR_VAR_1}...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"

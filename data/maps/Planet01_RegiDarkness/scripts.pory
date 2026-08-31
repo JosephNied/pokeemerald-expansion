@@ -1,0 +1,46 @@
+mapscripts Planet01_RegiDarkness_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Planet01_RegiDarkness_Enter
+}
+
+script Planet01_RegiDarkness_Enter {
+	if(flag(FLAG_HIDE_VIRIDIAN_FOREST_POTION_2) == FALSE) {
+        setvar(VAR_TEMP_0, 0)
+	} else {
+		setvar(VAR_TEMP_0, 1)
+	}
+	end
+}
+
+script RegiDarkness {
+	lock
+	if(var(VAR_TEMP_0) == 0) {
+		setvar(VAR_TEMP_0, 1)
+		msgbox("A strange feeling creeps over you...")
+
+		special(SetBossBattle)
+		setwildbattle(
+			SPECIES_REGISTEEL,
+			75,
+			ITEM_NONE
+		)
+		dowildbattle
+		special(BossBattleOff)
+		setvar(VAR_0x8000, SPECIES_REGISTEEL)
+    	callnative(RegisterSpeciesInDex)
+		giveitem(ITEM_COMET_SHARD, 1)
+		release
+		end
+	} else {
+	setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
+	msgbox("I won.\n"
+	"It's time to leave this place.")
+	waitmessage
+    closemessage
+    callnative(ClearMugshot)
+	warp(MAP_SPACESHIP_DEV, 0, 12, 7) 
+	waitstate
+	release
+	end
+	}
+}

@@ -163,24 +163,6 @@ script EventScript_CorruptCatch_K {
 	end
 }
 
-script EventScript_CorruptCatch_M {
-	lockall
-	special(SetBossBattle)
-    setwildbattle(
-        SPECIES_METAGROSS,
-        65,
-        ITEM_NONE
-    )
-    dowildbattle
-    special(BossBattleOff)
-	setvar(VAR_0x8000, SPECIES_METAGROSS)
-    callnative(RegisterSpeciesInDex)
-	setflag(FLAG_TEMP_9)
-	removeobject(4)
-	releaseall
-	end
-}
-
 
 script EventScript_DragoniteEncounter {
     lockall

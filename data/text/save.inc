@@ -1,6 +1,8 @@
 	.align 2
 gText_ConfirmSave::
-	.string "Would you like to save the game?$"
+	.string "Would you like to save the game?\n"
+	.string "IMPORTANT: You will return to the ship\l"
+	.string "upon reloading your save.$"
 
 gText_AlreadySavedFile::
 	.string "There is already a saved file.\n"

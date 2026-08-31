@@ -4608,10 +4608,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .height = 5,
         .weight = 110,
         .description = COMPOUND_STRING(
-            "It digs branching holes in caves using its\n"
-            "sharp claws in search of food--raw gems.\n"
-            "A Sableye lurks in darkness and is seen\n"
-            "only rarely."),
+            "There's something funny happening with\n"
+            "these guys; whenever I talk to them,\n"
+            "their eyes? gems? flash, and they\n"
+            "vanish. Should I find them all..."),
         .pokemonScale = 451,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -12117,7 +12117,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpeed     = 70,
         .baseSpAttack  = 95,
         .baseSpDefense = 90,
-        .types = MON_TYPES(TYPE_STEEL, TYPE_PSYCHIC),
+        .types = MON_TYPES(TYPE_WATER, TYPE_STEEL),
         .catchRate = 3,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 300,
@@ -12127,13 +12127,13 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .expYield = 210,
     #endif
         .evYield_Defense = 3,
-        .itemRare = ITEM_METAL_COAT,
+        .itemCommon = ITEM_METAL_COAT,
         .genderRatio = MON_GENDERLESS,
         .eggCycles = 40,
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
-        .abilities = { ABILITY_CLEAR_BODY, ABILITY_NONE, ABILITY_LIGHT_METAL },
+        .abilities = { ABILITY_BATTLE_ARMOR, ABILITY_BATTLE_ARMOR, ABILITY_LIGHT_METAL },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Metagross"),
         .cryId = CRY_METAGROSS,
@@ -12145,7 +12145,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Metagross has four brains that are joined\n"
             "by a complex neural network; because of this,\n"
             "Metagross is smarter than a supercomputer.\n"
-            "Not suprised they brought one."),
+            "Not suprised it's from space."),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 447,
@@ -12426,13 +12426,13 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #if P_FAMILY_REGISTEEL
     [SPECIES_REGISTEEL] =
     {
-        .baseHP        = 80,
-        .baseAttack    = 75,
-        .baseDefense   = 150,
-        .baseSpeed     = 50,
-        .baseSpAttack  = 75,
-        .baseSpDefense = 150,
-        .types = MON_TYPES(TYPE_STEEL),
+        .baseHP        = 100,
+        .baseAttack    = 90,
+        .baseDefense   = 130,
+        .baseSpeed     = 70,
+        .baseSpAttack  = 60,
+        .baseSpDefense = 130,
+        .types = MON_TYPES(TYPE_DARK),
         .catchRate = 3,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 290,
@@ -12448,19 +12448,19 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_CLEAR_BODY, ABILITY_NONE, ABILITY_LIGHT_METAL },
+        .abilities = { ABILITY_SUPER_LUCK, ABILITY_SUPER_LUCK, ABILITY_LIGHT_METAL },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("Registeel"),
+        .speciesName = _("Regiclypse"),
         .cryId = CRY_REGISTEEL,
         .natDexNum = NATIONAL_DEX_REGISTEEL,
-        .categoryName = _("Iron"),
+        .categoryName = _("Darkness"),
         .height = 19,
         .weight = 2050,
         .description = COMPOUND_STRING(
-            "Its body is harder than any other kind of\n"
-            "metal. The body metal is composed of a\n"
-            "mysterious substance. Not only is it hard,\n"
-            "it shrinks and stretches flexibly."),
+            "It has no place in this world.\n"
+            "It has no place in this world.\n"
+            "It has no place in this world.\n"
+            "It has no place in this world."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 359,
@@ -12475,7 +12475,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             ANIMCMD_FRAME(1, 10),
             ANIMCMD_FRAME(0, 10),
         ),
-        .frontAnimId = ANIM_GROW_VIBRATE,
+        .frontAnimId = ANIM_GROW,
         .backPic = gMonBackPic_Registeel,
         .backPicSize = P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(64, 40) : MON_COORDS_SIZE(64, 48),
         .backPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 14 : 11,

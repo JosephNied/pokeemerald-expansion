@@ -1023,6 +1023,7 @@
 #define METATILE_Underwater_CaveEntrance_Top     0x226
 #define METATILE_Underwater_FloorShadow          0x228
 #define METATILE_Underwater_RockWall             0x21E
+#define METATILE_Underwater_darkpuddle_nowarp    0x28C
 
 // gTileset_VermilionCity
 #define METATILE_VermilionCity_Door        0x29E

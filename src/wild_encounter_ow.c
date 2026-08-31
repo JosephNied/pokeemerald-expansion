@@ -183,7 +183,6 @@ extern const u8 EventScript_CorruptCatch_H[];
 extern const u8 EventScript_CorruptCatch_C[];
 extern const u8 EventScript_CorruptCatch_E[];
 extern const u8 EventScript_CorruptCatch_K[];
-extern const u8 EventScript_CorruptCatch_M[];
 
 
 static EWRAM_DATA u8 sOWESpawnCountdown = 0;
@@ -2029,8 +2028,6 @@ static void Task_OWEApproachForBattle(u8 taskId)
                 ScriptContext_SetupScript(EventScript_CorruptCatch_E);
             } else if (OW_SPECIES(OWE) == SPECIES_KINGDRA)  {
                 ScriptContext_SetupScript(EventScript_CorruptCatch_K);
-            } else if (OW_SPECIES(OWE) == SPECIES_METAGROSS) {
-                ScriptContext_SetupScript(EventScript_CorruptCatch_M);
             } else {
                 ScriptContext_Enable();
             }

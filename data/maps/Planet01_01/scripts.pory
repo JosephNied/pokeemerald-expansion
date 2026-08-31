@@ -823,21 +823,26 @@ script EventScript_TheCaptain {
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
         callnative(DrawMugshot)
-        msgbox ("How long ago was the expedition?")
+        msgbox ("Anything else I should know?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
         setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
         callnative(DrawMugshot)
-        msgbox("Memorrry gap ends a while back...\n"
-        "I'd estimate five yearrrs? But I don't\l"
-        "know how long we werrre herrre, or\l"
-        "how long ago we arrrived.")
+        msgbox("...The sableye arrre not what they\n"
+        "seem.")
         waitmessage
         closemessage
         callnative(ClearMugshot)
         setvar(VAR_CAPTAIN_DIALOGUE, 4)
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+        callnative(DrawMugshot)
+        msgbox ("....")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
     }
     elif (var(VAR_CAPTAIN_DIALOGUE) == 1) 
     {

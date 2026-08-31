@@ -804,6 +804,9 @@ enum BattleEnvironments BattleSetup_GetEnvironmentId(void)
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_PLANET01_FINAL_LAB_CORE) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_PLANET01_FINAL_LAB_CORE))
         return BATTLE_ENVIRONMENT_UNDERWATER;
     
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_PLANET01_REGI_DARKNESS) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_PLANET01_REGI_DARKNESS))
+        return BATTLE_ENVIRONMENT_UNDERWATER;
+    
     if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
     {
         return BATTLE_ENVIRONMENT_WATER;

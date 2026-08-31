@@ -229,154 +229,130 @@ EventScript_CorruptCatch_K::
 	end
 
 
-EventScript_CorruptCatch_M::
-# 167 "data/maps/Planet01_Final_Lab/scripts.pory"
-	lockall
-# 168 "data/maps/Planet01_Final_Lab/scripts.pory"
-	special SetBossBattle
-# 169 "data/maps/Planet01_Final_Lab/scripts.pory"
-	setwildbattle SPECIES_METAGROSS, 65, ITEM_NONE
-# 174 "data/maps/Planet01_Final_Lab/scripts.pory"
-	dowildbattle
-# 175 "data/maps/Planet01_Final_Lab/scripts.pory"
-	special BossBattleOff
-# 176 "data/maps/Planet01_Final_Lab/scripts.pory"
-	setvar VAR_0x8000, SPECIES_METAGROSS
-# 177 "data/maps/Planet01_Final_Lab/scripts.pory"
-	callnative RegisterSpeciesInDex
-# 178 "data/maps/Planet01_Final_Lab/scripts.pory"
-	setflag FLAG_TEMP_9
-# 179 "data/maps/Planet01_Final_Lab/scripts.pory"
-	removeobject 4
-# 180 "data/maps/Planet01_Final_Lab/scripts.pory"
-	releaseall
-	end
-
-
 EventScript_DragoniteEncounter::
-# 186 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 168 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lockall
-# 188 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 170 "data/maps/Planet01_Final_Lab/scripts.pory"
 	msgbox EventScript_DragoniteEncounter_Text_0
-# 191 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 173 "data/maps/Planet01_Final_Lab/scripts.pory"
 	getpartysize
-# 192 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 174 "data/maps/Planet01_Final_Lab/scripts.pory"
 	compare VAR_RESULT, 6
 	goto_if_ge EventScript_DragoniteEncounter_2
-# 198 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 180 "data/maps/Planet01_Final_Lab/scripts.pory"
 	checkitem ITEM_BEAST_BALL, 1
-# 199 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 181 "data/maps/Planet01_Final_Lab/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_DragoniteEncounter_5
-# 207 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 189 "data/maps/Planet01_Final_Lab/scripts.pory"
 	givemon SPECIES_DRAGONITE, 50
-# 208 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 190 "data/maps/Planet01_Final_Lab/scripts.pory"
 	fadeScreen FADE_TO_BLACK
-# 209 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 191 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setflag FLAG_TEMP_9
-# 210 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 192 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 4
-# 211 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 193 "data/maps/Planet01_Final_Lab/scripts.pory"
 	fadeScreen FADE_FROM_BLACK
-# 213 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 195 "data/maps/Planet01_Final_Lab/scripts.pory"
 	releaseall
 	end
 
 EventScript_DragoniteEncounter_2:
-# 193 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 175 "data/maps/Planet01_Final_Lab/scripts.pory"
 	msgbox EventScript_DragoniteEncounter_Text_1
-# 194 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 176 "data/maps/Planet01_Final_Lab/scripts.pory"
 	releaseall
 	end
 
 EventScript_DragoniteEncounter_5:
-# 200 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 182 "data/maps/Planet01_Final_Lab/scripts.pory"
 	msgbox EventScript_DragoniteEncounter_Text_2
-# 202 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 184 "data/maps/Planet01_Final_Lab/scripts.pory"
 	releaseall
 	end
 
 
 Planet01_Final_Lab_EventScript_Item01::
-# 218 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 200 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lock
-# 219 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 201 "data/maps/Planet01_Final_Lab/scripts.pory"
 	giveitem ITEM_ROCKY_HELMET, 1
-# 220 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 202 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 11
-# 221 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 203 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setflag FLAG_UNUSED_0x4A2
-# 222 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 204 "data/maps/Planet01_Final_Lab/scripts.pory"
 	release
 	end
 
 
 Planet01_Final_Lab_EventScript_Item02::
-# 227 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 209 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lock
-# 228 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 210 "data/maps/Planet01_Final_Lab/scripts.pory"
 	giveitem ITEM_LIFE_ORB, 1
-# 229 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 211 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 12
-# 230 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 212 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setflag FLAG_UNUSED_0x4A7
-# 231 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 213 "data/maps/Planet01_Final_Lab/scripts.pory"
 	release
 	end
 
 
 Planet01_Final_Lab_EventScript_Item03::
-# 236 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 218 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lock
-# 237 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 219 "data/maps/Planet01_Final_Lab/scripts.pory"
 	giveitem ITEM_RARE_CANDY, 5
-# 238 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 220 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 7
-# 239 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 221 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setflag FLAG_UNUSED_0x4A3
-# 240 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 222 "data/maps/Planet01_Final_Lab/scripts.pory"
 	release
 	end
 
 
 Planet01_Final_Lab_EventScript_Item04::
-# 245 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 227 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lock
-# 246 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 228 "data/maps/Planet01_Final_Lab/scripts.pory"
 	giveitem ITEM_RARE_CANDY, 5
-# 247 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 229 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 9
-# 248 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 230 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setflag FLAG_UNUSED_0x4A4
-# 249 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 231 "data/maps/Planet01_Final_Lab/scripts.pory"
 	release
 	end
 
 
 Planet01_Final_Lab_EventScript_Item05::
-# 254 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 236 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lock
-# 255 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 237 "data/maps/Planet01_Final_Lab/scripts.pory"
 	giveitem ITEM_CHOICE_SCARF, 1
-# 256 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 238 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 10
-# 257 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 239 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setflag FLAG_UNUSED_0x4A5
-# 258 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 240 "data/maps/Planet01_Final_Lab/scripts.pory"
 	release
 	end
 
 
 Planet01_Final_Lab_EventScript_Item06::
-# 263 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 245 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lock
-# 264 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 246 "data/maps/Planet01_Final_Lab/scripts.pory"
 	giveitem ITEM_LEFTOVERS, 1
-# 265 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 247 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 8
-# 266 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 248 "data/maps/Planet01_Final_Lab/scripts.pory"
 	setflag FLAG_UNUSED_0x4A6
-# 267 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 249 "data/maps/Planet01_Final_Lab/scripts.pory"
 	release
 	end
 
@@ -431,14 +407,14 @@ Final_Lab_Remark01_Text_5:
 	.string "Move slowly, if you have to...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 EventScript_DragoniteEncounter_Text_0:
-# 188 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 170 "data/maps/Planet01_Final_Lab/scripts.pory"
 	.string "A Mega Dragonite! You... aren't\n"
 	.string "infected?$"
 
 EventScript_DragoniteEncounter_Text_1:
-# 193 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 175 "data/maps/Planet01_Final_Lab/scripts.pory"
 	.string "You want to join my team?$"
 
 EventScript_DragoniteEncounter_Text_2:
-# 200 "data/maps/Planet01_Final_Lab/scripts.pory"
+# 182 "data/maps/Planet01_Final_Lab/scripts.pory"
 	.string "I'd let you join my team,\n if I had an extra Meteor Ball.$"

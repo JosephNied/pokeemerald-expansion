@@ -2130,20 +2130,20 @@ void CB2_ContinueSavedGame(void)
     UnlockPlayerFieldControls();
     gExitStairsMovementDisabled = TRUE;
     InitMatchCallCounters();
-    if (UseContinueGameWarp() == TRUE)
+    if (TRUE)
     {
-        ClearContinueGameWarpStatus();
-        SetWarpDestinationToContinueGameWarp();
+        SetWarpDestination(
+            MAP_GROUP(MAP_SPACESHIP_DEV),
+            MAP_NUM(MAP_SPACESHIP_DEV),
+            WARP_ID_NONE,
+            12,
+            7
+        );
+
         WarpIntoMap();
+
         TryPutTodaysRivalTrainerOnAir();
         SetMainCallback2(CB2_LoadMap);
-    }
-    else
-    {
-        TryPutTodaysRivalTrainerOnAir();
-        gFieldCallback = FieldCB_FadeTryShowMapPopup;
-        SetMainCallback1(CB1_Overworld);
-        CB2_ReturnToField();
     }
 }
 

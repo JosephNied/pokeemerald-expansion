@@ -560,6 +560,61 @@ voicetrigger_shoreline::
 	end
 
 
+sableye_03::
+# 362 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 363 "data/maps/Planet01_03/scripts.pory"
+	msgbox sableye_03_Text_0
+# 364 "data/maps/Planet01_03/scripts.pory"
+	waitmessage
+# 365 "data/maps/Planet01_03/scripts.pory"
+	closemessage
+# 366 "data/maps/Planet01_03/scripts.pory"
+	setflag FLAG_SYS_TOWER_GOLD
+# 367 "data/maps/Planet01_03/scripts.pory"
+	fadeScreen FADE_TO_BLACK
+# 368 "data/maps/Planet01_03/scripts.pory"
+	removeobject 8
+# 369 "data/maps/Planet01_03/scripts.pory"
+	addvar VAR_DAILY_BLENDER, 1
+# 370 "data/maps/Planet01_03/scripts.pory"
+	compare VAR_DAILY_BLENDER, 5
+	goto_if_eq sableye_03_2
+# 373 "data/maps/Planet01_03/scripts.pory"
+	buffernumberstring STR_VAR_1, VAR_DAILY_BLENDER
+# 374 "data/maps/Planet01_03/scripts.pory"
+	msgbox sableye_03_Text_2
+sableye_03_1:
+# 376 "data/maps/Planet01_03/scripts.pory"
+	waitmessage
+# 377 "data/maps/Planet01_03/scripts.pory"
+	closemessage
+# 378 "data/maps/Planet01_03/scripts.pory"
+	fadeScreen FADE_FROM_BLACK
+# 379 "data/maps/Planet01_03/scripts.pory"
+	setvar VAR_0x8000, SPECIES_SABLEYE
+# 380 "data/maps/Planet01_03/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 381 "data/maps/Planet01_03/scripts.pory"
+	release
+	end
+
+sableye_03_2:
+# 371 "data/maps/Planet01_03/scripts.pory"
+	msgbox sableye_03_Text_1
+	goto sableye_03_1
+
+
+Planet01_03_HintTextLowerCaves::
+# 386 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 387 "data/maps/Planet01_03/scripts.pory"
+	msgbox Planet01_03_HintTextLowerCaves_Text_0
+# 394 "data/maps/Planet01_03/scripts.pory"
+	release
+	end
+
+
 Planet01_03_Carbink_Text_0:
 # 215 "data/maps/Planet01_03/scripts.pory"
 	.string "The Carbink really seems to like you!$"
@@ -633,3 +688,25 @@ Planet01_03_HintText07_Text_0:
 	.string "around the mountain covered in blue\l"
 	.string "plants; I would bet that a Pokémon with\l"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Rock Smash{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} is likely up there, hiding.$"
+
+sableye_03_Text_0:
+# 363 "data/maps/Planet01_03/scripts.pory"
+	.string "Sableye's eyes flash...$"
+
+sableye_03_Text_1:
+# 371 "data/maps/Planet01_03/scripts.pory"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}The gate is open.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+
+sableye_03_Text_2:
+# 374 "data/maps/Planet01_03/scripts.pory"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}{STR_VAR_1}...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+
+Planet01_03_HintTextLowerCaves_Text_0:
+# 387 "data/maps/Planet01_03/scripts.pory"
+	.string "Captain: There is a cave and a strange\n"
+	.string "shoreline below. We can't reach them,\l"
+	.string "however, because the Sharpedo are too\l"
+	.string "aggressive and the floating stones\l"
+	.string "move in strage ways; sometimes, if we\l"
+	.string "aren't lucky, we're not able to get to\l"
+	.string "the far west shore at all!$"
