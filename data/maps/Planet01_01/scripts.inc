@@ -1632,7 +1632,7 @@ Planet01_01_HintText05_Text_0:
 	.string "up here; they reported receiving\l"
 	.string "strange hallucinations around these\l"
 	.string "rocks. I'm not sure what's going on, but\l"
-	.string "be careful.$"
+	.string "we need to be careful.$"
 
 Planet01_01_Carbink_Text_0:
 # 200 "data/maps/Planet01_01/scripts.pory"

@@ -186,7 +186,7 @@ script Planet01_01_HintText05 {
     "up here; they reported receiving\l"
     "strange hallucinations around these\l"
     "rocks. I'm not sure what's going on, but\l"
-    "be careful.")
+    "we need to be careful.")
     release
     end
 }

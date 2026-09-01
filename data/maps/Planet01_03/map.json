@@ -128,8 +128,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(NOCTOWL)",
-      "x": 10,
-      "y": 2,
+      "x": 11,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -645,8 +645,8 @@
     },
     {
       "type": "sign",
-      "x": 10,
-      "y": 3,
+      "x": 11,
+      "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "sableye_03"
