@@ -26,7 +26,13 @@ text DeoxysBattle_Outro {
 }
 
 script Beheeyem {
-	msgbox("...Time to wake up...")
+	waitse()
+    playmoncry(SPECIES_DUSKNOIR, CRY_MODE_ENCOUNTER)
+    waitmoncry()
+	msgbox("And now, we may never get to. I may\n"
+	"never get to say how I feel to any of\l"
+	"these people, and it's all my fault. Is\l"
+	"that... What you wanted me to learn?")
 	setvar(VAR_0x8000, SPECIES_BEHEEYEM)
     callnative(RegisterSpeciesInDex)
 	warp(MAP_PLANET01_01, 1, 31, 11)

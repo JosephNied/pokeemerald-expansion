@@ -1107,7 +1107,7 @@ enum NationalDexOrder
     F(STARYU) \
     F(STARMIE) \
     F(SHARPEDO) \
-    F(SABLEYE) \
+    F(NOCTOWL) \
     F(LUNATONE) \
     F(DULROC) \
     F(SOLROCK) \

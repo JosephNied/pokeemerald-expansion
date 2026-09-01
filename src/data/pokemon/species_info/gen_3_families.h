@@ -12112,12 +12112,12 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     [SPECIES_METAGROSS] =
     {
         .baseHP        = 80,
-        .baseAttack    = 135,
+        .baseAttack    = 110,
         .baseDefense   = 130,
-        .baseSpeed     = 70,
-        .baseSpAttack  = 95,
-        .baseSpDefense = 90,
-        .types = MON_TYPES(TYPE_WATER, TYPE_STEEL),
+        .baseSpeed     = 60,
+        .baseSpAttack  = 110,
+        .baseSpDefense = 100,
+        .types = MON_TYPES(TYPE_WATER, TYPE_FIGHTING),
         .catchRate = 3,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 300,
@@ -12142,10 +12142,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .height = 16,
         .weight = 5500,
         .description = COMPOUND_STRING(
-            "Metagross has four brains that are joined\n"
-            "by a complex neural network; because of this,\n"
-            "Metagross is smarter than a supercomputer.\n"
-            "Not suprised it's from space."),
+            "Metagross seems to have hardened into\n"
+            "some kind of crystal. It's partly\n"
+            "transparent, and has changed type.\n"
+            "Learns Surf and Rock Smash!"),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 447,
@@ -12168,7 +12168,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .palette = gMonPalette_Metagross,
         .shinyPalette = gMonShinyPalette_Metagross,
         .iconSprite = gMonIcon_Metagross,
-        .iconPalIndex = 0,
+        .iconPalIndex = 3,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(2, -2, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Metagross)

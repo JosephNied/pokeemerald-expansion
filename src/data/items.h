@@ -11096,7 +11096,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
     #if I_SITRUS_BERRY_HEAL >= GEN_4
         .holdEffect = HOLD_EFFECT_RESTORE_PCT_HP,
-        .holdEffectParam = 1,
+        .holdEffectParam = 100,
         .description = COMPOUND_STRING(
             "A hold item that\n"
             "restores the user's\n"

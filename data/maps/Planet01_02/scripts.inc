@@ -582,6 +582,43 @@ Planet01_02_Elgyem::
 	end
 
 
+sableye_connect::
+# 363 "data/maps/Planet01_02/scripts.pory"
+	lock
+# 364 "data/maps/Planet01_02/scripts.pory"
+	msgbox sableye_connect_Text_0
+# 365 "data/maps/Planet01_02/scripts.pory"
+	fadeScreen FADE_TO_BLACK
+# 366 "data/maps/Planet01_02/scripts.pory"
+	setflag FLAG_SYS_PALACE_SILVER
+# 367 "data/maps/Planet01_02/scripts.pory"
+	removeobject 34
+# 368 "data/maps/Planet01_02/scripts.pory"
+	addvar VAR_DAILY_BLENDER, 1
+# 369 "data/maps/Planet01_02/scripts.pory"
+	compare VAR_DAILY_BLENDER, 5
+	goto_if_eq sableye_connect_2
+# 372 "data/maps/Planet01_02/scripts.pory"
+	buffernumberstring STR_VAR_1, VAR_DAILY_BLENDER
+# 373 "data/maps/Planet01_02/scripts.pory"
+	msgbox sableye_connect_Text_2
+sableye_connect_1:
+# 375 "data/maps/Planet01_02/scripts.pory"
+	fadeScreen FADE_FROM_BLACK
+# 376 "data/maps/Planet01_02/scripts.pory"
+	setvar VAR_0x8000, SPECIES_NOCTOWL
+# 377 "data/maps/Planet01_02/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 378 "data/maps/Planet01_02/scripts.pory"
+	release
+	end
+
+sableye_connect_2:
+# 370 "data/maps/Planet01_02/scripts.pory"
+	msgbox sableye_connect_Text_1
+	goto sableye_connect_1
+
+
 # 318 "data/maps/Planet01_02/scripts.pory"
 Planet01_02_QuagsireTrigger_Movement_0:
 # 318 "data/maps/Planet01_02/scripts.pory"
@@ -672,5 +709,17 @@ Planet01_02_QuagsireTrigger_Text_0:
 
 Planet01_02_Elgyem_Text_0:
 # 353 "data/maps/Planet01_02/scripts.pory"
-	.string "Elgyem seems taken off-guard!\n"
-	.string "My bad- Huh?! It's flashing blue-$"
+	.string "Woah! Elgyem is glowing blue-\n"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}<Let the water hold me down...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+
+sableye_connect_Text_0:
+# 364 "data/maps/Planet01_02/scripts.pory"
+	.string "Noctowl's eyes open...$"
+
+sableye_connect_Text_1:
+# 370 "data/maps/Planet01_02/scripts.pory"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}The gate is open.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+
+sableye_connect_Text_2:
+# 373 "data/maps/Planet01_02/scripts.pory"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}{STR_VAR_1} of 5...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"

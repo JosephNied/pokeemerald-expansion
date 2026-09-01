@@ -182,10 +182,11 @@ script Planet01_01_HintText04 {
 
 script Planet01_01_HintText05 {
     lock
-    msgbox("Biologist: There are a lot of\n"
-    "members of the Clefairy family around\l"
-    "these rocks. They must prefer to live\l"
-    "in the mountains.")
+    msgbox("Engineer: I found the Biologist weeping\n"
+    "up here; they reported receiving\l"
+    "strange hallucinations around these\l"
+    "rocks. I'm not sure what's going on, but\l"
+    "be careful.")
     release
     end
 }
@@ -213,8 +214,8 @@ script Planet01_01_Elgyem {
     playmoncry(SPECIES_ELGYEM, CRY_MODE_ENCOUNTER)
     setvar(VAR_0x8000, SPECIES_ELGYEM)
     callnative(RegisterSpeciesInDex)
-    msgbox("Elgyem seems taken off-guard!\n"
-    "My bad- Huh?! It's flashing red-")
+    msgbox("Woah! Elgyem is glowing red-\n"
+    "{COLOR RED}{SHADOW LIGHT_RED}<Well... How did I get here?>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     warp(MAP_PLANET01_04, 1, 12, 1)
     waitstate
@@ -830,7 +831,7 @@ script EventScript_TheCaptain {
 
         setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
         callnative(DrawMugshot)
-        msgbox("...The sableye arrre not what they\n"
+        msgbox("...The owls arrre not what they\n"
         "seem.")
         waitmessage
         closemessage
@@ -839,7 +840,7 @@ script EventScript_TheCaptain {
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
         callnative(DrawMugshot)
-        msgbox ("....")
+        msgbox ("...")
         waitmessage
         closemessage
         callnative(ClearMugshot)

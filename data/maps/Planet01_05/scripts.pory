@@ -127,7 +127,7 @@ script Color_Puzzle {
     end
     }
     else {
-        msgbox("you lose!")
+        msgbox("You snap out of it.")
     release
     end
     }

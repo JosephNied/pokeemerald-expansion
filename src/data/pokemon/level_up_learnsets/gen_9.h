@@ -9340,7 +9340,7 @@ static const struct LevelUpMove sMetangLevelUpLearnset[] = {
 
 static const struct LevelUpMove sMetagrossLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1, MOVE_ROCK_SMASH),
-    LEVEL_UP_MOVE(1, MOVE_ZEN_HEADBUTT),
+    LEVEL_UP_MOVE(1, MOVE_WIDE_GUARD),
     LEVEL_UP_MOVE(1, MOVE_SURF),
     LEVEL_UP_MOVE(1, MOVE_IRON_DEFENSE),
     LEVEL_UP_END

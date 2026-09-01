@@ -127,23 +127,3 @@ script connector_cave_remains {
     release
     end
 }
-
-script sableye_connect {
-	lock
-	msgbox("Sableye's eyes flash...")
-	fadeScreen(FADE_TO_BLACK)
-	setflag(FLAG_SYS_PALACE_SILVER)
-	removeobject(7)
-	addvar(VAR_DAILY_BLENDER, 1)
-	if (var(VAR_DAILY_BLENDER) == 5) {
-		msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}The gate is open.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-	} else {
-	buffernumberstring(STR_VAR_1, VAR_DAILY_BLENDER)
-	msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}{STR_VAR_1}...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-	}
-	fadeScreen(FADE_FROM_BLACK)
-	setvar(VAR_0x8000, SPECIES_SABLEYE)
-    callnative(RegisterSpeciesInDex)
-	release
-	end
-}

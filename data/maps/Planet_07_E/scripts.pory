@@ -27,15 +27,18 @@ script gatemessage {
     waitmessage
     callnative(ClearMugshot)
 
-	msgbox("When five eyes open, so will the gate.\n"
-	"Beneath the black pool there is a\l"
-	"garden with many trees.\p"
-	"Only one has that special purpose.\n"
-	"Find the source, and annihilate it.")
+	msgbox("When five eyes open, so does the gate.\n"
+	"There are many trees in the garden\l"
+	"beneath the black pool, but only one\l"
+	"was designed for that special purpose.\p"
+	"Your antlers are heavy. Your body is\n" 
+	"bare.\p"
+	"Your heart is striving after wind, all\n" 
+	"is vanity. So what will you do?")
 
 	setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
     callnative(DrawMugshot)
-    msgbox("Wha the? Who would have written this?\n"
+    msgbox("What the? Who would have written this?\n"
 	"Doesn't seem like something those\l"
 	"scientists would have written...")
     waitmessage
@@ -47,21 +50,26 @@ script gatemessage {
 
 script sableye_07_E {
 	lock
-	msgbox("Sableye's eyes flash...")
+	msgbox("Noctowl's eyes open...")
 	fadeScreen(FADE_TO_BLACK)
+	waitse()
+    playmoncry(SPECIES_NOCTOWL, CRY_MODE_ENCOUNTER)
+    waitmoncry()
 	setflag(FLAG_SYS_PALACE_GOLD)
 	removeobject(1)
 	addvar(VAR_DAILY_BLENDER, 1)
 	if (var(VAR_DAILY_BLENDER) == 5) {
+		msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}The gate is open.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		waitmessage
+		closemessage
 		warp(MAP_PLANET_07_E, 20, 7, 6)
 		waitstate
-		msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}The gate is open.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 	} else {
 	buffernumberstring(STR_VAR_1, VAR_DAILY_BLENDER)
-	msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}{STR_VAR_1}...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}{STR_VAR_1} of 5...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 	}
 	fadeScreen(FADE_FROM_BLACK)
-	setvar(VAR_0x8000, SPECIES_SABLEYE)
+	setvar(VAR_0x8000, SPECIES_NOCTOWL)
     callnative(RegisterSpeciesInDex)
 	release
 	end

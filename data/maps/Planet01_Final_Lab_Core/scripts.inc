@@ -30,23 +30,32 @@ DoDeoxysBattle::
 
 Beheeyem::
 # 29 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	msgbox Beheeyem_Text_0
+	waitse
 # 30 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	setvar VAR_0x8000, SPECIES_BEHEEYEM
+	playmoncry SPECIES_DUSKNOIR, CRY_MODE_ENCOUNTER
 # 31 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	callnative RegisterSpeciesInDex
+	waitmoncry
 # 32 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	msgbox Beheeyem_Text_0
+# 36 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	setvar VAR_0x8000, SPECIES_BEHEEYEM
+# 37 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 38 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	warp MAP_PLANET01_01, 1, 31, 11
-# 33 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 39 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	waitstate
-# 34 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 40 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	release
 	end
 
 
 Beheeyem_Text_0:
-# 29 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	.string "...Time to wake up...$"
+# 32 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	.string "And now, we may never get to. I may\n"
+	.string "never get to say how I feel to any of\l"
+	.string "these people, and it's all my fault. Is\l"
+	.string "that... What you wanted me to learn?$"
 
 DeoxysBattle_Intro::
 # 20 "data/maps/Planet01_Final_Lab_Core/scripts.pory"

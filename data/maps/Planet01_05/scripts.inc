@@ -259,4 +259,4 @@ Color_Puzzle_Text_4:
 
 Color_Puzzle_Text_5:
 # 130 "data/maps/Planet01_05/scripts.pory"
-	.string "you lose!$"
+	.string "You snap out of it.$"
