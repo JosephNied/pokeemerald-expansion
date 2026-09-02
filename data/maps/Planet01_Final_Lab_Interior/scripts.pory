@@ -1,5 +1,6 @@
 mapscripts Planet01_Final_Lab_Interior_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: Planet01_Final_Lab_Interior_Enter
+	MAP_SCRIPT_ON_FRAME_TABLE: Planet01_Final_Lab_Interior_FrameTable
 }
 
 script Planet01_Final_Lab_Interior_Enter {
@@ -16,6 +17,98 @@ script Planet01_Final_Lab_Interior_Enter {
 	} else {
 		setvar(VAR_TEMP_1, 1)
 	}
+
+	if (flag(FLAG_MAP_SCRIPT_CHECKED_DEOXYS)) {
+		setvar(VAR_TEMP_2, 1)
+	}
+}
+
+raw `
+Planet01_Final_Lab_Interior_FrameTable::
+	map_script_2 VAR_TEMP_2, 1, Planet01_Final_Lab_Interior_FinalWalk
+	.2byte 0
+`
+
+script Planet01_Final_Lab_Interior_FinalWalk {
+	lock
+	setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+    callnative(DrawMugshot)
+    msgbox("...Hello?\n"
+	"...\p"
+	"It's over. Where are you?")
+	waitmessage
+	closemessage
+	callnative(ClearMugshot)
+	applymovement(OBJ_EVENT_ID_PLAYER, Movement_ThroughLab1)
+	waitmovement(0)
+	setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+    callnative(DrawMugshot)
+	msgbox("Hello?")
+	waitmessage
+	closemessage
+	callnative(ClearMugshot)
+	applymovement(OBJ_EVENT_ID_PLAYER, Movement_ThroughLab2)
+	waitmovement(0)
+	warp(MAP_PLANET01_FINAL_LAB, 1, 7, 42)
+    waitstate
+	release
+	end
+}
+
+movement Movement_ThroughLab1 {
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	face_down
+}
+
+movement Movement_ThroughLab2 {
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	face_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	face_up
+	delay_16
+	delay_16
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
 }
 
 script Final_Lab_Interior_Remark01 {
@@ -75,10 +168,10 @@ script Final_Lab_Interior_FlavorText_Books {
 
 script Final_Lab_Interior_FlavorText_Board {
     lock
-    msgbox("Notes and calendars... Dating back 30\n"
-	"years ago?! There are plans and maps for\l"
-	"what I can only assume are a rapid\l"
-	"terraforming project using Pokemon.")
+    msgbox("Notes and calendars... Dating back\n"
+	"several years ago. There are plans and\l"
+	"maps for what appears to be a rapid\l"
+	"terraforming project using Pokémon.")
     release
     end
 }
@@ -107,7 +200,7 @@ script Final_Lab_Interior_FlavorText_Pod {
 
 script Final_Lab_Interior_FlavorText_Pokeball {
     lock
-    msgbox("A Pokeball!\p"
+    msgbox("A Pokéball!\p"
 	"...It's empty.")
     release
     end
@@ -118,80 +211,106 @@ script Final_Lab_Interior_BiologistEncounter {
 
 	setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
-    msgbox("!!!\n"
-	"You-!")
+    msgbox("!!!\p"
+	"You-! I knew you were infected, but-!")
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
 
-    setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    setvar(VAR_0x8000, MUGSHOT_BIOLOGIST_1)
     callnative(DrawMugshot)
-    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Well, here I am. You want to know how \n"
-	"I've been helping. You see, Deoxys and\l"
-	"I are one. It wants to spread. I do not.\l"
-	"Without my concentration, the entire\l"
-	"planet would be overrun by now. Don't\l"
-	"give me credit, though. This is my fault\l"
-	"in the first place, you see.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    msgbox("{COLOR RED}{SHADOW LIGHT_BLUE}<In my loneliness and despair, I chose to\n"
+	"merge with the cell because I wanted\l"
+	"to live, but I didn't want to have a\l"
+	"human mind full of abstract worries\l"
+	"anymore.\p"
+	"I realized too late that I didn't\n"
+	"need certainty to find purpose\l"
+	"in love...\p"
+	"I resisted full assimilation, hoping\n"
+	"a team member would rescue me, but\l"
+	"they never did. I'm alone; even the \l"
+	"memory of me has been erased...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
 
 	setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
-    msgbox("...")
+    msgbox("But, your team clearly cared about you!\n"
+	"Look at all the flowers down here.\l" 
+	"I know they were planted for you.")
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
 
-	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+	setvar(VAR_0x8000, MUGSHOT_BIOLOGIST_1)
     callnative(DrawMugshot)
-    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<There isn't much more to say, really. \n"
-	"But I do want to confess one thing.\l"
-	"I could never let myself be happy. I\l"
-	"could never allow myself to be a part of\l"
-	"this world, with these people. I could\l"
-	"never accept myself. So, I abandoned my\l"
-	"team and they abandoned me in turn.\p"
-	"Even the memory of me was erased!...\p"
-	"Who would I have been if I allowed\n"
-	"myself to love others? If I loved\l"
-	"myself? These are questions I carry\l"
-	"with me to the end, unanswered.\p"
-	"You're wondering why I'm telling you\n"
-	"this. It's because I've been reading \l"
-	"your mind and seeing into your heart.\p"
-	"You're much like me. You self-sabotage,\n"
-	"like me. You hate yourself, just like \l"
-	"me... Please...\p"
-	"Don't do what I did and throw it all\n"
-	"away.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-	waitmessage
-	closemessage
-	callnative(ClearMugshot)
-
-	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
-    callnative(DrawMugshot)
-    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Very well... Go down into the basement.\n"
-	"You'll find the source. Defeat it.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    msgbox("{COLOR RED}{SHADOW LIGHT_BLUE}<Don't judge me. You're a coward too, \n"
+	"running from those who love you \l"
+	"because you're too afraid to be \l"
+	"responsible for anything.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
 
 	setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
     callnative(DrawMugshot)
-    msgbox("What will happen to you?")
+    msgbox("...You're right, I ran.")
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
 
-	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+	setvar(VAR_0x8000, MUGSHOT_BIOLOGIST_1)
     callnative(DrawMugshot)
-    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<...I wouldn't worry about that. Go.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    msgbox("{COLOR RED}{SHADOW LIGHT_BLUE}<But here... On this planet, you were\n"
+	"challenged to confront your weaknesses\l"
+	"and you overcame them. And I still don't\l"
+	"know... Why I failed to do the same...\p"
+	"This is your story. End it here by going\n"
+	"home and choosing a real future for\l"
+	"yourself. My story, ended in tragedy\l"
+	"a long time ago.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	waitmessage
+	closemessage
+	callnative(ClearMugshot)
+
+	setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
+    msgbox("But your story didn't end. You've been\n"
+	"fighting for years for this moment.\l" 
+	"You've helped me. Tragedies can be good\l"
+	"stories too, if bittersweet. You've\l" 
+	"proven yourself brave. Now, I can\l"
+	"actually rescue you!")
+	waitmessage
+	closemessage
+	callnative(ClearMugshot)
+
+	setvar(VAR_0x8000, MUGSHOT_BIOLOGIST_1)
+    callnative(DrawMugshot)
+    msgbox("{COLOR RED}{SHADOW LIGHT_BLUE}<...I think it's time for you to destroy\n"
+	"the cell. It's in the basement behind \l"
+	"me.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
 	
+	setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
+    msgbox("Ok. And then what do I need to do for\n"
+	"you?")
+	waitmessage
+	closemessage
+	callnative(ClearMugshot)
+
+	setvar(VAR_0x8000, MUGSHOT_BIOLOGIST_1)
+    callnative(DrawMugshot)
+    msgbox("{COLOR RED}{SHADOW LIGHT_BLUE}<Don't worry about that now... Just find\n"
+	"me when it's over.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	waitmessage
+	closemessage
+	callnative(ClearMugshot)
 	
 	setvar(VAR_TEMP_1, 1)
 	setflag(FLAG_REGISTERED_VALERIE)

@@ -15,19 +15,19 @@ script Path_Down_Remark01 {
 	lock
     setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
     callnative(DrawMugshot)
-    msgbox("This doesn't look like a campsite!")
+    msgbox("It's pretty dark in here...")
     waitmessage
     closemessage
     callnative(ClearMugshot)
 	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
-    msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}<Not much further... Proceed...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Not much further... Keep going down...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
 	setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
     callnative(DrawMugshot)
-    msgbox("Ok... (creepy...)")
+    msgbox("Ok. I'm trusting you.")
     waitmessage
     closemessage
     callnative(ClearMugshot)

@@ -69,12 +69,12 @@ Path_Down_Remark01::
 
 Path_Down_Remark01_Text_0:
 # 18 "data/maps/Planet01_Path_Down/scripts.pory"
-	.string "This doesn't look like a campsite!$"
+	.string "It's pretty dark in here...$"
 
 Path_Down_Remark01_Text_1:
 # 24 "data/maps/Planet01_Path_Down/scripts.pory"
-	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}<Not much further... Proceed...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<Not much further... Keep going down...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Path_Down_Remark01_Text_2:
 # 30 "data/maps/Planet01_Path_Down/scripts.pory"
-	.string "Ok... (creepy...)$"
+	.string "Ok. I'm trusting you.$"

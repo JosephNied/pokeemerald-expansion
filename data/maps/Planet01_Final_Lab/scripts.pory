@@ -1,5 +1,6 @@
 mapscripts Planet01_Final_Lab_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: Planet01_Final_Lab_Enter
+    MAP_SCRIPT_ON_FRAME_TABLE: Planet01_Final_Lab_FrameTable
 }
 
 script Planet01_Final_Lab_Enter {
@@ -11,6 +12,57 @@ script Planet01_Final_Lab_Enter {
 	} else {
 		setvar(VAR_TEMP_0, 1)
 	}
+    if (flag(FLAG_MAP_SCRIPT_CHECKED_DEOXYS)) {
+		setvar(VAR_TEMP_2, 1)
+	}
+}
+
+raw `
+Planet01_Final_Lab_FrameTable::
+	map_script_2 VAR_TEMP_2, 1, Planet01_Final_Lab_FinalWalk
+	.2byte 0
+`
+
+script Planet01_Final_Lab_FinalWalk {
+	lock
+	applymovement(OBJ_EVENT_ID_PLAYER, Movement_ToFlowers1)
+	waitmovement(0)
+	msgbox("...\n"
+    "...\p"
+    "There's a note on the body.\n"
+    "It's addressed to a person I don't\l"
+    "know.\p"
+    "It reads:\p"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}In the end, I was thinking about you.\n"
+    "Love,\p"
+    "Your Ghost Bird\n"
+    "P.S.\p"
+    "I said I hated it when you called me\n"
+    "that. But I never actually did.\l"
+    "Not once.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	waitmessage
+	closemessage
+	delay(30)
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+    callnative(DrawMugshot)
+    msgbox("...I think it's time to leave.\n"
+    "I'll take this back...\l"
+    "Guess I have a new mission.")
+	waitmessage
+	closemessage
+	warp(MAP_PLANET01_01, 2, 20, 15)
+    waitstate
+	release
+	end
+}
+
+movement Movement_ToFlowers1 {
+    walk_down
+    walk_right
+    walk_right
+    walk_right
+    delay_16
+    delay_16
 }
 
 script Final_Lab_Remark01 {
@@ -22,19 +74,18 @@ script Final_Lab_Remark01 {
     msgbox("WOW!\p"
 	"This place is huge!!!\n"
 	"How is this even possible?\l"
-	"Was this place just like this, or were\l"
-	"the scientists involved somehow?\p"
+	"Was this place just like this, or was\l"
+	"your team responsible?\p"
 	"Where is this light coming from? I\n"
 	"think I see the lab, in the distance...\p"
-	"But how did they build it? I have so many\n"
+	"But how did you build it? I have so many\n"
 	"questions!")
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
 	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
-	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I will explain everything... \n"
-	"When you arrive at the lab.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Please, just hurry to the lab.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -42,31 +93,32 @@ script Final_Lab_Remark01 {
     callnative(DrawMugshot)
     msgbox("Ok, I guess you're there?\p"
 	"My instruments say the gravity is\n"
-	"higher down here. Also... The air\l"
-	"is breathable!")
+	"higher down here. Also... The air is\l"
+	"breathable!")
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
 	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
-	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Oh, and look out... For hostiles...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Oh, and look out... For hostiles.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
 	setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
     callnative(DrawMugshot)
-    msgbox("Hostiles? More infected Pokemon? They\n"
-    "don't seem to be native to this\l"
-    "place. Nothing down here does.")
+    msgbox("Hostiles? More infected Pokémon? They\n"
+    "don't seem to be native to this place.\l"
+    "Nothing down here does.")
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
 	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
-	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<The same as before...\n"
-	"Move slowly, if you have to...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Yeah, they're not... Remember, move\n"
+	"slowly. Running will alert them.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
+    callnative(ClearMugshot)
 	setvar(VAR_TEMP_0, 1)
 	setflag(FLAG_REGISTERED_LILA_AND_ROY)
 	release

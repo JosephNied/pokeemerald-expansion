@@ -7,14 +7,18 @@ script Planet01_01_Enter {
 	special(SetRandomFlags)
     special(BossBattleOff)
     setvar(VAR_TEMP_0, 5)
+    if (flag(FLAG_MAP_SCRIPT_CHECKED_DEOXYS)) {
+        setvar(VAR_TEMP_2, 1)
+    }
     getplayerxy(VAR_0x8004, VAR_0x8005)
     compare (VAR_0x8004, 18)
     goto_if_ne(End, 0)
     compare (VAR_0x8005, 10)
     goto_if_ne(End, 0)
-
-    setvar(VAR_AIR_TIMER_STEPS, 250)
-    setvar(VAR_AIR_TIMER_TRIGGERED, 1)
+    if (flag(FLAG_MAP_SCRIPT_CHECKED_DEOXYS) == FALSE) {
+        setvar(VAR_AIR_TIMER_STEPS, 250)
+        setvar(VAR_AIR_TIMER_TRIGGERED, 1)
+    }
     if(flag(FLAG_REGISTERED_ROSE) == FALSE) {
         setvar(VAR_TEMP_0, 0)
     } else {
@@ -40,6 +44,7 @@ Planet01_01_FrameTable::
     map_script_2 VAR_TEMP_0, 0, Planet01_01_RobotGreeting
     map_script_2 VAR_TEMP_0, 2, Planet01_01_JirachiAppears
     map_script_2 VAR_TEMP_0, 3, Planet01_01_MonstersRegular
+    map_script_2 VAR_TEMP_2, 1, Planet01_01_Ending
 	.2byte 0
 `
 
@@ -993,5 +998,71 @@ script Planet01_01_MonstersRegular {
     clearflag(FLAG_REGISTERED_BROOKE)
     setvar(VAR_TEMP_0, 1)
     releaseall
+    end
+}
+
+script Planet01_01_Ending {
+    lockall
+    callnative(ClearMugshot)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_question_mark, face_right))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
+    msgbox ("Hey Cap', how are the psychic readings\n"
+    "on the ship?")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+    callnative(DrawMugshot)
+    msgbox("Rrreadings negative, kiddo. Should be\n"
+    "frrree forrr take off.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
+    msgbox ("...\n"
+    "I've been thinking.\p"
+    "How would you like to be the captain\n"
+    "of a ship again?")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+    callnative(DrawMugshot)
+    msgbox("Kiddo. Arrre you... Perrrhaps, serrrious?\n"
+    "Why, that would fill my ambiguously\l"
+    "prrresent rrrobot soul with joy.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
+    msgbox ("Well, they're going to need a replacement.\n"
+    "I'm quitting when we get back home.\l"
+    "Let's go.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+
+    delay(30)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
+    msgbox ("Goodbye... Wild Indigo.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+    fadescreenspeed(FADE_TO_BLACK, 8)
+    special(GameClear)
+    release
     end
 }

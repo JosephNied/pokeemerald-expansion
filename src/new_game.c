@@ -274,4 +274,5 @@ static void setCustomFlagsAtStart(void)
 	FlagSet(FLAG_HIDE_ROUTE_120_GABBY_AND_TY_2);
     VarSet(VAR_DAILY_SLOTS, 0);
     FlagSet(FLAG_REGISTERED_BROOKE);
+    FlagSet(FLAG_ENABLE_SHIP_BIRTH_ISLAND);
 }

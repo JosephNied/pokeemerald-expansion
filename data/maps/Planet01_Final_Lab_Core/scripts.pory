@@ -6,11 +6,20 @@ mapscripts Planet01_Final_Lab_Core_MapScripts {
 script Planet01_Final_Lab_Core_Enter {
 	getplayerxy(VAR_0x8004, VAR_0x8005)
     compare (VAR_0x8004, 0)
-    goto_if_ne(EndB, 0)
+    goto_if_ne(OtherEnter, 0)
     compare (VAR_0x8005, 2)
-    goto_if_ne(EndB, 0)
-	setvar(VAR_TEMP_3, 1)
+    goto_if_ne(OtherEnter, 0)
 	setflashlevel(5)
+	setvar(VAR_TEMP_3, 1)
+
+OtherEnter:
+	getplayerxy(VAR_0x8004, VAR_0x8005)
+    compare (VAR_0x8004, 20)
+    goto_if_ne(EndB, 0)
+    compare (VAR_0x8005, 24)
+    goto_if_ne(EndB, 0)
+	setflashlevel(0)
+	setvar(VAR_TEMP_4, 1)
 
 EndB:
 	end
@@ -19,18 +28,47 @@ EndB:
 raw `
 Planet01_Final_Lab_Core_FrameTable::
 	map_script_2 VAR_TEMP_3, 1, Planet01_Final_Lab_Core_BeheeWalk
+	map_script_2 VAR_TEMP_4, 1, Planet01_Final_Lab_Core_FinalFight
 	.2byte 0
 `
 
-script DoDeoxysBattle{
-	trainerbattle_single(TRAINER_WALTER_5, DeoxysBattle_Intro, DeoxysBattle_Outro)
+script Planet01_Final_Lab_Core_FinalFight{
+	lock
+	applymovement(OBJ_EVENT_ID_PLAYER, Movement_Deoxys1)
+	waitmovement(0)
+	applymovement(1, Movement_Deoxys2)
+	waitmovement(0)
 	fadeScreen(FADE_TO_BLACK)
 	setflag(FLAG_UNUSED_0x054)
 	removeobject(1)
-	fadeScreen(FADE_FROM_BLACK)
 	setvar(VAR_0x8000, SPECIES_DEOXYS_NORMAL)
     callnative(RegisterSpeciesInDex)
+	trainerbattle_single(TRAINER_WALTER_5, DeoxysBattle_Intro, DeoxysBattle_Outro)
+	setflag(FLAG_MAP_SCRIPT_CHECKED_DEOXYS)
+	setflag(FLAG_DEOXYS_ROCK_COMPLETE)
+	clearflag(FLAG_ENABLE_SHIP_BIRTH_ISLAND)
+	warp(MAP_PLANET01_FINAL_LAB_INTERIOR, 2, 15, 1)
+    waitstate
+	release
 	end
+}
+
+movement Movement_Deoxys1 {
+	delay_16
+	delay_16
+	walk_up
+	walk_up
+	walk_up
+	face_up
+}
+
+movement Movement_Deoxys2 {
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 }
 
 text DeoxysBattle_Intro {
@@ -38,7 +76,7 @@ text DeoxysBattle_Intro {
 }
 
 text DeoxysBattle_Outro {
-	"...It's over."
+	"...It's over. The cell dissolves."
 }
 
 script Planet01_Final_Lab_Core_BeheeWalk {

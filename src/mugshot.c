@@ -52,6 +52,8 @@ static const u32 sMugshotImg_PLAYER_CONFUSED[] = INCBIN_U32("graphics/mugshots/p
 static const u16 sMugshotPal_PLAYER_CONFUSED[] = INCBIN_U16("graphics/mugshots/player_pal.gbapal");
 
 static const u32 sMugshotImg_UNKNOWN[] = INCBIN_U32("graphics/mugshots/unknown.4bpp.lz");
+static const u32 sMugshotImg_BIOLOGIST_1[] = INCBIN_U32("graphics/mugshots/biologist_1.4bpp.lz");
+static const u16 sMugshotPal_BIOLOGIST[] = INCBIN_U16("graphics/mugshots/biologist.gbapal");
 
 static const u32 sMugshotImg_CAPTAIN_SAD[] = INCBIN_U32("graphics/mugshots/captain_sad.4bpp.lz");
 static const u16 sMugshotPal_CAPTAIN_SAD[] = INCBIN_U16("graphics/mugshots/captain_sad.gbapal");
@@ -109,6 +111,7 @@ static const struct Mugshot sMugshots[] = {
     [MUGSHOT_PLAYER_SHOCK] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_PLAYER_SHOCK, .palette = sMugshotPal_PLAYER_SHOCK},
     [MUGSHOT_PLAYER_CONFUSED] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_PLAYER_CONFUSED, .palette = sMugshotPal_PLAYER_CONFUSED},
     [MUGSHOT_UNKNOWN] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_UNKNOWN, .palette = sMugshotPal_PLAYER_OK},
+    [MUGSHOT_BIOLOGIST_1] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_BIOLOGIST_1, .palette = sMugshotPal_BIOLOGIST},
     [MUGSHOT_CAPTAIN_SAD] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_CAPTAIN_SAD, .palette = sMugshotPal_CAPTAIN_SAD},
     [MUGSHOT_BLISSEY] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_BLISSEY, .palette = sMugshotPal_BLISSEY},
     [MUGSHOT_BELLOSSUM] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_BELLOSSUM, .palette = sMugshotPal_BELLOSSUM},
