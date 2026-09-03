@@ -9,7 +9,7 @@ script Planet01_Diancie_Cave_Enter {
 
 script Planet01_Diancie_Cave_Spawn_Poke {
 	lockall
-
+	
 	checkitem(ITEM_CHIPPED_POT, 1)
 	if (var(VAR_RESULT) == FALSE)
     {
@@ -90,7 +90,9 @@ script Planet01_Diancie_Cave_DiancieEncounter {
     lockall
     faceplayer
 
-    msgbox("Diancie wants to fight!")
+    msgbox("Diancie seems to appreciate me bringing\n"
+	"its children home!\p"
+	"It... wants to fight?")
 
     waitse()
     playmoncry(SPECIES_DIANCIE_MEGA, CRY_MODE_ENCOUNTER)
@@ -111,9 +113,10 @@ script Planet01_Diancie_Cave_DiancieEncounter {
     removeobject(5)
     setflag(FLAG_UNUSED_0x045)
 
-    msgbox("Daincie seemed pleased with the battle.\n"
+    msgbox("Daincie was pleased with the battle!\n"
     "It left a gift!\p"
-	"...Some kind of crystal? It looks almost\n"
+	giveitem(ITEM_COMET_SHARD, 1)
+	"Also, some kind of crystal? It looks almost\n"
 	"like...!")
 	waitmessage
 	closemessage
