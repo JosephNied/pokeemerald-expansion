@@ -99,12 +99,12 @@ script groundjournal_2 {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
     callnative(DrawMugshot)
-    msgbox("Oh wow, a journal!")
+    msgbox("A journal!")
     waitmessage
     callnative(ClearMugshot)
 
-    msgbox("Ops: This cave was another bust. But, \n" 
-    "the cave above the waterfall leads to a\l"
+    msgbox("Ops Lead: This cave was a bust. But,\n" 
+    "the one above the waterfall leads to a\l"
     "promising cavern below. I discussed\l"
     "making some dramatic changes to the\l"
     "environment with the Engineer; and, I'll\l"

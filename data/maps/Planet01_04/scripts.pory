@@ -66,7 +66,8 @@ script Planet01_04_HintText01 {
     lock
     msgbox("Engineer: The cave above just sends us\n"
     "in circles. How is this even possible?!\l"
-    "I will get to the bottom of this!")
+    "I will get to the bottom of this!\l
+    ""...Literally!")
     if (var(VAR_CAPTAIN_DIALOGUE) == 1) {
         clearflag(FLAG_REGISTERED_CRISTIN)
     } elif (var(VAR_CAPTAIN_DIALOGUE) == 2) {
@@ -81,7 +82,7 @@ script Planet01_04_HintText01 {
 
 script Planet01_04_HintText02 {
     lock
-    msgbox("Scientist: The watery path ahead\n"
+    msgbox("Ops Lead: The watery path ahead\n"
     "will reveal an incredible view of the\l"
     "planet's celestial bodies. There's\l"
     "something important going on up there,\l"

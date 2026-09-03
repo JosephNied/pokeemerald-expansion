@@ -424,9 +424,9 @@ script Planet01_02_HintText04 {
 
 script Planet01_02_HintText05 {
     lock
-    msgbox("Scientist: There's a suprising amount\n"
+    msgbox("Ops Lead: There's a surprising amount\n"
     "of greenery here for a planet with such\l"
-    "a light atmosphere.")
+    "a light atmosphere!")
     release
     end
 }
