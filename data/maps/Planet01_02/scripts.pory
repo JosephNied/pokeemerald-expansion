@@ -345,7 +345,7 @@ script Found_Ruby {
 
 script Planet01_02_HintText01 {
     lock
-    msgbox("Engineer: Note to self. Do not wear\n"
+    msgbox("Ops Lead: Note to self. Do not wear\n"
     "sweet smelling perfume the next time\l"
     "I climb this mountain.\p"
     "There's a strong pokemon at the top\n"

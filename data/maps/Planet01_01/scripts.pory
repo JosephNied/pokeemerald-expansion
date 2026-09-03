@@ -695,6 +695,8 @@ script Planet01_01_JirachiAppears {
     closemessage
     callnative(ClearMugshot)
 
+    special(Overworld_PlaySpecialMapMusic)
+
     setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
     callnative(DrawMugshot)
     msgbox("Great. Amnesiac robots, space viruses,\n" 

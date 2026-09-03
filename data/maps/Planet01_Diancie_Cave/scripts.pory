@@ -113,10 +113,12 @@ script Planet01_Diancie_Cave_DiancieEncounter {
     removeobject(5)
     setflag(FLAG_UNUSED_0x045)
 
-    msgbox("Daincie was pleased with the battle!\n"
-    "It left a gift!\p"
+    msgbox("Diancie was pleased with the battle!\n"
+    "It left a gift!")
+	waitmessage
+	closemessage
 	giveitem(ITEM_COMET_SHARD, 1)
-	"Also, some kind of crystal? It looks almost\n"
+	msgbox("Also, some kind of crystal? It looks almost\n"
 	"like...!")
 	waitmessage
 	closemessage

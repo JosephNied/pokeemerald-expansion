@@ -220,12 +220,12 @@ EventScript_GlimmoraCatch_Text_0:
 
 groundjournal_2_Text_0:
 # 102 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	.string "Oh wow, a journal!$"
+	.string "A journal!$"
 
 groundjournal_2_Text_1:
 # 106 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	.string "Ops: This cave was another bust. But, \n"
-	.string "the cave above the waterfall leads to a\l"
+	.string "Ops Lead: This cave was a bust. But,\n"
+	.string "the one above the waterfall leads to a\l"
 	.string "promising cavern below. I discussed\l"
 	.string "making some dramatic changes to the\l"
 	.string "environment with the Engineer; and, I'll\l"

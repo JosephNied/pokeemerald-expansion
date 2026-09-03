@@ -938,7 +938,7 @@ Found_Ruby_Text_0:
 
 Planet01_02_HintText01_Text_0:
 # 348 "data/maps/Planet01_02/scripts.pory"
-	.string "Engineer: Note to self. Do not wear\n"
+	.string "Ops Lead: Note to self. Do not wear\n"
 	.string "sweet smelling perfume the next time\l"
 	.string "I climb this mountain.\p"
 	.string "There's a strong pokemon at the top\n"
@@ -973,9 +973,9 @@ Planet01_02_HintText04_Text_0:
 
 Planet01_02_HintText05_Text_0:
 # 427 "data/maps/Planet01_02/scripts.pory"
-	.string "Scientist: There's a suprising amount\n"
+	.string "Ops Lead: There's a surprising amount\n"
 	.string "of greenery here for a planet with such\l"
-	.string "a light atmosphere.$"
+	.string "a light atmosphere!$"
 
 Planet01_02_HintText06_Text_0:
 # 436 "data/maps/Planet01_02/scripts.pory"
