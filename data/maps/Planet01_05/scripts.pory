@@ -82,7 +82,7 @@ movement Movement_DusknoirAppears {
 
 script Planet01_05_HintText01 {
     lock
-    msgbox("Scientist: The trees here are giving off\n"
+    msgbox("Engineer: The trees here are giving off\n"
     "a mysterious glow... The mists here\l"
     "remind me of the anomalous cave we\l"
     "discovered earlier.\p"
@@ -119,7 +119,6 @@ script Color_Puzzle {
     if (var(VAR_RESULT) == 1) {
         addvar(VAR_DAILY_ROULETTE, 1)
     }
-    
     if (var(VAR_DAILY_ROULETTE) == 4) {
     warp(MAP_PLANET01_FINAL_LAB_CORE, 1, 0, 0)
     waitstate
@@ -127,7 +126,14 @@ script Color_Puzzle {
     end
     }
     else {
-        msgbox("You snap out of it.")
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+    callnative(DrawMugshot)
+    msgbox("Snap out of it!\n"
+    "I should use my teleporter to get back\l" 
+    "to the ship already.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
     release
     end
     }

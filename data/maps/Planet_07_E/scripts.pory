@@ -27,14 +27,14 @@ script gatemessage {
     waitmessage
     callnative(ClearMugshot)
 
-	msgbox("When five eyes open, so does the gate.\n"
+	msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}When five eyes open, so does the gate.\n"
 	"There are many trees in the garden\l"
 	"beneath the black pool, but only one\l"
 	"was designed for that special purpose.\p"
 	"Your antlers are heavy. Your body is\n" 
 	"bare.\p"
 	"Your heart is striving after wind, all\n" 
-	"is vanity. So what will you do?")
+	"is vanity. So what will you do?{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 
 	setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
     callnative(DrawMugshot)
@@ -42,6 +42,13 @@ script gatemessage {
 	"Doesn't seem like something those\l"
 	"scientists would have written...")
     waitmessage
+    callnative(ClearMugshot)
+
+	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    callnative(DrawMugshot)
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<...The owls are not what they seem.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    waitmessage
+    closemessage
     callnative(ClearMugshot)
 
 	releaseall

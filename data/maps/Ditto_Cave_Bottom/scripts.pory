@@ -23,6 +23,16 @@ script Ditto_Cave_Bottom_DittoTrainer {
 	msgbox("It was just a ditto...")
 	closemessage
 	callnative(ClearMugshot)
+
+	if (var(VAR_DAILY_SLOTS) >= 2) {
+		setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+		callnative(DrawMugshot)
+		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Oh... Well, yeah, I knew that.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		waitmessage
+		closemessage
+		callnative(ClearMugshot)
+	}
+
 	setvar(VAR_0x8000, SPECIES_DITTO)
     callnative(RegisterSpeciesInDex)
 	end
@@ -56,14 +66,24 @@ script Ditto_Cave_Bottom_EventScript_Item02 {
 
 script Ditto_Cave_Bottom_HintText01 {
 	lock
-	msgbox("Biologist: We discovered a strange\n"
+	msgbox("Biologist: I discovered a strange\n"
     "kind of life down here, with the ditto.\l"
-    "It has a strange power to it. We need to\l"
+    "It has a strange power to it. I need to\l"
 	"take it to our lab above the waterfall\l"
 	"and study it, immediately.")
+	closemessage
 
 	if (var(VAR_TEMP_2) == 0) {
-        call(voicedialogueABC)
+		if (var(VAR_DAILY_SLOTS) >= 2) {
+			setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+			callnative(DrawMugshot)
+			msgbox("{COLOR RED}{SHADOW LIGHT_RED}<This is where I found it...\n"
+			"Or, it found me. It hurts to see this\l"
+			"place again.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+			waitmessage
+			closemessage
+			callnative(ClearMugshot)
+		}
         setvar(VAR_TEMP_2, 1)
     }
 

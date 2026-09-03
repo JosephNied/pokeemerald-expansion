@@ -143,11 +143,12 @@ script Planet01_01_AddAir_Minior02 {
 script Planet01_01_HintText01 {
     lock
     msgbox("Captain: This is the captain of\n" 
-    "expedition 'WILD INDIGO'. \p"
+    "project EDGE OF DAWN, or EOD.\p"
     "Our team has recorded notes for future\n"
     "explorers in hopefully convenient \l"
-    "places. Our objective is to create\l"
-    "a lab here for biological research.\p"
+    "places. Our objective is to establish\l"
+    "a research facility, focusing on\l"
+    "geology and Pokémon biology.\p"
     "Note: The gravity is low here. Tall \n"
     "ledges can be scaled easily!")
     release
@@ -291,10 +292,10 @@ script Planet01_01_RobotGreeting {
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
     msgbox("Why, I'm the rrrenown Captain of the\n" 
-    "experrrdition WILD INDIGO. Yep, I'm the\l" 
-    "captain. Never let a human do something\l" 
-    "important, that's my motto. It was also\l"
-    "my company's slogan.")
+    "expedition EDGE OF DAWN. Yep, I'm the\l" 
+    "captain. Never let a human do anything\l" 
+    "important, that's what I always say. It\l" 
+    "was also my company's slogan.")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -333,7 +334,7 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
     callnative(DrawMugshot)
-    msgbox("...Ok. Well, any chance you know why I\n"
+    msgbox("...Great. Well, any chance you know why I\n"
     "can't lift my ship off the ground?")
     waitmessage
     closemessage
@@ -341,9 +342,9 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox("Well sirrr/ma'am/sirrr'am, it's all\n" 
-    "account of the absurd levels of purrrre\l" 
-    "psychic energy layerrred on top of it.\l"
+    msgbox("Well sirrrma'am, it's all account of the\n" 
+    "absurrrd levels of purrre psychic\l" 
+    "enerrrgy layerrred on top of it.\l"
     "Yep.")
     waitmessage
     closemessage
@@ -352,7 +353,7 @@ script Planet01_01_RobotGreeting {
     setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
     msgbox("...WHAT? So you're saying something is\n"
-    "trapping me here?!")
+    "TRAPPING me here?!")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -366,7 +367,7 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
     callnative(DrawMugshot)
-    msgbox("...Well this is unsettling. I have more\n"
+    msgbox("...Well this is not good. I have more\n"
     "questions. A lot more questions.")
     waitmessage
     closemessage
@@ -413,8 +414,8 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox ("Yes in fact I do! Let me load it up forrr\n"
-    "you!")
+    msgbox ("Well of courrrse I do kiddo! Let me load\n" 
+    "it up forrr you!")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -449,7 +450,7 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
     callnative(DrawMugshot)
-    msgbox ("Awesome, a map!\n"
+    msgbox ("Well, it is a map!\n"
     "...\l"
     "...You're quite the artist!")
     waitmessage
@@ -501,11 +502,12 @@ script Planet01_01_RobotGreeting {
     setflag(FLAG_REGISTERED_ROSE)
 
     msgbox("Captain: This is the captain of\n" 
-    "expedition 'WILD INDIGO'. \p"
+    "project EDGE OF DAWN, or EOD. \p"
     "Our team has recorded notes for future\n"
-    "explorers in hopefully convenient\l"
-    "places. Our objective is to create\l"
-    "a lab here for scientific research.\p"
+    "explorers in hopefully convenient \l"
+    "places. Our objective is to establish\l"
+    "a research facility, focusing on\l"
+    "geology and Pokémon biology.\p"
     "Note: The gravity is low here. Tall \n"
     "ledges can be scaled easily!")
     setflag(FLAG_TEMP_9)
@@ -668,7 +670,10 @@ script Planet01_01_JirachiAppears {
 
     setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
-    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Oh, wow. Lucky. Very lucky...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Oh, wow. Lucky. Very lucky...>\p"
+    "Since you've been given the chance to\n"
+    "fight for your survival, I'll warn you,\l"
+    "this greedy planet takes and takes...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -813,7 +818,7 @@ script EventScript_TheCaptain {
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
         callnative(DrawMugshot)
-        msgbox ("...Sure. But what are they?")
+        msgbox ("...Ok. But what are they?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -845,7 +850,7 @@ script EventScript_TheCaptain {
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
         callnative(DrawMugshot)
-        msgbox ("...")
+        msgbox ("C'mon, man.")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -854,7 +859,7 @@ script EventScript_TheCaptain {
     {
         setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
         callnative(DrawMugshot)
-        msgbox ("Your map is great, but I'm a bit\n"
+        msgbox ("Your map is... great, but I'm a bit\n"
         "confused. Where are we now?")
         waitmessage
         closemessage
@@ -870,7 +875,7 @@ script EventScript_TheCaptain {
         setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
         callnative(DrawMugshot)
         msgbox ("Ok, and your lab was is in the\n"
-        "forest somewhere?")
+        "Forest somewhere?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -887,7 +892,7 @@ script EventScript_TheCaptain {
     {
         setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
         callnative(DrawMugshot)
-        msgbox ("So, were you a part of this team of\n"
+        msgbox ("So, you were a part of this team of\n"
         "researchers? Are you sure you were the\l"
         "captain?")
         waitmessage
@@ -956,7 +961,7 @@ script EventScript_TheCaptain {
 
         multichoice(0, 0, MULTI_EXPLORERS_FACTS, FALSE)
         if (var(VAR_RESULT) == 0) {
-            msgbox("Me? State-of-the-art Captobot by\n"
+            msgbox("Me? State-of-the-art RoboCap by\n"
             "BOTech Enterprrrises. I was the latest\l" 
             "model when we set out into space.\l" 
             "Designed to keep up morrrale, maintain\l" 
@@ -965,26 +970,28 @@ script EventScript_TheCaptain {
             "activities.")
         } elif (var(VAR_RESULT) == 1) {
             msgbox("Expert in rrresearching alien PKMN.\n"
-            "Quiet.\l"
+            "Quiet, standoff-ish.\l"
             "Didn't like to be the centerrr of\l" 
             "attention, and often would get lost\l" 
             "wanderrring off on their own. Made\l" 
             "excellent notes on this rrregion's\l" 
-            "biological life.")
+            "biological life. Rrrecorrrds say\l"
+            "their favorrrite flowerrr was 'Wild\l"
+            "Indigo.'")
         } elif (var(VAR_RESULT) == 2) {
             msgbox("A genius with an interrrest in building\n"
             "structurrres in challenging locations.\l" 
             "Had their eyes on transforming hostile\l" 
             "environments into life-sustaining ones\l" 
-            "forrr humans.")
+            "forrr humans. Worrrk-orrriented.")
         } elif (var(VAR_RESULT) == 3) {
             msgbox("PKMN experrrt and project organizerrr.\n"
             "Always ready to help, and easy to talk\l" 
             "to about anything. Optimistic, harrrd\l" 
             "worker. Loves giving people and things\l"
-            "nicknames. Some records suggest they had \l" 
+            "nicknames. Rrrecorrrds suggest they had\l" 
             "a history with the Biologist, but that's\l"
-            "just my opinion.")
+            "just my interrrprrretation.")
         }
     }
     release

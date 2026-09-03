@@ -298,8 +298,6 @@ script Planet01_03_HintText05 {
         clearflag(FLAG_REGISTERED_CRISTIN)
     } elif (var(VAR_CAPTAIN_DIALOGUE) == 2) {
         clearflag(FLAG_REGISTERED_CRISTIN)
-    } else  {
-        setflag(FLAG_REGISTERED_CRISTIN)
     }
     if (var(VAR_DAILY_SLOTS) == 0) {
         setvar(VAR_DAILY_SLOTS, 1)
@@ -320,8 +318,6 @@ script Planet01_03_HintText06 {
         clearflag(FLAG_REGISTERED_CRISTIN)
     } elif (var(VAR_CAPTAIN_DIALOGUE) == 2) {
         clearflag(FLAG_REGISTERED_CRISTIN)
-    } else  {
-        setflag(FLAG_REGISTERED_CRISTIN)
     }
     if (var(VAR_DAILY_SLOTS) == 0) {
         setvar(VAR_DAILY_SLOTS, 1)
@@ -340,8 +336,6 @@ script Planet01_03_HintText07 {
         clearflag(FLAG_REGISTERED_CRISTIN)
     } elif (var(VAR_CAPTAIN_DIALOGUE) == 2) {
         clearflag(FLAG_REGISTERED_CRISTIN)
-    } else  {
-        setflag(FLAG_REGISTERED_CRISTIN)
     }
     if (var(VAR_DAILY_SLOTS) == 0) {
         setvar(VAR_DAILY_SLOTS, 1)

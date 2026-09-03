@@ -43,90 +43,128 @@ Ditto_Cave_Bottom_DittoTrainer::
 	closemessage
 # 25 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	callnative ClearMugshot
-# 26 "data/maps/Ditto_Cave_Bottom/scripts.pory"
-	setvar VAR_0x8000, SPECIES_DITTO
 # 27 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	compare VAR_DAILY_SLOTS, 2
+	goto_if_ge Ditto_Cave_Bottom_DittoTrainer_2
+Ditto_Cave_Bottom_DittoTrainer_1:
+# 36 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	setvar VAR_0x8000, SPECIES_DITTO
+# 37 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	callnative RegisterSpeciesInDex
 	end
 
+Ditto_Cave_Bottom_DittoTrainer_2:
+# 28 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+# 29 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	callnative DrawMugshot
+# 30 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	msgbox Ditto_Cave_Bottom_DittoTrainer_Text_1
+# 31 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	waitmessage
+# 32 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	closemessage
+# 33 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	callnative ClearMugshot
+	goto Ditto_Cave_Bottom_DittoTrainer_1
+
 
 Ditto_Cave_Bottom_EventScript_Item01::
-# 40 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 50 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	lock
-# 41 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 51 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	giveitem ITEM_SUN_STONE, 1
-# 42 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 52 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	removeobject 2
-# 43 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 53 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	setflag FLAG_TEMP_1
-# 44 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 54 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	release
 	end
 
 
 Ditto_Cave_Bottom_EventScript_Item02::
-# 49 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 59 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	lock
-# 50 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 60 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	giveitem ITEM_SUN_STONE, 1
-# 51 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 61 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	removeobject 6
-# 52 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 62 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	setflag FLAG_TEMP_2
-# 53 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 63 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	release
 	end
 
 
 Ditto_Cave_Bottom_HintText01::
-# 58 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 68 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	lock
-# 59 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 69 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	msgbox Ditto_Cave_Bottom_HintText01_Text_0
-# 65 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 74 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	closemessage
+# 76 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	compare VAR_TEMP_2, 0
 	goto_if_eq Ditto_Cave_Bottom_HintText01_2
 Ditto_Cave_Bottom_HintText01_1:
-# 70 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 90 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	release
 	end
 
 Ditto_Cave_Bottom_HintText01_2:
-# 66 "data/maps/Ditto_Cave_Bottom/scripts.pory"
-	call voicedialogueABC
-# 67 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 77 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	compare VAR_DAILY_SLOTS, 2
+	goto_if_ge Ditto_Cave_Bottom_HintText01_5
+Ditto_Cave_Bottom_HintText01_4:
+# 87 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	setvar VAR_TEMP_2, 1
 	goto Ditto_Cave_Bottom_HintText01_1
 
+Ditto_Cave_Bottom_HintText01_5:
+# 78 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+# 79 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	callnative DrawMugshot
+# 80 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	msgbox Ditto_Cave_Bottom_HintText01_Text_1
+# 83 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	waitmessage
+# 84 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	closemessage
+# 85 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	callnative ClearMugshot
+	goto Ditto_Cave_Bottom_HintText01_4
+
 
 Ditto_Boi::
-# 75 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 95 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	lockall
-# 76 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 96 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	faceplayer
-# 77 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 97 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
-# 78 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 98 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	callnative DrawMugshot
-# 79 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 99 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	msgbox Ditto_Boi_Text_0
-# 80 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 100 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	waitmessage
-# 81 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 101 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	callnative ClearMugshot
-# 82 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 102 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	release
-# 83 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 103 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_DITTO
-# 84 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 104 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	callnative DrawMugshot
-# 85 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 105 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	msgbox Ditto_Boi_Text_1
-# 86 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 106 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	waitmessage
-# 87 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 107 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	callnative ClearMugshot
-# 88 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 108 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	release
 	end
 
@@ -135,26 +173,36 @@ Ditto_Cave_Bottom_DittoTrainer_Text_0:
 # 23 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	.string "It was just a ditto...$"
 
+Ditto_Cave_Bottom_DittoTrainer_Text_1:
+# 30 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<Oh... Well, yeah, I knew that.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+
 Ditto_Cave_Bottom_HintText01_Text_0:
-# 59 "data/maps/Ditto_Cave_Bottom/scripts.pory"
-	.string "Biologist: We discovered a strange\n"
+# 69 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	.string "Biologist: I discovered a strange\n"
 	.string "kind of life down here, with the ditto.\l"
-	.string "It has a strange power to it. We need to\l"
+	.string "It has a strange power to it. I need to\l"
 	.string "take it to our lab above the waterfall\l"
 	.string "and study it, immediately.$"
 
+Ditto_Cave_Bottom_HintText01_Text_1:
+# 80 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<This is where I found it...\n"
+	.string "Or, it found me. It hurts to see this\l"
+	.string "place again.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+
 Ditto_Boi_Text_0:
-# 79 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 99 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	.string "You put up a good fight, buddy.$"
 
 Ditto_Boi_Text_1:
-# 85 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 105 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	.string "DITTO!$"
 
 Ditto_Cave_Bottom_Ditto_Intro::
-# 31 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 41 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	.string "!!!$"
 
 Ditto_Cave_Bottom_Ditto_Outro::
-# 35 "data/maps/Ditto_Cave_Bottom/scripts.pory"
+# 45 "data/maps/Ditto_Cave_Bottom/scripts.pory"
 	.string "Ditto!$"

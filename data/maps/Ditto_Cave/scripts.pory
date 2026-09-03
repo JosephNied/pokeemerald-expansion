@@ -35,7 +35,18 @@ script Ditto_Test {
     msgbox("!!!\l"
     "Who was that?!\p"
     "And why did they look like me?!")
+    closemessage
     callnative(ClearMugshot)
     setflag(FLAG_RECEIVED_BELDUM)
+
+    if (var(VAR_DAILY_SLOTS) >= 2) {
+        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+        callnative(DrawMugshot)
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Your shadow-self.\n"
+        "Confront it, if you dare...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+	}
     releaseall
 }

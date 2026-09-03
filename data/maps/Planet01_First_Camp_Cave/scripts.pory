@@ -60,6 +60,15 @@ script Planet01_First_Camp_Cave_EventScript_Item02 {
 	end
 }
 
+script Planet01_First_Camp_Cave_EventScript_Item03 {
+	lock
+	giveitem(ITEM_TM_PROTECT, 1)
+	removeobject(5)
+	setflag(FLAG_DEFEATED_RUSTBORO_GYM)
+	release
+	end
+}
+
 script Planet01_First_Camp_Cave_HintText01 {
     lock
     msgbox("Engineer: We made a research base\n"
@@ -201,8 +210,8 @@ script voicedialogueABC {
         "<I decided. You need to come to the \l"
         "primary facility. I don't know how to \l"
         "get you up the waterfall, but when you\l"
-        "get up it, I can help you from there. I \l"
-        "regret being a coward about this. \l"
+        "get there, I can guide you. I regret\l"
+        "being a coward about this.\p"
         "Please don't give up.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         callnative(ClearMugshot)
@@ -210,7 +219,7 @@ script voicedialogueABC {
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
         callnative(DrawMugshot)
-        msgbox("Wow, that's a change in tune. Are you\n
+        msgbox("Wow, that's a change in tune! Are you\n
         ready then to tell me who you are?")
         waitmessage
         callnative(ClearMugshot)
@@ -241,9 +250,10 @@ script voicedialogueABC {
         callnative(ClearMugshot)
         release
 
-        setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
         callnative(DrawMugshot)
-        msgbox("Yeah? And what are you up to then?")
+        msgbox("I have to do that?! So what are you\n"
+        "up to then?")
         waitmessage
         callnative(ClearMugshot)
 
@@ -264,8 +274,7 @@ script voicedialogueABC {
         callnative(DrawMugshot)
         msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I'll explain later... my only advice...\n"
         "The north and south of this planet, we\l"
-        "never fully explored. Look there.\l"
-        "Good luck.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        "never fully explored. Look there.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         callnative(ClearMugshot)
         release
@@ -287,32 +296,59 @@ script voicedialogueABC {
         "you walk slowly, running with likely\l"
         "alert them.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
+        closemessage
         callnative(ClearMugshot)
-        release
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
         callnative(DrawMugshot)
         msgbox("Wow, really? Are you, like ok?")
         waitmessage
+        closemessage
         callnative(ClearMugshot)
 
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Am I... Ok?\n"
-        "Haven't heard anybody say that in\l"
-        "quite a while...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Am I... Ok?\p"
+        "You're starting to sounds like- Well,\n"
+        "whatever.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
+        closemessage
         callnative(ClearMugshot)
-        release
 
-        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
         callnative(DrawMugshot)
-        msgbox("Hello?\p"
-        "...Yeah, they are not ok.")
+        msgbox("...We're partners now. You're the last\n"
+        "person I might ever talk to. I'd prefer\l"
+        "if we could be friends.")
         waitmessage
-
+        closemessage
         callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+        callnative(DrawMugshot)
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Now you really sound like them. I can't\n"
+        "be much of a 'friend.'>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+        callnative(DrawMugshot)
+        msgbox("Pssh, ok, 'Shadow the Edgehog.'")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+        callnative(DrawMugshot)
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Ugghhh>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+
         setvar(VAR_DAILY_SLOTS, 6)
+        release
     }
     elif(var(VAR_DAILY_SLOTS) == 5) { 
 
@@ -330,5 +366,8 @@ script voicedialogueABC {
         msgbox("...Yeah. Got it.")
         waitmessage
         callnative(ClearMugshot)
+    }
+    else {
+        end
     }
 }

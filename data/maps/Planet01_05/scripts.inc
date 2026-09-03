@@ -176,12 +176,22 @@ Color_Puzzle_7:
 	compare VAR_RESULT, 1
 	goto_if_eq Color_Puzzle_11
 Color_Puzzle_10:
-# 123 "data/maps/Planet01_05/scripts.pory"
+# 122 "data/maps/Planet01_05/scripts.pory"
 	compare VAR_DAILY_ROULETTE, 4
 	goto_if_eq Color_Puzzle_13
+# 129 "data/maps/Planet01_05/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
 # 130 "data/maps/Planet01_05/scripts.pory"
-	msgbox Color_Puzzle_Text_5
+	callnative DrawMugshot
 # 131 "data/maps/Planet01_05/scripts.pory"
+	msgbox Color_Puzzle_Text_5
+# 134 "data/maps/Planet01_05/scripts.pory"
+	waitmessage
+# 135 "data/maps/Planet01_05/scripts.pory"
+	closemessage
+# 136 "data/maps/Planet01_05/scripts.pory"
+	callnative ClearMugshot
+# 137 "data/maps/Planet01_05/scripts.pory"
 	release
 	end
 
@@ -206,11 +216,11 @@ Color_Puzzle_11:
 	goto Color_Puzzle_10
 
 Color_Puzzle_13:
-# 124 "data/maps/Planet01_05/scripts.pory"
+# 123 "data/maps/Planet01_05/scripts.pory"
 	warp MAP_PLANET01_FINAL_LAB_CORE, 1, 0, 0
-# 125 "data/maps/Planet01_05/scripts.pory"
+# 124 "data/maps/Planet01_05/scripts.pory"
 	waitstate
-# 126 "data/maps/Planet01_05/scripts.pory"
+# 125 "data/maps/Planet01_05/scripts.pory"
 	release
 	end
 
@@ -227,7 +237,7 @@ Planet01_05_DusknoirEncounter_Text_1:
 
 Planet01_05_HintText01_Text_0:
 # 85 "data/maps/Planet01_05/scripts.pory"
-	.string "Scientist: The trees here are giving off\n"
+	.string "Engineer: The trees here are giving off\n"
 	.string "a mysterious glow... The mists here\l"
 	.string "remind me of the anomalous cave we\l"
 	.string "discovered earlier.\p"
@@ -258,5 +268,7 @@ Color_Puzzle_Text_4:
 	.string "Drawn into another color...$"
 
 Color_Puzzle_Text_5:
-# 130 "data/maps/Planet01_05/scripts.pory"
-	.string "You snap out of it.$"
+# 131 "data/maps/Planet01_05/scripts.pory"
+	.string "Snap out of it!\n"
+	.string "I should use my teleporter to get back\l"
+	.string "to the ship already.$"

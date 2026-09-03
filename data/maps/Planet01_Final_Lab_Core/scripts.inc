@@ -138,57 +138,61 @@ Planet01_Final_Lab_Core_BeheeWalk::
 	waitmovement 0
 # 89 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	msgbox Planet01_Final_Lab_Core_BeheeWalk_Text_1
-# 101 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 96 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	waitmessage
-# 102 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 97 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	closemessage
-# 103 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 98 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1
-# 104 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 99 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	waitmovement 0
-# 105 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 100 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	msgbox Planet01_Final_Lab_Core_BeheeWalk_Text_2
-# 112 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 107 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	waitmessage
-# 113 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 108 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	closemessage
-# 114 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 109 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1
-# 115 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 110 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	waitmovement 0
-# 116 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 111 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	msgbox Planet01_Final_Lab_Core_BeheeWalk_Text_3
-# 123 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 117 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Behee2
-# 124 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 118 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	waitmovement 0
-# 125 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 119 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	waitse
-# 126 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 120 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	playmoncry SPECIES_BEHEEYEM, CRY_MODE_ENCOUNTER
-# 127 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 121 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	waitmoncry
-# 128 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 122 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	msgbox Planet01_Final_Lab_Core_BeheeWalk_Text_4
-# 133 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 131 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	setvar VAR_0x8000, SPECIES_BEHEEYEM
-# 134 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 132 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	callnative RegisterSpeciesInDex
-# 135 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 133 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	warp MAP_PLANET01_01, 1, 31, 11
-# 136 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 134 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	waitstate
-# 137 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 135 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	release
 	end
 
 
-# 141 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 139 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 Movement_Player_Behee1:
-# 142 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 140 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	face_right
-# 143 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 141 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	delay_16
+# 142 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	walk_right
+# 143 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	walk_right
 # 144 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
 # 145 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
@@ -206,21 +210,21 @@ Movement_Player_Behee1:
 # 151 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
 # 152 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	walk_right
-# 153 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	walk_right
-# 154 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	face_up
-# 155 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 153 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	delay_16
 	step_end
 
-# 158 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 156 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 Movement_Player_Behee2:
-# 159 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 157 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	face_right
-# 160 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 158 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	delay_16
+# 159 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	walk_right
+# 160 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	walk_right
 # 161 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
 # 162 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
@@ -236,10 +240,6 @@ Movement_Player_Behee2:
 # 167 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
 # 168 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	walk_right
-# 169 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	walk_right
-# 170 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	face_up
 	step_end
 
@@ -251,44 +251,42 @@ Planet01_Final_Lab_Core_BeheeWalk_Text_1:
 # 89 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	.string "M-my parents?\n"
 	.string "...\p"
-	.string "I'm getting visions of the times\n"
-	.string "they would get my siblings and I ready\l"
-	.string "ready for school. Make us dinner. Take\l"
-	.string "care of me when I was sick. On and on...\p"
-	.string "So many memories. They really did love \n"
-	.string "me, huh.\p"
-	.string "I haven't seen them in so long. I know\n"
-	.string "they'd be disappointed if they knew all\l"
-	.string "the choices I've made now. But...\p"
-	.string "Maybe I'm wrong to be so afraid of that.$"
+	.string "I love them, and they love me. But I\n"
+	.string "know they'd be disappointed that I no\l"
+	.string "longer believe the things they do, and\l"
+	.string "in the choices I've made. It's easier...\l"
+	.string "To just avoid them...$"
 
 Planet01_Final_Lab_Core_BeheeWalk_Text_2:
-# 105 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	.string "My friends. I'm getting visions of them\n"
-	.string "inviting me to hang out with them,\l"
-	.string "encouraging me, getting me presents,\l"
-	.string "hugging me. They always seemed to \l"
-	.string "express how they feel and who they are\l"
-	.string "so easily.\p"
-	.string "Why couldn't I ever be like that?$"
+# 100 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	.string "My friends. So many memories of them...\n"
+	.string "They always seem to express their\l"
+	.string "feelings and who they are so easily, and\l"
+	.string "they accept everybody as they are.\l"
+	.string "Even me.\p"
+	.string "I feel so selfish and jealous.\n"
+	.string "Why couldn't I ever be that way?$"
 
 Planet01_Final_Lab_Core_BeheeWalk_Text_3:
-# 116 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	.string "...Somehow you always know what I need.\n"
-	.string "At my darkest moments, you were there\l"
-	.string "to lift me up. You told me not to take\l"
-	.string "this job.\p"
-	.string "You were right again. All my excuses.\n"
-	.string "Was I really just afraid of us getting\l"
-	.string "so close, when I chose to leave?$"
+# 111 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	.string "...You asked me if I loved myself. When I\n"
+	.string "laughed and said Of course not!, you \l"
+	.string "told me that it broke your heart, \l"
+	.string "because you loved me.\p"
+	.string "...I resolved to love myself. But, even \n"
+	.string "now I'm not sure I know how to do it.$"
 
 Planet01_Final_Lab_Core_BeheeWalk_Text_4:
-# 128 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	.string "It'll never be the same. I may\n"
-	.string "never get to say how I feel to any of\l"
-	.string "these people, and it's all my fault. Is\l"
-	.string "that...\p"
-	.string "What you wanted me to learn?$"
+# 122 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	.string "And now I may never get the chance. I\n"
+	.string "never appreciated just how pathetic it\l"
+	.string "is that even when I'm surrounded by\l"
+	.string "people who love and support me, I\l"
+	.string "choose to make myself miserable.\p"
+	.string "And I may never get fix any of this\n"
+	.string "broken shit, because I chose to\l"
+	.string "distract myself and escape instead.\l"
+	.string "Is that... What you wanted to show me?$"
 
 DeoxysBattle_Intro::
 # 74 "data/maps/Planet01_Final_Lab_Core/scripts.pory"

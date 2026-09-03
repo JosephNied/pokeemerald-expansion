@@ -88,48 +88,46 @@ script Planet01_Final_Lab_Core_BeheeWalk {
     waitmovement(0)
 	msgbox("M-my parents?\n"
 	"...\p" 
-	"I'm getting visions of the times\n" 
-	"they would get my siblings and I ready\l"
-	"ready for school. Make us dinner. Take\l"
-	"care of me when I was sick. On and on...\p"
-	"So many memories. They really did love \n"
-	"me, huh.\p"
-	"I haven't seen them in so long. I know\n"
-	"they'd be disappointed if they knew all\l"
-	"the choices I've made now. But...\p"
-	"Maybe I'm wrong to be so afraid of that.")
+	"I love them, and they love me. But I\n" 
+	"know they'd be disappointed that I no\l"
+	"longer believe the things they do, and\l"
+	"in the choices I've made. It's easier...\l"
+	"To just avoid them...")
 	waitmessage
 	closemessage
 	applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
     waitmovement(0)
-	msgbox("My friends. I'm getting visions of them\n"
-	"inviting me to hang out with them,\l"
-	"encouraging me, getting me presents,\l"
-	"hugging me. They always seemed to \l"
-	"express how they feel and who they are\l"
-	"so easily.\p"
-	"Why couldn't I ever be like that?")
+	msgbox("My friends. So many memories of them...\n"
+	"They always seem to express their\l"
+	"feelings and who they are so easily, and\l"
+	"they accept everybody as they are.\l"
+	"Even me.\p"
+	"I feel so selfish and jealous.\n"
+	"Why couldn't I ever be that way?")
 	waitmessage
 	closemessage
 	applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
     waitmovement(0)
-	msgbox("...Somehow you always know what I need.\n"
-	"At my darkest moments, you were there\l" 
-	"to lift me up. You told me not to take\l" 
-	"this job.\p"
-	"You were right again. All my excuses.\n"
-	"Was I really just afraid of us getting\l"
-	"so close, when I chose to leave?")
+	msgbox("...You asked me if I loved myself. When I\n"
+	"laughed and said Of course not!, you \l" 
+	"told me that it broke your heart, \l" 
+	"because you loved me.\p"
+	"...I resolved to love myself. But, even \n"
+	"now I'm not sure I know how to do it.")
 	applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee2)
     waitmovement(0)
 	waitse()
     playmoncry(SPECIES_BEHEEYEM, CRY_MODE_ENCOUNTER)
     waitmoncry()
-	msgbox("It'll never be the same. I may\n"
-	"never get to say how I feel to any of\l"
-	"these people, and it's all my fault. Is\l"
-	"that...\p"
-	"What you wanted me to learn?")
+	msgbox("And now I may never get the chance. I\n"
+	"never appreciated just how pathetic it\l"
+	"is that even when I'm surrounded by\l"
+	"people who love and support me, I\l"
+	"choose to make myself miserable.\p"
+	"And I may never get fix any of this\n"
+	"broken shit, because I chose to\l"
+	"distract myself and escape instead.\l"
+	"Is that... What you wanted to show me?")
 	setvar(VAR_0x8000, SPECIES_BEHEEYEM)
     callnative(RegisterSpeciesInDex)
 	warp(MAP_PLANET01_01, 1, 31, 11)
