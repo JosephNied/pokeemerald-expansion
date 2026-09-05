@@ -138,7 +138,7 @@ Planet01_01_EventScript_Item03::
 # 81 "data/maps/Planet01_01/scripts.pory"
 	lock
 # 82 "data/maps/Planet01_01/scripts.pory"
-	giveitem ITEM_COMET_SHARD, 1
+	giveitem ITEM_RARE_CANDY, 5
 # 83 "data/maps/Planet01_01/scripts.pory"
 	setflag FLAG_UNUSED_0x4A8
 # 84 "data/maps/Planet01_01/scripts.pory"

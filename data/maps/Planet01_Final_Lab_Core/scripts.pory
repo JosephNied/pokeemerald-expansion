@@ -81,86 +81,165 @@ text DeoxysBattle_Outro {
 
 script Planet01_Final_Lab_Core_BeheeWalk {
 	lock
-	
-	setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
-    callnative(DrawMugshot)
-    msgbox("Where am I?")
-    waitmessage
-	closemessage
-    callnative(ClearMugshot)
 
-	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<A Beheeyem... It's tapped into my mind \n"
-	"and is showing you my memories...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-	waitmessage
-	closemessage
+	if ((var(VAR_DAILY_SLOTS) == 0) || (var(VAR_DAILY_SLOTS) == 1))  {
+		setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+		callnative(DrawMugshot)
+		msgbox("Where am I?")
+		waitmessage
+		closemessage
+		callnative(ClearMugshot)
 
-	waitmessage
-	closemessage
-	applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
-    waitmovement(0)
-	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<This is the Operations Leader and I,\n" 
-	"many years ago.\p"
-	"When we first met, I was a fresh, young\n"
-	"scientist; timid and suffering from \l" 
-	"imposter syndrome. Always worried\l" 
-	"about proving myself, always seeking\l"
-	"validation from others.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-	waitmessage
-	closemessage
-	applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
-    waitmovement(0)
-	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<For a long time, I was jealous of their \n"
-	"confidence. Success or failure, they\l"
-	"things always seemed to work out for\l"
-	"them. But they believed in me too, and\l"
-	"as we worked together, their praise and\l"
-	"optimism became infectious.\p"
-	"As we got closer, they made me begin to\n"
-	"believe in myself.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-	waitmessage
-	closemessage
-	applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
-    waitmovement(0)
-	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<We became partners in everything, even\n"
-	"work. When we were both assigned to\l" 
-	"project EOD, I was overjoyed. The past\l" 
-	"few years studying an incredible planet\l"
-	"with them and building our research\l"
-	"facility together was everything I\l" 
-	"could have asked for. I loved them.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-	waitmessage
-	closemessage
+		applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
+		waitmovement(0)
 
-	setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
-    callnative(DrawMugshot)
-    msgbox("That's very sweet. Sound like you guys\n"
-	"were a power-couple!")
-    waitmessage
-	closemessage
-    callnative(ClearMugshot)
+		setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+		callnative(DrawMugshot)
+		msgbox("Who are these people? They look young.")
+		waitmessage
+		closemessage
+		callnative(ClearMugshot)
 
-	applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
-	waitmovement(0)
-	
-    waitmoncry()
-	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Everything changed after I discovered\n"
-	"the Deoxys cell. My experiments were \l"
-	"disastrous; it infected me, and \l"
-	"triggered Pal 9000's Contingency \l"
-	"Protocol, which teleported Ops back to \l"
-	"our ship and sent them back home on \l"
-	"auto-pilot.\p"
-	"All that we had, thrown so easily\n"
-	"away, because I got so greedy.\l"
-	"...\p"
-	"So now you know the truth.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
+		waitmovement(0)
 
-	applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee2)
-    waitmovement(0)
-	waitse()
-    playmoncry(SPECIES_BEHEEYEM, CRY_MODE_ENCOUNTER)
-	setvar(VAR_0x8000, SPECIES_BEHEEYEM)
-    callnative(RegisterSpeciesInDex)
+		setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+		callnative(DrawMugshot)
+		msgbox("...Well, now they have lab coats on.\n"
+		"Look a bit older too.")
+		waitmessage
+		closemessage
+		callnative(ClearMugshot)
+
+		applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
+		waitmovement(0)
+
+		setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+		callnative(DrawMugshot)
+		msgbox("Now they're in space suits?!")
+		waitmessage
+		closemessage
+		callnative(ClearMugshot)
+
+		applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
+		waitmovement(0)
+		
+		setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+		callnative(DrawMugshot)
+		waitmoncry()
+		msgbox("Uggh!!!\n"
+		"It's a weird, hideous mass of\l"
+		"tentacles?!")
+		waitmessage
+		closemessage
+		callnative(ClearMugshot)
+
+		applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee2)
+		waitmovement(0)
+
+		setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+		callnative(DrawMugshot)
+		waitmoncry()
+		msgbox("Beheeyem... You must be trying to show\n"
+		"me something. I get the feeling I\l"
+		"should come back here later.")
+		waitmessage
+		closemessage
+		callnative(ClearMugshot)
+
+		waitse()
+		playmoncry(SPECIES_BEHEEYEM, CRY_MODE_ENCOUNTER)
+		setvar(VAR_0x8000, SPECIES_BEHEEYEM)
+		callnative(RegisterSpeciesInDex)
+	} 
+	else {
+		setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+		callnative(DrawMugshot)
+		msgbox("Where am I?")
+		waitmessage
+		closemessage
+		callnative(ClearMugshot)
+
+		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<This is a psychic Beheeyem's doing...\n"
+		"In my present state, my consciousness\l"
+		"is spread quite thin over the planet.\l"
+		"They must be exploring it; these are my\l"
+		"memories...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		waitmessage
+		closemessage
+
+		applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
+		waitmovement(0)
+
+		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<This is the Operations Leader and I,\n" 
+		"many years ago.\p"
+		"When we first met, I was a fresh, young\n"
+		"scientist; timid and suffering from \l" 
+		"imposter syndrome. Always worried\l" 
+		"about proving myself, always seeking\l"
+		"validation from others.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		waitmessage
+		closemessage
+
+		applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
+		waitmovement(0)
+
+		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<For a long time, I was jealous of their \n"
+		"confidence. Success or failure, they\l"
+		"things always seemed to work out for\l"
+		"them. But they believed in me too, and\l"
+		"as we worked together, their praise and\l"
+		"optimism became infectious.\p"
+		"As we got closer, they made me begin to\n"
+		"believe in myself.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		waitmessage
+		closemessage
+
+		applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
+		waitmovement(0)
+
+		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<We became partners in everything, even\n"
+		"work. When we were both assigned to\l" 
+		"project EOD, I was overjoyed. The past\l" 
+		"few years studying an incredible planet\l"
+		"with them and building our research\l"
+		"facility together was everything I\l" 
+		"could have asked for. I loved them.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		waitmessage
+		closemessage
+
+		setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+		callnative(DrawMugshot)
+		msgbox("That's very sweet. Sound like you guys\n"
+		"were a power-couple!")
+		waitmessage
+		closemessage
+		callnative(ClearMugshot)
+
+		applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
+		waitmovement(0)
+		
+		waitmoncry()
+		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Everything changed after I discovered\n"
+		"the Deoxys cell. My experiments were \l"
+		"disastrous; it infected me, and \l"
+		"triggered Pal 9000's Contingency \l"
+		"Protocol, which teleported Ops back to \l"
+		"our ship and sent them back home on \l"
+		"auto-pilot.\p"
+		"All that we had, thrown so easily\n"
+		"away, because I got so greedy.\l"
+		"...\p"
+		"So now you know the truth.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+
+		applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee2)
+		waitmovement(0)
+
+		waitse()
+		playmoncry(SPECIES_BEHEEYEM, CRY_MODE_ENCOUNTER)
+		setvar(VAR_0x8000, SPECIES_BEHEEYEM)
+		callnative(RegisterSpeciesInDex)
+	}
 	warp(MAP_PLANET01_01, 1, 31, 11)
     waitstate
     release

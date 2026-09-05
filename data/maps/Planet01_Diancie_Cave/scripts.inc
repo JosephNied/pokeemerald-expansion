@@ -172,61 +172,53 @@ Planet01_Diancie_Cave_DiancieEncounter::
 	setflag FLAG_UNUSED_0x045
 # 115 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	msgbox Planet01_Diancie_Cave_DiancieEncounter_Text_1
-# 117 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	waitmessage
-# 118 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	closemessage
 # 119 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	giveitem ITEM_COMET_SHARD, 1
+	waitmessage
 # 120 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	msgbox Planet01_Diancie_Cave_DiancieEncounter_Text_2
+	closemessage
 # 122 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	waitmessage
-# 123 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	closemessage
-# 125 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	waitse
-# 126 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 123 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	playmoncry SPECIES_MAGNEZONE, CRY_MODE_ENCOUNTER
-# 127 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 124 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	waitmoncry
-# 129 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 126 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	setvar VAR_0x8004, 1
-# 130 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 127 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	setvar VAR_0x8005, 1
-# 131 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 128 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	setvar VAR_0x8006, 8
-# 132 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 129 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	setvar VAR_0x8007, 5
-# 133 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 130 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	special ShakeCamera
-# 135 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 132 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	special RemoveMagnezoneForMagnezoneM
-# 136 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 133 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	givemon SPECIES_ZEKROM, 50, ITEM_MAGNET
-# 138 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 135 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
-# 139 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 136 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	callnative DrawMugshot
-# 141 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	msgbox Planet01_Diancie_Cave_DiancieEncounter_Text_3
-# 148 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 138 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+	msgbox Planet01_Diancie_Cave_DiancieEncounter_Text_2
+# 145 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	waitmessage
-# 149 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 146 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	callnative ClearMugshot
-# 150 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 147 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	closemessage
-# 152 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 149 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	setvar VAR_0x8000, SPECIES_DIANCIE
-# 153 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 150 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	callnative RegisterSpeciesInDex
-# 154 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 151 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	releaseall
-# 155 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 152 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	end
-# 157 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 154 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 PlayerLost_Diancie:
-# 158 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+# 155 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	releaseall
 	end
 
@@ -253,15 +245,12 @@ Planet01_Diancie_Cave_DiancieEncounter_Text_0:
 Planet01_Diancie_Cave_DiancieEncounter_Text_1:
 # 115 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	.string "Diancie was pleased with the battle!\n"
-	.string "It left a gift!$"
-
-Planet01_Diancie_Cave_DiancieEncounter_Text_2:
-# 120 "data/maps/Planet01_Diancie_Cave/scripts.pory"
-	.string "Also, some kind of crystal? It looks almost\n"
+	.string "It left a gift!\p"
+	.string "Some kind of crystal? It looks almost\n"
 	.string "like...!$"
 
-Planet01_Diancie_Cave_DiancieEncounter_Text_3:
-# 141 "data/maps/Planet01_Diancie_Cave/scripts.pory"
+Planet01_Diancie_Cave_DiancieEncounter_Text_2:
+# 138 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	.string "Magnezone! You, you-\p"
 	.string "You evolved?!?!?!?!\p"
 	.string "This is incredible! This must be\n"

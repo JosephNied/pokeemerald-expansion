@@ -79,7 +79,7 @@ script Planet01_01_EventScript_Item02 {
 
 script Planet01_01_EventScript_Item03 {
     lock
-    giveitem(ITEM_COMET_SHARD, 1)
+    giveitem(ITEM_RARE_CANDY, 5)
     setflag(FLAG_UNUSED_0x4A8)
     removeobject(18)
     release

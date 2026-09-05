@@ -192,9 +192,8 @@ script Jirachi_goes_to_ship {
     
     setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
-    msgbox("Jirachi!!!\n"
-    "...\p"
-    "...Uh, Can I, go past?")
+    msgbox("Jirachi again! It's good to see you!\n"
+    "Come to help us out again?")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -202,35 +201,35 @@ script Jirachi_goes_to_ship {
     setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
     msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I can read its mind... It wont let you\n"
-    "past it unless you bring it three Comet\l"
-    "Shards... It think it'll help you.\p"
-    "Ha! There was never anybody there to\n"
-    "protect me while I was suffering here.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    "past it unless you bring it a Comet\l"
+    "Shard. I think I know why...\p"
+    "Ha! If we're going to finish this, we\n"
+    "might as well go all the way, right?>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
 
-    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
-    callnative(DrawMugshot)
-    msgbox("Really? From what I read, it seemed like\n"
-    "that Ops person cared about you a lot.\l"
-    "I'm pretty sure they were, like, really\l"
-    "into you actually.")
-    waitmessage
-    closemessage
-    callnative(ClearMugshot)
-
-    setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
-    callnative(DrawMugshot)
-    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<...Anyway.\n"
-    "I guess you have to do what it says, I \l"
-    "can't do anything about it.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-    waitmessage
-    closemessage
-    callnative(ClearMugshot)
-
-    checkitem(ITEM_COMET_SHARD, 3)
+    checkitem(ITEM_COMET_SHARD, 1)
     if (var(VAR_RESULT) == FALSE) {
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+        callnative(DrawMugshot)
+        msgbox("I don't get it. What's a Comet Shard, and\n"
+        "where can we get one?")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+        callnative(DrawMugshot)
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<The dark pool... Go South to the channel \n"
+        "below the Shoreline, then go West.\l"
+        "There's a dark place over there... It's\l" 
+        "where my trouble began. We'll find one\l" 
+        "there.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
         applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
         waitmovement(OBJ_EVENT_ID_PLAYER)
         release
@@ -239,13 +238,14 @@ script Jirachi_goes_to_ship {
         setvar(VAR_TEMP_F, 1)
         setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
         callnative(DrawMugshot)
-        msgbox("Hey... I have three Comet Shards now!")
+        msgbox("Well, I have the Comet Shard now!")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
         checkitem(ITEM_BEAST_BALL, 1)
         if (var(VAR_RESULT) == FALSE) {
+            playmoncry(SPECIES_JIRACHI, CRY_MODE_ENCOUNTER)
             setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
             callnative(DrawMugshot)
             msgbox("You want to join my team?!\p"
@@ -268,9 +268,21 @@ script Jirachi_goes_to_ship {
             removeobject(25)
             fadeScreen(FADE_FROM_BLACK)
             msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Jirachi went to your ship!")
+            waitmessage
+            closemessage
+
+            setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+            callnative(DrawMugshot)
+            msgbox("Looks like Jirachi will always return to\n"
+            "my ship when released!")
+            waitmessage
+            closemessage
+            callnative(ClearMugshot)
+
             releaseall
             end
         } else {
+            playmoncry(SPECIES_JIRACHI, CRY_MODE_ENCOUNTER)
             setvar(VAR_0x8000, MUGSHOT_JIRACHI_HAPPY)
             callnative(DrawMugshot)
             msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Jirachi!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
@@ -294,10 +306,19 @@ script Jirachi_goes_to_ship {
             fadeScreen(FADE_FROM_BLACK)
 
             givemon(SPECIES_JIRACHI, 70)
+
+            setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+            callnative(DrawMugshot)
+            msgbox("Welcome aboard!\p"
+            "Looks like Jirachi will always return to\l"
+            "my ship when released!")
+            waitmessage
+            closemessage
+            callnative(ClearMugshot)
         }
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<That's over with. Let's get on with it.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Glad that's over with. Let's go.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         closemessage
         callnative(ClearMugshot)
