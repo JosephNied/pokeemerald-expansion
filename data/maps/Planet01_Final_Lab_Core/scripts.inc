@@ -126,167 +126,208 @@ Movement_Deoxys2:
 Planet01_Final_Lab_Core_BeheeWalk::
 # 83 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	lock
-# 84 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	msgbox Planet01_Final_Lab_Core_BeheeWalk_Text_0
 # 85 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	waitmessage
+	setvar VAR_0x8000, MUGSHOT_PLAYER_CONFUSED
 # 86 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	closemessage
+	callnative DrawMugshot
 # 87 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1
+	msgbox Planet01_Final_Lab_Core_BeheeWalk_Text_0
 # 88 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	waitmovement 0
+	waitmessage
 # 89 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	closemessage
+# 90 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	callnative ClearMugshot
+# 92 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	msgbox Planet01_Final_Lab_Core_BeheeWalk_Text_1
-# 96 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 94 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	waitmessage
+# 95 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	closemessage
 # 97 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	closemessage
-# 98 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1
-# 99 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	waitmovement 0
-# 100 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	msgbox Planet01_Final_Lab_Core_BeheeWalk_Text_2
-# 107 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	waitmessage
-# 108 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 98 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	closemessage
-# 109 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 99 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1
+# 100 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	waitmovement 0
+# 101 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	msgbox Planet01_Final_Lab_Core_BeheeWalk_Text_2
+# 108 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	waitmessage
+# 109 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	closemessage
 # 110 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1
 # 111 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	msgbox Planet01_Final_Lab_Core_BeheeWalk_Text_3
-# 117 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Behee2
-# 118 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	waitmovement 0
-# 119 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	waitse
+# 112 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	msgbox Planet01_Final_Lab_Core_BeheeWalk_Text_3
 # 120 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	playmoncry SPECIES_BEHEEYEM, CRY_MODE_ENCOUNTER
+	waitmessage
 # 121 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	waitmoncry
+	closemessage
 # 122 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1
+# 123 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	waitmovement 0
+# 124 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	msgbox Planet01_Final_Lab_Core_BeheeWalk_Text_4
 # 131 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	setvar VAR_0x8000, SPECIES_BEHEEYEM
+	waitmessage
 # 132 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	callnative RegisterSpeciesInDex
-# 133 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	warp MAP_PLANET01_01, 1, 31, 11
+	closemessage
 # 134 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	waitstate
+	setvar VAR_0x8000, MUGSHOT_PLAYER_DETERMINED
 # 135 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	callnative DrawMugshot
+# 136 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	msgbox Planet01_Final_Lab_Core_BeheeWalk_Text_5
+# 138 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	waitmessage
+# 139 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	closemessage
+# 140 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	callnative ClearMugshot
+# 142 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1
+# 143 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	waitmovement 0
+# 145 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	waitmoncry
+# 146 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	msgbox Planet01_Final_Lab_Core_BeheeWalk_Text_6
+# 157 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Behee2
+# 158 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	waitmovement 0
+# 159 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	waitse
+# 160 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	playmoncry SPECIES_BEHEEYEM, CRY_MODE_ENCOUNTER
+# 161 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	setvar VAR_0x8000, SPECIES_BEHEEYEM
+# 162 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 163 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	warp MAP_PLANET01_01, 1, 31, 11
+# 164 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	waitstate
+# 165 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	release
 	end
 
 
-# 139 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 169 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 Movement_Player_Behee1:
-# 140 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 170 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	face_right
-# 141 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 171 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	delay_16
-# 142 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 172 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
-# 143 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 173 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
-# 144 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 174 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
-# 145 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 175 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
-# 146 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 176 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
-# 147 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 177 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
-# 148 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 178 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
-# 149 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 179 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
-# 150 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	walk_right
-# 151 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	walk_right
-# 152 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 180 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	face_up
-# 153 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 181 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	delay_16
 	step_end
 
-# 156 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 184 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 Movement_Player_Behee2:
-# 157 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 185 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	face_right
-# 158 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 186 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	delay_16
-# 159 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 187 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
-# 160 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 188 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
-# 161 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 189 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
-# 162 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 190 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
-# 163 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 191 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
-# 164 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 192 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
-# 165 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 193 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
-# 166 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	walk_right
-# 167 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	walk_right
-# 168 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 194 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	face_up
 	step_end
 
 Planet01_Final_Lab_Core_BeheeWalk_Text_0:
-# 84 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	.string "...Where am I?$"
+# 87 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	.string "Where am I?$"
 
 Planet01_Final_Lab_Core_BeheeWalk_Text_1:
-# 89 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	.string "M-my parents?\n"
-	.string "...\p"
-	.string "I love them, and they love me. But I\n"
-	.string "know they'd be disappointed that I no\l"
-	.string "longer believe the things they do, and\l"
-	.string "in the choices I've made. It's easier...\l"
-	.string "To just avoid them...$"
+# 92 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<A Beheeyem... It's tapped into my mind \n"
+	.string "and is showing you my memories...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Planet01_Final_Lab_Core_BeheeWalk_Text_2:
-# 100 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	.string "My friends. So many memories of them...\n"
-	.string "They always seem to express their\l"
-	.string "feelings and who they are so easily, and\l"
-	.string "they accept everybody as they are.\l"
-	.string "Even me.\p"
-	.string "I feel so selfish and jealous.\n"
-	.string "Why couldn't I ever be that way?$"
+# 101 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<This is the Operations Leader and I,\n"
+	.string "many years ago.\p"
+	.string "When we first met, I was a fresh, young\n"
+	.string "scientist; timid and suffering from \l"
+	.string "imposter syndrome. Always worried\l"
+	.string "about proving myself, always seeking\l"
+	.string "validation from others.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Planet01_Final_Lab_Core_BeheeWalk_Text_3:
-# 111 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	.string "...You asked me if I loved myself. When I\n"
-	.string "laughed and said Of course not!, you \l"
-	.string "told me that it broke your heart, \l"
-	.string "because you loved me.\p"
-	.string "...I resolved to love myself. But, even \n"
-	.string "now I'm not sure I know how to do it.$"
+# 112 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<For a long time, I was jealous of their \n"
+	.string "confidence. Success or failure, they\l"
+	.string "things always seemed to work out for\l"
+	.string "them. But they believed in me too, and\l"
+	.string "as we worked together, their praise and\l"
+	.string "optimism became infectious.\p"
+	.string "As we got closer, they made me begin to\l"
+	.string "believe in myself.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Planet01_Final_Lab_Core_BeheeWalk_Text_4:
-# 122 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	.string "And now I may never get the chance. I\n"
-	.string "never appreciated just how pathetic it\l"
-	.string "is that even when I'm surrounded by\l"
-	.string "people who love and support me, I\l"
-	.string "choose to make myself miserable.\p"
-	.string "And I may never get fix any of this\n"
-	.string "broken shit, because I chose to\l"
-	.string "distract myself and escape instead.\l"
-	.string "Is that... What you wanted to show me?$"
+# 124 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<We became partners in everything, even\n"
+	.string "work. When we were both assigned to\l"
+	.string "project EOD, I was overjoyed. The past\l"
+	.string "few years studying an incredible planet\l"
+	.string "with them and building our research\l"
+	.string "facility together was everything I\l"
+	.string "could have asked for. I loved them.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+
+Planet01_Final_Lab_Core_BeheeWalk_Text_5:
+# 136 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	.string "That's very sweet. Sound like you guys\n"
+	.string "were a power-couple!$"
+
+Planet01_Final_Lab_Core_BeheeWalk_Text_6:
+# 146 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<Everything changed after I discovered\n"
+	.string "the Deoxys cell. My experiments were \l"
+	.string "disastrous; it infected me, and \l"
+	.string "triggered Pal 9000's Contingency \l"
+	.string "Protocol, which teleported Ops back to \l"
+	.string "our ship and sent them back home on \l"
+	.string "auto-pilot. All that we had, thrown\l"
+	.string "away, because I got so greedy.\l"
+	.string "...\p"
+	.string "So now you know the truth.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 DeoxysBattle_Intro::
 # 74 "data/maps/Planet01_Final_Lab_Core/scripts.pory"

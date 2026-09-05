@@ -81,53 +81,84 @@ text DeoxysBattle_Outro {
 
 script Planet01_Final_Lab_Core_BeheeWalk {
 	lock
-	msgbox("...Where am I?")
+	
+	setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+    callnative(DrawMugshot)
+    msgbox("Where am I?")
+    waitmessage
+	closemessage
+    callnative(ClearMugshot)
+
+	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<A Beheeyem... It's tapped into my mind \n"
+	"and is showing you my memories...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	waitmessage
+	closemessage
+
 	waitmessage
 	closemessage
 	applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
     waitmovement(0)
-	msgbox("M-my parents?\n"
-	"...\p" 
-	"I love them, and they love me. But I\n" 
-	"know they'd be disappointed that I no\l"
-	"longer believe the things they do, and\l"
-	"in the choices I've made. It's easier...\l"
-	"To just avoid them...")
+	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<This is the Operations Leader and I,\n" 
+	"many years ago.\p"
+	"When we first met, I was a fresh, young\n"
+	"scientist; timid and suffering from \l" 
+	"imposter syndrome. Always worried\l" 
+	"about proving myself, always seeking\l"
+	"validation from others.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 	waitmessage
 	closemessage
 	applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
     waitmovement(0)
-	msgbox("My friends. So many memories of them...\n"
-	"They always seem to express their\l"
-	"feelings and who they are so easily, and\l"
-	"they accept everybody as they are.\l"
-	"Even me.\p"
-	"I feel so selfish and jealous.\n"
-	"Why couldn't I ever be that way?")
+	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<For a long time, I was jealous of their \n"
+	"confidence. Success or failure, they\l"
+	"things always seemed to work out for\l"
+	"them. But they believed in me too, and\l"
+	"as we worked together, their praise and\l"
+	"optimism became infectious.\p"
+	"As we got closer, they made me begin to\n"
+	"believe in myself.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 	waitmessage
 	closemessage
 	applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
     waitmovement(0)
-	msgbox("...You asked me if I loved myself. When I\n"
-	"laughed and said Of course not!, you \l" 
-	"told me that it broke your heart, \l" 
-	"because you loved me.\p"
-	"...I resolved to love myself. But, even \n"
-	"now I'm not sure I know how to do it.")
+	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<We became partners in everything, even\n"
+	"work. When we were both assigned to\l" 
+	"project EOD, I was overjoyed. The past\l" 
+	"few years studying an incredible planet\l"
+	"with them and building our research\l"
+	"facility together was everything I\l" 
+	"could have asked for. I loved them.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	waitmessage
+	closemessage
+
+	setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
+    msgbox("That's very sweet. Sound like you guys\n"
+	"were a power-couple!")
+    waitmessage
+	closemessage
+    callnative(ClearMugshot)
+
+	applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
+	waitmovement(0)
+	
+    waitmoncry()
+	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Everything changed after I discovered\n"
+	"the Deoxys cell. My experiments were \l"
+	"disastrous; it infected me, and \l"
+	"triggered Pal 9000's Contingency \l"
+	"Protocol, which teleported Ops back to \l"
+	"our ship and sent them back home on \l"
+	"auto-pilot.\p"
+	"All that we had, thrown so easily\n"
+	"away, because I got so greedy.\l"
+	"...\p"
+	"So now you know the truth.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+
 	applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee2)
     waitmovement(0)
 	waitse()
     playmoncry(SPECIES_BEHEEYEM, CRY_MODE_ENCOUNTER)
-    waitmoncry()
-	msgbox("And now I may never get the chance. I\n"
-	"never appreciated just how pathetic it\l"
-	"is that even when I'm surrounded by\l"
-	"people who love and support me, I\l"
-	"choose to make myself miserable.\p"
-	"And I may never get fix any of this\n"
-	"broken shit, because I chose to\l"
-	"distract myself and escape instead.\l"
-	"Is that... What you wanted to show me?")
 	setvar(VAR_0x8000, SPECIES_BEHEEYEM)
     callnative(RegisterSpeciesInDex)
 	warp(MAP_PLANET01_01, 1, 31, 11)
@@ -147,8 +178,6 @@ movement Movement_Player_Behee1 {
 	walk_right
 	walk_right
 	walk_right
-	walk_right
-	walk_right
 	face_up
 	delay_16
 }
@@ -156,8 +185,6 @@ movement Movement_Player_Behee1 {
 movement Movement_Player_Behee2 {
 	face_right
 	delay_16
-	walk_right
-	walk_right
 	walk_right
 	walk_right
 	walk_right

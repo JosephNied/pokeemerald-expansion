@@ -1770,7 +1770,7 @@ Planet01_01_RobotGreeting_Text_4:
 
 Planet01_01_RobotGreeting_Text_5:
 # 281 "data/maps/Planet01_01/scripts.pory"
-	.string "Hello, freind.$"
+	.string "Hello, friend.$"
 
 Planet01_01_RobotGreeting_Text_6:
 # 288 "data/maps/Planet01_01/scripts.pory"

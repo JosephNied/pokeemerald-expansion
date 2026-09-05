@@ -113,8 +113,10 @@ script refill_air_canister {
 script Spaceship_Dev_EventScript_BallItem01 {
     lock
     faceplayer
-    giveitem(ITEM_SCANNER)
+    removeobject(1)
     giveitem(ITEM_ESCAPE_ROPE)
+    removeobject(10)
+    giveitem(ITEM_SCANNER)  
     //giveitem(ITEM_DOWSING_MACHINE)
     //giveitem(ITEM_WAILMER_PAIL)
     setflag(FLAG_UNUSED_0x027)
@@ -125,7 +127,6 @@ script Spaceship_Dev_EventScript_BallItem01 {
     setflag(FLAG_UNUSED_0x048)
     setflag(FLAG_UNUSED_0x049)
     clearflag(FLAG_REGISTERED_ROSE)
-    removeobject(1)
     release
     end
 }
