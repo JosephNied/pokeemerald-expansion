@@ -203,8 +203,8 @@ script Jirachi_goes_to_ship {
     msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I can read its mind... It wont let you\n"
     "past it unless you bring it a Comet\l"
     "Shard. I think I know why...\p"
-    "Ha! If we're going to finish this, we\n"
-    "might as well go all the way, right?>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    "Looks like we aren't the only ones\n"
+    "being threatened by all this.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -309,7 +309,7 @@ script Jirachi_goes_to_ship {
 
             setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
             callnative(DrawMugshot)
-            msgbox("Welcome aboard!\p"
+            msgbox("Welcome aboard!\n"
             "Looks like Jirachi will always return to\l"
             "my ship when released!")
             waitmessage
@@ -318,7 +318,7 @@ script Jirachi_goes_to_ship {
         }
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Glad that's over with. Let's go.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Let's do this.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         closemessage
         callnative(ClearMugshot)

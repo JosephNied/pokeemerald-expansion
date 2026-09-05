@@ -452,7 +452,7 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
     callnative(DrawMugshot)
-    msgbox("I'm like, almost 30.")
+    msgbox("But I'm almost 30.")
     waitmessage
     closemessage
     callnative(ClearMugshot)

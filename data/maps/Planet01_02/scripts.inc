@@ -930,8 +930,8 @@ Jirachi_goes_to_ship_Text_2:
 	.string "{COLOR RED}{SHADOW LIGHT_RED}<I can read its mind... It wont let you\n"
 	.string "past it unless you bring it a Comet\l"
 	.string "Shard. I think I know why...\p"
-	.string "Ha! If we're going to finish this, we\n"
-	.string "might as well go all the way, right?>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+	.string "Looks like we aren't the only ones\n"
+	.string "being threatened by all this.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Jirachi_goes_to_ship_Text_3:
 # 216 "data/maps/Planet01_02/scripts.pory"
@@ -971,13 +971,13 @@ Jirachi_goes_to_ship_Text_9:
 
 Jirachi_goes_to_ship_Text_10:
 # 312 "data/maps/Planet01_02/scripts.pory"
-	.string "Welcome aboard!\p"
+	.string "Welcome aboard!\n"
 	.string "Looks like Jirachi will always return to\l"
 	.string "my ship when released!$"
 
 Jirachi_goes_to_ship_Text_11:
 # 321 "data/maps/Planet01_02/scripts.pory"
-	.string "{COLOR RED}{SHADOW LIGHT_RED}<Glad that's over with. Let's go.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<Let's do this.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Found_Ruby_Text_0:
 # 356 "data/maps/Planet01_02/scripts.pory"

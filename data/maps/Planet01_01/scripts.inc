@@ -1868,7 +1868,7 @@ Planet01_01_RobotGreeting_Text_22:
 
 Planet01_01_RobotGreeting_Text_23:
 # 455 "data/maps/Planet01_01/scripts.pory"
-	.string "I'm like, almost 30.$"
+	.string "But I'm almost 30.$"
 
 Planet01_01_RobotGreeting_Text_24:
 # 462 "data/maps/Planet01_01/scripts.pory"

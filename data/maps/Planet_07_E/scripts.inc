@@ -288,8 +288,8 @@ gatemessage_Text_7:
 	.string "cell was a coincidence, but something\l"
 	.string "giving bad vibes is definitely down\l"
 	.string "there.\p"
-	.string "If you proceed and are tested like I\n"
-	.string "was... Don't fail.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+	.string "If you find some way down and are\n"
+	.string "tested like I was... Don't fail.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 sableye_07_E_Text_0:
 # 112 "data/maps/Planet_07_E/scripts.pory"
