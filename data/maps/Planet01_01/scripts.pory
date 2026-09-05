@@ -142,15 +142,17 @@ script Planet01_01_AddAir_Minior02 {
 
 script Planet01_01_HintText01 {
     lock
-    msgbox("Captain: This is the captain of\n" 
-    "project EDGE OF DAWN, or EOD.\p"
-    "Our team consists of a Biologist,\n"
-    "an Engineer, and our Operations Lead!\p"
-    "Our team has recorded notes for future\n"
-    "explorers in hopefully convenient\l"
-    "places. Our objective is to establish\l"
-    "a research facility, focusing on\l"
-    "physics and Pokémon biology.\p"
+    msgbox("This is the captain of the EDGE OF DAWN,\n" 
+    "or EOD, research expedition. Our team\l"
+    "consists of our incredible Operations\l"
+    "Lead, genius Biologist, and of course\l"
+    "myself!\p"
+    "Our objective is to establish a facility \n"
+    "for continuous research into alien\l"
+    "Pokémon and environments.\p"
+    "We've recorded notes for future \n"
+    "explorers in hopefully convenient \l"
+    "places!\p"
     "Note: The gravity is low here. Tall \n"
     "ledges can be scaled easily!")
     release
@@ -159,21 +161,21 @@ script Planet01_01_HintText01 {
 
 script Planet01_01_HintText02 {
     lock
-    msgbox("Engineer: The plants emit oxygen when\n"
+    msgbox("Ops Lead: The plants emit oxygen when\n"
     "stepped on. Our Oxygen Systems can\l"
     "capture it, preventing our O2 levels\l"
-    "from lowering while we're on the grass.")
+    "from lowering while we're on the grass!")
     release
     end
 }
 
 script Planet01_01_HintText03 {
     lock
-    msgbox("Ops Lead: The Steelix here have been\n"
+    msgbox("Biologist: The Steelix here have been\n"
     "digging deep into the planet's core;\l"
     "this blue liquid they've been exposed\l"
     "to has changed their type and color...\p"
-    "I'll collect some samples! Exciting!")
+    "I'll collect some samples!")
     release
     end
 }
@@ -182,19 +184,17 @@ script Planet01_01_HintText04 {
     lock
     msgbox("Biologist: Miniors are flying types,\n"
     "the air they generate can be captured\l"
-    "and used to refill the oxygen in our \l"
-    "life support systems. Very lucky.")
+    "and used to refill the oxygen in our\l"
+    "life support systems. Very lucky!")
     release
     end
 }
 
 script Planet01_01_HintText05 {
     lock
-    msgbox("Engineer: I found the Biologist weeping\n"
-    "up here; they reported receiving\l"
-    "strange hallucinations around these\l"
-    "rocks. I'm not sure what's going on, but\l"
-    "we need to be careful.")
+    msgbox("Ops Lead: Pokémon of the Clefairy\n" 
+    "family seem to really enjoy bouncing\l" 
+    "around these rocky cliffs.")
     release
     end
 }
@@ -222,8 +222,7 @@ script Planet01_01_Elgyem {
     playmoncry(SPECIES_ELGYEM, CRY_MODE_ENCOUNTER)
     setvar(VAR_0x8000, SPECIES_ELGYEM)
     callnative(RegisterSpeciesInDex)
-    msgbox("Woah! Elgyem is glowing red-\n"
-    "{COLOR RED}{SHADOW LIGHT_RED}<Well... How did I get here?>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}Woah! Elgyem is glowing red-{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     warp(MAP_PLANET01_04, 1, 12, 1)
     waitstate
@@ -240,7 +239,7 @@ script Planet01_01_RobotGreeting {
     waitmovement(OBJ_EVENT_ID_PLAYER)
     setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
     callnative(DrawMugshot)
-    msgbox("...I see can't anything wrong with my\n"
+    msgbox("...I can't see anything wrong with my\n"
     "ship.\p"
     "No hull damage, fuel is good. What-")
     waitmessage
@@ -249,7 +248,7 @@ script Planet01_01_RobotGreeting {
     setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
     msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Hey!\n"
-    "Down herrre, pal!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    "Down here, pal!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -264,7 +263,7 @@ script Planet01_01_RobotGreeting {
     delay(30)
     setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
     callnative(DrawMugshot)
-    msgbox("...Hello? How do I get down?")
+    msgbox("Hello? How do I get down?")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -279,7 +278,7 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox("Hello, frrreind.")
+    msgbox("Hello, freind.")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -293,61 +292,50 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox("Why, I'm the rrrenown Captain of the\n" 
-    "expedition EDGE OF DAWN. Yep, I'm the\l" 
-    "captain. Never let a human do anything\l" 
-    "important, that's what I always say. It\l" 
-    "was also my company's slogan.")
+    msgbox("I'm the Captain of the EDGE OF DAWN\n"
+    "research expedition! Name's PAL 9000,\l"
+    "but my human crew just calls me Cap'.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
+    msgbox("Huh! You're looking a bit rough... But,\n"
+    "if that's true, is your crew somewhere \l"
+    "around here?")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+    callnative(DrawMugshot)
+    msgbox("Afraid not, kid. My Emergency Protocol\n"
+    "was activated, meaning the crew\l" 
+    "encountered a critical situation and\l"
+    "were sent home.\p"  
+    "I'd elaborate, but the Emergency\n" 
+    "Protocol also encrypted my memory for\l" 
+    "security. That data is all top secret\l"
+    "EOD company property!\p"
+    "Even I can't access them!")
     waitmessage
     closemessage
     callnative(ClearMugshot)
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
     callnative(DrawMugshot)
-    msgbox("...Really. You're looking a bit rough...\n"
-    "But uh, if that's true, is your human\l"
-    "crew somewhere around here?")
+    msgbox("Dang. Well Cap', any chance you know why\n"
+    "I can't lift my ship off the ground?")
     waitmessage
     closemessage
     callnative(ClearMugshot)
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox("Noooope. They'rrrre long gone, kiddo.")
-    waitmessage
-    closemessage
-    callnative(ClearMugshot)
-
-    setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
-    callnative(DrawMugshot)
-    msgbox("...Oh. Where'd they go?")
-    waitmessage
-    closemessage
-    callnative(ClearMugshot)
-
-    setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
-    callnative(DrawMugshot)
-    msgbox("I don't know. I don't rrreally know much\n" 
-    "to be honest, on account of my memories\l" 
-    "missing; orrr, perrrhaps errrased.")
-    waitmessage
-    closemessage
-    callnative(ClearMugshot)
-
-    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
-    callnative(DrawMugshot)
-    msgbox("...Great. Well, any chance you know why I\n"
-    "can't lift my ship off the ground?")
-    waitmessage
-    closemessage
-    callnative(ClearMugshot)
-
-    setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
-    callnative(DrawMugshot)
-    msgbox("Well sirrrma'am, it's all account of the\n" 
-    "absurrrd levels of purrre psychic\l" 
-    "enerrrgy layerrred on top of it.\l"
-    "Yep.")
+    msgbox("Well sirma'am, it's all account of the \n" 
+    "absurd levels of pure psychic energy\l" 
+    "layered on top of it. Yep.")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -362,7 +350,7 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox("I suppose. Sorrry kiddo.")
+    msgbox("I suppose. Sorry kiddo.")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -377,8 +365,8 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox("Well kiddo, you'rrre in luck. See these\n"
-    "here wall scrrribbles?")
+    msgbox("Well kiddo, you're in luck. See these\n"
+    "here wall scribbles?")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -388,13 +376,11 @@ script Planet01_01_RobotGreeting {
     
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox("My team was kind enough to leave\n"
-    "some notes for futurre explorrrerrrs.\p"
-    "In fact, I've been rrreading them too.\n" 
-    "I've learrrned that our primarrry\l"
-    "rrresearrrch facility was up the\l"
-    "waterrrfall in the forrrest just\l"
-    "overrr to the west.")
+    msgbox("My team was kind enough to leave some\n"
+    "notes. I've been reading them too. I've\l"
+    "learned that our primary research base \l" 
+    "was up the waterfall in forest over\l"
+    "west; might be a good place to visit.")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -408,16 +394,15 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
     callnative(DrawMugshot)
-    msgbox("Oh? That sounds like a promising place\n"
-    "to investigate. Do you have, like a map?")
+    msgbox("I'd like to check it out! Do you have a\n"
+    "map I could use?")
     waitmessage
     closemessage
     callnative(ClearMugshot)
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox ("Well of courrrse I do kiddo! Let me load\n" 
-    "it up forrr you!")
+    msgbox ("Of course, kiddo! Let me load it up!")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -442,8 +427,7 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox ("Here you arrre!\n"
-    "Our old lab is to the left.")
+    msgbox ("Here you are!")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -475,7 +459,7 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox("Well happy earrrly birrrrthday, kiddo.")
+    msgbox("Well happy early birthday, kiddo!")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -503,15 +487,17 @@ script Planet01_01_RobotGreeting {
     setvar(VAR_TEMP_0, 1)
     setflag(FLAG_REGISTERED_ROSE)
 
-    msgbox("Captain: This is the captain of\n" 
-    "project EDGE OF DAWN, or EOD.\p"
-    "Our team consists of a Biologist,\n"
-    "an Engineer, and our Operations Lead!\p"
-    "Our team has recorded notes for future\n"
-    "explorers in hopefully convenient\l"
-    "places. Our objective is to establish\l"
-    "a research facility, focusing on\l"
-    "physics and Pokémon biology.\p"
+    msgbox("This is the captain of the EDGE OF DAWN,\n" 
+    "or EOD, research expedition. Our team\l"
+    "consists of our incredible Operations\l"
+    "Lead, genius Biologist, and of course\l"
+    "myself!\p"
+    "Our objective is to establish a facility \n"
+    "for continuous research into alien\l"
+    "Pokémon and environments.\p"
+    "We've recorded notes for future \n"
+    "explorers in hopefully convenient \l"
+    "places!\p"
     "Note: The gravity is low here. Tall \n"
     "ledges can be scaled easily!")
     setflag(FLAG_TEMP_9)
@@ -585,7 +571,7 @@ script Planet01_01_JirachiAppears {
     setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
     msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Hey, you. See these monsters? They're\n" 
-    "corrupted by a powerful space virus.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    "infected by an intelligent space virus.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -596,10 +582,10 @@ script Planet01_01_JirachiAppears {
 
     setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
-    msgbox("{COLOR RED}{SHADOW LIGHT_RED}They will never stop pursuing you. They\n" 
-    "want to infect you and steal your ship.\l" 
-    "Your team... Magnezone... Hm. I guess\l" 
-    "this is the end.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<The virus wants to possess you and\n"
+    "use your ship to spread across space.\l"
+    "Your team... Doesn't look strong enough.\l" 
+    "I guess that's that.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -674,10 +660,10 @@ script Planet01_01_JirachiAppears {
 
     setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
-    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Oh, wow. Lucky. Very lucky...>\p"
-    "Since you've been given the chance to\n"
-    "fight for your survival, I'll warn you,\l"
-    "this greedy planet takes and takes...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<It looks like you're being protected!\n"
+    "Very lucky...\p"
+    "If you can persevere, I may be able to\n"
+    "help you as well...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -687,8 +673,8 @@ script Planet01_01_JirachiAppears {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
-    msgbox("Who the hell are you? I demand you tell\n"
-    "me! Hello?\l"
+    msgbox("But who are you? Please tell me!\n"
+    "Hello?\l"
     "...Hello?!\p"
     "...")
     waitmessage
@@ -699,9 +685,9 @@ script Planet01_01_JirachiAppears {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
     callnative(DrawMugshot)
-    msgbox("Great. Amnesiac robots, space viruses,\n" 
-    "and psychic assholes. All in the middle\l"
-    "of nowhere. Serves me right, in a way.")
+    msgbox("Crazy robots, intelligent viruses, and\n" 
+    "psychic jerks. This place is busy for\l"
+    "being the middle of nowhere space.")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -816,38 +802,38 @@ script EventScript_TheCaptain {
 
         setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
         callnative(DrawMugshot)
-        msgbox ("Ah, yeah, those guys.\n"
-        "They neverrr botherrred me before.")
+        msgbox ("Ah, yes, those guys.\n"
+        "They never bothered me before.")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
         callnative(DrawMugshot)
-        msgbox ("...Ok. But what are they?")
+        msgbox ("I can guess why. But what are they?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
         setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
         callnative(DrawMugshot)
-        msgbox ("I have memorrries of our team, when\n"
-        "we firrrst arrrived. These things werrre\l"
-        "not herrre.")
+        msgbox ("They aren't present in the memories I\n"
+        "have pre-encryption.")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
         callnative(DrawMugshot)
-        msgbox ("Anything else I should know?")
+        msgbox ("That's awfully suspicious. Anything\n"
+        "else I should know?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
         setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
         callnative(DrawMugshot)
-        msgbox("...The owls arrre not what they\n"
+        msgbox("...The owls are not what they\n"
         "seem.")
         waitmessage
         closemessage
@@ -880,15 +866,14 @@ script EventScript_TheCaptain {
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
         callnative(DrawMugshot)
-        msgbox ("Ok, and your lab was is in the\n"
-        "Forest somewhere?")
+        msgbox ("And your lab was in the forest?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
         setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
         callnative(DrawMugshot)
-        msgbox("Up the waterrrfall, yep.")
+        msgbox("Up the waterfall, yep.")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -907,7 +892,7 @@ script EventScript_TheCaptain {
 
         setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
         callnative(DrawMugshot)
-        msgbox("Of courrrse! Have you seen my hat?")
+        msgbox("Of course! Have you seen my hat?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -940,8 +925,8 @@ script EventScript_TheCaptain {
 
         setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
         callnative(DrawMugshot)
-        msgbox("There's gotta be a pokerrrmon with\n"
-        "waterrrfall somewhere, kiddo. Don't give\l"
+        msgbox("There's gotta be a pocket mon with\n"
+        "Waterfall somewhere, kiddo. Don't give\l"
         "up.")
         waitmessage
         closemessage
@@ -953,51 +938,42 @@ script EventScript_TheCaptain {
         setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
         callnative(DrawMugshot)
         msgbox ("I want to ask some questions about the\n"
-        "previous explorers.")
+        "EDGE OF DAWN team.")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
         setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
         callnative(DrawMugshot)
-        msgbox("Firrre away.")
+        msgbox("Fire away.")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
         multichoice(0, 0, MULTI_EXPLORERS_FACTS, FALSE)
         if (var(VAR_RESULT) == 0) {
-            msgbox("Me? State-of-the-art RoboCap by\n"
-            "BOTech Enterprrrises. I was the latest\l" 
-            "model when we set out into space.\l" 
-            "Designed to keep up morrrale, maintain\l" 
+            msgbox("Me? State-of-the-art PAL 9000.\n"
+            "I was the latest model when we set out\l" 
+            "seven years ago.\p" 
+            "Designed to keep up morale, maintain\n" 
             "focus on our objectives, and give full,\l" 
-            "detailed rrreporrrts on all of our\l" 
-            "activities.")
+            "detailed reports on all of our\l" 
+            "activities. I'm dissapointed whatever\l"
+            "situation we ran into required my\l" 
+            "team to leave without me, but I'm sure\l"
+            "they had good reason to do so.")
         } elif (var(VAR_RESULT) == 1) {
-            msgbox("Expert in rrresearching alien PKMN.\n"
-            "Quiet, standoff-ish.\l"
-            "Didn't like to be the centerrr of\l" 
-            "attention, and often would get lost\l" 
-            "wanderrring off on their own. Made\l" 
-            "excellent notes on this rrregion's\l" 
-            "biological life. Rrrecorrrds say\l"
-            "their favorrrite flowerrr was 'Wild\l"
-            "Indigo.'")
+            msgbox("Expert in researching alien Pokémon\n"
+            "anatomy and abilities. Made some pretty\l" 
+            "amazing discoveries, but insisted their\l" 
+            "big breakthrough was yet to come.")
         } elif (var(VAR_RESULT) == 2) {
-            msgbox("A genius with an interrrest in building\n"
-            "structurrres in challenging locations.\l" 
-            "Had their eyes on transforming hostile\l" 
-            "environments into life-sustaining ones\l" 
-            "forrr humans. Worrrk-orrriented.")
-        } elif (var(VAR_RESULT) == 3) {
-            msgbox("PKMN experrrt and project organizerrr.\n"
-            "Always ready to help, and easy to talk\l" 
-            "to about anything. Optimistic, harrrd\l" 
-            "worker. Loves giving people and things\l"
-            "nicknames. Rrrecorrrds suggest they had\l" 
-            "a history with the Biologist, but that's\l"
-            "just my interrrprrretation.")
+            msgbox("Expert Pokémon trainer and\n"
+            "coordinator. Could direct Pokémon to\l" 
+            "build any structure, no matter how\l" 
+            "challenging the environment.\p"
+            "Optimistic, hard working. Would do\n" 
+            "anything to support the team.")
         }
     }
     release
@@ -1029,8 +1005,8 @@ script Planet01_01_Ending {
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox("Rrreadings negative, kiddo. Should be\n"
-    "frrree forrr take off.")
+    msgbox("Readings negative, kiddo. Should be\n"
+    "free for take off anytime.")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -1039,26 +1015,26 @@ script Planet01_01_Ending {
     callnative(DrawMugshot)
     msgbox ("...\n"
     "I've been thinking.\p"
-    "How would you like to be the captain\n"
-    "of a ship again?")
+    "How would you like to join my crew?")
     waitmessage
     closemessage
     callnative(ClearMugshot)
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox("Kiddo. Arrre you... Perrrhaps, serrrious?\n"
-    "Why, that would fill my ambiguously\l"
-    "prrresent rrrobot soul with joy.")
+    msgbox("Kiddo. Are you... Perhaps, being serious?\n"
+    "Why, that would fill my most definitely\l"
+    "real robot soul with joy. Can I be your\l"
+    "Captain?")
     waitmessage
     closemessage
     callnative(ClearMugshot)
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
     callnative(DrawMugshot)
-    msgbox ("Well, they're going to need a replacement.\n"
-    "I'm quitting when we get back home.\l"
-    "Let's go.")
+    msgbox ("Maybe. I think I need a break for a bit.\n"
+    "We'll start by cleaning that rust off of\l"
+    "you. Let's go!")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -1070,11 +1046,32 @@ script Planet01_01_Ending {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
     callnative(DrawMugshot)
-    msgbox ("Goodbye... Wild Indigo.")
+    msgbox("Goodbye!")
     waitmessage
     closemessage
     callnative(ClearMugshot)
     fadescreenspeed(FADE_TO_BLACK, 8)
+    msgbox("Thanks for playing!\n"
+    "Credits:\p"
+    "Developers:\n"
+    "dBlue: Coding, graphics, maps, music\l"
+    "Grrrita: Character art, title screen, concepts\l"
+    "Kittycatsaton: Story advice\l"
+    "<><><><>\p"
+    "Playtesters: MyNameIsJeff, MayaZ\n"
+    "<><><><>\p"
+    "Additional credits:\n"
+    "Montblanc: SWSH Party and Summary base and assistance\l"
+    "<><><><>\p"
+    "Chunsoft, Emmuffin, and G: Pokémon Mugshots\n"
+    "<><><><>\p"
+    "All those who gave advice on the Team Aqua's Hideout Discord!\n"
+    "<><><><>\p"
+    "All those who have contributed to Pokeemerald and Pokeemerald-Expanded, making this possible!\n"
+    "<><><><>\p"
+    "Now, Emerald credits:")
+    waitmessage
+    closemessage
     special(GameClear)
     release
     end

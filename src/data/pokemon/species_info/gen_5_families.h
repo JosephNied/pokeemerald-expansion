@@ -10677,10 +10677,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 11,
         .weight = 1480,
         .description = COMPOUND_STRING(
-            "They are born in snow clouds. When\n"
-            "its body temperature goes up, it turns\n"
-            "into steam and vanishes. When its\n"
-            "temperature lowers, it returns to ice."),
+            "Often used in space travel for safely\n"
+            "freezing people and Pokémon, because\n"
+            "it personally experiences the flow of\n"
+            "time at a much lower rate."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,

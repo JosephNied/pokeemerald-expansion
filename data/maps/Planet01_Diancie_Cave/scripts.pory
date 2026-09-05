@@ -91,9 +91,8 @@ script Planet01_Diancie_Cave_DiancieEncounter {
     faceplayer
 
     msgbox("Diancie seems to appreciate me bringing\n"
-	"its children home!\p"
+	"its children home!\l"
 	"It... wants to fight?")
-
     waitse()
     playmoncry(SPECIES_DIANCIE_MEGA, CRY_MODE_ENCOUNTER)
     waitmoncry()

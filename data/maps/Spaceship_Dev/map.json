@@ -29,12 +29,12 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(ROTOM_FAN)",
-      "x": 11,
-      "y": 13,
+      "x": 13,
+      "y": 9,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "refill_air_canister",
@@ -42,7 +42,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(BLISSEY)",
-      "x": 3,
+      "x": 4,
       "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -55,12 +55,12 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(BELLOSSOM)",
-      "x": 17,
+      "x": 12,
       "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_range_x": 1,
+      "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Bellossom",
@@ -72,8 +72,8 @@
       "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_range_x": 1,
+      "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Spaceship_Dev_EventScript_Item01",
@@ -81,7 +81,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(JIRACHI)",
-      "x": 14,
+      "x": 16,
       "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WATCH_PLAYER_OWE",
@@ -117,6 +117,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Spaceship_Dev_EventScript_BallGet",
       "flag": "FLAG_RECEIVED_WAILMER_DOLL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CRYOGONAL)",
+      "x": 3,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Cryogonal",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -154,7 +167,7 @@
       "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Machine"
+      "script": "Electronics"
     },
     {
       "type": "sign",
@@ -283,6 +296,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Suit"
+    },
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 11,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Machine"
     }
   ]
 }

@@ -789,20 +789,28 @@ Planet01_02_Elgyem::
 	callnative RegisterSpeciesInDex
 # 486 "data/maps/Planet01_02/scripts.pory"
 	msgbox Planet01_02_Elgyem_Text_0
-# 488 "data/maps/Planet01_02/scripts.pory"
+# 487 "data/maps/Planet01_02/scripts.pory"
 	waitmessage
-# 489 "data/maps/Planet01_02/scripts.pory"
+# 488 "data/maps/Planet01_02/scripts.pory"
 	warp MAP_PLANET01_03, 2, 11, 2
-# 490 "data/maps/Planet01_02/scripts.pory"
+# 489 "data/maps/Planet01_02/scripts.pory"
 	waitstate
-# 491 "data/maps/Planet01_02/scripts.pory"
+# 490 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
 
 
 sableye_connect::
-# 496 "data/maps/Planet01_02/scripts.pory"
+# 495 "data/maps/Planet01_02/scripts.pory"
 	lock
+# 496 "data/maps/Planet01_02/scripts.pory"
+	goto_if_unset FLAG_SYS_PALACE_SILVER, sableye_connect_2
+sableye_connect_1:
+# 513 "data/maps/Planet01_02/scripts.pory"
+	release
+	end
+
+sableye_connect_2:
 # 497 "data/maps/Planet01_02/scripts.pory"
 	msgbox sableye_connect_Text_0
 # 498 "data/maps/Planet01_02/scripts.pory"
@@ -817,26 +825,24 @@ sableye_connect::
 	addvar VAR_DAILY_BLENDER, 1
 # 503 "data/maps/Planet01_02/scripts.pory"
 	compare VAR_DAILY_BLENDER, 5
-	goto_if_eq sableye_connect_2
+	goto_if_eq sableye_connect_5
 # 506 "data/maps/Planet01_02/scripts.pory"
 	buffernumberstring STR_VAR_1, VAR_DAILY_BLENDER
 # 507 "data/maps/Planet01_02/scripts.pory"
 	msgbox sableye_connect_Text_2
-sableye_connect_1:
+sableye_connect_4:
 # 509 "data/maps/Planet01_02/scripts.pory"
 	fadeScreen FADE_FROM_BLACK
 # 510 "data/maps/Planet01_02/scripts.pory"
 	setvar VAR_0x8000, SPECIES_NOCTOWL
 # 511 "data/maps/Planet01_02/scripts.pory"
 	callnative RegisterSpeciesInDex
-# 512 "data/maps/Planet01_02/scripts.pory"
-	release
-	end
+	goto sableye_connect_1
 
-sableye_connect_2:
+sableye_connect_5:
 # 504 "data/maps/Planet01_02/scripts.pory"
 	msgbox sableye_connect_Text_1
-	goto sableye_connect_1
+	goto sableye_connect_4
 
 
 # 178 "data/maps/Planet01_02/scripts.pory"
@@ -987,8 +993,7 @@ Planet01_02_QuagsireTrigger_Text_0:
 
 Planet01_02_Elgyem_Text_0:
 # 486 "data/maps/Planet01_02/scripts.pory"
-	.string "Woah! Elgyem is glowing blue-\n"
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}<Let the water hold me down...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Woah! Elgyem is glowing blue-{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 sableye_connect_Text_0:
 # 497 "data/maps/Planet01_02/scripts.pory"

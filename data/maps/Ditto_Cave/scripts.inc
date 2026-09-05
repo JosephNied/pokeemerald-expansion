@@ -73,28 +73,9 @@ Ditto_Test::
 	callnative ClearMugshot
 # 40 "data/maps/Ditto_Cave/scripts.pory"
 	setflag FLAG_RECEIVED_BELDUM
-# 42 "data/maps/Ditto_Cave/scripts.pory"
-	compare VAR_DAILY_SLOTS, 2
-	goto_if_ge Ditto_Test_2
-Ditto_Test_1:
-# 51 "data/maps/Ditto_Cave/scripts.pory"
+# 41 "data/maps/Ditto_Cave/scripts.pory"
 	releaseall
 	return
-
-Ditto_Test_2:
-# 43 "data/maps/Ditto_Cave/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_UNKNOWN
-# 44 "data/maps/Ditto_Cave/scripts.pory"
-	callnative DrawMugshot
-# 45 "data/maps/Ditto_Cave/scripts.pory"
-	msgbox Ditto_Test_Text_1
-# 47 "data/maps/Ditto_Cave/scripts.pory"
-	waitmessage
-# 48 "data/maps/Ditto_Cave/scripts.pory"
-	closemessage
-# 49 "data/maps/Ditto_Cave/scripts.pory"
-	callnative ClearMugshot
-	goto Ditto_Test_1
 
 
 Ditto_Test_Text_0:
@@ -102,8 +83,3 @@ Ditto_Test_Text_0:
 	.string "!!!\l"
 	.string "Who was that?!\p"
 	.string "And why did they look like me?!$"
-
-Ditto_Test_Text_1:
-# 45 "data/maps/Ditto_Cave/scripts.pory"
-	.string "{COLOR RED}{SHADOW LIGHT_RED}<Your shadow-self.\n"
-	.string "Confront it, if you dare...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"

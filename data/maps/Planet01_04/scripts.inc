@@ -197,20 +197,28 @@ Planet01_04_Elgyem::
 	callnative RegisterSpeciesInDex
 # 118 "data/maps/Planet01_04/scripts.pory"
 	msgbox Planet01_04_Elgyem_Text_0
-# 120 "data/maps/Planet01_04/scripts.pory"
+# 119 "data/maps/Planet01_04/scripts.pory"
 	waitmessage
-# 121 "data/maps/Planet01_04/scripts.pory"
+# 120 "data/maps/Planet01_04/scripts.pory"
 	warp MAP_PLANET01_02, 0, 21, 23
-# 122 "data/maps/Planet01_04/scripts.pory"
+# 121 "data/maps/Planet01_04/scripts.pory"
 	waitstate
-# 123 "data/maps/Planet01_04/scripts.pory"
+# 122 "data/maps/Planet01_04/scripts.pory"
 	release
 	end
 
 
 sableye_04::
-# 128 "data/maps/Planet01_04/scripts.pory"
+# 127 "data/maps/Planet01_04/scripts.pory"
 	lock
+# 128 "data/maps/Planet01_04/scripts.pory"
+	goto_if_unset FLAG_SYS_DOME_SILVER, sableye_04_2
+sableye_04_1:
+# 147 "data/maps/Planet01_04/scripts.pory"
+	release
+	end
+
+sableye_04_2:
 # 129 "data/maps/Planet01_04/scripts.pory"
 	msgbox sableye_04_Text_0
 # 130 "data/maps/Planet01_04/scripts.pory"
@@ -229,26 +237,24 @@ sableye_04::
 	addvar VAR_DAILY_BLENDER, 1
 # 137 "data/maps/Planet01_04/scripts.pory"
 	compare VAR_DAILY_BLENDER, 5
-	goto_if_eq sableye_04_2
+	goto_if_eq sableye_04_5
 # 140 "data/maps/Planet01_04/scripts.pory"
 	buffernumberstring STR_VAR_1, VAR_DAILY_BLENDER
 # 141 "data/maps/Planet01_04/scripts.pory"
 	msgbox sableye_04_Text_2
-sableye_04_1:
+sableye_04_4:
 # 143 "data/maps/Planet01_04/scripts.pory"
 	fadeScreen FADE_FROM_BLACK
 # 144 "data/maps/Planet01_04/scripts.pory"
 	setvar VAR_0x8000, SPECIES_NOCTOWL
 # 145 "data/maps/Planet01_04/scripts.pory"
 	callnative RegisterSpeciesInDex
-# 146 "data/maps/Planet01_04/scripts.pory"
-	release
-	end
+	goto sableye_04_1
 
-sableye_04_2:
+sableye_04_5:
 # 138 "data/maps/Planet01_04/scripts.pory"
 	msgbox sableye_04_Text_1
-	goto sableye_04_1
+	goto sableye_04_4
 
 
 Planet01_04_AddAir_Minior01_Text_0:
@@ -284,8 +290,7 @@ Planet01_04_HintText03_Text_0:
 
 Planet01_04_Elgyem_Text_0:
 # 118 "data/maps/Planet01_04/scripts.pory"
-	.string "Woah! Elgyem is glowing green-\n"
-	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}<Letting the days go by...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Woah! Elgyem is glowing green-{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 sableye_04_Text_0:
 # 129 "data/maps/Planet01_04/scripts.pory"

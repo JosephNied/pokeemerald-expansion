@@ -185,23 +185,25 @@ script Planet01_07_HintText01 {
 
 script sableye_07 {
 	lock
-	msgbox("Noctowl's eyes open...")
-	fadeScreen(FADE_TO_BLACK)
-	waitse()
-    playmoncry(SPECIES_NOCTOWL, CRY_MODE_ENCOUNTER)
-    waitmoncry()
-	setflag(FLAG_SYS_DOME_GOLD)
-	removeobject(11)
-	addvar(VAR_DAILY_BLENDER, 1)
-	if (var(VAR_DAILY_BLENDER) == 5) {
-		msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}The gate is open.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-	} else {
-	buffernumberstring(STR_VAR_1, VAR_DAILY_BLENDER)
-	msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}{STR_VAR_1} of 5...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	if (flag(FLAG_SYS_DOME_GOLD) == FALSE) {
+		msgbox("Noctowl's eyes open...")
+		fadeScreen(FADE_TO_BLACK)
+		waitse()
+		playmoncry(SPECIES_NOCTOWL, CRY_MODE_ENCOUNTER)
+		waitmoncry()
+		setflag(FLAG_SYS_DOME_GOLD)
+		removeobject(11)
+		addvar(VAR_DAILY_BLENDER, 1)
+		if (var(VAR_DAILY_BLENDER) == 5) {
+			msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}The gate is open.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		} else {
+		buffernumberstring(STR_VAR_1, VAR_DAILY_BLENDER)
+		msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}{STR_VAR_1} of 5...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		}
+		fadeScreen(FADE_FROM_BLACK)
+		setvar(VAR_0x8000, SPECIES_NOCTOWL)
+		callnative(RegisterSpeciesInDex)
 	}
-	fadeScreen(FADE_FROM_BLACK)
-	setvar(VAR_0x8000, SPECIES_NOCTOWL)
-    callnative(RegisterSpeciesInDex)
 	release
 	end
 }

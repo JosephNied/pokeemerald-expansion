@@ -124,6 +124,11 @@ script connector_cave_remains {
     "not wasted, however; the discovery\l"
     "we made beyond the cavern seems\l"
     "very interesting...")
+	waitmessage
+	closemessage
+	if (var(VAR_DAILY_SLOTS) == 0) {
+        call(voicedialogueABC)
+    }
     release
     end
 }

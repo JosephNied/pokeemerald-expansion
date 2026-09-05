@@ -61,6 +61,9 @@ static const u16 sMugshotPal_CAPTAIN_SAD[] = INCBIN_U16("graphics/mugshots/capta
 static const u32 sMugshotImg_BLISSEY[] = INCBIN_U32("graphics/mugshots/Blissey.4bpp.lz");
 static const u16 sMugshotPal_BLISSEY[] = INCBIN_U16("graphics/mugshots/Blissey.gbapal");
 
+static const u32 sMugshotImg_CRYOGONAL[] = INCBIN_U32("graphics/mugshots/Cryogonal.4bpp.lz");
+static const u16 sMugshotPal_CRYOGONAL[] = INCBIN_U16("graphics/mugshots/Cryogonal.gbapal");
+
 static const u32 sMugshotImg_BELLOSSUM[] = INCBIN_U32("graphics/mugshots/Bellossum.4bpp.lz");
 static const u16 sMugshotPal_BELLOSSUM[] = INCBIN_U16("graphics/mugshots/Bellossum.gbapal");
 
@@ -114,6 +117,7 @@ static const struct Mugshot sMugshots[] = {
     [MUGSHOT_BIOLOGIST_1] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_BIOLOGIST_1, .palette = sMugshotPal_BIOLOGIST},
     [MUGSHOT_CAPTAIN_SAD] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_CAPTAIN_SAD, .palette = sMugshotPal_CAPTAIN_SAD},
     [MUGSHOT_BLISSEY] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_BLISSEY, .palette = sMugshotPal_BLISSEY},
+    [MUGSHOT_CRYOGONAL] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_CRYOGONAL, .palette = sMugshotPal_CRYOGONAL},
     [MUGSHOT_BELLOSSUM] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_BELLOSSUM, .palette = sMugshotPal_BELLOSSUM},
     [MUGSHOT_ROTOM] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_ROTOM, .palette = sMugshotPal_ROTOM},
     [MUGSHOT_MAGNEZONE] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_MAGNEZONE, .palette = sMugshotPal_MAGNEZONE},

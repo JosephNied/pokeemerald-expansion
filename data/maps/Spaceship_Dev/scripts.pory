@@ -60,7 +60,7 @@ script start_ship_intro {
         setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
         callnative(DrawMugshot)
         msgbox("What the heck?! I can't get off the\n"
-        "ground! It's as if something is holding\l"
+        "ground! It's like something is holding\l"
         "us down, I've never seen anything like\l"
         "this before.")
         waitmessage
@@ -71,9 +71,7 @@ script start_ship_intro {
         callnative(DrawMugshot)
         msgbox("I guess I have to go check it out...\n"
         "This is a totally unknown planet.\l"
-        "I better prepare.\p"
-        "I should take Magnezone and my tools;\n"
-        "who knows what could be out there?")
+        "I better prepare.")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -209,7 +207,7 @@ script Spaceship_Dev_EventScript_Item01 {
     setvar(VAR_0x8000, MUGSHOT_MAGNEZONE)
     callnative(DrawMugshot)
     playmoncry(SPECIES_MAGNEZONE, CRY_MODE_ENCOUNTER)
-    msgbox("Let's go, buddy!")
+    msgbox("Magnezone, I choose you, buddy!")
     waitmessage
     callnative(ClearMugshot)
     givemon(SPECIES_MAGNEZONE, 50, ITEM_MAGNET)
@@ -406,6 +404,23 @@ script Blissey_Bed {
     end
 }
 
+script Cryogonal {
+    lock
+    faceplayer
+    setvar(VAR_0x8000, MUGSHOT_CRYOGONAL)
+    callnative(DrawMugshot)
+    playmoncry(SPECIES_CRYOGONAL, CRY_MODE_ENCOUNTER)
+    msgbox("Guess you'll have to put the team in\n"
+    "cryosleep some other time, pal.")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
+    setvar(VAR_0x8000, SPECIES_CRYOGONAL)
+    callnative(RegisterSpeciesInDex)
+    release
+    end
+}
+
 script Bellossom {
     lock
     faceplayer
@@ -421,7 +436,6 @@ script Bellossom {
     if (flag(FLAG_TEMP_6) == FALSE) {
         setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
         callnative(DrawMugshot)
-        playmoncry(SPECIES_BELLOSSOM, CRY_MODE_ENCOUNTER)
         msgbox("Oh? You have a gift for me!")
         waitmessage
         closemessage
@@ -470,8 +484,9 @@ script Machine {
     faceplayer
     setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
     callnative(DrawMugshot)
-    msgbox("This bed is designed to keep me in\n"
-    "cryosleep, for especially long trips.")
+    msgbox("My high-tech space bed; makes sure my\n"
+    "vitals are good during cryosleep and\l"
+    "ensures I'm woken up for emergencies.")
     callnative(ClearMugshot)
     release
     end

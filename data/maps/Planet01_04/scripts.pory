@@ -115,8 +115,7 @@ script Planet01_04_Elgyem {
     playmoncry(SPECIES_ELGYEM, CRY_MODE_ENCOUNTER)
     setvar(VAR_0x8000, SPECIES_ELGYEM)
     callnative(RegisterSpeciesInDex)
-    msgbox("Woah! Elgyem is glowing green-\n"
-    "{COLOR GREEN}{SHADOW LIGHT_GREEN}<Letting the days go by...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}Woah! Elgyem is glowing green-{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     warp(MAP_PLANET01_02, 0, 21, 23)
     waitstate
@@ -126,23 +125,25 @@ script Planet01_04_Elgyem {
 
 script sableye_04 {
 	lock
-	msgbox("Noctowl's eyes open...")
-	fadeScreen(FADE_TO_BLACK)
-    waitse()
-    playmoncry(SPECIES_NOCTOWL, CRY_MODE_ENCOUNTER)
-    waitmoncry()
-	setflag(FLAG_SYS_DOME_SILVER)
-	removeobject(10)
-	addvar(VAR_DAILY_BLENDER, 1)
-    if (var(VAR_DAILY_BLENDER) == 5) {
-		msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}The gate is open.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-	} else {
-	buffernumberstring(STR_VAR_1, VAR_DAILY_BLENDER)
-	msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}{STR_VAR_1} of 5...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-	}
-	fadeScreen(FADE_FROM_BLACK)
-    setvar(VAR_0x8000, SPECIES_NOCTOWL)
-    callnative(RegisterSpeciesInDex)
+    if (flag(FLAG_SYS_DOME_SILVER) == FALSE) {
+        msgbox("Noctowl's eyes open...")
+        fadeScreen(FADE_TO_BLACK)
+        waitse()
+        playmoncry(SPECIES_NOCTOWL, CRY_MODE_ENCOUNTER)
+        waitmoncry()
+        setflag(FLAG_SYS_DOME_SILVER)
+        removeobject(10)
+        addvar(VAR_DAILY_BLENDER, 1)
+        if (var(VAR_DAILY_BLENDER) == 5) {
+            msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}The gate is open.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        } else {
+        buffernumberstring(STR_VAR_1, VAR_DAILY_BLENDER)
+        msgbox("{COLOR GREEN}{SHADOW LIGHT_GREEN}{STR_VAR_1} of 5...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        }
+        fadeScreen(FADE_FROM_BLACK)
+        setvar(VAR_0x8000, SPECIES_NOCTOWL)
+        callnative(RegisterSpeciesInDex)
+    }
 	release
 	end
 }

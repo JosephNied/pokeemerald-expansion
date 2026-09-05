@@ -27,11 +27,16 @@ script Planet01_First_Camp_Cave_UrsalunaEncounter {
     compare(VAR_RESULT, FALSE)
     goto_if_eq(PlayerLost)
 
+    fadeScreen(FADE_TO_BLACK)
+
     setflag(FLAG_UNUSED_0x03B)
     removeobject(1)
 
-    msgbox("The Ursaluna disappeared into the\n"
-    "cave.")
+    msgbox("The Ursaluna scampered away.")
+    waitmessage
+    closemessage
+    fadeScreen(FADE_FROM_BLACK)
+
     setvar(VAR_0x8000, SPECIES_URSALUNA)
     callnative(RegisterSpeciesInDex)
     releaseall
@@ -71,7 +76,7 @@ script Planet01_First_Camp_Cave_EventScript_Item03 {
 
 script Planet01_First_Camp_Cave_HintText01 {
     lock
-    msgbox("Engineer: We made a research base\n"
+    msgbox("Ops Lead: We made a research base\n"
     "here, but the local fauna discovered it\l"
     "and got aggressive, so we better move.\p"
     "There's another cave across the shore,\n"
@@ -82,19 +87,9 @@ script Planet01_First_Camp_Cave_HintText01 {
     "explore those too.")
     waitmessage
     closemessage
-    delay(60)
 
-    setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
-    callnative(DrawMugshot)
-    msgbox("I was hoping to find these guys\n"
-    "by now...")
-    waitmessage
-    callnative(ClearMugshot)
-    release
-
-    if (var(VAR_TEMP_2) == 0) {
+    if (var(VAR_DAILY_SLOTS) == 0) {
         call(voicedialogueABC)
-        setvar(VAR_TEMP_2, 1)
     }
 
     release
@@ -113,12 +108,9 @@ script groundjournal_1 {
     msgbox("Biologist: Though the water here is\n" 
     "safe for our Pokémon to drink, it\l"
     "transformed them in an unexpected way. \l"
-    "They changed colors: The Engineer's \l"
-    "Excadrill and Kingdra, my Venusaur and \l"
-    "Charizard, and Ops' Haxorus. Ops' \l"
-    "Dragonite, however, was fine; I really \l"
-    "want to figure out why Dragonite in \l"
-    "particular is so resilient to change.")
+    "They changed colors: Op's Excadrill,\l"
+    "Kingdra, and Haxorus, and my Venusaur\l"
+    "and Charizard.")
     release
     end
 }
@@ -144,180 +136,219 @@ script voicedialogueABC {
         end
     }
     elif(var(VAR_DAILY_SLOTS) == 1) {
+        special(Script_FadeOutMapMusic)
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<A fly, caught in a web. I'm surprised\n" 
-        "you're still whole, to be honest.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Can you hear me?>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
+        closemessage
         callnative(ClearMugshot)
         release
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
         callnative(DrawMugshot)
-        msgbox("You again! Enough with the games! Just\n" 
-        "tell me who you are!")
+        msgbox("You again!")
         waitmessage
+        closemessage
         callnative(ClearMugshot)
         release
 
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Who am I... Good question... Nothing\n"
-        "important. In truth, I was going to tell\l" 
-        "you how you might escape by getting to\l"
-        "the research facility at the top of the\l"
-        "waterfall. But, I guess I still don't\l"
-        "know if that's what I want... I don't\l"
-        "mean you any harm. But it's probably\l"
-        "better you don't listen to me; a lost\l"
-        "soul in the dark. However you choose to\l"
-        "end this... I'm sorry.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I've decided. We have an opportunity\n"
+        "here to help each other.>")
         waitmessage
+        closemessage
+        callnative(ClearMugshot)
+        release
+        
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+        callnative(DrawMugshot)
+        msgbox("Help each other? But I still don't know\n"
+        "what's going on.")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+        release
+        
+        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+        callnative(DrawMugshot)
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Deoxys, the space virus Pokémon, is\n"
+        "using its psychic power to hold down\l"
+        "your ship. It wants to infect you just\l"
+        "like those scary Pokémon from earlier.\l"
+        "Your only escape is to defeat Deoxys.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        waitmessage
+        closemessage
         callnative(ClearMugshot)
         release
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
         callnative(DrawMugshot)
-        msgbox("Look, you're clearly going through a\n" 
-        "time, but I don't want to be here. Just\l"
-        "tell me what I need to do to get my ship\l"
-        "off the ground.\p"
-        "Hello? Hello?!?!\p"
-        "...Gone again? Damn.")
+        msgbox("Deoxys?! Good grief. But who are you,\n" 
+        "and how is your voice in my head?")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+        callnative(DrawMugshot)
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I am- or, was- the Biologist on the EOD \n"
+        "research team. Deoxys and I are both in\l"
+        "the EOD lab above the waterfall in the \l"
+        "forest. If you can defeat Deoxys, that\l"
+        "will help me too with my... Unlucky\l"
+        "situation. A situation that does have\l" 
+        "the silver lining of allowing my mind to\l" 
+        "project itself across the planet, hence\l"
+        "our mental communication.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+        release
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+        callnative(DrawMugshot)
+        msgbox("That's wild. How do I get to you?")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+        callnative(DrawMugshot)
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I don't know how to get you up the \n"
+        "waterfall yet, but this planet holds \l"
+        "many surprises. That's all I have the \l"
+        "chance to say for now. Good luck. And... \l"
+        "Thank you.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+        release
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+        callnative(DrawMugshot)
+        msgbox("Ok. Well, that's progress!")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        delay(60)
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+        callnative(DrawMugshot)
+        msgbox("Wait, didn't Cap's Emergency Protocol\n"
+        "thing supposedly send the crew home?\l"
+        "Why would the Biologist be left behind?")
         waitmessage
         callnative(ClearMugshot)
+        special(Overworld_PlaySpecialMapMusic)
         addvar(VAR_DAILY_SLOTS, 1)
     }
     elif(var(VAR_DAILY_SLOTS) == 2) {
+        special(Script_FadeOutMapMusic)
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I see you're persevering.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-        waitmessage
-        callnative(ClearMugshot)
-        release
-
-        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
-        callnative(DrawMugshot)
-        msgbox("You again? Got anything meaningful to\n"
-        "say?")
-        waitmessage
-        callnative(ClearMugshot)
-        release
-
-        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
-        callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<...>\n"
-        "<I decided. You need to come to the \l"
-        "primary facility. I don't know how to \l"
-        "get you up the waterfall, but when you\l"
-        "get there, I can guide you. I regret\l"
-        "being a coward about this.\p"
-        "Please don't give up.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Hello, TARC? I need to talk to you.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         callnative(ClearMugshot)
         release
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
         callnative(DrawMugshot)
-        msgbox("Wow, that's a change in tune! Are you\n
-        ready then to tell me who you are?")
+        msgbox("You're back!")
         waitmessage
-        callnative(ClearMugshot)
-
-        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
-        callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<...I would be, the one you've read\n"
-        "about, the Biologist...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-        waitmessage
+        closemessage
         callnative(ClearMugshot)
         release
 
-        setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("Ok. Interesting. Got a name?")
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Yes. Communication takes a lot of\n"
+        "mental focus; focus that I need to use\l"
+        "to keep the force of Deoxys at bay on\l"
+        "this planet.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
+        closemessage
         callnative(ClearMugshot)
+        release
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+        callnative(DrawMugshot)
+        msgbox("Huh? Are you having some kind of\n"
+        "psychic battle with Deoxys right now?!")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+        release
 
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<...>\p"
-        "<We-, I-, ...a miscalculation was made.\n"
-        "If it wasn't obvious, the space virus is\l"
-        "some form of Deoxys. Its psychic power\l"
-        "is holding your ship. Defeat Deoxys,\l"
-        "and you might be able to escape.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Given I'm fully fused with Deoxys, it's \n"
+        "really more of a... personal struggle?\p"
+        "Deoxy's biological imperative is to\n"
+        "spread, but my will can influence it as\l" 
+        "well. I'm going to give you an opening to\l" 
+        "attack it once you get to me.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
+        closemessage
         callnative(ClearMugshot)
         release
+
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+        callnative(DrawMugshot)
+        msgbox("Woah there. You never mentioned that!\n"
+        "...\p"
+        "Wait, if I attack it... Am I attacking\n"
+        "you? Hello?")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        delay(30)
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
         callnative(DrawMugshot)
-        msgbox("I have to do that?! So what are you\n"
-        "up to then?")
+        msgbox("Gone again.")
         waitmessage
         callnative(ClearMugshot)
-
-        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
-        callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<You'll see. Just know, I am helping.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-        waitmessage
-        callnative(ClearMugshot)
-        release
-
-        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
-        callnative(DrawMugshot)
-        msgbox("...How, exactly?")
-        waitmessage
-        callnative(ClearMugshot)
-
-        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
-        callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I'll explain later... my only advice...\n"
-        "The north and south of this planet, we\l"
-        "never fully explored. Look there.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-        waitmessage
-        callnative(ClearMugshot)
-        release
-
-        setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
-        callnative(DrawMugshot)
-        msgbox("Ok. Well, I guess this is progress.")
-        waitmessage
-        callnative(ClearMugshot)
+        special(Overworld_PlaySpecialMapMusic)
         addvar(VAR_DAILY_SLOTS, 1)
     }
     elif(var(VAR_DAILY_SLOTS) == 4) {
+        special(Script_FadeOutMapMusic)
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Hey... Those infected monsters are\n"
-        "coming back. You can't understand now,\l"
-        "but I've been trying to hold them back.\l"
-        "Sorry I'm not stronger. I recommend\l"
-        "you walk slowly, running with likely\l"
-        "alert them.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<TARC. I can't hold them back anymore.\n"
+        "The infected Pokemon are coming back. \l"
+        "If you see them, try to walk slowly;\l"
+        "running will alert them.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
         callnative(DrawMugshot)
-        msgbox("Wow, really? Are you, like ok?")
+        msgbox("Wow, really? Are you ok?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Am I... Ok?\p"
-        "You're starting to sounds like- Well,\n"
-        "whatever.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Am I... Ok? You're starting to sound\n" 
+        "like-\l"
+        "...\p"
+        "Well... It's kind of you to ask that, even\n"
+        "though the answer is obviously no.\l" 
+        "You don't even know me.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
         callnative(DrawMugshot)
-        msgbox("...We're partners now. You're the last\n"
+        msgbox("We're partners now. You're the last\n"
         "person I might ever talk to. I'd prefer\l"
         "if we could be friends.")
         waitmessage
@@ -326,27 +357,12 @@ script voicedialogueABC {
 
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Now you really sound like them. I can't\n"
-        "be much of a 'friend.'>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Good point. Hope to see you soon...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
-        setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
-        callnative(DrawMugshot)
-        msgbox("Pssh, ok, 'Shadow the Edgehog.'")
-        waitmessage
-        closemessage
-        callnative(ClearMugshot)
-
-        setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
-        callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Ugghhh>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-        waitmessage
-        closemessage
-        callnative(ClearMugshot)
-
-
+        special(Overworld_PlaySpecialMapMusic)
         setvar(VAR_DAILY_SLOTS, 6)
         release
     }
@@ -363,7 +379,7 @@ script voicedialogueABC {
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
         callnative(DrawMugshot)
-        msgbox("...Yeah. Got it.")
+        msgbox("Got it!")
         waitmessage
         callnative(ClearMugshot)
     }

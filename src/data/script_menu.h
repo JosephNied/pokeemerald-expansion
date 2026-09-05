@@ -1155,7 +1155,6 @@ static const struct MenuAction sMultichoiceList_Color_Puzzle[] = {
 static const struct MenuAction sMultichoiceList_Explorers_Facts[] = {
     {COMPOUND_STRING("Captain")},
     {COMPOUND_STRING("Biologist")},
-    {COMPOUND_STRING("Engineer")},
     {COMPOUND_STRING("Operations")},
     {gText_Exit},
 };

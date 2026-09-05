@@ -195,8 +195,21 @@ connector_cave_remains::
 # 120 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	msgbox connector_cave_remains_Text_0
 # 127 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	waitmessage
+# 128 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	closemessage
+# 129 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	compare VAR_DAILY_SLOTS, 0
+	goto_if_eq connector_cave_remains_2
+connector_cave_remains_1:
+# 132 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	release
 	end
+
+connector_cave_remains_2:
+# 130 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	call voicedialogueABC
+	goto connector_cave_remains_1
 
 
 ConnectorCave_Cold_Warning_Text_0:

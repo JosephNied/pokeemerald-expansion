@@ -113,12 +113,20 @@ voicetrigger_icecave::
 # 67 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	lock
 # 68 "data/maps/Planet01_ICE_CAVE/scripts.pory"
-	call voicedialogueABC
-# 69 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+	goto_if_unset FLAG_UNUSED_0x8E5, voicetrigger_icecave_2
+voicetrigger_icecave_1:
+# 72 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	setvar VAR_TEMP_2, 1
-# 70 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+# 73 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	release
 	end
+
+voicetrigger_icecave_2:
+# 69 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+	call voicedialogueABC
+# 70 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+	setflag FLAG_UNUSED_0x8E5
+	goto voicetrigger_icecave_1
 
 
 Planet01_Ice_Cave_Carbink_Text_0:

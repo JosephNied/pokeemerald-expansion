@@ -1094,6 +1094,7 @@ enum NationalDexOrder
 #define FOREACH_SPECIES_IN_HOENN_DEX_ORDER(F) \
     F(MAGNEZONE) \
     F(BLISSEY) \
+    F(CRYOGONAL) \
     F(ROTOM) \
     F(BELLOSSOM) \
     F(CLEFABLE) \
