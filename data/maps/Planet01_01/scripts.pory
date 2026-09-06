@@ -643,7 +643,7 @@ script Planet01_01_JirachiAppears {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
-    msgbox("...Jirachi?")
+    msgbox("...A Jirachi?!")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -660,10 +660,9 @@ script Planet01_01_JirachiAppears {
 
     setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
-    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<It looks like you're being protected!\n"
-    "Very lucky...\p"
-    "If you can persevere, I may be able to\n"
-    "help you as well...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Huh. I wasn't expecting that.\n"
+    "You've been bailed out, for now.\p"
+    "This is an interesting opportunity...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -673,7 +672,7 @@ script Planet01_01_JirachiAppears {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
-    msgbox("But who are you? Please tell me!\n"
+    msgbox("Hey, who are you? Please tell me!\n"
     "Hello?\l"
     "...Hello?!\p"
     "...")
@@ -1013,28 +1012,26 @@ script Planet01_01_Ending {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
     callnative(DrawMugshot)
-    msgbox ("...\n"
-    "I've been thinking.\p"
-    "How would you like to join my crew?")
+    msgbox ("Excellent. You know, your whole crew is\n"
+    "back at the primary lab. Don't you think\l"
+    "you should go see them? They can\l"
+    "probably fix you up, get that rust off.")
     waitmessage
     closemessage
     callnative(ClearMugshot)
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox("Kiddo. Are you... Perhaps, being serious?\n"
-    "Why, that would fill my most definitely\l"
-    "real robot soul with joy. Can I be your\l"
-    "Captain?")
+    msgbox("I'll let 'em find me when they find me!\n"
+    "Captain to captain, I think it's time\l"
+    "you get your crew back home!")
     waitmessage
     closemessage
     callnative(ClearMugshot)
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
     callnative(DrawMugshot)
-    msgbox ("Maybe. I think I need a break for a bit.\n"
-    "We'll start by cleaning that rust off of\l"
-    "you. Let's go!")
+    msgbox ("You're right! I guess this is goodbye!")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -1046,7 +1043,7 @@ script Planet01_01_Ending {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
     callnative(DrawMugshot)
-    msgbox("Goodbye!")
+    msgbox("...See you, space trucker!")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -1054,20 +1051,28 @@ script Planet01_01_Ending {
     msgbox("Thanks for playing!\n"
     "Credits:\p"
     "Developers:\n"
-    "dBlue: Coding, graphics, maps, music\l"
-    "Grrrita: Character art, title screen, concepts\l"
-    "Kittycatsaton: Story advice\l"
+    "dBlue: Coding, graphics, writing, maps,\l" 
+    "music\l"
+    "Grrrita: Character, Pokemon, and Prop\l"
+    "Art. Graphics, Titlescreen.\l"
+    "Kittycatsaton: Story brainstorming,\l" 
+    "spaceship layout\l"
     "<><><><>\p"
     "Playtesters: MyNameIsJeff, MayaZ\n"
     "<><><><>\p"
     "Additional credits:\n"
-    "Montblanc: SWSH Party and Summary base and assistance\l"
+    "Montblanc: SWSH Party and Summary base\l" 
+    "and assistance\l"
     "<><><><>\p"
-    "Chunsoft, Emmuffin, and G: Pokémon Mugshots\n"
+    "Chunsoft, Emmuffin, and G: Pokémon\n" 
+    "Mugshots\l"
     "<><><><>\p"
-    "All those who gave advice on the Team Aqua's Hideout Discord!\n"
+    "All those who gave advice on the Team\n" 
+    "Aqua's Hideout Discord!\l"
     "<><><><>\p"
-    "All those who have contributed to Pokeemerald and Pokeemerald-Expanded, making this possible!\n"
+    "All those who have contributed to\n" 
+    "Pokeemerald and Pokeemerald-Expanded,\l" 
+    "making this possible!\l"
     "<><><><>\p"
     "Now, Emerald credits:")
     waitmessage

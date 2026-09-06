@@ -27,29 +27,58 @@ script Planet01_Final_Lab_FinalWalk {
 	lock
 	applymovement(OBJ_EVENT_ID_PLAYER, Movement_ToFlowers1)
 	waitmovement(0)
-	msgbox("...\n"
-    "...\p"
-    "There's a note on the body.\n"
-    "It's addressed to a person I don't\l"
-    "know.\p"
-    "It reads:\p"
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}In the end, I was thinking about you.\n"
-    "Love,\p"
-    "Your Ghost Bird\n"
-    "P.S.\p"
-    "I said I hated it when you called me\n"
-    "that. But I never actually did.\l"
-    "Not once.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-	waitmessage
-	closemessage
-	delay(30)
-    setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
-    msgbox("...I think it's time to leave.\n"
-    "I'll take this back...\l"
-    "Guess I have a new mission.")
+    msgbox("Guys! I beat it the Cell!")
 	waitmessage
 	closemessage
+    callnative(ClearMugshot)
+
+    applymovement(14, moves(face_left))
+    applymovement(13, moves(face_left))
+
+    setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    callnative(DrawMugshot)
+    msgbox("We know! Now, we're back to work.")
+	waitmessage
+	closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    callnative(DrawMugshot)
+    msgbox("First, we need to fix up our lab. Second,\n" 
+    "we need to find out how to cure our\l"
+    "infected mons.\p" 
+    "I have some ideas... But I'll be more\n"
+    "careful to do things the right way.")
+	waitmessage
+	closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+    callnative(DrawMugshot)
+    msgbox("You guys just don't quit! Think it's\n" 
+    "time I leave though.")
+	waitmessage
+	closemessage
+    callnative(ClearMugshot)
+
+    setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    callnative(DrawMugshot)
+    msgbox("Don't be a stranger!\n"
+    "This planet is quite beautiful, when\l"
+    "nothing is chasing you.\p"
+    "Thank you, TARC.")
+	waitmessage
+	closemessage
+    callnative(ClearMugshot)
+
+    applymovement(14, moves(face_right))
+    applymovement(13, moves(face_right))
+
+    delay(30)
+
 	warp(MAP_PLANET01_01, 2, 20, 15)
     waitstate
 	release

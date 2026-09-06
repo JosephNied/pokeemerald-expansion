@@ -4,7 +4,7 @@ gText_Birch_Welcome::
 	.string "Not much else to do as a space-trucker\n"
 	.string "at times like these. I guess it's about\l"
 	.string "time I put the crew back in cryosleep,\l"
-	.string "eh Magnezone?\p"
+	.string "eh Magnezone? Next stop: Home!\p"
 	.string "$"
 
 gText_Birch_Pokemon::

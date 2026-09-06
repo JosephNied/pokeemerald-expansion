@@ -26,6 +26,71 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_DEOXYS_ROCK_COMPLETE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LUCY",
+      "x": 16,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_TEMP_1B"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PHOEBE",
+      "x": 15,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_TEMP_1A"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(JIRACHI)",
+      "x": 14,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_TEMP_1C"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LUCY",
+      "x": 17,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "op1",
+      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PHOEBE",
+      "x": 16,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "bio1",
+      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM"
     }
   ],
   "warp_events": [
@@ -289,7 +354,7 @@
     {
       "type": "sign",
       "x": 17,
-      "y": 8,
+      "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Final_Lab_Interior_FlavorText_Trash1"

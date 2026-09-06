@@ -5858,7 +5858,7 @@ static void Cmd_hitanimation(void)
 
 static u32 GetTrainerMoneyToGive(u16 trainerId)
 {
-    u32 lastMonLevel = 0;
+    /*u32 lastMonLevel = 0;
     u32 moneyReward;
     u8 trainerMoney = 0;
 
@@ -5882,7 +5882,8 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
             moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * trainerMoney;
     }
 
-    return moneyReward;
+    return moneyReward;*/
+    return 0;
 }
 
 static void Cmd_getmoneyreward(void)
