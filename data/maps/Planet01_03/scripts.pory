@@ -359,7 +359,6 @@ script sableye_03 {
         closemessage
         setflag(FLAG_SYS_TOWER_GOLD)
         fadeScreen(FADE_TO_BLACK)
-        waitse()
         playmoncry(SPECIES_NOCTOWL, CRY_MODE_ENCOUNTER)
         waitmoncry()
         removeobject(8)

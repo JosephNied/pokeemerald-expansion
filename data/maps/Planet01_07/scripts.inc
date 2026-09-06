@@ -321,7 +321,7 @@ sableye_07::
 # 188 "data/maps/Planet01_07/scripts.pory"
 	goto_if_unset FLAG_SYS_DOME_GOLD, sableye_07_2
 sableye_07_1:
-# 207 "data/maps/Planet01_07/scripts.pory"
+# 206 "data/maps/Planet01_07/scripts.pory"
 	release
 	end
 
@@ -331,35 +331,33 @@ sableye_07_2:
 # 190 "data/maps/Planet01_07/scripts.pory"
 	fadeScreen FADE_TO_BLACK
 # 191 "data/maps/Planet01_07/scripts.pory"
-	waitse
-# 192 "data/maps/Planet01_07/scripts.pory"
 	playmoncry SPECIES_NOCTOWL, CRY_MODE_ENCOUNTER
-# 193 "data/maps/Planet01_07/scripts.pory"
+# 192 "data/maps/Planet01_07/scripts.pory"
 	waitmoncry
-# 194 "data/maps/Planet01_07/scripts.pory"
+# 193 "data/maps/Planet01_07/scripts.pory"
 	setflag FLAG_SYS_DOME_GOLD
-# 195 "data/maps/Planet01_07/scripts.pory"
+# 194 "data/maps/Planet01_07/scripts.pory"
 	removeobject 11
-# 196 "data/maps/Planet01_07/scripts.pory"
+# 195 "data/maps/Planet01_07/scripts.pory"
 	addvar VAR_DAILY_BLENDER, 1
-# 197 "data/maps/Planet01_07/scripts.pory"
+# 196 "data/maps/Planet01_07/scripts.pory"
 	compare VAR_DAILY_BLENDER, 5
 	goto_if_eq sableye_07_5
-# 200 "data/maps/Planet01_07/scripts.pory"
+# 199 "data/maps/Planet01_07/scripts.pory"
 	buffernumberstring STR_VAR_1, VAR_DAILY_BLENDER
-# 201 "data/maps/Planet01_07/scripts.pory"
+# 200 "data/maps/Planet01_07/scripts.pory"
 	msgbox sableye_07_Text_2
 sableye_07_4:
-# 203 "data/maps/Planet01_07/scripts.pory"
+# 202 "data/maps/Planet01_07/scripts.pory"
 	fadeScreen FADE_FROM_BLACK
-# 204 "data/maps/Planet01_07/scripts.pory"
+# 203 "data/maps/Planet01_07/scripts.pory"
 	setvar VAR_0x8000, SPECIES_NOCTOWL
-# 205 "data/maps/Planet01_07/scripts.pory"
+# 204 "data/maps/Planet01_07/scripts.pory"
 	callnative RegisterSpeciesInDex
 	goto sableye_07_1
 
 sableye_07_5:
-# 198 "data/maps/Planet01_07/scripts.pory"
+# 197 "data/maps/Planet01_07/scripts.pory"
 	msgbox sableye_07_Text_1
 	goto sableye_07_4
 
@@ -417,9 +415,9 @@ sableye_07_Text_0:
 	.string "Noctowl's eyes open...$"
 
 sableye_07_Text_1:
-# 198 "data/maps/Planet01_07/scripts.pory"
+# 197 "data/maps/Planet01_07/scripts.pory"
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}The gate is open.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 sableye_07_Text_2:
-# 201 "data/maps/Planet01_07/scripts.pory"
+# 200 "data/maps/Planet01_07/scripts.pory"
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}{STR_VAR_1} of 5...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"

@@ -546,11 +546,14 @@ movement Movement_Player1 {
 
 script Planet01_01_JirachiAppears {
     lockall
+    playmoncry(SPECIES_DEOXYS, CRY_MODE_ENCOUNTER)
     special(Script_FadeOutMapMusic)
-
+    
     applymovement(19, Movement_Deoxo1_1)
     applymovement(20, Movement_Deoxo2_1)
     waitmovement(0)
+
+    playse(SE_BANG)
 
     delay(30)
 
@@ -597,6 +600,9 @@ script Planet01_01_JirachiAppears {
     closemessage
     callnative(ClearMugshot)
 
+    playmoncry(SPECIES_EXCADRILL, CRY_MODE_ENCOUNTER)
+    playmoncry(SPECIES_VENUSAUR, CRY_MODE_ENCOUNTER)
+
     applymovement(19, Movement_Deoxo1_2)
     applymovement(20, Movement_Deoxo2_2)
     waitmovement(0)
@@ -611,6 +617,8 @@ script Planet01_01_JirachiAppears {
     callnative(ClearMugshot)
 
     fadescreen(FADE_TO_WHITE)
+    playse(SE_M_DETECT)
+    waitse()
 	delay(30)
 	fadescreen(FADE_FROM_WHITE)
 
@@ -660,7 +668,7 @@ script Planet01_01_JirachiAppears {
     setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
     msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I wasn't expecting that.\n"
-    "I've never seen Jirachi before. Seems\p"
+    "I've never seen Jirachi before. Seems\l"
     "like it's protecting you... But why?>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage

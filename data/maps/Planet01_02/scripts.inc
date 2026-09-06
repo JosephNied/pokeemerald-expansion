@@ -842,7 +842,7 @@ sableye_connect::
 # 517 "data/maps/Planet01_02/scripts.pory"
 	goto_if_unset FLAG_SYS_PALACE_SILVER, sableye_connect_2
 sableye_connect_1:
-# 534 "data/maps/Planet01_02/scripts.pory"
+# 537 "data/maps/Planet01_02/scripts.pory"
 	release
 	end
 
@@ -850,34 +850,46 @@ sableye_connect_2:
 # 518 "data/maps/Planet01_02/scripts.pory"
 	msgbox sableye_connect_Text_0
 # 519 "data/maps/Planet01_02/scripts.pory"
-	playmoncry SPECIES_NOCTOWL, CRY_MODE_ENCOUNTER
+	waitmessage
 # 520 "data/maps/Planet01_02/scripts.pory"
-	fadeScreen FADE_TO_BLACK
+	closemessage
 # 521 "data/maps/Planet01_02/scripts.pory"
-	setflag FLAG_SYS_PALACE_SILVER
+	fadeScreen FADE_TO_BLACK
 # 522 "data/maps/Planet01_02/scripts.pory"
-	removeobject 34
+	playmoncry SPECIES_NOCTOWL, CRY_MODE_ENCOUNTER
 # 523 "data/maps/Planet01_02/scripts.pory"
-	addvar VAR_DAILY_BLENDER, 1
+	waitmoncry
 # 524 "data/maps/Planet01_02/scripts.pory"
+	setflag FLAG_SYS_PALACE_SILVER
+# 525 "data/maps/Planet01_02/scripts.pory"
+	removeobject 34
+# 526 "data/maps/Planet01_02/scripts.pory"
+	addvar VAR_DAILY_BLENDER, 1
+# 527 "data/maps/Planet01_02/scripts.pory"
 	compare VAR_DAILY_BLENDER, 5
 	goto_if_eq sableye_connect_5
-# 527 "data/maps/Planet01_02/scripts.pory"
-	buffernumberstring STR_VAR_1, VAR_DAILY_BLENDER
-# 528 "data/maps/Planet01_02/scripts.pory"
-	msgbox sableye_connect_Text_2
+# 529 "data/maps/Planet01_02/scripts.pory"
+	compare VAR_DAILY_BLENDER, 2
+	goto_if_ge sableye_connect_6
 sableye_connect_4:
-# 530 "data/maps/Planet01_02/scripts.pory"
+# 533 "data/maps/Planet01_02/scripts.pory"
 	fadeScreen FADE_FROM_BLACK
-# 531 "data/maps/Planet01_02/scripts.pory"
+# 534 "data/maps/Planet01_02/scripts.pory"
 	setvar VAR_0x8000, SPECIES_NOCTOWL
-# 532 "data/maps/Planet01_02/scripts.pory"
+# 535 "data/maps/Planet01_02/scripts.pory"
 	callnative RegisterSpeciesInDex
 	goto sableye_connect_1
 
 sableye_connect_5:
-# 525 "data/maps/Planet01_02/scripts.pory"
+# 528 "data/maps/Planet01_02/scripts.pory"
 	msgbox sableye_connect_Text_1
+	goto sableye_connect_4
+
+sableye_connect_6:
+# 530 "data/maps/Planet01_02/scripts.pory"
+	buffernumberstring STR_VAR_1, VAR_DAILY_BLENDER
+# 531 "data/maps/Planet01_02/scripts.pory"
+	msgbox sableye_connect_Text_2
 	goto sableye_connect_4
 
 
@@ -1046,9 +1058,9 @@ sableye_connect_Text_0:
 	.string "Noctowl's eyes open...$"
 
 sableye_connect_Text_1:
-# 525 "data/maps/Planet01_02/scripts.pory"
+# 528 "data/maps/Planet01_02/scripts.pory"
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}The gate is open.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 sableye_connect_Text_2:
-# 528 "data/maps/Planet01_02/scripts.pory"
+# 531 "data/maps/Planet01_02/scripts.pory"
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}{STR_VAR_1} of 5...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"

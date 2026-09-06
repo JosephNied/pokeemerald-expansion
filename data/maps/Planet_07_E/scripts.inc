@@ -203,7 +203,7 @@ sableye_07_E::
 # 144 "data/maps/Planet_07_E/scripts.pory"
 	goto_if_unset FLAG_SYS_PALACE_GOLD, sableye_07_E_2
 sableye_07_E_1:
-# 167 "data/maps/Planet_07_E/scripts.pory"
+# 166 "data/maps/Planet_07_E/scripts.pory"
 	release
 	end
 
@@ -213,87 +213,85 @@ sableye_07_E_2:
 # 146 "data/maps/Planet_07_E/scripts.pory"
 	fadeScreen FADE_TO_BLACK
 # 147 "data/maps/Planet_07_E/scripts.pory"
-	waitse
-# 148 "data/maps/Planet_07_E/scripts.pory"
 	playmoncry SPECIES_NOCTOWL, CRY_MODE_ENCOUNTER
-# 149 "data/maps/Planet_07_E/scripts.pory"
+# 148 "data/maps/Planet_07_E/scripts.pory"
 	waitmoncry
-# 150 "data/maps/Planet_07_E/scripts.pory"
+# 149 "data/maps/Planet_07_E/scripts.pory"
 	setflag FLAG_SYS_PALACE_GOLD
-# 151 "data/maps/Planet_07_E/scripts.pory"
+# 150 "data/maps/Planet_07_E/scripts.pory"
 	removeobject 1
-# 152 "data/maps/Planet_07_E/scripts.pory"
+# 151 "data/maps/Planet_07_E/scripts.pory"
 	addvar VAR_DAILY_BLENDER, 1
-# 153 "data/maps/Planet_07_E/scripts.pory"
+# 152 "data/maps/Planet_07_E/scripts.pory"
 	compare VAR_DAILY_BLENDER, 5
 	goto_if_eq sableye_07_E_5
-# 160 "data/maps/Planet_07_E/scripts.pory"
+# 159 "data/maps/Planet_07_E/scripts.pory"
 	buffernumberstring STR_VAR_1, VAR_DAILY_BLENDER
-# 161 "data/maps/Planet_07_E/scripts.pory"
+# 160 "data/maps/Planet_07_E/scripts.pory"
 	msgbox sableye_07_E_Text_2
 sableye_07_E_4:
-# 163 "data/maps/Planet_07_E/scripts.pory"
+# 162 "data/maps/Planet_07_E/scripts.pory"
 	fadeScreen FADE_FROM_BLACK
-# 164 "data/maps/Planet_07_E/scripts.pory"
+# 163 "data/maps/Planet_07_E/scripts.pory"
 	setvar VAR_0x8000, SPECIES_NOCTOWL
-# 165 "data/maps/Planet_07_E/scripts.pory"
+# 164 "data/maps/Planet_07_E/scripts.pory"
 	callnative RegisterSpeciesInDex
 	goto sableye_07_E_1
 
 sableye_07_E_5:
-# 154 "data/maps/Planet_07_E/scripts.pory"
+# 153 "data/maps/Planet_07_E/scripts.pory"
 	msgbox sableye_07_E_Text_1
-# 155 "data/maps/Planet_07_E/scripts.pory"
+# 154 "data/maps/Planet_07_E/scripts.pory"
 	waitmessage
-# 156 "data/maps/Planet_07_E/scripts.pory"
+# 155 "data/maps/Planet_07_E/scripts.pory"
 	closemessage
-# 157 "data/maps/Planet_07_E/scripts.pory"
+# 156 "data/maps/Planet_07_E/scripts.pory"
 	warp MAP_PLANET_07_E, 20, 7, 6
-# 158 "data/maps/Planet_07_E/scripts.pory"
+# 157 "data/maps/Planet_07_E/scripts.pory"
 	waitstate
 	goto sableye_07_E_4
 
 
 killdarktiles::
-# 172 "data/maps/Planet_07_E/scripts.pory"
+# 171 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 10, 10, METATILE_Underwater_darkpuddle_nowarp, FALSE
-# 173 "data/maps/Planet_07_E/scripts.pory"
+# 172 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 11, 10, METATILE_Underwater_darkpuddle_nowarp, FALSE
-# 174 "data/maps/Planet_07_E/scripts.pory"
+# 173 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 12, 10, METATILE_Underwater_darkpuddle_nowarp, FALSE
-# 175 "data/maps/Planet_07_E/scripts.pory"
+# 174 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 13, 10, METATILE_Underwater_darkpuddle_nowarp, FALSE
-# 176 "data/maps/Planet_07_E/scripts.pory"
+# 175 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 14, 10, METATILE_Underwater_darkpuddle_nowarp, FALSE
-# 177 "data/maps/Planet_07_E/scripts.pory"
+# 176 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 15, 10, METATILE_Underwater_darkpuddle_nowarp, FALSE
-# 179 "data/maps/Planet_07_E/scripts.pory"
+# 178 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 10, 11, METATILE_Underwater_darkpuddle_nowarp, FALSE
-# 180 "data/maps/Planet_07_E/scripts.pory"
+# 179 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 10, 12, METATILE_Underwater_darkpuddle_nowarp, FALSE
-# 181 "data/maps/Planet_07_E/scripts.pory"
+# 180 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 10, 13, METATILE_Underwater_darkpuddle_nowarp, FALSE
-# 182 "data/maps/Planet_07_E/scripts.pory"
+# 181 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 10, 14, METATILE_Underwater_darkpuddle_nowarp, FALSE
-# 183 "data/maps/Planet_07_E/scripts.pory"
+# 182 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 10, 15, METATILE_Underwater_darkpuddle_nowarp, FALSE
-# 185 "data/maps/Planet_07_E/scripts.pory"
+# 184 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 15, 11, METATILE_Underwater_darkpuddle_nowarp, FALSE
-# 186 "data/maps/Planet_07_E/scripts.pory"
+# 185 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 15, 12, METATILE_Underwater_darkpuddle_nowarp, FALSE
-# 187 "data/maps/Planet_07_E/scripts.pory"
+# 186 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 15, 13, METATILE_Underwater_darkpuddle_nowarp, FALSE
-# 188 "data/maps/Planet_07_E/scripts.pory"
+# 187 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 15, 14, METATILE_Underwater_darkpuddle_nowarp, FALSE
-# 189 "data/maps/Planet_07_E/scripts.pory"
+# 188 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 15, 15, METATILE_Underwater_darkpuddle_nowarp, FALSE
-# 191 "data/maps/Planet_07_E/scripts.pory"
+# 190 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 11, 15, METATILE_Underwater_darkpuddle_nowarp, FALSE
-# 192 "data/maps/Planet_07_E/scripts.pory"
+# 191 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 12, 15, METATILE_Underwater_darkpuddle_nowarp, FALSE
-# 193 "data/maps/Planet_07_E/scripts.pory"
+# 192 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 13, 15, METATILE_Underwater_darkpuddle_nowarp, FALSE
-# 194 "data/maps/Planet_07_E/scripts.pory"
+# 193 "data/maps/Planet_07_E/scripts.pory"
 	setmetatile 14, 15, METATILE_Underwater_darkpuddle_nowarp, FALSE
 	return
 
@@ -356,9 +354,9 @@ sableye_07_E_Text_0:
 	.string "Noctowl's eyes open...$"
 
 sableye_07_E_Text_1:
-# 154 "data/maps/Planet_07_E/scripts.pory"
+# 153 "data/maps/Planet_07_E/scripts.pory"
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}The gate is open.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 sableye_07_E_Text_2:
-# 161 "data/maps/Planet_07_E/scripts.pory"
+# 160 "data/maps/Planet_07_E/scripts.pory"
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}{STR_VAR_1} of 5...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"

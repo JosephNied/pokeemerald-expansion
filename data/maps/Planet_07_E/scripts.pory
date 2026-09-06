@@ -144,7 +144,6 @@ script sableye_07_E {
 	if (flag(FLAG_SYS_PALACE_GOLD) == FALSE) {
 		msgbox("Noctowl's eyes open...")
 		fadeScreen(FADE_TO_BLACK)
-		waitse()
 		playmoncry(SPECIES_NOCTOWL, CRY_MODE_ENCOUNTER)
 		waitmoncry()
 		setflag(FLAG_SYS_PALACE_GOLD)
