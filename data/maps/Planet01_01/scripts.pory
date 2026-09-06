@@ -234,7 +234,7 @@ script Planet01_01_RobotGreeting {
     lock
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player0)
     waitmovement(0)
-    special(Script_FadeOutMapMusic)
+    //special(Script_FadeOutMapMusic)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_question_mark, face_up))
     waitmovement(OBJ_EVENT_ID_PLAYER)
     setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
@@ -333,7 +333,7 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox("Well sirma'am, it's all account of the \n" 
+    msgbox("Well kiddo, it's all account of the\n" 
     "absurd levels of pure psychic energy\l" 
     "layered on top of it. Yep.")
     waitmessage
@@ -492,8 +492,8 @@ script Planet01_01_RobotGreeting {
     "consists of our incredible Operations\l"
     "Lead, genius Biologist, and of course\l"
     "myself!\p"
-    "Our objective is to establish a facility \n"
-    "for continuous research into alien\l"
+    "Our objective is to establish a facility\n"
+    "for long-term research into alien\l"
     "Pokémon and environments.\p"
     "We've recorded notes for future \n"
     "explorers in hopefully convenient \l"
@@ -660,9 +660,9 @@ script Planet01_01_JirachiAppears {
 
     setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
-    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Huh. I wasn't expecting that.\n"
-    "You've been bailed out, for now.\p"
-    "This is an interesting opportunity...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I wasn't expecting that.\n"
+    "I've never seen Jirachi before. Seems\p"
+    "like it's protecting you. Hm...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)

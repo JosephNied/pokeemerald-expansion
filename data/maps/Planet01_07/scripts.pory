@@ -75,7 +75,7 @@ script Sun_Moon_Check {
 		setflag(FLAG_UNUSED_0x88F)
 		setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
     	callnative(DrawMugshot)
-		msgbox("...It looked reluctant to leave.")
+		msgbox("...It's watching over me. I wonder why?")
 		waitmessage
 		closemessage
 		callnative(ClearMugshot)
@@ -163,7 +163,7 @@ movement Movement_SunMoon_Jirachi2 {
 
 script Planet01_07_HintText01 {
     lock
-    msgbox("Captain: We were able to witness the sun\n"
+    msgbox("Ops Lead: We were able to witness the sun\n"
     "and moon of this planet from the peak.\p"
     "The Lunatone we caught began to faintly\n"
 	"glow with incredible energy; I feel like\l"

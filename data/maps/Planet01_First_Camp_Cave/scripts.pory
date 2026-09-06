@@ -78,7 +78,7 @@ script Planet01_First_Camp_Cave_HintText01 {
     lock
     msgbox("Ops Lead: We made a research base\n"
     "here, but the local fauna discovered it\l"
-    "and got aggressive, so we better move.\p"
+    "and is getting aggressive, so we'll move.\p"
     "There's another cave across the shore,\n"
     "maybe we can check it out?\p"
     "We might need to use our pokemon to dig\n"
@@ -105,12 +105,18 @@ script groundjournal_1 {
     waitmessage
     callnative(ClearMugshot)
 
-    msgbox("Biologist: Though the water here is\n" 
-    "safe for our Pokémon to drink, it\l"
-    "transformed them in an unexpected way. \l"
-    "They changed colors: Op's Excadrill,\l"
-    "Kingdra, and Haxorus, and my Venusaur\l"
-    "and Charizard.")
+    msgbox("Biologist: Getting to explore this\n" 
+    "amazing planet with Ops has been a\l"
+    "dream. Who knew that when we first met\l"
+    "years ago we'd get such an\l"
+    "opportunity?\p"
+    "The Best part? The EDGE OF DAWN\n"
+    "company is perfectly happy with us\l"
+    "doing our research, our way.\p"
+    "This is the perfect place for me to\n"
+    "make my big discovery: The one that's\l"
+    "gonna let Ops and I make our mark on\l"
+    "scientific history.")
     release
     end
 }
@@ -173,11 +179,11 @@ script voicedialogueABC {
         
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Deoxys, the space virus Pokémon, is\n"
-        "using its psychic power to hold down\l"
-        "your ship. It wants to infect you just\l"
-        "like those scary Pokémon from earlier.\l"
-        "Your only escape is to defeat Deoxys.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Your ship being held down by the\n"
+        "psychic power of the Deoxys Cell: An\l"
+        "biological mass that Deoxys, the space\l"
+        "virus Pokémon, spawns from.\p"
+        "Your only escape is to defeat it.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -185,18 +191,19 @@ script voicedialogueABC {
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
         callnative(DrawMugshot)
-        msgbox("Deoxys?! Good grief. But who are you,\n" 
-        "and how is your voice in my head?")
+        msgbox("Deoxys... Cell?! Good grief. But who are\n" 
+        "you, and how is your voice in my head?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
 
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I am- or, was- the Biologist on the EOD \n"
-        "research team. Deoxys and I are both in\l"
-        "the EOD lab above the waterfall in the \l"
-        "forest. If you can defeat Deoxys, that\l"
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I am- or, was- the Biologist on the EOD\n"
+        "research team. The Deoxys Cell and I\l"
+        "are both in the EOD lab above the\l"
+        "waterfall.\p"
+        "If you can defeat the Deoxys Cell, that\n"
         "will help me too with my... Unlucky\l"
         "situation. A situation that does have\l" 
         "the silver lining of allowing my mind to\l" 
@@ -217,9 +224,9 @@ script voicedialogueABC {
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
         msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I don't know how to get you up the \n"
-        "waterfall yet, but this planet holds \l"
-        "many surprises. That's all I have the \l"
-        "chance to say for now. Good luck. And... \l"
+        "waterfall yet, but this planet holds\l"
+        "many surprises. That's all I have the\l"
+        "chance to say for now. Good luck. And...\l"
         "Thank you.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         closemessage
@@ -233,7 +240,7 @@ script voicedialogueABC {
         closemessage
         callnative(ClearMugshot)
 
-        delay(60)
+        delay(30)
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
         callnative(DrawMugshot)
@@ -266,8 +273,8 @@ script voicedialogueABC {
         callnative(DrawMugshot)
         msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Yes. Communication takes a lot of\n"
         "mental focus; focus that I need to use\l"
-        "to keep the force of Deoxys at bay on\l"
-        "this planet.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        "to keep the force of the Deoxys Cell\l"
+        "at bay on this planet.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -276,7 +283,8 @@ script voicedialogueABC {
         setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
         callnative(DrawMugshot)
         msgbox("Huh? Are you having some kind of\n"
-        "psychic battle with Deoxys right now?!")
+        "psychic battle with the Deoxys Cell\l"
+        "now?!")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -284,7 +292,7 @@ script voicedialogueABC {
 
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Given I'm fully fused with Deoxys, it's \n"
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Given I'm fully fused with it, it's\n"
         "really more of a... personal struggle?\p"
         "Deoxy's biological imperative is to\n"
         "spread, but my will can influence it as\l" 
@@ -320,7 +328,7 @@ script voicedialogueABC {
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
         msgbox("{COLOR RED}{SHADOW LIGHT_RED}<TARC. I can't hold them back anymore.\n"
-        "The infected Pokemon are coming back. \l"
+        "The infected Pokemon are coming back.\l"
         "If you see them, try to walk slowly;\l"
         "running will alert them.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage

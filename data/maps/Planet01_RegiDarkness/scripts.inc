@@ -24,23 +24,23 @@ RegiDarkness::
 # 16 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	compare VAR_TEMP_0, 0
 	goto_if_eq RegiDarkness_1
-# 52 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 43 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_PLAYER_DETERMINED
-# 53 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 44 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	callnative DrawMugshot
-# 54 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 45 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	msgbox RegiDarkness_Text_1
-# 59 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 47 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	waitmessage
-# 60 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 48 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	closemessage
-# 61 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 49 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	callnative ClearMugshot
-# 62 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 50 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	warp MAP_SPACESHIP_DEV, 0, 12, 7
-# 63 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 51 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	waitstate
-# 64 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 52 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	release
 	end
 
@@ -49,33 +49,33 @@ RegiDarkness_1:
 	setvar VAR_TEMP_0, 1
 # 18 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	msgbox RegiDarkness_Text_0
-# 27 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 21 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	waitse
-# 28 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 22 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	playmoncry SPECIES_REGISTEEL, CRY_MODE_ENCOUNTER
-# 29 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 23 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	waitmoncry
-# 30 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 24 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	special SetBossBattle
-# 31 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 25 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	setwildbattle SPECIES_REGISTEEL, 80, ITEM_NONE
-# 36 "data/maps/Planet01_RegiDarkness/scripts.pory"
-	dowildbattle
-# 37 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 30 "data/maps/Planet01_RegiDarkness/scripts.pory"
+	special StartRegiBattle
+# 31 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	special BossBattleOff
-# 38 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 32 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	setvar VAR_0x8000, SPECIES_REGISTEEL
-# 39 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 33 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	callnative RegisterSpeciesInDex
-# 40 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 34 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	giveitem ITEM_COMET_SHARD, 1
-# 42 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 36 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	msgbox RegiDarkness_Text_1
-# 47 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 38 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	warp MAP_SPACESHIP_DEV, 0, 12, 7
-# 48 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 39 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	waitstate
-# 49 "data/maps/Planet01_RegiDarkness/scripts.pory"
+# 40 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	release
 	end
 
@@ -83,19 +83,10 @@ RegiDarkness_1:
 RegiDarkness_Text_0:
 # 18 "data/maps/Planet01_RegiDarkness/scripts.pory"
 	.string "There's half-eaten fruit lying at the\n"
-	.string "base of the tree...\p"
-	.string "Isn't it strange, that this place\n"
-	.string "exists?\p"
-	.string "That any place exists?\p"
-	.string "We must be here for a reason,\n"
-	.string "There must be something I'm supposed\l"
-	.string "to do.\p"
-	.string "Oh, God... What am I supposed to do...?$"
+	.string "base of the tree.\p"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}A strange feeling is coming over me...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 RegiDarkness_Text_1:
-# 42 "data/maps/Planet01_RegiDarkness/scripts.pory"
-	.string "I still don't know what's going on.\n"
-	.string "...I think that's ok. I don't think I'm\l"
-	.string "expected to.\p"
-	.string "It's time to get out of here. I really \n"
-	.string "want to get home.$"
+# 36 "data/maps/Planet01_RegiDarkness/scripts.pory"
+	.string "The dark force has been defeated.\n"
+	.string "Let's get out of here!$"

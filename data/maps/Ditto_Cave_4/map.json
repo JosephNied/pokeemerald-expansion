@@ -2,7 +2,7 @@
   "id": "MAP_DITTO_CAVE_4",
   "name": "Ditto_Cave_4",
   "layout": "LAYOUT_DITTO_CAVE_4",
-  "music": "MUS_B_PYRAMID",
+  "music": "MUS_SEALED_CHAMBER",
   "region_map_section": "MAPSEC_PLANET_CAVES_01",
   "requires_flash": true,
   "weather": "WEATHER_FOG_HORIZONTAL",

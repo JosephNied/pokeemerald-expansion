@@ -573,286 +573,288 @@ Final_Lab_Interior_BiologistEncounter::
 # 378 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative ClearMugshot
 # 380 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_OPS_TEAR2
-# 381 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	callnative DrawMugshot
-# 382 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	msgbox Final_Lab_Interior_BiologistEncounter_Text_14
-# 394 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	waitmessage
-# 395 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	closemessage
-# 396 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	callnative ClearMugshot
-# 398 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_DETERMINED
-# 399 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	callnative DrawMugshot
-# 400 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	msgbox Final_Lab_Interior_BiologistEncounter_Text_15
-# 403 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	waitmessage
-# 404 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	closemessage
-# 405 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	callnative ClearMugshot
-# 407 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	fadescreen FADE_TO_WHITE
-# 408 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	playmoncry SPECIES_MINIOR, CRY_MODE_ENCOUNTER
-# 409 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	delay 30
-# 410 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	delay 30
-# 411 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	removeobject 1
-# 412 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	addobject 3
-# 413 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	applymovement 3, Final_Lab_Interior_BiologistEncounter_Movement_5
-# 414 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	applymovement 1, Final_Lab_Interior_BiologistEncounter_Movement_5
-# 415 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	fadescreen FADE_FROM_WHITE
-# 417 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_BIO_HSMILE
-# 418 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	callnative DrawMugshot
-# 419 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	msgbox Final_Lab_Interior_BiologistEncounter_Text_16
-# 420 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	waitmessage
-# 421 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	closemessage
-# 422 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	callnative ClearMugshot
-# 424 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	delay 30
-# 426 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	applymovement 3, Final_Lab_Interior_BiologistEncounter_Movement_4
-# 427 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	waitmovement 0
-# 429 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	delay 30
-# 431 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_BIO_HSMILE
-# 432 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	callnative DrawMugshot
-# 433 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	msgbox Final_Lab_Interior_BiologistEncounter_Text_17
-# 436 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	waitmessage
-# 437 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	closemessage
-# 438 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	callnative ClearMugshot
-# 440 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_OPS_TEAR2
-# 441 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	callnative DrawMugshot
-# 442 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	msgbox Final_Lab_Interior_BiologistEncounter_Text_18
-# 443 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	waitmessage
-# 444 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	closemessage
-# 445 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	callnative ClearMugshot
-# 447 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	delay 30
-# 449 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_CONFUSED
-# 450 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	callnative DrawMugshot
-# 451 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	msgbox Final_Lab_Interior_BiologistEncounter_Text_19
-# 453 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	waitmessage
-# 454 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	closemessage
-# 455 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	callnative ClearMugshot
-# 457 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	applymovement 3, Final_Lab_Interior_BiologistEncounter_Movement_5
-# 458 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	applymovement 2, Final_Lab_Interior_BiologistEncounter_Movement_5
-# 459 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	waitmovement 0
-# 461 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_BIO_HSMILE
-# 462 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 382 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_OPS_TEAR2
+# 383 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative DrawMugshot
-# 463 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	msgbox Final_Lab_Interior_BiologistEncounter_Text_20
-# 465 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 384 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	msgbox Final_Lab_Interior_BiologistEncounter_Text_14
+# 396 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	waitmessage
-# 466 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 397 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	closemessage
-# 467 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 398 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative ClearMugshot
-# 469 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 400 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_PLAYER_DETERMINED
-# 470 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 401 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative DrawMugshot
-# 471 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	msgbox Final_Lab_Interior_BiologistEncounter_Text_21
-# 473 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 402 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	msgbox Final_Lab_Interior_BiologistEncounter_Text_15
+# 405 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	waitmessage
-# 474 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 406 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	closemessage
-# 475 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 407 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative ClearMugshot
-# 477 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 409 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	fadescreen FADE_TO_WHITE
+# 410 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	playmoncry SPECIES_MINIOR, CRY_MODE_ENCOUNTER
+# 411 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	delay 30
+# 412 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	delay 30
+# 413 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	removeobject 1
+# 414 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	addobject 3
+# 415 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	applymovement 3, Final_Lab_Interior_BiologistEncounter_Movement_5
+# 416 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	applymovement 1, Final_Lab_Interior_BiologistEncounter_Movement_5
+# 417 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	fadescreen FADE_FROM_WHITE
+# 419 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_BIO_HSMILE
-# 478 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 420 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative DrawMugshot
-# 479 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	msgbox Final_Lab_Interior_BiologistEncounter_Text_22
-# 481 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 421 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	msgbox Final_Lab_Interior_BiologistEncounter_Text_16
+# 422 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	waitmessage
-# 482 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 423 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	closemessage
-# 483 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 424 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative ClearMugshot
+# 426 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	delay 30
+# 428 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	applymovement 3, Final_Lab_Interior_BiologistEncounter_Movement_4
+# 429 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	waitmovement 0
+# 431 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	delay 30
+# 433 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_BIO_HSMILE
+# 434 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative DrawMugshot
+# 435 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	msgbox Final_Lab_Interior_BiologistEncounter_Text_17
+# 438 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	waitmessage
+# 439 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	closemessage
+# 440 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative ClearMugshot
+# 442 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_OPS_TEAR2
+# 443 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative DrawMugshot
+# 444 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	msgbox Final_Lab_Interior_BiologistEncounter_Text_18
+# 445 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	waitmessage
+# 446 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	closemessage
+# 447 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative ClearMugshot
+# 449 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	delay 30
+# 451 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_CONFUSED
+# 452 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative DrawMugshot
+# 453 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	msgbox Final_Lab_Interior_BiologistEncounter_Text_19
+# 455 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	waitmessage
+# 456 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	closemessage
+# 457 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative ClearMugshot
+# 459 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	applymovement 3, Final_Lab_Interior_BiologistEncounter_Movement_5
+# 460 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	applymovement 2, Final_Lab_Interior_BiologistEncounter_Movement_5
+# 461 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	waitmovement 0
+# 463 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_BIO_HSMILE
+# 464 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative DrawMugshot
+# 465 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	msgbox Final_Lab_Interior_BiologistEncounter_Text_20
+# 467 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	waitmessage
+# 468 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	closemessage
+# 469 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative ClearMugshot
+# 471 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_DETERMINED
+# 472 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative DrawMugshot
+# 473 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	msgbox Final_Lab_Interior_BiologistEncounter_Text_21
+# 475 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	waitmessage
+# 476 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	closemessage
+# 477 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative ClearMugshot
+# 479 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_BIO_HSMILE
+# 480 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative DrawMugshot
+# 481 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	msgbox Final_Lab_Interior_BiologistEncounter_Text_22
+# 483 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	waitmessage
+# 484 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	closemessage
 # 485 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	callnative ClearMugshot
 # 487 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setflag FLAG_TEMP_1C
-# 488 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setflag FLAG_TEMP_1A
+	fadescreen FADE_TO_BLACK
 # 489 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setflag FLAG_TEMP_1B
+	setflag FLAG_TEMP_1C
 # 490 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	removeobject 4
+	setflag FLAG_TEMP_1A
 # 491 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	removeobject 3
+	setflag FLAG_TEMP_1B
 # 492 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	removeobject 2
+	removeobject 4
 # 493 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
+	removeobject 3
 # 494 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	addobject 5
+	removeobject 2
 # 495 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	addobject 6
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
+# 496 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	addobject 5
 # 497 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	addobject 6
 # 499 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setvar VAR_TEMP_1, 1
-# 500 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setflag FLAG_REGISTERED_VALERIE
+	fadescreen FADE_FROM_BLACK
 # 501 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	setvar VAR_TEMP_1, 1
+# 502 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	setflag FLAG_REGISTERED_VALERIE
+# 503 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	release
 	end
 
 
-# 505 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-Ops_moveup1:
-# 506 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	walk_up
 # 507 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	walk_up
+Ops_moveup1:
 # 508 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	walk_up
 # 509 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	walk_up
 # 510 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	walk_up
+# 511 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	walk_up
+# 512 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	face_up
 	step_end
 
-# 513 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-Ops_moveup2:
-# 514 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	walk_up
 # 515 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	walk_up
+Ops_moveup2:
 # 516 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	walk_up
 # 517 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	walk_up
 # 518 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	walk_up
+# 519 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	walk_up
+# 520 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	face_left
 	step_end
 
-# 521 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-Movement_JirachiPlanetLab:
-# 522 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	face_down
 # 523 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	set_visible
+Movement_JirachiPlanetLab:
 # 524 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	delay_4
+	face_down
 # 525 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	set_invisible
+	set_visible
 # 526 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	delay_4
 # 527 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	set_visible
+	set_invisible
 # 528 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	delay_4
 # 529 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	set_invisible
+	set_visible
 # 530 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	delay_4
 # 531 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	set_visible
-# 532 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	delay_8
-# 533 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	set_invisible
+# 532 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	delay_4
+# 533 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	set_visible
 # 534 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	delay_8
 # 535 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	set_visible
+	set_invisible
 # 536 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	delay_8
 # 537 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	set_invisible
+	set_visible
 # 538 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	delay_8
 # 539 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	set_invisible
+# 540 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	delay_8
+# 541 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	set_visible
 	step_end
 
 bio1::
-# 543 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	lock
-# 544 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	faceplayer
 # 545 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+	lock
 # 546 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	callnative DrawMugshot
+	faceplayer
 # 547 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	msgbox bio1_Text_0
+	setvar VAR_0x8000, MUGSHOT_BIO_HSMILE
 # 548 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	waitmessage
+	callnative DrawMugshot
 # 549 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	closemessage
+	msgbox bio1_Text_0
 # 550 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	callnative ClearMugshot
+	waitmessage
 # 551 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	closemessage
+# 552 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative ClearMugshot
+# 553 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	release
 	end
 
 
 op1::
-# 556 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	lock
-# 557 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	faceplayer
 # 558 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+	lock
 # 559 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	callnative DrawMugshot
+	faceplayer
 # 560 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_OPS_SMILE
+# 561 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative DrawMugshot
+# 562 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	msgbox op1_Text_0
-# 563 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	waitmessage
-# 564 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	closemessage
 # 565 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	callnative ClearMugshot
+	waitmessage
 # 566 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	closemessage
+# 567 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	callnative ClearMugshot
+# 568 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	release
 	end
 
@@ -889,9 +891,9 @@ Final_Lab_Interior_BiologistEncounter_Movement_4:
 	face_right
 	step_end
 
-# 413 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 380 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 Final_Lab_Interior_BiologistEncounter_Movement_5:
-# 413 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 380 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	face_down
 	step_end
 
@@ -1043,7 +1045,7 @@ Final_Lab_Interior_BiologistEncounter_Text_13:
 	.string "Jirachi!$"
 
 Final_Lab_Interior_BiologistEncounter_Text_14:
-# 382 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 384 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	.string "The universe is full of surprises, eh?\n"
 	.string "Did you forget that Jirachi is the wish\l"
 	.string "Pokémon? I encountered it floating in\l"
@@ -1058,51 +1060,51 @@ Final_Lab_Interior_BiologistEncounter_Text_14:
 	.string "chance that...$"
 
 Final_Lab_Interior_BiologistEncounter_Text_15:
-# 400 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 402 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	.string "Say no more, Ops! The name is TARC, by\n"
 	.string "the way. Nice to meet you.\p"
 	.string "Hey Jirachi, I wish...$"
 
 Final_Lab_Interior_BiologistEncounter_Text_16:
-# 419 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 421 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	.string "I'm... Whole...$"
 
 Final_Lab_Interior_BiologistEncounter_Text_17:
-# 433 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 435 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	.string "I'm... So happy.\n"
 	.string "Though, as a scientist, I must say that\l"
 	.string "wishes make very little sense!$"
 
 Final_Lab_Interior_BiologistEncounter_Text_18:
-# 442 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 444 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	.string "Not everything has to!$"
 
 Final_Lab_Interior_BiologistEncounter_Text_19:
-# 451 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 453 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	.string "Hate to mention this now, but things\n"
 	.string "aren't over yet, are they?$"
 
 Final_Lab_Interior_BiologistEncounter_Text_20:
-# 463 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 465 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	.string "That's right! The Deoxys Cell is still\n"
 	.string "alive. We need to destroy it!$"
 
 Final_Lab_Interior_BiologistEncounter_Text_21:
-# 471 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 473 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	.string "Guys, you can leave it to me.\n"
 	.string "I've been preparing for this.$"
 
 Final_Lab_Interior_BiologistEncounter_Text_22:
-# 479 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 481 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	.string "It's in the basement, behind us.\n"
 	.string "...Thank you, TARC.$"
 
 bio1_Text_0:
-# 547 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 549 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	.string "Thank you, TARC, for your selfless wish.$"
 
 op1_Text_0:
-# 560 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+# 562 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	.string "Kick its ass! I would, but most of my\n"
 	.string "Pokémon are still infected... It was\l"
 	.string "rough getting here.$"

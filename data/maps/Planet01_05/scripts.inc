@@ -237,7 +237,7 @@ Planet01_05_DusknoirEncounter_Text_1:
 
 Planet01_05_HintText01_Text_0:
 # 85 "data/maps/Planet01_05/scripts.pory"
-	.string "Engineer: The trees here are giving off\n"
+	.string "Ops: The trees here are giving off\n"
 	.string "a mysterious glow... The mists here\l"
 	.string "remind me of the anomalous cave we\l"
 	.string "discovered earlier.\p"

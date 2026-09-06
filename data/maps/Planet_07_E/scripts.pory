@@ -22,25 +22,19 @@ script gatemessage {
 	setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
     callnative(DrawMugshot)
     msgbox("There's some faded text... I've never\n"
-	"seen a written language like this, but I\l"
-	"feel like I can understand it...")
+	"seen a written language like this, but\l"
+	"somehow I feel like I can read it?")
     waitmessage
     callnative(ClearMugshot)
 
 	msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}When five eyes open, so does the gate.\n"
 	"There are many trees in the garden\l"
 	"beneath the black pool, but only one\l"
-	"was designed for that special purpose.\p"
-	"Your antlers are heavy. Your body is\n" 
-	"bare.\p"
-	"Your heart is striving after wind, all\n" 
-	"is vanity. So what will you do?{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	"was designed with that special purpose.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 
 	setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
     callnative(DrawMugshot)
-    msgbox("What the? Who would have written this?\n"
-	"Doesn't seem like something the\l"
-	"EOD researchers would have written.")
+    msgbox("What the? Who would have written this?")
     waitmessage
 	closemessage
     callnative(ClearMugshot)
@@ -48,55 +42,94 @@ script gatemessage {
 	if ((var(VAR_DAILY_SLOTS) == 0) || (var(VAR_DAILY_SLOTS) == 1))  {
 		releaseall
 		end
-	} else {
+	} elif (var(VAR_DAILY_SLOTS) == 8) {
 		setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
 		callnative(DrawMugshot)
-		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<That's not what it said when I was\n"
-		"here last. But I think that makes\l"
-		"sense, actually.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I'm afraid... I might know.\n"
+		"This pool is where I found the Deoxys\l"
+		"Cell.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		waitmessage
+		closemessage
+		callnative(ClearMugshot)
+
+
+		setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+		callnative(DrawMugshot)
+		msgbox("Huh. But what's with the creepy text?")
+		waitmessage
+		closemessage
+		callnative(ClearMugshot)
+
+		setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+		callnative(DrawMugshot)
+		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<After merging with the Deoxys Cell and\n"
+		"triggering the Emergency Protocol, my\l"
+		"mind unleashed a wave of negative\l" 
+		"psychic energy. I think... It manifested\l"
+		"something down in that pool.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 		waitmessage
 		closemessage
 		callnative(ClearMugshot)
 
 		setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
 		callnative(DrawMugshot)
-		msgbox("What do you mean?")
+		msgbox("Manifested something? Like what?")
 		waitmessage
 		closemessage
 		callnative(ClearMugshot)
 
 		setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
 		callnative(DrawMugshot)
-		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<This is where I discovered the Deoxys\n"
-		"cell. Or, where it discovered me? Just\l"
-		"as I began to fear my research would\l"
-		"never be important enough, like a\l" 
-		"miracle it presented itself to me here.\p"
-		"In my present psychic state, I can\n"
-		"sense that there's a dark entity in the\l" 
-		"water... Maybe it could see my pride and\l" 
-		"and insecurities, and manifested the\l"
-		"Deoxys cell to tempt me to fall.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<A dark entity... I think it has the\n"
+		"Shadow Crystal. We need to find a way\l"
+		"down there and defeat it.\p"
+		"I guess Jirachi is having you clean up\n"
+		"my mess. I'm so sorry.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 		waitmessage
 		closemessage
 		callnative(ClearMugshot)
+
+	} else {
+		setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+		callnative(DrawMugshot)
+		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I'm afraid... I might know.\n"
+		"This pool is where I found the Deoxys\l"
+		"Cell.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		waitmessage
+		closemessage
+		callnative(ClearMugshot)
+
 
 		setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
 		callnative(DrawMugshot)
-		msgbox("So you're saying the literal devil is in\n"
-		"this lake.")
+		msgbox("Huh. But what's with the creepy text?")
 		waitmessage
 		closemessage
 		callnative(ClearMugshot)
 
 		setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
 		callnative(DrawMugshot)
-		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Well, it's just speculation. Maybe the\n"
-		"cell was a coincidence, but something\l"
-		"giving bad vibes is definitely down\l"
-		"there.\p"
-		"If you find some way down and are\n" 
-		"tested like I was... Don't fail.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<After merging with the Deoxys Cell and\n"
+		"triggering the Emergency Protocol, my\l"
+		"mind unleashed a wave of negative\l" 
+		"psychic energy. I think... It manifested\l"
+		"something down in that pool.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		waitmessage
+		closemessage
+		callnative(ClearMugshot)
+
+		setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+		callnative(DrawMugshot)
+		msgbox("Manifested something? Like what?")
+		waitmessage
+		closemessage
+		callnative(ClearMugshot)
+
+		setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+		callnative(DrawMugshot)
+		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<A dark entity... We should avoid this\n"
+		"place. It could be dangerous. Plus the\l"
+		"vibe is terrible.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 		waitmessage
 		closemessage
 		callnative(ClearMugshot)

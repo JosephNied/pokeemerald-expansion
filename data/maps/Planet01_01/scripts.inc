@@ -347,8 +347,6 @@ Planet01_01_RobotGreeting::
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player0
 # 236 "data/maps/Planet01_01/scripts.pory"
 	waitmovement 0
-# 237 "data/maps/Planet01_01/scripts.pory"
-	special Script_FadeOutMapMusic
 # 238 "data/maps/Planet01_01/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Planet01_01_RobotGreeting_Movement_0
 # 239 "data/maps/Planet01_01/scripts.pory"
@@ -728,7 +726,7 @@ Planet01_01_RobotGreeting::
 # 488 "data/maps/Planet01_01/scripts.pory"
 	setflag FLAG_REGISTERED_ROSE
 # 490 "data/maps/Planet01_01/scripts.pory"
-	msgbox Planet01_01_HintText01_Text_0
+	msgbox Planet01_01_RobotGreeting_Text_27
 # 503 "data/maps/Planet01_01/scripts.pory"
 	setflag FLAG_TEMP_9
 # 504 "data/maps/Planet01_01/scripts.pory"
@@ -1807,7 +1805,7 @@ Planet01_01_RobotGreeting_Text_10:
 
 Planet01_01_RobotGreeting_Text_11:
 # 336 "data/maps/Planet01_01/scripts.pory"
-	.string "Well sirma'am, it's all account of the \n"
+	.string "Well kiddo, it's all account of the\n"
 	.string "absurd levels of pure psychic energy\l"
 	.string "layered on top of it. Yep.$"
 
@@ -1882,6 +1880,22 @@ Planet01_01_RobotGreeting_Text_26:
 # 476 "data/maps/Planet01_01/scripts.pory"
 	.string "Guess I'll start reading these notes!$"
 
+Planet01_01_RobotGreeting_Text_27:
+# 490 "data/maps/Planet01_01/scripts.pory"
+	.string "This is the captain of the EDGE OF DAWN,\n"
+	.string "or EOD, research expedition. Our team\l"
+	.string "consists of our incredible Operations\l"
+	.string "Lead, genius Biologist, and of course\l"
+	.string "myself!\p"
+	.string "Our objective is to establish a facility\n"
+	.string "for long-term research into alien\l"
+	.string "Pokémon and environments.\p"
+	.string "We've recorded notes for future \n"
+	.string "explorers in hopefully convenient \l"
+	.string "places!\p"
+	.string "Note: The gravity is low here. Tall \n"
+	.string "ledges can be scaled easily!$"
+
 Planet01_01_JirachiAppears_Text_0:
 # 565 "data/maps/Planet01_01/scripts.pory"
 	.string "Uh oh.\n"
@@ -1918,9 +1932,9 @@ Planet01_01_JirachiAppears_Text_6:
 
 Planet01_01_JirachiAppears_Text_7:
 # 663 "data/maps/Planet01_01/scripts.pory"
-	.string "{COLOR RED}{SHADOW LIGHT_RED}<Huh. I wasn't expecting that.\n"
-	.string "You've been bailed out, for now.\p"
-	.string "This is an interesting opportunity...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<I wasn't expecting that.\n"
+	.string "I've never seen Jirachi before. Seems\p"
+	.string "like it's protecting you. Hm...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Planet01_01_JirachiAppears_Text_8:
 # 675 "data/maps/Planet01_01/scripts.pory"

@@ -82,7 +82,7 @@ movement Movement_DusknoirAppears {
 
 script Planet01_05_HintText01 {
     lock
-    msgbox("Engineer: The trees here are giving off\n"
+    msgbox("Ops: The trees here are giving off\n"
     "a mysterious glow... The mists here\l"
     "remind me of the anomalous cave we\l"
     "discovered earlier.\p"

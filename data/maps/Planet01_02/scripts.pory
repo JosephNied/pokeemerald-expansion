@@ -201,19 +201,20 @@ script Jirachi_goes_to_ship {
     setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
     msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I can read its mind... It wont let you\n"
-    "past it unless you bring it a Comet\l"
-    "Shard. I think I know why...\p"
-    "Looks like we aren't the only ones\n"
-    "being threatened by all this.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    "past unless you bring it a Shadow\l"
+    "Crystal, apparently.\p"
+    "helping us because it understands that\n"
+    "Deoxys threatens all life?>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
+    setvar(VAR_DAILY_SLOTS ,8)
 
     checkitem(ITEM_COMET_SHARD, 1)
     if (var(VAR_RESULT) == FALSE) {
         setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
         callnative(DrawMugshot)
-        msgbox("I don't get it. What's a Comet Shard, and\n"
+        msgbox("I don't get it. What's a Shadow Crystal, and\n"
         "where can we get one?")
         waitmessage
         closemessage
@@ -221,11 +222,10 @@ script Jirachi_goes_to_ship {
 
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<The dark pool... Go South to the channel \n"
-        "below the Shoreline, then go West.\l"
-        "There's a dark place over there... It's\l" 
-        "where my trouble began. We'll find one\l" 
-        "there.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I have no clue. But, I get the feeling\n"
+        "it has to do with... The dark pool.\p"
+        "Below the Shoreline, to the far West.\n"
+        "I'll explain more when we get there.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -238,7 +238,7 @@ script Jirachi_goes_to_ship {
         setvar(VAR_TEMP_F, 1)
         setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
         callnative(DrawMugshot)
-        msgbox("Well, I have the Comet Shard now!")
+        msgbox("Well, I have the Shadow Crystal now!")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -366,11 +366,11 @@ script Found_Ruby {
 
 script Planet01_02_HintText01 {
     lock
-    msgbox("Ops Lead: Note to self. Do not wear\n"
-    "sweet smelling perfume the next time\l"
-    "I climb this mountain.\p"
-    "There's a strong pokemon at the top\n"
-    "who is too much of a fan of it!")
+    msgbox("Biologist: It'd be a bad idea to wear\n"
+    "sweet perfume when climbing this\l"
+    "mountain.\p"
+    "There's a strong pokemon up here\n"
+    "that would love it too much!")
     if (var(VAR_CAPTAIN_DIALOGUE) == 1) {
         clearflag(FLAG_REGISTERED_CRISTIN)
     } elif (var(VAR_CAPTAIN_DIALOGUE) == 2) {
@@ -427,18 +427,16 @@ script Planet01_02_HintText03 {
     waitmessage
     closemessage
     callnative(ClearMugshot)
-
     setvar (VAR_CAPTAIN_DIALOGUE, 3)
-
     release
     end
 }
 
 script Planet01_02_HintText04 {
     lock
-    msgbox("Engineer: We couldn't find a Pokemon\n"
-    "on this planet with the move {COLOR BLUE}{SHADOW LIGHT_BLUE}Waterfall;\l"
-    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}thankfully had brought our own.")
+    msgbox("Ops Lead: We couldn't find a Pokemon on\n"
+    "this planet with the move {COLOR BLUE}{SHADOW LIGHT_BLUE}Waterfall;\l"
+    "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}thankfully my Kingdra knows it!")
     release
     end
 }
@@ -447,7 +445,7 @@ script Planet01_02_HintText05 {
     lock
     msgbox("Ops Lead: There's a surprising amount\n"
     "of greenery here for a planet with such\l"
-    "a light atmosphere!")
+    "a light atmosphere.")
     release
     end
 }

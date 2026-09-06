@@ -61,8 +61,7 @@ script start_ship_intro {
         callnative(DrawMugshot)
         msgbox("What the heck?! I can't get off the\n"
         "ground! It's like something is holding\l"
-        "us down, I've never seen anything like\l"
-        "this before.")
+        "us down.")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -598,6 +597,19 @@ script EventScript_MapsItem {
     callnative(ClearMugshot)
     closemessage
 
+    release
+    end
+}
+
+script maincomputer {
+    lock
+    setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+    callnative(DrawMugshot)
+    msgbox("The ship's computer isn't reporting an\n"
+    "issue. So why can't it lift off?")
+    waitmessage
+    closemessage
+    callnative(ClearMugshot)
     release
     end
 }
