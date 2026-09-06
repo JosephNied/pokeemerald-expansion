@@ -66,7 +66,7 @@ Planet01_Final_Lab_FinalWalk::
 # 39 "data/maps/Planet01_Final_Lab/scripts.pory"
 	applymovement 13, Planet01_Final_Lab_FinalWalk_Movement_0
 # 41 "data/maps/Planet01_Final_Lab/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+	setvar VAR_0x8000, MUGSHOT_OPS_SMILE
 # 42 "data/maps/Planet01_Final_Lab/scripts.pory"
 	callnative DrawMugshot
 # 43 "data/maps/Planet01_Final_Lab/scripts.pory"
@@ -78,7 +78,7 @@ Planet01_Final_Lab_FinalWalk::
 # 46 "data/maps/Planet01_Final_Lab/scripts.pory"
 	callnative ClearMugshot
 # 48 "data/maps/Planet01_Final_Lab/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+	setvar VAR_0x8000, MUGSHOT_BIO_HSMILE
 # 49 "data/maps/Planet01_Final_Lab/scripts.pory"
 	callnative DrawMugshot
 # 50 "data/maps/Planet01_Final_Lab/scripts.pory"
@@ -102,7 +102,7 @@ Planet01_Final_Lab_FinalWalk::
 # 65 "data/maps/Planet01_Final_Lab/scripts.pory"
 	callnative ClearMugshot
 # 67 "data/maps/Planet01_Final_Lab/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+	setvar VAR_0x8000, MUGSHOT_BIO_HSMILE
 # 68 "data/maps/Planet01_Final_Lab/scripts.pory"
 	callnative DrawMugshot
 # 69 "data/maps/Planet01_Final_Lab/scripts.pory"

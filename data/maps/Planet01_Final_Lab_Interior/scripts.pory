@@ -283,7 +283,7 @@ script Final_Lab_Interior_BiologistEncounter {
 	applymovement(2, Ops_moveup1)
 	waitmovement(0)
 
-	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+	setvar(VAR_0x8000, MUGSHOT_OPS_SMILE)
     callnative(DrawMugshot)
     msgbox("Hey. Sorry for the delay. Reprogramming\n" 
 	"our ship's autopilot to send me back\l" 
@@ -322,7 +322,7 @@ script Final_Lab_Interior_BiologistEncounter {
 	closemessage
 	callnative(ClearMugshot)
 	
-	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+	setvar(VAR_0x8000, MUGSHOT_OPS_SMILE)
     callnative(DrawMugshot)
     msgbox("Hey, you know you should never\n"
 	"underestimate me!")
@@ -353,7 +353,7 @@ script Final_Lab_Interior_BiologistEncounter {
 	closemessage
 	callnative(ClearMugshot)
 
-	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+	setvar(VAR_0x8000, MUGSHOT_OPS_TEAR1)
     callnative(DrawMugshot)
     msgbox("As the ship was heading home, I cast a\n" 
 	"wish out into the starry universe...\p"
@@ -377,7 +377,9 @@ script Final_Lab_Interior_BiologistEncounter {
 	closemessage
 	callnative(ClearMugshot)
 
-	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+	applymovement(2, moves(face_down))
+
+	setvar(VAR_0x8000, MUGSHOT_OPS_TEAR2)
     callnative(DrawMugshot)
     msgbox("The universe is full of surprises, eh?\n"
 	"Did you forget that Jirachi is the wish\l"
@@ -414,7 +416,7 @@ script Final_Lab_Interior_BiologistEncounter {
 	applymovement(1, moves(face_down))
 	fadescreen(FADE_FROM_WHITE)
 
-	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+	setvar(VAR_0x8000, MUGSHOT_BIO_HSMILE)
     callnative(DrawMugshot)
     msgbox("I'm... Whole...")
 	waitmessage
@@ -428,7 +430,7 @@ script Final_Lab_Interior_BiologistEncounter {
 
 	delay(30)
 
-	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+	setvar(VAR_0x8000, MUGSHOT_BIO_HSMILE)
     callnative(DrawMugshot)
     msgbox("I'm... So happy.\n"
 	"Though, as a scientist, I must say that\l"
@@ -437,7 +439,7 @@ script Final_Lab_Interior_BiologistEncounter {
 	closemessage
 	callnative(ClearMugshot)
 
-	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+	setvar(VAR_0x8000, MUGSHOT_OPS_TEAR2)
     callnative(DrawMugshot)
     msgbox("Not everything has to!")
 	waitmessage
@@ -458,7 +460,7 @@ script Final_Lab_Interior_BiologistEncounter {
 	applymovement(2, moves(face_down))
 	waitmovement(0)
 
-	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+	setvar(VAR_0x8000, MUGSHOT_BIO_HSMILE)
     callnative(DrawMugshot)
     msgbox("That's right! The Deoxys Cell is still\n" 
 	"alive. We need to destroy it!")
@@ -474,7 +476,7 @@ script Final_Lab_Interior_BiologistEncounter {
 	closemessage
 	callnative(ClearMugshot)
 
-	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+	setvar(VAR_0x8000, MUGSHOT_BIO_HSMILE)
     callnative(DrawMugshot)
     msgbox("It's in the basement, behind us.\n" 
 	"...Thank you, TARC.")
@@ -542,7 +544,7 @@ movement Movement_JirachiPlanetLab {
 script bio1 {
 	lock
 	faceplayer
-	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+	setvar(VAR_0x8000, MUGSHOT_BIO_HSMILE)
     callnative(DrawMugshot)
     msgbox("Thank you, TARC, for your selfless wish.")
 	waitmessage
@@ -555,7 +557,7 @@ script bio1 {
 script op1 {
 	lock
 	faceplayer
-	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+	setvar(VAR_0x8000, MUGSHOT_OPS_SMILE)
     callnative(DrawMugshot)
     msgbox("Kick its ass! I would, but most of my\n"
 	"Pokémon are still infected... It was\l"

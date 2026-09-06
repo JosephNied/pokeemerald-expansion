@@ -38,14 +38,14 @@ script Planet01_Final_Lab_FinalWalk {
     applymovement(14, moves(face_left))
     applymovement(13, moves(face_left))
 
-    setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    setvar(VAR_0x8000, MUGSHOT_OPS_SMILE)
     callnative(DrawMugshot)
     msgbox("We know! Now, we're back to work.")
 	waitmessage
 	closemessage
     callnative(ClearMugshot)
 
-    setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    setvar(VAR_0x8000, MUGSHOT_BIO_HSMILE)
     callnative(DrawMugshot)
     msgbox("First, we need to fix up our lab. Second,\n" 
     "we need to find out how to cure our\l"
@@ -64,7 +64,7 @@ script Planet01_Final_Lab_FinalWalk {
 	closemessage
     callnative(ClearMugshot)
 
-    setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
+    setvar(VAR_0x8000, MUGSHOT_BIO_HSMILE)
     callnative(DrawMugshot)
     msgbox("Don't be a stranger!\n"
     "This planet is quite beautiful, when\l"

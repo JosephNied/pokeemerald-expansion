@@ -447,7 +447,7 @@ Final_Lab_Interior_BiologistEncounter::
 # 284 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	waitmovement 0
 # 286 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+	setvar VAR_0x8000, MUGSHOT_OPS_SMILE
 # 287 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative DrawMugshot
 # 288 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
@@ -505,7 +505,7 @@ Final_Lab_Interior_BiologistEncounter::
 # 323 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative ClearMugshot
 # 325 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+	setvar VAR_0x8000, MUGSHOT_OPS_SMILE
 # 326 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative DrawMugshot
 # 327 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
@@ -541,7 +541,7 @@ Final_Lab_Interior_BiologistEncounter::
 # 354 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative ClearMugshot
 # 356 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+	setvar VAR_0x8000, MUGSHOT_OPS_TEAR1
 # 357 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative DrawMugshot
 # 358 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
@@ -573,7 +573,7 @@ Final_Lab_Interior_BiologistEncounter::
 # 378 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative ClearMugshot
 # 380 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+	setvar VAR_0x8000, MUGSHOT_OPS_TEAR2
 # 381 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative DrawMugshot
 # 382 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
@@ -615,7 +615,7 @@ Final_Lab_Interior_BiologistEncounter::
 # 415 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	fadescreen FADE_FROM_WHITE
 # 417 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+	setvar VAR_0x8000, MUGSHOT_BIO_HSMILE
 # 418 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative DrawMugshot
 # 419 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
@@ -635,7 +635,7 @@ Final_Lab_Interior_BiologistEncounter::
 # 429 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	delay 30
 # 431 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+	setvar VAR_0x8000, MUGSHOT_BIO_HSMILE
 # 432 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative DrawMugshot
 # 433 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
@@ -647,7 +647,7 @@ Final_Lab_Interior_BiologistEncounter::
 # 438 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative ClearMugshot
 # 440 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+	setvar VAR_0x8000, MUGSHOT_OPS_TEAR2
 # 441 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative DrawMugshot
 # 442 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
@@ -679,7 +679,7 @@ Final_Lab_Interior_BiologistEncounter::
 # 459 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	waitmovement 0
 # 461 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+	setvar VAR_0x8000, MUGSHOT_BIO_HSMILE
 # 462 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative DrawMugshot
 # 463 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
@@ -703,7 +703,7 @@ Final_Lab_Interior_BiologistEncounter::
 # 475 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative ClearMugshot
 # 477 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_UNKNOWN
+	setvar VAR_0x8000, MUGSHOT_BIO_HSMILE
 # 478 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	callnative DrawMugshot
 # 479 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
