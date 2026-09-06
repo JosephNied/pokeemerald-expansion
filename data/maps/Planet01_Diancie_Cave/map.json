@@ -2,7 +2,7 @@
   "id": "MAP_PLANET01_DIANCIE_CAVE",
   "name": "Planet01_Diancie_Cave",
   "layout": "LAYOUT_PLANET01_DIANCIE_CAVE",
-  "music": "MUS_DUMMY",
+  "music": "MUS_CAVE_OF_ORIGIN",
   "region_map_section": "MAPSEC_PLANET_CAVES_02",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

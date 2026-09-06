@@ -263,19 +263,19 @@ script Planet01_03_HintText03 {
     lock
     msgbox("Captain: We wanted this second cave to\n"
     "be our base, but the artificial wall\l"
-    "our Engineer contructed couldn't\l"
+    "our Ops Lead contructed couldn't\l"
     "shield us from the unbearable cold.\p"
-    "The Engineer already discovered a cave\n"
+    "But, we already discovered a cave\n"
     "up on top of the waterfall to the North\l"
     "that looks promising. Let's hope it can\l"
-    "be a more permanent home.")
+    "be a more permanent home!")
     release
     end
 }
 
 script Planet01_03_HintText04 {
     lock
-    msgbox("Engineer: Was it a coincidence that the\n"
+    msgbox("Ops Lead: Was it a coincidence that the\n"
     "white trees corresponded to the path\l"
     "through the misty cave?\p"
     "Or could it be that something was trying\n"
@@ -307,7 +307,7 @@ script Planet01_03_HintText05 {
 
 script Planet01_03_HintText06 {
     lock
-    msgbox("Biologist: The Staryu love to skip across\n"
+    msgbox("Ops Lead: The Staryu love to skip across\n"
     "the water; though, they aren't large\l"
     "enough for us to {COLOR BLUE}{SHADOW LIGHT_BLUE}Surf{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} on them.\p"
     "Fortunately, we brought our own\n"

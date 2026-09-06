@@ -184,15 +184,15 @@ groundjournal_2::
 	callnative ClearMugshot
 # 106 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	msgbox groundjournal_2_Text_1
-# 114 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 117 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	release
 	end
 
 
 connector_cave_remains::
-# 119 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 122 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	lock
-# 120 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 123 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	msgbox connector_cave_remains_Text_0
 # 127 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	waitmessage
@@ -237,21 +237,21 @@ groundjournal_2_Text_0:
 
 groundjournal_2_Text_1:
 # 106 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	.string "Ops Lead: This cave was a bust. But,\n"
-	.string "the one above the waterfall leads to a\l"
-	.string "promising cavern below. I discussed\l"
-	.string "making some dramatic changes to the\l"
-	.string "environment with the Engineer; and, I'll\l"
-	.string "prepare a surprise for the Biologist I\l"
-	.string "really think will cheer them up, if we\l"
-	.string "can pull it off!$"
+	.string "Ops Lead: I have a plan to do something\n"
+	.string "special for the Biologist. She may know \l"
+	.string "my Pokémon team can transform any\l"
+	.string "environment; but what she doesn't know\l"
+	.string "is that I've brought some flower seeds\l"
+	.string "with me that'll really make it feel like\l"
+	.string "home!\p"
+	.string "I know she's a bit obsessed with making\n"
+	.string "some big breakthrough. I don't care as\l"
+	.string "much about that; being here with her is\l"
+	.string "enough for me.$"
 
 connector_cave_remains_Text_0:
-# 120 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	.string "Engineer: Despite my Excadrill's\n"
-	.string "efforts in putting up a barrier,\l"
-	.string "the cold of the icy cavern still\l"
-	.string "bleeds through. Our time here was\l"
-	.string "not wasted, however; the discovery\l"
-	.string "we made beyond the cavern seems\l"
-	.string "very interesting...$"
+# 123 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	.string "Ops Lead: We decided to abandon this\n"
+	.string "camp too. It's too cold, and the ghost\l"
+	.string "PKMN we found beyond the icy cavern\l"
+	.string "give me the creeps.$"

@@ -2,7 +2,7 @@
   "id": "MAP_PLANET01_PATH_DOWN",
   "name": "Planet01_Path_Down",
   "layout": "LAYOUT_PLANET01_PATH_DOWN",
-  "music": "MUS_DUMMY",
+  "music": "MUS_DARKPLANET",
   "region_map_section": "MAPSEC_PLANET_CAVES_01",
   "requires_flash": true,
   "weather": "WEATHER_FOG_HORIZONTAL",

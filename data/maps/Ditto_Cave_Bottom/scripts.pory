@@ -58,7 +58,7 @@ script Ditto_Cave_Bottom_EventScript_Item02 {
 
 script Ditto_Cave_Bottom_HintText01 {
 	lock
-	msgbox("Biologist: The heat within this crucible\n"
+	msgbox("Ops Lead: The heat within this crucible\n"
     "of a cave has produced many powerful\l"
     "sun stones. Would be pretty useful if\l"
 	"we needed to evolve certain Pokémon.")

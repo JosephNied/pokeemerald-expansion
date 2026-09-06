@@ -2,7 +2,7 @@
   "id": "MAP_PLANET01_03",
   "name": "Planet01_03",
   "layout": "LAYOUT_PLANET01_03",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_DEWFORD",
   "region_map_section": "MAPSEC_PLANET_SURFACE_03",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -2897,7 +2897,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_COMET_SHARD] =
     {
-        .name = ITEM_NAME("Comet Shard"),
+        .name = ITEM_NAME("Shadow Crystal"),
     #if I_PRICE >= GEN_8
         .price = 25000 * TREASURE_FACTOR,
     #elif I_PRICE == GEN_7
@@ -2908,16 +2908,16 @@ const struct ItemInfo gItemsInfo[] =
         .price = 0,
     #endif
         .description = COMPOUND_STRING(
-            "A comet's shard.\n"
-            "Not sure if it can\n"
-            "be used somehow."),
+            "A Shadow Crystal.\n"
+            "You confronted the\n"
+            "darkness and won."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_SELLABLE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
-        .iconPic = gItemIcon_StarPiece,
-        .iconPalette = gItemIconPalette_CometShard,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_DarkTeraShard,
     },
 
     [ITEM_SHOAL_SALT] =

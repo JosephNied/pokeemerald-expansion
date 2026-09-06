@@ -103,27 +103,27 @@ script groundjournal_2 {
     waitmessage
     callnative(ClearMugshot)
 
-    msgbox("Ops Lead: This cave was a bust. But,\n" 
-    "the one above the waterfall leads to a\l"
-    "promising cavern below. I discussed\l"
-    "making some dramatic changes to the\l"
-    "environment with the Engineer; and, I'll\l"
-    "prepare a surprise for the Biologist I\l"
-    "really think will cheer them up, if we\l"
-    "can pull it off!")
+    msgbox("Ops Lead: I have a plan to do something\n" 
+    "special for the Biologist. She may know \l"
+    "my Pokémon team can transform any\l"
+    "environment; but what she doesn't know\l"
+	"is that I've brought some flower seeds\l"
+	"with me that'll really make it feel like\l"
+	"home!\p"
+	"I know she's a bit obsessed with making\n"
+	"some big breakthrough. I don't care as\l"
+	"much about that; being here with her is\l"
+	"enough for me.")
     release
     end
 }
 
 script connector_cave_remains {
     lock
-    msgbox("Engineer: Despite my Excadrill's\n" 
-    "efforts in putting up a barrier,\l"
-    "the cold of the icy cavern still\l"
-    "bleeds through. Our time here was\l"
-    "not wasted, however; the discovery\l"
-    "we made beyond the cavern seems\l"
-    "very interesting...")
+    msgbox("Ops Lead: We decided to abandon this\n" 
+    "camp too. It's too cold, and the ghost\l"
+    "PKMN we found beyond the icy cavern\l"
+    "give me the creeps.")
 	waitmessage
 	closemessage
 	if (var(VAR_DAILY_SLOTS) == 0) {

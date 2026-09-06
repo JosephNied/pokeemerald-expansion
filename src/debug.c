@@ -4254,7 +4254,8 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_RG_SLOW_PALLET)           \
     X(MUS_RG_TEACHY_TV_MENU)        \
     X(MUS_DARKPLANET)               \
-    X(MUS_VS_CUSTOMGENERAL)
+    X(MUS_VS_CUSTOMGENERAL)         \
+    X(MUS_UNDERLAKE)
 
 #define SOUND_LIST_SE               \
     X(SE_USE_ITEM)                  \

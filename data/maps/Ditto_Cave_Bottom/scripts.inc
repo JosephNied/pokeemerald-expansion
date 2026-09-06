@@ -149,7 +149,7 @@ Ditto_Cave_Bottom_DittoTrainer_Text_0:
 
 Ditto_Cave_Bottom_HintText01_Text_0:
 # 61 "data/maps/Ditto_Cave_Bottom/scripts.pory"
-	.string "Biologist: The heat within this crucible\n"
+	.string "Ops Lead: The heat within this crucible\n"
 	.string "of a cave has produced many powerful\l"
 	.string "sun stones. Would be pretty useful if\l"
 	.string "we needed to evolve certain Pokémon.$"

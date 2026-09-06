@@ -384,7 +384,7 @@ Sun_Moon_Check_Text_2:
 
 Sun_Moon_Check_Text_3:
 # 78 "data/maps/Planet01_07/scripts.pory"
-	.string "...It looked reluctant to leave.$"
+	.string "...It's watching over me. I wonder why?$"
 
 Sun_Moon_Check_Text_4:
 # 91 "data/maps/Planet01_07/scripts.pory"
@@ -404,7 +404,7 @@ Sun_Moon_Check_Text_6:
 
 Planet01_07_HintText01_Text_0:
 # 166 "data/maps/Planet01_07/scripts.pory"
-	.string "Captain: We were able to witness the sun\n"
+	.string "Ops Lead: We were able to witness the sun\n"
 	.string "and moon of this planet from the peak.\p"
 	.string "The Lunatone we caught began to faintly\n"
 	.string "glow with incredible energy; I feel like\l"

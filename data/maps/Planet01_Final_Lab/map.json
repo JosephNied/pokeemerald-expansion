@@ -2,7 +2,7 @@
   "id": "MAP_PLANET01_FINAL_LAB",
   "name": "Planet01_Final_Lab",
   "layout": "LAYOUT_PLANET01_FINAL_LAB",
-  "music": "MUS_DUMMY",
+  "music": "MUS_TITLE",
   "region_map_section": "MAPSEC_PLANET_CAVES_01",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -653,16 +653,16 @@ Planet01_03_HintText03_Text_0:
 # 264 "data/maps/Planet01_03/scripts.pory"
 	.string "Captain: We wanted this second cave to\n"
 	.string "be our base, but the artificial wall\l"
-	.string "our Engineer contructed couldn't\l"
+	.string "our Ops Lead contructed couldn't\l"
 	.string "shield us from the unbearable cold.\p"
-	.string "The Engineer already discovered a cave\n"
+	.string "But, we already discovered a cave\n"
 	.string "up on top of the waterfall to the North\l"
 	.string "that looks promising. Let's hope it can\l"
-	.string "be a more permanent home.$"
+	.string "be a more permanent home!$"
 
 Planet01_03_HintText04_Text_0:
 # 278 "data/maps/Planet01_03/scripts.pory"
-	.string "Engineer: Was it a coincidence that the\n"
+	.string "Ops Lead: Was it a coincidence that the\n"
 	.string "white trees corresponded to the path\l"
 	.string "through the misty cave?\p"
 	.string "Or could it be that something was trying\n"
@@ -680,7 +680,7 @@ Planet01_03_HintText05_Text_0:
 
 Planet01_03_HintText06_Text_0:
 # 310 "data/maps/Planet01_03/scripts.pory"
-	.string "Biologist: The Staryu love to skip across\n"
+	.string "Ops Lead: The Staryu love to skip across\n"
 	.string "the water; though, they aren't large\l"
 	.string "enough for us to {COLOR BLUE}{SHADOW LIGHT_BLUE}Surf{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} on them.\p"
 	.string "Fortunately, we brought our own\n"

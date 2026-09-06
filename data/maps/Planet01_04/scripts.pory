@@ -64,7 +64,7 @@ script Planet01_04_EventScript_Item02 {
 
 script Planet01_04_HintText01 {
     lock
-    msgbox("Engineer: The cave above just sends us\n"
+    msgbox("Ops Lead: The cave above just sends us\n"
     "in circles. How is this even possible?!\l"
     "I will get to the bottom of this!\l"
     "...Literally!")

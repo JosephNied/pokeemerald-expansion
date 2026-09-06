@@ -38,6 +38,24 @@ EventScript_SharpedoCatch::
 	end
 
 
+darkshore_suggestion::
+# 27 "data/maps/Planet01_06/scripts.pory"
+	lock
+# 28 "data/maps/Planet01_06/scripts.pory"
+	msgbox darkshore_suggestion_Text_0
+# 33 "data/maps/Planet01_06/scripts.pory"
+	release
+	end
+
+
 EventScript_SharpedoCatch_Text_0:
 # 14 "data/maps/Planet01_06/scripts.pory"
 	.string "Aaah! Quick, retreat!$"
+
+darkshore_suggestion_Text_0:
+# 28 "data/maps/Planet01_06/scripts.pory"
+	.string "Biologist: I discovered something\n"
+	.string "incredible to the West of here.\l"
+	.string "Something that is going to make Ops and\l"
+	.string "I very, very famous. I just have to run\l"
+	.string "some experiments on it to be sure...$"

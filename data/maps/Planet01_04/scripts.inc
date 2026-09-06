@@ -268,7 +268,7 @@ Planet01_04_AddAir_Minior01_Text_1:
 
 Planet01_04_HintText01_Text_0:
 # 67 "data/maps/Planet01_04/scripts.pory"
-	.string "Engineer: The cave above just sends us\n"
+	.string "Ops Lead: The cave above just sends us\n"
 	.string "in circles. How is this even possible?!\l"
 	.string "I will get to the bottom of this!\l"
 	.string "...Literally!$"
