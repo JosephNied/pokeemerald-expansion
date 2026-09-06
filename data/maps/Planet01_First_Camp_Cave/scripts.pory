@@ -378,9 +378,9 @@ script voicedialogueABC {
 
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Well, then. You're quite the scientist\n"
-        "yourself. I'll be waiting at the top.\l"
-        "I recommend you prepare your team.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Incredible. You're quite the scientist\n"
+        "yourself! Terragem knows {COLOR BLUE}{SHADOW LIGHT_BLUE}Waterfall{COLOR RED}{SHADOW LIGHT_RED}; get\l"
+        "up that waterfall and I'll guide you.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         callnative(ClearMugshot)
         release

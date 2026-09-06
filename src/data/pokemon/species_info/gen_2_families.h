@@ -3516,10 +3516,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     {
         .baseHP        = 105,
         .baseAttack    = 85,
-        .baseDefense   = 85,
+        .baseDefense   = 80,
         .baseSpeed     = 25,
-        .baseSpAttack  = 85,
-        .baseSpDefense = 75,
+        .baseSpAttack  = 105,
+        .baseSpDefense = 120,
         .types = MON_TYPES(TYPE_WATER, TYPE_GROUND),
         .catchRate = 90,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 151 : 137,
@@ -3539,9 +3539,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 14,
         .weight = 750,
         .description = COMPOUND_STRING(
-            "A Quagsire hunts by leaving its mouth wide\n"
-            "open in water and waiting for its prey to\n"
-            "blunder in. Some apparently have penchant\n"
+            "The water here hasn't changed Quagsire's\n"
+            "colors or type. Maybe it's because of\n"
+            "its Unaware ability? Some have penchant\n"
             "for collecting pretty stones and crystals."),
         .pokemonScale = 256,
         .pokemonOffset = 4,

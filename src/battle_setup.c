@@ -1692,7 +1692,7 @@ void PlayTrainerEncounterMusic(void)
             music = MUS_ENCOUNTER_INTERVIEWER;
             break;
         case TRAINER_ENCOUNTER_MUSIC_RICH:
-            music = MUS_ENCOUNTER_RICH;
+            music = MUS_RG_ENCOUNTER_DEOXYS;
             break;
         default:
             music = MUS_ENCOUNTER_SUSPICIOUS;

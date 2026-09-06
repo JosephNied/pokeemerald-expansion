@@ -201,10 +201,11 @@ script Jirachi_goes_to_ship {
     setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
     msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I can read its mind... It wont let you\n"
-    "past unless you bring it a Shadow\l"
+    "past it unless you bring it a Shadow\l"
     "Crystal, apparently.\p"
-    "helping us because it understands that\n"
-    "Deoxys threatens all life?>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    "Why is this Jirachi so invested in us?\n"
+    "I guess it understands that the Deoxys\l"
+    "Cell threatens all life.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -214,8 +215,8 @@ script Jirachi_goes_to_ship {
     if (var(VAR_RESULT) == FALSE) {
         setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
         callnative(DrawMugshot)
-        msgbox("I don't get it. What's a Shadow Crystal, and\n"
-        "where can we get one?")
+        msgbox("I don't get it. What's a Shadow Crystal,\n"
+        "and where can we get one?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -224,7 +225,7 @@ script Jirachi_goes_to_ship {
         callnative(DrawMugshot)
         msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I have no clue. But, I get the feeling\n"
         "it has to do with... The dark pool.\p"
-        "Below the Shoreline, to the far West.\n"
+        "Below the Shoreline, to the far west.\n"
         "I'll explain more when we get there.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         closemessage
@@ -255,6 +256,7 @@ script Jirachi_goes_to_ship {
             closemessage
             callnative(ClearMugshot)
 
+            playmoncry(SPECIES_JIRACHI, CRY_MODE_ENCOUNTER)
             setvar(VAR_0x8000, MUGSHOT_JIRACHI_HAPPY)
             callnative(DrawMugshot)
             msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Jirachi!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")

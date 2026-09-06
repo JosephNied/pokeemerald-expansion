@@ -14895,10 +14895,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 15,
         .weight = 468,
         .description = COMPOUND_STRING(
-            "My bed is perfectly capable of healing\n"
-            "me and the team, but it can't provide\n"
-            "the loving emotional support Blissey does!\n"
-            "She's kinda a lackluster therapist though."),
+            "My job is generally not very\n"
+            "dangerous, but just in case,\n"
+            "Blissey is here to keep the\n"
+            "team healthy!"),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 310,

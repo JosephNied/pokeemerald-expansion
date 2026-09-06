@@ -56,6 +56,7 @@ static const u32 sMugshotImg_BIOLOGIST_1[] = INCBIN_U32("graphics/mugshots/biolo
 static const u16 sMugshotPal_BIOLOGIST[] = INCBIN_U16("graphics/mugshots/biologist.gbapal");
 
 static const u32 sMugshotImg_BIO_HSMILE[] = INCBIN_U32("graphics/mugshots/bio_hs_1.4bpp.lz");
+static const u32 sMugshotImg_BIO_HMAD[] = INCBIN_U32("graphics/mugshots/bio_hs_2.4bpp.lz");
 static const u16 sMugshotPal_BIOLOGISTH[] = INCBIN_U16("graphics/mugshots/bioh.gbapal");
 
 static const u32 sMugshotImg_OPS_SMILE[] = INCBIN_U32("graphics/mugshots/ops_smile.4bpp.lz");
@@ -135,11 +136,10 @@ static const struct Mugshot sMugshots[] = {
     [MUGSHOT_DITTO] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_DITTO, .palette = sMugshotPal_DITTO},
 
     [MUGSHOT_BIO_HSMILE] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_BIO_HSMILE, .palette = sMugshotPal_BIOLOGISTH},
+    [MUGSHOT_BIO_HMAD] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_BIO_HMAD, .palette = sMugshotPal_BIOLOGISTH},
     [MUGSHOT_OPS_TEAR1] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_OPS_TEAR1, .palette = sMugshotPal_OPS},
     [MUGSHOT_OPS_TEAR2] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_OPS_TEAR2, .palette = sMugshotPal_OPS},
     [MUGSHOT_OPS_SMILE] = {.x = 1, .y = 9, .width = 40, .height = 40, .image = sMugshotImg_OPS_SMILE, .palette = sMugshotPal_OPS},
-
-
 
     [MUGSHOT_MAP_01] = {.x = 9, .y = 2, .width = 96, .height = 96, .image = sMugshotImg_MAP_01, .palette = sMugshotPal_MAPS},
     [MUGSHOT_MAP_02] = {.x = 9, .y = 2, .width = 96, .height = 96, .image = sMugshotImg_MAP_02, .palette = sMugshotPal_MAPS},

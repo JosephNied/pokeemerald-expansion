@@ -412,11 +412,11 @@ Planet01_Final_Lab_Core_BeheeWalk_Text_5:
 
 Planet01_Final_Lab_Core_BeheeWalk_Text_6:
 # 163 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	.string "{COLOR RED}{SHADOW LIGHT_RED}<This is a psychic Beheeyem's doing...\n"
-	.string "In my present state, my consciousness\l"
-	.string "is spread quite thin over the planet.\l"
-	.string "They must be exploring it; these are my\l"
-	.string "memories...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<I suspect this is a Beheeyem's doing...\n"
+	.string "With my present psychic state sending\l"
+	.string "my consciousness out across the\l"
+	.string "planet, these Pokémon must be\l"
+	.string "exploring it, as these are my memories.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Planet01_Final_Lab_Core_BeheeWalk_Text_7:
 # 174 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
@@ -430,13 +430,13 @@ Planet01_Final_Lab_Core_BeheeWalk_Text_7:
 
 Planet01_Final_Lab_Core_BeheeWalk_Text_8:
 # 187 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	.string "{COLOR RED}{SHADOW LIGHT_RED}<For a long time, I was jealous of their \n"
-	.string "confidence. Success or failure, they\l"
-	.string "things always seemed to work out for\l"
-	.string "them. But they believed in me too, and\l"
-	.string "as we worked together, their praise and\l"
-	.string "optimism became infectious.\p"
-	.string "As we got closer, they made me begin to\n"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<For a long time, I was jealous of their\n"
+	.string "confidence. They were smart and they \l"
+	.string "knew it, and yet were never worried\l"
+	.string "about failure like I often did.\p"
+	.string "But as we worked together, their\n"
+	.string "optimism became infectious.\l"
+	.string "As we got closer, they made me really\n"
 	.string "believe in myself.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Planet01_Final_Lab_Core_BeheeWalk_Text_9:
@@ -457,12 +457,12 @@ Planet01_Final_Lab_Core_BeheeWalk_Text_10:
 Planet01_Final_Lab_Core_BeheeWalk_Text_11:
 # 223 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	.string "{COLOR RED}{SHADOW LIGHT_RED}<Everything changed after I discovered\n"
-	.string "the Deoxys cell. My experiments were \l"
-	.string "disastrous; it infected me, and \l"
-	.string "triggered Pal 9000's Contingency \l"
-	.string "Protocol, which teleported Ops back to \l"
-	.string "our ship and sent them back home on \l"
-	.string "auto-pilot.\p"
+	.string "the Deoxys Cell. The experiment was\l"
+	.string "a disaster; the Cell infected me and\l"
+	.string "triggered our Pal 9000's Contingency\l"
+	.string "Protocol, which teleported Ops back to\l"
+	.string "our ship and launched them back home\l"
+	.string "on strict auto-pilot...\p"
 	.string "All that we had, thrown so easily\n"
 	.string "away, because I got so greedy.\l"
 	.string "...\p"

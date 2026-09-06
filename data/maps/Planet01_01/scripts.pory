@@ -182,10 +182,9 @@ script Planet01_01_HintText03 {
 
 script Planet01_01_HintText04 {
     lock
-    msgbox("Biologist: Miniors are flying types,\n"
+    msgbox("Biologist: Miniors are flying types;\n"
     "the air they generate can be captured\l"
-    "and used to refill the oxygen in our\l"
-    "life support systems. Very lucky!")
+    "and used to refill our oxygen systems!")
     release
     end
 }
@@ -278,7 +277,7 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox("Hello, friend.")
+    msgbox("Hey there, kiddo.")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -350,7 +349,7 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox("I suppose. Sorry kiddo.")
+    msgbox("I suppose. Sorry.")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -402,7 +401,7 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox ("Of course, kiddo! Let me load it up!")
+    msgbox ("Of course! Let me load it up!")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -427,7 +426,7 @@ script Planet01_01_RobotGreeting {
 
     setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
     callnative(DrawMugshot)
-    msgbox ("Here you are!")
+    msgbox ("Here you are! Happy to help!")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -612,15 +611,14 @@ script Planet01_01_JirachiAppears {
     callnative(ClearMugshot)
 
     fadescreen(FADE_TO_WHITE)
-	closemessage
 	delay(30)
 	fadescreen(FADE_FROM_WHITE)
 
+    playmoncry(SPECIES_JIRACHI, CRY_MODE_ENCOUNTER)
     applymovement(14, Movement_Jirachi1)
     waitmovement(0)
     
     fadescreen(FADE_TO_WHITE)
-	closemessage
 	delay(10)
 	fadescreen(FADE_FROM_WHITE)
     setvar(VAR_0x8004, 1)
@@ -631,7 +629,7 @@ script Planet01_01_JirachiAppears {
     applymovement(19, Movement_Deoxo1_3)
     applymovement(20, Movement_Deoxo2_3)
     fadescreen(FADE_TO_WHITE)
-	closemessage
+    playse(SE_SUPER_EFFECTIVE)
 	delay(10)
 	fadescreen(FADE_FROM_WHITE)
     waitmovement(0)
@@ -648,9 +646,10 @@ script Planet01_01_JirachiAppears {
     closemessage
     callnative(ClearMugshot)
 
-    setvar(VAR_0x8000, MUGSHOT_JIRACHI_WORRIED)
+    playmoncry(SPECIES_JIRACHI, CRY_MODE_ENCOUNTER)
+    setvar(VAR_0x8000, MUGSHOT_JIRACHI_OK)
     callnative(DrawMugshot)
-    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Jirachi!{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -662,7 +661,7 @@ script Planet01_01_JirachiAppears {
     callnative(DrawMugshot)
     msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I wasn't expecting that.\n"
     "I've never seen Jirachi before. Seems\p"
-    "like it's protecting you. Hm...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    "like it's protecting you... But why?>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -1013,7 +1012,7 @@ script Planet01_01_Ending {
     setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
     callnative(DrawMugshot)
     msgbox ("Excellent. You know, your whole crew is\n"
-    "back at the primary lab. Don't you think\l"
+    "back at the EOD lab. Don't you think\l"
     "you should go see them? They can\l"
     "probably fix you up, get that rust off.")
     waitmessage
@@ -1031,7 +1030,8 @@ script Planet01_01_Ending {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
     callnative(DrawMugshot)
-    msgbox ("You're right! I guess this is goodbye!")
+    msgbox ("You're right!\n"
+    "I guess this is goodbye, then!")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -1043,7 +1043,7 @@ script Planet01_01_Ending {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
     callnative(DrawMugshot)
-    msgbox("...See you, space trucker!")
+    msgbox("...So long!")
     waitmessage
     closemessage
     callnative(ClearMugshot)

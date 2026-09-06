@@ -30,7 +30,7 @@ script Planet01_Final_Lab_FinalWalk {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
-    msgbox("Guys! I beat it the Cell!")
+    msgbox("Guys! I destroyed the Cell!")
 	waitmessage
 	closemessage
     callnative(ClearMugshot)
@@ -58,7 +58,8 @@ script Planet01_Final_Lab_FinalWalk {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
     callnative(DrawMugshot)
-    msgbox("You guys just don't quit! Think it's\n" 
+    msgbox("...\p"
+	"You guys just don't quit! Think it's\n" 
     "time I leave though.")
 	waitmessage
 	closemessage
@@ -73,6 +74,8 @@ script Planet01_Final_Lab_FinalWalk {
 	waitmessage
 	closemessage
     callnative(ClearMugshot)
+
+	delay(30)
 
     applymovement(14, moves(face_right))
     applymovement(13, moves(face_right))
@@ -100,28 +103,27 @@ script Final_Lab_Remark01 {
     waitmovement(OBJ_EVENT_ID_PLAYER)
     setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
-    msgbox("WOW!\p"
-	"This place is huge!!!\n"
+    msgbox("Wow! This place is huge!!!\n"
 	"How is this even possible?\l"
-	"Was this place just like this, or was\l"
-	"your team responsible?\p"
-	"Where is this light coming from? I\n"
+	"Where is this light coming from? I\l"
 	"think I see the lab, in the distance...\p"
-	"But how did you build it? I have so many\n"
-	"questions!")
+	"But I have so many questions!")
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
 	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
-	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Please, just hurry to the lab.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Ops used their Pokémon to create this\n"
+	"space...\p"
+	"The final fight may be tough; I\n"
+	"recommend scouring for some of our old\l"
+	"items.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
 	setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
     callnative(DrawMugshot)
-    msgbox("Ok, I guess you're there?\p"
-	"My instruments say the gravity is\n"
+    msgbox("My instruments say the gravity is\n"
 	"higher down here. Also... The air is\l"
 	"breathable!")
 	waitmessage
@@ -129,22 +131,7 @@ script Final_Lab_Remark01 {
 	callnative(ClearMugshot)
 	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
-	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Oh, and look out... For hostiles.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
-    waitmessage
-    closemessage
-    callnative(ClearMugshot)
-	setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
-    callnative(DrawMugshot)
-    msgbox("Hostiles? More infected Pokémon? They\n"
-    "don't seem to be native to this place.\l"
-    "Nothing down here does.")
-	waitmessage
-	closemessage
-	callnative(ClearMugshot)
-	setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
-    callnative(DrawMugshot)
-	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Yeah, they're not... Remember, move\n"
-	"slowly. Running will alert them.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+	msgbox("{COLOR RED}{SHADOW LIGHT_RED}<And look out for infected mons.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)

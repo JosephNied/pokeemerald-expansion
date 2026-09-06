@@ -9897,8 +9897,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .description = COMPOUND_STRING(
             "It will teleport me if it touches me!\n"
             "For some reason, whenever it does,\n"
-            "I see a flash of color and the lyrics\n"
-            "to a very catchy song..."),
+            "I see a flash of color."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -9969,10 +9968,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 10,
         .weight = 345,
         .description = COMPOUND_STRING(
-            "It can read your mind, and dredge up\n"
-            "memories. I don't know if inteded to\n"
-            "communicate something specific to me...\n"
-            "but, either way, I think it helped."),
+            "It can mentally connect with people\n"
+            "experiencing powerful emotions.\n"
+            "It likes to show people their\n"
+            "most important memories."
+        ),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,

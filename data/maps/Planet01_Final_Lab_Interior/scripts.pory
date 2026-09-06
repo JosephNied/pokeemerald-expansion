@@ -324,18 +324,17 @@ script Final_Lab_Interior_BiologistEncounter {
 	
 	setvar(VAR_0x8000, MUGSHOT_OPS_SMILE)
     callnative(DrawMugshot)
-    msgbox("Hey, you know you should never\n"
-	"underestimate me!")
+    msgbox("Hey, you shouldn't underestimate me!")
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
 
 	setvar(VAR_0x8000, MUGSHOT_BIOLOGIST_1)
     callnative(DrawMugshot)
-    msgbox("{COLOR RED}{SHADOW LIGHT_BLUE}Of course! Shame on me!\n"
+    msgbox("{COLOR RED}{SHADOW LIGHT_BLUE}Of course!\n"
 	"...\l"
 	"...\p"
-	"I'm so happy you're here. But love... I'm\n" 
+	"I'm so happy you're here. But... I'm\n" 
 	"sorry... I don't think I have much time.\p" 
 	"You don't need to be a biologist to see\n" 
 	"that my body has been destroyed by the\l"  
@@ -348,7 +347,7 @@ script Final_Lab_Interior_BiologistEncounter {
 
 	setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
-    msgbox("Oh, no.")
+    msgbox("Oh, no...")
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
@@ -356,11 +355,11 @@ script Final_Lab_Interior_BiologistEncounter {
 	setvar(VAR_0x8000, MUGSHOT_OPS_TEAR1)
     callnative(DrawMugshot)
     msgbox("As the ship was heading home, I cast a\n" 
-	"wish out into the starry universe...\p"
+	"wish out into space...\p"
 	"I may have been disappointed and\n"
 	"frustrated by what happened, but that\l" 
-	"doesn't change the fact that you are\l" 
-	"all I ever wanted.")
+	"doesn't change the fact that I will\l" 
+	"always love you.")
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
@@ -370,6 +369,8 @@ script Final_Lab_Interior_BiologistEncounter {
 	applymovement(4, Movement_JirachiPlanetLab)
 	waitmovement(4)
 
+	playmoncry(SPECIES_JIRACHI, CRY_MODE_ENCOUNTER)
+
 	setvar(VAR_0x8000, MUGSHOT_JIRACHI_HAPPY)
     callnative(DrawMugshot)
     msgbox("Jirachi!")
@@ -377,21 +378,28 @@ script Final_Lab_Interior_BiologistEncounter {
 	closemessage
 	callnative(ClearMugshot)
 
-	applymovement(2, moves(face_down))
-
 	setvar(VAR_0x8000, MUGSHOT_OPS_TEAR2)
     callnative(DrawMugshot)
     msgbox("The universe is full of surprises, eh?\n"
 	"Did you forget that Jirachi is the wish\l"
 	"Pokémon? I encountered it floating in\l"
-	"space while the ship was heading home.\p"
-	"I wished for your protection.\n" 
-	"Hey, trucker. I wonder if you were part\l"
-	"of that wish coming true?\p"
+	"space while the ship was heading home.\l"
+	"I wished for your protection.\p"
+	"...") 
+	waitmessage
+	closemessage
+	callnative(ClearMugshot)
+
+	applymovement(2, moves(face_down))
+
+	setvar(VAR_0x8000, MUGSHOT_OPS_SMILE)
+    callnative(DrawMugshot)
+	msgbox("Hey, trucker. I wonder if you played a\l"
+	"part in that wish coming true?\p"
 	"Either way, Jirachi seems to be offering\n" 
 	"YOU a wish now.\p"
 	"Had I known how bad things were, I would\n"
-	"have wished to heal them. Is there any\l" 
+	"have wished to heal her. Is there any\l" 
 	"chance that...")
 	waitmessage
 	closemessage
@@ -408,7 +416,8 @@ script Final_Lab_Interior_BiologistEncounter {
 
 	fadescreen(FADE_TO_WHITE)
 	playmoncry(SPECIES_MINIOR, CRY_MODE_ENCOUNTER)
-	delay(30)
+	playse(SE_M_MOONLIGHT)
+	waitse()
 	delay(30)
 	removeobject(1)
 	addobject(3)
@@ -426,6 +435,7 @@ script Final_Lab_Interior_BiologistEncounter {
 	delay(30)
 
 	applymovement(3, moves(face_right))
+	applymovement(2, moves(face_left))
 	waitmovement(0)
 
 	delay(30)
@@ -441,7 +451,7 @@ script Final_Lab_Interior_BiologistEncounter {
 
 	setvar(VAR_0x8000, MUGSHOT_OPS_TEAR2)
     callnative(DrawMugshot)
-    msgbox("Not everything has to!")
+    msgbox("Ha, not everything has to!")
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
@@ -460,7 +470,7 @@ script Final_Lab_Interior_BiologistEncounter {
 	applymovement(2, moves(face_down))
 	waitmovement(0)
 
-	setvar(VAR_0x8000, MUGSHOT_BIO_HSMILE)
+	setvar(VAR_0x8000, MUGSHOT_BIO_HMAD)
     callnative(DrawMugshot)
     msgbox("That's right! The Deoxys Cell is still\n" 
 	"alive. We need to destroy it!")
@@ -483,6 +493,16 @@ script Final_Lab_Interior_BiologistEncounter {
 	waitmessage
 	closemessage
 	callnative(ClearMugshot)
+
+	setvar(VAR_0x8000, MUGSHOT_OPS_SMILE)
+    callnative(DrawMugshot)
+    msgbox("I don't have much of a team left,\n"
+	"but maybe these can help you?")
+	waitmessage
+	closemessage
+	callnative(ClearMugshot)
+
+	giveitem(ITEM_MAX_REVIVE, 3)
 
 	fadescreen(FADE_TO_BLACK)
 

@@ -101,7 +101,7 @@ static const u8 sText_UsedVar2WildRepelled[] = _("{PLAYER} used the\n{STR_VAR_2}
 static const u8 sText_PlayedPokeFluteCatchy[] = _("Played the POKé FLUTE.\pNow, that's a catchy tune!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_PlayedPokeFlute[] = _("Played the POKé FLUTE.");
 static const u8 sText_PokeFluteAwakenedMon[] = _("The POKé FLUTE awakened sleeping\nPOKéMON.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_OxygenInactive[] = _("Life support is inactive.");
+static const u8 sText_OxygenInactive[] = _("Oxygen system is inactive.");
 static const u8 sText_OxygenPrefix[] = _("Remaining oxygen: ");
 static const u8 sText_OxygenSuffix[] = _(" units.");
 

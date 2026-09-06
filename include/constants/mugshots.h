@@ -38,5 +38,6 @@
 #define MUGSHOT_OPS_TEAR1 33
 #define MUGSHOT_OPS_TEAR2 34
 #define MUGSHOT_BIO_HSMILE 35
+#define MUGSHOT_BIO_HMAD 36
 
 #endif

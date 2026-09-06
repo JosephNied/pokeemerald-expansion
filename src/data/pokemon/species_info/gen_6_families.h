@@ -7229,7 +7229,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .baseAttack    = 130,
         .baseDefense   = 90,
         .baseSpeed     = 90,
-        .baseSpAttack  = 130,
+        .baseSpAttack  = 100,
         .baseSpDefense = 90,
         .types = MON_TYPES(TYPE_ROCK, TYPE_FAIRY),
         .catchRate = 3,
@@ -7241,7 +7241,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_MAGIC_BOUNCE, ABILITY_MAGIC_BOUNCE, ABILITY_MAGIC_BOUNCE },
+        .abilities = { ABILITY_PRESSURE, ABILITY_PRESSURE, ABILITY_PRESSURE },
         .bodyColor = BODY_COLOR_PINK,
         .speciesName = _("Diancie"),
     #if P_MODIFIED_MEGA_CRIES

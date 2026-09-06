@@ -160,11 +160,11 @@ script Planet01_Final_Lab_Core_BeheeWalk {
 		closemessage
 		callnative(ClearMugshot)
 
-		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<This is a psychic Beheeyem's doing...\n"
-		"In my present state, my consciousness\l"
-		"is spread quite thin over the planet.\l"
-		"They must be exploring it; these are my\l"
-		"memories...>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I suspect this is a Beheeyem's doing...\n"
+		"With my present psychic state sending\l"
+		"my consciousness out across the\l"
+		"planet, these Pokémon must be\l"
+		"exploring it, as these are my memories.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 		waitmessage
 		closemessage
 
@@ -184,13 +184,13 @@ script Planet01_Final_Lab_Core_BeheeWalk {
 		applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
 		waitmovement(0)
 
-		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<For a long time, I was jealous of their \n"
-		"confidence. Success or failure, they\l"
-		"things always seemed to work out for\l"
-		"them. But they believed in me too, and\l"
-		"as we worked together, their praise and\l"
-		"optimism became infectious.\p"
-		"As we got closer, they made me begin to\n"
+		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<For a long time, I was jealous of their\n"
+		"confidence. They were smart and they \l"
+		"knew it, and yet were never worried\l"
+		"about failure like I often did.\p"
+		"But as we worked together, their\n"
+		"optimism became infectious.\l"
+		"As we got closer, they made me really\n"
 		"believe in myself.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 		waitmessage
 		closemessage
@@ -221,12 +221,12 @@ script Planet01_Final_Lab_Core_BeheeWalk {
 		
 		waitmoncry()
 		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Everything changed after I discovered\n"
-		"the Deoxys cell. My experiments were \l"
-		"disastrous; it infected me, and \l"
-		"triggered Pal 9000's Contingency \l"
-		"Protocol, which teleported Ops back to \l"
-		"our ship and sent them back home on \l"
-		"auto-pilot.\p"
+		"the Deoxys Cell. The experiment was\l"
+		"a disaster; the Cell infected me and\l"
+		"triggered our Pal 9000's Contingency\l"
+		"Protocol, which teleported Ops back to\l"
+		"our ship and launched them back home\l"
+		"on strict auto-pilot...\p"
 		"All that we had, thrown so easily\n"
 		"away, because I got so greedy.\l"
 		"...\p"

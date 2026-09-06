@@ -2,7 +2,7 @@
   "id": "MAP_PLANET01_06",
   "name": "Planet01_06",
   "layout": "LAYOUT_PLANET01_06",
-  "music": "MUS_DUMMY",
+  "music": "MUS_HALL_OF_FAME_ROOM",
   "region_map_section": "MAPSEC_PLANET_SURFACE_03",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
