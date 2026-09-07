@@ -122,8 +122,8 @@ script connector_cave_remains {
     lock
     msgbox("Ops Lead: We decided to abandon this\n" 
     "camp too. It's too cold, and the ghost\l"
-    "PKMN we found beyond the icy cavern\l"
-    "give me the creeps.")
+    "Pokémon we found beyond the icy\l"
+    "cavern give me the creeps.")
 	waitmessage
 	closemessage
 	if (var(VAR_DAILY_SLOTS) == 0) {

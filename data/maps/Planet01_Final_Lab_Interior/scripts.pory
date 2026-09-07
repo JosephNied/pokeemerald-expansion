@@ -394,7 +394,7 @@ script Final_Lab_Interior_BiologistEncounter {
 
 	setvar(VAR_0x8000, MUGSHOT_OPS_SMILE)
     callnative(DrawMugshot)
-	msgbox("Hey, trucker. I wonder if you played a\l"
+	msgbox("Hey, trucker. I wonder if you played a\n"
 	"part in that wish coming true?\p"
 	"Either way, Jirachi seems to be offering\n" 
 	"YOU a wish now.\p"

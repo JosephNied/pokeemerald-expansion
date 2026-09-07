@@ -136,11 +136,11 @@ script Planet01_Diancie_Cave_DiancieEncounter {
     callnative(DrawMugshot)
 
 	msgbox("Magnezone! You, you-\p"
-    "You evolved?!?!?!?!\p"
+    "You evolved?!\p"
 	"This is incredible! This must be\n"
 	"something like Mega Evolution!\p"
 	"You always were something special, pal!\n"
-	"We definitely wont fail now!")
+	"We definitely won't fail now!")
 
 	waitmessage
 	callnative(ClearMugshot)

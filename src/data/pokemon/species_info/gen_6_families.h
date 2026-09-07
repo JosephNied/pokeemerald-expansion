@@ -7226,11 +7226,11 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
     [SPECIES_DIANCIE_MEGA] =
     {
         .baseHP        = 50,
-        .baseAttack    = 130,
-        .baseDefense   = 90,
+        .baseAttack    = 120,
+        .baseDefense   = 80,
         .baseSpeed     = 90,
-        .baseSpAttack  = 100,
-        .baseSpDefense = 90,
+        .baseSpAttack  = 120,
+        .baseSpDefense = 80,
         .types = MON_TYPES(TYPE_ROCK, TYPE_FAIRY),
         .catchRate = 3,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 350 : 315,
