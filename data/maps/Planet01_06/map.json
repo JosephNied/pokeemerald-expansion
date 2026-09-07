@@ -27,45 +27,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
-      "x": 17,
-      "y": 24,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "FLAG_UNUSED_0x02E"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
-      "x": 23,
-      "y": 33,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "FLAG_UNUSED_0x02F"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
-      "x": 15,
-      "y": 34,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "FLAG_UNUSED_0x030"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
       "x": 11,
       "y": 29,
       "elevation": 0,
@@ -92,8 +53,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
-      "x": 22,
-      "y": 34,
+      "x": 11,
+      "y": 32,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -167,19 +128,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_UNUSED_0x02C"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
-      "x": 15,
-      "y": 14,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "FLAG_UNUSED_0x02A"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SHARPEDO)",

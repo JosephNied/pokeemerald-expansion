@@ -3515,11 +3515,11 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     [SPECIES_QUAGSIRE] =
     {
         .baseHP        = 105,
-        .baseAttack    = 85,
-        .baseDefense   = 80,
+        .baseAttack    = 90,
+        .baseDefense   = 90,
         .baseSpeed     = 25,
-        .baseSpAttack  = 105,
-        .baseSpDefense = 120,
+        .baseSpAttack  = 90,
+        .baseSpDefense = 110,
         .types = MON_TYPES(TYPE_WATER, TYPE_GROUND),
         .catchRate = 90,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 151 : 137,
@@ -5936,7 +5936,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .description = COMPOUND_STRING(
             "It likes to climb on the rocky ledges of\n"
             "cliffs and caves, always hunting for food.\n"
-            "It, and presumably its' evolution, likes\n"
+            "It, and presumably its evolution, likes\n"
             "the taste and smell of berries."),
         .pokemonScale = 455,
         .pokemonOffset = 19,
@@ -5980,10 +5980,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     {
         .baseHP        = 90,
         .baseAttack    = 130,
-        .baseDefense   = 75,
-        .baseSpeed     = 65,
+        .baseDefense   = 85,
+        .baseSpeed     = 75,
         .baseSpAttack  = 75,
-        .baseSpDefense = 75,
+        .baseSpDefense = 85,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 60,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 189,
@@ -6008,9 +6008,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 18,
         .weight = 1258,
         .description = COMPOUND_STRING(
-            "It hides in the cliffs and caves, waitng\n"
+            "It hides in the cliffs and caves, waiting\n"
             "for prey to hunt. It otherwise appears\n"
-            "to avoid confrontation. Its' powerful\n"
+            "to avoid confrontation. Its powerful\n"
             "claws can smash the toughest rocks."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
@@ -6215,7 +6215,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 7,
         .weight = 350,
         .description = COMPOUND_STRING(
-            "It is a species of Pokémon that lives in\n"
+            "It's a species of Pokémon that lives in\n"
             "volcanic areas. Its body is pure lava;\n"
             "I'd recommend staying away unless you\n"
             "want to get burned."),

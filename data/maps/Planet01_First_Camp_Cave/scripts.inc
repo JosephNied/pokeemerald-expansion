@@ -610,8 +610,8 @@ voicedialogueABC_Text_4:
 
 voicedialogueABC_Text_5:
 # 182 "data/maps/Planet01_First_Camp_Cave/scripts.pory"
-	.string "{COLOR RED}{SHADOW LIGHT_RED}<Your ship being held down by the\n"
-	.string "psychic power of the Deoxys Cell: An\l"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<Your ship is being held down by the\n"
+	.string "psychic power of the Deoxys Cell: A\l"
 	.string "biological mass that Deoxys, the space\l"
 	.string "virus Pokémon, spawns from.\p"
 	.string "Your only escape is to defeat it.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"

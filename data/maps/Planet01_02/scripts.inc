@@ -396,7 +396,7 @@ Jirachi_goes_to_ship::
 # 305 "data/maps/Planet01_02/scripts.pory"
 	setflag FLAG_REGISTERED_ANDRES
 # 306 "data/maps/Planet01_02/scripts.pory"
-	clearflag FLAG_REGISTERED_DUSTY
+	setflag FLAG_REGISTERED_DUSTY
 # 307 "data/maps/Planet01_02/scripts.pory"
 	removeobject 25
 # 308 "data/maps/Planet01_02/scripts.pory"
@@ -868,9 +868,10 @@ sableye_connect_2:
 # 527 "data/maps/Planet01_02/scripts.pory"
 	compare VAR_DAILY_BLENDER, 5
 	goto_if_eq sableye_connect_5
-# 529 "data/maps/Planet01_02/scripts.pory"
-	compare VAR_DAILY_BLENDER, 2
-	goto_if_ge sableye_connect_6
+# 530 "data/maps/Planet01_02/scripts.pory"
+	buffernumberstring STR_VAR_1, VAR_DAILY_BLENDER
+# 531 "data/maps/Planet01_02/scripts.pory"
+	msgbox sableye_connect_Text_2
 sableye_connect_4:
 # 533 "data/maps/Planet01_02/scripts.pory"
 	fadeScreen FADE_FROM_BLACK
@@ -883,13 +884,6 @@ sableye_connect_4:
 sableye_connect_5:
 # 528 "data/maps/Planet01_02/scripts.pory"
 	msgbox sableye_connect_Text_1
-	goto sableye_connect_4
-
-sableye_connect_6:
-# 530 "data/maps/Planet01_02/scripts.pory"
-	buffernumberstring STR_VAR_1, VAR_DAILY_BLENDER
-# 531 "data/maps/Planet01_02/scripts.pory"
-	msgbox sableye_connect_Text_2
 	goto sableye_connect_4
 
 
@@ -948,7 +942,7 @@ Jirachi_goes_to_ship_Text_2:
 	.string "Crystal, apparently.\p"
 	.string "Why is this Jirachi so invested in us?\n"
 	.string "I guess it understands that the Deoxys\l"
-	.string "Cell threatens all life.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+	.string "Cell is a threat to all life.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Jirachi_goes_to_ship_Text_3:
 # 218 "data/maps/Planet01_02/scripts.pory"

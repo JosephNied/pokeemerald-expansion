@@ -1092,7 +1092,7 @@ Final_Lab_Interior_BiologistEncounter_Text_14:
 
 Final_Lab_Interior_BiologistEncounter_Text_15:
 # 397 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
-	.string "Hey, trucker. I wonder if you played a\l"
+	.string "Hey, trucker. I wonder if you played a\n"
 	.string "part in that wish coming true?\p"
 	.string "Either way, Jirachi seems to be offering\n"
 	.string "YOU a wish now.\p"

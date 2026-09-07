@@ -43,6 +43,13 @@ script Ditto_Cave_Bottom_EventScript_Item01 {
 	giveitem(ITEM_SUN_STONE, 1)
 	removeobject(2)
 	setflag(FLAG_TEMP_1)
+	if (var(VAR_TEMP_2) == 0) {
+		if (flag(FLAG_UNUSED_0x8E6) == FALSE) {
+			call(voicedialogueABC)
+			setflag(FLAG_UNUSED_0x8E6)
+		}
+        setvar(VAR_TEMP_2, 1)
+    }
 	release
 	end
 }
@@ -52,6 +59,13 @@ script Ditto_Cave_Bottom_EventScript_Item02 {
 	giveitem(ITEM_SUN_STONE, 1)
 	removeobject(6)
 	setflag(FLAG_TEMP_2)
+	if (var(VAR_TEMP_2) == 0) {
+		if (flag(FLAG_UNUSED_0x8E6) == FALSE) {
+			call(voicedialogueABC)
+			setflag(FLAG_UNUSED_0x8E6)
+		}
+        setvar(VAR_TEMP_2, 1)
+    }
 	release
 	end
 }

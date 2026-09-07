@@ -179,8 +179,8 @@ script voicedialogueABC {
         
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Your ship being held down by the\n"
-        "psychic power of the Deoxys Cell: An\l"
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Your ship is being held down by the\n"
+        "psychic power of the Deoxys Cell: A\l"
         "biological mass that Deoxys, the space\l"
         "virus Pokémon, spawns from.\p"
         "Your only escape is to defeat it.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")

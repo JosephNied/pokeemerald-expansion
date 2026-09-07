@@ -706,10 +706,10 @@ sableye_03_Text_2:
 
 Planet01_03_HintTextLowerCaves_Text_0:
 # 384 "data/maps/Planet01_03/scripts.pory"
-	.string "Captain: There is a cave and a strange\n"
+	.string "Captain: There's a cave and a strange\n"
 	.string "shoreline below. We can't reach them,\l"
 	.string "however, because the Sharpedo are too\l"
 	.string "aggressive and the floating stones\l"
-	.string "move in strage ways; sometimes, if we\l"
+	.string "move in strage ways. Sometimes, if we\l"
 	.string "aren't lucky, we're not able to get to\l"
 	.string "the far west shore at all!$"

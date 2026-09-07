@@ -252,8 +252,8 @@ Planet01_Diancie_Cave_DiancieEncounter_Text_1:
 Planet01_Diancie_Cave_DiancieEncounter_Text_2:
 # 138 "data/maps/Planet01_Diancie_Cave/scripts.pory"
 	.string "Magnezone! You, you-\p"
-	.string "You evolved?!?!?!?!\p"
+	.string "You evolved?!\p"
 	.string "This is incredible! This must be\n"
 	.string "something like Mega Evolution!\p"
 	.string "You always were something special, pal!\n"
-	.string "We definitely wont fail now!$"
+	.string "We definitely won't fail now!$"

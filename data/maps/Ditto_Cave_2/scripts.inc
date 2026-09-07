@@ -26,6 +26,10 @@ EventScript_SlugmaCatch::
 # 16 "data/maps/Ditto_Cave_2/scripts.pory"
 	msgbox EventScript_SlugmaCatch_Text_0
 # 18 "data/maps/Ditto_Cave_2/scripts.pory"
+	setvar VAR_0x8000, SPECIES_SLUGMA
+# 19 "data/maps/Ditto_Cave_2/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 20 "data/maps/Ditto_Cave_2/scripts.pory"
 	release
 	end
 

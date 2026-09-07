@@ -381,11 +381,11 @@ script sableye_03 {
 
 script Planet01_03_HintTextLowerCaves {
     lock
-    msgbox("Captain: There is a cave and a strange\n"
+    msgbox("Captain: There's a cave and a strange\n"
     "shoreline below. We can't reach them,\l"
     "however, because the Sharpedo are too\l" 
     "aggressive and the floating stones\l"
-    "move in strage ways; sometimes, if we\l"
+    "move in strage ways. Sometimes, if we\l"
     "aren't lucky, we're not able to get to\l"
     "the far west shore at all!")
     release
