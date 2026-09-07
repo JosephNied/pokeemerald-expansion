@@ -651,7 +651,7 @@ script Planet01_01_JirachiAppears {
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
-    msgbox("...A Jirachi?!")
+    msgbox("...Jirachi?!")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -966,7 +966,7 @@ script EventScript_TheCaptain {
             "Designed to keep up morale, maintain\n" 
             "focus on our objectives, and give full,\l" 
             "detailed reports on all of our\l" 
-            "activities. I'm dissapointed whatever\l"
+            "activities. I'm dissapointed that the\l"
             "situation we ran into required my\l" 
             "team to leave without me, but I'm sure\l"
             "they had good reason to do so.")

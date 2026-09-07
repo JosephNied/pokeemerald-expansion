@@ -10758,8 +10758,8 @@ static const struct LevelUpMove sToxicroakLevelUpLearnset[] = {
 
 #if P_FAMILY_CARNIVINE
 static const struct LevelUpMove sCarnivineLevelUpLearnset[] = {
-    LEVEL_UP_MOVE(1, MOVE_RAIN_DANCE),
-    LEVEL_UP_MOVE(1, MOVE_YAWN),
+    LEVEL_UP_MOVE(1, MOVE_AMNESIA),
+    LEVEL_UP_MOVE(1, MOVE_HYPNOSIS),
     LEVEL_UP_MOVE(1, MOVE_MUDDY_WATER),
     LEVEL_UP_MOVE(1, MOVE_EARTHQUAKE),
     LEVEL_UP_END

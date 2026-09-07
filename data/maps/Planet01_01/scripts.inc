@@ -1937,7 +1937,7 @@ Planet01_01_JirachiAppears_Text_4:
 
 Planet01_01_JirachiAppears_Text_5:
 # 654 "data/maps/Planet01_01/scripts.pory"
-	.string "...A Jirachi?!$"
+	.string "...Jirachi?!$"
 
 Planet01_01_JirachiAppears_Text_6:
 # 662 "data/maps/Planet01_01/scripts.pory"
@@ -2059,7 +2059,7 @@ EventScript_TheCaptain_Text_19:
 	.string "Designed to keep up morale, maintain\n"
 	.string "focus on our objectives, and give full,\l"
 	.string "detailed reports on all of our\l"
-	.string "activities. I'm dissapointed whatever\l"
+	.string "activities. I'm dissapointed that the\l"
 	.string "situation we ran into required my\l"
 	.string "team to leave without me, but I'm sure\l"
 	.string "they had good reason to do so.$"
