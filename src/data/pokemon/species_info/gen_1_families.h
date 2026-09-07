@@ -179,10 +179,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 20,
         .weight = 1000,
         .description = COMPOUND_STRING(
-            "It appears to have strange red and blue\n"
-            "tentacles growing out of it. There's no\n"
-            "way this Pokemon is native to this planet;\n"
-            "it must have belonged to the scientists."),
+            "It has huge red and blue tentacles\n"
+            "sprouting out of it. I haven't\n"
+            "confirmed it yet, but I think it may\n"
+            "have belonged to the EOD researchers."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 388,
@@ -548,7 +548,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .description = COMPOUND_STRING(
             "Charizard breathes intense flames that\n"
             "can melt any material. It can also fly,\n"
-            "making it a really useful companion."),
+            "making it a really useful companion.\n"
+            "Another EOD research team Pokémon."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 302,
@@ -5081,12 +5082,12 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_CLEFABLE] =
     {
-        .baseHP        = 95,
+        .baseHP        = 105,
         .baseAttack    = 70,
-        .baseDefense   = 83,
+        .baseDefense   = 90,
         .baseSpeed     = 75,
-        .baseSpAttack  = P_UPDATED_STATS >= GEN_6 ? 95 : 85,
-        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 90 : 85,
+        .baseSpAttack  = P_UPDATED_STATS >= GEN_6 ? 100 : 100,
+        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 100 : 100,
         .types = CLEFAIRY_FAMILY_TYPES,
         .catchRate = 25,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
@@ -5106,9 +5107,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .growthRate = GROWTH_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_CUTE_CHARM, ABILITY_MAGIC_GUARD, ABILITY_UNAWARE },
+        .abilities = { ABILITY_SERENE_GRACE, ABILITY_SERENE_GRACE, ABILITY_UNAWARE },
     #else
-        .abilities = { ABILITY_CUTE_CHARM, ABILITY_NONE, ABILITY_UNAWARE },
+        .abilities = { ABILITY_SERENE_GRACE, ABILITY_SERENE_GRACE, ABILITY_UNAWARE },
     #endif
         .bodyColor = BODY_COLOR_PINK,
         .noFlip = TRUE,
@@ -10933,9 +10934,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseHP        = 70,
         .baseAttack    = 70,
         .baseDefense   = 115,
-        .baseSpeed     = 60,
+        .baseSpeed     = 65,
         .baseSpAttack  = 120,
-        .baseSpDefense = 90,
+        .baseSpDefense = 95,
         .types = MON_TYPES(TYPE_ELECTRIC, TYPE_STEEL),
         .catchRate = 30,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
@@ -15444,9 +15445,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 1520,
         .description = COMPOUND_STRING(
             "This powerful Pokemon can manipulate\n"
-            "tons of gallons of water at will.\n"
-            "The probably brought it to perform\n"
-            "terrain-modification tasks as well."),
+            "gallons of water at will. The EOD\n"
+            "team may have brought it to perform\n"
+            "terrain-modification tasks."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 287,
@@ -15738,7 +15739,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_STARMIE] =
     {
-        .baseHP        = 60,
+        .baseHP        = 70,
         .baseAttack    = 75,
         .baseDefense   = 85,
         .baseSpeed     = 115,

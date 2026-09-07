@@ -162,10 +162,10 @@ const u8 gSilvallyMemoryPokedexText[] = _(
     "type to confound its enemies.");
 
 const u8 gMiniorMeteorPokedexText[] = _(
-    "Originally making its home in the ozone\n"
-    "layer, it hurtles to the ground when the\n"
-    "shell encasing its body grows too heavy.\n"
-    "It was born from mutated nanoparticles.");
+    "Can be found in many colors and varieties\n"
+    "in space. When they fall down to a planet,\n"
+    "they encase themselves in a protective\n"
+    "shell. Can refill my Oxygen System!");
 
 const u8 gMiniorCorePokedexText[] = _(
     "If its core stays exposed, it will\n"

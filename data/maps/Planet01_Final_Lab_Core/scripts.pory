@@ -164,7 +164,7 @@ script Planet01_Final_Lab_Core_BeheeWalk {
 		"With my present psychic state sending\l"
 		"my consciousness out across the\l"
 		"planet, these Pokémon must be\l"
-		"exploring it, as these are my memories.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		"exploring it. These are my memories.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 		waitmessage
 		closemessage
 
@@ -187,10 +187,10 @@ script Planet01_Final_Lab_Core_BeheeWalk {
 		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<For a long time, I was jealous of their\n"
 		"confidence. They were smart and they \l"
 		"knew it, and yet were never worried\l"
-		"about failure like I often did.\p"
+		"about failure like I always was.\p"
 		"But as we worked together, their\n"
 		"optimism became infectious.\l"
-		"As we got closer, they made me really\n"
+		"As we got closer, they made me really\l"
 		"believe in myself.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 		waitmessage
 		closemessage
@@ -198,13 +198,13 @@ script Planet01_Final_Lab_Core_BeheeWalk {
 		applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Behee1)
 		waitmovement(0)
 
-		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<We became partners in everything, even\n"
-		"work. When we were both assigned to\l" 
-		"project EOD, I was overjoyed. The past\l" 
-		"few years studying an incredible planet\l"
+		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<We became partners in everything,\n"
+		"even work. When we were both assigned\l" 
+		"to this planet, I was overjoyed. The\l" 
+		"past few years studying this place\l"
 		"with them and building our research\l"
-		"facility together was everything I\l" 
-		"could have asked for. I loved them.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		"facility together has been an \l" 
+		"incredible experience. I loved them.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 		waitmessage
 		closemessage
 
@@ -220,9 +220,12 @@ script Planet01_Final_Lab_Core_BeheeWalk {
 		waitmovement(0)
 		
 		waitmoncry()
-		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Everything changed after I discovered\n"
-		"the Deoxys Cell. The experiment was\l"
-		"a disaster; the Cell infected me and\l"
+		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Everything changed after I\n"
+		"discovered the Deoxys Cell.\p"
+		"In my excitement, I began to perform\n"
+		"experiments on it in its dormant state.\l"
+		"But I made a mistake and activated it,\l"
+		"allowing the Cell to infected me. This\l"
 		"triggered our Pal 9000's Contingency\l"
 		"Protocol, which teleported Ops back to\l"
 		"our ship and launched them back home\l"

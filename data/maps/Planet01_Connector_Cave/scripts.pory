@@ -113,7 +113,9 @@ script groundjournal_2 {
 	"I know she's a bit obsessed with making\n"
 	"some big breakthrough. I don't care as\l"
 	"much about that; being here with her is\l"
-	"enough for me.")
+	"enough for me.\p"
+	"{COLOR BLUE}{SHADOW LIGHT_BLUE}Whatever may happen, and wherever we'll\n" 
+	"go...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     release
     end
 }

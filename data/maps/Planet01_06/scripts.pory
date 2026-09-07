@@ -26,10 +26,12 @@ script EventScript_SharpedoCatch {
 script darkshore_suggestion {
 	lock
 	msgbox("Biologist: I discovered something\n" 
-	"incredible to the West of here.\l"
+	"incredible to the west of here.\l"
 	"Something that is going to make Ops and\l"
 	"I very, very famous. I just have to run\l"
-	"some experiments on it to be sure...")
+	"some experiments on it to be sure...\p"
+	"But it appears to be a dormant Deoxys\n"
+	"Cell.")
 	release
 	end
 }

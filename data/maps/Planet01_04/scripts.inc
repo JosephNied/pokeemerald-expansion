@@ -197,60 +197,60 @@ Planet01_04_Elgyem::
 	callnative RegisterSpeciesInDex
 # 118 "data/maps/Planet01_04/scripts.pory"
 	msgbox Planet01_04_Elgyem_Text_0
-# 119 "data/maps/Planet01_04/scripts.pory"
-	waitmessage
-# 120 "data/maps/Planet01_04/scripts.pory"
-	warp MAP_PLANET01_02, 0, 21, 23
 # 121 "data/maps/Planet01_04/scripts.pory"
-	waitstate
+	waitmessage
 # 122 "data/maps/Planet01_04/scripts.pory"
+	warp MAP_PLANET01_02, 0, 21, 23
+# 123 "data/maps/Planet01_04/scripts.pory"
+	waitstate
+# 124 "data/maps/Planet01_04/scripts.pory"
 	release
 	end
 
 
 sableye_04::
-# 127 "data/maps/Planet01_04/scripts.pory"
+# 129 "data/maps/Planet01_04/scripts.pory"
 	lock
-# 128 "data/maps/Planet01_04/scripts.pory"
+# 130 "data/maps/Planet01_04/scripts.pory"
 	goto_if_unset FLAG_SYS_DOME_SILVER, sableye_04_2
 sableye_04_1:
-# 146 "data/maps/Planet01_04/scripts.pory"
+# 148 "data/maps/Planet01_04/scripts.pory"
 	release
 	end
 
 sableye_04_2:
-# 129 "data/maps/Planet01_04/scripts.pory"
-	msgbox sableye_04_Text_0
-# 130 "data/maps/Planet01_04/scripts.pory"
-	fadeScreen FADE_TO_BLACK
 # 131 "data/maps/Planet01_04/scripts.pory"
-	playmoncry SPECIES_NOCTOWL, CRY_MODE_ENCOUNTER
+	msgbox sableye_04_Text_0
 # 132 "data/maps/Planet01_04/scripts.pory"
-	waitmoncry
+	fadeScreen FADE_TO_BLACK
 # 133 "data/maps/Planet01_04/scripts.pory"
-	setflag FLAG_SYS_DOME_SILVER
+	playmoncry SPECIES_NOCTOWL, CRY_MODE_ENCOUNTER
 # 134 "data/maps/Planet01_04/scripts.pory"
-	removeobject 10
+	waitmoncry
 # 135 "data/maps/Planet01_04/scripts.pory"
-	addvar VAR_DAILY_BLENDER, 1
+	setflag FLAG_SYS_DOME_SILVER
 # 136 "data/maps/Planet01_04/scripts.pory"
+	removeobject 10
+# 137 "data/maps/Planet01_04/scripts.pory"
+	addvar VAR_DAILY_BLENDER, 1
+# 138 "data/maps/Planet01_04/scripts.pory"
 	compare VAR_DAILY_BLENDER, 5
 	goto_if_eq sableye_04_5
-# 139 "data/maps/Planet01_04/scripts.pory"
+# 141 "data/maps/Planet01_04/scripts.pory"
 	buffernumberstring STR_VAR_1, VAR_DAILY_BLENDER
-# 140 "data/maps/Planet01_04/scripts.pory"
+# 142 "data/maps/Planet01_04/scripts.pory"
 	msgbox sableye_04_Text_2
 sableye_04_4:
-# 142 "data/maps/Planet01_04/scripts.pory"
-	fadeScreen FADE_FROM_BLACK
-# 143 "data/maps/Planet01_04/scripts.pory"
-	setvar VAR_0x8000, SPECIES_NOCTOWL
 # 144 "data/maps/Planet01_04/scripts.pory"
+	fadeScreen FADE_FROM_BLACK
+# 145 "data/maps/Planet01_04/scripts.pory"
+	setvar VAR_0x8000, SPECIES_NOCTOWL
+# 146 "data/maps/Planet01_04/scripts.pory"
 	callnative RegisterSpeciesInDex
 	goto sableye_04_1
 
 sableye_04_5:
-# 137 "data/maps/Planet01_04/scripts.pory"
+# 139 "data/maps/Planet01_04/scripts.pory"
 	msgbox sableye_04_Text_1
 	goto sableye_04_4
 
@@ -288,16 +288,18 @@ Planet01_04_HintText03_Text_0:
 
 Planet01_04_Elgyem_Text_0:
 # 118 "data/maps/Planet01_04/scripts.pory"
-	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Woah! Elgyem is glowing green-{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+	.string "Woah! Elgyem is glowing green-\p"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}And however we change, I just want you\n"
+	.string "to know...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 sableye_04_Text_0:
-# 129 "data/maps/Planet01_04/scripts.pory"
+# 131 "data/maps/Planet01_04/scripts.pory"
 	.string "Noctowl's eyes open...$"
 
 sableye_04_Text_1:
-# 137 "data/maps/Planet01_04/scripts.pory"
+# 139 "data/maps/Planet01_04/scripts.pory"
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}The gate is open.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 sableye_04_Text_2:
-# 140 "data/maps/Planet01_04/scripts.pory"
+# 142 "data/maps/Planet01_04/scripts.pory"
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}{STR_VAR_1} of 5...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"

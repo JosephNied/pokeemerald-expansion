@@ -200,24 +200,24 @@ Planet01_Final_Lab_Core_BeheeWalk::
 	waitmoncry
 # 223 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	msgbox Planet01_Final_Lab_Core_BeheeWalk_Text_11
-# 235 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Behee2
-# 236 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	waitmovement 0
 # 238 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	waitse
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Behee2
 # 239 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	playmoncry SPECIES_BEHEEYEM, CRY_MODE_ENCOUNTER
-# 240 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	setvar VAR_0x8000, SPECIES_BEHEEYEM
+	waitmovement 0
 # 241 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	waitse
+# 242 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	playmoncry SPECIES_BEHEEYEM, CRY_MODE_ENCOUNTER
+# 243 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	setvar VAR_0x8000, SPECIES_BEHEEYEM
+# 244 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	callnative RegisterSpeciesInDex
 Planet01_Final_Lab_Core_BeheeWalk_1:
-# 243 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 246 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	warp MAP_PLANET01_01, 1, 31, 11
-# 244 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 247 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	waitstate
-# 245 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+# 248 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	release
 	end
 
@@ -329,18 +329,12 @@ Planet01_Final_Lab_Core_BeheeWalk_2:
 	goto Planet01_Final_Lab_Core_BeheeWalk_1
 
 
-# 249 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-Movement_Player_Behee1:
-# 250 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	face_right
-# 251 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	delay_16
 # 252 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	walk_right
+Movement_Player_Behee1:
 # 253 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	walk_right
+	face_right
 # 254 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	walk_right
+	delay_16
 # 255 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
 # 256 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
@@ -352,23 +346,23 @@ Movement_Player_Behee1:
 # 259 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
 # 260 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	face_up
+	walk_right
 # 261 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	walk_right
+# 262 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	walk_right
+# 263 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	face_up
+# 264 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	delay_16
 	step_end
 
-# 264 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-Movement_Player_Behee2:
-# 265 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	face_right
-# 266 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	delay_16
 # 267 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	walk_right
+Movement_Player_Behee2:
 # 268 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	walk_right
+	face_right
 # 269 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	walk_right
+	delay_16
 # 270 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
 # 271 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
@@ -378,6 +372,12 @@ Movement_Player_Behee2:
 # 273 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	walk_right
 # 274 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	walk_right
+# 275 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	walk_right
+# 276 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
+	walk_right
+# 277 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
 	face_up
 	step_end
 
@@ -416,7 +416,7 @@ Planet01_Final_Lab_Core_BeheeWalk_Text_6:
 	.string "With my present psychic state sending\l"
 	.string "my consciousness out across the\l"
 	.string "planet, these Pokémon must be\l"
-	.string "exploring it, as these are my memories.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+	.string "exploring it. These are my memories.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Planet01_Final_Lab_Core_BeheeWalk_Text_7:
 # 174 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
@@ -433,21 +433,21 @@ Planet01_Final_Lab_Core_BeheeWalk_Text_8:
 	.string "{COLOR RED}{SHADOW LIGHT_RED}<For a long time, I was jealous of their\n"
 	.string "confidence. They were smart and they \l"
 	.string "knew it, and yet were never worried\l"
-	.string "about failure like I often did.\p"
+	.string "about failure like I always was.\p"
 	.string "But as we worked together, their\n"
 	.string "optimism became infectious.\l"
-	.string "As we got closer, they made me really\n"
+	.string "As we got closer, they made me really\l"
 	.string "believe in myself.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Planet01_Final_Lab_Core_BeheeWalk_Text_9:
 # 201 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	.string "{COLOR RED}{SHADOW LIGHT_RED}<We became partners in everything, even\n"
-	.string "work. When we were both assigned to\l"
-	.string "project EOD, I was overjoyed. The past\l"
-	.string "few years studying an incredible planet\l"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<We became partners in everything,\n"
+	.string "even work. When we were both assigned\l"
+	.string "to this planet, I was overjoyed. The\l"
+	.string "past few years studying this place\l"
 	.string "with them and building our research\l"
-	.string "facility together was everything I\l"
-	.string "could have asked for. I loved them.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+	.string "facility together has been an \l"
+	.string "incredible experience. I loved them.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Planet01_Final_Lab_Core_BeheeWalk_Text_10:
 # 213 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
@@ -456,9 +456,12 @@ Planet01_Final_Lab_Core_BeheeWalk_Text_10:
 
 Planet01_Final_Lab_Core_BeheeWalk_Text_11:
 # 223 "data/maps/Planet01_Final_Lab_Core/scripts.pory"
-	.string "{COLOR RED}{SHADOW LIGHT_RED}<Everything changed after I discovered\n"
-	.string "the Deoxys Cell. The experiment was\l"
-	.string "a disaster; the Cell infected me and\l"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}<Everything changed after I\n"
+	.string "discovered the Deoxys Cell.\p"
+	.string "In my excitement, I began to perform\n"
+	.string "experiments on it in its dormant state.\l"
+	.string "But I made a mistake and activated it,\l"
+	.string "allowing the Cell to infected me. This\l"
 	.string "triggered our Pal 9000's Contingency\l"
 	.string "Protocol, which teleported Ops back to\l"
 	.string "our ship and launched them back home\l"

@@ -6492,7 +6492,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Some alien relative of Sharpedo. Swimming\n"
             "deep in this planet's liquid has made it\n"
             "strange and powerful. I would catch one,\n"
-            "but they're too fast and aggressive."),
+            "but they're too fast and vicious."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 317,
@@ -12115,7 +12115,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseAttack    = 110,
         .baseDefense   = 130,
         .baseSpeed     = 60,
-        .baseSpAttack  = 110,
+        .baseSpAttack  = 100,
         .baseSpDefense = 100,
         .types = MON_TYPES(TYPE_WATER, TYPE_FIGHTING),
         .catchRate = 3,
@@ -13391,11 +13391,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     [SPECIES_DEOXYS_NORMAL] =
     {
         .baseHP        = 60,
-        .baseAttack    = 130,
-        .baseDefense   = 60,
-        .baseSpeed     = 130,
-        .baseSpAttack  = 130,
-        .baseSpDefense = 60,
+        .baseAttack    = 120,
+        .baseDefense   = 80,
+        .baseSpeed     = 90,
+        .baseSpAttack  = 120,
+        .baseSpDefense = 80,
         .types = MON_TYPES(TYPE_PSYCHIC),
         .catchRate = 3,
         .expYield = DEOXYS_EXP_YIELD,
@@ -13407,7 +13407,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_NONE },
+        .abilities = { ABILITY_TELEPATHY, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Deoxys"),
         .cryId = CRY_DEOXYS,
@@ -13416,9 +13416,9 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .height = 17,
         .weight = 608,
         .description = COMPOUND_STRING(
-            "Deoxys emerged from a virus the scientists\n"
-            "discovered. It is highly intelligent, and\n"
-            "utterly hostile to all forms of life.\n"
+            "Deoxys emerged from a dormant cell the EOD\n"
+            "team discovered. It is highly intelligent\n"
+            "and utterly hostile to all forms of life.\n"
             "It must be stopped wherever it's found."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
@@ -13472,11 +13472,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     [SPECIES_DEOXYS_ATTACK] =
     {
         .baseHP        = 50,
-        .baseAttack    = 180,
-        .baseDefense   = 20,
-        .baseSpeed     = 150,
-        .baseSpAttack  = 180,
-        .baseSpDefense = 20,
+        .baseAttack    = 170,
+        .baseDefense   = 50,
+        .baseSpeed     = 100,
+        .baseSpAttack  = 170,
+        .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_PSYCHIC),
         .catchRate = 3,
         .expYield = DEOXYS_EXP_YIELD,
@@ -13487,7 +13487,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_NONE },
+        .abilities = { ABILITY_PROTEAN, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Deoxys"),
         .cryId = CRY_DEOXYS,
@@ -13552,10 +13552,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     {
         .baseHP        = 50,
         .baseAttack    = 70,
-        .baseDefense   = 160,
-        .baseSpeed     = 90,
+        .baseDefense   = 170,
+        .baseSpeed     = 80,
         .baseSpAttack  = 70,
-        .baseSpDefense = 160,
+        .baseSpDefense = 170,
         .types = MON_TYPES(TYPE_PSYCHIC),
         .catchRate = 3,
         .expYield = DEOXYS_EXP_YIELD,
@@ -13566,7 +13566,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_NONE },
+        .abilities = { ABILITY_ANALYTIC, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Deoxys"),
         .cryId = CRY_DEOXYS,
@@ -13645,7 +13645,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_NONE },
+        .abilities = { ABILITY_PSYCHIC_SURGE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
         .noFlip = TRUE,
         .speciesName = _("Deoxys"),

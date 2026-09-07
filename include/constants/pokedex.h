@@ -1126,7 +1126,6 @@ enum NationalDexOrder
     F(EXCADRILL) \
     F(KINGDRA) \
     F(METAGROSS) \
-    F(DRAGONITE) \
     F(ZEKROM) \
     F(DIANCIE) \
     F(REGISTEEL) \

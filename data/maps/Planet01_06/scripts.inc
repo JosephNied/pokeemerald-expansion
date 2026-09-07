@@ -43,7 +43,7 @@ darkshore_suggestion::
 	lock
 # 28 "data/maps/Planet01_06/scripts.pory"
 	msgbox darkshore_suggestion_Text_0
-# 33 "data/maps/Planet01_06/scripts.pory"
+# 35 "data/maps/Planet01_06/scripts.pory"
 	release
 	end
 
@@ -55,7 +55,9 @@ EventScript_SharpedoCatch_Text_0:
 darkshore_suggestion_Text_0:
 # 28 "data/maps/Planet01_06/scripts.pory"
 	.string "Biologist: I discovered something\n"
-	.string "incredible to the West of here.\l"
+	.string "incredible to the west of here.\l"
 	.string "Something that is going to make Ops and\l"
 	.string "I very, very famous. I just have to run\l"
-	.string "some experiments on it to be sure...$"
+	.string "some experiments on it to be sure...\p"
+	.string "But it appears to be a dormant Deoxys\n"
+	.string "Cell.$"

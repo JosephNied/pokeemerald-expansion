@@ -4563,35 +4563,35 @@ Double Battle: Yes
 AI: Check Bad Move / Force Setup First Turn
 
 Deoxys Attack
-Level: 75
+Level: 80
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 - Psycho Boost
 - Fire Punch
-- Pursuit
+- Brutal Swing
 - Superpower
 
 Deoxys Defense
-Level: 75
+Level: 80
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 - Stored Power
-- Spikes
+- Refresh
 - Cosmic Power
 - Torment
 
 Deoxys Speed
-Level: 75
+Level: 80
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 - Extreme Speed
 - Overheat
-- Poison Jab
+- Explosion
 - Substitute
 
 Deoxys
-Level: 75
+Level: 80
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 - Ice Beam
 - Thunderbolt
-- Psychic
+- Expanding Force
 - Taunt
 
 === TRAINER_SIDNEY ===
@@ -9898,22 +9898,22 @@ Double Battle: Yes
 AI: Basic Trainer
 
 Ditto @ Quick Powder
-Level: 51
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Transform
 
 Ditto @ Quick Powder
-Level: 52
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Transform
 
 Ditto @ Quick Powder
-Level: 53
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Transform
 
 Ditto @ Quick Powder
-Level: 54
+Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Transform
 

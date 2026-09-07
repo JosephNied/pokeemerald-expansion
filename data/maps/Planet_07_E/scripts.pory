@@ -46,8 +46,8 @@ script gatemessage {
 		setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
 		callnative(DrawMugshot)
 		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I'm afraid... I might know.\n"
-		"This pool is where I found the Deoxys\l"
-		"Cell.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		"This pool is where I found the dormant\l"
+		"Deoxys Cell.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 		waitmessage
 		closemessage
 		callnative(ClearMugshot)
@@ -62,10 +62,12 @@ script gatemessage {
 
 		setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
 		callnative(DrawMugshot)
-		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<After merging with the Deoxys Cell and\n"
-		"triggering the Emergency Protocol, my\l"
-		"mind unleashed a wave of negative\l" 
-		"psychic energy. I think... It manifested\l"
+		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<After my experiments activated the\n"
+		"Deoxys Cell and triggered PAL 9000's\l"
+		"Emergency Protocol, my mind unleashed\l"
+		"a massive wave of negative psychic\l" 
+		"energy.\p"
+		"I think it... manifested? Constructed?\n"
 		"something down in that pool.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 		waitmessage
 		closemessage
@@ -93,8 +95,8 @@ script gatemessage {
 		setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
 		callnative(DrawMugshot)
 		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I'm afraid... I might know.\n"
-		"This pool is where I found the Deoxys\l"
-		"Cell.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		"This pool is where I found the dormant\l"
+		"Deoxys Cell.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 		waitmessage
 		closemessage
 		callnative(ClearMugshot)
@@ -109,10 +111,12 @@ script gatemessage {
 
 		setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
 		callnative(DrawMugshot)
-		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<After merging with the Deoxys Cell and\n"
-		"triggering the Emergency Protocol, my\l"
-		"mind unleashed a wave of negative\l" 
-		"psychic energy. I think... It manifested\l"
+		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<After my experiments activated the\n"
+		"Deoxys Cell and triggered PAL 9000's\l"
+		"Emergency Protocol, my mind unleashed\l"
+		"a massive wave of negative psychic\l" 
+		"energy.\p"
+		"I think it... manifested? Constructed?\n"
 		"something down in that pool.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 		waitmessage
 		closemessage
@@ -128,8 +132,8 @@ script gatemessage {
 		setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
 		callnative(DrawMugshot)
 		msgbox("{COLOR RED}{SHADOW LIGHT_RED}<A dark entity... We should avoid this\n"
-		"place. It could be dangerous. Plus the\l"
-		"vibe is terrible.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+		"place. It could be dangerous.\l"
+		"Plus the vibe is terrible.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
 		waitmessage
 		closemessage
 		callnative(ClearMugshot)

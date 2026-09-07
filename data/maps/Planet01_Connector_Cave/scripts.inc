@@ -184,30 +184,30 @@ groundjournal_2::
 	callnative ClearMugshot
 # 106 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	msgbox groundjournal_2_Text_1
-# 117 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 119 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	release
 	end
 
 
 connector_cave_remains::
-# 122 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 124 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	lock
-# 123 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 125 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	msgbox connector_cave_remains_Text_0
-# 127 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	waitmessage
-# 128 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	closemessage
 # 129 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	waitmessage
+# 130 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	closemessage
+# 131 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	compare VAR_DAILY_SLOTS, 0
 	goto_if_eq connector_cave_remains_2
 connector_cave_remains_1:
-# 132 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 134 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	release
 	end
 
 connector_cave_remains_2:
-# 130 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 132 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	call voicedialogueABC
 	goto connector_cave_remains_1
 
@@ -247,11 +247,13 @@ groundjournal_2_Text_1:
 	.string "I know she's a bit obsessed with making\n"
 	.string "some big breakthrough. I don't care as\l"
 	.string "much about that; being here with her is\l"
-	.string "enough for me.$"
+	.string "enough for me.\p"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Whatever may happen, and wherever we'll\n"
+	.string "go...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 connector_cave_remains_Text_0:
-# 123 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 125 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "Ops Lead: We decided to abandon this\n"
 	.string "camp too. It's too cold, and the ghost\l"
-	.string "PKMN we found beyond the icy cavern\l"
-	.string "give me the creeps.$"
+	.string "Pokémon we found beyond the icy\l"
+	.string "cavern give me the creeps.$"

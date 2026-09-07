@@ -2792,10 +2792,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 7,
         .weight = 404,
         .description = COMPOUND_STRING(
-            "The previous explorers definitely were\n"
-            "building and transforming this space if\n"
-            "they brough an Excadrill. What happened\n"
-            "to drive these Pokemon crazy?"),
+            "The EOD researchers were definitely\n"
+            "doing a lot of construction if they\n"
+            "they brought an Excadrill. Too bad the\n"
+            "Deoxys Cell infected it."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -9897,7 +9897,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .description = COMPOUND_STRING(
             "It will teleport me if it touches me!\n"
             "For some reason, whenever it does,\n"
-            "I see a flash of color."),
+            "I see a flash of color, and hear\n"
+            "what sounds like a poem."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -10435,9 +10436,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
     [SPECIES_HAXORUS] =
     {
         .baseHP        = 76,
-        .baseAttack    = 147,
-        .baseDefense   = 90,
-        .baseSpeed     = 97,
+        .baseAttack    = 135,
+        .baseDefense   = 80,
+        .baseSpeed     = 85,
         .baseSpAttack  = 60,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_DRAGON),
@@ -10458,10 +10459,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 18,
         .weight = 1055,
         .description = COMPOUND_STRING(
-            "Again with the red and blue tentacles.\n"
-            "Maybe the previous explorers brought\n"
-            "this guy to help cut through metal, or\n"
-            "even trees?"),
+            "Maybe the EOD researchers brought\n"
+            "this guy to help cut through trees, or\n"
+            "even metal, for their lab construction?\n"
+            "Again with the red and blue tentacles."),
         .pokemonScale = 267,
         .pokemonOffset = 2,
         .trainerScale = 286,
@@ -13203,7 +13204,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseHP        = 90,
         .baseAttack    = 120,
         .baseDefense   = 110,
-        .baseSpeed     = 80,
+        .baseSpeed     = 85,
         .baseSpAttack  = 150,
         .baseSpDefense = 110,
         .types = MON_TYPES(TYPE_ELECTRIC, TYPE_STEEL),
@@ -13215,7 +13216,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_ELECTRIC_SURGE, ABILITY_NONE, ABILITY_NONE },
+        .abilities = { ABILITY_HADRON_ENGINE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLACK,
         .speciesName = _("Magnezone M"),
         .cryId = CRY_ZEKROM,
