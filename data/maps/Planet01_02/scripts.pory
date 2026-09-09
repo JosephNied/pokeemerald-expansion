@@ -368,8 +368,8 @@ script Found_Ruby {
 
 script Planet01_02_HintText01 {
     lock
-    msgbox("Biologist: It'd be a bad idea to wear\n"
-    "sweet perfume when climbing this\l"
+    msgbox("Biologist: It'd be a bad idea to bring\n"
+    "anything that smells sweet up this\l"
     "mountain.\p"
     "There's a strong pokemon up here\n"
     "that would love it too much!")

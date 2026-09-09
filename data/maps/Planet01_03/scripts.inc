@@ -662,8 +662,8 @@ Planet01_03_HintText03_Text_0:
 Planet01_03_HintText04_Text_0:
 # 279 "data/maps/Planet01_03/scripts.pory"
 	.string "Ops Lead: Was it a coincidence that the\n"
-	.string "white trees corresponded to the path\l"
-	.string "through the misty cave?\p"
+	.string "white trees' positions corresponded to\l"
+	.string "the path through the misty cave?\p"
 	.string "Or could it be that something was trying\n"
 	.string "to communicate with us? You can never\l"
 	.string "tell with ghost-type Pokémon...$"

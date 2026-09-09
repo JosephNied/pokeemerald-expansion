@@ -277,8 +277,8 @@ script Planet01_03_HintText03 {
 script Planet01_03_HintText04 {
     lock
     msgbox("Ops Lead: Was it a coincidence that the\n"
-    "white trees corresponded to the path\l"
-    "through the misty cave?\p"
+    "white trees' positions corresponded to\l"
+    "the path through the misty cave?\p"
     "Or could it be that something was trying\n"
     "to communicate with us? You can never\l"
     "tell with ghost-type Pokémon...")

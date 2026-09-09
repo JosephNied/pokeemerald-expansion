@@ -10425,7 +10425,35 @@ static void CursorCb_Release(u8 taskId)
     struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][slot];
     enum Item item = ITEM_NONE;
 
+    if (gMain.inBattle
+    && ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+        || (gBattleTypeFlags & BATTLE_TYPE_BOSS_POKE)))
+    {
+        PlaySE(SE_FAILURE);
+        return;
+    }
+
+    if (gMain.inBattle)
+    {
+        for (enum BattlerId i = 0; i < gBattlersCount; i++)
+        {
+            if (IsOnPlayerSide(i)
+            && GetBattlerParty(i) == gParties[B_TRAINER_PLAYER]
+            && slot == gBattlerPartyIndexes[i])
+            {
+                PlaySE(SE_FAILURE);
+                return;
+            }
+        }
+    }
+
     if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_MAGNEZONE)
+    {
+        PlaySE(SE_FAILURE);
+        return;
+    }
+
+    if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_ZEKROM)
     {
         PlaySE(SE_FAILURE);
         return;

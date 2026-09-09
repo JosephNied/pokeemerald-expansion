@@ -16,8 +16,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SLUGMA)",
-      "x": 3,
-      "y": 7,
+      "x": 4,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_CHASE_PLAYER_OWE",
       "movement_range_x": 0,

@@ -89,6 +89,23 @@ script Planet01_01_EventScript_Item03 {
 script Planet01_01_AirWarning {
     lockall
     msgbox("Warning: Oxygen low.")
+    checkitem(ITEM_REPEL, 1)
+    if (var(VAR_RESULT) == TRUE) {
+        msgbox("Use an Air Canister?")
+        waitmessage
+        yesnobox(1, 0)
+        if (var(VAR_RESULT) == TRUE) {
+            playse(SE_REPEL)
+            removeitem(ITEM_REPEL, 1)
+            additem(ITEM_SUPER_REPEL, 1)
+            setvar(VAR_AIR_TIMER_STEPS, 250)
+            special(AddAirTimerMap)
+            callnative(RefreshO2Meter)
+        } else {
+            releaseall
+            end
+        }
+    }
     releaseall
     end
 }
@@ -191,9 +208,9 @@ script Planet01_01_HintText04 {
 
 script Planet01_01_HintText05 {
     lock
-    msgbox("Ops Lead: Pokémon of the Clefairy\n" 
-    "family seem to really enjoy bouncing\l" 
-    "around these rocky cliffs.")
+    msgbox("Ops Lead: Even with the low gravity, I\n" 
+    "can't jump up the tall cliffs. I wonder\l" 
+    "how else we might get up there...")
     release
     end
 }

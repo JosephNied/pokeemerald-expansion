@@ -996,8 +996,8 @@ Found_Ruby_Text_0:
 
 Planet01_02_HintText01_Text_0:
 # 371 "data/maps/Planet01_02/scripts.pory"
-	.string "Biologist: It'd be a bad idea to wear\n"
-	.string "sweet perfume when climbing this\l"
+	.string "Biologist: It'd be a bad idea to bring\n"
+	.string "anything that smells sweet up this\l"
 	.string "mountain.\p"
 	.string "There's a strong pokemon up here\n"
 	.string "that would love it too much!$"
