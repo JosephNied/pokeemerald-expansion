@@ -171,7 +171,8 @@ script Planet01_01_HintText01 {
     "explorers in hopefully convenient \l"
     "places!\p"
     "Note: The gravity is low here. Tall \n"
-    "ledges can be scaled easily!")
+    "ledges can be scaled easily!\l"
+    "Short ledges can be jumped up!")
     release
     end
 }
@@ -517,7 +518,8 @@ script Planet01_01_RobotGreeting {
     "explorers in hopefully convenient \l"
     "places!\p"
     "Note: The gravity is low here. Tall \n"
-    "ledges can be scaled easily!")
+    "ledges can be scaled easily!\l"
+    "Short ledges can be jumped up!")
     setflag(FLAG_TEMP_9)
     setvar(VAR_CAPTAIN_DIALOGUE, 1)
     release

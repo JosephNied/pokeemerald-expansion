@@ -34,7 +34,26 @@ EventScript_SlugmaCatch::
 	end
 
 
+slugmanote::
+# 25 "data/maps/Ditto_Cave_2/scripts.pory"
+	lock
+# 26 "data/maps/Ditto_Cave_2/scripts.pory"
+	msgbox slugmanote_Text_0
+# 32 "data/maps/Ditto_Cave_2/scripts.pory"
+	release
+	end
+
+
 EventScript_SlugmaCatch_Text_0:
 # 16 "data/maps/Ditto_Cave_2/scripts.pory"
 	.string "Slugma burned a party member!\n"
 	.string "They're a bit mad!$"
+
+slugmanote_Text_0:
+# 26 "data/maps/Ditto_Cave_2/scripts.pory"
+	.string "Ops Lead: This cave just loops around\n"
+	.string "and around... We're totally lost.\p"
+	.string "There's got to be a clue somewhere.\n"
+	.string "There's only one thing I know for sure:\p"
+	.string "If you see a Slugma, run directly away\n"
+	.string "from it!$"

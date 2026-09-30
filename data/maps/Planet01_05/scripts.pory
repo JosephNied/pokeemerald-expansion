@@ -82,15 +82,12 @@ movement Movement_DusknoirAppears {
 
 script Planet01_05_HintText01 {
     lock
-    msgbox("Ops: The trees here are giving off\n"
-    "a mysterious glow... The mists here\l"
-    "remind me of the anomalous cave we\l"
-    "discovered earlier.\p"
-    "We'll do what research we can here, and\n"
-    "go there at our next opportunity in\l"
-    "case there is a connection.\p"
-    "These Duskull are freaking me out\n"
-    "anyway.")
+    msgbox("Ops Lead: Is it a coincidence that the\n"
+    "white trees' positions correspond to\l"
+    "the path through the misty cave?\p"
+    "Or could it be that something is trying\n"
+    "to communicate with us? You can never\l"
+    "tell with ghost-type Pokémon...")
     release
     end
 }

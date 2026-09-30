@@ -104,7 +104,7 @@ script groundjournal_2 {
     callnative(ClearMugshot)
 
     msgbox("Ops Lead: I have a plan to do something\n" 
-    "special for the Biologist. She may know \l"
+    "special for the Biologist. She may know\l"
     "my Pokémon team can transform any\l"
     "environment; but what she doesn't know\l"
 	"is that I've brought some flower seeds\l"
@@ -122,10 +122,12 @@ script groundjournal_2 {
 
 script connector_cave_remains {
     lock
-    msgbox("Ops Lead: We decided to abandon this\n" 
-    "camp too. It's too cold, and the ghost\l"
-    "Pokémon we found beyond the icy\l"
-    "cavern give me the creeps.")
+    msgbox("Ops Lead: Even after covering the path\n" 
+    "to the icy cavern with dirt, this cave\l"
+    "was told cold to set up a permanent\l"
+    "campsite. We abandoned it too.\p"
+	"Besides, the ghost Pokémon we found\n"
+	"beyond the icy cave give me the creeps.")
 	waitmessage
 	closemessage
 	if (var(VAR_DAILY_SLOTS) == 0) {

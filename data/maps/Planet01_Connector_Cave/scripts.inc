@@ -194,20 +194,20 @@ connector_cave_remains::
 	lock
 # 125 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	msgbox connector_cave_remains_Text_0
-# 129 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	waitmessage
-# 130 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	closemessage
 # 131 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	waitmessage
+# 132 "data/maps/Planet01_Connector_Cave/scripts.pory"
+	closemessage
+# 133 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	compare VAR_DAILY_SLOTS, 0
 	goto_if_eq connector_cave_remains_2
 connector_cave_remains_1:
-# 134 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 136 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	release
 	end
 
 connector_cave_remains_2:
-# 132 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 134 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	call voicedialogueABC
 	goto connector_cave_remains_1
 
@@ -238,7 +238,7 @@ groundjournal_2_Text_0:
 groundjournal_2_Text_1:
 # 106 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "Ops Lead: I have a plan to do something\n"
-	.string "special for the Biologist. She may know \l"
+	.string "special for the Biologist. She may know\l"
 	.string "my Pokémon team can transform any\l"
 	.string "environment; but what she doesn't know\l"
 	.string "is that I've brought some flower seeds\l"
@@ -253,7 +253,9 @@ groundjournal_2_Text_1:
 
 connector_cave_remains_Text_0:
 # 125 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	.string "Ops Lead: We decided to abandon this\n"
-	.string "camp too. It's too cold, and the ghost\l"
-	.string "Pokémon we found beyond the icy\l"
-	.string "cavern give me the creeps.$"
+	.string "Ops Lead: Even after covering the path\n"
+	.string "to the icy cavern with dirt, this cave\l"
+	.string "was told cold to set up a permanent\l"
+	.string "campsite. We abandoned it too.\p"
+	.string "Besides, the ghost Pokémon we found\n"
+	.string "beyond the icy cave give me the creeps.$"

@@ -20,3 +20,15 @@ script EventScript_SlugmaCatch {
 	release
 	end
 }
+
+script slugmanote {
+	lock
+	msgbox("Ops Lead: This cave just loops around\n"
+	"and around... We're totally lost.\p"
+	"There's got to be a clue somewhere.\n"
+	"There's only one thing I know for sure:\p"
+	"If you see a Slugma, run directly away\n"
+	"from it!")
+	release
+	end
+}

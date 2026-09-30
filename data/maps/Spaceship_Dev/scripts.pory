@@ -184,7 +184,8 @@ script Spaceship_Dev_EventScript_Tutorial_Notebook {
     if (var(VAR_RESULT) == 3) {
         msgbox("The {COLOR BLUE}{SHADOW LIGHT_BLUE}Teleporter{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} can be used to warp\n"
         "back to the ship, and will trigger\l"
-        "automatically in emergencies.")
+        "automatically in emergencies.\p"
+        "Tip: Register it in your key items!")
         call(Spaceship_Dev_EventScript_Tutorial_Notebook)
     }
     if (var(VAR_RESULT) == 4) {
