@@ -5978,13 +5978,13 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 
     [SPECIES_URSARING] =
     {
-        .baseHP        = 90,
-        .baseAttack    = 130,
+        .baseHP        = 100,
+        .baseAttack    = 135,
         .baseDefense   = 85,
         .baseSpeed     = 75,
         .baseSpAttack  = 75,
         .baseSpDefense = 85,
-        .types = MON_TYPES(TYPE_NORMAL),
+        .types = MON_TYPES(TYPE_NORMAL, TYPE_DARK),
         .catchRate = 60,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 189,
         .evYield_Attack = 2,
@@ -6074,7 +6074,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 40,
         .baseSpAttack  = 45,
         .baseSpDefense = 85,
-        .types = MON_TYPES(TYPE_GROUND, TYPE_NORMAL),
+        .types = MON_TYPES(TYPE_GROUND, TYPE_DARK),
         .catchRate = 20,
         .expYield = 275,
         .evYield_Attack = 3,
