@@ -1768,8 +1768,8 @@ Planet01_01_HintText03_Text_0:
 	.string "have been digging deep into the\l"
 	.string "planet's core.\p"
 	.string "I wonder if it's the blue liquid they're\n"
-	.string "exposed to that changed their type and\l"
-	.string "color? I'll collect some samples!$"
+	.string "exposed to that changed their type\l"
+	.string "and color? I'll collect some samples!$"
 
 Planet01_01_HintText04_Text_0:
 # 204 "data/maps/Planet01_01/scripts.pory"

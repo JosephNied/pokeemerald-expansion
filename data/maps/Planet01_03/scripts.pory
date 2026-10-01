@@ -277,7 +277,8 @@ script Planet01_03_HintText03 {
 script Planet01_03_HintText04 {
     lock
     msgbox("Ops Lead: Was it a coincidence that the\n"
-    "white trees' positions corresponded to\l"
+    "position of the white trees we found\l"
+    "beyond the icy cavern corresponded to\l"
     "the path through the misty cave?\p"
     "Or could it be that something was trying\n"
     "to communicate with us? You can never\l"
