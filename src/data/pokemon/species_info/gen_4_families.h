@@ -5380,17 +5380,17 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_FIELD),
         .abilities = { ABILITY_UNAWARE, ABILITY_UNAWARE, ABILITY_UNAWARE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Quagsire"),
+        .speciesName = _("Quagstellar"),
         .cryId = CRY_QUAGSIRE,
         .natDexNum = NATIONAL_DEX_QUAGSIRE,
         .categoryName = _("Water Fish"),
         .height = 14,
         .weight = 750,
         .description = COMPOUND_STRING(
-            "The water here hasn't changed Quagsire's\n"
-            "colors or type. Maybe it's because of\n"
-            "its Unaware ability? Some have penchant\n"
-            "for collecting pretty stones and crystals."),
+            "They lazily float around, waiting for\n"
+            "prey to blunder into their open mouths.\n"
+            "Some apparently have penchant for\n"
+            "collecting pretty stones and crystals."),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 256,

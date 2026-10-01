@@ -189,11 +189,12 @@ script Planet01_01_HintText02 {
 
 script Planet01_01_HintText03 {
     lock
-    msgbox("Biologist: The Steelix here have been\n"
-    "digging deep into the planet's core;\l"
-    "this blue liquid they've been exposed\l"
-    "to has changed their type and color...\p"
-    "I'll collect some samples!")
+    msgbox("Biologist: These relatives of Steelix\n"
+    "have been digging deep into the\l"
+    "planet's core.\p"
+    "I wonder if it's the blue liquid they're\n"
+    "exposed to that changed their type and\l"
+    "color? I'll collect some samples!")
     release
     end
 }

@@ -3532,17 +3532,17 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_FIELD),
         .abilities = { ABILITY_UNAWARE, ABILITY_UNAWARE, ABILITY_UNAWARE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Quagsire"),
+        .speciesName = _("Quagstellar"),
         .cryId = CRY_QUAGSIRE,
         .natDexNum = NATIONAL_DEX_QUAGSIRE,
         .categoryName = _("Water Fish"),
         .height = 14,
         .weight = 750,
         .description = COMPOUND_STRING(
-            "The water here hasn't changed Quagsire's\n"
-            "colors or type. Maybe it's because of\n"
-            "its Unaware ability? Some have penchant\n"
-            "for collecting pretty stones and crystals."),
+            "They lazily float around, waiting for\n"
+            "prey to blunder into their open mouths.\n"
+            "Some apparently have penchant for\n"
+            "collecting pretty stones and crystals."),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -5363,17 +5363,17 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .abilities = { ABILITY_REGENERATOR, ABILITY_NONE, ABILITY_CONTRARY },
     #endif
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("Shuckle"),
+        .speciesName = _("Pshuckle"),
         .cryId = CRY_SHUCKLE,
         .natDexNum = NATIONAL_DEX_SHUCKLE,
         .categoryName = _("Mold"),
         .height = 6,
         .weight = 205,
         .description = COMPOUND_STRING(
-            "Shuckle on this planet are like those\n"
-            "from home; they store berries in their\n"
-            "shell which ferment to become delicious\n"
-            "juices and emit a sweet scent."),
+            "Like the Shuckle from home, Pschuckle\n"
+            "will store berries in their shell which\n"
+            "ferment to become delicious juices and\n"
+            "emit a sweet scent, attracting Pokémon."),
         .pokemonScale = 485,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -5927,7 +5927,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     #endif
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = TRUE,
-        .speciesName = _("Teddiursa"),
+        .speciesName = _("Ursaminor"),
         .cryId = CRY_TEDDIURSA,
         .natDexNum = NATIONAL_DEX_TEDDIURSA,
         .categoryName = _("Little Bear"),
@@ -6001,7 +6001,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .abilities = { ABILITY_GUTS, ABILITY_NONE, ABILITY_UNNERVE },
     #endif
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Ursaring"),
+        .speciesName = _("Ursamajor"),
         .cryId = CRY_URSARING,
         .natDexNum = NATIONAL_DEX_URSARING,
         .categoryName = _("Hibernator"),
@@ -6074,7 +6074,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 40,
         .baseSpAttack  = 45,
         .baseSpDefense = 85,
-        .types = MON_TYPES(TYPE_GROUND, TYPE_DARK),
+        .types = MON_TYPES(TYPE_DARK, TYPE_NORMAL),
         .catchRate = 20,
         .expYield = 275,
         .evYield_Attack = 3,
@@ -6086,14 +6086,14 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .abilities = { ABILITY_EARLY_BIRD, ABILITY_EARLY_BIRD, ABILITY_EARLY_BIRD },
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = TRUE,
-        .speciesName = _("Ursaluna"),
+        .speciesName = _("Constelluna"),
         .cryId = CRY_URSALUNA,
         .natDexNum = NATIONAL_DEX_URSALUNA,
         .categoryName = _("Peat"),
         .height = 24,
         .weight = 2900,
         .description = COMPOUND_STRING(
-            "This massive Ursaluna must have chased\n"
+            "This massive Pokémon must have chased\n"
             "away the previous explorers from their\n"
             "campsite!"),
         .pokemonScale = 256,

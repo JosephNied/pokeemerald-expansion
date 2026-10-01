@@ -12462,15 +12462,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
         .abilities = { ABILITY_MULTISCALE, ABILITY_MULTISCALE, ABILITY_MULTISCALE },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("Steelix"),
+        .speciesName = _("Iridescix"),
         .cryId = CRY_STEELIX,
         .natDexNum = NATIONAL_DEX_STEELIX,
-        .categoryName = _("Iron Snake"),
+        .categoryName = _("Dragon Snake"),
         .height = 92,
         .weight = 4000,
         .description = COMPOUND_STRING(
-            "The Steelix on this planet have\n"
-            "been digging deep under the ground,\n"
+            "A cosmic relative of Steelix?\n"
+            "They dig deep under the ground,\n"
             "feeding off of the energy in the\n"
             "planet's core."),
         .pokemonScale = 256,
