@@ -10076,10 +10076,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseHP        = 70,
         .baseAttack    = 65,
         .baseDefense   = 100,
-        .baseSpeed     = 55,
+        .baseSpeed     = 60,
         .baseSpAttack  = 95,
         .baseSpDefense = 100,
-        .types = MON_TYPES(TYPE_GHOST),
+        .types = MON_TYPES(TYPE_GHOST, TYPE_POISON),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 263,
@@ -10102,17 +10102,17 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .abilities = { ABILITY_MOODY, ABILITY_MOODY, ABILITY_MOODY },
     #endif
         .bodyColor = BODY_COLOR_BLACK,
-        .speciesName = _("Dusknoir"),
+        .speciesName = _("Dusknacht"),
         .cryId = CRY_DUSKNOIR,
         .natDexNum = NATIONAL_DEX_DUSKNOIR,
         .categoryName = _("Gripper"),
         .height = 22,
         .weight = 1066,
         .description = COMPOUND_STRING(
-            "This feared Pokémon is said to travel to\n"
-            "worlds unknown. Some even believe that\n"
-            "it takes lost spirits into its pliant body\n"
-            "and guides them home."),
+            "Dusknoir was said to travel to worlds\n"
+            "unknown. Didn't realize that included\n"
+            "space! Anyway, the location I found it in\n"
+            "seemed to match up with some hints..."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 348,

@@ -8946,7 +8946,7 @@ static const struct LevelUpMove sDusknoirLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1, MOVE_MEAN_LOOK),
     LEVEL_UP_MOVE(1, MOVE_SHADOW_BALL),
     LEVEL_UP_MOVE(1, MOVE_FUTURE_SIGHT),
-    LEVEL_UP_MOVE(1, MOVE_DARK_PULSE),
+    LEVEL_UP_MOVE(1, MOVE_SLUDGE_BOMB),
     LEVEL_UP_END
 };
 #endif //P_GEN_4_CROSS_EVOS

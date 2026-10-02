@@ -461,7 +461,7 @@ Planet01_Final_Lab_Core_BeheeWalk_Text_11:
 	.string "In my excitement, I began to perform\n"
 	.string "experiments on it in its dormant state.\l"
 	.string "But I made a mistake and activated it,\l"
-	.string "allowing the Cell to infected me. This\l"
+	.string "allowing the Cell to infect me. This\l"
 	.string "triggered our Pal 9000's Contingency\l"
 	.string "Protocol, which teleported Ops back to\l"
 	.string "our ship and launched them back home\l"

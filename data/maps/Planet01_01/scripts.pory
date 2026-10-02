@@ -128,6 +128,7 @@ script Planet01_01_AddAir_Minior01 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
     setflag(FLAG_TEMP_1)
     fadeScreen(FADE_TO_BLACK)
+    playse(SE_REPEL)
     removeobject(9)
     callnative(RefreshO2Meter)
     fadeScreen(FADE_FROM_BLACK)
@@ -585,7 +586,9 @@ script Planet01_01_JirachiAppears {
 
     delay(30)
 
+    playse(SE_PIN)
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player2_1)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
     playse(SE_PIN)
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player2_2)
     waitmovement(OBJ_EVENT_ID_PLAYER)
@@ -674,9 +677,10 @@ script Planet01_01_JirachiAppears {
 
     delay(60)
 
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    playse(SE_PIN)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up, emote_exclamation_mark))
     waitmovement(OBJ_EVENT_ID_PLAYER)
-
+    
     setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
     msgbox("...Jirachi?!")
@@ -717,6 +721,7 @@ script Planet01_01_JirachiAppears {
     closemessage
     callnative(ClearMugshot)
 
+    delay(30)
     special(Overworld_PlaySpecialMapMusic)
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)

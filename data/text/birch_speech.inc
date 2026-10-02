@@ -2,9 +2,10 @@ gText_Birch_Welcome::
 	.string "Well, that about wraps up the routine\n"
 	.string "maintenance.\p"
 	.string "Not much else to do as a space-trucker\n"
-	.string "at times like these. I guess it's about\l"
-	.string "time I put the crew back in cryosleep,\l"
-	.string "eh Magnezone? Next stop: Home!\p"
+	.string "at times like these.\p"
+	.string "I guess it's about time I put the crew\n"
+	.string "back in cryosleep, eh Magnezone?\l"
+	.string "Next stop: Home!\p"
 	.string "$"
 
 gText_Birch_Pokemon::
@@ -18,8 +19,8 @@ gText_Birch_MainSpeech::
 	.string "!!!\n"
 	.string "Huh?!\p"
 	.string "My ship- Something is dragging us\n"
-	.string "towards that nearby planet! What's\l"
-	.string "going on?!\p"
+	.string "towards that nearby planet!\l"
+	.string "What's going on?!\p"
 	.string "$"
 
 gText_Birch_AndYouAre::
