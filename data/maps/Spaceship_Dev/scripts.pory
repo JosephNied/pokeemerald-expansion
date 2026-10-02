@@ -40,9 +40,9 @@ script start_ship_intro {
     if (flag(FLAG_SYS_FRONTIER_PASS) == FALSE) {
         applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
         waitmovement(OBJ_EVENT_ID_PLAYER)
-        setvar(VAR_0x8004, 1)
+        setvar(VAR_0x8004, 2)
         setvar(VAR_0x8005, 1)
-        setvar(VAR_0x8006, 8)
+        setvar(VAR_0x8006, 16)
         setvar(VAR_0x8007, 5)
         special(ShakeCamera)
         setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
@@ -56,7 +56,9 @@ script start_ship_intro {
         waitmessage
         closemessage
         callnative(ClearMugshot)
-        delay(30)
+        playse(SE_PIN)
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_question_mark))
+        waitmovement(OBJ_EVENT_ID_PLAYER)
         setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
         callnative(DrawMugshot)
         msgbox("What the heck?! I can't get off the\n"
@@ -607,7 +609,7 @@ script maincomputer {
     setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
     callnative(DrawMugshot)
     msgbox("The ship's computer isn't reporting an\n"
-    "issue. So why can't it lift off?")
+    "issue, but I can't lift off!")
     waitmessage
     closemessage
     callnative(ClearMugshot)

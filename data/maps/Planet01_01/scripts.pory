@@ -255,6 +255,7 @@ script Planet01_01_RobotGreeting {
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player0)
     waitmovement(0)
     //special(Script_FadeOutMapMusic)
+    playse(SE_PIN)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_question_mark, face_up))
     waitmovement(OBJ_EVENT_ID_PLAYER)
     setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
@@ -272,6 +273,7 @@ script Planet01_01_RobotGreeting {
     waitmessage
     closemessage
     callnative(ClearMugshot)
+    playse(SE_PIN)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark, face_down))
     waitmovement(OBJ_EVENT_ID_PLAYER)
     setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
@@ -390,7 +392,7 @@ script Planet01_01_RobotGreeting {
     waitmessage
     closemessage
     callnative(ClearMugshot)
-
+    playse(SE_PIN)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_question_mark, face_up))
     waitmovement(OBJ_EVENT_ID_PLAYER)
     
@@ -405,6 +407,7 @@ script Planet01_01_RobotGreeting {
     closemessage
     callnative(ClearMugshot)
 
+    playse(SE_PIN)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark, face_left))
     waitmovement(OBJ_EVENT_ID_PLAYER)
     delay(60)
@@ -523,6 +526,9 @@ script Planet01_01_RobotGreeting {
     "Short ledges can be jumped up!")
     setflag(FLAG_TEMP_9)
     setvar(VAR_CAPTAIN_DIALOGUE, 1)
+
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
     release
     end
     }
@@ -579,7 +585,9 @@ script Planet01_01_JirachiAppears {
 
     delay(30)
 
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player2)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player2_1)
+    playse(SE_PIN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player2_2)
     waitmovement(OBJ_EVENT_ID_PLAYER)
     
     delay(30)
@@ -695,7 +703,7 @@ script Planet01_01_JirachiAppears {
     waitmessage
     closemessage
     callnative(ClearMugshot)
-
+    playse(SE_PIN)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_question_mark, face_down))
     waitmovement(OBJ_EVENT_ID_PLAYER)
 
@@ -731,11 +739,14 @@ script Planet01_01_JirachiAppears {
     end
 }
 
-movement Movement_Player2 {
+movement Movement_Player2_1 {
     emote_question_mark
     face_right
     delay_16
     delay_16
+}
+
+movement Movement_Player2_2 {
     emote_exclamation_mark
     face_left
     delay_16
@@ -1021,6 +1032,7 @@ script Planet01_01_MonstersRegular {
 script Planet01_01_Ending {
     lockall
     callnative(ClearMugshot)
+    playse(SE_PIN)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_question_mark, face_right))
     waitmovement(OBJ_EVENT_ID_PLAYER)
     setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)

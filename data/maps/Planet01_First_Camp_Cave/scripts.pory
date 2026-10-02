@@ -151,6 +151,9 @@ script voicedialogueABC {
         callnative(ClearMugshot)
         release
 
+        playse(SE_PIN)
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark))
+        waitmovement(OBJ_EVENT_ID_PLAYER)
         setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
         callnative(DrawMugshot)
         msgbox("You again!")
@@ -261,6 +264,9 @@ script voicedialogueABC {
         callnative(ClearMugshot)
         release
 
+        playse(SE_PIN)
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark))
+        waitmovement(OBJ_EVENT_ID_PLAYER)
         setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
         callnative(DrawMugshot)
         msgbox("You're back!")
