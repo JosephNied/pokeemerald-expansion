@@ -13,6 +13,8 @@ script Planet01_05_Enter {
 
 script Planet01_05_DusknoirEncounter {
     lockall
+    playse(SE_PIN)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark))
     msgbox("A terrifying Pokémon bursts out\n"
 			"of the darkness!")
     applymovement(3, Movement_DusknoirAppears)

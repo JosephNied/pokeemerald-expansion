@@ -5362,12 +5362,12 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
     [SPECIES_CARNIVINE] =
     {
         .baseHP        = 105,
-        .baseAttack    = 90,
+        .baseAttack    = 80,
         .baseDefense   = 90,
         .baseSpeed     = 25,
-        .baseSpAttack  = 90,
+        .baseSpAttack  = 95,
         .baseSpDefense = 110,
-        .types = MON_TYPES(TYPE_WATER, TYPE_GROUND),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_WATER),
         .catchRate = 90,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 151 : 137,
         .evYield_HP = 2,
@@ -5383,7 +5383,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .speciesName = _("Quagstellar"),
         .cryId = CRY_QUAGSIRE,
         .natDexNum = NATIONAL_DEX_QUAGSIRE,
-        .categoryName = _("Water Fish"),
+        .categoryName = _("Algae Fish"),
         .height = 14,
         .weight = 750,
         .description = COMPOUND_STRING(
@@ -5408,7 +5408,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .backAnimId = BACK_ANIM_H_SLIDE,
         .palette = gMonPalette_Carnivine,
         .shinyPalette = gMonShinyPalette_Carnivine,
-        .iconSprite = gMonIcon_Quagsire,
+        .iconSprite = gMonIcon_Carnivine,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 8, SHADOW_SIZE_M)

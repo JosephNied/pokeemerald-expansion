@@ -412,6 +412,7 @@ static const u8 *GetFacilityCancelString(void);
 static void Task_CancelChooseMonYesNo(u8);
 static void PartyMenuDisplayYesNoMenu(void);
 static void Task_HandleCancelChooseMonYesNoInput(u8);
+static void Task_HandleReleaseYesNoInput(u8);
 static void Task_ReturnToChooseMonAfterText(u8);
 static void UpdateCurrentPartySelection(s8 *, s8);
 static void UpdatePartySelectionSingleLayout(s8 *, s8);
@@ -586,8 +587,8 @@ static void CursorCb_CatalogMower(u8);
 static void CursorCb_ChangeForm(u8);
 static void CursorCb_ChangeAbility(u8);
 static void CursorCb_Release(u8);
-//static void CursorCb_ConfirmRelease(u8);
-//static void CursorCb_CancelRelease(u8);
+static void CursorCb_ConfirmRelease(u8);
+static void CursorCb_CancelRelease(u8);
 void TryItemHoldFormChange(struct Pokemon *mon, s8 slotId, enum BattleTrainer trainer);
 static void ShowMoveSelectWindow(u8 slot);
 static void Task_HandleWhichMoveInput(u8 taskId);
@@ -2281,24 +2282,35 @@ static void Task_CancelChooseMonYesNo(u8 taskId)
     }
 }
 
+static void Task_HandleReleaseYesNoInput(u8 taskId)
+{
+    switch (Menu_ProcessInputNoWrapClearOnChoose())
+    {
+    case 0: // Yes
+        CursorCb_ConfirmRelease(taskId);
+        break;
+
+    case MENU_B_PRESSED:
+        PlaySE(SE_SELECT);
+        // fallthrough
+    case 1: // No
+        gPartyMenu.action = ACTIONS_NONE;
+        Task_ReturnToChooseMonAfterText(taskId);
+        break;
+    }
+}
+
 static void Task_HandleCancelChooseMonYesNoInput(u8 taskId)
 {
     switch (Menu_ProcessInputNoWrapClearOnChoose())
     {
     case 0:
-        //if (gPartyMenu.action == ACTIONS_RELEASE)
-        //{
-        //    CursorCb_ConfirmRelease(taskId);
-        //    break;
-        //} 
-        //else
-        //{
-            gPartyMenuUseExitCallback = FALSE;
-            gPartyMenu.slotId = PARTY_SIZE + 1;
-            ClearSelectedPartyOrder();
-            Task_ClosePartyMenu(taskId);
-        //}
+        gPartyMenuUseExitCallback = FALSE;
+        gPartyMenu.slotId = PARTY_SIZE + 1;
+        ClearSelectedPartyOrder();
+        Task_ClosePartyMenu(taskId);
         break;
+
     case MENU_B_PRESSED:
         PlaySE(SE_SELECT);
         // fallthrough
@@ -10418,12 +10430,64 @@ void CursorCb_MoveItem(u8 taskId)
     }
 }
 
+static void FillReleasedPartySlot(u16 releasedSlot)
+{
+    s16 sourceSlot;
+    u16 i;
+
+    // Find an inactive Pokémon after the released slot.
+    for (sourceSlot = PARTY_SIZE - 1; sourceSlot > releasedSlot; sourceSlot--)
+    {
+        if (GetMonData(&gParties[B_TRAINER_PLAYER][sourceSlot], MON_DATA_SPECIES) != SPECIES_NONE)
+        {
+            bool8 isActive = FALSE;
+
+            for (i = 0; i < gBattlersCount; i++)
+            {
+                if (IsOnPlayerSide(i)
+                 && GetBattlerParty(i) == gParties[B_TRAINER_PLAYER]
+                 && gBattlerPartyIndexes[i] == sourceSlot)
+                {
+                    isActive = TRUE;
+                    break;
+                }
+            }
+
+            if (!isActive)
+                break;
+        }
+    }
+
+    // Nothing available to move into the released slot.
+    if (sourceSlot <= releasedSlot)
+        return;
+
+    // Move the Pokémon itself.
+    gParties[B_TRAINER_PLAYER][releasedSlot] =
+        gParties[B_TRAINER_PLAYER][sourceSlot];
+
+    // Move its battle state with it.
+    gBattleStruct->partyState[B_SIDE_PLAYER][releasedSlot] =
+        gBattleStruct->partyState[B_SIDE_PLAYER][sourceSlot];
+
+    gBattleStruct->itemLost[B_SIDE_PLAYER][releasedSlot] =
+        gBattleStruct->itemLost[B_SIDE_PLAYER][sourceSlot];
+
+    gPartyCriticalHits[releasedSlot] =
+        gPartyCriticalHits[sourceSlot];
+
+    // Empty the old slot.
+    ZeroMonData(&gParties[B_TRAINER_PLAYER][sourceSlot]);
+    gBattleStruct->partyState[B_SIDE_PLAYER][sourceSlot] = (struct PartyState){0};
+    gBattleStruct->itemLost[B_SIDE_PLAYER][sourceSlot].originalItem = ITEM_NONE;
+    gBattleStruct->itemLost[B_SIDE_PLAYER][sourceSlot].stolen = FALSE;
+    gPartyCriticalHits[sourceSlot] = 0;
+}
 
 static void CursorCb_Release(u8 taskId)
 {
     u16 slot = gPartyMenu.slotId;
     struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][slot];
-    enum Item item = ITEM_NONE;
 
     if (gMain.inBattle
     && ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
@@ -10438,6 +10502,7 @@ static void CursorCb_Release(u8 taskId)
         for (enum BattlerId i = 0; i < gBattlersCount; i++)
         {
             if (IsOnPlayerSide(i)
+            && !gBattleStruct->battlerState[i].notOnField
             && GetBattlerParty(i) == gParties[B_TRAINER_PLAYER]
             && slot == gBattlerPartyIndexes[i])
             {
@@ -10459,71 +10524,56 @@ static void CursorCb_Release(u8 taskId)
         return;
     }
 
-    if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_JIRACHI)
-    {
-        FlagClear(FLAG_REGISTERED_DUSTY);
-    }
-
-    if (OW_PC_RELEASE_ITEM >= GEN_8)
-        item = GetMonData(mon, MON_DATA_HELD_ITEM);
-    
-    ZeroMonData(mon);
-
-    AddBagItem(ITEM_BEAST_BALL, 1);
-
-    if (item != ITEM_NONE)
-        AddBagItem(item, 1);
-    
-    CompactPartySlots();
-    CalculatePlayerPartyCount();
-
     PlaySE(SE_SELECT);
-    Task_ClosePartyMenu(taskId);   
-}
 
-/*static void CursorCb_Release(u8 taskId)
-{
-    u16 slot = gPartyMenu.slotId;
-    struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][slot];
-
-    if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_MAGNEZONE)
-    {
-        PlaySE(SE_FAILURE);
-        return;
-    }
-    PlaySE(SE_SELECT);
     gPartyMenu.action = ACTIONS_RELEASE;
     PartyMenuDisplayYesNoMenu();
-}*/
+    gTasks[taskId].func = Task_HandleReleaseYesNoInput;
+}
 
-/*static void CursorCb_ConfirmRelease(u8 taskId)
+static void CursorCb_ConfirmRelease(u8 taskId)
 {
     u16 slot = gPartyMenu.slotId;
     struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][slot];
     enum Item item = ITEM_NONE;
 
+    if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_JIRACHI)
+        FlagClear(FLAG_REGISTERED_DUSTY);
+
     if (OW_PC_RELEASE_ITEM >= GEN_8)
         item = GetMonData(mon, MON_DATA_HELD_ITEM);
-    
+
     ZeroMonData(mon);
 
     AddBagItem(ITEM_BEAST_BALL, 1);
 
     if (item != ITEM_NONE)
         AddBagItem(item, 1);
-    
-    CompactPartySlots();
+
+    if (gMain.inBattle)
+    {
+        gBattleStruct->itemLost[B_SIDE_PLAYER][slot].originalItem = ITEM_NONE;
+        gBattleStruct->itemLost[B_SIDE_PLAYER][slot].stolen = FALSE;
+
+        FillReleasedPartySlot(slot);
+    }
+    else
+    {
+        CompactPartySlots();
+    }
+
     CalculatePlayerPartyCount();
 
     PlaySE(SE_SELECT);
-    gPartyMenu.action = ACTIONS_NONE;
-    Task_ClosePartyMenu(taskId);   
-}*?
 
-/*static void CursorCb_CancelRelease(u8 taskId)
+    gPartyMenu.action = ACTIONS_NONE;
+    Task_ClosePartyMenu(taskId);
+}
+
+static void CursorCb_CancelRelease(u8 taskId)
 {
     CursorCb_Cancel1(taskId);
-}*/
+}
 
 static void FieldCallback_RockClimb(void)
 {

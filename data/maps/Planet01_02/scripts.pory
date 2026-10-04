@@ -65,6 +65,7 @@ script Planet01_02_AddAir_Minior01 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
     setflag(FLAG_UNUSED_0x02F)
     fadeScreen(FADE_TO_BLACK)
+    playse(SE_REPEL)
     callnative(RefreshO2Meter)
     removeobject(28)
     fadeScreen(FADE_FROM_BLACK)
@@ -84,6 +85,7 @@ script Planet01_02_AddAir_Minior02 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
     setflag(FLAG_UNUSED_0x031)
     fadeScreen(FADE_TO_BLACK)
+    playse(SE_REPEL)
     callnative(RefreshO2Meter)
     removeobject(23)
     fadeScreen(FADE_FROM_BLACK)
@@ -465,6 +467,8 @@ script Planet01_02_QuagsireTrigger {
     callnative(DrawMugshot)
     msgbox("Huh? In the waterfall-")
     waitmessage
+    playse(SE_PIN)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark))
     callnative(ClearMugshot)
     closemessage
     waitse()

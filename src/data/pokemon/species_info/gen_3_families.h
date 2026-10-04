@@ -12111,11 +12111,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 
     [SPECIES_METAGROSS] =
     {
-        .baseHP        = 80,
+        .baseHP        = 85,
         .baseAttack    = 110,
-        .baseDefense   = 130,
-        .baseSpeed     = 60,
-        .baseSpAttack  = 100,
+        .baseDefense   = 100,
+        .baseSpeed     = 100,
+        .baseSpAttack  = 110,
         .baseSpDefense = 100,
         .types = MON_TYPES(TYPE_WATER, TYPE_FIGHTING),
         .catchRate = 3,
@@ -12135,16 +12135,16 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
         .abilities = { ABILITY_BATTLE_ARMOR, ABILITY_BATTLE_ARMOR, ABILITY_LIGHT_METAL },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Metagross"),
+        .speciesName = _("Crystagross"),
         .cryId = CRY_METAGROSS,
         .natDexNum = NATIONAL_DEX_METAGROSS,
-        .categoryName = _("Iron Leg"),
+        .categoryName = _("Crystal Leg"),
         .height = 16,
         .weight = 5500,
         .description = COMPOUND_STRING(
-            "Metagross seems to have hardened into\n"
+            "Like Metagross, but hardened into\n"
             "some kind of crystal. It's partly\n"
-            "transparent, and has changed type.\n"
+            "transparent, and full of energy.\n"
             "Learns Surf and Rock Smash!"),
         .pokemonScale = 256,
         .pokemonOffset = 4,

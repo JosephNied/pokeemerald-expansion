@@ -128,10 +128,10 @@ ConnectorCave_Cold_Wall::
 	lock
 # 70 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	goto_if_unset FLAG_SYS_BRAILLE_DIG, ConnectorCave_Cold_Wall_2
-# 74 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 73 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	msgbox ConnectorCave_Cold_Wall_Text_1
 ConnectorCave_Cold_Wall_1:
-# 76 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 75 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	release
 	end
 
@@ -142,72 +142,72 @@ ConnectorCave_Cold_Wall_2:
 
 
 EventScript_GlimmoraCatch::
-# 81 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 80 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	lockall
-# 82 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 81 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	fadeScreen FADE_TO_WHITE
-# 83 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 82 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	special GlimmoraCatch
-# 84 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 83 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	setflag FLAG_UNUSED_0x02C
-# 85 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 84 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	setflag FLAG_UNUSED_0x030
-# 86 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 85 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	removeobject 4
-# 87 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 86 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	removeobject 2
-# 88 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 87 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	fadeScreen FADE_FROM_WHITE
-# 89 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 88 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	setvar VAR_0x8000, SPECIES_GLIMMORA
-# 90 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 89 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	callnative RegisterSpeciesInDex
-# 91 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 90 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	msgbox EventScript_GlimmoraCatch_Text_0
-# 93 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 92 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	release
 	end
 
 
 groundjournal_2::
-# 98 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 97 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	lock
-# 100 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 99 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_PLAYER_DETERMINED
-# 101 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 100 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	callnative DrawMugshot
-# 102 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 101 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	msgbox groundjournal_2_Text_0
-# 103 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 102 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	waitmessage
-# 104 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 103 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	callnative ClearMugshot
-# 106 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 105 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	msgbox groundjournal_2_Text_1
-# 119 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 118 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	release
 	end
 
 
 connector_cave_remains::
-# 124 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 123 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	lock
-# 125 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 124 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	msgbox connector_cave_remains_Text_0
-# 131 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 130 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	waitmessage
-# 132 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 131 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	closemessage
-# 133 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 132 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	compare VAR_DAILY_SLOTS, 0
 	goto_if_eq connector_cave_remains_2
 connector_cave_remains_1:
-# 136 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 135 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	release
 	end
 
 connector_cave_remains_2:
-# 134 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 133 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	call voicedialogueABC
 	goto connector_cave_remains_1
 
@@ -219,24 +219,23 @@ ConnectorCave_Cold_Warning_Text_0:
 
 ConnectorCave_Cold_Wall_Text_0:
 # 71 "data/maps/Planet01_Connector_Cave/scripts.pory"
-	.string "This wall is colder than the others...\n"
-	.string "Is there something behind it?$"
+	.string "This wall is colder than the others...$"
 
 ConnectorCave_Cold_Wall_Text_1:
-# 74 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 73 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "There's a frozen cavern back there!$"
 
 EventScript_GlimmoraCatch_Text_0:
-# 91 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 90 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "Glimmora poisoned a party member!\n"
 	.string "That stings!$"
 
 groundjournal_2_Text_0:
-# 102 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 101 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "A journal!$"
 
 groundjournal_2_Text_1:
-# 106 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 105 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "Ops Lead: I have a plan to do something\n"
 	.string "special for the Biologist. She may know\l"
 	.string "my Pokémon team can transform any\l"
@@ -252,7 +251,7 @@ groundjournal_2_Text_1:
 	.string "go...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 connector_cave_remains_Text_0:
-# 125 "data/maps/Planet01_Connector_Cave/scripts.pory"
+# 124 "data/maps/Planet01_Connector_Cave/scripts.pory"
 	.string "Ops Lead: Even after covering the path\n"
 	.string "to the icy cavern with dirt, this cave\l"
 	.string "was told cold to set up a permanent\l"

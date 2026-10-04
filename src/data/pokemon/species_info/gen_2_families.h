@@ -3515,12 +3515,12 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     [SPECIES_QUAGSIRE] =
     {
         .baseHP        = 105,
-        .baseAttack    = 90,
+        .baseAttack    = 80,
         .baseDefense   = 90,
         .baseSpeed     = 25,
-        .baseSpAttack  = 90,
+        .baseSpAttack  = 95,
         .baseSpDefense = 110,
-        .types = MON_TYPES(TYPE_WATER, TYPE_GROUND),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_WATER),
         .catchRate = 90,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 151 : 137,
         .evYield_HP = 2,

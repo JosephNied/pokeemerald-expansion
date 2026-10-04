@@ -5440,9 +5440,9 @@ static const struct LevelUpMove sWooperLevelUpLearnset[] = {
 
 static const struct LevelUpMove sQuagsireLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1, MOVE_AMNESIA),
-    LEVEL_UP_MOVE(1, MOVE_HYPNOSIS),
+    LEVEL_UP_MOVE(1, MOVE_LEECH_SEED),
     LEVEL_UP_MOVE(1, MOVE_MUDDY_WATER),
-    LEVEL_UP_MOVE(1, MOVE_EARTHQUAKE),
+    LEVEL_UP_MOVE(1, MOVE_GIGA_DRAIN),
     LEVEL_UP_END
 };
 
@@ -9341,7 +9341,7 @@ static const struct LevelUpMove sMetagrossLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1, MOVE_ROCK_SMASH),
     LEVEL_UP_MOVE(1, MOVE_WIDE_GUARD),
     LEVEL_UP_MOVE(1, MOVE_SURF),
-    LEVEL_UP_MOVE(1, MOVE_QUASH),
+    LEVEL_UP_MOVE(1, MOVE_SOAK),
     LEVEL_UP_END
 };
 #endif //P_FAMILY_BELDUM
@@ -10759,9 +10759,9 @@ static const struct LevelUpMove sToxicroakLevelUpLearnset[] = {
 #if P_FAMILY_CARNIVINE
 static const struct LevelUpMove sCarnivineLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1, MOVE_AMNESIA),
-    LEVEL_UP_MOVE(1, MOVE_HYPNOSIS),
+    LEVEL_UP_MOVE(1, MOVE_LEECH_SEED),
     LEVEL_UP_MOVE(1, MOVE_MUDDY_WATER),
-    LEVEL_UP_MOVE(1, MOVE_EARTHQUAKE),
+    LEVEL_UP_MOVE(1, MOVE_GIGA_DRAIN),
     LEVEL_UP_END
 };
 #endif //P_FAMILY_CARNIVINE
