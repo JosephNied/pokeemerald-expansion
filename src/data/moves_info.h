@@ -1000,7 +1000,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "A rampage of 2 to 3 turns\n"
             "that confuses the user."),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 120 : 90,
+        .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 80 : 80,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = B_UPDATED_MOVE_DATA >= GEN_5 ? 10 : 20,
@@ -6615,7 +6615,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "May lower Sp. Def."),
         #endif
         .effect = EFFECT_HIT,
-        .power = 80,
+        .power = 65,
         .type = TYPE_DARK,
         .accuracy = 100,
         .pp = 15,

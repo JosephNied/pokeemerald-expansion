@@ -3535,7 +3535,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .speciesName = _("Quagstellar"),
         .cryId = CRY_QUAGSIRE,
         .natDexNum = NATIONAL_DEX_QUAGSIRE,
-        .categoryName = _("Water Fish"),
+        .categoryName = _("Algae Fish"),
         .height = 14,
         .weight = 750,
         .description = COMPOUND_STRING(
@@ -5978,8 +5978,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 
     [SPECIES_URSARING] =
     {
-        .baseHP        = 100,
-        .baseAttack    = 135,
+        .baseHP        = 95,
+        .baseAttack    = 125,
         .baseDefense   = 85,
         .baseSpeed     = 75,
         .baseSpAttack  = 75,
@@ -5989,7 +5989,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 189,
         .evYield_Attack = 2,
         .itemCommon = ITEM_QUICK_CLAW,
-        .itemRare = ITEM_KINGS_ROCK,
+        .itemRare = ITEM_QUICK_CLAW,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
@@ -6069,11 +6069,11 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     [SPECIES_URSALUNA] =
     {
         .baseHP        = 110,
-        .baseAttack    = 100,
+        .baseAttack    = 135,
         .baseDefense   = 90,
         .baseSpeed     = 40,
-        .baseSpAttack  = 45,
-        .baseSpDefense = 85,
+        .baseSpAttack  = 75,
+        .baseSpDefense = 90,
         .types = MON_TYPES(TYPE_DARK, TYPE_NORMAL),
         .catchRate = 20,
         .expYield = 275,

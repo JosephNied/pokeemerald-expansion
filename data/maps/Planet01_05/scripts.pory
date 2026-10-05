@@ -100,7 +100,7 @@ script Color_Puzzle {
     setvar(VAR_DAILY_ROULETTE, 0)
     msgbox ("You begin to focus on a color...")
     multichoice(0, 0, MULTI_COLOR_PUZZLE, FALSE)
-    if (var(VAR_RESULT) == 0) {
+    if (var(VAR_RESULT) == 3) {
         addvar(VAR_DAILY_ROULETTE, 1)
     }
     msgbox ("...And another...")
@@ -110,7 +110,7 @@ script Color_Puzzle {
     }
     msgbox ("Hypnotized, by another...")
     multichoice(0, 0, MULTI_COLOR_PUZZLE, FALSE)
-    if (var(VAR_RESULT) == 3) {
+    if (var(VAR_RESULT) == 0) {
         addvar(VAR_DAILY_ROULETTE, 1)
     }
     msgbox ("Drawn into another color...")

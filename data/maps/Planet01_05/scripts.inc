@@ -153,7 +153,7 @@ Color_Puzzle::
 # 102 "data/maps/Planet01_05/scripts.pory"
 	multichoice 0, 0, MULTI_COLOR_PUZZLE, FALSE
 # 103 "data/maps/Planet01_05/scripts.pory"
-	compare VAR_RESULT, 0
+	compare VAR_RESULT, 3
 	goto_if_eq Color_Puzzle_2
 Color_Puzzle_1:
 # 106 "data/maps/Planet01_05/scripts.pory"
@@ -169,7 +169,7 @@ Color_Puzzle_4:
 # 112 "data/maps/Planet01_05/scripts.pory"
 	multichoice 0, 0, MULTI_COLOR_PUZZLE, FALSE
 # 113 "data/maps/Planet01_05/scripts.pory"
-	compare VAR_RESULT, 3
+	compare VAR_RESULT, 0
 	goto_if_eq Color_Puzzle_8
 Color_Puzzle_7:
 # 116 "data/maps/Planet01_05/scripts.pory"

@@ -148,6 +148,7 @@ script Planet01_01_AddAir_Minior02 {
     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen captured!")
     setflag(FLAG_UNUSED_0x02B)
     fadeScreen(FADE_TO_BLACK)
+    playse(SE_REPEL)
     removeobject(2)
     callnative(RefreshO2Meter)
     fadeScreen(FADE_FROM_BLACK)
@@ -241,11 +242,11 @@ script Planet01_01_Elgyem {
     playmoncry(SPECIES_ELGYEM, CRY_MODE_ENCOUNTER)
     setvar(VAR_0x8000, SPECIES_ELGYEM)
     callnative(RegisterSpeciesInDex)
-    msgbox("Woah! Elgyem is glowing red-\p"
-    "{COLOR RED}{SHADOW LIGHT_RED}When the horizon is dark, and the\n"
+    msgbox("Woah! Elgyem is glowing blue-\p"
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}When the horizon is dark, and the\n"
     "progress is slow...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
-    warp(MAP_PLANET01_04, 1, 12, 1)
+    warp(MAP_PLANET01_03, 2, 11, 2)
     waitstate
     release
     end

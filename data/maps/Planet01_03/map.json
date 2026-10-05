@@ -414,8 +414,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SHUCKLE)",
-      "x": 60,
-      "y": 22,
+      "x": 58,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 0,
@@ -427,8 +427,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SHUCKLE)",
-      "x": 64,
-      "y": 17,
+      "x": 65,
+      "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 0,
@@ -492,8 +492,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(ELGYEM)",
-      "x": 4,
-      "y": 5,
+      "x": 61,
+      "y": 21,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 0,

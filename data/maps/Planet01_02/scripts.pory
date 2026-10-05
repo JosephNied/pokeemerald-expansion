@@ -47,7 +47,7 @@ script Planet01_02_EventScript_Item03 {
 
 script Planet01_02_EventScript_Item04 {
     lock
-    giveitem(ITEM_KINGS_ROCK, 1)
+    giveitem(ITEM_PEAT_BLOCK, 1)
     setflag(FLAG_UNUSED_0x4A1)
     removeobject(30)
     release
@@ -449,7 +449,10 @@ script Planet01_02_HintText05 {
     lock
     msgbox("Ops Lead: There's a surprising amount\n"
     "of greenery here for a planet with such\l"
-    "a light atmosphere.")
+    "a light atmosphere.\p"
+    "Interestingly, my instruments are also\n"
+    "reporting that something over here has\l"
+    "a particularly strong scent?")
     release
     end
 }
@@ -508,11 +511,11 @@ script Planet01_02_Elgyem {
     playmoncry(SPECIES_ELGYEM, CRY_MODE_ENCOUNTER)
     setvar(VAR_0x8000, SPECIES_ELGYEM)
     callnative(RegisterSpeciesInDex)
-    msgbox("Woah! Elgyem is glowing blue-\p"
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Whatever may happen, and wherever we'll\n"
-    "go...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    msgbox("Woah! Elgyem is glowing red-\p"
+    "{COLOR RED}{SHADOW LIGHT_RED}And however we change, I just want you\n"
+    "to know...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
-    warp(MAP_PLANET01_03, 2, 11, 2)
+    warp(MAP_PLANET01_04, 1, 12, 1)
     waitstate
     release
     end

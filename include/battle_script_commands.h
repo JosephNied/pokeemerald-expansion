@@ -19,7 +19,7 @@ struct StatFractions
 struct PickupItem
 {
     enum Item itemId;
-    u8 percentage[10];
+    u8 percentage[35];
 };
 
 bool32 HasBattlerActedThisTurn(enum BattlerId battler);

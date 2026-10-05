@@ -383,238 +383,238 @@ Planet01_03_Elgyem::
 	callnative RegisterSpeciesInDex
 # 232 "data/maps/Planet01_03/scripts.pory"
 	msgbox Planet01_03_Elgyem_Text_0
-# 234 "data/maps/Planet01_03/scripts.pory"
-	waitmessage
 # 235 "data/maps/Planet01_03/scripts.pory"
-	warp MAP_PLANET01_05, 1, 32, 1
+	waitmessage
 # 236 "data/maps/Planet01_03/scripts.pory"
-	waitstate
+	warp MAP_PLANET01_02, 0, 21, 23
 # 237 "data/maps/Planet01_03/scripts.pory"
+	waitstate
+# 238 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 
 Planet01_03_HintText01::
-# 242 "data/maps/Planet01_03/scripts.pory"
-	lock
 # 243 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 244 "data/maps/Planet01_03/scripts.pory"
 	msgbox Planet01_03_HintText01_Text_0
-# 249 "data/maps/Planet01_03/scripts.pory"
+# 250 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 
 Planet01_03_HintText02::
-# 254 "data/maps/Planet01_03/scripts.pory"
-	lock
 # 255 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 256 "data/maps/Planet01_03/scripts.pory"
 	msgbox Planet01_03_HintText02_Text_0
-# 259 "data/maps/Planet01_03/scripts.pory"
+# 260 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 
 Planet01_03_HintText03::
-# 264 "data/maps/Planet01_03/scripts.pory"
-	lock
 # 265 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 266 "data/maps/Planet01_03/scripts.pory"
 	msgbox Planet01_03_HintText03_Text_0
-# 273 "data/maps/Planet01_03/scripts.pory"
+# 274 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 
 Planet01_03_HintText04::
-# 278 "data/maps/Planet01_03/scripts.pory"
-	lock
 # 279 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 280 "data/maps/Planet01_03/scripts.pory"
 	msgbox Planet01_03_HintText04_Text_0
-# 286 "data/maps/Planet01_03/scripts.pory"
+# 287 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 
 Planet01_03_HintText05::
-# 291 "data/maps/Planet01_03/scripts.pory"
-	lock
 # 292 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 293 "data/maps/Planet01_03/scripts.pory"
 	msgbox Planet01_03_HintText05_Text_0
-# 298 "data/maps/Planet01_03/scripts.pory"
+# 299 "data/maps/Planet01_03/scripts.pory"
 	compare VAR_CAPTAIN_DIALOGUE, 1
 	goto_if_eq Planet01_03_HintText05_2
-# 300 "data/maps/Planet01_03/scripts.pory"
+# 301 "data/maps/Planet01_03/scripts.pory"
 	compare VAR_CAPTAIN_DIALOGUE, 2
 	goto_if_eq Planet01_03_HintText05_3
 Planet01_03_HintText05_1:
-# 303 "data/maps/Planet01_03/scripts.pory"
+# 304 "data/maps/Planet01_03/scripts.pory"
 	compare VAR_DAILY_SLOTS, 0
 	goto_if_eq Planet01_03_HintText05_7
 Planet01_03_HintText05_6:
-# 306 "data/maps/Planet01_03/scripts.pory"
+# 307 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 Planet01_03_HintText05_2:
-# 299 "data/maps/Planet01_03/scripts.pory"
+# 300 "data/maps/Planet01_03/scripts.pory"
 	clearflag FLAG_REGISTERED_CRISTIN
 	goto Planet01_03_HintText05_1
 
 Planet01_03_HintText05_3:
-# 301 "data/maps/Planet01_03/scripts.pory"
+# 302 "data/maps/Planet01_03/scripts.pory"
 	clearflag FLAG_REGISTERED_CRISTIN
 	goto Planet01_03_HintText05_1
 
 Planet01_03_HintText05_7:
-# 304 "data/maps/Planet01_03/scripts.pory"
+# 305 "data/maps/Planet01_03/scripts.pory"
 	setvar VAR_DAILY_SLOTS, 1
 	goto Planet01_03_HintText05_6
 
 
 Planet01_03_HintText06::
-# 311 "data/maps/Planet01_03/scripts.pory"
-	lock
 # 312 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 313 "data/maps/Planet01_03/scripts.pory"
 	msgbox Planet01_03_HintText06_Text_0
-# 318 "data/maps/Planet01_03/scripts.pory"
+# 319 "data/maps/Planet01_03/scripts.pory"
 	compare VAR_CAPTAIN_DIALOGUE, 1
 	goto_if_eq Planet01_03_HintText06_2
-# 320 "data/maps/Planet01_03/scripts.pory"
+# 321 "data/maps/Planet01_03/scripts.pory"
 	compare VAR_CAPTAIN_DIALOGUE, 2
 	goto_if_eq Planet01_03_HintText06_3
 Planet01_03_HintText06_1:
-# 323 "data/maps/Planet01_03/scripts.pory"
+# 324 "data/maps/Planet01_03/scripts.pory"
 	compare VAR_DAILY_SLOTS, 0
 	goto_if_eq Planet01_03_HintText06_7
 Planet01_03_HintText06_6:
-# 326 "data/maps/Planet01_03/scripts.pory"
+# 327 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 Planet01_03_HintText06_2:
-# 319 "data/maps/Planet01_03/scripts.pory"
+# 320 "data/maps/Planet01_03/scripts.pory"
 	clearflag FLAG_REGISTERED_CRISTIN
 	goto Planet01_03_HintText06_1
 
 Planet01_03_HintText06_3:
-# 321 "data/maps/Planet01_03/scripts.pory"
+# 322 "data/maps/Planet01_03/scripts.pory"
 	clearflag FLAG_REGISTERED_CRISTIN
 	goto Planet01_03_HintText06_1
 
 Planet01_03_HintText06_7:
-# 324 "data/maps/Planet01_03/scripts.pory"
+# 325 "data/maps/Planet01_03/scripts.pory"
 	setvar VAR_DAILY_SLOTS, 1
 	goto Planet01_03_HintText06_6
 
 
 Planet01_03_HintText07::
-# 331 "data/maps/Planet01_03/scripts.pory"
-	lock
 # 332 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 333 "data/maps/Planet01_03/scripts.pory"
 	msgbox Planet01_03_HintText07_Text_0
-# 336 "data/maps/Planet01_03/scripts.pory"
+# 337 "data/maps/Planet01_03/scripts.pory"
 	compare VAR_CAPTAIN_DIALOGUE, 1
 	goto_if_eq Planet01_03_HintText07_2
-# 338 "data/maps/Planet01_03/scripts.pory"
+# 339 "data/maps/Planet01_03/scripts.pory"
 	compare VAR_CAPTAIN_DIALOGUE, 2
 	goto_if_eq Planet01_03_HintText07_3
 Planet01_03_HintText07_1:
-# 341 "data/maps/Planet01_03/scripts.pory"
+# 342 "data/maps/Planet01_03/scripts.pory"
 	compare VAR_DAILY_SLOTS, 0
 	goto_if_eq Planet01_03_HintText07_7
 Planet01_03_HintText07_6:
-# 344 "data/maps/Planet01_03/scripts.pory"
+# 345 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 Planet01_03_HintText07_2:
-# 337 "data/maps/Planet01_03/scripts.pory"
+# 338 "data/maps/Planet01_03/scripts.pory"
 	clearflag FLAG_REGISTERED_CRISTIN
 	goto Planet01_03_HintText07_1
 
 Planet01_03_HintText07_3:
-# 339 "data/maps/Planet01_03/scripts.pory"
+# 340 "data/maps/Planet01_03/scripts.pory"
 	clearflag FLAG_REGISTERED_CRISTIN
 	goto Planet01_03_HintText07_1
 
 Planet01_03_HintText07_7:
-# 342 "data/maps/Planet01_03/scripts.pory"
+# 343 "data/maps/Planet01_03/scripts.pory"
 	setvar VAR_DAILY_SLOTS, 1
 	goto Planet01_03_HintText07_6
 
 
 voicetrigger_shoreline::
-# 349 "data/maps/Planet01_03/scripts.pory"
-	lockall
 # 350 "data/maps/Planet01_03/scripts.pory"
-	call voicedialogueABC
+	lockall
 # 351 "data/maps/Planet01_03/scripts.pory"
-	setvar VAR_TEMP_1, 1
+	call voicedialogueABC
 # 352 "data/maps/Planet01_03/scripts.pory"
+	setvar VAR_TEMP_1, 1
+# 353 "data/maps/Planet01_03/scripts.pory"
 	releaseall
 	end
 
 
 sableye_03::
-# 357 "data/maps/Planet01_03/scripts.pory"
-	lock
 # 358 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 359 "data/maps/Planet01_03/scripts.pory"
 	goto_if_unset FLAG_SYS_TOWER_GOLD, sableye_03_2
 sableye_03_1:
-# 380 "data/maps/Planet01_03/scripts.pory"
+# 381 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
 sableye_03_2:
-# 359 "data/maps/Planet01_03/scripts.pory"
-	msgbox sableye_03_Text_0
 # 360 "data/maps/Planet01_03/scripts.pory"
-	waitmessage
+	msgbox sableye_03_Text_0
 # 361 "data/maps/Planet01_03/scripts.pory"
-	closemessage
+	waitmessage
 # 362 "data/maps/Planet01_03/scripts.pory"
-	setflag FLAG_SYS_TOWER_GOLD
+	closemessage
 # 363 "data/maps/Planet01_03/scripts.pory"
-	fadeScreen FADE_TO_BLACK
+	setflag FLAG_SYS_TOWER_GOLD
 # 364 "data/maps/Planet01_03/scripts.pory"
-	playmoncry SPECIES_NOCTOWL, CRY_MODE_ENCOUNTER
+	fadeScreen FADE_TO_BLACK
 # 365 "data/maps/Planet01_03/scripts.pory"
-	waitmoncry
+	playmoncry SPECIES_NOCTOWL, CRY_MODE_ENCOUNTER
 # 366 "data/maps/Planet01_03/scripts.pory"
-	removeobject 8
+	waitmoncry
 # 367 "data/maps/Planet01_03/scripts.pory"
-	addvar VAR_DAILY_BLENDER, 1
+	removeobject 8
 # 368 "data/maps/Planet01_03/scripts.pory"
+	addvar VAR_DAILY_BLENDER, 1
+# 369 "data/maps/Planet01_03/scripts.pory"
 	compare VAR_DAILY_BLENDER, 5
 	goto_if_eq sableye_03_5
-# 371 "data/maps/Planet01_03/scripts.pory"
-	buffernumberstring STR_VAR_1, VAR_DAILY_BLENDER
 # 372 "data/maps/Planet01_03/scripts.pory"
+	buffernumberstring STR_VAR_1, VAR_DAILY_BLENDER
+# 373 "data/maps/Planet01_03/scripts.pory"
 	msgbox sableye_03_Text_2
 sableye_03_4:
-# 374 "data/maps/Planet01_03/scripts.pory"
-	waitmessage
 # 375 "data/maps/Planet01_03/scripts.pory"
-	closemessage
+	waitmessage
 # 376 "data/maps/Planet01_03/scripts.pory"
-	fadeScreen FADE_FROM_BLACK
+	closemessage
 # 377 "data/maps/Planet01_03/scripts.pory"
-	setvar VAR_0x8000, SPECIES_NOCTOWL
+	fadeScreen FADE_FROM_BLACK
 # 378 "data/maps/Planet01_03/scripts.pory"
+	setvar VAR_0x8000, SPECIES_NOCTOWL
+# 379 "data/maps/Planet01_03/scripts.pory"
 	callnative RegisterSpeciesInDex
 	goto sableye_03_1
 
 sableye_03_5:
-# 369 "data/maps/Planet01_03/scripts.pory"
+# 370 "data/maps/Planet01_03/scripts.pory"
 	msgbox sableye_03_Text_1
 	goto sableye_03_4
 
 
 Planet01_03_HintTextLowerCaves::
-# 385 "data/maps/Planet01_03/scripts.pory"
-	lock
 # 386 "data/maps/Planet01_03/scripts.pory"
+	lock
+# 387 "data/maps/Planet01_03/scripts.pory"
 	msgbox Planet01_03_HintTextLowerCaves_Text_0
-# 393 "data/maps/Planet01_03/scripts.pory"
+# 394 "data/maps/Planet01_03/scripts.pory"
 	release
 	end
 
@@ -629,11 +629,12 @@ Planet01_03_Carbink_Text_1:
 
 Planet01_03_Elgyem_Text_0:
 # 232 "data/maps/Planet01_03/scripts.pory"
-	.string "Woah! Elgyem is glowing yellow-\p"
-	.string "{COLOR 5}{SHADOW WHITE}I'll always be yours, my Wild Indigo{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
+	.string "Woah! Elgyem is glowing green-\p"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Whatever may happen, and wherever we'll\n"
+	.string "go...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Planet01_03_HintText01_Text_0:
-# 243 "data/maps/Planet01_03/scripts.pory"
+# 244 "data/maps/Planet01_03/scripts.pory"
 	.string "Biologist: There's a small, dark rock-like\n"
 	.string "Pokémon lurking around this canyon; one\l"
 	.string "that I've never seen before.\p"
@@ -642,14 +643,14 @@ Planet01_03_HintText01_Text_0:
 	.string "can even evolve.$"
 
 Planet01_03_HintText02_Text_0:
-# 255 "data/maps/Planet01_03/scripts.pory"
+# 256 "data/maps/Planet01_03/scripts.pory"
 	.string "Captain: Beyond here lies our tragic\n"
 	.string "first attempt at establishing a base.\p"
 	.string "Apparently it was already somebody\n"
 	.string "else's home.$"
 
 Planet01_03_HintText03_Text_0:
-# 265 "data/maps/Planet01_03/scripts.pory"
+# 266 "data/maps/Planet01_03/scripts.pory"
 	.string "Captain: We wanted this second cave to\n"
 	.string "be our base, but the artificial wall\l"
 	.string "our Ops Lead contructed couldn't\l"
@@ -660,7 +661,7 @@ Planet01_03_HintText03_Text_0:
 	.string "be a more permanent home!$"
 
 Planet01_03_HintText04_Text_0:
-# 279 "data/maps/Planet01_03/scripts.pory"
+# 280 "data/maps/Planet01_03/scripts.pory"
 	.string "Ops Lead: Was it a coincidence that the\n"
 	.string "position of the white trees we found\l"
 	.string "beyond the icy cavern corresponded to\l"
@@ -670,7 +671,7 @@ Planet01_03_HintText04_Text_0:
 	.string "tell with ghost-type Pokémon...$"
 
 Planet01_03_HintText05_Text_0:
-# 292 "data/maps/Planet01_03/scripts.pory"
+# 293 "data/maps/Planet01_03/scripts.pory"
 	.string "Biologist: The Pokémon on this planet\n"
 	.string "have achieved perfect mutualism, and\l"
 	.string "thus have no need to level up.\p"
@@ -679,7 +680,7 @@ Planet01_03_HintText05_Text_0:
 	.string "still evolve using water stones.$"
 
 Planet01_03_HintText06_Text_0:
-# 312 "data/maps/Planet01_03/scripts.pory"
+# 313 "data/maps/Planet01_03/scripts.pory"
 	.string "Ops Lead: The Staryu love to skip across\n"
 	.string "the water; though, they aren't large\l"
 	.string "enough for us to {COLOR BLUE}{SHADOW LIGHT_BLUE}Surf{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} on them.\p"
@@ -688,26 +689,26 @@ Planet01_03_HintText06_Text_0:
 	.string "setup camps across the water.$"
 
 Planet01_03_HintText07_Text_0:
-# 332 "data/maps/Planet01_03/scripts.pory"
+# 333 "data/maps/Planet01_03/scripts.pory"
 	.string "Biologist: We saw a lot of smashed rocks\n"
 	.string "around the mountain covered in blue\l"
 	.string "plants; I would bet that a Pokémon with\l"
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Rock Smash{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} is likely up there, hiding.$"
 
 sableye_03_Text_0:
-# 359 "data/maps/Planet01_03/scripts.pory"
+# 360 "data/maps/Planet01_03/scripts.pory"
 	.string "Noctowl's eyes open...$"
 
 sableye_03_Text_1:
-# 369 "data/maps/Planet01_03/scripts.pory"
+# 370 "data/maps/Planet01_03/scripts.pory"
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}The gate is open.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 sableye_03_Text_2:
-# 372 "data/maps/Planet01_03/scripts.pory"
+# 373 "data/maps/Planet01_03/scripts.pory"
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}{STR_VAR_1} of 5...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 Planet01_03_HintTextLowerCaves_Text_0:
-# 386 "data/maps/Planet01_03/scripts.pory"
+# 387 "data/maps/Planet01_03/scripts.pory"
 	.string "Captain: There's a cave and a strange\n"
 	.string "shoreline below. We can't reach them,\l"
 	.string "however, because the Sharpedo are too\l"

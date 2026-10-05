@@ -84,34 +84,71 @@ script Sun_Moon_Check {
 		setvar(VAR_DAILY_SLOTS, 6)
 		releaseall
 	} else {
-		lockall
-		special(Script_FadeOutMapMusic)
-		setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
-    	callnative(DrawMugshot)
-		msgbox("You can see the sun and moon of the\n"
-		"planet here. What an incredible sight!")
-		waitmessage
-		closemessage
-		callnative(ClearMugshot)
-		delay(60)
-		setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
-    	callnative(DrawMugshot)
-		msgbox("...\n"
-		"...\l"
-		"...")
-		waitmessage
-		closemessage
-		callnative(ClearMugshot)
-		delay(60)
-		setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
-    	callnative(DrawMugshot)
-		msgbox("Why do I feel like something\n"
-		"was supposed to happen...")
-		waitmessage
-		closemessage
-		callnative(ClearMugshot)
-		special(Overworld_PlaySpecialMapMusic)
-		releaseall
+		special(ReplaceUrsaringWithUrsaluna)
+		if (var(VAR_RESULT) == 1) {
+			lockall
+			special(Script_FadeOutMapMusic)
+			setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+			callnative(DrawMugshot)
+			msgbox("You can see the sun and moon of the\n"
+			"planet here. What an incredible sight!")
+			waitmessage
+			closemessage
+			setvar(VAR_0x8004, 1)
+			setvar(VAR_0x8005, 1)
+			setvar(VAR_0x8006, 8)
+			setvar(VAR_0x8007, 5)
+			special(ShakeCamera)
+			delay(30)
+			special(ReplaceUrsaringWithUrsaluna)
+			playmoncry(SPECIES_URSALUNA, CRY_MODE_ENCOUNTER)
+			setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+			callnative(DrawMugshot)
+			msgbox("Ursamajor?! You evolved!")
+			waitmessage
+			closemessage
+			callnative(ClearMugshot)
+			delay(60)
+			givemon(SPECIES_URSALUNA, 50)
+			setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
+			callnative(DrawMugshot)
+			msgbox("...This is cool, but I think I need to\n"
+			"bring Lunatone and Solrock up here.")
+			waitmessage
+			closemessage
+			callnative(ClearMugshot)
+			special(Overworld_PlaySpecialMapMusic)
+			releaseall
+		} else {
+			lockall
+			special(Script_FadeOutMapMusic)
+			setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+			callnative(DrawMugshot)
+			msgbox("You can see the sun and moon of the\n"
+			"planet here. What an incredible sight!")
+			waitmessage
+			closemessage
+			callnative(ClearMugshot)
+			delay(60)
+			setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+			callnative(DrawMugshot)
+			msgbox("...\n"
+			"...\l"
+			"...")
+			waitmessage
+			closemessage
+			callnative(ClearMugshot)
+			delay(60)
+			setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
+			callnative(DrawMugshot)
+			msgbox("Why do I feel like something\n"
+			"was supposed to happen...")
+			waitmessage
+			closemessage
+			callnative(ClearMugshot)
+			special(Overworld_PlaySpecialMapMusic)
+			releaseall
+		}
 	}
 	end
 }

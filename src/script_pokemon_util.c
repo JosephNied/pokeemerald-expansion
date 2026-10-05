@@ -741,6 +741,29 @@ void ReplaceSunMoonWithTerragem(void)
     CompactPartySlots();
 }
 
+void ReplaceUrsaringWithUrsaluna(void)
+{
+    s32 i;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES) == SPECIES_URSARING)
+        {
+            if (GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_HELD_ITEM) == ITEM_PEAT_BLOCK)
+            {
+                ZeroMonData(&gParties[B_TRAINER_PLAYER][i]);
+                AddBagItem(ITEM_BEAST_BALL, 1);
+                CompactPartySlots();
+
+                gSpecialVar_Result = TRUE;
+                return;
+            }
+        }
+    }
+
+    gSpecialVar_Result = FALSE;
+}
+
 void GlimmoraCatch(void)
 {
     u32 i;

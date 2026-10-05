@@ -117,11 +117,10 @@ script Planet01_04_Elgyem {
     playmoncry(SPECIES_ELGYEM, CRY_MODE_ENCOUNTER)
     setvar(VAR_0x8000, SPECIES_ELGYEM)
     callnative(RegisterSpeciesInDex)
-    msgbox("Woah! Elgyem is glowing green-\p"
-    "{COLOR GREEN}{SHADOW LIGHT_GREEN}And however we change, I just want you\n"
-    "to know...{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    msgbox("Woah! Elgyem is glowing yellow-\p"
+    "{COLOR 5}{SHADOW WHITE}I'll always be yours, my Wild Indigo.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
-    warp(MAP_PLANET01_02, 0, 21, 23)
+    warp(MAP_PLANET01_05, 1, 32, 1)
     waitstate
     release
     end
