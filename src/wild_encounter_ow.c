@@ -175,6 +175,7 @@ static void Task_OWEApproachForBattle(u8 taskId);
 static bool32 CheckValidOWESpecies(enum Species speciesId);
 
 extern const u8 EventScript_GlimmoraCatch[];
+extern const u8 EventScript_GlimmoraCatch_Planet01[];
 extern const u8 EventScript_GlalieCatch[];
 extern const u8 EventScript_SlugmaCatch[];
 extern const u8 EventScript_SharpedoCatch[];
@@ -2012,6 +2013,8 @@ static void Task_OWEApproachForBattle(u8 taskId)
             //my attempt at adding custom chase interaction
             if (OW_SPECIES(OWE) == SPECIES_GLIMMORA) {
                 ScriptContext_SetupScript(EventScript_GlimmoraCatch);
+            } else if (OW_SPECIES(OWE) == SPECIES_FLUTTER_MANE) {
+                ScriptContext_SetupScript(EventScript_GlimmoraCatch_Planet01);
             } else if (OW_SPECIES(OWE) == SPECIES_GLALIE) {
                 ScriptContext_SetupScript(EventScript_GlalieCatch);
             } else if (OW_SPECIES(OWE) == SPECIES_SLUGMA) {

@@ -1691,6 +1691,52 @@ Planet01_01_Ending::
 	end
 
 
+EventScript_GlimmoraCatch_Planet01::
+# 1136 "data/maps/Planet01_01/scripts.pory"
+	lockall
+# 1137 "data/maps/Planet01_01/scripts.pory"
+	fadeScreen FADE_TO_WHITE
+# 1138 "data/maps/Planet01_01/scripts.pory"
+	special FlashCheck
+# 1139 "data/maps/Planet01_01/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq EventScript_GlimmoraCatch_Planet01_1
+# 1150 "data/maps/Planet01_01/scripts.pory"
+	special GlimmoraCatch
+# 1151 "data/maps/Planet01_01/scripts.pory"
+	setflag FLAG_TEMP_1F
+# 1152 "data/maps/Planet01_01/scripts.pory"
+	removeobject 21
+# 1153 "data/maps/Planet01_01/scripts.pory"
+	fadeScreen FADE_FROM_WHITE
+# 1154 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_0x8000, SPECIES_GLIMMORA
+# 1155 "data/maps/Planet01_01/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 1156 "data/maps/Planet01_01/scripts.pory"
+	msgbox EventScript_GlimmoraCatch_Planet01_Text_1
+# 1158 "data/maps/Planet01_01/scripts.pory"
+	releaseall
+	end
+
+EventScript_GlimmoraCatch_Planet01_1:
+# 1140 "data/maps/Planet01_01/scripts.pory"
+	setflag FLAG_TEMP_1F
+# 1141 "data/maps/Planet01_01/scripts.pory"
+	removeobject 21
+# 1142 "data/maps/Planet01_01/scripts.pory"
+	fadeScreen FADE_FROM_WHITE
+# 1143 "data/maps/Planet01_01/scripts.pory"
+	msgbox EventScript_GlimmoraCatch_Planet01_Text_0
+# 1145 "data/maps/Planet01_01/scripts.pory"
+	setvar VAR_0x8000, SPECIES_GLIMMORA
+# 1146 "data/maps/Planet01_01/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 1147 "data/maps/Planet01_01/scripts.pory"
+	releaseall
+	end
+
+
 # 263 "data/maps/Planet01_01/scripts.pory"
 Planet01_01_RobotGreeting_Movement_0:
 # 263 "data/maps/Planet01_01/scripts.pory"
@@ -2229,3 +2275,13 @@ Planet01_01_Ending_Text_6:
 	.string "making this possible!\l"
 	.string "<><><><>\p"
 	.string "Now, Emerald credits:$"
+
+EventScript_GlimmoraCatch_Planet01_Text_0:
+# 1143 "data/maps/Planet01_01/scripts.pory"
+	.string "Clefable's Flash protected your team\n"
+	.string "from getting poisoned!$"
+
+EventScript_GlimmoraCatch_Planet01_Text_1:
+# 1156 "data/maps/Planet01_01/scripts.pory"
+	.string "Glimmora poisoned a party member!\n"
+	.string "That stings!$"

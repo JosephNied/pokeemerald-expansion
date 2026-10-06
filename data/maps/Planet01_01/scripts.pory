@@ -1131,3 +1131,31 @@ script Planet01_01_Ending {
     release
     end
 }
+
+script EventScript_GlimmoraCatch_Planet01 {
+	lockall
+	fadeScreen(FADE_TO_WHITE)
+	special(FlashCheck)
+	if(var(VAR_RESULT) == 1) {
+		setflag(FLAG_TEMP_1F)
+		removeobject(21)
+		fadeScreen(FADE_FROM_WHITE)
+		msgbox("Clefable's Flash protected your team\n"
+		"from getting poisoned!")
+		setvar(VAR_0x8000, SPECIES_GLIMMORA)
+		callnative(RegisterSpeciesInDex)
+		releaseall
+		end
+	} else {
+		special(GlimmoraCatch)
+		setflag(FLAG_TEMP_1F)
+		removeobject(21)
+		fadeScreen(FADE_FROM_WHITE)
+		setvar(VAR_0x8000, SPECIES_GLIMMORA)
+		callnative(RegisterSpeciesInDex)
+		msgbox("Glimmora poisoned a party member!\n"
+		"That stings!")
+		releaseall
+		end
+	}
+}
