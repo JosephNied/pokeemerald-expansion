@@ -66,7 +66,7 @@ start_ship_intro::
 # 40 "data/maps/Spaceship_Dev/scripts.pory"
 	goto_if_unset FLAG_SYS_FRONTIER_PASS, start_ship_intro_2
 start_ship_intro_1:
-# 81 "data/maps/Spaceship_Dev/scripts.pory"
+# 80 "data/maps/Spaceship_Dev/scripts.pory"
 	releaseall
 	end
 
@@ -74,201 +74,199 @@ start_ship_intro_2:
 # 41 "data/maps/Spaceship_Dev/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, start_ship_intro_Movement_0
 # 42 "data/maps/Spaceship_Dev/scripts.pory"
-	waitmovement OBJ_EVENT_ID_PLAYER
-# 43 "data/maps/Spaceship_Dev/scripts.pory"
 	setvar VAR_0x8004, 2
+# 43 "data/maps/Spaceship_Dev/scripts.pory"
+	setvar VAR_0x8005, 1
 # 44 "data/maps/Spaceship_Dev/scripts.pory"
-	setvar VAR_0x8005, 1
-# 45 "data/maps/Spaceship_Dev/scripts.pory"
 	setvar VAR_0x8006, 12
+# 45 "data/maps/Spaceship_Dev/scripts.pory"
+	setvar VAR_0x8007, 5
 # 46 "data/maps/Spaceship_Dev/scripts.pory"
-	setvar VAR_0x8007, 5
+	special ShakeCamera
 # 47 "data/maps/Spaceship_Dev/scripts.pory"
-	special ShakeCamera
-# 48 "data/maps/Spaceship_Dev/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
+# 48 "data/maps/Spaceship_Dev/scripts.pory"
+	callnative DrawMugshot
 # 49 "data/maps/Spaceship_Dev/scripts.pory"
-	callnative DrawMugshot
-# 50 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox start_ship_intro_Text_0
-# 51 "data/maps/Spaceship_Dev/scripts.pory"
+# 50 "data/maps/Spaceship_Dev/scripts.pory"
 	setvar VAR_0x8004, 1
-# 52 "data/maps/Spaceship_Dev/scripts.pory"
+# 51 "data/maps/Spaceship_Dev/scripts.pory"
 	setvar VAR_0x8005, 1
-# 53 "data/maps/Spaceship_Dev/scripts.pory"
+# 52 "data/maps/Spaceship_Dev/scripts.pory"
 	setvar VAR_0x8006, 8
-# 54 "data/maps/Spaceship_Dev/scripts.pory"
+# 53 "data/maps/Spaceship_Dev/scripts.pory"
 	setvar VAR_0x8007, 5
-# 55 "data/maps/Spaceship_Dev/scripts.pory"
+# 54 "data/maps/Spaceship_Dev/scripts.pory"
 	special ShakeCamera
+# 55 "data/maps/Spaceship_Dev/scripts.pory"
+	waitmessage
 # 56 "data/maps/Spaceship_Dev/scripts.pory"
-	waitmessage
+	closemessage
 # 57 "data/maps/Spaceship_Dev/scripts.pory"
-	closemessage
+	callnative ClearMugshot
 # 58 "data/maps/Spaceship_Dev/scripts.pory"
-	callnative ClearMugshot
-# 59 "data/maps/Spaceship_Dev/scripts.pory"
 	playse SE_PIN
-# 60 "data/maps/Spaceship_Dev/scripts.pory"
+# 59 "data/maps/Spaceship_Dev/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, start_ship_intro_Movement_1
-# 61 "data/maps/Spaceship_Dev/scripts.pory"
+# 60 "data/maps/Spaceship_Dev/scripts.pory"
 	waitmovement OBJ_EVENT_ID_PLAYER
-# 62 "data/maps/Spaceship_Dev/scripts.pory"
+# 61 "data/maps/Spaceship_Dev/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_PLAYER_CONFUSED
+# 62 "data/maps/Spaceship_Dev/scripts.pory"
+	callnative DrawMugshot
 # 63 "data/maps/Spaceship_Dev/scripts.pory"
-	callnative DrawMugshot
-# 64 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox start_ship_intro_Text_1
+# 66 "data/maps/Spaceship_Dev/scripts.pory"
+	waitmessage
 # 67 "data/maps/Spaceship_Dev/scripts.pory"
-	waitmessage
+	closemessage
 # 68 "data/maps/Spaceship_Dev/scripts.pory"
-	closemessage
+	callnative ClearMugshot
 # 69 "data/maps/Spaceship_Dev/scripts.pory"
-	callnative ClearMugshot
-# 70 "data/maps/Spaceship_Dev/scripts.pory"
 	delay 10
-# 71 "data/maps/Spaceship_Dev/scripts.pory"
+# 70 "data/maps/Spaceship_Dev/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
-# 72 "data/maps/Spaceship_Dev/scripts.pory"
+# 71 "data/maps/Spaceship_Dev/scripts.pory"
 	callnative DrawMugshot
-# 73 "data/maps/Spaceship_Dev/scripts.pory"
+# 72 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox start_ship_intro_Text_2
-# 76 "data/maps/Spaceship_Dev/scripts.pory"
+# 75 "data/maps/Spaceship_Dev/scripts.pory"
 	waitmessage
-# 77 "data/maps/Spaceship_Dev/scripts.pory"
+# 76 "data/maps/Spaceship_Dev/scripts.pory"
 	closemessage
-# 78 "data/maps/Spaceship_Dev/scripts.pory"
+# 77 "data/maps/Spaceship_Dev/scripts.pory"
 	callnative ClearMugshot
-# 79 "data/maps/Spaceship_Dev/scripts.pory"
+# 78 "data/maps/Spaceship_Dev/scripts.pory"
 	setflag FLAG_SYS_FRONTIER_PASS
 	goto start_ship_intro_1
 
 
 refill_air_canister::
-# 86 "data/maps/Spaceship_Dev/scripts.pory"
+# 85 "data/maps/Spaceship_Dev/scripts.pory"
 	lock
-# 87 "data/maps/Spaceship_Dev/scripts.pory"
+# 86 "data/maps/Spaceship_Dev/scripts.pory"
 	faceplayer
-# 88 "data/maps/Spaceship_Dev/scripts.pory"
+# 87 "data/maps/Spaceship_Dev/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_ROTOM
-# 89 "data/maps/Spaceship_Dev/scripts.pory"
+# 88 "data/maps/Spaceship_Dev/scripts.pory"
 	callnative DrawMugshot
-# 90 "data/maps/Spaceship_Dev/scripts.pory"
+# 89 "data/maps/Spaceship_Dev/scripts.pory"
 	playmoncry SPECIES_ROTOM, CRY_MODE_ENCOUNTER
-# 91 "data/maps/Spaceship_Dev/scripts.pory"
+# 90 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox refill_air_canister_Text_0
-# 93 "data/maps/Spaceship_Dev/scripts.pory"
+# 92 "data/maps/Spaceship_Dev/scripts.pory"
 	waitmessage
-# 94 "data/maps/Spaceship_Dev/scripts.pory"
+# 93 "data/maps/Spaceship_Dev/scripts.pory"
 	callnative ClearMugshot
-# 95 "data/maps/Spaceship_Dev/scripts.pory"
+# 94 "data/maps/Spaceship_Dev/scripts.pory"
 	setvar VAR_0x8000, SPECIES_ROTOM
-# 96 "data/maps/Spaceship_Dev/scripts.pory"
+# 95 "data/maps/Spaceship_Dev/scripts.pory"
 	callnative RegisterSpeciesInDex
-# 97 "data/maps/Spaceship_Dev/scripts.pory"
+# 96 "data/maps/Spaceship_Dev/scripts.pory"
 	checkitem ITEM_SUPER_REPEL, 1
-# 98 "data/maps/Spaceship_Dev/scripts.pory"
+# 97 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq refill_air_canister_2
-# 103 "data/maps/Spaceship_Dev/scripts.pory"
+# 102 "data/maps/Spaceship_Dev/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_PLAYER_DETERMINED
-# 104 "data/maps/Spaceship_Dev/scripts.pory"
+# 103 "data/maps/Spaceship_Dev/scripts.pory"
 	callnative DrawMugshot
-# 105 "data/maps/Spaceship_Dev/scripts.pory"
+# 104 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox refill_air_canister_Text_1
-# 107 "data/maps/Spaceship_Dev/scripts.pory"
+# 106 "data/maps/Spaceship_Dev/scripts.pory"
 	waitmessage
-# 108 "data/maps/Spaceship_Dev/scripts.pory"
+# 107 "data/maps/Spaceship_Dev/scripts.pory"
 	callnative ClearMugshot
 refill_air_canister_1:
-# 110 "data/maps/Spaceship_Dev/scripts.pory"
+# 109 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
 refill_air_canister_2:
-# 99 "data/maps/Spaceship_Dev/scripts.pory"
+# 98 "data/maps/Spaceship_Dev/scripts.pory"
 	CountItemInBag ITEM_SUPER_REPEL, VAR_STARDUST_COUNT
-# 100 "data/maps/Spaceship_Dev/scripts.pory"
+# 99 "data/maps/Spaceship_Dev/scripts.pory"
 	removeitem ITEM_SUPER_REPEL, VAR_STARDUST_COUNT
-# 101 "data/maps/Spaceship_Dev/scripts.pory"
+# 100 "data/maps/Spaceship_Dev/scripts.pory"
 	giveitem ITEM_REPEL, VAR_STARDUST_COUNT
 	goto refill_air_canister_1
 
 
 Spaceship_Dev_EventScript_BallItem01::
-# 115 "data/maps/Spaceship_Dev/scripts.pory"
+# 114 "data/maps/Spaceship_Dev/scripts.pory"
 	lock
-# 116 "data/maps/Spaceship_Dev/scripts.pory"
+# 115 "data/maps/Spaceship_Dev/scripts.pory"
 	faceplayer
-# 117 "data/maps/Spaceship_Dev/scripts.pory"
+# 116 "data/maps/Spaceship_Dev/scripts.pory"
 	removeobject 1
-# 118 "data/maps/Spaceship_Dev/scripts.pory"
+# 117 "data/maps/Spaceship_Dev/scripts.pory"
 	giveitem ITEM_ESCAPE_ROPE
-# 119 "data/maps/Spaceship_Dev/scripts.pory"
+# 118 "data/maps/Spaceship_Dev/scripts.pory"
 	removeobject 10
-# 120 "data/maps/Spaceship_Dev/scripts.pory"
+# 119 "data/maps/Spaceship_Dev/scripts.pory"
 	giveitem ITEM_SCANNER
-# 123 "data/maps/Spaceship_Dev/scripts.pory"
+# 122 "data/maps/Spaceship_Dev/scripts.pory"
 	setflag FLAG_UNUSED_0x027
-# 124 "data/maps/Spaceship_Dev/scripts.pory"
+# 123 "data/maps/Spaceship_Dev/scripts.pory"
 	clearflag FLAG_SYS_BRAILLE_DIG
-# 125 "data/maps/Spaceship_Dev/scripts.pory"
+# 124 "data/maps/Spaceship_Dev/scripts.pory"
 	setflag FLAG_UNUSED_0x045
-# 126 "data/maps/Spaceship_Dev/scripts.pory"
+# 125 "data/maps/Spaceship_Dev/scripts.pory"
 	setflag FLAG_UNUSED_0x046
-# 127 "data/maps/Spaceship_Dev/scripts.pory"
+# 126 "data/maps/Spaceship_Dev/scripts.pory"
 	setflag FLAG_UNUSED_0x047
-# 128 "data/maps/Spaceship_Dev/scripts.pory"
+# 127 "data/maps/Spaceship_Dev/scripts.pory"
 	setflag FLAG_UNUSED_0x048
-# 129 "data/maps/Spaceship_Dev/scripts.pory"
+# 128 "data/maps/Spaceship_Dev/scripts.pory"
 	setflag FLAG_UNUSED_0x049
-# 130 "data/maps/Spaceship_Dev/scripts.pory"
+# 129 "data/maps/Spaceship_Dev/scripts.pory"
 	clearflag FLAG_REGISTERED_ROSE
-# 131 "data/maps/Spaceship_Dev/scripts.pory"
+# 130 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
 
 Spaceship_Dev_EventScript_OxygenGet::
-# 136 "data/maps/Spaceship_Dev/scripts.pory"
+# 135 "data/maps/Spaceship_Dev/scripts.pory"
 	lock
-# 137 "data/maps/Spaceship_Dev/scripts.pory"
+# 136 "data/maps/Spaceship_Dev/scripts.pory"
 	giveitem ITEM_DEVON_PARTS
-# 138 "data/maps/Spaceship_Dev/scripts.pory"
+# 137 "data/maps/Spaceship_Dev/scripts.pory"
 	setflag FLAG_MET_PROF_COZMO
-# 139 "data/maps/Spaceship_Dev/scripts.pory"
+# 138 "data/maps/Spaceship_Dev/scripts.pory"
 	removeobject 7
-# 140 "data/maps/Spaceship_Dev/scripts.pory"
+# 139 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
 
 Spaceship_Dev_EventScript_BallGet::
-# 145 "data/maps/Spaceship_Dev/scripts.pory"
+# 144 "data/maps/Spaceship_Dev/scripts.pory"
 	lock
-# 146 "data/maps/Spaceship_Dev/scripts.pory"
+# 145 "data/maps/Spaceship_Dev/scripts.pory"
 	giveitem ITEM_BEAST_BALL, 2
-# 147 "data/maps/Spaceship_Dev/scripts.pory"
+# 146 "data/maps/Spaceship_Dev/scripts.pory"
 	setflag FLAG_RECEIVED_WAILMER_DOLL
-# 148 "data/maps/Spaceship_Dev/scripts.pory"
+# 147 "data/maps/Spaceship_Dev/scripts.pory"
 	removeobject 8
-# 149 "data/maps/Spaceship_Dev/scripts.pory"
+# 148 "data/maps/Spaceship_Dev/scripts.pory"
 	release
 	end
 
 
 Spaceship_Dev_EventScript_Tutorial_Notebook::
-# 156 "data/maps/Spaceship_Dev/scripts.pory"
+# 155 "data/maps/Spaceship_Dev/scripts.pory"
 	lock
-# 157 "data/maps/Spaceship_Dev/scripts.pory"
+# 156 "data/maps/Spaceship_Dev/scripts.pory"
 	faceplayer
-# 158 "data/maps/Spaceship_Dev/scripts.pory"
+# 157 "data/maps/Spaceship_Dev/scripts.pory"
 	playse SE_PC_LOGIN
-# 159 "data/maps/Spaceship_Dev/scripts.pory"
+# 158 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox Spaceship_Dev_EventScript_Tutorial_Notebook_Text_0
-# 161 "data/maps/Spaceship_Dev/scripts.pory"
+# 160 "data/maps/Spaceship_Dev/scripts.pory"
 	multichoice 0, 0, MULTI_TUTORIAL_NOTES, FALSE
-# 162 "data/maps/Spaceship_Dev/scripts.pory"
+# 161 "data/maps/Spaceship_Dev/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq Spaceship_Dev_EventScript_Tutorial_Notebook_2
 Spaceship_Dev_EventScript_Tutorial_Notebook_1:
@@ -297,7 +295,7 @@ Spaceship_Dev_EventScript_Tutorial_Notebook_13:
 	end
 
 Spaceship_Dev_EventScript_Tutorial_Notebook_2:
-# 163 "data/maps/Spaceship_Dev/scripts.pory"
+# 162 "data/maps/Spaceship_Dev/scripts.pory"
 	msgbox Spaceship_Dev_EventScript_Tutorial_Notebook_Text_1
 # 168 "data/maps/Spaceship_Dev/scripts.pory"
 	call Spaceship_Dev_EventScript_Tutorial_Notebook
@@ -1025,9 +1023,9 @@ start_ship_intro_Movement_0:
 	face_right
 	step_end
 
-# 60 "data/maps/Spaceship_Dev/scripts.pory"
+# 59 "data/maps/Spaceship_Dev/scripts.pory"
 start_ship_intro_Movement_1:
-# 60 "data/maps/Spaceship_Dev/scripts.pory"
+# 59 "data/maps/Spaceship_Dev/scripts.pory"
 	emote_question_mark
 	step_end
 
@@ -1038,43 +1036,44 @@ IsPlayerReadyToGo_Movement_0:
 	step_end
 
 start_ship_intro_Text_0:
-# 50 "data/maps/Spaceship_Dev/scripts.pory"
+# 49 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Woah! Rough landing!$"
 
 start_ship_intro_Text_1:
-# 64 "data/maps/Spaceship_Dev/scripts.pory"
+# 63 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "What the heck?! I can't get off the\n"
 	.string "ground! It's like something is holding\l"
 	.string "us down.$"
 
 start_ship_intro_Text_2:
-# 73 "data/maps/Spaceship_Dev/scripts.pory"
+# 72 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "I guess I have to go check it out...\n"
 	.string "This is a totally unknown planet.\l"
 	.string "I better prepare.$"
 
 refill_air_canister_Text_0:
-# 91 "data/maps/Spaceship_Dev/scripts.pory"
+# 90 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Rotom wants to refill my empty air \n"
 	.string "canisters!$"
 
 refill_air_canister_Text_1:
-# 105 "data/maps/Spaceship_Dev/scripts.pory"
+# 104 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "I don't have any empty canisters to\n"
 	.string "refill.$"
 
 Spaceship_Dev_EventScript_Tutorial_Notebook_Text_0:
-# 159 "data/maps/Spaceship_Dev/scripts.pory"
+# 158 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Operations Manual: What would you like\n"
 	.string "to learn about?$"
 
 Spaceship_Dev_EventScript_Tutorial_Notebook_Text_1:
-# 163 "data/maps/Spaceship_Dev/scripts.pory"
+# 162 "data/maps/Spaceship_Dev/scripts.pory"
 	.string "Your {COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen System{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} reports how many\n"
 	.string "units of O2 remain in your portable life \l"
 	.string "support system.\p"
-	.string "You can craft {COLOR BLUE}{SHADOW LIGHT_BLUE}Air Canisters{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} that can\n"
-	.string "refill your Oxygen System at any time.$"
+	.string "You can craft reusable {COLOR BLUE}{SHADOW LIGHT_BLUE}Air Canisters{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\n"
+	.string "that can refill your Oxygen System to\l"
+	.string "full at any time.$"
 
 Spaceship_Dev_EventScript_Tutorial_Notebook_Text_2:
 # 171 "data/maps/Spaceship_Dev/scripts.pory"

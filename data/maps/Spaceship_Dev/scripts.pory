@@ -39,7 +39,6 @@ script start_ship_intro {
     lockall
     if (flag(FLAG_SYS_FRONTIER_PASS) == FALSE) {
         applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
-        waitmovement(OBJ_EVENT_ID_PLAYER)
         setvar(VAR_0x8004, 2)
         setvar(VAR_0x8005, 1)
         setvar(VAR_0x8006, 12)
@@ -163,8 +162,9 @@ script Spaceship_Dev_EventScript_Tutorial_Notebook {
         msgbox("Your {COLOR BLUE}{SHADOW LIGHT_BLUE}Oxygen System{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} reports how many\n"
         "units of O2 remain in your portable life \l"
         "support system.\p"
-        "You can craft {COLOR BLUE}{SHADOW LIGHT_BLUE}Air Canisters{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} that can\n"
-        "refill your Oxygen System at any time.")
+        "You can craft reusable {COLOR BLUE}{SHADOW LIGHT_BLUE}Air Canisters{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\n"
+        "that can refill your Oxygen System to\l"
+        "full at any time.")
         call(Spaceship_Dev_EventScript_Tutorial_Notebook)
     }
     if (var(VAR_RESULT) == 1) {
