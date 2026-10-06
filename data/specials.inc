@@ -652,3 +652,4 @@ gSpecials::
 	def_special GlimmoraCatch
 	def_special GlalieCatch
 	def_special SlugmaCatch
+	def_special FlashCheck

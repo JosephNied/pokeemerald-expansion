@@ -9,16 +9,29 @@ script Ditto_Cave_2_Enter {
 script EventScript_SlugmaCatch {
 	lockall
 	fadeScreen(FADE_TO_WHITE)
-	special(SlugmaCatch)
-	setflag(FLAG_TEMP_1)
-    removeobject(1)
-    fadeScreen(FADE_FROM_WHITE)
-	msgbox("Slugma burned a party member!\n"
-	"They're a bit mad!")
-	setvar(VAR_0x8000, SPECIES_SLUGMA)
-    callnative(RegisterSpeciesInDex)
-	release
-	end
+	special(FlashCheck)
+	if(var(VAR_RESULT) == 1) {
+		setflag(FLAG_TEMP_1)
+		removeobject(1)
+		fadeScreen(FADE_FROM_WHITE)
+		msgbox("Clefable's Flash protected your team\n"
+		"from getting burned!")
+		setvar(VAR_0x8000, SPECIES_SLUGMA)
+		callnative(RegisterSpeciesInDex)
+		releaseall
+		end
+	} else {
+		special(SlugmaCatch)
+		setflag(FLAG_TEMP_1)
+		removeobject(1)
+		fadeScreen(FADE_FROM_WHITE)
+		msgbox("Slugma burned a party member!\n"
+		"Should've run directly away!")
+		setvar(VAR_0x8000, SPECIES_SLUGMA)
+		callnative(RegisterSpeciesInDex)
+		releaseall
+		end
+	}
 }
 
 script slugmanote {

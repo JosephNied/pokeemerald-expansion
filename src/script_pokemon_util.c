@@ -820,3 +820,20 @@ void SlugmaCatch(void)
         }
     }
 }
+
+void FlashCheck(void)
+{
+    u32 i;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES) == SPECIES_CLEFABLE)
+        {
+            gSpecialVar_Result = TRUE;
+            return;
+        }
+    }
+
+    gSpecialVar_Result = FALSE;
+    return;
+}

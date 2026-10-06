@@ -49,18 +49,33 @@ script Planet01_Ice_Cave_Carbink {
 script EventScript_GlalieCatch {
 	lockall
 	fadeScreen(FADE_TO_WHITE)
-	special(GlalieCatch)
-	setflag(FLAG_UNUSED_0x02D)
-	setflag(FLAG_UNUSED_0x032)
-    removeobject(3)
-	removeobject(10)
-    fadeScreen(FADE_FROM_WHITE)
-	setvar(VAR_0x8000, SPECIES_GLALIE)
-    callnative(RegisterSpeciesInDex)
-	msgbox("Glalie froze a party member!\n"
-	"They're frozen solid!")
-	release
-	end
+	special(FlashCheck)
+	if(var(VAR_RESULT) == 1) {
+		setflag(FLAG_UNUSED_0x02D)
+		setflag(FLAG_UNUSED_0x032)
+		removeobject(3)
+		removeobject(10)
+		fadeScreen(FADE_FROM_WHITE)
+		msgbox("Clefable's Flash protected your team\n"
+		"from getting frozen!")
+		setvar(VAR_0x8000, SPECIES_GLALIE)
+		callnative(RegisterSpeciesInDex)
+		releaseall
+		end
+	} else {
+		special(GlalieCatch)
+		setflag(FLAG_UNUSED_0x02D)
+		setflag(FLAG_UNUSED_0x032)
+		removeobject(3)
+		removeobject(10)
+		fadeScreen(FADE_FROM_WHITE)
+		setvar(VAR_0x8000, SPECIES_GLALIE)
+		callnative(RegisterSpeciesInDex)
+		msgbox("Glalie froze a party member!\n"
+		"They're frozen solid!")
+		releaseall
+		end
+	}
 }
 
 script voicetrigger_icecave {

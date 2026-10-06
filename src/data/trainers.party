@@ -4562,7 +4562,7 @@ Music: Rich
 Double Battle: Yes
 AI: Check Bad Move / Force Setup First Turn
 
-Deoxys Attack
+Deoxys Attack @ Kings Rock
 Level: 80
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 - Psycho Boost
@@ -4570,25 +4570,25 @@ IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 - Brutal Swing
 - Superpower
 
-Deoxys Defense
+Deoxys Defense @ Sitrus Berry
 Level: 80
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 0 Spe
 - Stored Power
-- Refresh
+- Reflect
 - Cosmic Power
 - Torment
 
-Deoxys Speed
+Deoxys Speed @ Life Orb
 Level: 80
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Extreme Speed
+- Psyblade
 - Overheat
 - Explosion
-- Substitute
+- Hypnosis
 
-Deoxys
+Deoxys @ Mind Plate
 Level: 80
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 - Ice Beam
 - Thunderbolt
 - Expanding Force

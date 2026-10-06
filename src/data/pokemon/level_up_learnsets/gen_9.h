@@ -2193,11 +2193,11 @@ static const struct LevelUpMove sMagnetonLevelUpLearnset[] = {
 
 #if P_GEN_4_CROSS_EVOS
 static const struct LevelUpMove sMagnezoneLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_SCREECH),
+    LEVEL_UP_MOVE( 1, MOVE_ELECTRIC_TERRAIN),
     LEVEL_UP_MOVE( 1, MOVE_MAGNET_RISE),
     LEVEL_UP_MOVE( 1, MOVE_THUNDER_WAVE),
     LEVEL_UP_MOVE( 1, MOVE_DISCHARGE),
-    LEVEL_UP_MOVE( 1, MOVE_ELECTRIC_TERRAIN),
+    LEVEL_UP_MOVE( 1, MOVE_SCREECH),
     LEVEL_UP_MOVE( 1, MOVE_METAL_SOUND),
     LEVEL_UP_END
 };
@@ -2562,7 +2562,7 @@ static const struct LevelUpMove sOnixLevelUpLearnset[] = {
 #if P_GEN_2_CROSS_EVOS
 static const struct LevelUpMove sSteelixLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_BREAKING_SWIPE),
-    LEVEL_UP_MOVE( 1, MOVE_CRUNCH),
+    LEVEL_UP_MOVE( 1, MOVE_KNOCK_OFF),
     LEVEL_UP_MOVE( 1, MOVE_OUTRAGE),
     LEVEL_UP_MOVE( 1, MOVE_DIG),
     LEVEL_UP_END
@@ -9331,7 +9331,7 @@ static const struct LevelUpMove sMetagrossLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1, MOVE_ROCK_SMASH),
     LEVEL_UP_MOVE(1, MOVE_WIDE_GUARD),
     LEVEL_UP_MOVE(1, MOVE_SURF),
-    LEVEL_UP_MOVE(1, MOVE_SOAK),
+    LEVEL_UP_MOVE(1, MOVE_TAUNT),
     LEVEL_UP_END
 };
 #endif //P_FAMILY_BELDUM
@@ -9495,10 +9495,10 @@ static const struct LevelUpMove sRayquazaLevelUpLearnset[] = {
 
 #if P_FAMILY_JIRACHI
 static const struct LevelUpMove sJirachiLevelUpLearnset[] = {
-    LEVEL_UP_MOVE(1, MOVE_EXPANDING_FORCE),
+    LEVEL_UP_MOVE(1, MOVE_LUMINA_CRASH),
     LEVEL_UP_MOVE(1, MOVE_METEOR_MASH),
-    LEVEL_UP_MOVE(1, MOVE_HEALING_WISH),
-    LEVEL_UP_MOVE(1, MOVE_TAILWIND),
+    LEVEL_UP_MOVE(1, MOVE_WISH),
+    LEVEL_UP_MOVE(1, MOVE_TRICK_ROOM),
     LEVEL_UP_END
 };
 #endif //P_FAMILY_JIRACHI
@@ -14422,9 +14422,11 @@ static const struct LevelUpMove sReshiramLevelUpLearnset[] = {
 
 #if P_FAMILY_ZEKROM
 static const struct LevelUpMove sZekromLevelUpLearnset[] = {
+    LEVEL_UP_MOVE(1, MOVE_METAL_SOUND),
+    LEVEL_UP_MOVE(1, MOVE_FLASH_CANNON),
     LEVEL_UP_MOVE(1, MOVE_THUNDER),
     LEVEL_UP_MOVE(1, MOVE_STEEL_BEAM),
-    LEVEL_UP_MOVE(1, MOVE_METAL_SOUND),
+    LEVEL_UP_MOVE(1, MOVE_CHARGE),
     LEVEL_UP_MOVE(1, MOVE_PARABOLIC_CHARGE),
     LEVEL_UP_END
 };

@@ -14,46 +14,89 @@ EventScript_SharpedoCatch::
 # 11 "data/maps/Planet01_06/scripts.pory"
 	lockall
 # 12 "data/maps/Planet01_06/scripts.pory"
-	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
+	special FlashCheck
 # 13 "data/maps/Planet01_06/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq EventScript_SharpedoCatch_1
+# 32 "data/maps/Planet01_06/scripts.pory"
+	setvar VAR_0x8000, MUGSHOT_PLAYER_SHOCK
+# 33 "data/maps/Planet01_06/scripts.pory"
 	callnative DrawMugshot
-# 14 "data/maps/Planet01_06/scripts.pory"
-	msgbox EventScript_SharpedoCatch_Text_0
-# 15 "data/maps/Planet01_06/scripts.pory"
+# 34 "data/maps/Planet01_06/scripts.pory"
+	msgbox EventScript_SharpedoCatch_Text_1
+# 35 "data/maps/Planet01_06/scripts.pory"
 	waitmessage
-# 16 "data/maps/Planet01_06/scripts.pory"
+# 36 "data/maps/Planet01_06/scripts.pory"
 	closemessage
-# 17 "data/maps/Planet01_06/scripts.pory"
+# 37 "data/maps/Planet01_06/scripts.pory"
 	callnative ClearMugshot
-# 18 "data/maps/Planet01_06/scripts.pory"
+# 38 "data/maps/Planet01_06/scripts.pory"
 	setvar VAR_0x8000, SPECIES_SHARPEDO
-# 19 "data/maps/Planet01_06/scripts.pory"
+# 39 "data/maps/Planet01_06/scripts.pory"
 	callnative RegisterSpeciesInDex
-# 20 "data/maps/Planet01_06/scripts.pory"
+# 40 "data/maps/Planet01_06/scripts.pory"
 	warp MAP_SPACESHIP_DEV, 0, 12, 7
-# 21 "data/maps/Planet01_06/scripts.pory"
+# 41 "data/maps/Planet01_06/scripts.pory"
 	waitstate
+# 42 "data/maps/Planet01_06/scripts.pory"
+	releaseall
+	end
+
+EventScript_SharpedoCatch_1:
+# 14 "data/maps/Planet01_06/scripts.pory"
+	fadescreen FADE_TO_WHITE
+# 15 "data/maps/Planet01_06/scripts.pory"
+	delay 15
+# 16 "data/maps/Planet01_06/scripts.pory"
+	setflag FLAG_TEMP_1C
+# 17 "data/maps/Planet01_06/scripts.pory"
+	setflag FLAG_TEMP_1D
+# 18 "data/maps/Planet01_06/scripts.pory"
+	setflag FLAG_TEMP_1E
+# 19 "data/maps/Planet01_06/scripts.pory"
+	removeobject 5
+# 20 "data/maps/Planet01_06/scripts.pory"
+	removeobject 4
+# 21 "data/maps/Planet01_06/scripts.pory"
+	removeobject 9
 # 22 "data/maps/Planet01_06/scripts.pory"
-	release
+	fadeScreen FADE_FROM_WHITE
+# 23 "data/maps/Planet01_06/scripts.pory"
+	msgbox EventScript_SharpedoCatch_Text_0
+# 25 "data/maps/Planet01_06/scripts.pory"
+	waitmessage
+# 26 "data/maps/Planet01_06/scripts.pory"
+	closemessage
+# 27 "data/maps/Planet01_06/scripts.pory"
+	setvar VAR_0x8000, SPECIES_SHARPEDO
+# 28 "data/maps/Planet01_06/scripts.pory"
+	callnative RegisterSpeciesInDex
+# 29 "data/maps/Planet01_06/scripts.pory"
+	releaseall
 	end
 
 
 darkshore_suggestion::
-# 27 "data/maps/Planet01_06/scripts.pory"
+# 48 "data/maps/Planet01_06/scripts.pory"
 	lock
-# 28 "data/maps/Planet01_06/scripts.pory"
+# 49 "data/maps/Planet01_06/scripts.pory"
 	msgbox darkshore_suggestion_Text_0
-# 35 "data/maps/Planet01_06/scripts.pory"
+# 56 "data/maps/Planet01_06/scripts.pory"
 	release
 	end
 
 
 EventScript_SharpedoCatch_Text_0:
-# 14 "data/maps/Planet01_06/scripts.pory"
+# 23 "data/maps/Planet01_06/scripts.pory"
+	.string "Clefable's Flash scared the Starspeedo\n"
+	.string "away!$"
+
+EventScript_SharpedoCatch_Text_1:
+# 34 "data/maps/Planet01_06/scripts.pory"
 	.string "Aaah! Quick, retreat!$"
 
 darkshore_suggestion_Text_0:
-# 28 "data/maps/Planet01_06/scripts.pory"
+# 49 "data/maps/Planet01_06/scripts.pory"
 	.string "Biologist: I discovered something\n"
 	.string "incredible to the west of here.\l"
 	.string "Something that is going to make Ops and\l"

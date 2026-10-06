@@ -87,44 +87,70 @@ EventScript_GlalieCatch::
 # 51 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	fadeScreen FADE_TO_WHITE
 # 52 "data/maps/Planet01_ICE_CAVE/scripts.pory"
-	special GlalieCatch
+	special FlashCheck
 # 53 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq EventScript_GlalieCatch_1
+# 66 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+	special GlalieCatch
+# 67 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	setflag FLAG_UNUSED_0x02D
-# 54 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+# 68 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	setflag FLAG_UNUSED_0x032
-# 55 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+# 69 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	removeobject 3
-# 56 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+# 70 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	removeobject 10
-# 57 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+# 71 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	fadeScreen FADE_FROM_WHITE
-# 58 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+# 72 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	setvar VAR_0x8000, SPECIES_GLALIE
-# 59 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+# 73 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	callnative RegisterSpeciesInDex
-# 60 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+# 74 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+	msgbox EventScript_GlalieCatch_Text_1
+# 76 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+	releaseall
+	end
+
+EventScript_GlalieCatch_1:
+# 54 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+	setflag FLAG_UNUSED_0x02D
+# 55 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+	setflag FLAG_UNUSED_0x032
+# 56 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+	removeobject 3
+# 57 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+	removeobject 10
+# 58 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+	fadeScreen FADE_FROM_WHITE
+# 59 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	msgbox EventScript_GlalieCatch_Text_0
+# 61 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+	setvar VAR_0x8000, SPECIES_GLALIE
 # 62 "data/maps/Planet01_ICE_CAVE/scripts.pory"
-	release
+	callnative RegisterSpeciesInDex
+# 63 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+	releaseall
 	end
 
 
 voicetrigger_icecave::
-# 67 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+# 82 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	lock
-# 68 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+# 83 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	goto_if_unset FLAG_UNUSED_0x8E5, voicetrigger_icecave_2
 voicetrigger_icecave_1:
-# 72 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+# 87 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	setvar VAR_TEMP_2, 1
-# 73 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+# 88 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	release
 	end
 
 voicetrigger_icecave_2:
-# 69 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+# 84 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	call voicedialogueABC
-# 70 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+# 85 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	setflag FLAG_UNUSED_0x8E5
 	goto voicetrigger_icecave_1
 
@@ -138,6 +164,11 @@ Planet01_Ice_Cave_Carbink_Text_1:
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Carbink climbed into your bag!$"
 
 EventScript_GlalieCatch_Text_0:
-# 60 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+# 59 "data/maps/Planet01_ICE_CAVE/scripts.pory"
+	.string "Clefable's Flash protected your team\n"
+	.string "from getting frozen!$"
+
+EventScript_GlalieCatch_Text_1:
+# 74 "data/maps/Planet01_ICE_CAVE/scripts.pory"
 	.string "Glalie froze a party member!\n"
 	.string "They're frozen solid!$"

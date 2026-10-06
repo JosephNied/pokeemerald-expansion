@@ -212,9 +212,11 @@ script Planet01_01_HintText04 {
 
 script Planet01_01_HintText05 {
     lock
-    msgbox("Ops Lead: Even with the low gravity, I\n" 
-    "can't jump up the tall cliffs. I wonder\l" 
-    "how else we might get up there...")
+    msgbox("Ops Lead: Some Pokémon would rather\n" 
+    "not fight, instead preferring to just\l" 
+    "attack and then run away.\p"
+    "We befriended a Clefable, and it would\n"
+    "use Flash to scare those Pokémon off!")
     release
     end
 }

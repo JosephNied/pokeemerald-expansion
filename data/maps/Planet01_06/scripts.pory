@@ -9,18 +9,39 @@ script Planet01_06_Enter {
 
 script EventScript_SharpedoCatch {
 	lockall
-	setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
-    callnative(DrawMugshot)
-	msgbox("Aaah! Quick, retreat!")
-	waitmessage
-	closemessage
-	callnative(ClearMugshot)
-	setvar(VAR_0x8000, SPECIES_SHARPEDO)
-    callnative(RegisterSpeciesInDex)
-	warp(MAP_SPACESHIP_DEV, 0, 12, 7) 
-	waitstate
-	release
-	end
+	special(FlashCheck)
+	if(var(VAR_RESULT) == 1) {
+		fadescreen(FADE_TO_WHITE)
+		delay(15)
+		setflag(FLAG_TEMP_1C)
+		setflag(FLAG_TEMP_1D)
+		setflag(FLAG_TEMP_1E)
+		removeobject(5)
+		removeobject(4)
+		removeobject(9)
+		fadeScreen(FADE_FROM_WHITE)
+		msgbox("Clefable's Flash scared the Starspeedo\n"
+		"away!")
+		waitmessage
+		closemessage
+		setvar(VAR_0x8000, SPECIES_SHARPEDO)
+		callnative(RegisterSpeciesInDex)
+		releaseall
+		end
+	} else {
+		setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
+		callnative(DrawMugshot)
+		msgbox("Aaah! Quick, retreat!")
+		waitmessage
+		closemessage
+		callnative(ClearMugshot)
+		setvar(VAR_0x8000, SPECIES_SHARPEDO)
+		callnative(RegisterSpeciesInDex)
+		warp(MAP_SPACESHIP_DEV, 0, 12, 7) 
+		waitstate
+		releaseall
+		end
+	}
 }
 
 script darkshore_suggestion {
