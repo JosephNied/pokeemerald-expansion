@@ -320,16 +320,17 @@ script Planet01_01_RobotGreeting {
     callnative(DrawMugshot)
     msgbox("I'm the Captain of the EDGE OF DAWN\n"
     "research expedition! Name's PAL 9000,\l"
-    "but my human crew just calls me Cap'.")
+    "but my two human crew members just\l"
+    "call me Cap'.")
     waitmessage
     closemessage
     callnative(ClearMugshot)
 
     setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
     callnative(DrawMugshot)
-    msgbox("Huh! You're looking a bit rough... But,\n"
-    "if that's true, is your crew somewhere \l"
-    "around here?")
+    msgbox("Huh! You're looking a bit rough...\n"
+    "But, if that's true, are your two crew\l"
+    "members somewhere around here?")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -338,8 +339,8 @@ script Planet01_01_RobotGreeting {
     callnative(DrawMugshot)
     msgbox("Afraid not, kid. My Emergency Protocol\n"
     "was activated, meaning the crew\l" 
-    "encountered a critical situation and\l"
-    "were sent home.\p"  
+    "encountered a critical situation\l"
+    "and were sent home.\p"  
     "I'd elaborate, but the Emergency\n" 
     "Protocol also encrypted my memory for\l" 
     "security. That data is all top secret\l"
@@ -960,27 +961,7 @@ script EventScript_TheCaptain {
         callnative(ClearMugshot)
         setvar (VAR_CAPTAIN_DIALOGUE, 1)
     }
-    elif (var(VAR_CAPTAIN_DIALOGUE) == 3) 
-    {
-        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
-        callnative(DrawMugshot)
-        msgbox ("Hey Cap', I can't get up the waterfall.\n"
-        "What do I do now?")
-        waitmessage
-        closemessage
-        callnative(ClearMugshot)
-
-        setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
-        callnative(DrawMugshot)
-        msgbox("There's gotta be a pocket mon with\n"
-        "Waterfall somewhere, kiddo. Don't give\l"
-        "up.")
-        waitmessage
-        closemessage
-        callnative(ClearMugshot)
-        setvar (VAR_CAPTAIN_DIALOGUE, 3)
-    }
-    elif (var(VAR_CAPTAIN_DIALOGUE) == 4) 
+    elif (var(VAR_CAPTAIN_DIALOGUE) == 3)
     {
         setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
         callnative(DrawMugshot)
@@ -1022,6 +1003,27 @@ script EventScript_TheCaptain {
             "Optimistic, hard working. Would do\n" 
             "anything to support the team.")
         }
+        setvar (VAR_CAPTAIN_DIALOGUE, 4)
+    }
+    elif (var(VAR_CAPTAIN_DIALOGUE) == 4) 
+        {
+        setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
+        callnative(DrawMugshot)
+        msgbox ("Hey Cap', I can't get up the waterfall.\n"
+        "What do I do now?")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+
+        setvar(VAR_0x8000, MUGSHOT_CAPTAIN_SAD)
+        callnative(DrawMugshot)
+        msgbox("There's gotta be a pocket mon with\n"
+        "Waterfall somewhere, kiddo. Don't give\l"
+        "up.")
+        waitmessage
+        closemessage
+        callnative(ClearMugshot)
+        setvar (VAR_CAPTAIN_DIALOGUE, 3)
     }
     release
     end
@@ -1153,8 +1155,8 @@ script EventScript_GlimmoraCatch_Planet01 {
 		fadeScreen(FADE_FROM_WHITE)
 		setvar(VAR_0x8000, SPECIES_GLIMMORA)
 		callnative(RegisterSpeciesInDex)
-		msgbox("Glimmora poisoned a party member!\n"
-		"That stings!")
+		msgbox("Glimmora's Poison Sting poisoned a\n"
+		"party member! It fled!")
 		releaseall
 		end
 	}

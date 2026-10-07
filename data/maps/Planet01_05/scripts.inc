@@ -62,169 +62,169 @@ Planet01_05_DusknoirEncounter::
 	fadeScreen FADE_FROM_BLACK
 # 44 "data/maps/Planet01_05/scripts.pory"
 	msgbox Planet01_05_DusknoirEncounter_Text_1
-# 46 "data/maps/Planet01_05/scripts.pory"
+# 45 "data/maps/Planet01_05/scripts.pory"
 	setvar VAR_0x8000, SPECIES_DUSKNOIR
-# 47 "data/maps/Planet01_05/scripts.pory"
+# 46 "data/maps/Planet01_05/scripts.pory"
 	callnative RegisterSpeciesInDex
-# 48 "data/maps/Planet01_05/scripts.pory"
+# 47 "data/maps/Planet01_05/scripts.pory"
 	setvar VAR_TEMP_0, 1
+# 48 "data/maps/Planet01_05/scripts.pory"
+	releaseall
 # 49 "data/maps/Planet01_05/scripts.pory"
-	releaseall
-# 50 "data/maps/Planet01_05/scripts.pory"
 	end
-# 52 "data/maps/Planet01_05/scripts.pory"
+# 51 "data/maps/Planet01_05/scripts.pory"
 PlayerLost_Dusknoir:
-# 53 "data/maps/Planet01_05/scripts.pory"
+# 52 "data/maps/Planet01_05/scripts.pory"
 	releaseall
-# 54 "data/maps/Planet01_05/scripts.pory"
+# 53 "data/maps/Planet01_05/scripts.pory"
 	end
-# 56 "data/maps/Planet01_05/scripts.pory"
+# 55 "data/maps/Planet01_05/scripts.pory"
 DusknoirTrigger_End:
 	end
 
 
-# 60 "data/maps/Planet01_05/scripts.pory"
+# 59 "data/maps/Planet01_05/scripts.pory"
 Movement_DusknoirAppears:
-# 61 "data/maps/Planet01_05/scripts.pory"
+# 60 "data/maps/Planet01_05/scripts.pory"
 	face_up
+# 61 "data/maps/Planet01_05/scripts.pory"
+	set_visible
 # 62 "data/maps/Planet01_05/scripts.pory"
-	set_visible
+	delay_4
 # 63 "data/maps/Planet01_05/scripts.pory"
-	delay_4
+	set_invisible
 # 64 "data/maps/Planet01_05/scripts.pory"
-	set_invisible
+	delay_4
 # 65 "data/maps/Planet01_05/scripts.pory"
-	delay_4
+	set_visible
 # 66 "data/maps/Planet01_05/scripts.pory"
-	set_visible
+	delay_4
 # 67 "data/maps/Planet01_05/scripts.pory"
-	delay_4
+	set_invisible
 # 68 "data/maps/Planet01_05/scripts.pory"
-	set_invisible
-# 69 "data/maps/Planet01_05/scripts.pory"
 	delay_4
+# 69 "data/maps/Planet01_05/scripts.pory"
+	set_visible
 # 70 "data/maps/Planet01_05/scripts.pory"
-	set_visible
+	delay_8
 # 71 "data/maps/Planet01_05/scripts.pory"
-	delay_8
+	set_invisible
 # 72 "data/maps/Planet01_05/scripts.pory"
-	set_invisible
+	delay_8
 # 73 "data/maps/Planet01_05/scripts.pory"
-	delay_8
+	set_visible
 # 74 "data/maps/Planet01_05/scripts.pory"
-	set_visible
+	delay_8
 # 75 "data/maps/Planet01_05/scripts.pory"
-	delay_8
+	set_invisible
 # 76 "data/maps/Planet01_05/scripts.pory"
-	set_invisible
-# 77 "data/maps/Planet01_05/scripts.pory"
 	delay_8
-# 78 "data/maps/Planet01_05/scripts.pory"
+# 77 "data/maps/Planet01_05/scripts.pory"
 	set_visible
+# 78 "data/maps/Planet01_05/scripts.pory"
+	delay_16
 # 79 "data/maps/Planet01_05/scripts.pory"
-	delay_16
-# 80 "data/maps/Planet01_05/scripts.pory"
 	set_invisible
-# 81 "data/maps/Planet01_05/scripts.pory"
+# 80 "data/maps/Planet01_05/scripts.pory"
 	delay_16
-# 82 "data/maps/Planet01_05/scripts.pory"
+# 81 "data/maps/Planet01_05/scripts.pory"
 	set_visible
 	step_end
 
 Planet01_05_HintText01::
-# 86 "data/maps/Planet01_05/scripts.pory"
+# 85 "data/maps/Planet01_05/scripts.pory"
 	lock
-# 87 "data/maps/Planet01_05/scripts.pory"
+# 86 "data/maps/Planet01_05/scripts.pory"
 	msgbox Planet01_05_HintText01_Text_0
-# 93 "data/maps/Planet01_05/scripts.pory"
+# 92 "data/maps/Planet01_05/scripts.pory"
 	release
 	end
 
 
 Color_Puzzle::
-# 98 "data/maps/Planet01_05/scripts.pory"
+# 97 "data/maps/Planet01_05/scripts.pory"
 	lock
-# 99 "data/maps/Planet01_05/scripts.pory"
+# 98 "data/maps/Planet01_05/scripts.pory"
 	msgbox Color_Puzzle_Text_0
-# 100 "data/maps/Planet01_05/scripts.pory"
+# 99 "data/maps/Planet01_05/scripts.pory"
 	setvar VAR_DAILY_ROULETTE, 0
-# 101 "data/maps/Planet01_05/scripts.pory"
+# 100 "data/maps/Planet01_05/scripts.pory"
 	msgbox Color_Puzzle_Text_1
-# 102 "data/maps/Planet01_05/scripts.pory"
+# 101 "data/maps/Planet01_05/scripts.pory"
 	multichoice 0, 0, MULTI_COLOR_PUZZLE, FALSE
-# 103 "data/maps/Planet01_05/scripts.pory"
+# 102 "data/maps/Planet01_05/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_eq Color_Puzzle_2
 Color_Puzzle_1:
-# 106 "data/maps/Planet01_05/scripts.pory"
+# 105 "data/maps/Planet01_05/scripts.pory"
 	msgbox Color_Puzzle_Text_2
-# 107 "data/maps/Planet01_05/scripts.pory"
+# 106 "data/maps/Planet01_05/scripts.pory"
 	multichoice 0, 0, MULTI_COLOR_PUZZLE, FALSE
-# 108 "data/maps/Planet01_05/scripts.pory"
+# 107 "data/maps/Planet01_05/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_eq Color_Puzzle_5
 Color_Puzzle_4:
-# 111 "data/maps/Planet01_05/scripts.pory"
+# 110 "data/maps/Planet01_05/scripts.pory"
 	msgbox Color_Puzzle_Text_3
-# 112 "data/maps/Planet01_05/scripts.pory"
+# 111 "data/maps/Planet01_05/scripts.pory"
 	multichoice 0, 0, MULTI_COLOR_PUZZLE, FALSE
-# 113 "data/maps/Planet01_05/scripts.pory"
+# 112 "data/maps/Planet01_05/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq Color_Puzzle_8
 Color_Puzzle_7:
-# 116 "data/maps/Planet01_05/scripts.pory"
+# 115 "data/maps/Planet01_05/scripts.pory"
 	msgbox Color_Puzzle_Text_4
-# 117 "data/maps/Planet01_05/scripts.pory"
+# 116 "data/maps/Planet01_05/scripts.pory"
 	multichoice 0, 0, MULTI_COLOR_PUZZLE, FALSE
-# 118 "data/maps/Planet01_05/scripts.pory"
+# 117 "data/maps/Planet01_05/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq Color_Puzzle_11
 Color_Puzzle_10:
-# 121 "data/maps/Planet01_05/scripts.pory"
+# 120 "data/maps/Planet01_05/scripts.pory"
 	compare VAR_DAILY_ROULETTE, 4
 	goto_if_eq Color_Puzzle_13
-# 128 "data/maps/Planet01_05/scripts.pory"
+# 127 "data/maps/Planet01_05/scripts.pory"
 	setvar VAR_0x8000, MUGSHOT_PLAYER_OK
-# 129 "data/maps/Planet01_05/scripts.pory"
+# 128 "data/maps/Planet01_05/scripts.pory"
 	callnative DrawMugshot
-# 130 "data/maps/Planet01_05/scripts.pory"
+# 129 "data/maps/Planet01_05/scripts.pory"
 	msgbox Color_Puzzle_Text_5
-# 133 "data/maps/Planet01_05/scripts.pory"
+# 132 "data/maps/Planet01_05/scripts.pory"
 	waitmessage
-# 134 "data/maps/Planet01_05/scripts.pory"
+# 133 "data/maps/Planet01_05/scripts.pory"
 	closemessage
-# 135 "data/maps/Planet01_05/scripts.pory"
+# 134 "data/maps/Planet01_05/scripts.pory"
 	callnative ClearMugshot
-# 136 "data/maps/Planet01_05/scripts.pory"
+# 135 "data/maps/Planet01_05/scripts.pory"
 	release
 	end
 
 Color_Puzzle_2:
-# 104 "data/maps/Planet01_05/scripts.pory"
+# 103 "data/maps/Planet01_05/scripts.pory"
 	addvar VAR_DAILY_ROULETTE, 1
 	goto Color_Puzzle_1
 
 Color_Puzzle_5:
-# 109 "data/maps/Planet01_05/scripts.pory"
+# 108 "data/maps/Planet01_05/scripts.pory"
 	addvar VAR_DAILY_ROULETTE, 1
 	goto Color_Puzzle_4
 
 Color_Puzzle_8:
-# 114 "data/maps/Planet01_05/scripts.pory"
+# 113 "data/maps/Planet01_05/scripts.pory"
 	addvar VAR_DAILY_ROULETTE, 1
 	goto Color_Puzzle_7
 
 Color_Puzzle_11:
-# 119 "data/maps/Planet01_05/scripts.pory"
+# 118 "data/maps/Planet01_05/scripts.pory"
 	addvar VAR_DAILY_ROULETTE, 1
 	goto Color_Puzzle_10
 
 Color_Puzzle_13:
-# 122 "data/maps/Planet01_05/scripts.pory"
+# 121 "data/maps/Planet01_05/scripts.pory"
 	warp MAP_PLANET01_FINAL_LAB_CORE, 1, 0, 0
-# 123 "data/maps/Planet01_05/scripts.pory"
+# 122 "data/maps/Planet01_05/scripts.pory"
 	waitstate
-# 124 "data/maps/Planet01_05/scripts.pory"
+# 123 "data/maps/Planet01_05/scripts.pory"
 	release
 	end
 
@@ -242,11 +242,10 @@ Planet01_05_DusknoirEncounter_Text_0:
 
 Planet01_05_DusknoirEncounter_Text_1:
 # 44 "data/maps/Planet01_05/scripts.pory"
-	.string "The Dusknoir faded into the\n"
-	.string "shadows.$"
+	.string "Dusknacht faded into the shadows...$"
 
 Planet01_05_HintText01_Text_0:
-# 87 "data/maps/Planet01_05/scripts.pory"
+# 86 "data/maps/Planet01_05/scripts.pory"
 	.string "Ops Lead: Is it a coincidence that the\n"
 	.string "white trees' positions correspond to\l"
 	.string "the path through the misty cave?\p"
@@ -255,27 +254,27 @@ Planet01_05_HintText01_Text_0:
 	.string "tell with ghost-type Pokémon...$"
 
 Color_Puzzle_Text_0:
-# 99 "data/maps/Planet01_05/scripts.pory"
+# 98 "data/maps/Planet01_05/scripts.pory"
 	.string "A mesmerizing, iridescent rock...$"
 
 Color_Puzzle_Text_1:
-# 101 "data/maps/Planet01_05/scripts.pory"
+# 100 "data/maps/Planet01_05/scripts.pory"
 	.string "You begin to focus on a color...$"
 
 Color_Puzzle_Text_2:
-# 106 "data/maps/Planet01_05/scripts.pory"
+# 105 "data/maps/Planet01_05/scripts.pory"
 	.string "...And another...$"
 
 Color_Puzzle_Text_3:
-# 111 "data/maps/Planet01_05/scripts.pory"
+# 110 "data/maps/Planet01_05/scripts.pory"
 	.string "Hypnotized, by another...$"
 
 Color_Puzzle_Text_4:
-# 116 "data/maps/Planet01_05/scripts.pory"
+# 115 "data/maps/Planet01_05/scripts.pory"
 	.string "Drawn into another color...$"
 
 Color_Puzzle_Text_5:
-# 130 "data/maps/Planet01_05/scripts.pory"
+# 129 "data/maps/Planet01_05/scripts.pory"
 	.string "Snap out of it!\n"
 	.string "I should use my teleporter to get back\l"
 	.string "to the ship already.$"

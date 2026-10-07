@@ -438,6 +438,8 @@ Final_Lab_Interior_BiologistEncounter::
 	clearflag FLAG_TEMP_1B
 # 279 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	addobject 2
+# 280 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
+	playse SE_PIN
 # 281 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"
 	applymovement 1, Final_Lab_Interior_BiologistEncounter_Movement_1
 # 282 "data/maps/Planet01_Final_Lab_Interior/scripts.pory"

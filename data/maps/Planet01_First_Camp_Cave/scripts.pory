@@ -165,8 +165,9 @@ script voicedialogueABC {
 
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I've decided. We have an opportunity\n"
-        "here to help each other.>")
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I've decided.\p"
+        "We have an opportunity here to help\n"
+        "each other.>")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -184,9 +185,9 @@ script voicedialogueABC {
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
         msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Your ship is being held down by the\n"
-        "psychic power of the Deoxys Cell: A\l"
-        "biological mass that Deoxys, the space\l"
-        "virus Pokémon, spawns from.\p"
+        "psychic power of the Deoxys Cell:\p"
+        "A biological mass that Deoxys, the\n"
+        "space virus Pokémon, spawns from.\p"
         "Your only escape is to defeat it.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         closemessage
@@ -195,8 +196,9 @@ script voicedialogueABC {
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
         callnative(DrawMugshot)
-        msgbox("Deoxys... Cell?! Good grief. But who are\n" 
-        "you, and how is your voice in my head?")
+        msgbox("Deoxys... Cell?! Good grief.\p" 
+        "But who are you, and how is your voice\n"
+        "in my head?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -204,15 +206,16 @@ script voicedialogueABC {
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
         msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I am- or, was- the Biologist on the EOD\n"
-        "research team. The Deoxys Cell and I\l"
-        "are both in the EOD lab above the\l"
-        "waterfall.\p"
+        "research team.\p" 
+        "The Deoxys Cell and I are both in the\n"
+        "EOD lab above the waterfall.\p"
         "If you can defeat the Deoxys Cell, that\n"
-        "will help me too with my... Unlucky\l"
-        "situation. A situation that does have\l" 
-        "the silver lining of allowing my mind to\l" 
-        "project itself across the planet, hence\l"
-        "our mental communication.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        "will help me too with my...\p"
+        "Unlucky situation.\n"
+        "A situation that does have the silver\l" 
+        "lining of allowing my mind to project\l" 
+        "itself across the planet, hence our\l"
+        "mental communication.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -227,10 +230,11 @@ script voicedialogueABC {
 
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I don't know how to get you up the \n"
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I don't know how to get you up the\n"
         "waterfall yet, but this planet holds\l"
-        "many surprises. That's all I have the\l"
-        "chance to say for now. Good luck. And...\l"
+        "many surprises.\p"
+        "That's all I have the chance to say for\n"
+        "now. Good luck. And...\p"
         "Thank you.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         closemessage
@@ -289,9 +293,9 @@ script voicedialogueABC {
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
         callnative(DrawMugshot)
-        msgbox("Huh? Are you having some kind of\n"
-        "psychic battle with the Deoxys Cell\l"
-        "now?!")
+        msgbox("Huh?\p" 
+        "Are you having some kind of psychic\n"
+        "battle with the Deoxys Cell right now?!")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -303,7 +307,8 @@ script voicedialogueABC {
         "really more of a... personal struggle?\p"
         "Deoxy's biological imperative is to\n"
         "spread, but my will can influence it as\l" 
-        "well. I'm going to give you an opening to\l" 
+        "well.\p"
+        "I'm going to give you an opening to\n" 
         "attack it once you get to me.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         closemessage
@@ -314,8 +319,8 @@ script voicedialogueABC {
         callnative(DrawMugshot)
         msgbox("Woah there. You never mentioned that!\n"
         "...\p"
-        "Wait, if I attack it... Am I attacking\n"
-        "you? Hello?")
+        "Wait, if I attack it...\n"
+        "Am I attacking you? Hello?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -363,9 +368,10 @@ script voicedialogueABC {
 
         setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
         callnative(DrawMugshot)
-        msgbox("We're partners now. You're the last\n"
-        "person I might ever talk to. I'd prefer\l"
-        "if we could be friends.")
+        msgbox("We're partners now.\n"
+        "You're the last person I might ever talk\l" 
+        "to.\p"
+        "I'd prefer if we could be friends.")
         waitmessage
         closemessage
         callnative(ClearMugshot)

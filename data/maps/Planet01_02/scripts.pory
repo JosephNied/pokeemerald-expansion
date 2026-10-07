@@ -5,6 +5,8 @@ mapscripts Planet01_02_MapScripts {
 script Planet01_02_Enter {
 	special(SetRandomFlags)
     setvar(VAR_TEMP_1, 0)
+    setflag(FLAG_TEMP_4)
+    removeobject(26)
 	clearflag(FLAG_TEMP_10)
 	clearflag(FLAG_TEMP_11)
 	clearflag(FLAG_TEMP_12)
@@ -195,19 +197,19 @@ script Jirachi_goes_to_ship {
     setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
     msgbox("Jirachi again! It's good to see you!\n"
-    "Come to help us out again?")
+    "Come to help us out?")
     waitmessage
     closemessage
     callnative(ClearMugshot)
 
     setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
     callnative(DrawMugshot)
-    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I can read its mind... It wont let you\n"
-    "past it unless you bring it a Shadow\l"
-    "Crystal, apparently.\p"
+    msgbox("{COLOR RED}{SHADOW LIGHT_RED}<I can read its mind...\p"
+    "It wont let you past it unless you bring\n"
+    "it a Shadow Crystal, apparently.\p"
     "Why is this Jirachi so invested in us?\n"
     "I guess it understands that the Deoxys\l"
-    "Cell is a threat to all life.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+    "Cell is a threat to all life?>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
     waitmessage
     closemessage
     callnative(ClearMugshot)
@@ -217,8 +219,9 @@ script Jirachi_goes_to_ship {
     if (var(VAR_RESULT) == FALSE) {
         setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
         callnative(DrawMugshot)
-        msgbox("I don't get it. What's a Shadow Crystal,\n"
-        "and where can we get one?")
+        msgbox("I don't get it.\p"
+        "What's a Shadow Crystal, and where\n"
+        "we get one?")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -278,7 +281,7 @@ script Jirachi_goes_to_ship {
             setvar(VAR_0x8000, MUGSHOT_PLAYER_DETERMINED)
             callnative(DrawMugshot)
             msgbox("Looks like Jirachi will always return to\n"
-            "my ship when released!")
+            "my ship if I release it!")
             waitmessage
             closemessage
             callnative(ClearMugshot)
@@ -315,14 +318,14 @@ script Jirachi_goes_to_ship {
             callnative(DrawMugshot)
             msgbox("Welcome aboard!\n"
             "Looks like Jirachi will always return to\l"
-            "my ship when released!")
+            "my ship if I release it!")
             waitmessage
             closemessage
             callnative(ClearMugshot)
         }
         setvar(VAR_0x8000, MUGSHOT_UNKNOWN)
         callnative(DrawMugshot)
-        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<Let's do this.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}<...Let's do this.>{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -425,8 +428,9 @@ script Planet01_02_HintText03 {
     setvar(VAR_0x8000, MUGSHOT_PLAYER_OK)
     callnative(DrawMugshot)
     msgbox ("Welp. I don't have any way to get\n"
-    "up there right now. Guess I'll have\l"
-    "to start searching the old campsites.\l"
+    "up there right now.\p"
+    "Guess I'll have to start searching the\n"
+    "old campsites.\p"
     "This is the only lead I've got.")
     waitmessage
     closemessage
@@ -466,16 +470,17 @@ script Planet01_02_HintText06 {
 
 script Planet01_02_QuagsireTrigger {
     lockall
+    clearflag(FLAG_TEMP_4)
+    addobject(26)
     setvar(VAR_0x8000, MUGSHOT_PLAYER_SHOCK)
     callnative(DrawMugshot)
     msgbox("Huh? In the waterfall-")
     waitmessage
-    playse(SE_PIN)
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark))
     callnative(ClearMugshot)
     closemessage
     waitse()
     playmoncry(SPECIES_QUAGSIRE, CRY_MODE_ENCOUNTER)
+    playse(SE_PIN)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark, face_right))
     waitmovement(OBJ_EVENT_ID_PLAYER)
     applymovement(26, Movement_QuagsireWaterstone1)

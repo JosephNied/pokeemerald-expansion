@@ -61,8 +61,8 @@ script start_ship_intro {
         setvar(VAR_0x8000, MUGSHOT_PLAYER_CONFUSED)
         callnative(DrawMugshot)
         msgbox("What the heck?! I can't get off the\n"
-        "ground! It's like something is holding\l"
-        "us down.")
+        "ground!\p"
+        "It's like something is holding us down.")
         waitmessage
         closemessage
         callnative(ClearMugshot)
@@ -404,6 +404,8 @@ script Blissey_Bed {
     setvar(VAR_0x8000, SPECIES_BLISSEY)
     callnative(RegisterSpeciesInDex)
     call(Common_EventScript_OutOfCenterPartyHeal)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
     release
     end
 }

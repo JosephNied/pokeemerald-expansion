@@ -45,8 +45,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MINIOR)",
-      "x": 24,
-      "y": 21,
+      "x": 34,
+      "y": 46,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 0,
@@ -58,8 +58,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(CLEFABLE)",
-      "x": 32,
-      "y": 19,
+      "x": 35,
+      "y": 20,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 0,
@@ -84,7 +84,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(STEELIX)",
-      "x": 30,
+      "x": 31,
       "y": 34,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_CHASE_PLAYER_OWE",
@@ -136,7 +136,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MINIOR)",
-      "x": 12,
+      "x": 13,
       "y": 28,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
@@ -289,6 +289,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(BOMBIRDIER)",
+      "x": 20,
+      "y": 39,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_CHASE_PLAYER_OWE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_OW_WILD_ENCOUNTER",
+      "trainer_sight_or_berry_tree_id": "50",
+      "script": "NULL",
+      "flag": "FLAG_TEMP_1F"
     }
   ],
   "warp_events": [

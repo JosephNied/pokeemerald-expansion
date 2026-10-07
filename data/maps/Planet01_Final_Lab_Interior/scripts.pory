@@ -277,7 +277,7 @@ script Final_Lab_Interior_BiologistEncounter {
 
 	clearflag(FLAG_TEMP_1B)
 	addobject(2)
-
+	playse(SE_PIN)
 	applymovement(1, moves(emote_exclamation_mark))
 	applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down, emote_question_mark))
 	applymovement(2, Ops_moveup1)

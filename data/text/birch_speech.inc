@@ -16,6 +16,7 @@ gText_Birch_Pokemon::
 gText_Birch_MainSpeech::
 	.string "Well, let's get it started-\p"  
 	.string "{COLOR RED}{SHADOW LIGHT_RED}ALERT ALERT ALERT{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "...\p"
 	.string "!!!\n"
 	.string "Huh?!\p"
 	.string "My ship- Something is dragging us\n"

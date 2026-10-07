@@ -13471,7 +13471,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 
     [SPECIES_DEOXYS_ATTACK] =
     {
-        .baseHP        = 50,
+        .baseHP        = 40,
         .baseAttack    = 170,
         .baseDefense   = 50,
         .baseSpeed     = 100,

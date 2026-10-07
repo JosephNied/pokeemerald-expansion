@@ -10462,7 +10462,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Maybe the EOD researchers brought\n"
             "this guy to help cut through trees, or\n"
             "even metal, for their lab construction?\n"
-            "Again with the red and blue tentacles."),
+            "Horribly infected by Deoxys."),
         .pokemonScale = 267,
         .pokemonOffset = 2,
         .trainerScale = 286,

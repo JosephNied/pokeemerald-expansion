@@ -752,7 +752,6 @@ void ReplaceUrsaringWithUrsaluna(void)
             if (GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_HELD_ITEM) == ITEM_PEAT_BLOCK)
             {
                 ZeroMonData(&gParties[B_TRAINER_PLAYER][i]);
-                AddBagItem(ITEM_BEAST_BALL, 1);
                 CompactPartySlots();
 
                 gSpecialVar_Result = TRUE;

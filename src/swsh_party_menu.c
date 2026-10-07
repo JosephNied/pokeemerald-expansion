@@ -588,7 +588,6 @@ static void CursorCb_ChangeForm(u8);
 static void CursorCb_ChangeAbility(u8);
 static void CursorCb_Release(u8);
 static void CursorCb_ConfirmRelease(u8);
-static void CursorCb_CancelRelease(u8);
 void TryItemHoldFormChange(struct Pokemon *mon, s8 slotId, enum BattleTrainer trainer);
 static void ShowMoveSelectWindow(u8 slot);
 static void Task_HandleWhichMoveInput(u8 taskId);
@@ -2295,7 +2294,8 @@ static void Task_HandleReleaseYesNoInput(u8 taskId)
         // fallthrough
     case 1: // No
         gPartyMenu.action = ACTIONS_NONE;
-        Task_ReturnToChooseMonAfterText(taskId);
+        ScheduleBgCopyTilemapToVram(0);
+        gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
         break;
     }
 }
@@ -10527,7 +10527,21 @@ static void CursorCb_Release(u8 taskId)
     PlaySE(SE_SELECT);
 
     gPartyMenu.action = ACTIONS_RELEASE;
+
+    // Remove the existing action-selection menu.
+    PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[0]);
+
+    // Display the confirmation message.
+    GetMonNickname(mon, gStringVar1);
+    StringExpandPlaceholders(
+        gStringVar4,
+        COMPOUND_STRING(" Release {STR_VAR_1}? ")
+    );
+    DisplayPartyMenuMessage(gStringVar4, TRUE);
+
+    // Now display Yes/No.
     PartyMenuDisplayYesNoMenu();
+
     gTasks[taskId].func = Task_HandleReleaseYesNoInput;
 }
 
@@ -10568,11 +10582,6 @@ static void CursorCb_ConfirmRelease(u8 taskId)
 
     gPartyMenu.action = ACTIONS_NONE;
     Task_ClosePartyMenu(taskId);
-}
-
-static void CursorCb_CancelRelease(u8 taskId)
-{
-    CursorCb_Cancel1(taskId);
 }
 
 static void FieldCallback_RockClimb(void)

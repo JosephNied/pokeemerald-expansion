@@ -2013,7 +2013,7 @@ static void Task_OWEApproachForBattle(u8 taskId)
             //my attempt at adding custom chase interaction
             if (OW_SPECIES(OWE) == SPECIES_GLIMMORA) {
                 ScriptContext_SetupScript(EventScript_GlimmoraCatch);
-            } else if (OW_SPECIES(OWE) == SPECIES_FLUTTER_MANE) {
+            } else if (OW_SPECIES(OWE) == SPECIES_BOMBIRDIER) {
                 ScriptContext_SetupScript(EventScript_GlimmoraCatch_Planet01);
             } else if (OW_SPECIES(OWE) == SPECIES_GLALIE) {
                 ScriptContext_SetupScript(EventScript_GlalieCatch);

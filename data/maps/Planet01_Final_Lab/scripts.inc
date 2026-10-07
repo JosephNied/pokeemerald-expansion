@@ -378,7 +378,7 @@ Planet01_Final_Lab_EventScript_Item01::
 # 268 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lock
 # 269 "data/maps/Planet01_Final_Lab/scripts.pory"
-	giveitem ITEM_ROCKY_HELMET, 1
+	giveitem ITEM_RARE_CANDY, 5
 # 270 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 11
 # 271 "data/maps/Planet01_Final_Lab/scripts.pory"
@@ -392,7 +392,7 @@ Planet01_Final_Lab_EventScript_Item02::
 # 277 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lock
 # 278 "data/maps/Planet01_Final_Lab/scripts.pory"
-	giveitem ITEM_LIFE_ORB, 1
+	giveitem ITEM_FOCUS_SASH, 1
 # 279 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 12
 # 280 "data/maps/Planet01_Final_Lab/scripts.pory"
@@ -406,7 +406,7 @@ Planet01_Final_Lab_EventScript_Item03::
 # 286 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lock
 # 287 "data/maps/Planet01_Final_Lab/scripts.pory"
-	giveitem ITEM_RARE_CANDY, 5
+	giveitem ITEM_LIFE_ORB, 1
 # 288 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 7
 # 289 "data/maps/Planet01_Final_Lab/scripts.pory"
@@ -420,7 +420,7 @@ Planet01_Final_Lab_EventScript_Item04::
 # 295 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lock
 # 296 "data/maps/Planet01_Final_Lab/scripts.pory"
-	giveitem ITEM_RARE_CANDY, 5
+	giveitem ITEM_LIGHT_CLAY, 5
 # 297 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 9
 # 298 "data/maps/Planet01_Final_Lab/scripts.pory"
@@ -448,7 +448,7 @@ Planet01_Final_Lab_EventScript_Item06::
 # 313 "data/maps/Planet01_Final_Lab/scripts.pory"
 	lock
 # 314 "data/maps/Planet01_Final_Lab/scripts.pory"
-	giveitem ITEM_LEFTOVERS, 1
+	giveitem ITEM_RARE_CANDY, 5
 # 315 "data/maps/Planet01_Final_Lab/scripts.pory"
 	removeobject 8
 # 316 "data/maps/Planet01_Final_Lab/scripts.pory"

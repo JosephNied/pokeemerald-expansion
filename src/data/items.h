@@ -15280,9 +15280,9 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Peat Block"),
         .price = 10000,
         .description = COMPOUND_STRING(
-            "A block of material\n"
-            "that makes some\n"
-            "Pokémon evolve."),
+            "Evolves an Ursaring\n"
+            "when held under the\n"
+            "full moon..."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_EVOLUTION_ITEM,
         .type = ITEM_USE_PARTY_MENU,

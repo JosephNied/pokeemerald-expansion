@@ -492,8 +492,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(ELGYEM)",
-      "x": 61,
-      "y": 21,
+      "x": 60,
+      "y": 19,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND_OWE",
       "movement_range_x": 0,

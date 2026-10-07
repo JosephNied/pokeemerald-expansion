@@ -5100,7 +5100,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 129,
     #endif
         .evYield_HP = 3,
-        .itemRare = ITEM_MOON_STONE,
+        .itemRare = ITEM_STARDUST,
         .genderRatio = PERCENT_FEMALE(75),
         .eggCycles = 10,
         .friendship = 140,
@@ -12469,9 +12469,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 92,
         .weight = 4000,
         .description = COMPOUND_STRING(
-            "A cosmic relative of Steelix?\n"
-            "They dig deep under the ground,\n"
-            "feeding off of the energy in the\n"
+            "An ancient, cosmic relative of Steelix?\n"
+            "This Pokémon digs deep under the ground,\n"
+            "feeding off of the energy found in the\n"
             "planet's core."),
         .pokemonScale = 256,
         .pokemonOffset = 0,

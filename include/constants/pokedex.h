@@ -1100,24 +1100,26 @@ enum NationalDexOrder
     F(CLEFABLE) \
     F(MINIOR) \
     F(CARBINK) \
+    F(GLIMMORA) \
+    F(STEELIX) \
     F(ELGYEM) \
     F(BEHEEYEM) \
-    F(STEELIX) \
+    F(NOCTOWL) \
     F(SHUCKLE) \
     F(QUAGSIRE) \
+    F(TEDDIURSA) \
+    F(URSARING) \
+    F(URSALUNA) \
     F(STARYU) \
     F(STARMIE) \
     F(SHARPEDO) \
-    F(NOCTOWL) \
-    F(LUNATONE) \
+    F(METAGROSS) \
     F(DULROC) \
     F(SOLROCK) \
+    F(LUNATONE) \
     F(CELEBI) \
-    F(GLIMMORA) \
     F(GLALIE) \
     F(SLUGMA) \
-    F(TEDDIURSA) \
-    F(URSARING) \
     F(DUSKNOIR) \
     F(DITTO) \
     F(VENUSAUR) \
@@ -1125,7 +1127,6 @@ enum NationalDexOrder
     F(CHARIZARD) \
     F(EXCADRILL) \
     F(KINGDRA) \
-    F(METAGROSS) \
     F(ZEKROM) \
     F(DIANCIE) \
     F(REGISTEEL) \

@@ -266,7 +266,7 @@ script EventScript_DragoniteEncounter {
 
 script Planet01_Final_Lab_EventScript_Item01 {
 	lock
-	giveitem(ITEM_ROCKY_HELMET, 1)
+	giveitem(ITEM_RARE_CANDY, 5)
 	removeobject(11)
 	setflag(FLAG_UNUSED_0x4A2)
 	release
@@ -275,7 +275,7 @@ script Planet01_Final_Lab_EventScript_Item01 {
 
 script Planet01_Final_Lab_EventScript_Item02 {
 	lock
-	giveitem(ITEM_LIFE_ORB, 1)
+	giveitem(ITEM_FOCUS_SASH, 1)
 	removeobject(12)
 	setflag(FLAG_UNUSED_0x4A7)
 	release
@@ -284,7 +284,7 @@ script Planet01_Final_Lab_EventScript_Item02 {
 
 script Planet01_Final_Lab_EventScript_Item03 {
 	lock
-	giveitem(ITEM_RARE_CANDY, 5)
+	giveitem(ITEM_LIFE_ORB, 1)
 	removeobject(7)
 	setflag(FLAG_UNUSED_0x4A3)
 	release
@@ -293,7 +293,7 @@ script Planet01_Final_Lab_EventScript_Item03 {
 
 script Planet01_Final_Lab_EventScript_Item04 {
 	lock
-	giveitem(ITEM_RARE_CANDY, 5)
+	giveitem(ITEM_LIGHT_CLAY, 5)
 	removeobject(9)
 	setflag(FLAG_UNUSED_0x4A4)
 	release
@@ -311,7 +311,7 @@ script Planet01_Final_Lab_EventScript_Item05 {
 
 script Planet01_Final_Lab_EventScript_Item06 {
 	lock
-	giveitem(ITEM_LEFTOVERS, 1)
+	giveitem(ITEM_RARE_CANDY, 5)
 	removeobject(8)
 	setflag(FLAG_UNUSED_0x4A6)
 	release
